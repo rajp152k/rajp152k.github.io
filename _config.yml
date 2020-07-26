@@ -191,6 +191,8 @@ incremental: false
 # Markdown Processing
 kramdown:
   input: GFM
+  math_engine: mathjax
+  noscript: false
   hard_wrap: false
   auto_ids: true
   footnote_nr: 1
