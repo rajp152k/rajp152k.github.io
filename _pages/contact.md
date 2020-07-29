@@ -1,5 +1,0 @@
----
-permalink: /contact/
----
-
-# contact details

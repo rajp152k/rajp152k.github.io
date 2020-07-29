@@ -1,5 +1,6 @@
 ---
+layout: single
 permalink: /resume/
 ---
 
-# resume, yet to be inserted
+# work in progress

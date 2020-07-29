@@ -17,19 +17,19 @@ minimal_mistakes_skin    : "contrast" # "default",  "air", "aqua", "contrast", "
 locale                   : "en-US"
 title                    : "Raj Patil"
 title_separator          : " | "
-subtitle                 : Meta Me
+subtitle                 : #
 name                     : "Raj Patil"
 description              : "On my personal ventures and projects"
 url                      : https://rajp152k.github.io # custom domain yet to be bought
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : rajp152k/rajp152k.github.io
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "CSE Undergrad, IIT Hyderabad"
+teaser                   : "assets/images/defualt_teaser.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : "/assets/images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "ヽ(⌐■_■)ノ"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "staticman_v2" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -84,9 +84,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google"  # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-173925633-1"
     anonymize_ip         : # true, false (default)
 
 
@@ -94,52 +94,33 @@ analytics:
 author:
   name             : "Raj Patil"
   avatar           : "/assets/images/bio-photo.jpg" #"path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : >
-          (wannabe) **Metaphysician** 
-
-          
-          (aspiring) **Polymath** 
-
-
-          CSE undergrad @ IIT Hyderabad
-  location         : "indefinite: probably the Matrix"
+  bio              : "CSE undergrad at IITH"
+  location         : # "indefinite: probably the Matrix"
   email            : "rajp152k@gmail.com"
   links:
-          #- label: "Email"
-            #icon: "fas fa-fw fa-envelope-square"
-            #url: "rajp152k@gmail.com"
-          - label: "Website"
-            icon: "fas fa-fw fa-link"
-            url: "https://rajp152k.github.io"
           - label: "GitHub"
             icon: "fab fa-fw fa-github"
             url: "https://github.com/rajp152k"
           - label: "LinkedIn"
+            icon: "fab fa-linkedin"
+            url: "https://www.linkedin.com/in/raj-p-48586b113/"
+          - label: "GoodReads"
+            icon: "fa fa-book"
+            url: "https://www.goodreads.com/rajp152k"
             #icon and label yet to set
 
 # Site Footer
 footer:
-  links:
-    #- label: "Twitter"
-      #icon: "fab fa-fw fa-twitter-square"
-      ## url:
-    #- label: "Facebook"
-      #icon: "fab fa-fw fa-facebook-square"
-      ## url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "LinkedIn"
-      icon: "YET TO SELECT"
-    #- label: "GitLab"
-      #icon: "fab fa-fw fa-gitlab"
-      ## url:
-    #- label: "Bitbucket"
-      #icon: "fab fa-fw fa-bitbucket"
-      ## url:
-    #- label: "Instagram"
-      #icon: "fab fa-fw fa-instagram"
-      ## url:
+        links:
+                #- label: "Github"
+                  #icon: "fab fa-fw fa-github"
+                  #url: "https://github.com/rajp152k"
+                #- label: "LinkedIn"
+                  #icon: "fab fa-linkedin"
+                  #url: "https://www.linkedin.com/in/raj-p-48586b113/"
+                - label: "SiteMap"
+                  icon: "fas fa-sitemap"
+                  url: "https://rajp152k.github.io./sitemap.xml"
 
 
 # Reading Files
@@ -270,6 +251,7 @@ compress_html:
     envs: development
 
 
+
 # Defaults
 defaults:
   # _posts
@@ -283,3 +265,11 @@ defaults:
       comments:  true
       share: true
       related: true
+      permalink: /:categories/:title/
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
