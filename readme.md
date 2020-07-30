@@ -1,1 +1,5 @@
 # personal site
+
+
+## SSL CERTIFICATE UNDER PROCESS 
+## SITE MAY BE OFFLINE FOR UPTO 24 hours
