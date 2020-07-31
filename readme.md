@@ -6,6 +6,7 @@
  - ready to start kicking out content
  - minor tweaks still needed
  - resume and project pages need to be updated
+ - also will setup subdomains for some pages
  
 ### 30 - 07 - 2020
 
