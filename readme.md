@@ -1,5 +1,15 @@
-# personal site
+# personal site: progression log
 
+### 31 - 07 - 2020
+ 
+ - site live and running
+ - ready to start kicking out content
+ - minor tweaks still needed
+ - resume and project pages need to be updated
+ 
+### 30 - 07 - 2020
 
-## SSL CERTIFICATE UNDER PROCESS 
-## SITE MAY BE OFFLINE FOR UPTO 24 hours
+ - bought domain : rajpatil.dev
+ - gTLD with enforced https, plus pretty cheap
+ - SSL certificate from "Let'sEncrypt" under process (integrated with github pages)
+ 	- may take upto 24 hours for the site to be live 
