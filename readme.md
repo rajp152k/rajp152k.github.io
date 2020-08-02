@@ -1,5 +1,5 @@
 
-### Sun Aug  2 21:09:46 IST 2020
+### Sun Aug  2 23:05:33 IST 2020
 
 	- setting up some smooth navigation and a way for intermittent updates
 	- I'm not peculiar, just lazy... ; started using r!date 
