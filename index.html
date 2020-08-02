@@ -1,13 +1,21 @@
 ---
 
-layout: home
+layout: single 
 author_profile: true
 
 ---
-<h1>
-	Home page: WIP
-</h1>
+<p> 
+Hey, welcome to my virtual personal space where I organize my projects, ideas and current excursions.<br>
+Feel free to explore:
+	<ul>
+		<li><a href="{% link _pages/blog_archive.md %}">Blog</a></li>
+		<li><a href="{% link _pages/projects.md %}">Projects</a></li>
+		<li><a href="{%link _pages/resume.md%}">Résumé</a></li>
+	</ul>
+<h2>
+	Generic Updates 
+</h2>
 <br>
-<a href="{% link _pages/404.md %}">
-	test link to 404 page
-</a>
+{% capture buffer %} {% include_relative readme.md %}{% endcapture %}
+{{ buffer | markdownify }}
+
