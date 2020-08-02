@@ -4,6 +4,7 @@
 	- setting up some smooth navigation and a way for intermittent updates
 	- I'm not peculiar, just lazy... ; started using r!date 
 		- probably will create a dynamic tech stack page soon
+	- will set up individual, bare-bones sites for the individual projects and repositories in the projecs if necessary
 	
 
 

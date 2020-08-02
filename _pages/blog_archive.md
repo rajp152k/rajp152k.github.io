@@ -1,5 +1,5 @@
 ---
-layout: single 
+layout:  home
 permalink: /archive/
 author_profile: true
 title: All Posts
