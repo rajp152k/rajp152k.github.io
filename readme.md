@@ -10,7 +10,7 @@
 
 ### 31 - 07 - 2020
  
-	- site live and running
+	- site live, running
 	- ready to start kicking out content
 	- minor tweaks still needed
 	- resume and project pages need to be updated
