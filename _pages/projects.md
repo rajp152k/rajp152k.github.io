@@ -11,13 +11,10 @@ permalink: projects/
 	 - say...take tail call optimization as a trivial one
 	 - compiled languages pretty easy, don't yet know about interpreted languages: have to find transpilers(translating compilers) for them without semantic loss of the code
 
-2. *Deploy a cross-platform gesture based audio generative model*
- - I like classical music, and usually drop (or arise :-]) into these "fits" of waving my arm around, thinking I'm a conductor, imagining Beethoven's fifth symphony at my fingertips
- - given my technical background, this seems possible and who in the right mind wouldn't give it a try
- - will have to start simple though; a literature sweep is in order (close future) to get an idea of the current relevant contours.
-
 ## Stage: Ongoing
 
+2. *Domain adaptation in the context of semantic segmentation*
+ - dealing with use cases of transfer learning in regards to the field of autonomous driving intelligence to be transferred between datasets with considerably large domain shifts
 
 ## Stage: Archived
 
