@@ -3,7 +3,7 @@
 
 	- started working on a personal full stack deep learning project
 		- will learn a lot about a range of technologies and tools in the process
-	- first book review coming soon: Descartes error is turning out pretty good albeit it felt like a slog at a point of time
+	- first book review coming soon: Descartes error is turning out pretty good albeit felt like a slog at a point of time
 	- started solo hiking 2 days ago; tomorrow is the second day; targeting to scale the peak before 0615 IST(before sunrise)
 	- decided to add a couple of tool stacks to my repertoire soon:
 		- javascript and soon its relevant dialects:- they're ubiquitous and will help me understand a lot of the web and build stuff
