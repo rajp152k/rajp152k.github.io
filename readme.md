@@ -1,4 +1,19 @@
 
+### Fri Aug  7 21:33:14 IST 2020
+
+	- no sun rise today, rainy day; the hike was even better
+		- a walk in the clouds.
+	- as I was going to get into javascripts, basic research led me to the idea of
+		- WebAssembly
+		- Edge Computing
+		- writing Web Apps in native code (C,C++,Rust) rather than javascript dialects
+	- very interesting, and definitely getting in on that
+	- though learning javascript will still be useful
+	- the idea of serverless serving is very intriguing though.
+	- thinking of creating a separate stream for my learning log and my generic log so that things look more structured.
+
+
+
 ### Thu Aug  6 21:56:42 IST 2020
 
 	- started working on a personal full stack deep learning project
