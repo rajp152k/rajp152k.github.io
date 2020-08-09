@@ -7,7 +7,7 @@ main:
      description: "about my past, present and prospective projects"
    - title: "Résumé"
      description: "summary of projects, achievements and other relevant stuff"
-     url: /resume/
+     url: https://drive.google.com/file/d/1crHqVxL70xCO58cUWZYcQAgXaB5hrOgM/view?usp=sharing
    - title: "Blog"
      url: /archive/
 
