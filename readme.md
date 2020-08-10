@@ -1,7 +1,7 @@
 
-### Mon Aug 10 23:44:53 IST 2020
+## [*WebAssmebly*](https://rajpatil.dev/technology/wasm/)  
 
-- [WebAssmebly](https://rajpatil.dev/technology/wasm/)  
+### Mon Aug 10 23:44:53 IST 2020
 
 	- first tech post today
 	- setup categories and tags.
