@@ -12,8 +12,6 @@
 	- the idea of serverless serving is very intriguing though.
 	- thinking of creating a separate stream for my learning log and my generic log so that things look more structured.
 
-
-
 ### Thu Aug  6 21:56:42 IST 2020
 
 	- started working on a personal full stack deep learning project
@@ -34,8 +32,6 @@
 		- probably will create a dynamic tech stack page soon
 	- will set up individual, bare-bones sites for the individual projects and repositories in the projecs if necessary
 	
-
-
 ### 31 - 07 - 2020
  
 	- site live, running
