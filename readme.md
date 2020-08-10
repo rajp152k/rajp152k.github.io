@@ -46,4 +46,3 @@
 	- gTLD with enforced https, plus pretty cheap
 	- SSL certificate from "Let'sEncrypt" under process (integrated with github pages)
 	- may take upto 24 hours for the site to be live 
-
