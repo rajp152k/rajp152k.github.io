@@ -1,4 +1,13 @@
 
+### Mon Aug 10 23:44:53 IST 2020
+
+
+	- first tech post today
+	- setup categories and tags.
+	- pretty excited to gain some momentum on this.
+	- tech stack coming up soon
+- [WebAssmebly](https://rajpatil.dev/archive/)
+
 ### Fri Aug  7 21:33:14 IST 2020
 
 	- no sun rise today, rainy day; the hike was even better
