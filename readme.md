@@ -1,4 +1,14 @@
 
+## [*Descartes' error*](https://www.goodreads.com/review/show/3430303329?book_show_action=false&from_review_page=1)
+
+### Fri Aug 14 18:29:24 IST 2020
+	
+	- finally done with DesCartes' error.
+	- review linked above : nice one overall.
+	- WebAssembly led me to a new horizons:- stack machines and s-expressions 
+		- leading to me to their alma-mater : Lisp
+		- Meta-Programming looks very promising and I'll soon have a post(rambling)
+
 ## [*WebAssembly*](https://rajpatil.dev/technology/wasm/)  
 
 ### Mon Aug 10 23:44:53 IST 2020
