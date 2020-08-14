@@ -6,7 +6,7 @@
 	- finally done with DesCartes' error.
 	- review linked above : nice one overall.
 	- WebAssembly led me to new horizons:- stack machines and s-expressions 
-		- leading to me to their alma-mater : Lisp
+		- leading me to their alma-mater : Lisp
 		- Meta-Programming looks very promising and I'll soon have a post(rambling)
 		- I'll be proceeding with Racket
 
