@@ -6,11 +6,11 @@
 	- finally done with DesCartes' error.
 	- review linked above : nice one overall.
 	- WebAssembly led me to new horizons:- stack machines and s-expressions 
-		- leading to me to their alma-mater : Lisp
+		- leading me to their alma-mater : Lisp
 		- Meta-Programming looks very promising and I'll soon have a post(rambling)
 		- I'll be proceeding with Racket
 
-## [*WebAssembly*](https://rajpatil.dev/technology/wasm/)  
+## [*WebAssembly*](https://rajpatil.dev/ramblings%20%7C%20à%20muse/wasm/)  
 
 ### Mon Aug 10 23:44:53 IST 2020
 
