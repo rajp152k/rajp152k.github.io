@@ -3,9 +3,12 @@ title: Résumé
 permalink: /resume/
 ---
 
-## NOTE:
+## NOTE: 
 
-static resume can be found here <https://drive.google.com/file/d/1crHqVxL70xCO58cUWZYcQAgXaB5hrOgM/view?usp=sharing>
+Reach me at <contact@rajpatil.dev>
 
-# Dynamic content still under construction
+ <a href="/assets/docs/CV_Aug-14-2020.pdf">
+ Static Résumé
+ </a>
 
+### Dynamic page still under construction
