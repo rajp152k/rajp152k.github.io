@@ -1,5 +1,5 @@
 
-## [*Descartes' error*](https://rajpatil.dev/books/descartes/)
+#### [*Descartes' error*](https://rajpatil.dev/books/descartes/)
 
 ### Fri Aug 14 18:29:24 IST 2020
 	
@@ -10,7 +10,7 @@
 		- Meta-Programming looks very promising and I'll soon have a post(rambling)
 		- I'll be proceeding with Racket
 
-## [*WebAssembly*](https://rajpatil.dev/ramblings%20%7C%20à%20muse/wasm/)  
+#### [*WebAssembly*](https://rajpatil.dev/ramblings%20%7C%20à%20muse/wasm/)  
 
 ### Mon Aug 10 23:44:53 IST 2020
 
