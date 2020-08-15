@@ -1,5 +1,5 @@
 
-## [*Descartes' error*](https://www.goodreads.com/review/show/3430303329?book_show_action=false&from_review_page=1)
+## [*Descartes' error*](https://rajpatil.dev/books/descartes/)
 
 ### Fri Aug 14 18:29:24 IST 2020
 	

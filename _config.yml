@@ -23,7 +23,7 @@ description              : "On my personal ventures and projects"
 url                      : "https://rajpatil.dev" # custom domain yet to be bought
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "rajp152k/rajp152k.github.io"
-teaser                   : "assets/images/logo.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/analyse.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/logo.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "ヽ(⌐■_■)ノ"
 # breadcrumbs            : false # true, false (default)
