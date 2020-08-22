@@ -3,7 +3,7 @@ title: Tech Stack
 category: Tools
 tags: [ WSL , vim , zsh, tmux ]
 
-tech_stack_img: https://lh3.googleusercontent.com/iuxs1VMY-DjpmjvFF9ldfu4B1_eaGN2NlMB8h5G7mKEu_uwqyuS3JQcXARvwg74fH-1Bbe17mZyua1NPWzLaSkOBj-fn0JsUoffrRTFBWQmvWJe03nwYrCXmi3gyp_vXqweaE5S6GQ=w2400
+tech_stack_img: https://lh3.googleusercontent.com/I91ndAUusoY4emaTOwQPmPPiQf1A4YDX-x1CTle-nici4Py3Nwuy1SmC74AuXzd6gj6R5blLWnqZDEKd2mbfovj5xStnp3yrFyHMav_ksDD3juXqbgXQ_uMFlA7sy9UAUF_xYt-F=w2400
 ---
 
 ![tech stack image]({{page.tech_stack_img}})
