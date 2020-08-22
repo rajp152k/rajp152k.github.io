@@ -8,7 +8,8 @@ permalink: /about/
  - am a Computer Science and Engineering undergrad at the Indian Institute of Technology Hyderabad.
  - practice, and research, Deep Learning : specifically Computer vision
  - an avid reader.
- - write me at <contact@rajpatil.dev> for collaborations, ideas and other enquiries
+
+Write me at <contact@rajpatil.dev> for collaborations, ideas and other enquiries
 
 _With that out of the way..._
 
