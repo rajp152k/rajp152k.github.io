@@ -1,4 +1,11 @@
 
+#### [Tech stack update](https://rajpatil.dev/tools/techstack/)
+
+### Sat Aug 22 22:06:14 IST 2020
+	
+	- initialized the tech stack today with the bare-minimum
+	- change CDN to google photos; code stays on github and photos from google photos.
+
 #### [*Descartes' error*](https://rajpatil.dev/books/descartes/)
 
 ### Fri Aug 14 18:29:24 IST 2020
