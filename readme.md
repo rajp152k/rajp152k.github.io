@@ -1,4 +1,11 @@
 
+### Sat Sep 12 19:20:37 IST 2020
+
+	- Been some time
+	- finally done with campus interviews for internships (summer 2021)
+	- got an offer from Goldman Sachs (Summer analyst) : stoked to work with them next summer 
+	- interview experience following up as a post
+
 #### [Tech stack update](https://rajpatil.dev/tools/techstack/)
 
 ### Sat Aug 22 22:06:14 IST 2020
