@@ -1,5 +1,13 @@
 
-### [Goldman Sachs Intern Summer 2021](https://rajpatil.dev/updates/gs_exp)
+### [WSL2 virtual hard disk issues]({% post_url /tech_stack/2020-09-13-wslvhdx %})
+
+### Sun Sep 13 21:40:22 IST 2020
+
+	- checked out diskpart today.
+		- used to optimize virtual hard disks
+	- will have a post sometime soon regarding WSL with GUI
+
+### [Goldman Sachs Intern Summer 2021]({% post_url /updates/2020-09-12-gs_exp %})
 
 ### Sat Sep 12 19:20:37 IST 2020
 
@@ -8,14 +16,14 @@
 	- got an offer from Goldman Sachs (Summer analyst) : stoked to work with them next summer 
 	- interview experience following up as a post
 
-#### [Tech stack update](https://rajpatil.dev/tools/techstack/)
+#### [Tech stack update]({% post_url /tech_stack/2020-08-17-techstack %} )
 
 ### Sat Aug 22 22:06:14 IST 2020
 	
 	- initialized the tech stack today with the bare-minimum
 	- change CDN to google photos; code stays on github and photos from google photos.
 
-#### [*Descartes' error*](https://rajpatil.dev/books/descartes/)
+#### [*Descartes' error*](% post_url /books/2020-08-14-descartes.md %})
 
 ### Fri Aug 14 18:29:24 IST 2020
 	
@@ -26,7 +34,7 @@
 		- Meta-Programming looks very promising and I'll soon have a post(rambling)
 		- I'll be proceeding with Racket
 
-#### [*WebAssembly*](https://rajpatil.dev/ramblings%20%7C%20à%20muse/wasm/)  
+#### [*WebAssembly*]({% post_url /ramblings/2020-08-10-wasm %})  
 
 ### Mon Aug 10 23:44:53 IST 2020
 
