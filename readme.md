@@ -1,3 +1,11 @@
+### [ML and mathematics blog](https://rajpatil.dev/machine-learning)
+
+### Fri Sep 25 15:42:24 IST 2020
+	
+	- initiated a separate ML and mathematics blog
+	- will be talking about the research that I consume
+	- also thinking of some fun personal projects : thinking of some EDA on my Fitbit data
+	- recently have started being active on kaggle; excited to get into competitive machine learning
 
 ### [WSL2 virtual hard disk issues]({% post_url /tech_stack/2020-09-13-wslvhdx %})
 
