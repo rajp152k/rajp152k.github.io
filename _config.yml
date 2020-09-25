@@ -154,6 +154,7 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - /machine-learning # ML blog submodule
 keep_files:
   - .git
   - .svn
