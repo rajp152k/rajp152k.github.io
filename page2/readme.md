@@ -1,5 +1,5 @@
 
-#### [*Leonardo da Vinci : Walter Isaacson*](% post_url /books/2020-11-09-Leonardo.md%})
+#### [*Leonardo da Vinci : Walter Isaacson*]({% post_url /books/2020-11-09-Leonardo.md%})
 
 ### [ML and mathematics blog](https://rajpatil.dev/machine-learning)
 
@@ -34,7 +34,7 @@
 	- initialized the tech stack today with the bare-minimum
 	- change CDN to google photos; code stays on github and photos from google photos.
 
-#### [*Descartes' error*](% post_url /books/2020-08-14-descartes.md %})
+#### [*Descartes' error*]({% post_url /books/2020-08-14-descartes.md %})
 
 ### Fri Aug 14 18:29:24 IST 2020
 	
