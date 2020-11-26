@@ -1,4 +1,5 @@
 
+
 #### [*Leonardo da Vinci : Walter Isaacson*]({% post_url /books/2020-11-09-Leonardo.md%})
 
 ### [ML and mathematics blog](https://rajpatil.dev/machine-learning)
