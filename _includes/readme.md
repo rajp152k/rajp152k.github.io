@@ -1,5 +1,15 @@
 
-#### [*Leonardo da Vinci : Walter Isaacson*]({% post_url /books/2020-11-09-Leonardo.md%})
+### [Daemonized WSL2]({% link _posts/tech_stack/2020-11-28-dmnzwsl2.md %})
+
+     - have been drilling speed-reading lately 
+     - seeing improvements : amped up to read more papers and books
+     - observational notes do feel good : the kind of general insight I've seemingly developed feels awesome
+     - drew my left hand with my right hand, just out of curiosity probably the first time after kinder-garden
+        - they definitely had something right cooking with the kind of stuff they made us do
+     - shifted to using the mouse with my left hand - full time
+        - slow but definitely improving incrementally: frees up my right for some doodling
+
+#### [*Leonardo da Vinci : Walter Isaacson*]({% post_url /books/2020-11-09-LdaV%})
 
 ### [ML and mathematics blog](https://rajpatil.dev/machine-learning)
 
@@ -34,7 +44,7 @@
 	- initialized the tech stack today with the bare-minimum
 	- change CDN to google photos; code stays on github and photos from google photos.
 
-#### [*Descartes' error*]({% post_url /books/2020-08-14-descartes.md %})
+#### [*Descartes' error*]({% post_url /books/2020-08-14-descartes %})
 
 ### Fri Aug 14 18:29:24 IST 2020
 	

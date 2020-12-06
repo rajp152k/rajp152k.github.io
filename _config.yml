@@ -199,6 +199,7 @@ timezone: Asia/Kolkata # https://en.wikipedia.org/wiki/List_of_tz_database_time_
 
 # Plugins (previously gems:)
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
