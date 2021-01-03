@@ -1,4 +1,10 @@
 
+### Sun Jan  3 17:17:50 IST 2021
+
+    - blogged on recent semester project : wdgaf
+
+#### [WDGAF]({% link _posts/projects/2021-01-03-wdgaf.md %})
+
 ### [Daemonized WSL2]({% link _posts/tech_stack/2020-11-28-dmnzwsl2.md %})
 
      - have been drilling speed-reading lately 

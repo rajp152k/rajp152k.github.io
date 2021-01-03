@@ -3,14 +3,6 @@ title: Projects
 permalink: projects/
 ---
 
-## Stage: Inception
-
-1. *Working on reverse engineering esoteric programming language constructs by examining them in their generated assembly*
- - main objective is to learn assembly language while having some fun and build something interesting in the future stages
- - thinking different paradigms and their specificities for starters:
-	 - say...take tail call optimization as a trivial one
-	 - compiled languages pretty easy, don't yet know about interpreted languages: have to find transpilers(translating compilers) for them without semantic loss of the code
-
 ## Stage: Ongoing
 
 2. *Domain adaptation in the context of semantic segmentation*
@@ -20,9 +12,8 @@ permalink: projects/
 
 _refer repositories for more information_
 
-### Personal endeavors
-
- - [Custom Deep Learning Framework](https://github.com/rajp152k/cust_dl_lib)
+ 1. [Custom Deep Learning Framework](https://github.com/rajp152k/cust_dl_lib)
+ 2. [WDGAF](https://github.com/rajp152k/Compilers-II)
 
 ### [Course Work](https://github.com/rajp152k/coursework_IITH)
 
