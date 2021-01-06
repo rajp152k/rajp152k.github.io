@@ -1,4 +1,8 @@
 
+### Wed Jan  6 09:14:56 IST 2021
+
+#### [A Brief History of Time, Stephen Hawking]({% link _posts/books/2021-01-05-aBriefHistoryofTime.md %})
+
 ### Sun Jan  3 17:17:50 IST 2021
 
     - blogged on recent semester project : wdgaf
