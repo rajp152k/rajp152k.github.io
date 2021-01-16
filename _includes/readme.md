@@ -1,4 +1,12 @@
 
+### Sat Jan 16 12:36:05 IST 2021
+
+    - started with my 6th semester and pretty excited about the courses lined up.
+    - Also began SICP with Hy, will be posting a lot of updates soon.
+    - initiating the minor stream today with a bit poetic computer science.
+
+#### [1729]({% link _posts/ramblings/2021-01-16-1729.md %})
+
 ### Wed Jan  6 09:14:56 IST 2021
 
 #### [A Brief History of Time, Stephen Hawking]({% link _posts/books/2021-01-05-aBriefHistoryofTime.md %})
