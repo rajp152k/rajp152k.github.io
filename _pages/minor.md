@@ -11,4 +11,4 @@ I had to make a conscious decision to filter out what goes on my major stream. T
  
     - on numbers...
 
-#### [1729]({% link _posts/ramblings/2021-01-16-1729.md %})
+#### [1729]({% link _posts/ramblings/2021-01-16-1729.md %}){: .btn .btn--inverse}

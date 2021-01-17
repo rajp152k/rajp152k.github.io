@@ -11,7 +11,7 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 remote_theme           : "mmistakes/minimal-mistakes@4.19.3"
-minimal_mistakes_skin    : "dark" # "default",  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "contrast" # "default",  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -93,7 +93,7 @@ analytics:
 # Site Author
 author:
   name             : "Raj Patil"
-  avatar           : "/assets/images/whitenoise.gif" #"path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/grown_out_me.jpg" #"path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "CSE undergrad at IITH"
   location         : # "indefinite: probably the Matrix"
   email            : "rajp152k@gmail.com"

@@ -1,7 +1,7 @@
 
 ### Sun Jan 17 16:22:09 IST 2021
 
-#### [Why We Sleep, Matthew Walker]({% link _posts/books/2021-01-17-WhyWeSleep.md %})
+[Why We Sleep, Matthew Walker]({% link _posts/books/2021-01-17-WhyWeSleep.md %}){: .btn .btn--inverse} 
 
 ### Sat Jan 16 12:36:05 IST 2021
 
@@ -9,19 +9,23 @@
     - Also began SICP with Hy, will be posting a lot of updates soon.
     - initiating the minor stream today with a bit poetic computer science.
 
-#### [1729]({% link _posts/ramblings/2021-01-16-1729.md %})
+#### [1729]({% link _posts/ramblings/2021-01-16-1729.md %}){: .btn .btn--inverse}
+
 
 ### Wed Jan  6 09:14:56 IST 2021
 
-#### [A Brief History of Time, Stephen Hawking]({% link _posts/books/2021-01-05-aBriefHistoryofTime.md %})
+#### [A Brief History of Time, Stephen Hawking]({% link _posts/books/2021-01-05-aBriefHistoryofTime.md %}){: .btn .btn--inverse}
+
 
 ### Sun Jan  3 17:17:50 IST 2021
 
     - blogged on recent semester project : wdgaf
 
-#### [WDGAF]({% link _posts/projects/2021-01-03-wdgaf.md %})
+#### [WDGAF]({% link _posts/projects/2021-01-03-wdgaf.md %}){: .btn .btn--inverse}
 
-### [Daemonized WSL2]({% link _posts/tech_stack/2020-11-28-dmnzwsl2.md %})
+
+### [Daemonized WSL2]({% link _posts/tech_stack/2020-11-28-dmnzwsl2.md %}){: .btn .btn--inverse}
+
 
      - have been drilling speed-reading lately 
      - seeing improvements : amped up to read more papers and books
@@ -31,9 +35,11 @@
      - shifted to using the mouse with my left hand - full time
         - slow but definitely improving incrementally: frees up my right for some doodling
 
-#### [*Leonardo da Vinci : Walter Isaacson*]({% post_url /books/2020-11-09-LdaV%})
+#### [*Leonardo da Vinci : Walter Isaacson*]({% post_url /books/2020-11-09-LdaV%}){: .btn .btn--inverse}
 
-### [ML and mathematics blog](https://rajpatil.dev/machine-learning)
+
+### [ML and mathematics blog](https://rajpatil.dev/machine-learning){: .btn .btn--inverse}
+
 
 ### Fri Sep 25 15:42:24 IST 2020
 	
@@ -42,7 +48,8 @@
 	- also thinking of some fun personal projects : thinking of some EDA on my Fitbit data
 	- recently have started being active on kaggle; excited to get into competitive machine learning
 
-### [WSL2 virtual hard disk issues]({% post_url /tech_stack/2020-09-13-wslvhdx %})
+### [WSL2 virtual hard disk issues]({% post_url /tech_stack/2020-09-13-wslvhdx %}){: .btn .btn--inverse}
+
 
 ### Sun Sep 13 21:40:22 IST 2020
 
@@ -50,7 +57,8 @@
 		- used to optimize virtual hard disks
 	- will have a post sometime soon regarding WSL with GUI
 
-### [Goldman Sachs Intern Summer 2021]({% post_url /updates/2020-09-12-gs_exp %})
+### [Goldman Sachs Intern Summer 2021]({% post_url /updates/2020-09-12-gs_exp %}){: .btn .btn--inverse}
+
 
 ### Sat Sep 12 19:20:37 IST 2020
 
@@ -59,14 +67,16 @@
 	- got an offer from Goldman Sachs (Summer analyst) : stoked to work with them next summer 
 	- interview experience following up as a post
 
-#### [Tech stack update]({% post_url /tech_stack/2020-08-17-techstack %} )
+#### [Tech stack update]({% post_url /tech_stack/2020-08-17-techstack %} ){: .btn .btn--inverse}
+
 
 ### Sat Aug 22 22:06:14 IST 2020
 	
 	- initialized the tech stack today with the bare-minimum
 	- change CDN to google photos; code stays on github and photos from google photos.
 
-#### [*Descartes' error*]({% post_url /books/2020-08-14-descartes %})
+#### [*Descartes' error*]({% post_url /books/2020-08-14-descartes %}){: .btn .btn--inverse}
+
 
 ### Fri Aug 14 18:29:24 IST 2020
 	
@@ -77,7 +87,8 @@
 		- Meta-Programming looks very promising and I'll soon have a post(rambling)
 		- I'll be proceeding with Racket
 
-#### [*WebAssembly*]({% post_url /ramblings/2020-08-10-wasm %})  
+#### [*WebAssembly*]({% post_url /ramblings/2020-08-10-wasm %}){: .btn .btn--inverse}
+ 
 
 ### Mon Aug 10 23:44:53 IST 2020
 
