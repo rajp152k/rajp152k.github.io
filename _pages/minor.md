@@ -7,6 +7,12 @@ permalink: /minor/
 
 I had to make a conscious decision to filter out what goes on my major stream. This is an attempt allowing me to retain all information modularly. All observations and implicitly relevant updates go here.
 
+### Fri Mar 12 23:29:42 IST 2021
+
+    - going to developing a strong habit of writing.
+    - albeit may be foolish, want to start pumping out content regarding my experiences in general.
+        - most of it will go on the minor stream...
+
 ### Sat Jan 16 12:35:48 IST 2021
  
     - on numbers...
