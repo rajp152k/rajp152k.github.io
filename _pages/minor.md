@@ -11,8 +11,11 @@ I had to make a conscious decision to filter out what goes on my major stream. T
 
     - Recently received my final offer letter for the position of Summer Analyst at Goldman Sachs
     - will be commencing a series of blog posts about my experiences with the firm and my first ever professional work experience in general.
+    - building the habit of writing again
 
-#### [Dust]({% post_url /observations/2021-03-13-dust%})
+#### [Dust]({% post_url /observations/2021-03-13-dust%}){: .btn .btn--inverse} 
+
+#### [Writing past]({% post_url /meta/2021-03-13-writing-past%}){: .btn .btn--inverse} 
 
 ### Fri Mar 12 23:29:42 IST 2021
 
