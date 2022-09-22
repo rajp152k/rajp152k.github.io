@@ -1,0 +1,43 @@
+baseURL = 'rajpatil.dev/'
+languageCode = 'en-us'
+title = 'rajpatil.dev'
+theme = "mainroad"
+
+googleAnalytics = "G-4FV7P8X8H6"
+
+[Author]
+  name = "Raj Patil"
+  bio = "programmer"
+  avatar = "img/kratos.jpg"
+
+[Params]
+  description = "This is a temporal projection of my epistemological growth" # Description of your site
+  opengraph = true
+  twitter_cards = true
+  readmore = true # Show "Read more" button in list if true
+  authorbox = true
+  pager = true
+  post_meta = ["date", "categories"] # Order of post meta information
+  mainSections = ["post", "docs"]
+
+[Params.sidebar]
+  home = "left"   # Configure layout for home page
+  list = "left"   # Configure layout for list pages
+  single = "left" # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search","social","categories"]
+
+[Params.widgets]
+  recent_num = 10 # Set the number of articles in the "Recent articles" widget
+  tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
+
+[Params.widgets.social]
+  # Enable parts of social widget
+  twitter = "rp152k"
+  instagram = "rp152k"
+  linkedin = "raj-p-48586b113"
+  github = "rajp152k"
+  email = "contact@rajpatil.dev"
+
+[Params.style.vars]
+  highlightColor = "#00ff00"
