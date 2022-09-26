@@ -1,14 +1,14 @@
 baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
-title = 'rajpatil.dev'
+title = 'rp152k'
 theme = "mainroad"
 
 googleAnalytics = "G-4FV7P8X8H6"
 
 [Author]
   name = "Raj Patil"
-  bio = "programmer"
-  avatar = "img/kratos.jpg"
+  bio = "Just another guy on the internet"
+  avatar = false
 
 [Params]
   description = "This is a temporal projection of my epistemological growth" # Description of your site
