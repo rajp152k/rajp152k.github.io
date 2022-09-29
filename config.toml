@@ -40,4 +40,4 @@ googleAnalytics = "G-4FV7P8X8H6"
   email = "contact@rajpatil.dev"
 
 [Params.style.vars]
-  highlightColor = "#00ff00"
+  highlightColor = "#1111ff"
