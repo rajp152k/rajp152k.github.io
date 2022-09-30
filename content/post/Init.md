@@ -1,7 +1,7 @@
 ---
 title: "Init"
 date:  2022-09-26T16:34:17+05:30
-categories: ["update"]
+categories: ["Update"]
 tags: ["incentive, disclaimer, explanation"]
 ---
 
