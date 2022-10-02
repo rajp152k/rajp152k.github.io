@@ -1,31 +1,37 @@
 baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
-title = 'rp152k'
+title = 'rajp152k'
 theme = "mainroad"
 
 googleAnalytics = "G-4FV7P8X8H6"
 
 [Author]
   name = "Raj Patil"
-  bio = "Just another guy on the internet"
+  bio = "He likes computers: they're obedient and have a good sense of humor"
   avatar = false
 
 [Params]
-  description = "This is a temporal projection of my epistemological growth" # Description of your site
+  description = "Raj Patil writes stuff down"
+  copyright = "Raj Patil"
+  schema = true
+  toc = false
+  mathjax = true
+  mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js"
+  mathjaxConfig = "TeX-AMS-MML_HTMLorMML"
   opengraph = true
   twitter_cards = true
-  readmore = true # Show "Read more" button in list if true
+  readmore = false # Show "Read more" button in list if true
   authorbox = true
   pager = true
   post_meta = ["date", "categories"] # Order of post meta information
-  mainSections = ["post", "docs"]
+  mainSections = ["post", "blog", "news", "docs"]
 
 [Params.sidebar]
-  home = "left"   # Configure layout for home page
-  list = "left"   # Configure layout for list pages
-  single = "left" # Configure layout for single pages
+  home = "right"   # Configure layout for home page
+  list = "right"   # Configure layout for list pages
+  single = "right" # Configure layout for single pages
   # Enable widgets in given order
-  widgets = ["search","social","categories"]
+  widgets = ["social","categories"]
 
 [Params.widgets]
   recent_num = 10 # Set the number of articles in the "Recent articles" widget
@@ -33,11 +39,11 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [Params.widgets.social]
   # Enable parts of social widget
-  twitter = "rp152k"
-  instagram = "rp152k"
-  linkedin = "raj-p-48586b113"
+  #twitter = "rp152k"
+  #instagram = "rp152k"
   github = "rajp152k"
+  linkedin = "raj-p-48586b113"
   email = "contact@rajpatil.dev"
 
 [Params.style.vars]
-  highlightColor = "#1111ff"
+  highlightColor = "#1111bb"
