@@ -9,8 +9,6 @@ googleAnalytics = "G-4FV7P8X8H6"
 [Author]
   name = "Raj Patil"
   bio = "I like going under the hood. It's a problem, but I like solving problems - so all's good." 
-  avatar = false
-
 
 [Params]
   description = "rajpatil.dev"
@@ -29,7 +27,6 @@ googleAnalytics = "G-4FV7P8X8H6"
   mainSections = ["post", "blog", "news", "docs"]
 
 [Params.Logo]
-  img = false
   subtitle = "Observations, Engineering, Philosophy and my epistemological excursions."
 
 [Params.sidebar]
