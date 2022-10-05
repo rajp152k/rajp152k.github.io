@@ -2,7 +2,7 @@
 title: "Informal Documentation"
 date: 2022-09-28T17:13:21+05:30
 categories: ["Choices"]
-tags: []
+tags: ["epistemology"]
 draft: false
 ---
 

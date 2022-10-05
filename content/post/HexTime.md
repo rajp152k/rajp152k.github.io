@@ -2,7 +2,7 @@
 title: "The hex counter"
 date: 2022-10-02T19:55:34+05:30
 categories: ["Accountability"]
-tags: ["effort, oddity"]
+tags: ["effort", "oddity"]
 draft: false
 ---
 

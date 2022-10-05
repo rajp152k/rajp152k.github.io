@@ -2,7 +2,7 @@
 title: "Sounding Smart is Easy"
 date: 2022-09-30T09:22:43+05:30
 categories: ["Choices"]
-tags: ["fallacy, social media, crowd psychology"]
+tags: ["fallacy", "social media", "crowd psychology"]
 draft: false
 ---
 

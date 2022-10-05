@@ -1,17 +1,19 @@
 baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
 title = 'rajp152k'
+subtitle = "Engineer, writer, fitness enthusiast; mountains > beaches"
 theme = "mainroad"
 
 googleAnalytics = "G-4FV7P8X8H6"
 
 [Author]
   name = "Raj Patil"
-  bio = "He likes computers: they're obedient and have a good sense of humor"
+  bio = "I like going under the hood. It's a problem, but I like solving problems - so all's good." 
   avatar = false
 
+
 [Params]
-  description = "Raj Patil writes stuff down"
+  description = "rajpatil.dev"
   copyright = "Raj Patil"
   schema = true
   toc = false
@@ -26,12 +28,16 @@ googleAnalytics = "G-4FV7P8X8H6"
   post_meta = ["date", "categories"] # Order of post meta information
   mainSections = ["post", "blog", "news", "docs"]
 
+[Params.Logo]
+  img = false
+  subtitle = "Observations, Engineering, Philosophy and my epistemological excursions."
+
 [Params.sidebar]
   home = "right"   # Configure layout for home page
   list = "right"   # Configure layout for list pages
   single = "right" # Configure layout for single pages
   # Enable widgets in given order
-  widgets = ["social","categories"]
+  widgets = ["social","categories","taglist"]
 
 [Params.widgets]
   recent_num = 10 # Set the number of articles in the "Recent articles" widget
@@ -39,11 +45,13 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [Params.widgets.social]
   # Enable parts of social widget
-  #twitter = "rp152k"
-  #instagram = "rp152k"
+  # twitter = "rp152k"
   github = "rajp152k"
   linkedin = "raj-p-48586b113"
   email = "contact@rajpatil.dev"
+  instagram = "rp152k"
 
 [Params.style.vars]
-  highlightColor = "#1111bb"
+  highlightColor = "#7312D7"
+
+ 
