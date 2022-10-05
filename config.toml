@@ -26,9 +26,6 @@ googleAnalytics = "G-4FV7P8X8H6"
   post_meta = ["date", "categories"] # Order of post meta information
   mainSections = ["post", "blog", "news", "docs"]
 
-[Params.Logo]
-  subtitle = "Observations, Engineering, Philosophy and my epistemological excursions."
-
 [Params.sidebar]
   home = "right"   # Configure layout for home page
   list = "right"   # Configure layout for list pages
