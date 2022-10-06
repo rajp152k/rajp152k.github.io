@@ -1,9 +1,6 @@
 ---
 title: About me
 ---
-
-![avatar](/img/avatar.png)
-
 Hi, This is Raj: 
 
  - I'm interested in everything that humans accumulate as knowledge (not current affairs) and generally do not think of subjects as discrete but subtrees of epistemology as the root.  
