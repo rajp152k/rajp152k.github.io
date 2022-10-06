@@ -1,7 +1,6 @@
 baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
 title = 'rajp152k'
-subtitle = "Engineer, writer, fitness enthusiast; mountains > beaches"
 theme = "mainroad"
 
 googleAnalytics = "G-4FV7P8X8H6"
@@ -46,6 +45,23 @@ googleAnalytics = "G-4FV7P8X8H6"
   instagram = "rp152k"
 
 [Params.style.vars]
-  highlightColor = "#7312D7"
+  highlightColor = "#7312d7"
 
- 
+[Params.logo]
+  image = false
+  title = "rajpatil.dev"
+  subtitle = "observations, philosophy, and epistemological excursions."
+
+
+[menu]
+[[menu.main]]
+  identifier = 'about'
+  name = 'about'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/about/'
+  weight = -110
+[[menu.main]]
+  name = 'Résumé'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/resume/'
+  weight = -100
