@@ -14,7 +14,6 @@ encapsulate - given time, how different one can end up in terms of all
 the aspects of their life.  
 
 Albeit a hobby at which I don't particularly excel, writing has been something (since I
-was 19 (19-22 archives @
-[rajpatil.dev/19-22_archive](https://rajpatil.dev/19-22_archive)) that
+was 19 (19-22 content archived and not posted here)that
 helps me document my mind and better represent my online presence than
 any other social media would allow me to.
