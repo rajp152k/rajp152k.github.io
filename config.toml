@@ -42,7 +42,7 @@ googleAnalytics = "G-4FV7P8X8H6"
   github = "rajp152k"
   linkedin = "raj-p-48586b113"
   email = "contact@rajpatil.dev"
-  instagram = "rp152k"
+  #instagram = "rp152k"
 
 [Params.style.vars]
   highlightColor = "#7312d7"

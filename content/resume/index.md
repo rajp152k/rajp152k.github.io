@@ -19,7 +19,7 @@ As of Thu Oct  6 07:50:21 AM IST 2022:
 	Python, Lisp (Racket, Common Lisp, Elisp), C++, C, Javascript, Haskell, Prolog, Eiffel, Vimscript
 ---
 	Tools:
-	git, Unix and GNU philosophies, Make, Emacs, Vim, PostGres, Qiskit, 
+	git, Unix and GNU philosophies, Make, Emacs, Vim, PostGres, Qiskit
 
 --- 
 	Frameworks:
