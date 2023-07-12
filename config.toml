@@ -7,7 +7,7 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [Author]
   name = "Raj Patil"
-  bio = "I like going under the hood. It's a problem, but I like solving problems - so all's good." 
+  bio = "Just another guy on the internet..." 
 
 [Params]
   description = "rajpatil.dev"
@@ -50,8 +50,7 @@ googleAnalytics = "G-4FV7P8X8H6"
 [Params.logo]
   image = false
   title = "rajpatil.dev"
-  subtitle = "observations, philosophy, and epistemological excursions."
-
+  subtitle = "Epistemology, Pragmatism, Serendipity, Curiosity and Stupidity..."
 
 [menu]
 [[menu.main]]
@@ -64,4 +63,9 @@ googleAnalytics = "G-4FV7P8X8H6"
   name = 'Résumé'
   pre = "<i class='fa fa-road'></i>"
   url = '/resume/'
+  weight = -100
+[[menu.main]]
+  name = 'Brain Dump'
+  pre = "<i class='fa fa-road'></i>"
+  url = 'https://buffer.rajpatil.dev'
   weight = -100
