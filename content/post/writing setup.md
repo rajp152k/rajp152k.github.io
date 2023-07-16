@@ -2,7 +2,7 @@
 title: "Here we go again..."
 date: 2023-07-16T20:12:55+05:30
 categories: ["writing"]
-tags: ["tools","update"]
+tags: ["update","past","habits"]
 ---
 
 > *If you wish to be a writer, write.*
