@@ -1,6 +1,6 @@
 ---
 title: "PICC: pragmatics of intellectual consumption and creation"
-date: 2023-08-1T10:40:55+05:30
+date: 2023-08-01T10:40:55+05:30
 categories: ["Skills"]
 tags: ["incentives","skills","index","speed-reading","touch-typing","efficiency","emacs","vi"]
 ---
