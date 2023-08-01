@@ -175,7 +175,7 @@ internet, you should stop and consider ..
 .. you should be consuming all that you do. Most of the noise (aka
 news) is shoved down your throat and isn't a choice. Some primitive
 steps you can employ to avoid choking from whatever falls upon your
-retina are ear drums:
+retina and ear drums:
  - be disciplined in your pursuits : there is a fine line between
    curiosity and being distracted.
  - delegate the work of finding quality content to the wisdom of the
