@@ -1,7 +1,7 @@
 ---
 title: "Here we go again..."
 date: 2023-07-16T20:12:55+05:30
-categories: ["writing"]
+categories: ["Writing"]
 tags: ["update","past","habits"]
 ---
 
