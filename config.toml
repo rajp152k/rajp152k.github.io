@@ -7,7 +7,7 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [Author]
   name = "Raj Patil"
-  bio = "Just another guy on the internet..." 
+  bio = "Yet another guy on the internet" 
 
 [Params]
   description = "rajpatil.dev"
@@ -33,8 +33,8 @@ googleAnalytics = "G-4FV7P8X8H6"
   widgets = ["social","categories","taglist"]
 
 [Params.widgets]
-  recent_num = 5 # Set the number of articles in the "Recent articles" widget
-  tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+  recent_num = 10 # Set the number of articles in the "Recent articles" widget
+  tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
 
 [Params.widgets.social]
   # Enable parts of social widget
@@ -45,7 +45,7 @@ googleAnalytics = "G-4FV7P8X8H6"
   #linkedin = "raj-p-48586b113"
 
 [Params.style.vars]
-  highlightColor = "#7312d7"
+  highlightColor = "#870000"
 
 [Params.logo]
   image = false
@@ -60,12 +60,18 @@ googleAnalytics = "G-4FV7P8X8H6"
   url = '/about/'
   weight = -110
 [[menu.main]]
-  name = 'Résumé'
+  identifier = 'now'
+  name = 'now'
   pre = "<i class='fa fa-road'></i>"
-  url = '/resume/'
-  weight = -105
+  url = '/now/'
+  weight = -109
 [[menu.main]]
   name = 'Brain Dump'
   pre = "<i class='fa fa-road'></i>"
   url = 'https://buffer.rajpatil.dev'
-  weight = -100
+  weight = -108
+[[menu.main]]
+  name = 'Résumé'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/resume/'
+  weight = -105
