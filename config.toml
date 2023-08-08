@@ -45,7 +45,7 @@ googleAnalytics = "G-4FV7P8X8H6"
   #linkedin = "raj-p-48586b113"
 
 [Params.style.vars]
-  highlightColor = "#870000"
+  highlightColor = "#bb0000"
 
 [Params.logo]
   image = false
