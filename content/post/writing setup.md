@@ -26,7 +26,7 @@ drafting a first post.
 
 In my last major writing phase, I did so solely for myself. While
 enjoyable for as long as that lasted, one can't continue to write
-,without a definite purpose, without running out of
+,without a definite purpose, without exhausting
 enthusiasm. An external indicator of progress is necessary to measure
 oneself, in absence of which, one could beat around the bush for
 eternity, accumulating works of mediocre caliber. My last system was
@@ -35,32 +35,32 @@ that of writing and was lacking discipline - progress was slow and
 wasn't explicitly observable: it was a rather naïve approach towards
 building an online presence other than a social media profile. By the
 end of it, I was even creating my own words (thanks to my etymological
-interests) that I had to maintain records for in an appendix: such
-actions added to the esoteric nature of my intellectual interests back
-in the day: making whatever I published less accessible to the common
-folk.  
+interests) that I had to maintain records in an appendix: such
+actions added to the esoteric nature of my intellectual interests :
+making whatever I published less accessible to the common folk.   
 
 ## The Present
 
 I am picking up the symbolic quill (I'm typing of-course) after a
-mental rock-bottom and inactivity of roughly a year. As I begin to
-re-enter the world and get back to trying to be an adult, I am
-simultaneously establishing systems in place that will help me
-document the lessons I gather along the way towards building myself up
-again.  
+mental rock-bottom and inactivity (mental and physical) of roughly a
+year.  
+
+As I begin to re-enter the world and get back to trying to be an
+adult, I wish to establish systems that will help me
+document the lessons while building myself up again.  
 
 I like reading (another literary habit that's on par with writing that
-took a hit in my last low of life) -
+took a hit this past low) -
 be it practical or non-fictional abstracts (I still don't do
 fiction). Remembering what I've read is more important than racing
 through books and writing is something that explicitly helps me with:
  1. applying stylistic lessons from works that I consume
- 2. actually consolidating what I read and not just look at every book
-    completed as a trophy but as an evolving node in a malleable
-    network of knowledge. 
+ 2. actually consolidating what I read and not just collect 
+    completions as trophies but as an evolving node in a malleable
+    knowledge network.
 	
 To explicitly segregate these objectives so that I can work on them
-independently, I've sectioned of the latter in the `buffer` subdomain
+independently, I've sectioned the latter in the `buffer` subdomain
 of my website accessible via the `brain dump` tab above.  
 
 Any time I wish to add to/prune/manipulate the knowledge network, I
@@ -79,9 +79,11 @@ This linear process fails to capture how a writer might really think when formul
 
 Moreover, this makes blogging a versioned process, rather than a
 living, breathing organism (the sect of lispers might know where I
-pick this up from) that closely follows your thoughts, symbolically waxing and waning over time, simultaneously growing as a whole.
+pick this up from) that more closely follows your thoughts, maturing
+over time.  
 
-This also makes you believe that each post is an independent project in itself and discourages linkages with existing works.
+This also makes you believe that each post is an independent project
+in itself and discourages linkages with existing works.  
 
 I intend to improve upon this process with this setup of decoupling my notes and what I publish.
 
@@ -89,15 +91,20 @@ I have two major objectives (implicitly interdependent) associated with my onlin
  - To write for myself
  - To write for others
 
-Both are important aspects towards being good writer and need to be independently catered to so as to not deter my proficiency in the other.
+Both are important aspects towards being good writer and need to be
+independently catered to so as to not deter my proficiency in the
+other.  
    
-The buffers will be a personal brain dump where I won't care about formalizing my notes and any other necessities of published works.They will be shorter and linked to other buffers.
-The main blog will be a formalized projection of multiple inter-related buffers into one serialized output : a snapshot of the living, breathing organism that I intend the buffers to evolve into.
+The buffers will be a personal brain dump where I won't care about
+formalizing my notes and any other necessities of published
+works. They will be shorter and linked to other buffers. The main blog
+will be a formalized projection of multiple inter-related buffers into
+one serialized output : a snapshot of the living, breathing organism
+that I intend the buffers to evolve into. 
 
+# Here we go again...
 
-# Ah well.., here we go again...
-
-I'm not exactly as bummed as CJ was, not exactly as enthusiastic as I
-was when I first began writing: this time around.. I'm wise enough to
-not expect where there is no point in expecting.
-
+This time around, I do feel relatively wiser and a
+little more tempered than when I first began. Quite excited to know as to what
+I achieve with a fresher but slightly more mature perspective than I
+had 4 years ago.
