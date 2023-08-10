@@ -24,6 +24,7 @@ googleAnalytics = "G-4FV7P8X8H6"
   pager = true
   post_meta = ["date", "categories"] # Order of post meta information
   mainSections = ["post", "blog", "news", "docs"]
+  comments = true
 
 [Params.sidebar]
   home = "left"   # Configure layout for home page
