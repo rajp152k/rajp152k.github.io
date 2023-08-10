@@ -2,6 +2,7 @@
 {{- $inputName := .Site.Params.widgets.search.input.name | default "sitesearch" -}}
 {{- $inputPre := .Site.Params.widgets.search.input.pre -}}
 
+<h4 class="widget__title">Search</h4>
 <div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="{{ $actionURL }}">
 		<label>
