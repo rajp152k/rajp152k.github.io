@@ -23,7 +23,6 @@
 	</article>
 </main>
 {{- if (eq .Page.Type "post") }}
-{{ partial "sender.html" . }}
 {{ partial "comments.html" . }}
 {{ end }}
 {{ end }}

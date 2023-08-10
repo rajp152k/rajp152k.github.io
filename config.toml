@@ -31,7 +31,7 @@ googleAnalytics = "G-4FV7P8X8H6"
   list = "left"   # Configure layout for list pages
   single = "left" # Configure layout for single pages
   # Enable widgets in given order
-  widgets = ["social","categories","taglist"]
+  widgets = ["social","categories","taglist","sender"]
 
 [Params.widgets]
   recent_num = 10 # Set the number of articles in the "Recent articles" widget
