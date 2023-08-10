@@ -11,7 +11,7 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [Params]
   description = "rajpatil.dev"
-  copyright = "Raj Patil"
+  copyright = "Raj Patil - All rights reserved"
   schema = true
   toc = false
   mathjax = true
