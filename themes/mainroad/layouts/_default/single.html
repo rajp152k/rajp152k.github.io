@@ -22,7 +22,9 @@
 		{{- end }}
 	</article>
 </main>
+{{- if (eq .Page.Type "post") }}
 {{ partial "authorbox.html" . }}
 {{ partial "pager.html" . }}
 {{ partial "comments.html" . }}
+{{ end }}
 {{ end }}
