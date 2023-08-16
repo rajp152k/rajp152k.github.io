@@ -41,7 +41,7 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [Params.widgets.social]
   # Enable parts of social widget
-  # twitter = "rp152k"
+  twitter = "rajpatil152k"
   github = "rajp152k"
   email = "contact@rajpatil.dev"
   youtube = "@rajp152k"
