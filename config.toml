@@ -1,7 +1,8 @@
 baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
-title = 'rajp152k'
+title = 'Raj Patil'
 theme = "mainroad"
+
 
 googleAnalytics = "G-4FV7P8X8H6"
 
@@ -11,6 +12,7 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [Params]
   description = "rajpatil.dev"
+  head_logo = "images/feather.png"
   copyright = "Raj Patil - All rights reserved"
   schema = true
   toc = false
@@ -50,7 +52,7 @@ googleAnalytics = "G-4FV7P8X8H6"
   highlightColor = "#aa0000"
 
 [Params.logo]
-  image = false
+  image = "images/quill.jpg"
   title = "rajpatil.dev"
   subtitle = "Epistemology, Pragmatism, Serendipity, Curiosity and Stupidity..."
 
