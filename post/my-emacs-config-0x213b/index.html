@@ -1,0 +1,426 @@
+<!doctype html><html class=no-js lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><title>My Emacs Configuration - Raj Patil</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content><meta property="og:title" content="My Emacs Configuration"><meta property="og:description" content="[As of 0x213B : 2023-08-17 Thu]
+I use emacs for a lot of my daily tasks and spend majority of my time in it. This is a review of some significant components of my init.el
+;keyboard all the way (menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1) ;I don't like distractions (setq byte-compile-warnings '(cl-functions)) (setq ring-bell-function 'ignore) (setq visible-bell t) I chose the most recently engineered package-management solution when I began with emacs, haven&rsquo;t switched since and don&rsquo;t think I&rsquo;ll need to."><meta property="og:type" content="article"><meta property="og:url" content="https://rajp152k.github.io/post/my-emacs-config-0x213b/"><meta property="article:section" content="post"><meta property="article:published_time" content="2023-08-17T11:23:10+05:30"><meta property="article:modified_time" content="2023-08-17T11:23:10+05:30"><meta itemprop=name content="My Emacs Configuration"><meta itemprop=description content="[As of 0x213B : 2023-08-17 Thu]
+I use emacs for a lot of my daily tasks and spend majority of my time in it. This is a review of some significant components of my init.el
+;keyboard all the way (menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1) ;I don't like distractions (setq byte-compile-warnings '(cl-functions)) (setq ring-bell-function 'ignore) (setq visible-bell t) I chose the most recently engineered package-management solution when I began with emacs, haven&rsquo;t switched since and don&rsquo;t think I&rsquo;ll need to."><meta itemprop=datePublished content="2023-08-17T11:23:10+05:30"><meta itemprop=dateModified content="2023-08-17T11:23:10+05:30"><meta itemprop=wordCount content="1459"><meta itemprop=keywords content="emacs,lisp,emacs-lisp,config,straight.el,general.el,evil,vi,magit,org,org-roam,yaml,"><meta name=twitter:card content="summary"><meta name=twitter:title content="My Emacs Configuration"><meta name=twitter:description content="[As of 0x213B : 2023-08-17 Thu]
+I use emacs for a lot of my daily tasks and spend majority of my time in it. This is a review of some significant components of my init.el
+;keyboard all the way (menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1) ;I don't like distractions (setq byte-compile-warnings '(cl-functions)) (setq ring-bell-function 'ignore) (setq visible-bell t) I chose the most recently engineered package-management solution when I began with emacs, haven&rsquo;t switched since and don&rsquo;t think I&rsquo;ll need to."><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-4FV7P8X8H6"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4FV7P8X8H6",{anonymize_ip:!1})}</script><script data-name=BMC-Widget data-cfasync=false src=https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js data-id=rajp152k data-description="Support me on Buy me a book!" data-color=#FF5F5F data-position=center data-x_margin=20 data-y_margin=20></script>
+<script>(function(e,t,n,s,o){e.Sender=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date;var i=t.createElement(n),a=t.getElementsByTagName(n)[0];i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://cdn.sender.net/accounts_resources/universal.js","sender"),sender("17d1fe83579561")</script><script type=text/javascript>(function(e,t,n,s,o,i,a){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},i=t.createElement(s),i.async=1,i.src="https://www.clarity.ms/tag/"+o,a=t.getElementsByTagName(s)[0],a.parentNode.insertBefore(i,a)})(window,document,"clarity","script","idey8dw0cf")</script><link rel=icon href=images/feather.png type=image/x-icon></head><body class=body><div class="container container--outer"><header class=header><div class="container header__container"><div class="logo logo--mixed"><a class=logo__link href=/ title=rajpatil.dev rel=home><div class="logo__item logo__imagebox"><img class=logo__img src=/images/quill.jpg></div><div class="logo__item logo__text"><div class=logo__title>rajpatil.dev</div><div class=logo__tagline>Epistemology, Pragmatism, Serendipity, Curiosity and Stupidity...</div></div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
+<span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/about/><i class='fa fa-heart'></i>
+<span class=menu__text>about</span></a></li><li class=menu__item><a class=menu__link href=/now/><i class='fa fa-road'></i>
+<span class=menu__text>now</span></a></li><li class=menu__item><a class=menu__link href=https://buffer.rajpatil.dev><i class='fa fa-road'></i>
+<span class=menu__text>Brain Dump</span></a></li><li class=menu__item><a class=menu__link href=/resume/><i class='fa fa-road'></i>
+<span class=menu__text>Résumé</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>My Emacs Configuration</h1><div class="post__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2023-08-17T11:23:10+05:30>August 17, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class=meta__text><a class=meta__link href=/categories/configs/ rel=category>Configs</a></span></div></div></header><div class="content post__content clearfix"><p><strong>[<em>As of 0x213B : 2023-08-17 Thu</em>]</strong></p><p>I use emacs for a lot of my daily tasks and spend majority of my time
+in it. This is a review of some significant components of my init.el</p><hr><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;keyboard all the way</span>
+</span></span><span style=display:flex><span>(menu-bar-mode <span style=color:#ae81ff>-1</span>)
+</span></span><span style=display:flex><span>(tool-bar-mode <span style=color:#ae81ff>-1</span>)
+</span></span><span style=display:flex><span>(scroll-bar-mode <span style=color:#ae81ff>-1</span>)
+</span></span></code></pre></div><hr><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;I don&#39;t like distractions</span>
+</span></span><span style=display:flex><span>(setq byte-compile-warnings <span style=color:#f92672>&#39;</span>(cl-functions))
+</span></span><span style=display:flex><span>(setq ring-bell-function <span style=color:#e6db74>&#39;ignore</span>)
+</span></span><span style=display:flex><span>(setq visible-bell <span style=color:#66d9ef>t</span>)
+</span></span></code></pre></div><hr><p>I chose the most recently engineered package-management solution when I began with emacs, haven&rsquo;t switched
+since and don&rsquo;t think I&rsquo;ll need to. Migrating from vim, I preferred a
+configuration file rather than installations via melpa interface.
+Also, freezing and thawing is cool : exact reproducibility is guaranteed.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;;BOOTSTRAPPING STRAIGHT.EL (defvar bootstrap-version)</span>
+</span></span><span style=display:flex><span>(let ((bootstrap-file
+</span></span><span style=display:flex><span>       (<span style=color:#a6e22e>expand-file-name</span> <span style=color:#e6db74>&#34;straight/repos/straight.el/bootstrap.el&#34;</span> user-emacs-directory))
+</span></span><span style=display:flex><span>      (bootstrap-version <span style=color:#ae81ff>5</span>))
+</span></span><span style=display:flex><span>  (unless (<span style=color:#a6e22e>file-exists-p</span> bootstrap-file)
+</span></span><span style=display:flex><span>    (with-current-buffer
+</span></span><span style=display:flex><span>        (url-retrieve-synchronously
+</span></span><span style=display:flex><span>         <span style=color:#e6db74>&#34;https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el&#34;</span>
+</span></span><span style=display:flex><span>         <span style=color:#e6db74>&#39;silent</span> <span style=color:#e6db74>&#39;inhibit-cookies</span>)
+</span></span><span style=display:flex><span>      (<span style=color:#a6e22e>goto-char</span> (<span style=color:#a6e22e>point-max</span>))
+</span></span><span style=display:flex><span>      (eval-print-last-sexp)))
+</span></span><span style=display:flex><span>  (<span style=color:#a6e22e>load</span> bootstrap-file <span style=color:#66d9ef>nil</span> <span style=color:#e6db74>&#39;nomessage</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(straight-use-package <span style=color:#e6db74>&#39;use-package</span>)
+</span></span><span style=display:flex><span>(setq straight-path <span style=color:#e6db74>&#34;~/.emacs.d/straight/&#34;</span>)
+</span></span></code></pre></div><hr><p>Again, I chose the most well-thought out packages when I began two
+years ago: I don&rsquo;t particularly know the ins and outs of <code>general</code>
+but I do know it can do what I wish for elegantly and the proper way</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;GENERAL + binding free ups</span>
+</span></span><span style=display:flex><span>(use-package general
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (general-unbind
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;C-M-o&#34;</span> <span style=color:#75715e>; free up for org-roam *Notes*</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;C-M-r&#34;</span> <span style=color:#75715e>; free up for remote ops</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;C-s&#34;</span> <span style=color:#75715e>; for super bindings</span>
+</span></span><span style=display:flex><span>	))
+</span></span></code></pre></div><hr><p>I like being greeted by cultish messages and calls to freedom when I
+get to work. Also serves as an index for the most recently and the
+most frequently accessed files.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;DASHBOARD</span>
+</span></span><span style=display:flex><span>(use-package dashboard
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (dashboard-setup-startup-hook)
+</span></span><span style=display:flex><span>  (general-define-key
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;C-c h&#34;</span> (lambda () (interactive)(view-buffer <span style=color:#e6db74>&#34;*dashboard*&#34;</span>)))
+</span></span><span style=display:flex><span>  (setq
+</span></span><span style=display:flex><span>   initial-buffer-choice (lambda () (<span style=color:#a6e22e>get-buffer</span> <span style=color:#e6db74>&#34;*dashboard*&#34;</span>))
+</span></span><span style=display:flex><span>   dashboard-center-content <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>   dashboard-startup-banner <span style=color:#e6db74>&#39;logo</span>))
+</span></span></code></pre></div><hr><p>I wouldn&rsquo;t be using emacs if not for this. Modal editing is a must and
+not using vi keybindings once you&rsquo;re used to them is an extremely questionable
+way to go about your life.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;EVIL ENV</span>
+</span></span><span style=display:flex><span>(use-package evil
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :init
+</span></span><span style=display:flex><span>  (use-package undo-fu
+</span></span><span style=display:flex><span>    :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>    :config
+</span></span><span style=display:flex><span>    (general-define-key
+</span></span><span style=display:flex><span>     :states <span style=color:#e6db74>&#39;normal</span>
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;u&#34;</span> <span style=color:#a6e22e>#&#39;</span>undo-fu-only-undo
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;\C-r&#34;</span> <span style=color:#a6e22e>#&#39;</span>undo-fu-only-redo)
+</span></span><span style=display:flex><span>    (setq evil-undo-system <span style=color:#e6db74>&#39;undo-fu</span>))
+</span></span><span style=display:flex><span>  (setq
+</span></span><span style=display:flex><span>   evil-want-keybinding <span style=color:#66d9ef>nil</span>
+</span></span><span style=display:flex><span>   evil-want-integration <span style=color:#66d9ef>t</span>)
+</span></span><span style=display:flex><span>  :config 
+</span></span><span style=display:flex><span>  (evil-mode <span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(use-package evil-collection
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :after evil
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (evil-collection-init))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(use-package evil-org
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :after org
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (general-add-hook <span style=color:#e6db74>&#39;org-mode</span>
+</span></span><span style=display:flex><span>		    (<span style=color:#a6e22e>list</span> <span style=color:#a6e22e>#&#39;</span>evil-org-mode))
+</span></span><span style=display:flex><span>  (require <span style=color:#e6db74>&#39;evil-org-agenda</span>)
+</span></span><span style=display:flex><span>  (evil-org-agenda-set-keys))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(use-package evil-surround
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (global-evil-surround-mode <span style=color:#ae81ff>1</span>))
+</span></span></code></pre></div><hr><p>Supercharges any lookup and makes any basic operation much more user
+friendly.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;HELM</span>
+</span></span><span style=display:flex><span>(use-package helm
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (general-define-key
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;M-x&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-M-x
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;C-h a&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-apropos
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;C-/&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-occur
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;C-x C-f&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-find-files)
+</span></span><span style=display:flex><span>  (helm-mode <span style=color:#ae81ff>1</span>))
+</span></span></code></pre></div><hr><p>Ack&rsquo;ing large directories and getting referenced instances of all
+occurences of a pattern in a matter of seconds is not bad.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;PROJECTILE</span>
+</span></span><span style=display:flex><span>(use-package projectile
+</span></span><span style=display:flex><span>  :init
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (projectile-mode <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>  (use-package helm-projectile
+</span></span><span style=display:flex><span>    :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>    :config
+</span></span><span style=display:flex><span>    (general-define-key
+</span></span><span style=display:flex><span>     :prefix <span style=color:#e6db74>&#34;C-c p&#34;</span>
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;f f&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-projectile-find-file
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;f d&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-projectile-find-dir
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;a&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-projectile-ack)))
+</span></span></code></pre></div><hr><p>There&rsquo;s an adage going around since I don&rsquo;t know when: This is the
+last file manager you&rsquo;ll ever need.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;FILE MANAGEMENT : DIRED-X</span>
+</span></span><span style=display:flex><span>(setq find-file-visit-truename <span style=color:#66d9ef>t</span>)
+</span></span><span style=display:flex><span>(general-add-hook <span style=color:#e6db74>&#39;dired-load-hook</span>
+</span></span><span style=display:flex><span>		  (<span style=color:#a6e22e>list</span> (lambda ()
+</span></span><span style=display:flex><span>			  (<span style=color:#a6e22e>load</span> <span style=color:#e6db74>&#34;dired-x&#34;</span>)
+</span></span><span style=display:flex><span>			  <span style=color:#75715e>;; Set dired-x global variables here.  For example:</span>
+</span></span><span style=display:flex><span>			  <span style=color:#75715e>;; (setq dired-guess-shell-gnutar &#34;gtar&#34;)</span>
+</span></span><span style=display:flex><span>			  <span style=color:#75715e>;; (setq dired-x-hands-off-my-keys nil)</span>
+</span></span><span style=display:flex><span>			  )))
+</span></span></code></pre></div><hr><p>Guilty as charged : my emacs isn&rsquo;t vanilla&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;AESTHETICS</span>
+</span></span><span style=display:flex><span>(use-package darkroom <span style=color:#75715e>;; when reading/writing </span>
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>)
+</span></span><span style=display:flex><span>(use-package nimbus-theme <span style=color:#75715e>;; a healthy mix all the shades you need to</span>
+</span></span><span style=display:flex><span>  be evil
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (load-theme <span style=color:#e6db74>&#39;nimbus</span> <span style=color:#66d9ef>t</span>))
+</span></span><span style=display:flex><span>(use-package beacon
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :init
+</span></span><span style=display:flex><span>  (setq beacon-size <span style=color:#ae81ff>60</span> 
+</span></span><span style=display:flex><span>	beacon-blink-when-focused <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>	beacon-blink-when-point-moves-vertically <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>	beacon-blink-when-window-changes <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>	beacon-color <span style=color:#e6db74>&#34;#4444bb&#34;</span>
+</span></span><span style=display:flex><span>	beacon-blink-delay <span style=color:#ae81ff>0.2</span>
+</span></span><span style=display:flex><span>	beacon-blink-duration <span style=color:#ae81ff>0.2</span>)
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (beacon-mode <span style=color:#ae81ff>1</span>))
+</span></span></code></pre></div><hr><p>Hot-reloads and some buffer space to mess around with new
+components I&rsquo;m testing out.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;QUICK CONFIG</span>
+</span></span><span style=display:flex><span>(defun edit-init ()
+</span></span><span style=display:flex><span>  (interactive)
+</span></span><span style=display:flex><span>  (<span style=color:#a6e22e>message</span> (<span style=color:#a6e22e>concat</span> <span style=color:#e6db74>&#34;editing user-init-file @ &#34;</span> user-init-file))
+</span></span><span style=display:flex><span>  (find-file user-init-file))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(defun open-scratch-space ()
+</span></span><span style=display:flex><span>  (interactive)
+</span></span><span style=display:flex><span>  (<span style=color:#a6e22e>message</span> (<span style=color:#a6e22e>concat</span> <span style=color:#e6db74>&#34;opening scratch space @ /mnt/c/Users/Raj Patil/source/scratch&#34;</span> ))
+</span></span><span style=display:flex><span>  (find-file <span style=color:#e6db74>&#34;/mnt/c/Users/Raj Patil/source/scratch&#34;</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(general-define-key
+</span></span><span style=display:flex><span> :prefix <span style=color:#e6db74>&#34;C-c&#34;</span>
+</span></span><span style=display:flex><span> <span style=color:#e6db74>&#34;e&#34;</span> <span style=color:#a6e22e>#&#39;</span>edit-init
+</span></span><span style=display:flex><span> <span style=color:#e6db74>&#34;s&#34;</span> <span style=color:#a6e22e>#&#39;</span>open-scratch-space)
+</span></span></code></pre></div><hr><p>This makes organizing multiple workspaces and panes easy and you&rsquo;re
+missing out on a lot if you don&rsquo;t have sensible tab-management figured out.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;Window management</span>
+</span></span><span style=display:flex><span>(use-package window-purpose
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (purpose-compile-user-configuration)
+</span></span><span style=display:flex><span>  (general-define-key
+</span></span><span style=display:flex><span>   :prefix <span style=color:#e6db74>&#34;C-c ,&#34;</span>
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;d&#34;</span> <span style=color:#a6e22e>#&#39;</span>(lambda ()
+</span></span><span style=display:flex><span>	   (interactive)
+</span></span><span style=display:flex><span>	   (<span style=color:#a6e22e>message</span> <span style=color:#e6db74>&#34;dedicating current window&#34;</span>)
+</span></span><span style=display:flex><span>	   (<span style=color:#a6e22e>set-window-dedicated-p</span> (<span style=color:#a6e22e>selected-window</span>) <span style=color:#66d9ef>t</span>))
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;u&#34;</span> <span style=color:#a6e22e>#&#39;</span>(lambda ()
+</span></span><span style=display:flex><span>	   (interactive)
+</span></span><span style=display:flex><span>	   (<span style=color:#a6e22e>message</span> <span style=color:#e6db74>&#34;undedicating current window&#34;</span>)
+</span></span><span style=display:flex><span>	   (<span style=color:#a6e22e>set-window-dedicated-p</span> (<span style=color:#a6e22e>selected-window</span>) <span style=color:#66d9ef>nil</span>))))
+</span></span></code></pre></div><hr><p>The self-documenting editor in action&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;WHICH-KEY</span>
+</span></span><span style=display:flex><span>(use-package which-key
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (which-key-mode)
+</span></span><span style=display:flex><span>  (general-define-key <span style=color:#e6db74>&#34;C-h C-k&#34;</span> <span style=color:#a6e22e>#&#39;</span>which-key-show-top-level)
+</span></span><span style=display:flex><span>  (which-key-setup-side-window-bottom))
+</span></span></code></pre></div><hr><p>I prefer reading technical texts right within emacs besides my notes..</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;PDF INTEROP</span>
+</span></span><span style=display:flex><span>(use-package pdf-tools
+</span></span><span style=display:flex><span>  :straight (pdf-tools :host github
+</span></span><span style=display:flex><span>		       :repo <span style=color:#e6db74>&#34;vedang/pdf-tools&#34;</span>)
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (pdf-loader-install))
+</span></span></code></pre></div><hr><p>Magical Git : I haven&rsquo;t used this in a while and mostly use the eshell
+interface for basic stuff but I can vouch for the unparalleled
+experience it provides in terms of executing even the most complicated
+operations with a few chords and strokes. Now that&rsquo;s Magit.</p><p>If you like the the interface in itself and would like to implement a
+similar functionality for your extensions, checkout <a href=https://github.com/magit/transient>Transient</a> or <a href=https://github.com/abo-abo/hydra>Hydra</a></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;MAGIT</span>
+</span></span><span style=display:flex><span>(use-package magit :straight <span style=color:#66d9ef>t</span>)
+</span></span></code></pre></div><hr><p>Well, enough can&rsquo;t be said about this. All of it can be
+<a href=https://orgmode.org/>documented</a> though&mldr;&mldr;..,
+<a href=https://orgmode.org/worg/>right</a>&mldr;&mldr;?<br>Do note that you might need to checkout a specific commit of org-mode
+if you also wish to use org-roam (some recent releases are breaking
+and I personally am not aware of exactly what breaks what stuff..).</p><p>The tag line should be enough to hook you:</p><blockquote><p>your life in plain text.</p></blockquote><p>If it isn&rsquo;t, you probably are the kind of person that uses the mouse a
+tad too much and many programmers - along with me - will be judging
+you hard for that.</p><p>Org is an ecosystem in itself and I&rsquo;m not including my capture
+templates, tree manipulators, and babel bindings in here to keep
+things concise&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;ORG-OPS</span>
+</span></span><span style=display:flex><span>(<span style=color:#a6e22e>put</span> <span style=color:#e6db74>&#39;narrow-to-region</span> <span style=color:#e6db74>&#39;disabled</span> <span style=color:#66d9ef>nil</span>)
+</span></span><span style=display:flex><span>(use-package org
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (general-define-key
+</span></span><span style=display:flex><span>   :prefix <span style=color:#e6db74>&#34;C-c&#34;</span>
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;l&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-store-link
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;a&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-agenda
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;c&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-capture
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;!&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-time-stamp-inactive)
+</span></span><span style=display:flex><span>  (setq org-directory (file-truename <span style=color:#e6db74>&#34;~/source/org/&#34;</span>)
+</span></span><span style=display:flex><span>	org-default-notes-file (<span style=color:#a6e22e>concat</span> org-directory <span style=color:#e6db74>&#34;/gtd/GTD_HQ.org&#34;</span>)
+</span></span><span style=display:flex><span>	org-startup-with-inline-images <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>	org-startup-truncated <span style=color:#66d9ef>nil</span>)
+</span></span><span style=display:flex><span>  (general-add-hook <span style=color:#e6db74>&#39;org-mode-hook</span>
+</span></span><span style=display:flex><span>		    (<span style=color:#a6e22e>list</span> <span style=color:#a6e22e>#&#39;</span>toggle-word-wrap
+</span></span><span style=display:flex><span>			  <span style=color:#a6e22e>#&#39;</span>flyspell-mode
+</span></span><span style=display:flex><span>			  <span style=color:#a6e22e>#&#39;</span>nlinum-relative-mode))
+</span></span><span style=display:flex><span>  (defun update-org-latex-fragments ()
+</span></span><span style=display:flex><span>    (org-latex-preview <span style=color:#f92672>&#39;</span>(<span style=color:#ae81ff>64</span>))
+</span></span><span style=display:flex><span>    (<span style=color:#a6e22e>plist-put</span> org-format-latex-options :scale (<span style=color:#a6e22e>*</span> <span style=color:#ae81ff>2</span> text-scale-mode-amount))
+</span></span><span style=display:flex><span>    (org-latex-preview <span style=color:#f92672>&#39;</span>(<span style=color:#ae81ff>16</span>)))
+</span></span><span style=display:flex><span>  (general-add-hook <span style=color:#e6db74>&#39;text-scale-mode-hook</span>
+</span></span><span style=display:flex><span>		    (<span style=color:#a6e22e>list</span> <span style=color:#a6e22e>#&#39;</span>update-org-latex-fragments))
+</span></span><span style=display:flex><span>  (setq org-latex-packages-alist <span style=color:#f92672>&#39;</span>((<span style=color:#e6db74>&#34;margin=2cm&#34;</span> <span style=color:#e6db74>&#34;geometry&#34;</span>)))
+</span></span><span style=display:flex><span>  (setq org-clock-persist <span style=color:#e6db74>&#39;history</span>)
+</span></span><span style=display:flex><span>  (org-clock-persistence-insinuate)
+</span></span><span style=display:flex><span>  (general-define-key
+</span></span><span style=display:flex><span>   :prefix <span style=color:#e6db74>&#34;C-c&#34;</span>
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;r&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-refile
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;C-x C-g&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-clock-goto))
+</span></span><span style=display:flex><span>   
+</span></span></code></pre></div><hr><p>I&rsquo;ve used notion, obsidian, vimwiki, evernote, and anything that was
+available before I settled on org-roam (well .., roam research was
+paid and I could afford to spend time and effort when I was an
+undergrad, but not a subscription).</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;ORG-ROAM</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  (use-package org-roam
+</span></span><span style=display:flex><span>    :straight (org-roam :host github
+</span></span><span style=display:flex><span>			:repo <span style=color:#e6db74>&#34;org-roam/org-roam&#34;</span>)
+</span></span><span style=display:flex><span>    :config
+</span></span><span style=display:flex><span>    (setq org-id-method <span style=color:#e6db74>&#39;ts</span>)
+</span></span><span style=display:flex><span>    (setq org-roam-directory (file-truename <span style=color:#e6db74>&#34;/mnt/c/Users/Raj Patil/source/org/braindump/Content/&#34;</span>))
+</span></span><span style=display:flex><span>    (setq org-roam-file-extensions <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;org&#34;</span>))
+</span></span><span style=display:flex><span>    (org-roam-db-autosync-mode)
+</span></span><span style=display:flex><span>    (general-define-key
+</span></span><span style=display:flex><span>     :prefix <span style=color:#e6db74>&#34;C-M-o&#34;</span>
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;f&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-node-find
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;i&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-node-insert
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;c&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-capture
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;n h&#34;</span> <span style=color:#a6e22e>#&#39;</span>(lambda ()
+</span></span><span style=display:flex><span>	          (interactive)
+</span></span><span style=display:flex><span>	          (find-file (<span style=color:#a6e22e>concat</span> org-roam-directory <span style=color:#e6db74>&#34;index.org&#34;</span>)))
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;n t&#34;</span> <span style=color:#a6e22e>#&#39;</span>(lambda ()
+</span></span><span style=display:flex><span>	          (interactive)
+</span></span><span style=display:flex><span>	          (find-file (<span style=color:#a6e22e>concat</span> org-roam-directory <span style=color:#e6db74>&#34;todo.org&#34;</span>)))
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;d s&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-db-sync
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;t a&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-tag-add
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;t d&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-tag-remove
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;r&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-buffer-toggle
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;o c&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-id-get-create
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;o s&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-id-store-link
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;a a&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-alias-add
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;a d&#34;</span> <span style=color:#a6e22e>#&#39;</span>org-roam-alias-remove)
+</span></span><span style=display:flex><span>    (add-to-list <span style=color:#e6db74>&#39;display-buffer-alist</span>
+</span></span><span style=display:flex><span>		 <span style=color:#f92672>&#39;</span>(<span style=color:#75715e>; org-roam buffer toggle config</span>
+</span></span><span style=display:flex><span>		   (<span style=color:#e6db74>&#34;.org-roam.*&#34;</span>
+</span></span><span style=display:flex><span>		    (display-buffer-in-side-window)
+</span></span><span style=display:flex><span>		    (window-width <span style=color:#f92672>.</span> <span style=color:#ae81ff>0.25</span>)
+</span></span><span style=display:flex><span>		    (side <span style=color:#f92672>.</span> left)
+</span></span><span style=display:flex><span>		    (slot <span style=color:#ae81ff>0</span>)))))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  (use-package websocket
+</span></span><span style=display:flex><span>    :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>    :after org-roam)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  (use-package org-roam-ui
+</span></span><span style=display:flex><span>    :straight (:host github
+</span></span><span style=display:flex><span>		     :repo <span style=color:#e6db74>&#34;org-roam/org-roam-ui&#34;</span>
+</span></span><span style=display:flex><span>		     :files (<span style=color:#e6db74>&#34;*.el&#34;</span> <span style=color:#e6db74>&#34;out&#34;</span>))
+</span></span><span style=display:flex><span>    :after org-roam
+</span></span><span style=display:flex><span>    :config
+</span></span><span style=display:flex><span>    (setq org-roam-ui-sync-theme <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>	  org-roam-ui-follow <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>	  org-roam-ui-update-on-save <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>	  org-roam-ui-open-on-start <span style=color:#66d9ef>t</span>))
+</span></span></code></pre></div><hr><p>You definitely need this.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;YAML</span>
+</span></span><span style=display:flex><span>(use-package yaml-mode
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (add-to-list <span style=color:#e6db74>&#39;auto-mode-alist</span> <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;\\.yml\\&#39;&#34;</span> <span style=color:#f92672>.</span> yaml-mode)))
+</span></span></code></pre></div><hr><p>Life is too short to not try a lisp</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;LISP ADD ONS</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(use-package smartparens
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (smartparens-global-mode <span style=color:#66d9ef>t</span>))
+</span></span><span style=display:flex><span>(use-package rainbow-delimiters
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (rainbow-delimiters-mode-enable))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;SLIME</span>
+</span></span><span style=display:flex><span>(use-package slime
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (setq inferior-lisp-program <span style=color:#e6db74>&#34;sbcl&#34;</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;RACKET</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(use-package racket-mode
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (setq racket-documentation-search-location <span style=color:#e6db74>&#39;local</span>
+</span></span><span style=display:flex><span>	racket-images-inline <span style=color:#66d9ef>t</span>)
+</span></span><span style=display:flex><span>  (general-add-hook (<span style=color:#a6e22e>list</span> <span style=color:#e6db74>&#39;racket-mode-hook</span> <span style=color:#e6db74>&#39;racket-repl-mode-hook</span>)
+</span></span><span style=display:flex><span>		    (<span style=color:#a6e22e>list</span> <span style=color:#a6e22e>#&#39;</span>rainbow-delimiters-mode)))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>;;ELISP</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(general-add-hook <span style=color:#e6db74>&#39;emacs-lisp-mode-hook</span>
+</span></span><span style=display:flex><span>		  (<span style=color:#a6e22e>list</span> <span style=color:#e6db74>&#39;smartparens-mode</span> <span style=color:#75715e>;;use (kbd `C-q &#39;`) for single quoting</span>
+</span></span><span style=display:flex><span>			<span style=color:#e6db74>&#39;rainbow-delimiters-mode</span>))
+</span></span></code></pre></div><hr><p>We all have our moments of self-doubt. Independence is a fabricated notion.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;DICTIONARY</span>
+</span></span><span style=display:flex><span>(use-package define-word
+</span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>  :config
+</span></span><span style=display:flex><span>  (general-define-key
+</span></span><span style=display:flex><span>   :prefix <span style=color:#e6db74>&#34;C-c&#34;</span>
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;d&#34;</span> <span style=color:#a6e22e>#&#39;</span>define-word-at-point
+</span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;D&#34;</span> <span style=color:#a6e22e>#&#39;</span>define-word))
+</span></span></code></pre></div><hr><p>You should blog too.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;BLOG</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  (use-package easy-hugo
+</span></span><span style=display:flex><span>    :straight <span style=color:#66d9ef>t</span>
+</span></span><span style=display:flex><span>    :config
+</span></span><span style=display:flex><span>    (setq easy-hugo-basedir <span style=color:#e6db74>&#34;/mnt/c/Users/Raj Patil/source/rajpatil.dev/&#34;</span>)
+</span></span><span style=display:flex><span>    (setq easy-hugo-url <span style=color:#e6db74>&#34;https://rajpatil.dev&#34;</span>)
+</span></span><span style=display:flex><span>    (setq easy-hugo-root <span style=color:#e6db74>&#34;/usr/local/bin&#34;</span>)
+</span></span><span style=display:flex><span>    (defun blog ()
+</span></span><span style=display:flex><span>      <span style=color:#e6db74>&#34;Open blogging workspace&#34;</span>
+</span></span><span style=display:flex><span>      (interactive)
+</span></span><span style=display:flex><span>      (let ((blog-dir <span style=color:#e6db74>&#34;~/links/source/rajpatil.dev&#34;</span>))
+</span></span><span style=display:flex><span>	(<span style=color:#a6e22e>message</span> (<span style=color:#a6e22e>concat</span> <span style=color:#e6db74>&#34;opening blogging workspace @ &#34;</span> blog-dir))
+</span></span><span style=display:flex><span>	(find-file blog-dir)))
+</span></span><span style=display:flex><span>    (defun life-hex-count ()
+</span></span><span style=display:flex><span>      <span style=color:#e6db74>&#34;number of days I&#39;ve been alive&#34;</span>
+</span></span><span style=display:flex><span>      (interactive)
+</span></span><span style=display:flex><span>      (let* ((birth (date-to-time <span style=color:#e6db74>&#34;2000-05-01 19:30 IST&#34;</span>))
+</span></span><span style=display:flex><span>	     (today (date-to-time (<span style=color:#a6e22e>format-time-string</span> <span style=color:#e6db74>&#34;%Y-%m-%d %H:%M:%S %Z&#34;</span> (<span style=color:#a6e22e>current-time</span>)) ))
+</span></span><span style=display:flex><span>	     (diff (<span style=color:#a6e22e>float-time</span> (<span style=color:#a6e22e>time-subtract</span> today birth))))
+</span></span><span style=display:flex><span>	(<span style=color:#a6e22e>insert</span> (<span style=color:#a6e22e>format</span> <span style=color:#e6db74>&#34;0x%X&#34;</span> (<span style=color:#a6e22e>/</span> diff <span style=color:#ae81ff>86400</span>)))))
+</span></span><span style=display:flex><span>    (defun hex-ops ()
+</span></span><span style=display:flex><span>      <span style=color:#e6db74>&#34;hexify decimal number at point, invoke life hex count if nil&#34;</span>
+</span></span><span style=display:flex><span>      (interactive)
+</span></span><span style=display:flex><span>      (defun delete-word-at-point ()
+</span></span><span style=display:flex><span>		  (kill-word <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>		  (backward-kill-word <span style=color:#ae81ff>1</span>))
+</span></span><span style=display:flex><span>      (defun valid-number-p (str)
+</span></span><span style=display:flex><span>	  <span style=color:#e6db74>&#34;Check if a string is a valid number.&#34;</span>
+</span></span><span style=display:flex><span>		  (string-match-p <span style=color:#e6db74>&#34;^[+-]?[0-9]*\\.?[0-9]+\\(?:[eE][+-]?[0-9]+\\)?$&#34;</span> str))
+</span></span><span style=display:flex><span>      (let ((dec-days (word-at-point)))
+</span></span><span style=display:flex><span>	(cond ((<span style=color:#a6e22e>null</span> dec-days) (life-hex-count))
+</span></span><span style=display:flex><span>	      ((valid-number-p dec-days) (progn
+</span></span><span style=display:flex><span>					   (delete-word-at-point)
+</span></span><span style=display:flex><span>					   (<span style=color:#a6e22e>insert</span> (<span style=color:#a6e22e>format</span> <span style=color:#e6db74>&#34; 0x%X &#34;</span> (<span style=color:#a6e22e>string-to-number</span> dec-days)))) )
+</span></span><span style=display:flex><span>	      (<span style=color:#66d9ef>t</span> (<span style=color:#a6e22e>message</span> <span style=color:#e6db74>&#34;invalid request; ignoring ...&#34;</span>)))))
+</span></span><span style=display:flex><span>    (general-define-key
+</span></span><span style=display:flex><span>     :prefix <span style=color:#e6db74>&#34;C-c C-h&#34;</span>
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;b&#34;</span> <span style=color:#a6e22e>#&#39;</span>easy-hugo-newpost
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;C-b&#34;</span> <span style=color:#a6e22e>#&#39;</span>blog
+</span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;C-t&#34;</span> <span style=color:#a6e22e>#&#39;</span>hex-ops))
+</span></span></code></pre></div><hr><p>I&rsquo;ve skipped over my LSP setup for all the languages that I use and
+the accompanying tooling that goes with it..</p><p>If you made it this far, you probably have too much time on your hands
+or are considering shifting your dev environment to emacs. In any
+case, I&rsquo;d say you still have too much time on your hands.</p><p>Do comment on how I&rsquo;m missing out on some other good stuff that - if I
+began using - would make me wonder how was life worth living before I
+discovered it&mldr;</p></div><footer class=post__footer><div class="post__tags tags clearfix"><svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5.0 11V3C0 1.5.8.8.8.8S1.5.0 3 0h8c1.5.0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 100-6 3 3 0 000 6z"/></svg><ul class=tags__list><li class=tags__item><a class="tags__link btn" href=/tags/emacs/ rel=tag>emacs</a></li><li class=tags__item><a class="tags__link btn" href=/tags/lisp/ rel=tag>lisp</a></li><li class=tags__item><a class="tags__link btn" href=/tags/emacs-lisp/ rel=tag>emacs-lisp</a></li><li class=tags__item><a class="tags__link btn" href=/tags/config/ rel=tag>config</a></li><li class=tags__item><a class="tags__link btn" href=/tags/straight.el/ rel=tag>straight.el</a></li><li class=tags__item><a class="tags__link btn" href=/tags/general.el/ rel=tag>general.el</a></li><li class=tags__item><a class="tags__link btn" href=/tags/evil/ rel=tag>evil</a></li><li class=tags__item><a class="tags__link btn" href=/tags/vi/ rel=tag>vi</a></li><li class=tags__item><a class="tags__link btn" href=/tags/magit/ rel=tag>magit</a></li><li class=tags__item><a class="tags__link btn" href=/tags/org/ rel=tag>org</a></li><li class=tags__item><a class="tags__link btn" href=/tags/org-roam/ rel=tag>org-roam</a></li><li class=tags__item><a class="tags__link btn" href=/tags/yaml/ rel=tag>yaml</a></li></ul></div></footer></article></main><script src=https://giscus.app/client.js data-repo=rajp152k/rajp152k.github.io data-repo-id=R_kgDOICV9eQ data-category=Announcements data-category-id=DIC_kwDOICV9ec4CYgaq data-mapping=title data-strict=0 data-reactions-enabled=1 data-emit-metadata=1 data-input-position=top data-theme=light_protanopia data-lang=en data-loading=lazy crossorigin=anonymous async></script></div><aside class="sidebar sidebar--left"><div class="widget-social widget"><h4 class="widget-social__title widget__title">Social</h4><div class="widget-social__content widget__content"><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=Youtube rel="noopener noreferrer" href=https://youtube.com/@rajp152k target=_blank><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="-10.20005 -70.33325 380.0671 250.9995"><path d="M93.333 117.559V47.775l61.334 34.893zm136.43-91.742c-2.699-10.162-10.651-18.165-20.747-20.881C190.716.0 117.333.0 117.333.0S43.951.0 25.651 4.936C15.555 7.652 7.603 15.655 4.904 25.817.0 44.236.0 82.667.0 82.667s0 38.429 4.904 56.849c2.699 10.163 10.65 18.165 20.747 20.883 18.3 4.934 91.682 4.934 91.682 4.934s73.383.0 91.683-4.934c10.096-2.718 18.048-10.72 20.747-20.883 4.904-18.42 4.904-56.85 4.904-56.85s0-38.43-4.904-56.849" fill="#fff"/></svg><span>Youtube</span></a></div><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=Twitter rel="noopener noreferrer" href=https://twitter.com/rajpatil152k target=_blank><svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5.0-78.8 35.3-78.8 78.8.0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3C20 26 16.1 39.6 16.1 54c0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1.0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4.0-12.6-.4-18.8-1.1C34.9 299 76.3 312 120.8 312c144.9.0 224.1-120 224.1-224.1.0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg><span>Twitter</span></a></div><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=GitHub rel="noopener noreferrer" href=https://github.com/rajp152k target=_blank><svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0C85.9.0.0 85.8.0 191.7c0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2.0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8.0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7.0.0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4.0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5.0 25.6-.2 46.3-.2 52.6.0 5.1 3.5 11.1 13.2 9.2C329 348.2 384 276.4 384 191.7 384 85.8 298 0 192 0z"/></svg><span>GitHub</span></a></div><div class="widget-social__item widget__item"><a class="widget-social__link widget__link btn" title=Email href=mailto:contact@rajpatil.dev><svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16V16 0h-16H16 0zm347 16-139 92.5L69 32zM199 157.5l9 5.5 9-5.5L384 46v210H32V46z"/></svg><span>Mail</span></a></div></div></div><div class="widget-taglist widget"><h4 class=widget__title>Tags</h4><div class=widget__content><a class="widget-taglist__link widget__link btn" href=/tags/book/ title=book>book (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/common-lisp/ title=common-lisp>common-lisp (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/config/ title=config>config (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/efficiency/ title=efficiency>efficiency (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/emacs/ title=emacs>emacs (2)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/emacs-lisp/ title=emacs-lisp>emacs-lisp (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/evil/ title=evil>evil (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/general.el/ title=general.el>general.el (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/habits/ title=habits>habits (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/incentives/ title=incentives>incentives (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/index/ title=index>index (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/lisp/ title=lisp>lisp (2)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/magit/ title=magit>magit (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/org/ title=org>org (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/org-roam/ title=org-roam>org-roam (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/past/ title=past>past (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/review/ title=review>review (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/skills/ title=skills>skills (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/speed-reading/ title=speed-reading>speed-reading (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/straight.el/ title=straight.el>straight.el (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/touch-typing/ title=touch-typing>touch-typing (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/update/ title=update>update (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/vi/ title=vi>vi (2)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/yaml/ title=yaml>yaml (1)</a></div></div><div class="widget-search widget"><h4 class=widget__title>Search</h4><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=SEARCH… name=q aria-label=SEARCH…></label>
+<input class=widget-search__submit type=submit value=Search>
+<input type=hidden name=sitesearch value=https://rajp152k.github.io></form></div><h4 class=widget__title>Subscribe</h4><div style=text-align:left class=sender-form-field data-sender-form-id=ll4yzv1caxebrb6nphr></div></aside><div class="widget-search widget"><h4 class=widget__title>Search</h4><form class=widget-search__form role=search method=get action=https://google.com/search><label><input class=widget-search__field type=search placeholder=SEARCH… name=q aria-label=SEARCH…></label>
+<input class=widget-search__submit type=submit value=Search>
+<input type=hidden name=sitesearch value=https://rajp152k.github.io></form></div></div><footer class=footer><div class="container footer__container flex"><a href=https://rajpatil.dev/index.xml><img src=/images/rss.png width=24px></a><div class=footer__copyright>&copy; 2023 Raj Patil - All rights reserved.</div></div></footer></div><script async defer src=/js/menu.js></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script></body></html>
