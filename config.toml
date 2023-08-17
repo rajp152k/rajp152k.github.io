@@ -79,3 +79,9 @@ googleAnalytics = "G-4FV7P8X8H6"
   pre = "<i class='fa fa-road'></i>"
   url = '/resume/'
   weight = -105
+[[menu.main]]
+  identifier = 'all posts'
+  name = 'all-posts'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/all-posts/'
+  weight = -104
