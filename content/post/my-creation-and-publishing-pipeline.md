@@ -2,7 +2,7 @@
 title: "My Creation and Publishing Pipeline"
 date: 2023-08-23T18:13:15+05:30
 categories: ["Writing"]
-tags: ["youtube","emacs","org-roam","github-actions","writing","ideas,"systems","org-mode","markdown","git","org-roam-ui","hugo"]
+tags: ["youtube","emacs","org-roam","github-actions","writing","ideas" ,"systems","org-mode","markdown","git","org-roam-ui","hugo"]
 draft: false
 ---
 
