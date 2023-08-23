@@ -1,3 +1,4 @@
 # rajpatil.dev
 
- - life logs 
+ - blog
+ - portfolio index
