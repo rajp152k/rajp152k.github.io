@@ -85,3 +85,8 @@ googleAnalytics = "G-4FV7P8X8H6"
   pre = "<i class='fa fa-road'></i>"
   url = '/all-posts/'
   weight = -104
+[[menu.main]]
+  name = 'I know not..'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/i-know-not/'
+  weight = -103
