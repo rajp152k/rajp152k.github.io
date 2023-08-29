@@ -11,7 +11,7 @@ definitely can't miss all those parentheses. In this section of the
 series, I discuss the cause for such a representation and how that
 makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).
 
-{{< youtube "" >}}  
+{{< youtube "SuI2ns1D9Es" >}}  
 
 ---
 ---
