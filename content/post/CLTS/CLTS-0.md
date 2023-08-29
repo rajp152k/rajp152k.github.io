@@ -11,6 +11,9 @@ auxilliary.
 
 {{< youtube "jLonMxrVPbY" >}}  
 
+---
+---
+
 I'll be summarizing the videos in these blogs and be using these to
 point to references and additional resources that further elaborate
 the matter.  
@@ -61,6 +64,8 @@ do note that I publish on this main blog and on youtube after my plans and
 content in the [buffer](https://buffer.rajpatil.dev) mature. A quick
 search in the index should indicate what I've been up to and where I'm
 headed.  
+
+## Call to collaborate
 
 If you're someone who shares the dream of making lisp popular and
 mainstream so that we can use it for our jobs and don't have to switch
