@@ -46,7 +46,7 @@ googleAnalytics = "G-4FV7P8X8H6"
   email = "contact@rajpatil.dev"
   youtube = "@rajp152k"
   instagram = "rp152k"
-  #linkedin = "raj-p-48586b113"
+  linkedin = "raj-p-48586b113"
 
 [Params.style.vars]
   highlightColor = "#aa0000"
