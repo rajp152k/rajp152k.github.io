@@ -34,7 +34,7 @@ The habit of reading may have granted me access to the ocean of abstractions
 and intellectual entities but writing is the guru that teaches you
 how to swim and dive and evaporate seas and make it rain on
 deserts and communicate with marine life and unlock secrets from the
-deepest trenches and generating tsunamis and ... well ..., yeah ..., you
+deepest trenches and generate tsunamis and ... well ..., yeah ..., you
 get the point..  
 
 I have blogged regularly for the majority of my last 4 years of
