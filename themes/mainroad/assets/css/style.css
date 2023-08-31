@@ -526,6 +526,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	padding: 10px 15px;
 	padding: .625rem .9375rem;
 	font-weight: 700;
+	font-size: 1.2rem;
 	color: #fff;
 	text-transform: uppercase;
 }
