@@ -128,11 +128,10 @@ textarea {
 .btn {
 	padding: 5px 10px;
 	font-weight: 700;
-	font-size: 1.3rem;
+	font-size: 1.1rem;
 	color: #fff;
 	white-space: pre-line;
 	background: #1a1a1a;
-	text-align: center;
 }
 
 .btn:hover {
@@ -518,7 +517,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	padding: 10px 15px;
 	padding: .625rem .9375rem;
 	font-weight: 700;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: #fff;
 	text-transform: uppercase;
 }
@@ -570,6 +569,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 		border: 0;
 		-webkit-transform: none;
 		transform: none;
+		justify-content: center;
 	}
 
 	.menu__item {
@@ -899,6 +899,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .list__footer-readmore {
 	float: right;
 	margin-top: 10px;
+	font-size: 0.8rem;
 }
 
 /* Pagination */
@@ -1053,9 +1054,19 @@ textarea {
 }
 
 /* Widgets */
+
 .widget {
 	margin-bottom: 25px;
 	overflow: hidden;
+}
+
+.widget__content__tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
 }
 
 .widget:last-child {
@@ -1131,9 +1142,11 @@ textarea {
 }
 
 .widget-social__link {
-	display: block;
+	display: flex;
 	margin: 0 0 1px;
-	white-space: normal;
+	white-space: none;
+	justify-content: space-between;
+	font-size: 1rem;
 }
 
 .widget-social__link-icon {
@@ -1173,6 +1186,8 @@ textarea {
 	background: #1a1a1a;
 	border-top: 6px solid #990000;
 	align: center;
+	display: flex;
+	flex-grow: 0;
 }
 
 .footer__container {
@@ -1218,7 +1233,9 @@ textarea {
 	}
 
 	.footer__container {
-		display: block;
+		display: flex;
+		flex-grow: 0;
+		justify-content: space-evenly;
 	}
 
 	.footer__links {
@@ -1229,6 +1246,7 @@ textarea {
 
 	.footer__copyright {
 		text-align: center;
+		margin-top: 10px;
 	}
 }
 
@@ -1329,3 +1347,5 @@ textarea {
 		font-size: .6875rem;
 	}
 }
+
+
