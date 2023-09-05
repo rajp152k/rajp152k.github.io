@@ -210,7 +210,7 @@ a:hover {
 hr {
 	margin: 0 0 20px;
 	border: 0;
-	border-top: 2px solid {{ $highlightColor }};
+	border-top: 3px solid {{ $highlightColor }};
 }
 
 p {
@@ -646,6 +646,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	margin-top: .625rem;
 	border-top: 1px dotted #ebebeb;
 	border-bottom: 1px dotted #ebebeb;
+	text-align: center;
 }
 
 .post__lead {
@@ -892,6 +893,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .list__meta {
 	margin-top: 5px;
+	text-align: center;
 }
 
 .list__thumbnail {
@@ -1112,8 +1114,8 @@ textarea {
 
 /* Search widget */
 .widget-search__form {
-	display: block;
-	padding: 5%;
+	display: flex;
+	padding: 0px;
 	margin: 0 auto;
 	background: #f5f5f5;
 }
@@ -1124,18 +1126,20 @@ textarea {
 
 .widget-search__field {
 	position: relative;
-	display: block;
+	display: flex;
 	width: 100%;
-	padding: 8px;
+	padding: 10px;
 	margin: 0 auto;
-	font-size: 11px;
+	font-size: inherit;
 	cursor: pointer;
 	background: #fff;
-	border: 1px solid #ebebeb;
+	border: 2px solid #ebebeb;
 	border-radius: 0;
 	outline-offset: -2px;
 	transition: none;
 	-webkit-appearance: none;
+	flex: 1;
+	text-align: center;
 }
 
 .widget-search__field:active,

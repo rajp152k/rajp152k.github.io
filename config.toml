@@ -27,7 +27,7 @@ googleAnalytics = "G-4FV7P8X8H6"
   post_meta = ["date", "categories"] # Order of post meta information
   mainSections = ["post", "blog", "news", "docs"]
   comments = true
-  search = false
+  search = true
 
 [Params.sidebar]
   home = "left"   # Configure layout for home page

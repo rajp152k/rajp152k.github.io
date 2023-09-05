@@ -1,13 +1,17 @@
 
 function displayResults (results, store) {
   const searchResults = document.getElementById('results')
+    console.log(searchResults)
   if (results.length) {
     let resultList = ''
     // Iterate and build result list elements
     for (const n in results) {
       const item = store[results[n].ref]
-      resultList += '<li><p><a href="' + item.url + '">' + item.title + '</a></p>'
-      resultList += '<p>' + item.content.substring(0, 150) + '...</p></li>'
+      //resultList += '<li class="list__item post"><p><a href="' + item.url + '">' + item.title + '</a></p>'
+	//resultList += '<p>' + item.content.substring(0, 150) + '...</p></li>'
+	//resultList += '<a href="' + item.url + '"><header class="main__header"> <h1 class="main__title">' + item.title + "</h1></header>";
+
+	resultList += item.meta ;
     }
     searchResults.innerHTML = resultList
   } else {
@@ -21,6 +25,7 @@ const query = params.get('query')
 
 if (query) {
   // Retain the search input in the form when displaying results
+    console.log(query)
   document.getElementById('search-input').setAttribute('value', query)
 
   const idx = lunr(function () {

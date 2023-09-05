@@ -1,10 +1,11 @@
 <script>
   window.store ={
-      {{ range .Site.Pages }}
+      {{ range (where .Site.Pages "Section" "post") }}
       "{{ .Permalink }}": {
 	  "title": "{{ .Title }}",
-	  "tags": [{{ range .Params.Tags }}"{{ .}}",{{ end }}],
-	  "content" {{ .Content | plainify }},
+	  "tags": [{{ range .Params.Tags }}"{{ . }}",{{ end }}],
+	  "meta": {{- .Render "summary-archive" }} ,
+	  "content": {{ .Content | plainify }},
 	  "url": "{{ .Permalink }}"
       },
       {{ end }}
