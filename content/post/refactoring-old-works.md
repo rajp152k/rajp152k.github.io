@@ -2,7 +2,7 @@
 title: "Refactoring Old Works"
 date: 2023-09-06T16:21:44+05:30
 categories: ["Writing"]
-tags: ["past","work","refactor","archives",]
+tags: ["past","work","refactor","archives"]
 draft: false
 ---
 
