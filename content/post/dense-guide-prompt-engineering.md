@@ -56,7 +56,7 @@ Feedback, the core of iteration, can be broadly categorized as being:
    - convenient to not have to repeat yourself regarding how you'd like to have conversations
  - one may consider stating their daily roles and responsibilities and providing their personal preferences regarding their learning styles
 
-What I use personally (as of 0x215E) is as follows -> 
+What I use personally is as follows -> 
 
 What I'd like ChatGPT to know about me:
 
