@@ -60,6 +60,12 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [menu]
 [[menu.main]]
+  identifier = 'Home'
+  name = 'home'
+  pre = "<i class='fa fa-heart'></i>"
+  url = '/'
+  weight = -111
+[[menu.main]]
   identifier = 'about'
   name = 'about'
   pre = "<i class='fa fa-heart'></i>"
