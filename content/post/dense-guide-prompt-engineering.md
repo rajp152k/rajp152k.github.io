@@ -113,9 +113,9 @@ Finishing off with a couple more core skills that could enhance your
 conversations ...
 
 ### Instantial duplication
- - all of the previous discussion pertain to zero-shot prompts :- the
+ - all of the previous discussion pertain to zero-shot[^1] prompts :- the
    LLM already has stylistic defaults and contextual information regarding the requests and can build the necessary response
- - one shot and few shot prompts are another class to which the LLM can't satisfactorily respond to without training
+ - one shot[^2] and few shot[^3] prompts are another class to which the LLM can't satisfactorily respond to without training
    - they simply involve providing one or a few more examples respectively, that are to be kept in mind when the LLM produces a response for the relevant prompt
  - can be used to replicate styles and templates that aren't likely present in the training corpora of the LLM
  - more examples result in better generalization and this may help avoid picking up irrelevant characteristics from one specific example. 
@@ -146,4 +146,10 @@ way to go about it.
 
 I won't be using AI generated text in my blogs without a
 disclaimer/explicit assertion about the same - I got no fomo any mo...
+
+[^1]: Zero-Shot Learning (ZSL) - ZSL teaches a model to recognize things it has never seen during training by using textual descriptions or attributes.
+
+[^2]: One-Shot Learning - In one-shot learning, a model learns to recognize new things with just one example per new thing during training.
+
+[^3]: Few-Shot Learning - Few-shot learning helps a model recognize new things with only a handful of examples, usually more than one but still very few.
 
