@@ -30,7 +30,7 @@ human is different in many unidentifiable ways.
 ## The Story so Far ...
 
 I've quit caffeine multiple times in the past 5 years only to hop back
-on when life gets a little to demanding. This time, I've been off
+on when life gets a little too demanding. This time, I've been off
 caffeine for around a month and am used to the new stable non-jittery
 days.  
 
