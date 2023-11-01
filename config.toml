@@ -83,6 +83,12 @@ googleAnalytics = "G-4FV7P8X8H6"
   url = 'https://buffer.rajpatil.dev'
   weight = -108
 [[menu.main]]
+  identifier = 'bits2nats'
+  name = 'Bits2Nats'
+  pre = "<i class='fa fa-heart'></i>"
+  url = 'https://bits2nats.rajpatil.dev'
+  weight = -107
+[[menu.main]]
   name = 'Résumé'
   pre = "<i class='fa fa-road'></i>"
   url = '/resume/'
