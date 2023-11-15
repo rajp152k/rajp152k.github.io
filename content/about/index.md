@@ -1,13 +1,20 @@
 ---
 title: About me
 ---
-Hi, This is Raj:  
 
-I like maintaining an evolution of my thought process over time and am
-an arguably extensive dabbler, while trying to master
-specific domains of course. I believe different knowledge domains are
-more intertwined than we acknowledge them to be and I find it
-interesting to build connections.  
+Hey there, welcome to my cyber-castle where all that I do is collated
+and referenced.  
 
-Albeit a hobby at which I don't particularly excel, writing has been (since I was 19) helping me document my mind and better represent my online presence than
-any other social media would allow me to.  
+I'm a man of many muses and the polylemma of choosing one at a moment
+in time is a luxury I'm glad I can afford.  
+
+I contemplate quite a lot and I find writing to be a good exercise towards
+recording evolution of the self over my life.  
+
+Eventhough the right thing to say would be "I enjoy a good debate",
+all I really thrive on is a lively intellectual brawl that end in displays of
+dominance and deprecating the opposition to the point that I have a
+tad too many enemies than I have friends.  
+
+All the opinions stated herein are my own and albeit my meandering casualness,
+you may expect a pinch of seriousness here and there.  

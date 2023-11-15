@@ -4,7 +4,19 @@ title: Now
 
 A chronologically descending log of my "nows" : cause an "about" isn't enough.
 
-##  0x2132
+## 0x2196
+
+I'm ramping up the writing a little and lowering down on the
+reads. That might not be a good advice for an aspiring writer but I
+wish to do more stuff for a while.  
+
+I'm on a mild intellectual restriction so that I can adequately
+assimilate all that I've read up until now.  
+
+Do expect more works that aren't inherently inspired from existing
+corpus but my own experiences and intellectual concoctions.
+
+## 0x2132
 
 As of now, I'm laying low and building myself up again. Life is
 pretty boring and structured : workout, read, work, repeat... there's
