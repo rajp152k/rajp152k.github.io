@@ -1,8 +1,7 @@
 baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
 title = 'Raj Patil'
-theme = "mainroad"
-
+theme = "custom"
 
 googleAnalytics = "G-4FV7P8X8H6"
 
@@ -12,7 +11,7 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [Params]
   description = "rajpatil.dev"
-  head_logo = "images/feather.png"
+  head_logo = false
   copyright = "Raj Patil - All rights reserved"
   schema = true
   toc = false
@@ -34,27 +33,24 @@ googleAnalytics = "G-4FV7P8X8H6"
   list = "left"   # Configure layout for list pages
   single = "left" # Configure layout for single pages
   # Enable widgets in given order
-  widgets = ["social","taglist","sender"]
+  widgets = ["social","taglist"]
 
 [Params.widgets]
-  recent_num = 10 # Set the number of articles in the "Recent articles" widget
+  recent_num = 20 # Set the number of articles in the "Recent articles" widget
   tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
 
 [Params.widgets.social]
   # Enable parts of social widget
-  twitter = "rajpatil152k"
   github = "rajp152k"
   email = "contact@rajpatil.dev"
   youtube = "@rajp152k"
-  instagram = "rp152k"
-  linkedin = "raj-p-48586b113"
   goodreads = "rajp152k"
 
 [Params.style.vars]
-  highlightColor = "#aa0000"
+  highlightColor = "#f7f9f9"
 
 [Params.logo]
-  image = "images/quill.jpg"
+  image = false
   title = "rajpatil.dev"
   subtitle = "Epistemology, Pragmatism, Serendipity, Curiosity and Stupidity..."
 

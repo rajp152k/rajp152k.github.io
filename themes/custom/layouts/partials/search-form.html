@@ -1,0 +1,16 @@
+
+<div class="widget-search widget">
+<h4 class="widget__title">Search</h4>
+<form id="search"
+      class="widget-search__form"
+      method="get"
+      action='{{ with .GetPage "/search" }}{{.Permalink}}{{end}}'>
+
+  <label hidden for="search-input">Search site</label>
+  <input class="widget-search__field"
+	 type="text" id="search-input" name="query"
+	 placeholder="Type here to search">
+  <input class="widget-search__submit" type="submit" value="search">
+  <!--<input type="submit" value="search">-->
+</form>
+</div>

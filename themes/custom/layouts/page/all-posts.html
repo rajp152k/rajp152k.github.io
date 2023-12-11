@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main class="main list" role="main">
+	{{- with .Title }}
+	<header class="main__header">
+		<h1 class="main__title">{{ . }}</h1>
+	</header>
+	<hr>
+	{{- end }}
+	{{- with .Content }}
+	<div class="content main__content clearfix">
+		{{ . }}
+	</div>
+	{{- end }}
+	{{- range .Site.RegularPages }}
+	{{- if (eq .Page.Type "post") }}
+		{{- .Render "summary-archive" }}
+	{{- end}}
+	{{- end }}
+</main>
+{{ end }}
