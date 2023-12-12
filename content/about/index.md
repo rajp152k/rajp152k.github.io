@@ -12,9 +12,9 @@ I contemplate quite a lot and I find writing to be a good exercise towards
 recording evolution of the self over my life.  
 
 Eventhough the right thing to say would be "I enjoy a good debate",
-all I really thrive on is a lively intellectual brawl that end in displays of
-dominance and deprecating the opposition to the point that I have a
-tad too many enemies than I have friends.  
+all I really thrive on are lively intellectual brawls, to the extent that I have a
+tad too many intellectual frenemies and enefriends alike.  
 
 All the opinions stated herein are my own and albeit my meandering casualness,
-you may expect a pinch of seriousness here and there.  
+do expect a liberal pinch of seriousness occasionally thrown into this
+epistemological potpourri that livens up this cyber-castle.  
