@@ -13,27 +13,32 @@ sidebar: false
 
 ### *BTECH IIT Hyderabad (2018-2022)*
 
-	- Major : CSE       : 9.26
-	- Minor : AI        : 9.50
+	- Major : CSE       : 9.26/10
+	- Minor : AI        : 9.50/10
 	
 ---
 ## Technical Skills
 	
 	Languages:
-	- Proficiency: Python, Lisp , SQL, shell-scripting 
-	- Experience with: C++, C, Haskell, Prolog, Eiffel, Vimscript
-
+	- Proficiency: Python, Lisp (Common-Lisp, Racket)
+	- non-trivial experience in : C++, C, Haskell, Prolog, Eiffel
+	- utilities: SQL, regex, bash, vimscript, emacs-lisp
+   
 	Tools:
-	 - utilities: git, docker, regex, latex, markdown
-	 - software:  Emacs, Excel, SolidEdge, Tmux
+	 - development: git, REST API 
+	 - markup : markdown, latex, org-mode
+	 - deployement: CI/CD, docker
+	 - CLI : vim, sed, awk, grep
+	 - ? : Emacs, tmux
 
 	Frameworks:
-	 - Data science : Pytorch, spaCy, nltk, fastai, Pandas, scikit-learn
-	 - Visualization : matplotlib, seaborn
-	 - Math : Numpy, cvxpy
-	 - Web Frameworks : Hugo, Jekyll, Streamlit
-	 - Databases : PostGres, MongoDB
-	 - Scraping : BeautifulSoup
+	 - DL : Pytorch, spaCy, nltk, fastai, hugging-face
+	 - ML : scikit-learn, lightGBM, XGBoost
+	 - Data handling : pandas, pydantic, postGres, mongoDB
+	 - Visualization : matplotlib, seaborn, mermaid.js
+	 - Math : numpy, cvxpy, scipy 
+	 - Web Application Frameworks: Streamlit, Gradio
+	 - Static Site Generators : Hugo, Jekyll, Quarto, Org-export
 	 - Lexers,Parsers : Lark, yacc, lex
      - Quantum Computing : Qiskit
 	 
@@ -92,7 +97,7 @@ sidebar: false
 | Tic-Tac-Toe Reinforcement Learning                | tested out RL algorithms with random and heuristics based agents                                                                                           | Pytorch                                |
 | Option Pricing via Monte Carlo Simulations        | delved into monte carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)                               | Python, Stochatic Calculus             |
 | Secure Multiparty Computation (for Deep Learning) | Survey on how cryptographic techniques are used to maintain secrecy during multiparty computation (neural networks in this case)                           | ---                                    |
-| WDGAF                                             | Created plotting DSL using principals of compilers and published it to pip                                                                                 | python, lark, package publishing       |
+| WDGAF(We Do Give a Figure)                        | Created plotting DSL using principals of compilers and published it to pip                                                                                 | python, lark, package publishing       |
 | Relational Databases and Data Hygeine             | Executed complex relational database queries on the imdb movie database; implemented scraping scripts to fetch relevant data                               | PostGres, SQL, python, shell scripting |
 | Optimizing scheduling algorithms                  | researched into tweaks to optimize the scheduling algorithms BOCC, BTO, MVTO                                                                               | ---                                    |
 | Musical Chairs: Concurrency control               | Simulating a game of musical chairs using modern concurrency constructs from C++11 onwards                                                                 | C++, Make                              |
