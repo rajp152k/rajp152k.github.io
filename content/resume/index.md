@@ -4,43 +4,56 @@ toc: false
 sidebar: false
 ---
 
-##### *As of Wed 11th October 2023*
+##### *As of Wed 20th December 2023*
 
-### Raj Patil | AI Research Engineer | contact[at]rajpatil.dev
+### Raj Patil | AI Research Engineer | contact@rajpatil.dev
 ---
 
 ## Education 
 
-### *BTECH IIT Hyderabad (2018-2022)*
+### B.Tech:  **Indian Institute of Technology Hyderabad** (2018-2022)
 
-	- Major : CSE       : 9.26/10
-	- Minor : AI        : 9.50/10
+	All India Rank (JEE Advance 2018) - 658
+
+	- Major (2018-2022) : Computer Science and Engineering  : 9.26/10
+	- Minor (2020-2022) : Artificial Intelligence           : 9.50/10
 	
 ---
 ## Technical Skills
 	
 	Languages:
-	- Proficiency: Python, Lisp (Common-Lisp, Racket)
-	- non-trivial experience in : C++, C, Haskell, Prolog, Eiffel
-	- utilities: SQL, regex, bash, vimscript, emacs-lisp
+	- Proficiency   : Python
+	- Lisps         : Common-Lisp, E-lisp, Hy
+	- Schemes       : Racket, Scheme,
+	- Prior Exp     : C, C++, Haskell, Prolog, Eiffel, Lua, Vimscript
+	- utilities     : SQL, shell-scripting (bash)
    
 	Tools:
-	 - development: git, REST API 
-	 - markup : markdown, latex, org-mode
-	 - deployement: CI/CD, docker
-	 - CLI : vim, sed, awk, grep
-	 - ? : Emacs, tmux
+	 - devops         : git, git-lfs, docker, CI/CD pipes
+	 - markup         : markdown, latex, org-mode
+	 - CLI            : regex, sed, awk, grep
+	 - virtualization : qemu, virtual box
+	 - venv           : conda, mamba, micromamba, venv
+
+	Current Envs:
+	 1. Personal  : Arch, I3-wm, Emacs, Magit, Nyxt
+	 2. Remote    : CentOS, Tmux, Neovim, Neogit, Lynx
 
 	Frameworks:
-	 - DL : Pytorch, spaCy, nltk, fastai, hugging-face
-	 - ML : scikit-learn, lightGBM, XGBoost
-	 - Data handling : pandas, pydantic, postGres, mongoDB
-	 - Visualization : matplotlib, seaborn, mermaid.js
-	 - Math : numpy, cvxpy, scipy 
-	 - Web Application Frameworks: Streamlit, Gradio
-	 - Static Site Generators : Hugo, Jekyll, Quarto, Org-export
-	 - Lexers,Parsers : Lark, yacc, lex
-     - Quantum Computing : Qiskit
+	 - DL                        : Pytorch, spaCy, nltk, fastai, hugging-face
+	 - ML                        : scikit-learn, lightGBM, XGBoost
+     - Quantum Computing         : Qiskit
+	 - Monitoring                : visdom, tensorboard
+	 - Debugging                 : pdb, gdb
+	 - Data management           : pandas, xarray, pydantic, postGres, mongoDB
+	 - Visualization             : matplotlib, seaborn, mermaid.js
+	 - Math                      : numpy, cvxpy, scipy 
+	 - DataScience Dashboards    : Streamlit, Gradio
+	 - Static Site Generators    : Hugo, Jekyll, Quarto, Org-export
+	 - Lexers,Parsers            : Lark, yacc, lex
+	 - Automation                : Selenium
+	 - Web Scraping              : Beautiful Soup
+	 - Dual Screen Presentations : Pympress
 	 
 ---
 ## Experience 
@@ -118,26 +131,33 @@ sidebar: false
     P.K.](https://sites.google.com/site/pksrijith/home) - AI1100 :
     Intro to Artificial Intelligence 
 
-### FitSoc 2021-2022
+### [FitSoc](https://instagram.com/fitsoc_iith) 2021-2022
 
  - Founded and established a fitness community dedicated to supporting college students in balancing their fitness and academic pursuits through a hybrid athleticism approach.
- - Successfully grew the community, and it currently comprises over 100 active members.
+ - organically bootstrapped the community, currently comprising over 200 active members.
 
-### Founding Core Member Epoch (The ML club of IITH) - 2019
+### Founding Core Member [Epoch](https://github.com/IITH-Epoch) (The ML club of IIT Hyderabad) - 2019
 
- - Pioneered and conducted the inaugural session of the club.
- - The session centered on exploratory data analysis utilizing key tools and libraries, including Pandas, NumPy, and SciPy.
+ - Pioneered and conducted the [inaugural session](https://github.com/IITH-Epoch/Session-1-2019-10-03) of the club.
+ - The session centered on exploratory data analysis utilizing key
+   tools and libraries, including Pandas, NumPy, SciPy and matplotlib.
+
+### National Service Scheme
+
+ - participated in several cleanliness and plantation drives during my
+   time at IIT-Hyderabad
+ - created several social awareness posters regarding various societal
+   issues
 
 ---
 	
 ## Achievements
 
- - JEE ADV 2018 AIR 658
- - Powerlifting Gold(deadlift) and Silver(bench) Medal : IITH Milan (Interhostel GC)
+ - Powerlifting Gold(deadlift) and Silver(bench) Medal : IITH Milan
+   (Interhostel General Championship)
  - authored 3 blogs overall (this is my third one), each with a
    regular interational readership.
    1. First one was based on philosophy
    2. Technical blog with philosophical ramblings
    3. (current) Epistemological blog where I write about everything
       (mostly Lisp and Data Science other than the usual ramblings)
-   

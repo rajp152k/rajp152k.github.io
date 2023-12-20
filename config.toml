@@ -56,12 +56,6 @@ googleAnalytics = "G-4FV7P8X8H6"
 
 [menu]
 [[menu.main]]
-  identifier = 'Home'
-  name = 'home'
-  pre = "<i class='fa fa-heart'></i>"
-  url = '/'
-  weight = -111
-[[menu.main]]
   identifier = 'about'
   name = 'about'
   pre = "<i class='fa fa-heart'></i>"
@@ -88,6 +82,11 @@ googleAnalytics = "G-4FV7P8X8H6"
   name = 'Résumé'
   pre = "<i class='fa fa-road'></i>"
   url = '/resume/'
+  weight = -105
+[[menu.main]]
+  name = 'Open Source'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/open-source/'
   weight = -105
 [[menu.main]]
   identifier = 'all posts'
