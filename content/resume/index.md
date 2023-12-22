@@ -36,8 +36,8 @@ sidebar: false
 	 - venv           : conda, mamba, micromamba, venv
 
 	Current Envs:
-	 1. Personal  : Arch, I3-wm, Emacs, Magit, Nyxt
-	 2. Remote    : CentOS, Tmux, Neovim, Neogit, Lynx
+	 1. Personal  : Arch, I3-wm, Emacs, Magit
+	 2. Remote    : CentOS, Tmux, Neovim, Neogit
 
 	Frameworks:
 	 - DL                        : Pytorch, spaCy, nltk, fastai, hugging-face
