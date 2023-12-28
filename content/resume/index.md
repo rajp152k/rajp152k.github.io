@@ -36,7 +36,7 @@ sidebar: false
 	 - venv           : conda, mamba, micromamba, venv
 
 	Current Envs:
-	 1. Personal  : Arch, I3-wm, Emacs, Magit
+	 1. Personal  : Debian, I3-wm, Emacs, Magit
 	 2. Remote    : CentOS, Tmux, Neovim, Neogit
 
 	Frameworks:
@@ -115,7 +115,7 @@ sidebar: false
 | [Optimizing scheduling algorithms](https://github.com/rajp152k/coursework_IITH/blob/master/SEM_7/CS5280/CS5280%20cs18btech11039%20cs21resch11011/project_report_cs18btech11039_cs21resch11011.pdf) | researched into tweaks to optimize the scheduling algorithms BOCC, BTO, MVTO                                                                               | ---                                    |
 | [Musical Chairs: inter-process coms](https://github.com/rajp152k/musical_chairs)                                                                                                                   | Simulating a game of musical chairs using modern concurrency constructs from C++11 onwards                                                                 | C++, Make                              |
 | [Chat Room App](https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_5/Computer-Networks-I/socket%20programming/Computer-Networks)                        | created a command line chat room app using principles of socket programming                                                                                | computer networks, python              |
-| [Custum Deep Learning Framework](https://github.com/rajp152k/cust_dl_lib)                                                                                                                                                                     | created a deep learning library from scratch                                                                                                               | Pytorch, numpy, git                    |
+| [Custom Deep Learning Framework](https://github.com/rajp152k/cust_dl_lib)                                                                                                                                                                     | created a deep learning library from scratch                                                                                                               | Pytorch, numpy, git                    |
 | 3D-printed pin ball machine                                                                                                                                                                        | designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon) into a functional pin ball setup | SolidEdge, CAD, 3d-printing            |
 
 ---
