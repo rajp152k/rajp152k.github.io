@@ -5,6 +5,18 @@ title: Now
 A [chronologically descending](https://buffer.rajpatil.dev/20230712132109-timestamps.html#ID-20230712T132110.496747) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x21C0
+
+I broke my Arch install a week ago and have shifted to Debian. The
+base desktop env I used was KDE Plasma but shifted to i3-wm
+immediately cause I don't like the mouse. There's just something very
+interesting about connecting your headphones with bluetoothctl rather than
+a GUI.
+
+My Arch spell was shortlived but I did learn quite a lot, might try
+void sometime soon but I still maintain a persistent installation of
+arch on a USB that I carry wherever I go.
+
 ## 0x21B2
 
 I'm setting up my new first-ever formal work-dedicated setup. Bought a
