@@ -45,7 +45,9 @@ sidebar: false
      - Quantum Computing         : Qiskit
 	 - Monitoring                : visdom, tensorboard
 	 - Debugging                 : pdb, gdb
-	 - Data management           : pandas, xarray, pydantic, postGres, mongoDB
+	 - DB: RDBMS                 : PostGres, SQLite
+	 - DB: NoSQL                 : MongoDB
+	 - DB: InMemory              : pandas, xarray
 	 - Visualization             : matplotlib, seaborn, mermaid.js
 	 - Math                      : numpy, cvxpy, scipy 
 	 - DataScience Dashboards    : Streamlit, Gradio
