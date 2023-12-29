@@ -24,7 +24,7 @@ sidebar: false
 	Languages:
 	- Proficiency   : Python
 	- Lisps         : Common-Lisp, E-lisp, Hy
-	- Schemes       : Racket, Scheme,
+	- Schemes       : Racket, Scheme
 	- Prior Exp     : C, C++, Haskell, Prolog, Eiffel, Lua, Vimscript
 	- utilities     : SQL, shell-scripting (bash)
    
@@ -46,8 +46,8 @@ sidebar: false
 	 - Monitoring                : visdom, tensorboard
 	 - Debugging                 : pdb, gdb
 	 - DB: RDBMS                 : PostGres, SQLite
-	 - DB: NoSQL                 : MongoDB
-	 - DB: InMemory              : pandas, xarray
+	 - DB: NoSQL                 : MongoDB, Redis
+	 - Data Wrangling            : pandas, xarray
 	 - Visualization             : matplotlib, seaborn, mermaid.js
 	 - Math                      : numpy, cvxpy, scipy 
 	 - DataScience Dashboards    : Streamlit, Gradio
