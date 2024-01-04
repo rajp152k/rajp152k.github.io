@@ -22,41 +22,64 @@ sidebar: false
 ## Technical Skills
 	
 	Languages:
-	- Proficiency   : Python
-	- Lisps         : Common-Lisp, E-lisp, Hy
-	- Schemes       : Racket, Scheme
-	- Prior Exp     : C, C++, Haskell, Prolog, Eiffel, Lua, Vimscript
-	- utilities     : SQL, shell-scripting (bash)
-   
-	Tools:
-	 - devops         : git, git-lfs, docker, CI/CD pipes
-	 - markup         : markdown, latex, org-mode
-	 - CLI            : regex, sed, awk, grep
-	 - virtualization : qemu, virtual box
-	 - venv           : conda, mamba, micromamba, venv
+
+	- Lisps & Schemes   : Common-Lisp, E-lisp, Hy, Racket
+
+	- Primary           : Python
+	- Non-Trivial Exp   : C, C++, Javascript, Prolog, Eiffel, Vimscript
+	- Trivial Exp       : Haskell, Rust, Lua, Java
+	
+---
 
 	Current Envs:
-	 1. Personal  : Debian, I3-wm, Emacs, Magit
-	 2. Remote    : CentOS, Tmux, Neovim, Neogit
+	 1. Personal  : Debian, I3WM, Emacs
+	 2. Remote    : CentOS, Tmux, Neovim
+ 
+---
 
-	Frameworks:
-	 - DL                        : Pytorch, spaCy, nltk, fastai, hugging-face
-	 - ML                        : scikit-learn, lightGBM, XGBoost
-     - Quantum Computing         : Qiskit
-	 - Monitoring                : visdom, tensorboard
-	 - Debugging                 : pdb, gdb
-	 - DB: RDBMS                 : PostGres, SQLite
-	 - DB: NoSQL                 : MongoDB, Redis
-	 - Data Wrangling            : pandas, xarray
-	 - Visualization             : matplotlib, seaborn, mermaid.js
-	 - Math                      : numpy, cvxpy, scipy 
-	 - DataScience Dashboards    : Streamlit, Gradio
-	 - Static Site Generators    : Hugo, Jekyll, Quarto, Org-export
-	 - Lexers,Parsers            : Lark, yacc, lex
-	 - Automation                : Selenium
-	 - Web Scraping              : Beautiful Soup
-	 - Dual Screen Presentations : Pympress
+	Tools and Frameworks:
+
+	 - AI
+		- DL                     : Pytorch, spaCy, nltk, fastai, hugging-face
+		- ML                     : Scikit-learn, LightGBM, XGBoost
+		- Monitoring             : Visdom, Tensorboard
+		- Data Wrangling         : Pandas, Xarray
+		- Scientific Computing   : Numpy, Scipy
+		- DataScience Dashboards : Streamlit, Gradio
+		- Visualization          : Matplotlib, Seaborn
+
+	 - Databases
+		- Relational             : PostGres, SQLite
+		- NoSQL                  : MongoDB, Redis
+		- Graph                  : Neo4j
+		- Multi-model            : SurrealDB
+
+	 - Web
+		- SSGs                   : Hugo, Jekyll, Quarto, Org-export
+		- Hypermedia             : HTML, CSS, HTMX
+		- ReST                   : FastAPI
 	 
+	 - Domain Specific
+		- Lexers,Parsers        : Lark, yacc, lex
+		- Quantum Computing     : Qiskit
+		- Convex Optimization   : CVXPy
+		- Quantum Computing     : Qiskit
+		- CLI                   : regex, sed, awk, grep
+		- Text-Editing          : Emacs, Vi
+
+	 - Meta
+		- Visualization          : matplotlib, seaborn, mermaid.js
+		- Data-Validation        : Pydantic
+		- Debugging              : pdb, gdb
+		- Profiling              : PySpy, PyFlame
+		- Testing                : Pytest, Selenium
+		- Version Control        : git, git-lfs
+		- Env Management         : conda[+derivatives], venv
+		- Containerization       : docker
+		- Virtualization         : qemu, virtual box
+		- CI/CD                  : github actions 
+		- Markup                 : markdown, latex, org-mode
+
 ---
 ## Experience 
 
@@ -67,6 +90,8 @@ sidebar: false
    - Successfully delivered the final product, which is now a crucial tool actively used within the organization.
  - Taking the initiative to explore AI integration across diverse departments, identifying and implementing opportunities to leverage AI technologies.
    - Proactively engineering innovative solutions to enhance operational efficiency and drive business success.
+ - Also my first leadership role: managed several interns and a couple
+   of employees, heading the AI department's operations
 
 ### Personal Sabbatical
 ###### *Aug 2022 - Nov 2022*
@@ -117,7 +142,7 @@ sidebar: false
 | [Optimizing scheduling algorithms](https://github.com/rajp152k/coursework_IITH/blob/master/SEM_7/CS5280/CS5280%20cs18btech11039%20cs21resch11011/project_report_cs18btech11039_cs21resch11011.pdf) | researched into tweaks to optimize the scheduling algorithms BOCC, BTO, MVTO                                                                               | ---                                    |
 | [Musical Chairs: inter-process coms](https://github.com/rajp152k/musical_chairs)                                                                                                                   | Simulating a game of musical chairs using modern concurrency constructs from C++11 onwards                                                                 | C++, Make                              |
 | [Chat Room App](https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_5/Computer-Networks-I/socket%20programming/Computer-Networks)                        | created a command line chat room app using principles of socket programming                                                                                | computer networks, python              |
-| [Custom Deep Learning Framework](https://github.com/rajp152k/cust_dl_lib)                                                                                                                                                                     | created a deep learning library from scratch                                                                                                               | Pytorch, numpy, git                    |
+| [Custom Deep Learning Framework](https://github.com/rajp152k/cust_dl_lib)                                                                                                                          | created a deep learning library from scratch                                                                                                               | Pytorch, numpy, git                    |
 | 3D-printed pin ball machine                                                                                                                                                                        | designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon) into a functional pin ball setup | SolidEdge, CAD, 3d-printing            |
 
 ---
