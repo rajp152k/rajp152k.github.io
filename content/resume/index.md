@@ -4,7 +4,7 @@ toc: false
 sidebar: false
 ---
 
-##### *As of Wed 20th December 2023*
+##### *As of 13th Jan 2024*
 
 ### Raj Patil | AI Research Engineer | contact@rajpatil.dev
 ---
@@ -23,11 +23,10 @@ sidebar: false
 	
 	Languages:
 
-	- Lisps & Schemes   : Common-Lisp, E-lisp, Hy, Racket
-
 	- Primary           : Python
-	- Non-Trivial Exp   : C, C++, Javascript, Prolog, Eiffel, Vimscript
-	- Trivial Exp       : Haskell, Rust, Lua, Java
+	- Lisps & Schemes   : Common-Lisp, E-lisp, Hy, Racket
+	- Non-Trivial Exp   : C, C++,  Prolog, Eiffel, Vimscript
+	- Trivial Exp       : Haskell, Rust, Lua, Java, Javascript
 	
 ---
 
