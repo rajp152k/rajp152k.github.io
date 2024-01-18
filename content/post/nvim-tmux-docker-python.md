@@ -114,7 +114,7 @@ python -m http.server <port>
 ```
 
 
-![python http server](https://ik.imagekit.io/rajp152k/rpdev/setup/emacs.png)
+![python http server](https://ik.imagekit.io/rajp152k/rpdev/setup/http-server.png)
 
 That exposes your current filesystem and has been a convenient tool
 when I want to share files across my research cluster on muliple
