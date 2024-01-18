@@ -975,7 +975,6 @@ img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: bottom;
-	filter: grayscale(1) invert(1) contrast(2);
 }
 
 iframe,
