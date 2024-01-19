@@ -19,7 +19,7 @@ you find the same CLI zen that I've been enjoying for a while now.
 I start my work sessions off by ssh'ing into my remote compute
 cluster.  
 
-I Don't type in my passwords all the time and prefer being a little lazy.
+I don't type in my passwords all the time and prefer being a little lazy.
 So, `sshpass`(stores credentials) and an aliased bash script do the job reliably.
 
 ##### *~/remote/dev.sh*
@@ -39,14 +39,11 @@ additionally range over multiple ports using a bash loop in case you
 need to use multiple utilities (Jupyter on one, MkDocs on another for
 instance).  
 
-Lastly, don't just drop into the naked shell but into a tmux
-session. The command above first attempts to attach to a tmux session
-named "hq". Failure results in the creation of such a tmux
-server. Success short-circuits the latter's execution and you're into
+Lastly, I don't just drop into the naked shell but into a tmux
+session. The command above first attempts to attach session
+named "hq". Failure results in the creation thereof. Success
+short-circuits the latter's execution and you're into 
 whatever you were last working on.  
-
-Finally, just dump in a bunch of aliases direct into whatever cluster
-you want to, in a jiffy.  
 
 ##### *~/.bashrc
 
@@ -57,24 +54,27 @@ alias avx_prod="~/remote/avx_prod.sh"
 alias avx_resch="~/remote/avx_research.sh"
 ```
 
+Finally, a bunch of aliases further reduce your
+time-to-shredding-the-remote-file-system. If you're already investing
+into how you access your clusters, when you actually open up your
+workspace, you gotta ...
 
-## Edit like you mean it
+## .. Edit like you mean it
 
 ![vim](https://ik.imagekit.io/rajp152k/rpdev/setup/vim.png)
 
 I've used my fair share of editors to finally have a favourite when it
-comes to working remotely and getting to business as soon as
-possible.  
+comes to working remotely.  
 
 For personal projects, I use evil gccemacs and won't ever
 stop doing so. However, for remote work, nothing beats the sleekness
-of [vim](https://github.com/rajp152k/.cfg-nvim)(using neovim, to be specific)
+of [vim](https://github.com/rajp152k/.cfg-nvim) (using neovim, to be specific)
 
 ![emacs](https://ik.imagekit.io/rajp152k/rpdev/setup/emacs.png)
 
 [Emacs](https://github.com/rajp152k/emacs-configs) with tramp mode just doesn't cut it (I haven't tried running CLI
-emacs remotely because my keybindings are a little too crazy for a
-terminal emulator to manage correctly).  
+emacs remotely because my keybindings are a tad too crazy for a
+terminal emulator to handle correctly).  
 
 To summarize, emacs is the souped up tank and neovim + tmux makes for
 the vagabond-warrior-way to get on with your job surgically.  
@@ -95,7 +95,7 @@ Also .., don't even think of VS code, just don't...
 
 Working on multiple projects might call for working on the same libraries
 with different versions. This may be handled easily if you're working
-on in a uniform tooling ecosystem like python libraries (check out
+in a uniform ecosystem, say only with python libraries (check out
 [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html) -> that's pretty spartanish) but throw in other
 dependencies that a polyglotic application might ask for and you'll quickly
 realize the nightmare you've signed up for.  
@@ -105,7 +105,7 @@ So.., check out [docker](https://www.docker.com/) and how containers help segreg
 # Miscellaneous
 
 I also use several utilities that aren't particularly a part of
-any specific umbrella of a tool.  
+any specific umbrella-of-a-tool.  
 
 ### A Simple HTTP server
 
@@ -114,11 +114,9 @@ python -m http.server <port>
 ```
 
 
-![python http server](https://ik.imagekit.io/rajp152k/rpdev/setup/http-server.png)
 
 That exposes your current filesystem and has been a convenient tool
-when I want to share files across my research cluster on muliple
-virtual machines.  
+when I want to share files across my research cluster.
 
 You may just `wget` the specific file from the server or browse the 
 directory listing using `lynx`. I'd recommend you reserve this method
@@ -127,19 +125,20 @@ your cluster.  `rsync` or `scp` are the usual alternatives
 otherwise. Of course you could always just access that in a "normal"
 browser if you want to access these on your GUI host.  
 
+![python http server](https://ik.imagekit.io/rajp152k/rpdev/setup/http-server.png)
+
 I personally prefer documenting my code and my thought process the
-same time I'm building something so I'd rather fire up a auto documentation
-tool that helps me write stuff down in markdown : I use
-[mkdocs](https://www.mkdocs.org/) and given that I'm using tmux, my
+same time I'm building something so I always fire up an auto doc-er.
+ I use [mkdocs](https://www.mkdocs.org/) and given that we're in tmux, my
 documented approaches and thought processes are always accessible
 over my `IP:port` on the research cluster. So that is also how I
-provide context to my team-mates about what I'm up to.  
+provide context to my mates about what I'm up to.  
 
 ### GNU coreutils
 
  The GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system. These are the core utilities which are expected to exist on every operating system. 
 
-for instance, to quickly check the number of entities in a parent entity I'd use an enlister, piped into the line count variant
+For instance, to quickly check the number of entities in a parent entity I'd use an enlister, piped into the line count variant
 of wc.
 
 ```
@@ -152,7 +151,7 @@ docker container that doesn't have vim. sed does come in handy such
 days and has saved me quite some time, numerous times.
 
 ```
-sed -i '/good_sentinels/s/42/1729/' your_file.txt
+sed -i '/good_sentinels/s/42/1729/' answer_to_everything.org
 ```
 
 Say there's a zombie process lying around
@@ -166,7 +165,7 @@ ps aux | grep 'Z' | awk '{print $2}' | xargs kill -9
 This is just scraping the surface with what you can do with the core
 utils. Considering the powerful interface capabilities of these with
 vim and you've got yourself an enviable setup running at a fraction of
-the compute of what your run of the mill IDE does.  
+the compute of what your run of the mill IDE consumes.  
 
 Farewell, for now, and good luck sharpening your technical repertoire...
 
