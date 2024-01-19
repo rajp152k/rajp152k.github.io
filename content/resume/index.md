@@ -67,6 +67,7 @@ sidebar: false
 		- Text-Editing          : Emacs, Vi
 
 	 - Meta
+		- Cloud Compute          : AWS (EC2, S3), Paperspace, GCP
 		- Visualization          : matplotlib, seaborn, mermaid.js
 		- Data-Validation        : Pydantic
 		- Debugging              : pdb, gdb
