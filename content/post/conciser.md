@@ -7,10 +7,7 @@ tags: ["writing","precision","microessays"]
 
 Speech and the word written, are potential expressions of a
 thought. Each one of us enjoys a different mix of how we best convey
-ourself. I am beginning to explore instruments of expression that may
-allow one to build up a more convenient, unbiased way of
-expressing my ideas, allowing one to context-switch with lower
-intellectual overheads.  
+ourself.  
 
 Ever since I began blogging when I was 19, I've been prioritising
 descriptiveness over precision. I feel I've entered a
@@ -25,14 +22,11 @@ ground.
 I hypothesize that the act of enforcing a common implicit
 representation for my speech and my writing will better enrich the way
 I think : for I anticipate the waves of my mind 
-when I craft a sentence, and practice intuitively surfing them when I
-to navigate a conversation a certain way.  
+when crafting a sentence, and practice intuitively surfing them when
+navigating a conversation a certain way.  
 
 This in turn should help me be a better thinker, writer and
 conversationalist.  
-
-Descriptiveness isn't inherently bad but it does pull away precious
-attention from the crux of what you wish to convey.  
 
 On to the pragmatics of accelerating this intent into consequences,
 I'll be writing more often than usual and would keep it slightly aloof
