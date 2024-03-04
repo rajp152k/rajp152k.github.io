@@ -3,7 +3,6 @@ title: "Testing Magnesium and ramping up Cardio"
 date: 2024-03-04T16:26:32+05:30
 categories: ["Nutrition"]
 tags: ["ergogenic","nootropics","nutrition","performance","supplements","experiments","routine","fitness","health","circadian","sunlight","hydration","sleep","training","productivity","optimization"]
-draft: true
 ---
 
 This is a brief update on the
