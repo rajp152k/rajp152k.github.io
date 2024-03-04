@@ -5,6 +5,24 @@ title: Now
 A [chronologically descending](https://buffer.rajpatil.dev/20230712132109-timestamps.html#ID-20230712T132110.496747) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x2203
+
+Entering a somewhat stable phase where in I'm
+sustainably pushing on multiple aspects of how one may measure their
+overall progress.  
+
+Will be speaking and writing more succinctly than usual - in my blogs
+and in the videos. Focusing on quieting my mind a little - too many
+threads running around chaotically at an instance in time. That isn't
+particularly a big deal (I do enjoy the pseudo-randomness that ensues)
+but I'd like exploring expanding my control of the same.  
+
+A lot of novel additions to my life over the past two years have
+stabilized and am ready to take on the next set of habits and skills
+to build upon the generic repertoire - I'm bored a little too quickly,
+akin to a 4 year old - began piano lessons and getting into watching
+MMA (will begin practicing in the next cycle of expansion).
+
 ## 0x21C0
 
 I broke my Arch install a week ago and have shifted to Debian. The

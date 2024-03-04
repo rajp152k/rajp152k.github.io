@@ -2,7 +2,7 @@
 title: "Engineering a(n) (Ergogenic) Nootropic Stack"
 date: 2023-09-29T05:52:56+05:30
 categories: ["Nutrition"]
-tags: ["ergogenic", "nootropics", "nutrition", "performance", "supplements", "experiments", "routine", "fitness", "health", "circadian", "sunlight", "hydration", "sleep", "training", "productivity", "mindfulness", "optimization"]
+tags: ["ergogenic", "nootropics", "nutrition", "performance", "supplements", "experiments", "routine", "fitness", "health", "circadian", "sunlight", "hydration", "sleep", "training", "productivity", "optimization"]
 draft: False
 ---
 
