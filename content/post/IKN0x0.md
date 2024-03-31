@@ -7,6 +7,8 @@ tags: ["documentation","microessay","poetry","plan"]
 
 *Checkout the [previous polymathy musings](https://rajpatil.dev/categories/polymathy/)*
 
+{{< youtube "Xl2QISDKhQA" >}}  
+
 # Context
 
 I intend to formalize my plans of getting good at multiple domains not
