@@ -80,10 +80,10 @@ googleAnalytics = "G-4FV7P8X8H6"
   url = '/resume/'
   weight = -105
 [[menu.main]]
-  name = 'Open Source'
+  name = 'Analytics'
   pre = "<i class='fa fa-road'></i>"
-  url = '/open-source/'
-  weight = -105
+  url = 'https://us.umami.is/share/e9V2Db5SSHvbS6ZI/rajpatil.dev'
+  weight = -50
 [[menu.main]]
   identifier = 'all posts'
   name = 'all-posts'
