@@ -2,7 +2,7 @@
 title: "IKN0x221F : Pragmatic Polymathy"
 date: 2024-03-31T16:00:27+05:30
 categories: ["Polymathy"]
-tags: ["documentation","microessay","poetry","plan"]
+tags: ["documentation","microessays","poetry","plan"]
 ---
 
 *Checkout the [previous polymathy musings](https://rajpatil.dev/categories/polymathy/)*

@@ -2,7 +2,7 @@
 title: "Teh worth of a workd"
 date: 2024-03-12T10:21:37+05:30
 categories: ["Game"]
-tags: ["writing","flow","casual","microessay","freewriting"]
+tags: ["writing","flow","casual","microessays","freewriting"]
 ---
 
 
