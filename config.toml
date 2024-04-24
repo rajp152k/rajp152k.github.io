@@ -3,8 +3,6 @@ languageCode = 'en-us'
 title = 'Raj Patil'
 theme = "custom"
 
-googleAnalytics = "G-4FV7P8X8H6"
-
 [Author]
   name = "Raj Patil"
   bio = "Yet another guy on the internet" 
