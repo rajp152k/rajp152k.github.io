@@ -51,8 +51,8 @@ theme = "custom"
 
 [Params.logo]
   image = false
-  title = "rajpatil.dev"
-  subtitle = "Epistemology, Pragmatism, Serendipity, Curiosity and Stupidity..."
+  title = "# man whoami"
+  subtitle = "(apply #'eval `((sudo ,explore ,exploit)))"
 
 [menu]
 [[menu.main]]
