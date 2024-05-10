@@ -5,6 +5,27 @@ title: Now
 A [chronologically descending](https://buffer.rajpatil.dev/20230712132109-timestamps.html#ID-20230712T132110.496747) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x2247 
+
+Alright, feel like I've stabilized enough and am currently voluntarily 
+injecting some more chaos into my life.
+
+To put it lightly, I'm hungrier than usual (intelletually as well as
+in the conventional sense).
+
+With that being said, am naturally inclined towards being a man of
+action than just of words this time around - I would usually elaborate but I
+subconsciously refuse to do so due to reasons unbeknownst to my
+conscious self.
+
+Energy levels are at an all time high and anticipating a healthy cycle of
+intense intellectual involvement across several domains over the
+prolonged future - Feel like I'm entering a new personal era that I
+can't really pin down the description of.
+
+I changed my blog's tagline today, btw.
+
+
 ## 0x2203
 
 Entering a somewhat stable phase where in I'm

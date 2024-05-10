@@ -18,3 +18,8 @@ tad too many intellectual frenemies and enefriends alike.
 All the opinions stated herein are my own and albeit my meandering casualness,
 do expect a liberal pinch of seriousness occasionally thrown into this
 epistemological potpourri that livens up this cyber-castle.  
+
+> PS: My intellectual whims ebb and flow considerably and I'm being
+> temporally agnostic on this page.
+> If you're interested in what I'm up to now, check the
+> [now](https://rajpatil.dev/now/) page
