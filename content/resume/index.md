@@ -195,3 +195,9 @@ sidebar: false
  - created several social awareness posters regarding various societal
    issues
  
+---
+
+### Caveat
+
+This is my conventional resume - the one the usual human demands.  
+If you're interested in my true incentives, you'd find [this recursive-introspective terser composition](https://rajpatil.dev/i-know-not/) to be more valuable.
