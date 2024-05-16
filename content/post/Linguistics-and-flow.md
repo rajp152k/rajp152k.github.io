@@ -1,8 +1,8 @@
 ---
-title: "IKN0X224C: Epistemological Polyglotism "
+title: "IKN0X224C: Epistemological Polyglotism"
 date: 2024-05-14T20:29:51+05:30
 categories: ["Polymathy"]
-tags: ["linguistics","polymathy,"hindi","french","latin","greek","sanskrit","reading","composition","poetry","music","marathi","gujrati","programming","calculus","cave-paintings","polyglot","epistemology","cognitive-dissonance","psychology","symbolic","algebra","lisp","lambda","polyglot"]
+tags: ["linguistics", "polymathy", "hindi", "french" , "latin"  , "greek", "sanskrit", "reading", "composition", "poetry", "music", "marathi", "gujrati", "programming", "calculus", "cave-paintings", "polyglot", "epistemology", "cognitive-dissonance", "psychology", "symbolic", "algebra", "lisp", "lambda", "polyglot"]
 ---
 
 *check out what an IKN0x means [here](https://rajpatil.dev/post/ikn0x0/)*
