@@ -1,8 +1,8 @@
 ---
-title: "Towards Epistemological Polyglotism "
+title: "IKN0X224C: Epistemological Polyglotism "
 date: 2024-05-14T20:29:51+05:30
-categories: ["Linguistics"]
-tags: ["linguistics","microessay","hindi","french","latin","greek","sanskrit","reading","composition","poetry","music","marathi","gujrati","programming","calculus","cave-paintings","polyglot","epistemology"]
+categories: ["Polymathy"]
+tags: ["linguistics","polymathy,"hindi","french","latin","greek","sanskrit","reading","composition","poetry","music","marathi","gujrati","programming","calculus","cave-paintings","polyglot","epistemology","cognitive-dissonance","psychology","symbolic","algebra","lisp","lambda","polyglot"]
 ---
 
 Understanding different languages can open up one's mind towards
@@ -97,4 +97,3 @@ Uni-Verse is.
 
 This definitely isn't the last of what you'll hear about this from
 me.  
-
