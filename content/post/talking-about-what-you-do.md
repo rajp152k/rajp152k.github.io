@@ -44,7 +44,7 @@ denial of utility that pops up.
 
 I feel I need a purpose-less vagabond-ish block of blogging to recalibrate what I'm really after.  
 
-To not leave you (mostly me years down the lane revisiting this 
+To not leave you (mostly me years down the lane revisiting this
 in an intellectually adrift state) high and dry, an explicit
 recommendation would be to double down on the randomness and let
 reversion to the mean do its thing over a series over purposeless
