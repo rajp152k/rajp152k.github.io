@@ -2,10 +2,11 @@ baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
 title = '(bit-mage)'
 theme = "custom"
+paginate = "16"
 
 [Author]
   name = "(bit-mage)"
-  bio = "Yet another guy on the internet" 
+  bio = "(apply #'eval `((sudo ,explore ,exploit)))"
 
 [Params]
   description = "thebitmage.com"
@@ -31,7 +32,7 @@ theme = "custom"
   list = "left"   # Configure layout for list pages
   single = "left" # Configure layout for single pages
   # Enable widgets in given order
-  widgets = ["social","taglist"]
+  widgets = ["social", "taglist"]
 
 [Params.widgets]
   recent_num = 20 # Set the number of articles in the "Recent articles" widget
@@ -40,18 +41,18 @@ theme = "custom"
 [Params.widgets.social]
   # Enable parts of social widget
   github = "rajp152k"
-  email = "contact@rajpatil.dev"
+  email = "business@thebitmage.com"
   youtube = "@The-Bit-Mage"
   goodreads = "rajp152k"
   twitter = "@rajpatil152k"
-  instagram = "rp152k"
+  #instagram = "rp152k"
 
 [Params.style.vars]
   highlightColor = "#f7f9f9"
 
 [Params.logo]
-  image = false
-  title = "# man whoami"
+  image = "https://ik.imagekit.io/rajp152k/branding/Bit-Mage.png"
+  title = "(Bit-Mage)"
   subtitle = "(apply #'eval `((sudo ,explore ,exploit)))"
 
 [menu]
@@ -70,26 +71,26 @@ theme = "custom"
 [[menu.main]]
   name = 'Ideation Buffer'
   pre = "<i class='fa fa-road'></i>"
-  url = 'https://buffer.rajpatil.dev'
+  url = 'https://buffer.thebitmage.com'
   weight = -108
-[[menu.main]]
-  name = 'Résumé'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/resume/'
-  weight = -105
-[[menu.main]]
-  name = 'Analytics'
-  pre = "<i class='fa fa-road'></i>"
-  url = 'https://us.umami.is/share/e9V2Db5SSHvbS6ZI/rajpatil.dev'
-  weight = -50
+#[[menu.main]]
+#  name = 'Résumé'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = '/resume/'
+#  weight = -105
+#[[menu.main]]
+#  name = 'Analytics'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = 'https://us.umami.is/share/e9V2Db5SSHvbS6ZI/thebitmage.com'
+#  weight = -50
 [[menu.main]]
   identifier = 'all posts'
   name = 'all-posts'
   pre = "<i class='fa fa-road'></i>"
   url = '/all-posts/'
   weight = -104
-[[menu.main]]
-  name = 'I know not..'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/i-know-not/'
-  weight = -103
+#[[menu.main]]
+#  name = 'I know not..'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = '/i-know-not/'
+#  weight = -103

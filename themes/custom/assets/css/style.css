@@ -6,9 +6,9 @@
 {{- $fontFamilyPrimary := .Site.Params.style.vars.fontFamilyPrimary | default $fontSans -}}
 {{- $fontFamilySecondary := .Site.Params.style.vars.fontFamilySecondary | default $fontMono -}}
 
-{{- $black := "#0c0c0c" -}}
-{{- $white := "#f7f7f7" -}}
-{{- $highlight := "#00ff00"}}
+{{- $black := "#000000" -}}
+{{- $white := "#00ff00" -}}
+{{- $highlight := "#8c52ff"}}
 
 *,
 *::before,
@@ -214,7 +214,7 @@ a:hover {
 hr {
 	margin: 0 0 20px;
 	border: 0;
-	border-top: 3px solid {{ $white }};
+	border-top: 3px solid {{ $highlight }};
 }
 
 p {
@@ -281,7 +281,7 @@ samp {
 pre,
 code {
 	background-color: {{ $black }};
-	border: 1px solid {{ $white }};
+	border: 1px solid {{ $highlight }};
 }
 
 code {
@@ -318,7 +318,7 @@ blockquote {
 	margin: 0 0 20px;
 	margin: 0 0 1.4rem;
 	line-height: 1.4;
-	border-left: 5px solid {{ $white }};
+	border-left: 5px solid {{ $highlight }};
 }
 
 blockquote p:last-child {
@@ -347,7 +347,7 @@ sub {
 abbr[title] {
 	text-decoration: none;
 	cursor: help;
-	border-bottom: 1px dotted {{ $white }};
+	border-bottom: 1px dotted {{ $highlight }};
 }
 
 q {
@@ -387,7 +387,7 @@ select {
 .warning {
 	padding: 20px 10px;
 	text-align: center;
-	border: 1px solid #ddd;
+	border: 1px solid {{ $highlight }};
 }
 
 .warning__icon {
@@ -416,6 +416,7 @@ select {
 
 .logo__img {
 	max-height: 256px;
+	border: {{ $black }}
 }
 
 .logo__text {
@@ -427,8 +428,8 @@ select {
 }
 
 .logo--mixed .logo__img {
-	max-width: 128px;
-	max-height: 128px;
+	max-width: 256px;
+	max-height: 256px;
 }
 
 .logo--mixed .logo__text {
@@ -437,7 +438,7 @@ select {
 
 .logo__title {
 	font-size: 32px;
-	font-size: 3rem;
+	font-size: 5rem;
 	font-weight: 700;
 	line-height: 1;
 	color: {{ $white }};
@@ -448,11 +449,11 @@ select {
 	padding-top: 10px;
 	margin-top: 10px;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 2rem;
 	font-weight: 700;
 	line-height: 2;
 	color: {{ $white }};
-	border-top: 2px solid #ebebeb;
+	border-top: 2px solid {{ $highlight }};
 }
 
 .divider {
@@ -474,7 +475,7 @@ select {
 	font: inherit;
 	color: {{ $white }};
 	background: {{ $black }};
-	border: 1px solid {{ $white }};
+	border: 1px solid {{ $highlight }};
 	outline: 0;
 }
 
@@ -531,9 +532,9 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .menu__link {
 	display: block;
 	padding: 10px 15px;
-	padding: .625rem .9375rem;
+	padding: 1rem 2rem;
 	font-weight: 700;
-	font-size: 1rem;
+	font-size: 2rem;
 	color: {{ $white }};
 	text-transform: uppercase;
 }
@@ -555,8 +556,8 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .js .menu__list--active {
 	visibility: visible;
-	border-top: 1px solid {{ $white }};
-	border-bottom: 1px solid {{ $white }};
+	border-top: 1px solid {{ $highlight }};
+	border-bottom: 1px solid {{ $highlight }};
 	-webkit-transform: scaleY(1);
 	transform: scaleY(1);
 }
@@ -567,7 +568,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 @media screen and (min-width: 767px) {
 	.menu {
-		border-bottom: 5px solid {{ $white }};
+		border-bottom: 5px solid {{ $highlight }};
 	}
 
 	.menu__btn {
@@ -589,7 +590,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	}
 
 	.menu__item {
-		border-left: 1px solid {{ $white }};
+		border-left: 1px solid {{ $highlight }};
 	}
 }
 
@@ -637,7 +638,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .meta__icon {
 	margin-right: 5px;
 	vertical-align: middle;
-	fill: #c4c4c4;
+	fill: {{ $white }};
 }
 
 .meta__text {
@@ -652,8 +653,8 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	padding: 5px 0;
 	margin-top: 10px;
 	margin-top: .625rem;
-	#border-top: 1px solid {{ $white }};
-	#border-bottom: 1px solid {{ $white }};
+	#border-top: 1px solid {{ $highlight }};
+	#border-bottom: 1px solid {{ $highlight }};
 	text-align: center;
 }
 
@@ -783,9 +784,8 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	height: 32px;
 	padding: 8px;
 	margin-right: 6px;
-	background: {{ $white }};
-	fill: {{ $black }};
-	filter: invert(1);
+	background: {{ $black }};
+	fill: {{ $white }};
 }
 
 /* Table of Contents */
@@ -794,7 +794,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	font-weight: 700;
 	color: {{ $white }};
 	background: {{ $black }};
-	border-color: {{ $white }};
+	border-color: {{ $highlight }};
 	border-style: solid;
 	border-top-width: 1px;
 	border-right-width: 1px;
@@ -847,7 +847,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	display: block;
 	padding: 5px 10px;
 	color: {{ $white }};
-	border-bottom: 1px solid {{ $white }};
+	border-bottom: 1px solid {{ $highlight }};
 }
 
 .toc__menu a:hover {
@@ -859,15 +859,15 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	padding: 25px 0;
 	margin-bottom: 25px;
 	line-height: 1.5;
-	border-top: 1px solid #ebebeb;
-	border-bottom: 1px solid #ebebeb;
+	border-top: 1px solid {{ $highlight }};
+	border-bottom: 1px solid {{ $highlight }};
 }
 
 .authorbox__avatar {
 	float: left;
 	padding: 3px;
 	margin: 0 25px 0 0;
-	border: 1px solid #ebebeb;
+	border: 1px solid {{ $highlight }};
 }
 
 .authorbox__header {
@@ -886,7 +886,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	padding-bottom: 1.25rem;
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
-	border-bottom: 1px solid {{ $white }};
+	border-bottom: 1px solid {{ $highlight }};
 }
 
 .list__header {
@@ -946,7 +946,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	padding-top: 25px;
 	padding-bottom: 25px;
 	margin-bottom: 25px;
-	border-bottom: 1px solid #ebebeb;
+	border-bottom: 1px solid {{ $highlight }};
 }
 
 .pager__subtitle {
@@ -1001,15 +1001,15 @@ table {
 	margin-bottom: 1.25rem;
 	border-spacing: 0;
 	border-collapse: collapse;
-	border-top: 1px solid {{ $white }};
-	border-left: 1px solid {{ $white }};
+	border-top: 1px solid {{ $highlight }};
+	border-left: 1px solid {{ $highlight }};
 }
 
 td,
 th {
 	padding: 5px 10px;
-	border-right: 1px solid #ebebeb;
-	border-bottom: 1px solid #ebebeb;
+	border-right: 1px solid {{ $highlight }};
+	border-bottom: 1px solid {{ $highlight }};
 }
 
 th {
@@ -1040,7 +1040,7 @@ input[type=email]:hover,
 input[type=tel]:hover,
 input[type=url]:hover,
 textarea:hover {
-	border: 1px solid #aaa;
+	border: 1px solid {{ $highlight }};
 }
 
 input[type=submit],
@@ -1100,13 +1100,13 @@ textarea {
 	font-size: 16px;
 	font-size: 1.2rem;
 	text-transform: uppercase;
-	border-bottom: 2px solid {{ $highlightColor }};
+	border-bottom: 2px solid {{ $highlight }};
 }
 
 .widget__item {
 	display: block;
 	padding: 5px 0;
-	border-bottom: 1px dotted #ebebeb;
+	border-bottom: 1px dotted {{ $highlight }};
 }
 
 .widget__item:first-child {
@@ -1144,7 +1144,7 @@ textarea {
 	font-size: inherit;
 	cursor: pointer;
 	background: #fff;
-	border: 2px solid #ebebeb;
+	border: 2px solid {{ $highlight }};
 	border-radius: 0;
 	outline-offset: -2px;
 	transition: none;
