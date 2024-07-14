@@ -73,6 +73,11 @@ paginate = "16"
   pre = "<i class='fa fa-road'></i>"
   url = 'https://buffer.thebitmage.com'
   weight = -108
+[[menu.main]]
+  name = 'Progress'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/dd0x/'
+  weight = -105
 #[[menu.main]]
 #  name = 'Résumé'
 #  pre = "<i class='fa fa-road'></i>"
