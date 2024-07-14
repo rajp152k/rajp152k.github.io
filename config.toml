@@ -1,16 +1,16 @@
 baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
-title = 'Raj Patil'
+title = '(bit-mage)'
 theme = "custom"
 
 [Author]
-  name = "Raj Patil"
+  name = "(bit-mage)"
   bio = "Yet another guy on the internet" 
 
 [Params]
-  description = "rajpatil.dev"
+  description = "thebitmage.com"
   head_logo = false
-  copyright = "Raj Patil - All rights reserved"
+  copyright = "(Bit-Mage) - All rights reserved"
   schema = true
   toc = false
   mathjax = true
@@ -41,7 +41,7 @@ theme = "custom"
   # Enable parts of social widget
   github = "rajp152k"
   email = "contact@rajpatil.dev"
-  youtube = "@rajp152k"
+  youtube = "@The-Bit-Mage"
   goodreads = "rajp152k"
   twitter = "@rajpatil152k"
   instagram = "rp152k"
