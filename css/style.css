@@ -522,7 +522,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .menu__link {
 	display: block;
 	padding: 10px 15px;
-	padding: 1rem 2rem;
+	padding: 1rem 1.5rem;
 	font-weight: 700;
 	font-size: 1.5rem;
 	color: #00ff00;
