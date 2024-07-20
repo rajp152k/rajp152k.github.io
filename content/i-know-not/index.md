@@ -12,4 +12,4 @@ title: I know not ..
 > that I do know,  
 > is..,  
 > that..,  
-> [. . .](https://rajpatil.dev/i-know-not/)
+> [. . .](https://thebitmage.com/i-know-not/)

@@ -1,4 +1,4 @@
-# rajpatil.dev
+# thebitmage.com
 
  - blog
  - portfolio index

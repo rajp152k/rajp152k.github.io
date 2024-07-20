@@ -69,7 +69,7 @@ Happy "reality"...
 
 [^2]: Did approach something similar independently on my [old blog](https://github.com/rajp152k/19-22_archive/blob/bb2ab69da74f4cf79fb5db1cc9ea3b299c739c07/_posts/observations/2022-01-23-agnostic-perspectivism-index.md#L108)
 
-[^3]: One of the three logical reasoning embodiments: [Inductive](https://buffer.rajpatil.dev/sitemap?stack=%2F20231207174633-logical_reasoning.html#org8f91eae)
+[^3]: One of the three logical reasoning embodiments: [Inductive](https://buffer.thebitmage.com/sitemap?stack=%2F20231207174633-logical_reasoning.html#org8f91eae)
 
 [^4]:[Dream Yoga, by Andrew Holocek](https://www.goodreads.com/en/book/show/26485097) is a great beginner oriented read
 

@@ -22,4 +22,4 @@ epistemological potpourri that livens up this cyber-castle.
 > PS: My intellectual whims ebb and flow considerably and I'm being
 > temporally agnostic on this page.
 > If you're interested in what I'm up to now, check the
-> [now](https://rajpatil.dev/now/) page
+> [now](https://thebitmage.com/now/) page

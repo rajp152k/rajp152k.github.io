@@ -5,7 +5,7 @@ categories: ["Polymathy"]
 tags: ["documentation","microessays","poetry","plan"]
 ---
 
-*Checkout the [previous polymathy musings](https://rajpatil.dev/categories/polymathy/)*
+*Checkout the [previous polymathy musings](https://thebitmage.com/categories/polymathy/)*
 
 {{< youtube "Xl2QISDKhQA" >}}  
 
@@ -31,7 +31,7 @@ better file relevances and accomodate developments in the same.
 
 The documentation will be synchronized vlog and blog releases that capture the evolution of this personal domain over time. 
 
-A cluster root has been initialized in the [ideation buffer](https://buffer.rajpatil.dev/sitemap?stack=%2F20240331194014-ikn0xes.html)
+A cluster root has been initialized in the [ideation buffer](https://buffer.thebitmage.com/sitemap?stack=%2F20240331194014-ikn0xes.html)
 that will track the developments in an elaborate and fine grained
 manner compared to what is posted on the main blog.  
 
@@ -49,6 +49,6 @@ An IKN0x is short for:
  - N(ot)
  - 0x(timestamp of number of days I've been alive)
  
-The first three are a pointer to [recursive poem](https://rajpatil.dev/i-know-not/) published
+The first three are a pointer to [recursive poem](https://thebitmage.com/i-know-not/) published
 around 2 years ago which captures my attitude towards generic
 knowledge fairly succintly

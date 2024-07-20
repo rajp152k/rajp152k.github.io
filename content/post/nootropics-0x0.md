@@ -6,7 +6,7 @@ tags: ["ergogenic","nootropics","nutrition","performance","supplements","experim
 ---
 
 This is a brief update on the
-[nootropics](https://rajpatil.dev/post/nootropics-init/) post in which
+[nootropics](https://thebitmage.com/post/nootropics-init/) post in which
 I initialized my current stack and promised for a review down the
 lane.  
 

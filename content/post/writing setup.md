@@ -87,7 +87,7 @@ in itself and discourages linkages with existing works.
 
 I intend to improve upon this process with this setup of decoupling my notes and what I publish.
 
-I have two major objectives (implicitly interdependent) associated with my online presence on the main [blog](https://rajpatil.dev) and the [buffer](https://buffer.rajpatil.dev):
+I have two major objectives (implicitly interdependent) associated with my online presence on the main [blog](https://thebitmage.com) and the [buffer](https://buffer.thebitmage.com):
  - To write for myself
  - To write for others
 

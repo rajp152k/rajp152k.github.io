@@ -41,7 +41,7 @@ paginate = "16"
 [Params.widgets.social]
   # Enable parts of social widget
   github = "rajp152k"
-  email = "business@thebitmage.com"
+  email = "raj@thebitmage.com"
   youtube = "@The-Bit-Mage"
   goodreads = "rajp152k"
   twitter = "@rajpatil152k"
@@ -99,3 +99,9 @@ paginate = "16"
 #  pre = "<i class='fa fa-road'></i>"
 #  url = '/i-know-not/'
 #  weight = -103
+[[menu.main]]
+  identifier = 'contact'
+  name = 'contact'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/contact/'
+  weight = -102

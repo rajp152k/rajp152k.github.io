@@ -2,7 +2,7 @@
 title: Now
 ---
 
-A [chronologically descending](https://buffer.rajpatil.dev/20230712132109-timestamps.html#ID-20230712T132110.496747) log of my "nows" : cause an "about" is
+A [chronologically descending](https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747) log of my "nows" : cause an "about" is
 temporally impractical...  
 
 ## 0x2247 

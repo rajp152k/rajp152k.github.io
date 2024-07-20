@@ -7,7 +7,7 @@ draft: false
 ---
 
 Do note that this is an old post (from my last archived blog) that I'm
-refactoring : more on that [here](https://rajpatil.dev/post/refactoring-old-works/)
+refactoring : more on that [here](https://thebitmage.com/post/refactoring-old-works/)
 
 # The Unaltered Entry
 

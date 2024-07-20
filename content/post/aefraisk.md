@@ -7,7 +7,7 @@ draft: false
 ---
 
 Do note that this is an old post (from my last archived blog) that I'm
-refactoring : more on that [here](https://rajpatil.dev/post/refactoring-old-works/)
+refactoring : more on that [here](https://thebitmage.com/post/refactoring-old-works/)
 
 # The Unaltered Entry
 
@@ -48,7 +48,7 @@ aspire to be a polymath".
 
 Well, another psychological conflict I have with polymathy is that it has
 the root word "poly" - pertaining to many. However, in my post [The
-Polymathic Life](https://rajpatil.dev/post/polymathy/), I state that one aspect of the pseudo-polymathic fallacy is seeing
+Polymathic Life](https://thebitmage.com/post/polymathy/), I state that one aspect of the pseudo-polymathic fallacy is seeing
 all the epistemological structures differently and not unifying them
 into one big well-connected whole.  
 

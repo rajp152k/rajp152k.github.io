@@ -61,7 +61,7 @@ Graham](http://www.paulgraham.com/lisp.html) for that.
 
 Before we meet again in the next video,
 do note that I publish on this main blog and on youtube after my plans and
-content in the [buffer](https://buffer.rajpatil.dev) mature. A quick
+content in the [buffer](https://buffer.thebitmage.com) mature. A quick
 search in the index should indicate what I've been up to and where I'm
 headed.  
 

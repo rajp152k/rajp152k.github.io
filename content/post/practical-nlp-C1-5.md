@@ -19,7 +19,7 @@ book is intended for.
 
 I have been making notes since the second chapter that are indexed
 in the sentinel reference of the [NLP node in my
-braindump](https://buffer.rajpatil.dev/sitemap?stack=%2F20230713150554-natural_language_processing.html).
+braindump](https://buffer.thebitmage.com/sitemap?stack=%2F20230713150554-natural_language_processing.html).
 
 I do plan on returning to complete the rest as and when needed.  
 

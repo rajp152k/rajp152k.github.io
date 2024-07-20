@@ -51,6 +51,6 @@ and specialization : I personally do not view the core of domains to
 be so disconnected that their mutual knowledge does not elevate the
 collective comprehension - I perceive their tactical combination to be greater than the sum of their individual worths.  
 
-For more on that, checkout [The Polymathic Gamble](https://rajpatil.dev/post/polymathy/)
+For more on that, checkout [The Polymathic Gamble](https://thebitmage.com/post/polymathy/)
 
 [^1]: https://openstax.org/books/physics/pages/12-3-second-law-of-thermodynamics-entropy

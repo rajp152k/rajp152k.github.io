@@ -30,7 +30,7 @@ everything before I begin with something : I decided to read the book
 [Learn vim the smart way](https://leanpub.com/learnvim).  
 
 I learned a lot in [4 dense
-days](https://buffer.rajpatil.dev/20231017105418-vim.html) (everything
+days](https://buffer.thebitmage.com/20231017105418-vim.html) (everything
 before 0x217B (inclusive) pertains to comments in the book) and was
 blown away by some pretty neat peculiarities as well.  
 
@@ -48,7 +48,7 @@ my productivity:
  
 Plus, the affinity of the parenthesis made it pretty easy to choose.  
 
-Getting back to the point, I've setup a minimal [dot file](https://buffer.rajpatil.dev/20231020193344-vimrc.html) right now
+Getting back to the point, I've setup a minimal [dot file](https://buffer.thebitmage.com/20231020193344-vimrc.html) right now
 that allows me get things done without much overheads.  
 
 I don't particularly miss being out of emacs, I consider I'm mature

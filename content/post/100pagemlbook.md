@@ -14,7 +14,7 @@ since the past ~4 years.
 
 I also picked up the book to systematically populate my org-roam
 buffer and have my root node rooted [here in the
-braindump](https://buffer.rajpatil.dev/20230911114632-the100pagemlbook.html).  
+braindump](https://buffer.thebitmage.com/20230911114632-the100pagemlbook.html).  
 
 Do note that I avoid noting concepts down verbatim and always try to
 write stuff down the way I'd like to formulate it for my future self.  

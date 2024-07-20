@@ -49,4 +49,4 @@ series of relevant blogs (here) and unscripted monologues
 ([youtube](https://youtube.com/@rajp152k?si=oOuktOD2UUQVnOLL)). If
 you'd like to know what goes on under the hood with a higher frequency
 of updates, checkout the [ideation
-buffer](https://buffer.rajpatil.dev/).  
+buffer](https://buffer.thebitmage.com/).  

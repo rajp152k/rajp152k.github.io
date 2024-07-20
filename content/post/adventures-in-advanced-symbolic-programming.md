@@ -24,4 +24,4 @@ when it comes to lisp is [Adventures in Advanced Symbolic Programming
 
 I'll be updating my progress in a reverse chronological stream, along
 with temporally independent note nodes in the ideation buffer at [this
-specific node](https://buffer.rajpatil.dev/%2F20240410114903-mit_ocw_6_945_aiasp.html)
+specific node](https://buffer.thebitmage.com/%2F20240410114903-mit_ocw_6_945_aiasp.html)

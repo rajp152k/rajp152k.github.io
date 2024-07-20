@@ -494,13 +494,13 @@ You should blog too.
   (use-package easy-hugo
     :straight t
     :config
-    (setq easy-hugo-basedir "/mnt/c/Users/Raj Patil/source/rajpatil.dev/")
-    (setq easy-hugo-url "https://rajpatil.dev")
+    (setq easy-hugo-basedir "/mnt/c/Users/Raj Patil/source/thebitmage.com/")
+    (setq easy-hugo-url "https://thebitmage.com")
     (setq easy-hugo-root "/usr/local/bin")
     (defun blog ()
       "Open blogging workspace"
       (interactive)
-      (let ((blog-dir "~/links/source/rajpatil.dev"))
+      (let ((blog-dir "~/links/source/thebitmage.com"))
 	(message (concat "opening blogging workspace @ " blog-dir))
 	(find-file blog-dir)))
     (defun life-hex-count ()

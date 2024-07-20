@@ -6,7 +6,7 @@ sidebar: false
 
 ##### *As of 24th April 2024*
 
-### Raj Patil | contact@rajpatil.dev
+### Raj Patil | raj@thebitmage.com
 ---
 
 ## Education 
@@ -107,7 +107,7 @@ sidebar: false
    of which resulted in the [School Education and Sports Department of
    Maharashtra](https://education.maharashtra.gov.in/sanch/users)
    winning a [Guinness World
-   Record](https://rajpatil.dev/post/guinness-dedup-anomaly/), for
+   Record](https://thebitmage.com/post/guinness-dedup-anomaly/), for
    which ESDS was the technical facilitator. 
  - Mentored individuals across domains and began honing my
  managerial/leadership aptitude.
@@ -151,7 +151,7 @@ sidebar: false
 
 | project                                                                                                                                                                                            | desc.                                                                                                                                                      | tools and skills                       |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| [Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection](https://rajpatil.dev/post/guinness-dedup-anomaly/)                                                                 | was responsible for filtering the collected images (scale of 1.4e6) (checkout blog link for more context)                                                                                        | signed an NDA               |
+| [Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection](https://thebitmage.com/post/guinness-dedup-anomaly/)                                                                 | was responsible for filtering the collected images (scale of 1.4e6) (checkout blog link for more context)                                                                                        | signed an NDA               |
 | [Quantum Error Correction Codes](https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_8/Quantum_Computing/Quantum_Project.ipynb)                          | created a framework to test efficacy of qubit allocation strategies for noise-resistant quantum computation                                                | Qiskit                                 |
 | Tic-Tac-Toe Reinforcement Learning                                                                                                                                                                 | tested out RL algorithms with random and heuristics based agents                                                                                           | Pytorch                                |
 | [Option Pricing via Monte Carlo Simulations](https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/MA4340/CS18BTECH11039_MA4340_PROJECT)                 | delved into monte carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)                               | Python, Stochatic Calculus             |
@@ -200,4 +200,4 @@ sidebar: false
 ### Caveat
 
 This is my conventional resume - the one the usual human demands.  
-If you're interested in my true incentives, you'd find [this recursive-introspective terser composition](https://rajpatil.dev/i-know-not/) to be more valuable.
+If you're interested in my true incentives, you'd find [this recursive-introspective terser composition](https://thebitmage.com/i-know-not/) to be more valuable.

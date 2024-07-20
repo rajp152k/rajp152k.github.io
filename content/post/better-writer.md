@@ -6,7 +6,7 @@ tags: ["writing","chatGPT","AI","tutor","skills"]
 draft: false
 ---
 
-So, I've been reading a [book on prompt engineering](https://buffer.rajpatil.dev/sitemap?stack=%2F20230920144401-prompt_engineering.html) and decided to
+So, I've been reading a [book on prompt engineering](https://buffer.thebitmage.com/sitemap?stack=%2F20230920144401-prompt_engineering.html) and decided to
 practice a little...
 
 Here's a conversation I had with chatGPT regarding a small essay I
