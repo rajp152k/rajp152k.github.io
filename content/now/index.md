@@ -5,6 +5,25 @@ title: Now
 A [chronologically descending](https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x2292
+
+ - Have rebranded my online presence as the (bit-mage). 
+ - Given up on the old domain rajpatil.dev and ported all existence to thebitmage.com.
+ - reading "Writing to Learn". will blog more technical and non technical than usual
+ - might start maintaining daily bullet entries.
+ - checking out ZygoMys soon (lisp in golang)
+ - plan on writing an emacs extension
+ - will start writing in different locations with the small laptop without monitor
+ - considering giving up on the monitor: i.e. going the spartan way of working for a major porting of my workday
+ - monitors seem to be over
+ - teams screen sharing hasn't been working on wayland (might need to rebuild chromium with a webRTC flag and install pipewire 0.3 -> 0.2 compat patch : but things shouldn't be this tedious)
+ - usually use sway, but had to momentarily switch to Gnome classic w/ Xorg today.
+   - very painful
+ - back on OMADs : going all in, on the fitness efforts : am ~26% BF right now, aiming for sub 20% this training block (12 weeks)
+   - might restock on L-theanine. (haven't been dosing for quite a while now).
+ - might start building a presence on reddit from a marketing perspective : the emacs video did gain traction on r/planetemacs
+ - more microessays that aren't that curated henceforth : time to build a blog
+
 ## 0x2247 
 
 Alright, feel like I've stabilized enough and am currently voluntarily 
