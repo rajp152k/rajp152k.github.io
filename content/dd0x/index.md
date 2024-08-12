@@ -12,6 +12,7 @@ This is a reverse chronological listing of my progress rambles (I address them a
 
 | 0X# | YYYY-MM-DD | link                         |
 |-----|------------|------------------------------|
+| 0xC | 2024-08-12 | https://youtu.be/ZYma-8rrJms |
 | 0xB | 2024-07-20 | https://youtu.be/oDGH08DGwmI |
 | 0xA | 2024-07-14 | https://youtu.be/YCdmucMNbzw |
 | 0x9 | 2024-06-30 | https://youtu.be/6VxQwb0fuIg |
