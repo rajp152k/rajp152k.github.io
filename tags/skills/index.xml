@@ -1,9 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Skills on (bit-mage)</title><link>https://rajp152k.github.io/tags/skills/</link><description>Recent content in Skills on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 21 Sep 2023 16:38:07 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/skills/index.xml" rel="self" type="application/rss+xml"/><item><title>Prompt Crafting Distilled</title><link>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</link><pubDate>Thu, 21 Sep 2023 16:38:07 +0530</pubDate><guid>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</guid><description>The Premise I was initially reluctant on using generative AI for my writing process.
-That being said, I was quite aware of the potential of large language models (generically addressed as LLMs in here henceforth) - especially true in the case of content creators and/or eccentrically curious individuals.
-I, therefore, decided to clarify how I&amp;rsquo;ll be using generative AI for my ideation process.
-The Promise Before we get onto that, as promised by the title, distilling the over-arching skills needed to extract good insights from a conversation with an LLM (an el-el-em; please don&amp;rsquo;t read it as large, please.</description></item><item><title>I have a Writing Tutor now ...</title><link>https://rajp152k.github.io/post/better-writer/</link><pubDate>Wed, 20 Sep 2023 19:30:13 +0530</pubDate><guid>https://rajp152k.github.io/post/better-writer/</guid><description>So, I&amp;rsquo;ve been reading a book on prompt engineering and decided to practice a little&amp;hellip;
-Here&amp;rsquo;s a conversation I had with chatGPT regarding a small essay I wrote recently and fortunately, there&amp;rsquo;s room to improve.
-Here&amp;rsquo;s how it went&amp;hellip;
-Criticize my writing &amp;hellip; Raj: You are my writing critic for this session; do not make any intellectual changes in any text I paste; do not heavily influence my style; only analyze what I say and generate pointers as to how I can become a better writer.</description></item><item><title>PICC: pragmatics of intellectual consumption and creation</title><link>https://rajp152k.github.io/post/picc/</link><pubDate>Tue, 01 Aug 2023 10:40:55 +0530</pubDate><guid>https://rajp152k.github.io/post/picc/</guid><description>There&amp;rsquo;s a better way to do it - Find it.
-Thomas Alva Edison
-Managing one&amp;rsquo;s intellectual appetite in these times of information (and noise) excess is quite an ordeal. Given superior tooling and methods to plough through dense knowledge forests, coming up with the right set of tools for oneself is still a commendable task. In this post, I sketch out how one could go about making such choices practically, from why you should bother, to what tangible actions you can get started with.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Skills on (bit-mage)</title><link>https://rajp152k.github.io/tags/skills/</link><description>Recent content in Skills on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 21 Sep 2023 16:38:07 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/skills/index.xml" rel="self" type="application/rss+xml"/><item><title>Prompt Crafting Distilled</title><link>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</link><pubDate>Thu, 21 Sep 2023 16:38:07 +0530</pubDate><guid>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</guid><description>&lt;h1 id="the-premise">The Premise&lt;/h1>
+&lt;p>I was initially reluctant on using generative AI for my writing
+process.&lt;/p>
+&lt;p>That being said, I was quite aware of the potential of large language
+models (generically addressed as LLMs in here henceforth) -
+especially true in the case of content creators and/or eccentrically
+curious individuals.&lt;/p>
+&lt;p>I, therefore, decided to clarify how I&amp;rsquo;ll be using generative AI for
+my ideation process.&lt;/p>
+&lt;h1 id="the-promise">The Promise&lt;/h1>
+&lt;p>Before we get onto that, as promised by the title, distilling the
+over-arching skills needed to extract good insights from a
+conversation with an LLM (an el-el-em; please don&amp;rsquo;t read it as large, please..).&lt;/p></description></item><item><title>I have a Writing Tutor now ...</title><link>https://rajp152k.github.io/post/better-writer/</link><pubDate>Wed, 20 Sep 2023 19:30:13 +0530</pubDate><guid>https://rajp152k.github.io/post/better-writer/</guid><description>&lt;p>So, I&amp;rsquo;ve been reading a &lt;a href="https://buffer.thebitmage.com/sitemap?stack=%2F20230920144401-prompt_engineering.html">book on prompt engineering&lt;/a> and decided to
+practice a little&amp;hellip;&lt;/p>
+&lt;p>Here&amp;rsquo;s a conversation I had with chatGPT regarding a small essay I
+wrote recently and fortunately, there&amp;rsquo;s room to improve.&lt;/p>
+&lt;p>Here&amp;rsquo;s how it went&amp;hellip;&lt;/p>
+&lt;h2 id="criticize-my-writing-">Criticize my writing &amp;hellip;&lt;/h2>
+&lt;p>Raj: You are my writing critic for this session; do not make any intellectual changes in any text I paste; do not heavily influence my style; only analyze what I say and generate pointers as to how I can become a better writer.&lt;/p></description></item><item><title>PICC: pragmatics of intellectual consumption and creation</title><link>https://rajp152k.github.io/post/picc/</link><pubDate>Tue, 01 Aug 2023 10:40:55 +0530</pubDate><guid>https://rajp152k.github.io/post/picc/</guid><description>&lt;blockquote>
+&lt;p>&lt;em>There&amp;rsquo;s a better way to do it - Find it.&lt;/em>&lt;br>
+&lt;em>Thomas Alva Edison&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>Managing one&amp;rsquo;s intellectual appetite in these times of information
+(and noise) excess is quite an ordeal. Given superior
+tooling and methods to plough through dense
+knowledge forests, coming up with the right set of tools for
+oneself is still a commendable task. In this post, I sketch out
+how one could go about making such choices practically, from why you
+should bother, to what tangible actions you can get started with.&lt;/p></description></item></channel></rss>

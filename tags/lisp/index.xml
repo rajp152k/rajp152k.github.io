@@ -1,11 +1,90 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lisp on (bit-mage)</title><link>https://rajp152k.github.io/tags/lisp/</link><description>Recent content in Lisp on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 14 May 2024 20:29:51 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/lisp/index.xml" rel="self" type="application/rss+xml"/><item><title>IKN0X224C: Epistemological Polyglotism</title><link>https://rajp152k.github.io/post/linguistics-and-flow/</link><pubDate>Tue, 14 May 2024 20:29:51 +0530</pubDate><guid>https://rajp152k.github.io/post/linguistics-and-flow/</guid><description>check out what an IKN0x means here
-Understanding different languages can open up one&amp;rsquo;s mind towards different cultures.
-The evolution of languages over centuries and common ancestors there-of over millenia indicates the evolution of cultural complexity.
-The Conventional Take I grew up actively conversing in 4 languages: English, Hindi, Marathi and Gujrati. French was my first romance language I was exposed to for over 8 years (I say exposed as was learning this academically as a third language and didn&amp;rsquo;t use this as a &amp;ldquo;natural&amp;rdquo; language as much as the others).</description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>I finished my first pass of SICP (structure and interpretation of computer programs) around 3 years ago. Since, I&amp;rsquo;ve realized the elegantly implicit existence of symbolic algebra in several domains that I personally explore on a regular basis.
-That initial infatuation with Lisp ( and consequently symbolic computation ) has simmered and fermented enough in my mind to be realised as a potent generic thinking device. To cement my commitment to the same, I&amp;rsquo;ll regularly dive deeper into relevant academia so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.</description></item><item><title>Common Lisp : The Series - 0.1 : Representing Programs</title><link>https://rajp152k.github.io/post/clts/clts-0.1/</link><pubDate>Tue, 29 Aug 2023 11:09:43 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0.1/</guid><description>What makes lisp so unique is the way its code is structured - you definitely can&amp;rsquo;t miss all those parentheses. In this section of the series, I discuss the cause for such a representation and how that makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).
-Further reading Python disassembler Homoiconity Byte Code S-expressions Common Operator Notation Abstract Syntax Tree The Blub Paradox Call to collaborate If you&amp;rsquo;re someone who shares the dream of making lisp popular and mainstream so that we can use it for our jobs and don&amp;rsquo;t have to switch to blubs to make a living (without denting its charm of course) , consider contributing to the notes and hit me up via mail or any of the other media I&amp;rsquo;m present on.</description></item><item><title>Common Lisp : The Series - 0 : Introduction</title><link>https://rajp152k.github.io/post/clts/clts-0/</link><pubDate>Mon, 21 Aug 2023 12:03:07 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0/</guid><description>This is the first in a series of blog posts that follow the educational common lisp series on my youtube channel as an auxilliary.
-I&amp;rsquo;ll be summarizing the videos in these blogs and be using these to point to references and additional resources that further elaborate the matter.
-This post is about why you should consider learning common lisp and how I intend to execute the plan of building an end to end resource index while simultaneously being able to learn more about the language myself.</description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>[As of 0x213B : 2023-08-17 Thu]
-I use emacs for a lot of my daily tasks and spend majority of my time in it. This is a review of some significant components of my init.el
-;keyboard all the way (menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1) ;I don&amp;#39;t like distractions (setq byte-compile-warnings &amp;#39;(cl-functions)) (setq ring-bell-function &amp;#39;ignore) (setq visible-bell t) I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched since and don&amp;rsquo;t think I&amp;rsquo;ll need to.</description></item><item><title>Common Lisp - A Gentle Introduction to Symbolic Computation</title><link>https://rajp152k.github.io/post/cl-aitsc/</link><pubDate>Wed, 16 Aug 2023 17:51:13 +0530</pubDate><guid>https://rajp152k.github.io/post/cl-aitsc/</guid><description>Given I&amp;rsquo;ve passed through SICP once, quickly grasping common lisp to build stuff and explore the traditional and industrial aspects of lisp (I know clojure exists but traditional&amp;hellip;) was my next objective: with decent speed and only solving the somewhat involved exercises, it took me two weeks to complete this book.
-The exercises aren&amp;rsquo;t meant to be a challenge but to adapt to the environment and the topics introduced. The book does not explore concepts with depth (CLOS, macros, etc&amp;hellip;) but that shouldn&amp;rsquo;t be the objective of an introduction anyway.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lisp on (bit-mage)</title><link>https://rajp152k.github.io/tags/lisp/</link><description>Recent content in Lisp on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 14 May 2024 20:29:51 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/lisp/index.xml" rel="self" type="application/rss+xml"/><item><title>IKN0X224C: Epistemological Polyglotism</title><link>https://rajp152k.github.io/post/linguistics-and-flow/</link><pubDate>Tue, 14 May 2024 20:29:51 +0530</pubDate><guid>https://rajp152k.github.io/post/linguistics-and-flow/</guid><description>&lt;p>&lt;em>check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/">here&lt;/a>&lt;/em>&lt;/p>
+&lt;p>Understanding different languages can open up one&amp;rsquo;s mind towards
+different cultures.&lt;/p>
+&lt;p>The evolution of languages over centuries and common ancestors
+there-of over millenia indicates the evolution of cultural
+complexity.&lt;/p>
+&lt;h2 id="the-conventional-take">The Conventional Take&lt;/h2>
+&lt;p>I grew up actively conversing in 4 languages: English, Hindi,
+Marathi and Gujrati. French was my first romance language I was
+exposed to for over 8 years (I say exposed as was learning this
+academically as a third language and didn&amp;rsquo;t use this as a &amp;ldquo;natural&amp;rdquo;
+language as much as the others).&lt;/p></description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p>I finished my first pass of SICP (structure and interpretation of
+computer programs) around &lt;a href="https://github.com/rajp152k/SICP">3 years
+ago&lt;/a>. Since, I&amp;rsquo;ve realized the
+elegantly implicit existence of symbolic algebra in several domains
+that I personally explore on a regular basis.&lt;/p>
+&lt;p>That initial infatuation with Lisp ( and consequently symbolic
+computation ) has simmered and fermented enough in my mind to be
+realised as a potent generic thinking device. To cement my
+commitment to the same, I&amp;rsquo;ll regularly dive deeper into relevant academia
+so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p></description></item><item><title>Common Lisp : The Series - 0.1 : Representing Programs</title><link>https://rajp152k.github.io/post/clts/clts-0.1/</link><pubDate>Tue, 29 Aug 2023 11:09:43 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0.1/</guid><description>&lt;p>What makes lisp so unique is the way its code is structured - you
+definitely can&amp;rsquo;t miss all those parentheses. In this section of the
+series, I discuss the cause for such a representation and how that
+makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).&lt;/p>
+
+
+ 
+ &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SuI2ns1D9Es?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+ >&lt;/iframe>
+ &lt;/div>
+
+&lt;hr>
+&lt;hr>
+&lt;h2 id="further-reading">Further reading&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.python.org/3/library/dis.html">Python disassembler&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoiconity&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Bytecode">Byte Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/S-expression">S-expressions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Common_operator_notation">Common Operator Notation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Abstract Syntax Tree&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.c2.com/?BlubParadox">The Blub Paradox&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="call-to-collaborate">Call to collaborate&lt;/h2>
+&lt;p>If you&amp;rsquo;re someone who shares the dream of making lisp popular and
+mainstream so that we can use it for our jobs and don&amp;rsquo;t have to switch
+to blubs to make a living (without denting its charm of course) ,
+consider contributing to the notes and hit me up via mail or any of
+the other media I&amp;rsquo;m present on.&lt;/p></description></item><item><title>Common Lisp : The Series - 0 : Introduction</title><link>https://rajp152k.github.io/post/clts/clts-0/</link><pubDate>Mon, 21 Aug 2023 12:03:07 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0/</guid><description>&lt;p>This is the first in a series of blog posts that follow the educational common lisp series on my &lt;a href="https://youtube.com/@rajp152k">youtube channel&lt;/a> as an
+auxilliary.&lt;/p>
+
+
+ 
+ &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jLonMxrVPbY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+ >&lt;/iframe>
+ &lt;/div>
+
+&lt;hr>
+&lt;hr>
+&lt;p>I&amp;rsquo;ll be summarizing the videos in these blogs and be using these to
+point to references and additional resources that further elaborate
+the matter.&lt;/p></description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p>&lt;strong>[&lt;em>As of 0x213B : 2023-08-17 Thu&lt;/em>]&lt;/strong>&lt;/p>
+&lt;p>I use emacs for a lot of my daily tasks and spend majority of my time
+in it. This is a review of some significant components of my init.el&lt;/p>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;keyboard all the way&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(menu-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(tool-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(scroll-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;I don&amp;#39;t like distractions&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq byte-compile-warnings &lt;span style="color:#f92672">&amp;#39;&lt;/span>(cl-functions))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq ring-bell-function &lt;span style="color:#e6db74">&amp;#39;ignore&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq visible-bell &lt;span style="color:#66d9ef">t&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
+since and don&amp;rsquo;t think I&amp;rsquo;ll need to. Migrating from vim, I preferred a
+configuration file rather than installations via melpa interface.
+Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p></description></item><item><title>Common Lisp - A Gentle Introduction to Symbolic Computation</title><link>https://rajp152k.github.io/post/cl-aitsc/</link><pubDate>Wed, 16 Aug 2023 17:51:13 +0530</pubDate><guid>https://rajp152k.github.io/post/cl-aitsc/</guid><description>&lt;p>Given I&amp;rsquo;ve passed through SICP once, quickly grasping common
+lisp to build stuff and explore the
+traditional and industrial aspects of lisp (I know clojure exists but
+traditional&amp;hellip;) was my next objective: with decent speed and only
+solving the somewhat involved exercises, it took me two weeks to
+complete this book.&lt;/p>
+&lt;p>The exercises aren&amp;rsquo;t meant to be a challenge but to adapt to the
+environment and the topics introduced. The book does not explore
+concepts with depth (CLOS, macros, etc&amp;hellip;) but that shouldn&amp;rsquo;t be the
+objective of an introduction anyway.&lt;/p></description></item></channel></rss>

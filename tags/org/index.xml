@@ -1,3 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Org on (bit-mage)</title><link>https://rajp152k.github.io/tags/org/</link><description>Recent content in Org on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 17 Aug 2023 11:23:10 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/org/index.xml" rel="self" type="application/rss+xml"/><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>[As of 0x213B : 2023-08-17 Thu]
-I use emacs for a lot of my daily tasks and spend majority of my time in it. This is a review of some significant components of my init.el
-;keyboard all the way (menu-bar-mode -1) (tool-bar-mode -1) (scroll-bar-mode -1) ;I don&amp;#39;t like distractions (setq byte-compile-warnings &amp;#39;(cl-functions)) (setq ring-bell-function &amp;#39;ignore) (setq visible-bell t) I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched since and don&amp;rsquo;t think I&amp;rsquo;ll need to.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Org on (bit-mage)</title><link>https://rajp152k.github.io/tags/org/</link><description>Recent content in Org on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 17 Aug 2023 11:23:10 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/org/index.xml" rel="self" type="application/rss+xml"/><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p>&lt;strong>[&lt;em>As of 0x213B : 2023-08-17 Thu&lt;/em>]&lt;/strong>&lt;/p>
+&lt;p>I use emacs for a lot of my daily tasks and spend majority of my time
+in it. This is a review of some significant components of my init.el&lt;/p>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;keyboard all the way&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(menu-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(tool-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(scroll-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;I don&amp;#39;t like distractions&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq byte-compile-warnings &lt;span style="color:#f92672">&amp;#39;&lt;/span>(cl-functions))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq ring-bell-function &lt;span style="color:#e6db74">&amp;#39;ignore&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq visible-bell &lt;span style="color:#66d9ef">t&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
+since and don&amp;rsquo;t think I&amp;rsquo;ll need to. Migrating from vim, I preferred a
+configuration file rather than installations via melpa interface.
+Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p></description></item></channel></rss>
