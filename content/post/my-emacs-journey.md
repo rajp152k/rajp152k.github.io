@@ -13,4 +13,4 @@ I haven't yet explored the emacs niche completely and will be investing more tim
 
 From a content creation perspective, I do find the act of spreading the word to be a noble pursuit (emacs also seems to be in demand btw).  
 
-As of now my journey with emacs is just beginning and I still feel the same amount of enthusiasm I first approached in the summer of 2020.  
+As of now my journey with emacs is just beginning and I still feel the same amount of enthusiasm I first approached it with in the summer of 2020.  
