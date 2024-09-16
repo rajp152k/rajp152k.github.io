@@ -5,6 +5,12 @@ title: Now
 A [chronologically descending](https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x22C8 
+
+ - writing technically and more often
+ - getting into powerlifting
+ - exploring emacs in depth
+
 ## 0x2292
 
  - Have rebranded my online presence as the (bit-mage). 
