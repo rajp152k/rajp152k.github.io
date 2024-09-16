@@ -443,117 +443,37 @@ temporally impractical&amp;hellip;&lt;/p>
 &lt;h2 id="0x2247">0x2247&lt;/h2>
 &lt;p>Alright, feel like I&amp;rsquo;ve stabilized enough and am currently voluntarily
 injecting some more chaos into my life.&lt;/p></description></item><item><title>Open Source</title><link>https://rajp152k.github.io/open-source/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/open-source/</guid><description>&lt;p>A &lt;a href="https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747">reverse chronological index&lt;/a> of any contribution whatsover; Cause
-someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t be improved&amp;rdquo;..&lt;/p></description></item><item><title>Résumé</title><link>https://rajp152k.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/resume/</guid><description>&lt;h5 id="as-of-24th-april-2024">&lt;em>As of 24th April 2024&lt;/em>&lt;/h5>
+someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t be improved&amp;rdquo;..&lt;/p></description></item><item><title>Work Corpus</title><link>https://rajp152k.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/resume/</guid><description>&lt;h5 id="as-of-16th-sept-2024">&lt;em>As of 16th Sept 2024&lt;/em>&lt;/h5>
 &lt;h3 id="raj-patil--rajthebitmagecom">Raj Patil | &lt;a href="mailto:raj@thebitmage.com">raj@thebitmage.com&lt;/a>&lt;/h3>
-&lt;hr>
-&lt;h2 id="education">Education&lt;/h2>
-&lt;h3 id="btech--indian-institute-of-technology-hyderabad-2018-2022">B.Tech: &lt;strong>Indian Institute of Technology Hyderabad&lt;/strong> (2018-2022)&lt;/h3>
-&lt;pre>&lt;code>All India Rank (JEE Advance 2018) - 658
-
-- Major (2018-2022) : Computer Science and Engineering : 9.26/10
-- Minor (2020-2022) : Artificial Intelligence : 9.50/10
-&lt;/code>&lt;/pre>
-&lt;hr>
-&lt;h2 id="technical-skills">Technical Skills&lt;/h2>
-&lt;pre>&lt;code>Languages:
-
-- Primary : Python, Golang, Mojo
-- Lisps &amp;amp; Schemes : Common-Lisp, E-lisp, Hy, Racket
-- Non-Trivial Exp : C, C++, Prolog, Eiffel, Vimscript
-- Trivial Exp : Haskell, Rust, Lua, Java, Javascript
-&lt;/code>&lt;/pre>
-&lt;hr>
-&lt;pre>&lt;code>Current Envs:
- 1. Personal : Debian, I3WM, Emacs
- 2. Work : Multiple headless Linuces , Tmux, Neovim
- (Debian &amp;amp; red hat family, Qubes OS) 
-&lt;/code>&lt;/pre>
-&lt;hr>
-&lt;pre>&lt;code>Tools and Frameworks:
-
- - Generic
-	- Cloud Compute : AWS (EC2, S3), Paperspace, GCP
-	- Version Control : git, git-lfs
-	- Containerization : docker
-	- Orchestration : kubernetes
-	- Virtualization : qemu, KVM, virtual box
-	- CI/CD : Github Actions, Gitlab CI, Jenkins
-
- - AI
-	- DL : Pytorch, spaCy, nltk, fastai, hugging-face
-	- ML : Scikit-learn, LightGBM, XGBoost
-	- MLOps : MLFlow
-	- Monitoring : Visdom, Tensorboard
-	- Data Wrangling : Pandas, Xarray
-	- Scientific Computing : Numpy, Scipy
-	- Dashboards : Streamlit, Gradio
-	- Visualization : Matplotlib, Seaborn
-
- - Databases
-	- Relational : PostGres, SQLite
-	- NoSQL : MongoDB, Redis
-	- Graph : Neo4j
-	- Multi-model : SurrealDB
-
- - Web
-	- SSGs : Hugo, Jekyll, Quarto, Org-export
-	- Hypermedia : HTML, CSS, HTMX
-	- ReST : FastAPI
- 
- - Domain Specific
-	- Lexers,Parsers : Lark, yacc, lex
-	- Quantum Computing : Qiskit
-	- Convex Optimization : CVXPy
-	- Quantum Computing : Qiskit
-	- CLI : regex, sed, awk, grep
-	- Text-Editing : Emacs, Vi
-	- Markup : markdown, latex, org files
-	- Visualization : mermaid.js
-	- Testing : Selenium
-&lt;/code>&lt;/pre>
-&lt;hr>
 &lt;h2 id="experience">Experience&lt;/h2>
-&lt;h3 id="esds-software-solutions--principal-engineer">ESDS Software Solutions : Principal Engineer&lt;/h3>
+&lt;h3 id="principal-engineer-esds-software-solutions">Principal Engineer: ESDS Software Solutions&lt;/h3>
 &lt;h6 id="march-2024---present">&lt;em>March 2024 - Present&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>exploring the vast cloud computing problem space as a whole,
-rather than just the artificial intelligence perspective as in my
-previous role.&lt;/li>
-&lt;li>overseeing interdisciplinary research and development across
-departments, with the opportunity to work in relatively larger and
-technically varied teams.&lt;/li>
+&lt;li>leading research and development directed towards bettering product offerings and operations in a cloud native context.&lt;/li>
+&lt;li>overseeing an interdisciplinary lab that operates across domains (AI, IOT, Cyber-Security, and counting (Domain Agnostic Engineering)).&lt;/li>
 &lt;/ul>
-&lt;h3 id="esds-software-solutions--ai-research-engineer">ESDS Software Solutions : AI Research Engineer&lt;/h3>
+&lt;h3 id="ai-engineer-esds-software-solutions">AI Engineer: ESDS Software Solutions&lt;/h3>
 &lt;h6 id="nov-2022---march-2024">&lt;em>Nov 2022 - March 2024&lt;/em>&lt;/h6>
 &lt;ul>
 &lt;li>developed a comprehensive sentiment analysis portal from the ground up, focusing on customer satisfaction within the ticketing portal.
 &lt;ul>
-&lt;li>now crucial within the organization, used to
-quantify customer satisfaction and identify areas of improvement
-with regards to customer experience.&lt;/li>
+&lt;li>now crucial within the organization, used to quantify customer satisfaction and identify areas of improvement with regards to customer experience.&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>headed AI integration across diverse departments, identifying and
-implementing multi-model pipelines (natural language processing,
-computer vision and traditional machine learning solutions)&lt;/li>
-&lt;li>served multiple client facing AI-related requests, most promiment
-of which resulted in the &lt;a href="https://education.maharashtra.gov.in/sanch/users">School Education and Sports Department of
-Maharashtra&lt;/a>
-winning a &lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness World
-Record&lt;/a>, for
+&lt;li>headed AI integration across diverse departments, identifying and implementing multi-model pipelines (natural language processing, computer vision and traditional machine learning solutions)&lt;/li>
+&lt;li>served multiple client facing AI-related requests, most promiment of which resulted in the &lt;a href="https://education.maharashtra.gov.in/sanch/users">School Education and Sports Department of Maharashtra&lt;/a> winning a &lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness World Record&lt;/a>, for
 which ESDS was the technical facilitator.&lt;/li>
-&lt;li>Mentored individuals across domains and began honing my
-managerial/leadership aptitude.&lt;/li>
+&lt;li>Mentored individuals across domains and began honing my managerial/leadership aptitude.&lt;/li>
 &lt;/ul>
 &lt;h3 id="personal-sabbatical">Personal Sabbatical&lt;/h3>
 &lt;h6 id="aug-2022---nov-2022">&lt;em>Aug 2022 - Nov 2022&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>deliberate decision to take a hiatus to address health concerns.
+&lt;li>deliberate decision to take a hiatus to address health concerns
 &lt;ul>
-&lt;li>diagnosed with severe deficiencies in several micronutrients and minerals.&lt;/li>
+&lt;li>context: diagnosed with severe deficiencies in several micronutrients and minerals.&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>consumed several epistemological works to further my personal pursuits.&lt;/li>
+&lt;li>delved in several epistemological works to further my personal intellectual pursuits.&lt;/li>
 &lt;/ul>
 &lt;h3 id="goldman-sachs-analyst">Goldman Sachs: Analyst&lt;/h3>
 &lt;h6 id="july-2022---aug-2022">&lt;em>July 2022 - Aug 2022&lt;/em>&lt;/h6>
@@ -577,7 +497,7 @@ address relevant challenges.&lt;/li>
 &lt;/ul>
 &lt;h3 id="cvpr-2021-workshop-paper--autonue-2021--research-assistant">CVPR 2021 Workshop paper | AUTONUE 2021 : Research Assistant&lt;/h3>
 &lt;ul>
-&lt;li>helped organize a &lt;a href="http://cvit.iiit.ac.in/autonue2021/challenge/">domain adaptation challenge&lt;/a> for semantic segmentation, contributing to a workshop paper.&lt;/li>
+&lt;li>organized a &lt;a href="http://cvit.iiit.ac.in/autonue2021/challenge/">domain adaptation challenge&lt;/a> for semantic segmentation, contributing to a workshop paper.&lt;/li>
 &lt;li>Guided and mentored by &lt;a href="https://people.iith.ac.in/vineethnb/index.html">Prof. Vineeth N.B.&lt;/a> and &lt;a href="https://faculty.iiit.ac.in/~jawahar/">Prof. C.V. Jawahar&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;hr>
@@ -585,71 +505,81 @@ address relevant challenges.&lt;/li>
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">project&lt;/th>
- &lt;th style="text-align: left">desc.&lt;/th>
- &lt;th style="text-align: left">tools and skills&lt;/th>
+ &lt;th style="text-align: left">&lt;strong>Project&lt;/strong>&lt;/th>
+ &lt;th style="text-align: left">&lt;strong>Synopsis&lt;/strong>&lt;/th>
+ &lt;th style="text-align: left">&lt;strong>Principal Domains&lt;/strong>&lt;/th>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection&lt;/a>&lt;/td>
- &lt;td style="text-align: left">was responsible for filtering the collected images (scale of 1.4e6) (checkout blog link for more context)&lt;/td>
- &lt;td style="text-align: left">signed an NDA&lt;/td>
+ &lt;td style="text-align: left">checkout blog link for more context&lt;/td>
+ &lt;td style="text-align: left">Computer Vision&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">Sentinment Analysis for Support Tickets&lt;/td>
+ &lt;td style="text-align: left">implemented a primal ETL, fine-tuned an LLM (unsupervised) over a stratified subset, inference jobs formed integral part of business analysis crons&lt;/td>
+ &lt;td style="text-align: left">Natural Language Processing, Data Engineering&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_8/Quantum_Computing/Quantum_Project.ipynb">Quantum Error Correction Codes&lt;/a>&lt;/td>
  &lt;td style="text-align: left">created a framework to test efficacy of qubit allocation strategies for noise-resistant quantum computation&lt;/td>
- &lt;td style="text-align: left">Qiskit&lt;/td>
+ &lt;td style="text-align: left">Quantum Computing&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/AI3000/A2/RL%20A2%20Q5.ipynb">Tic-Tac-Toe Reinforcement Learning&lt;/a>&lt;/td>
  &lt;td style="text-align: left">tested out RL algorithms with random and heuristics based agents&lt;/td>
- &lt;td style="text-align: left">Pytorch&lt;/td>
+ &lt;td style="text-align: left">Reinforcement Learning&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/MA4340/CS18BTECH11039_MA4340_PROJECT">Option Pricing via Monte Carlo Simulations&lt;/a>&lt;/td>
  &lt;td style="text-align: left">delved into monte carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)&lt;/td>
- &lt;td style="text-align: left">Python, Stochatic Calculus&lt;/td>
+ &lt;td style="text-align: left">Stochastic Calculus&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/CS6160/project/CS18BTECH11039_CS6160.pdf">Secure Multiparty Computation (for Deep Learning)&lt;/a>&lt;/td>
  &lt;td style="text-align: left">Survey on how cryptographic techniques are used to maintain secrecy during multiparty computation (neural networks in this case)&lt;/td>
- &lt;td style="text-align: left">&amp;mdash;&lt;/td>
+ &lt;td style="text-align: left">Cryptography&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/Compilers-II">WDGAF(We Do Give a Figure)&lt;/a>&lt;/td>
  &lt;td style="text-align: left">Created plotting DSL using principals of compilers and published it to pip&lt;/td>
- &lt;td style="text-align: left">python, lark, package publishing&lt;/td>
+ &lt;td style="text-align: left">Compilers&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/coursework_IITH/tree/master/SEM_6/DBMSII">Relational Databases and Data Hygeine&lt;/a>&lt;/td>
  &lt;td style="text-align: left">Executed complex relational database queries on the imdb movie database; implemented scraping scripts to fetch relevant data&lt;/td>
- &lt;td style="text-align: left">PostGres, SQL, python, shell scripting&lt;/td>
+ &lt;td style="text-align: left">Relational Databases&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/coursework_IITH/blob/master/SEM_7/CS5280/CS5280%20cs18btech11039%20cs21resch11011/project_report_cs18btech11039_cs21resch11011.pdf">Optimizing scheduling algorithms&lt;/a>&lt;/td>
  &lt;td style="text-align: left">researched into tweaks to optimize the scheduling algorithms BOCC, BTO, MVTO&lt;/td>
- &lt;td style="text-align: left">&amp;mdash;&lt;/td>
+ &lt;td style="text-align: left">Distributed Computing&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/musical_chairs">Musical Chairs: inter-process coms&lt;/a>&lt;/td>
  &lt;td style="text-align: left">Simulating a game of musical chairs using modern concurrency constructs from C++11 onwards&lt;/td>
- &lt;td style="text-align: left">C++, Make&lt;/td>
+ &lt;td style="text-align: left">Concurrency&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_5/Computer-Networks-I/socket%20programming/Computer-Networks">Chat Room App&lt;/a>&lt;/td>
  &lt;td style="text-align: left">created a command line chat room app using principles of socket programming&lt;/td>
- &lt;td style="text-align: left">computer networks, python&lt;/td>
+ &lt;td style="text-align: left">Computer Networks&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">&lt;a href="https://github.com/rajp152k/cust_dl_lib">Custom Deep Learning Framework&lt;/a>&lt;/td>
- &lt;td style="text-align: left">created a deep learning library from scratch&lt;/td>
- &lt;td style="text-align: left">Pytorch, numpy, git&lt;/td>
+ &lt;td style="text-align: left">created a deep learning library from scratch (axioms being high school math )&lt;/td>
+ &lt;td style="text-align: left">Software Engineering&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">Calculator&lt;/td>
+ &lt;td style="text-align: left">wrote C to simulate the finite state machine on an ATmega16U2 (Arduino), designed and soldered the circuit (buttons, display, and the ATMega) on a veroboard, functional with add,mul,sub,div&lt;/td>
+ &lt;td style="text-align: left">Electronics&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td style="text-align: left">3D-printed pin ball machine&lt;/td>
  &lt;td style="text-align: left">designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon) into a functional pin ball setup&lt;/td>
- &lt;td style="text-align: left">SolidEdge, CAD, 3d-printing&lt;/td>
+ &lt;td style="text-align: left">Computer Aided Design&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
@@ -683,6 +613,68 @@ time at IIT-Hyderabad&lt;/li>
 issues&lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h3 id="caveat">Caveat&lt;/h3>
-&lt;p>This is my conventional resume - the one the usual human demands.&lt;br>
-If you&amp;rsquo;re interested in my true incentives, you&amp;rsquo;d find &lt;a href="https://thebitmage.com/i-know-not/">this recursive-introspective terser composition&lt;/a> to be more valuable.&lt;/p></description></item></channel></rss>
+&lt;h2 id="education">Education&lt;/h2>
+&lt;h3 id="btech--indian-institute-of-technology-hyderabad-2018-2022">B.Tech: &lt;strong>Indian Institute of Technology Hyderabad&lt;/strong> (2018-2022)&lt;/h3>
+&lt;pre>&lt;code>All India Rank (JEE Advance 2018) - 658
+
+- Major (2018-2022) : Computer Science and Engineering : 9.26/10
+- Minor (2020-2022) : Artificial Intelligence : 9.50/10
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;h2 id="technical-repertoire-eternal-wip">Technical Repertoire (Eternal WIP)&lt;/h2>
+&lt;h6 id="this-is-an-index-into-languages-utilities-frameworks-and-libraries-that-i-have-invested-effort-into-in-research-and-projects-both-personal-and-professional">&lt;em>This is an index into languages, utilities, frameworks and libraries that I have invested effort into, in research and projects, both personal and professional&lt;/em>&lt;/h6>
+&lt;pre>&lt;code>Languages:
+
+ - Primary : Golang, Python
+ - Lisps &amp;amp; Schemes : Common-Lisp, E-lisp, Hy, Racket
+ - Non-Trivial Exp : C, C++, Prolog, Eiffel, Vimscript
+ - Trivial Exp : Haskell, Rust, Lua, Java, Javascript
+ - Incumbent : mojo
+
+Tools and Frameworks:
+
+ - Dev
+	- CLI : regex, sed, awk, grep, parallel
+	- Text-Editing : Emacs, Vi
+	- Markup : markdown, latex, org files
+	- Visualization : mermaid.js, PlantUML
+	- Testing : Selenium
+
+ - Ops
+	- Cloud Compute : AWS , Paperspace, GCP
+	- Version Control : git, git-lfs
+	- Containerization : docker
+	- Orchestration : kubernetes
+	- Virtualization : qemu, KVM, virtual box
+	- CI/CD : Github Actions, Gitlab CI, Jenkins
+
+ - Databases
+	- Relational : PostGres, SQLite
+	- NoSQL : MongoDB, Redis
+	- Graph : Neo4j
+	- Multi-model : SurrealDB
+ 
+ - Computer Science
+	- Compilers : Lark, yacc, lex
+	- Quantum Computing : Qiskit
+
+ - AI
+ - LLMs : LangChain, LangGraph
+	- DL : Pytorch, spaCy, nltk, fastai, hugging-face
+	- ML : Scikit-learn, LightGBM, XGBoost
+	- MLOps : MLFlow
+	- Monitoring : Visdom, Tensorboard
+	- Data Wrangling : Pandas, Xarray
+	- Scientific Computing : Numpy, Scipy
+	- Dashboards : Streamlit, Gradio
+	- Visualization : Matplotlib, Seaborn
+	- Convex Optimization : CVXPy
+
+ - Web
+	- SSGs : Hugo, Jekyll, Quarto, Org-export
+	- Hypermedia : HTML, CSS, HTMX
+&lt;/code>&lt;/pre>
+&lt;hr>
+&lt;h3 id="further-musings">Further Musings&lt;/h3>
+&lt;p>This is an index into my major deliverables that society might consider to be of relevance.
+There are several non-incentivised musings and works that I keep myself occupied with: they have been indexed in the &lt;a href="https://buffer.thebitmage.com">ideation buffer&lt;/a>&lt;/p></description></item></channel></rss>
