@@ -189,3 +189,8 @@ This is an index into my major deliverables that society might consider to be of
 There are several non-incentivised musings and works that I keep myself occupied with: they have been indexed in the [ideation buffer](https://buffer.thebitmage.com)
 
 As for my generic incentives, you'd find [this recursive-introspective terser composition](https://thebitmage.com/i-know-not/) to be a humble attempt towards expressing the same.
+
+### resume.json
+
+for any devs out there, here's a [js object](https://raw.githubusercontent.com/rajp152k/rajp152k.github.io/master/content/resume/resume.json) for you to easily parse my work into tools of your choice.
+
