@@ -1,10 +1,12 @@
 ---
 title: Work Corpus
 toc: false
-sidebar: false
+sidebar: left
 ---
 
-### RESUME.JSON
+---
+
+#### **RESUME.JSON**
 
 For the programmatically enabled out there, here's a [js object](/resume/resume.json) for you to parse my work into tools of your choice.  
 
@@ -20,13 +22,11 @@ curl -s https://thebitmage.com/resume/resume.json | jq -C
 curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_summary 
 ```
 
-I'd scroll up in tmux, please don't use the mouse
-
+---
 
 ##### *As of 16th Sept 2024*
 
 ### Raj Patil | raj@thebitmage.com
-
 
 ## Experience
 

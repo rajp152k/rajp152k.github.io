@@ -78,11 +78,11 @@ paginate = "16"
   pre = "<i class='fa fa-road'></i>"
   url = '/dd0x/'
   weight = -105
-#[[menu.main]]
-#  name = 'Résumé'
-#  pre = "<i class='fa fa-road'></i>"
-#  url = '/resume/'
-#  weight = -105
+[[menu.main]]
+ name = 'Work'
+ pre = "<i class='fa fa-road'></i>"
+ url = '/resume/'
+ weight = -102
 #[[menu.main]]
 #  name = 'Analytics'
 #  pre = "<i class='fa fa-road'></i>"
@@ -99,9 +99,9 @@ paginate = "16"
 #  pre = "<i class='fa fa-road'></i>"
 #  url = '/i-know-not/'
 #  weight = -103
-[[menu.main]]
-  identifier = 'contact'
-  name = 'contact'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/contact/'
-  weight = -102
+# [[menu.main]]
+#   identifier = 'contact'
+#   name = 'contact'
+#   pre = "<i class='fa fa-road'></i>"
+#   url = '/contact/'
+#   weight = -102
