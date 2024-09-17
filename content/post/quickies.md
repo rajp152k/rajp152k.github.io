@@ -16,7 +16,7 @@ I also like have quick research sweeps and building a link index in the ideation
 
 I'm also getting into having an efficient pipeline (estimating expected latency from ideation (or resurgence from the buffer) to publishing to be less than 30 mins) so that I get into the habit of packaging my thoughts better rather than just dumping them as is in the ideation buffer.  
 
-Any misc updates do go in now page.   
+Any misc updates do go in [the now page](https://thebitmage.com/now/).   
 
 As always, times are hex encoded.  
 
