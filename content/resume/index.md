@@ -185,7 +185,7 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 		- Quantum Computing      : Qiskit
 
 	 - AI
-        - LLMs                   : LangChain, LangGraph
+       - LLMs                   : LangChain, LangGraph
 		- DL                     : Pytorch, spaCy, nltk, fastai, hugging-face
 		- ML                     : Scikit-learn, LightGBM, XGBoost
 		- MLOps                  : MLFlow
