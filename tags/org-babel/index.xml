@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Org-Babel on (bit-mage)</title><link>https://rajp152k.github.io/tags/org-babel/</link><description>Recent content in Org-Babel on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 19 Sep 2024 15:10:44 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/org-babel/index.xml" rel="self" type="application/rss+xml"/><item><title>Doom Emacs config'd for Python</title><link>https://rajp152k.github.io/post/doom-emacs-python/</link><pubDate>Thu, 19 Sep 2024 15:10:44 +0530</pubDate><guid>https://rajp152k.github.io/post/doom-emacs-python/</guid><description>&lt;p>Alter your doom block in init.el:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(doom! 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :lang 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (python +lsp +pyright +conda)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I recommend pyright, is snappier than pyls..&lt;/p>
+&lt;p>you&amp;rsquo;ll also need lsp enabled in your tools, I also have &lt;code>+peek&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(doom! 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :tools
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (lsp +peek)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>for more info, hit &lt;code>&amp;lt;space&amp;gt; h d m lsp&amp;lt;CR&amp;gt;&lt;/code>&lt;/p>
+&lt;p>Alter your config.el (I use miniforge to get mamba and conda):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">; Conda&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(use-package! conda
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :config
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (setq conda-anaconda-home (&lt;span style="color:#a6e22e">expand-file-name&lt;/span> &lt;span style="color:#e6db74">&amp;#34;~/mambaforge&amp;#34;&lt;/span>))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-initialize-interactive-shells)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-initialize-eshell)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-autoactivate-mode &lt;span style="color:#66d9ef">t&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (add-hook &lt;span style="color:#e6db74">&amp;#39;find-file-hook&lt;/span> (lambda () (when (bound-and-true-p conda-project-env-path)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-activate-for-buffer)))))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once that&amp;rsquo;s done, hit &lt;code>&amp;lt;space&amp;gt; h r r&lt;/code> and your ready to go.&lt;/p></description></item></channel></rss>
