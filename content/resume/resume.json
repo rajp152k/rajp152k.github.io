@@ -1,2 +1,304 @@
-{"name":"Raj Patil",
- "note":"This is a work in progress"}
+{
+    "name":"Raj Patil",
+    "last_updated":"Thu Sep 19 09:36:51 AM IST 2024",
+    "meta_data":{
+        "email":"raj@thebitmage.com",
+        "website": "https://thebitmage.com",
+        "linkedin": "https://www.linkedin.com/in/raj-p-48586b113/",
+        "youtube":"https://www.youtube.com/@The-Bit-Mage",
+        "github":"https://github.com/rajp152k",
+        "goodreads":"https://goodreads.com/rajp152k",
+        "twitter":"https://twitter.com/@rajpatil152k"
+    },
+    "experience":[
+        {
+            "position": "Principal Engineer",
+            "company": "ESDS Software Solutions",
+            "period": "March 2024 - Present",
+            "synopsis": [
+                "leading research and development directed towards bettering product offerings and operations in a cloud native context.",
+                "overseeing an interdisciplinary lab that operates across domains (AI, IOT, Cyber-Security, and counting (Domain Agnostic Engineering))."
+            ]
+        },
+        {
+            "position": "AI Engineer",
+            "company": "ESDS Software Solutions",
+            "period": "Nov 2022 - March 2024",
+            "synopsis": [
+                "developed a comprehensive sentiment analysis portal from the ground up, focusing on customer satisfaction within the ticketing portal.",
+                "now crucial within the organization, used to quantify customer satisfaction and identify areas of improvement with regards to customer experience.",
+                "headed AI integration across diverse departments, identifying and implementing multi-model pipelines (natural language processing, computer vision and traditional machine learning solutions).",
+                "served multiple client facing AI-related requests, most prominent of which resulted in the School Education and Sports Department of Maharashtra winning a Guinness World Record, for which ESDS was the technical facilitator.",
+                "mentored individuals across domains and began honing my managerial/leadership aptitude."
+            ],
+            "links": [
+                "https://education.maharashtra.gov.in/sanch/users",
+                "https://thebitmage.com/post/guinness-dedup-anomaly/"
+            ]
+        },
+        {
+            "position": "Personal Sabbatical",
+            "period": "Aug 2022 - Nov 2022",
+            "synopsis": [
+                "deliberate decision to take a hiatus to address health concerns.",
+                "context: diagnosed with severe deficiencies in several micronutrients and minerals.",
+                "delved in several epistemological works to further my personal intellectual pursuits."
+            ]
+        },
+        {
+            "position": "Analyst",
+            "company": "Goldman Sachs",
+            "period": "July 2022 - Aug 2022",
+            "synopsis": [
+                "briefly worked as an Analyst at Goldman Sachs, gaining valuable exposure to the financial industry.",
+                "although a shorter engagement, had the opportunity to gain insights into the organization and its operations."
+            ]
+        },
+        {
+            "position": "Research Assistant",
+            "company": "IIT Hyderabad | KLA Tencor",
+            "period": "Aug 2021 - May 2022",
+            "synopsis": [
+                "Collaborated with Prof. Vineeth N.B. on research to develop a generic transferability score for inter-domain transfer-learning tasks.",
+                "Focused on computer vision applications within chip technologies.",
+                "Leveraged knowledge in Domain Adaptation (Transfer Learning) to address relevant challenges."
+            ],
+            "links": ["https://people.iith.ac.in/vineethnb/index.html"]
+        },
+        {
+            "position": "Summer Analyst",
+            "company": "Goldman Sachs",
+            "period": "June 2021 - July 2021",
+            "synopsis": [
+                "worked towards enhancing (unsupervised) clustering interpretability.",
+                "developed a versatile multidimensional hyperparameter grid search framework to automate model optimization and fine-tuning."
+            ]
+        },
+        {
+            "position": "CVPR 2021 Workshop paper | AUTONUE 2021 : Research Assistant",
+            "period": "2021",
+            "synopsis": [
+                "organized a domain adaptation challenge for semantic segmentation, contributing to a workshop paper.",
+                "Guided and mentored by Prof. Vineeth N.B. and Prof. C.V. Jawahar."
+            ],
+            "links": [
+                "http://cvit.iiit.ac.in/autonue2021/challenge/",
+                "https://people.iith.ac.in/vineethnb/index.html",
+                "https://faculty.iiit.ac.in/~jawahar/"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "Project": "Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection",
+            "Synopsis": "checkout blog link for more context",
+            "Principal Domains": ["Computer Vision"],
+            "links": "https://thebitmage.com/post/guinness-dedup-anomaly/"
+        },
+        {
+            "Project": "Sentiment Analysis for Support Tickets",
+            "Synopsis": "implemented a primal ETL, fine-tuned an LLM (unsupervised) over a stratified subset, inference jobs formed integral part of business analysis crons",
+            "Principal Domains": ["Natural Language Processing", "Data Engineering"]
+        },
+        {
+            "Project": "Quantum Error Correction Codes",
+            "Synopsis": "created a framework to test efficacy of qubit allocation strategies for noise-resistant quantum computation",
+            "Principal Domains": ["Quantum Computing"],
+            "links": "https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_8/Quantum_Computing/Quantum_Project.ipynb"
+        },
+        {
+            "Project": "Tic-Tac-Toe Reinforcement Learning",
+            "Synopsis": "tested out RL algorithms with random and heuristics based agents",
+            "Principal Domains": ["Reinforcement Learning"],
+            "links": "https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/AI3000/A2/RL%20A2%20Q5.ipynb"
+        },
+        {
+            "Project": "Option Pricing via Monte Carlo Simulations",
+            "Synopsis": "delved into monte carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)",
+            "Principal Domains": ["Stochastic Calculus"],
+            "links": "https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/MA4340/CS18BTECH11039_MA4340_PROJECT"
+        },
+        {
+            "Project": "Secure Multiparty Computation (for Deep Learning)",
+            "Synopsis": "Survey on how cryptographic techniques are used to maintain secrecy during multiparty computation (neural networks in this case)",
+            "Principal Domains": ["Cryptography"],
+            "links": "https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/CS6160/project/CS18BTECH11039_CS6160.pdf"
+        },
+        {
+            "Project": "WDGAF(We Do Give a Figure)",
+            "Synopsis": "Created plotting DSL using principals of compilers and published it to pip",
+            "Principal Domains": ["Compilers"],
+            "links": "https://github.com/rajp152k/Compilers-II"
+        },
+        {
+            "Project": "Relational Databases and Data Hygiene",
+            "Synopsis": "Executed complex relational database queries on the imdb movie database; implemented scraping scripts to fetch relevant data",
+            "Principal Domains": ["Relational Databases"],
+            "links": "https://github.com/rajp152k/coursework_IITH/tree/master/SEM_6/DBMSII"
+        },
+        {
+            "Project": "Optimizing scheduling algorithms",
+            "Synopsis": "researched into tweaks to optimize the scheduling algorithms BOCC, BTO, MVTO",
+            "Principal Domains": ["Distributed Computing"],
+            "links": "https://github.com/rajp152k/coursework_IITH/blob/master/SEM_7/CS5280/CS5280%20cs18btech11039%20cs21resch11011/project_report_cs18btech11039_cs21resch11011.pdf"
+        },
+        {
+            "Project": "Musical Chairs: inter-process coms",
+            "Synopsis": "Simulating a game of musical chairs using modern concurrency constructs from C++11 onwards",
+            "Principal Domains": ["Concurrency"],
+            "links": "https://github.com/rajp152k/musical_chairs"
+        },
+        {
+            "Project": "Chat Room App",
+            "Synopsis": "created a command line chat room app using principles of socket programming",
+            "Principal Domains": ["Computer Networks"],
+            "links": "https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_5/Computer-Networks-I/socket%20programming/Computer-Networks"
+        },
+        {
+            "Project": "Custom Deep Learning Framework",
+            "Synopsis": "created a deep learning library from scratch (axioms being high school math )",
+            "Principal Domains": ["Software Engineering"],
+            "links": "https://github.com/rajp152k/cust_dl_lib"
+        },
+        {
+            "Project": "Calculator",
+            "Synopsis": "wrote C to simulate the finite state machine on an ATmega16U2 (Arduino), designed and soldered the circuit (buttons, display, and the ATMega) on a veroboard, functional with add,mul,sub,div",
+            "Principal Domains": ["Electronics"]
+        },
+        {
+            "Project": "3D-printed pin ball machine",
+            "Synopsis": "designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon) into a functional pin ball setup",
+            "Principal Domains": ["Computer Aided Design"]
+        }
+    ],
+    "miscellaneous": {
+        "teaching_assistance": [
+            {
+                "professor": {
+                    "name": "Prof. Vineeth N.B.",
+                    "url": "https://people.iith.ac.in/vineethnb/index.html"
+                },
+                "course": "CS5590 : Foundations of Machine Learning"
+            },
+            {
+                "professor": {
+                    "name": "Prof Srijith P.K.",
+                    "url": "https://sites.google.com/site/pksrijith/home"
+                },
+                "course": "AI1100 : Introduction to Artificial Intelligence"
+            }
+        ],
+        "FitSoc": {
+            "Title": "FitSoc",
+            "URL": "https://instagram.com/fitsoc_iith",
+            "Years": "2021-2022",
+            "Descriptions": [
+                "Established a fitness community dedicated to supporting college students in balancing their fitness and academic pursuits through a hybrid athleticism approach.",
+                "Organically bootstrapped and grew the community, currently comprising over 200 active members."
+            ]
+        },
+        "Epoch": {
+            "Title": "Epoch (The ML club of IIT Hyderabad)",
+            "URL": "https://github.com/IITH-Epoch",
+            "Year": "2019",
+            "Roles": [
+                "Conducted the [inaugural session](https://github.com/IITH-Epoch/Session-1-2019-10-03) of the club.",
+                "The session centered on exploratory data analysis utilizing key tools and libraries, including Pandas, NumPy, SciPy and matplotlib."
+            ]
+        },
+        "National Service Scheme": {
+            "Descriptions": [
+                "Participated in several cleanliness and plantation drives during my time at IIT-Hyderabad.",
+                "Created several social awareness posters regarding various societal issues."
+            ]
+        }
+    },
+    "education": {
+        "B.Tech": {
+            "institution": "Indian Institute of Technology Hyderabad",
+            "duration": "2018-2022",
+            "details": {
+                "All India Rank (JEE Advance 2018)": 658,
+                "majors": [
+                    {
+                        "field": "Computer Science and Engineering",
+                        "score": 9.26,
+                        "scale": 10,
+                        "years": "2018-2022"
+                    }
+                ],
+                "minors": [
+                    {
+                        "field": "Artificial Intelligence",
+                        "score": 9.50,
+                        "scale": 10,
+                        "years": "2020-2022"
+                    }
+                ]
+            }
+        }
+    },
+    "technical_repertoire": {
+        "languages": {
+            "primary": ["Golang", "Python"],
+            "lisps_and_schemes": ["Common-Lisp", "E-lisp", "Hy", "Racket"],
+            "non_trivial_experience": ["C", "C++", "Prolog", "Eiffel", "Vimscript"],
+            "trivial_experience": ["Haskell", "Rust", "Lua", "Java", "Javascript"],
+            "incumbent": ["mojo"]
+        },
+        "tools_and_frameworks": {
+            "dev": {
+                "cli": ["regex", "sed", "awk", "grep", "parallel"],
+                "text_editing": ["Emacs", "Vi"],
+                "markup": ["markdown", "latex", "org files"],
+                "visualization": ["mermaid.js", "PlantUML"],
+                "testing": ["Selenium"]
+            },
+            "ops": {
+                "cloud_compute": ["AWS","Azure", "GCP","Paperspace"],
+                "version_control": ["git", "git-lfs","github","gitlab","magit"],
+                "containerization": ["docker"],
+                "orchestration": ["kubernetes"],
+                "virtualization": ["qemu", "KVM", "virtual box"],
+                "ci_cd": ["Github Actions", "Gitlab CI", "Jenkins"]
+            },
+            "databases": {
+                "relational": ["PostGres", "SQLite","MySQL"],
+                "nosql": ["MongoDB", "Redis"],
+                "graph": ["Neo4j"],
+                "multi_model": ["SurrealDB"]
+            },
+            "computer_science": {
+                "compilers": ["Lark", "yacc", "lex"],
+                "quantum_computing": ["Qiskit"]
+            },
+            "ai": {
+                "llms": ["LangChain", "LangGraph"],
+                "dl": ["Pytorch", "spaCy", "nltk", "fastai", "hugging-face"],
+                "ml": ["Scikit-learn", "LightGBM", "XGBoost"],
+                "mlops": ["MLFlow"],
+                "monitoring": ["Visdom", "Tensorboard"],
+                "data_wrangling": ["Pandas", "Xarray"],
+                "scientific_computing": ["Numpy", "Scipy"],
+                "dashboards": ["Streamlit", "Gradio"],
+                "visualization": ["Matplotlib", "Seaborn"],
+                "convex_optimization": ["CVXPy"]
+            },
+            "web": {
+                "ssgs": ["Hugo", "Jekyll", "Quarto", "Org-export"],
+                "hypermedia": ["HTML", "CSS", "HTMX"]
+            }
+        }
+    },
+    "further_musings": {
+        "description": "This was an index into my major deliverables that society might consider to be of relevance.",
+        "non-incentivised_works": {
+            "description": "There are several non-incentivised musings and works that I keep myself occupied with.",
+            "link": "https://buffer.thebitmage.com"
+        },
+        "generic_incentives": {
+            "description": "As for my generic incentives, you'd find a recursive-introspective terser composition to be a humble attempt towards expressing the same.",
+            "link": "https://thebitmage.com/i-know-not/"
+        }
+    }
+}
