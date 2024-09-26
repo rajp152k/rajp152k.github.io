@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Timer on (bit-mage)</title><link>https://rajp152k.github.io/tags/timer/</link><description>Recent content in Timer on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 26 Sep 2024 11:26:45 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/timer/index.xml" rel="self" type="application/rss+xml"/><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p>This is how I time my workblocks these days&amp;hellip;&lt;/p>
+&lt;h3 id="prerequisites">Prerequisites&lt;/h3>
+&lt;ul>
+&lt;li>ALSA : &lt;a href="https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture">https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="functions">Functions&lt;/h3>
+&lt;pre tabindex="0">&lt;code>single_beep() {
+( \speaker-test --frequency $1 --test sine )&amp;amp;
+pid=$!
+\sleep 0.${2}s
+\kill -9 $pid
+}
+
+morse(){
+for i in {1..3};
+do
+ single_beep 400 $1
+ \sleep 0.${2}s
+done
+}
+
+sos() {
+ morse 200 500
+ morse 400 500
+ morse 200 500
+}
+
+timer() {
+ \sleep $1 &amp;amp;&amp;amp; sos &amp;amp;
+}
+&lt;/code>&lt;/pre>&lt;h3 id="usage">Usage&lt;/h3>
+&lt;p>The above can be sourced in your shell rc.&lt;br>
+I store it in a &lt;code>.bash_funcs&lt;/code> where I have all my functions and source them in the end of my rc as &lt;code>source ~/.bash_funcs&lt;/code>.&lt;/p></description></item></channel></rss>
