@@ -6,6 +6,11 @@ tags: ["fedora","opensuse","tumbleweed","racket","lisp","rackos"]
 draft: false
 ---
 
+### EDIT : 0x22D2 : Fri Sep 27 03:51:30 PM IST 2024
+
+ - I'm thinking I'll proceed in common lisp
+ - do read on for amusement though
+
 As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I've used:
  - Open Suse TumbleWeed
  - Fedora, CentOs, Rocky
