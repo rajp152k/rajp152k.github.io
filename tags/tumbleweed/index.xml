@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tumbleweed on (bit-mage)</title><link>https://rajp152k.github.io/tags/tumbleweed/</link><description>Recent content in Tumbleweed on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 23 Sep 2024 06:48:09 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/tumbleweed/index.xml" rel="self" type="application/rss+xml"/><item><title>Building a Racket Based Operating System</title><link>https://rajp152k.github.io/post/tumbleweed/</link><pubDate>Mon, 23 Sep 2024 06:48:09 +0530</pubDate><guid>https://rajp152k.github.io/post/tumbleweed/</guid><description>&lt;p>As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I&amp;rsquo;ve used:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tumbleweed on (bit-mage)</title><link>https://rajp152k.github.io/tags/tumbleweed/</link><description>Recent content in Tumbleweed on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 23 Sep 2024 06:48:09 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/tumbleweed/index.xml" rel="self" type="application/rss+xml"/><item><title>Building a Racket Based Operating System</title><link>https://rajp152k.github.io/post/tumbleweed/</link><pubDate>Mon, 23 Sep 2024 06:48:09 +0530</pubDate><guid>https://rajp152k.github.io/post/tumbleweed/</guid><description>&lt;h3 id="edit--0x22d2--fri-sep-27-035130-pm-ist-2024">EDIT : 0x22D2 : Fri Sep 27 03:51:30 PM IST 2024&lt;/h3>
+&lt;ul>
+&lt;li>I&amp;rsquo;m thinking I&amp;rsquo;ll proceed in common lisp&lt;/li>
+&lt;li>do read on for amusement though&lt;/li>
+&lt;/ul>
+&lt;p>As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I&amp;rsquo;ve used:&lt;/p>
 &lt;ul>
 &lt;li>Open Suse TumbleWeed&lt;/li>
 &lt;li>Fedora, CentOs, Rocky&lt;/li>
@@ -6,5 +11,4 @@
 &lt;li>Arch&lt;/li>
 &lt;li>Windows XP,Vista,7,10,11&lt;/li>
 &lt;/ul>
-&lt;p>I recently moved away from Fedora 40 to Tumbleweed (I deleted some core python libraries that are essential for yum and dnf (I know, I&amp;rsquo;m an idiot))&amp;hellip;&lt;/p>
-&lt;p>TumbleWeed has btrfs snapshots enabled by default and that convinced me to jump ship.&lt;/p></description></item></channel></rss>
+&lt;p>I recently moved away from Fedora 40 to Tumbleweed (I deleted some core python libraries that are essential for yum and dnf (I know, I&amp;rsquo;m an idiot))&amp;hellip;&lt;/p></description></item></channel></rss>
