@@ -355,8 +355,8 @@ There are several non-incentivised musings and works that I keep myself occupied
 `,content:`This is how I time my workblocks these days&hellip;
 Prerequisites ALSA : https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture Functions single_beep() { ( \\speaker-test --frequency $1 --test sine )&amp; pid=$! \\sleep 0.\${2}s \\kill -9 $pid } morse(){ for i in {1..3}; do single_beep 400 $1 \\sleep 0.\${2}s done } sos() { morse 200 500 morse 400 500 morse 200 500 } timer() { \\sleep $1 &amp;&amp; sos &amp; } Usage The above can be sourced in your shell rc.
 I store it in a .bash_funcs where I have all my functions and source them in the end of my rc as source ~/.bash_funcs.
-timer &lt;seconds to sleep before the alarm&gt; Known Bugs If you happen interrupt (C-c) a single_beep when it is in the sleeping stage, the sine test will not be killed and continue to ring.
-In such a case ps aux | grep speaker-test | awk '{print $2}' | xargs kill -9 would save your soul.
+timer &lt;seconds to sleep before the alarm&gt; Known Bugs If you happen to interrupt (C-c) a single_beep when it is in the sleeping stage, the sine test will not be killed and continue to ring.
+In such a case ps aux | grep sleep | grep -v grep | awk '{print $2}' | xargs kill -9 would save your soul.
 PS: I would recommend you to let it ring.
 `,url:"https://rajp152k.github.io/post/cli-alarms/"},"https://rajp152k.github.io/post/":{title:"Posts",tags:[],meta:`<article class="list__item post">
 	
