@@ -54,8 +54,8 @@ timer <seconds to sleep before the alarm>
 
 ### Known Bugs
 
-If you happen interrupt (`C-c`) a single_beep when it is in the sleeping stage, the sine test will not be killed and continue to ring.  
-In such a case `ps aux | grep speaker-test | awk  '{print $2}' | xargs kill -9 `  would save your soul.
+If you happen to interrupt (`C-c`) a single_beep when it is in the sleeping stage, the sine test will not be killed and continue to ring.  
+In such a case `ps aux | grep sleep | grep -v grep | awk  '{print $2}' | xargs kill -9 `  would save your soul.
 
 PS: I would recommend you to let it ring.  
 
