@@ -185,16 +185,16 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 		- Quantum Computing      : Qiskit
 
 	 - AI
-       - LLMs                   : LangChain, LangGraph
-		- DL                     : Pytorch, spaCy, nltk, fastai, hugging-face
-		- ML                     : Scikit-learn, LightGBM, XGBoost
-		- MLOps                  : MLFlow
-		- Monitoring             : Visdom, Tensorboard
-		- Data Wrangling         : Pandas, Xarray
-		- Scientific Computing   : Numpy, Scipy
-		- Dashboards             : Streamlit, Gradio
-		- Visualization          : Matplotlib, Seaborn
-		- Convex Optimization    : CVXPy
+        - LLMs                   : LangChain, LangGraph
+        - DL                     : Pytorch, spaCy, nltk, fastai, hugging-face
+        - ML                     : Scikit-learn, LightGBM, XGBoost
+        - MLOps                  : MLFlow
+        - Monitoring             : Visdom, Tensorboard
+        - Data Wrangling         : Pandas, Xarray
+        - Scientific Computing   : Numpy, Scipy
+        - Dashboards             : Streamlit, Gradio
+        - Visualization          : Matplotlib, Seaborn
+        - Convex Optimization    : CVXPy
 
 	 - Web
 		- SSGs                   : Hugo, Jekyll, Quarto, Org-export
