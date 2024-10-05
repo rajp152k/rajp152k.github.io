@@ -257,9 +257,9 @@
             "ops": {
                 "cloud_compute": ["AWS","Azure", "GCP","Paperspace"],
                 "version_control": ["git", "git-lfs","github","gitlab","magit"],
-                "containerization": ["docker"],
-                "orchestration": ["kubernetes"],
-                "virtualization": ["qemu", "KVM", "virtual box"],
+                "containerization": ["docker","podman"],
+                "kubernetes": ["kubeadm","microk8s","minikube"],
+                "virtualization": ["qemu", "KVM", "virtual box","virsh"],
                 "ci_cd": ["Github Actions", "Gitlab CI", "Jenkins"]
             },
             "databases": {
