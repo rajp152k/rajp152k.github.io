@@ -169,7 +169,7 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 	 - Ops
 		- Cloud Compute          : AWS , Paperspace, GCP
 		- Version Control        : git, git-lfs
-		- Containerization       : docker
+		- Containerization       : docker, podman
 		- Orchestration          : kubernetes
 		- Virtualization         : qemu, KVM, virtual box
 		- CI/CD                  : Github Actions, Gitlab CI, Jenkins
