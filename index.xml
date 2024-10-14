@@ -541,14 +541,14 @@ someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t
 &lt;/code>&lt;/pre>&lt;p>&lt;a href="https://github.com/danielmiessler/fabric">Fabric&lt;/a> is great if you have it handy:&lt;/p>
 &lt;pre tabindex="0">&lt;code>curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern create_summary 
 &lt;/code>&lt;/pre>&lt;hr>
-&lt;h5 id="as-of-16th-sept-2024">&lt;em>As of 16th Sept 2024&lt;/em>&lt;/h5>
-&lt;h3 id="raj-patil--rajthebitmagecom">Raj Patil | &lt;a href="mailto:raj@thebitmage.com">raj@thebitmage.com&lt;/a>&lt;/h3>
+&lt;h5 id="as-of-14th-oct-2024">&lt;em>As of 14th Oct 2024&lt;/em>&lt;/h5>
+&lt;h3 id="raj-patil--rajthebitmagecom--aiops-devsecops-engineer">Raj Patil | &lt;a href="mailto:raj@thebitmage.com">raj@thebitmage.com&lt;/a> | AIOps, DevSecOps, Engineer.&lt;/h3>
 &lt;h2 id="experience">Experience&lt;/h2>
 &lt;h3 id="principal-engineer-esds-software-solutions">Principal Engineer: ESDS Software Solutions&lt;/h3>
 &lt;h6 id="march-2024---present">&lt;em>March 2024 - Present&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>leading research and development directed towards bettering product offerings and operations in a cloud native context.&lt;/li>
-&lt;li>overseeing an interdisciplinary lab that operates across domains (AI, IOT, Cyber-Security, and counting (Domain Agnostic Engineering)).&lt;/li>
+&lt;li>researching, developing applications of AI and ML targeted towards IT Operations: AIOps.&lt;/li>
+&lt;li>overseeing an interdisciplinary research lab that operates across domains: AI, IOT, Cyber-Security, and more.&lt;/li>
 &lt;/ul>
 &lt;h3 id="ai-engineer-esds-software-solutions">AI Engineer: ESDS Software Solutions&lt;/h3>
 &lt;h6 id="nov-2022---march-2024">&lt;em>Nov 2022 - March 2024&lt;/em>&lt;/h6>
