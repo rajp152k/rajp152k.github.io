@@ -26,7 +26,7 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 
 ##### *As of 14th Oct 2024*
 
-### Raj Patil | raj@thebitmage.com | AIOps, DevSecOps, Engineer.
+### Raj Patil | raj@thebitmage.com | AIOps
 
 ## Experience
 
