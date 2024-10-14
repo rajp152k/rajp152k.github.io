@@ -24,17 +24,17 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 
 ---
 
-##### *As of 16th Sept 2024*
+##### *As of 14th Oct 2024*
 
-### Raj Patil | raj@thebitmage.com
+### Raj Patil | raj@thebitmage.com | AIOps, DevSecOps, Engineer.
 
 ## Experience
 
 ###  Principal Engineer: ESDS Software Solutions
 ###### *March 2024 - Present*
 
- - leading research and development directed towards bettering product offerings and operations in a cloud native context.
- - overseeing an interdisciplinary lab that operates across domains (AI, IOT, Cyber-Security, and counting (Domain Agnostic Engineering)).
+ - researching, developing applications of AI and ML targeted towards IT Operations: AIOps.
+ - overseeing an interdisciplinary research lab that operates across domains: AI, IOT, Cyber-Security, and more.
 
 ### AI Engineer: ESDS Software Solutions
 ###### *Nov 2022 - March 2024*
@@ -45,7 +45,6 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
  - served multiple client facing AI-related requests, most promiment of which resulted in the [School Education and Sports Department of Maharashtra](https://education.maharashtra.gov.in/sanch/users) winning a [Guinness World Record](https://thebitmage.com/post/guinness-dedup-anomaly/), for
    which ESDS was the technical facilitator. 
  - Mentored individuals across domains and began honing my managerial/leadership aptitude.
-
 
 ### Personal Sabbatical
 ###### *Aug 2022 - Nov 2022*

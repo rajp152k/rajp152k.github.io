@@ -1,16 +1,16 @@
 {
-    "name":"Raj Patil",
-    "last_updated":"Thu Sep 19 09:36:51 AM IST 2024",
-    "meta_data":{
-        "email":"raj@thebitmage.com",
+    "name": "Raj Patil",
+    "last_updated": "Tue Oct 8 09:36:40 AM IST 2024",
+    "meta_data": {
+        "email": "raj@thebitmage.com",
         "website": "https://thebitmage.com",
         "linkedin": "https://www.linkedin.com/in/raj-p-48586b113/",
-        "youtube":"https://www.youtube.com/@The-Bit-Mage",
-        "github":"https://github.com/rajp152k",
-        "goodreads":"https://goodreads.com/rajp152k",
-        "twitter":"https://twitter.com/@rajpatil152k"
+        "youtube": "https://www.youtube.com/@The-Bit-Mage",
+        "github": "https://github.com/rajp152k",
+        "goodreads": "https://goodreads.com/rajp152k",
+        "twitter": "https://twitter.com/@rajpatil152k"
     },
-    "experience":[
+    "experience": [
         {
             "position": "Principal Engineer",
             "company": "ESDS Software Solutions",
@@ -63,7 +63,9 @@
                 "Focused on computer vision applications within chip technologies.",
                 "Leveraged knowledge in Domain Adaptation (Transfer Learning) to address relevant challenges."
             ],
-            "links": ["https://people.iith.ac.in/vineethnb/index.html"]
+            "links": [
+                "https://people.iith.ac.in/vineethnb/index.html"
+            ]
         },
         {
             "position": "Summer Analyst",
@@ -92,83 +94,112 @@
         {
             "Project": "Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection",
             "Synopsis": "checkout blog link for more context",
-            "Principal Domains": ["Computer Vision"],
+            "Principal Domains": [
+                "Computer Vision"
+            ],
             "links": "https://thebitmage.com/post/guinness-dedup-anomaly/"
         },
         {
             "Project": "Sentiment Analysis for Support Tickets",
             "Synopsis": "implemented a primal ETL, fine-tuned an LLM (unsupervised) over a stratified subset, inference jobs formed integral part of business analysis crons",
-            "Principal Domains": ["Natural Language Processing", "Data Engineering"]
+            "Principal Domains": [
+                "Natural Language Processing",
+                "Data Engineering"
+            ]
         },
         {
             "Project": "Quantum Error Correction Codes",
             "Synopsis": "created a framework to test efficacy of qubit allocation strategies for noise-resistant quantum computation",
-            "Principal Domains": ["Quantum Computing"],
+            "Principal Domains": [
+                "Quantum Computing"
+            ],
             "links": "https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_8/Quantum_Computing/Quantum_Project.ipynb"
         },
         {
             "Project": "Tic-Tac-Toe Reinforcement Learning",
             "Synopsis": "tested out RL algorithms with random and heuristics based agents",
-            "Principal Domains": ["Reinforcement Learning"],
+            "Principal Domains": [
+                "Reinforcement Learning"
+            ],
             "links": "https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/AI3000/A2/RL%20A2%20Q5.ipynb"
         },
         {
             "Project": "Option Pricing via Monte Carlo Simulations",
             "Synopsis": "delved into monte carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)",
-            "Principal Domains": ["Stochastic Calculus"],
+            "Principal Domains": [
+                "Stochastic Calculus"
+            ],
             "links": "https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/MA4340/CS18BTECH11039_MA4340_PROJECT"
         },
         {
             "Project": "Secure Multiparty Computation (for Deep Learning)",
             "Synopsis": "Survey on how cryptographic techniques are used to maintain secrecy during multiparty computation (neural networks in this case)",
-            "Principal Domains": ["Cryptography"],
+            "Principal Domains": [
+                "Cryptography"
+            ],
             "links": "https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/CS6160/project/CS18BTECH11039_CS6160.pdf"
         },
         {
             "Project": "WDGAF(We Do Give a Figure)",
             "Synopsis": "Created plotting DSL using principals of compilers and published it to pip",
-            "Principal Domains": ["Compilers"],
+            "Principal Domains": [
+                "Compilers"
+            ],
             "links": "https://github.com/rajp152k/Compilers-II"
         },
         {
             "Project": "Relational Databases and Data Hygiene",
             "Synopsis": "Executed complex relational database queries on the imdb movie database; implemented scraping scripts to fetch relevant data",
-            "Principal Domains": ["Relational Databases"],
+            "Principal Domains": [
+                "Relational Databases"
+            ],
             "links": "https://github.com/rajp152k/coursework_IITH/tree/master/SEM_6/DBMSII"
         },
         {
             "Project": "Optimizing scheduling algorithms",
             "Synopsis": "researched into tweaks to optimize the scheduling algorithms BOCC, BTO, MVTO",
-            "Principal Domains": ["Distributed Computing"],
+            "Principal Domains": [
+                "Distributed Computing"
+            ],
             "links": "https://github.com/rajp152k/coursework_IITH/blob/master/SEM_7/CS5280/CS5280%20cs18btech11039%20cs21resch11011/project_report_cs18btech11039_cs21resch11011.pdf"
         },
         {
             "Project": "Musical Chairs: inter-process coms",
             "Synopsis": "Simulating a game of musical chairs using modern concurrency constructs from C++11 onwards",
-            "Principal Domains": ["Concurrency"],
+            "Principal Domains": [
+                "Concurrency"
+            ],
             "links": "https://github.com/rajp152k/musical_chairs"
         },
         {
             "Project": "Chat Room App",
             "Synopsis": "created a command line chat room app using principles of socket programming",
-            "Principal Domains": ["Computer Networks"],
+            "Principal Domains": [
+                "Computer Networks"
+            ],
             "links": "https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_5/Computer-Networks-I/socket%20programming/Computer-Networks"
         },
         {
             "Project": "Custom Deep Learning Framework",
             "Synopsis": "created a deep learning library from scratch (axioms being high school math )",
-            "Principal Domains": ["Software Engineering"],
+            "Principal Domains": [
+                "Software Engineering"
+            ],
             "links": "https://github.com/rajp152k/cust_dl_lib"
         },
         {
             "Project": "Calculator",
             "Synopsis": "wrote C to simulate the finite state machine on an ATmega16U2 (Arduino), designed and soldered the circuit (buttons, display, and the ATMega) on a veroboard, functional with add,mul,sub,div",
-            "Principal Domains": ["Electronics"]
+            "Principal Domains": [
+                "Electronics"
+            ]
         },
         {
             "Project": "3D-printed pin ball machine",
             "Synopsis": "designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon) into a functional pin ball setup",
-            "Principal Domains": ["Computer Aided Design"]
+            "Principal Domains": [
+                "Computer Aided Design"
+            ]
         }
     ],
     "miscellaneous": {
@@ -219,7 +250,7 @@
             "duration": "2018-2022",
             "details": {
                 "All India Rank (JEE Advance 2018)": 658,
-                "majors": [
+                "major": [
                     {
                         "field": "Computer Science and Engineering",
                         "score": 9.26,
@@ -227,7 +258,7 @@
                         "years": "2018-2022"
                     }
                 ],
-                "minors": [
+                "minor": [
                     {
                         "field": "Artificial Intelligence",
                         "score": 9.50,
@@ -240,53 +271,186 @@
     },
     "technical_repertoire": {
         "languages": {
-            "primary": ["Golang", "Python"],
-            "lisps_and_schemes": ["Common-Lisp", "E-lisp", "Hy", "Racket"],
-            "non_trivial_experience": ["C", "C++", "Prolog", "Eiffel", "Vimscript"],
-            "trivial_experience": ["Haskell", "Rust", "Lua", "Java", "Javascript"],
-            "incumbent": ["mojo"]
+            "professional": [
+                "Golang",
+                "Python"
+            ],
+            "lisps_and_schemes": [
+                "Common-Lisp",
+                "E-lisp",
+
+                "Racket"
+            ],
+            "non_trivial_xp": [
+                "C",
+                "C++",
+                "Prolog",
+                "Eiffel",
+                "Vimscript"
+            ],
+            "trivial_xp": [
+                "Haskell",
+                "Rust",
+                "Lua",
+                "Java",
+                "Javascript"
+            ],
+            "incumbent": [
+                "mojo"
+            ]
         },
         "tools_and_frameworks": {
             "dev": {
-                "cli": ["regex", "sed", "awk", "grep", "parallel"],
-                "text_editing": ["Emacs", "Vi"],
-                "markup": ["markdown", "latex", "org files"],
-                "visualization": ["mermaid.js", "PlantUML"],
-                "testing": ["Selenium"]
+                "text_proc_cli": [
+                    "regex",
+                    "sed",
+                    "awk",
+                    "grep"
+                ],
+                "efficiency_cli": [
+                    "parallel"
+                ],
+                "text_editing": [
+                    "Emacs",
+                    "Vi"
+                ],
+                "terminal_emulators": [
+                    "alacritty",
+                    "konsole",
+                    "foot"
+                ],
+                "markup": [
+                    "markdown",
+                    "latex",
+                    "org mode"
+                ],
+                "visualization": [
+                    "mermaid.js",
+                    "PlantUML"
+                ],
+                "testing": [
+                    "Selenium"
+                ]
             },
             "ops": {
-                "cloud_compute": ["AWS","Azure", "GCP","Paperspace"],
-                "version_control": ["git", "git-lfs","github","gitlab","magit"],
-                "containerization": ["docker","podman"],
-                "kubernetes": ["kubeadm","microk8s","minikube"],
-                "virtualization": ["qemu", "KVM", "virtual box","virsh"],
-                "ci_cd": ["Github Actions", "Gitlab CI", "Jenkins"]
+                "cloud_compute": [
+                    "AWS",
+                    "Azure",
+                    "GCP",
+                    "Paperspace"
+                ],
+                "version_control": [
+                    "git",
+                    "git-lfs",
+                    "github",
+                    "gitlab",
+                    "glab_cli",
+                    "magit"
+                ],
+                "containerization": [
+                    "docker",
+                    "podman"
+                ],
+                "kubernetes": [
+                    "kubeadm",
+                    "microk8s",
+                    "minikube"
+                ],
+                "virtualization": [
+                    "qemu",
+                    "KVM",
+                    "virtual box",
+                    "virsh"
+                ],
+                "ci_cd": [
+                    "Github Actions",
+                    "Gitlab CI",
+                    "Jenkins"
+                ]
             },
             "databases": {
-                "relational": ["PostGres", "SQLite","MySQL"],
-                "nosql": ["MongoDB", "Redis"],
-                "graph": ["Neo4j"],
-                "multi_model": ["SurrealDB"]
+                "relational": [
+                    "PostGres",
+                    "SQLite",
+                    "MySQL"
+                ],
+                "nosql": [
+                    "MongoDB",
+                    "Redis"
+                ],
+                "graph": [
+                    "Neo4j"
+                ],
+                "multi_model": [
+                    "SurrealDB"
+                ]
             },
             "computer_science": {
-                "compilers": ["Lark", "yacc", "lex"],
-                "quantum_computing": ["Qiskit"]
+                "compilers": [
+                    "Lark",
+                    "yacc",
+                    "lex"
+                ],
+                "quantum_computing": [
+                    "Qiskit"
+                ]
             },
             "ai": {
-                "llms": ["LangChain", "LangGraph"],
-                "dl": ["Pytorch", "spaCy", "nltk", "fastai", "hugging-face"],
-                "ml": ["Scikit-learn", "LightGBM", "XGBoost"],
-                "mlops": ["MLFlow"],
-                "monitoring": ["Visdom", "Tensorboard"],
-                "data_wrangling": ["Pandas", "Xarray"],
-                "scientific_computing": ["Numpy", "Scipy"],
-                "dashboards": ["Streamlit", "Gradio"],
-                "visualization": ["Matplotlib", "Seaborn"],
-                "convex_optimization": ["CVXPy"]
+                "llms": [
+                    "LangChain",
+                    "LangGraph"
+                ],
+                "dl": [
+                    "Pytorch",
+                    "spaCy",
+                    "nltk",
+                    "fastai",
+                    "hugging-face"
+                ],
+                "ml": [
+                    "Scikit-learn",
+                    "LightGBM",
+                    "XGBoost"
+                ],
+                "mlops": [
+                    "MLFlow"
+                ],
+                "monitoring": [
+                    "Visdom",
+                    "Tensorboard"
+                ],
+                "data_wrangling": [
+                    "Pandas",
+                    "Xarray"
+                ],
+                "scientific_computing": [
+                    "Numpy",
+                    "Scipy"
+                ],
+                "dashboards": [
+                    "Streamlit",
+                    "Gradio"
+                ],
+                "visualization": [
+                    "Matplotlib",
+                    "Seaborn"
+                ],
+                "convex_optimization": [
+                    "CVXPy"
+                ]
             },
             "web": {
-                "ssgs": ["Hugo", "Jekyll", "Quarto", "Org-export"],
-                "hypermedia": ["HTML", "CSS", "HTMX"]
+                "ssgs": [
+                    "Hugo",
+                    "Jekyll",
+                    "Quarto",
+                    "Org-export"
+                ],
+                "hypermedia": [
+                    "HTML",
+                    "CSS",
+                    "HTMX"
+                ]
             }
         }
     },
