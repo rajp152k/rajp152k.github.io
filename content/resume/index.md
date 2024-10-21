@@ -26,14 +26,14 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 
 ##### *As of 14th Oct 2024*
 
-### Raj Patil | raj@thebitmage.com | AIOps
+### Raj Patil | raj@thebitmage.com
 
 ## Experience
 
 ###  Principal Engineer: ESDS Software Solutions
 ###### *March 2024 - Present*
 
- - researching, developing applications of AI and ML targeted towards IT Operations: AIOps.
+ - principally researching and developing applications of AI and ML targeted towards IT Operations - AIOps.
  - overseeing an interdisciplinary research lab that operates across domains: AI, IOT, Cyber-Security, and more.
 
 ### AI Engineer: ESDS Software Solutions
