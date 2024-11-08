@@ -536,7 +536,7 @@ injecting some more chaos into my life.&lt;/p></description></item><item><title>
 someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t be improved&amp;rdquo;..&lt;/p></description></item><item><title>Work Corpus</title><link>https://rajp152k.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/resume/</guid><description>&lt;hr>
 &lt;h4 id="resumejson">&lt;strong>RESUME.JSON&lt;/strong>&lt;/h4>
 &lt;p>For the programmatically enabled out there, here&amp;rsquo;s a &lt;a href="https://rajp152k.github.io/resume/resume.json">js object&lt;/a> for you to parse my work into tools of your choice.&lt;/p>
-&lt;p>&lt;a href="https://jquery.com/">JQuery&lt;/a> is a decent start:&lt;/p>
+&lt;p>&lt;a href="https://jqlang.github.io/jq/">jq&lt;/a> is a decent start:&lt;/p>
 &lt;pre tabindex="0">&lt;code>curl -s https://thebitmage.com/resume/resume.json | jq -C
 &lt;/code>&lt;/pre>&lt;p>&lt;a href="https://github.com/danielmiessler/fabric">Fabric&lt;/a> is great if you have it handy:&lt;/p>
 &lt;pre tabindex="0">&lt;code>curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern create_summary 
@@ -717,60 +717,6 @@ issues&lt;/li>
 
 - Major (2018-2022) : Computer Science and Engineering : 9.26/10
 - Minor (2020-2022) : Artificial Intelligence : 9.50/10
-&lt;/code>&lt;/pre>
-&lt;hr>
-&lt;h2 id="technical-repertoire-eternal-wip">Technical Repertoire (Eternal WIP)&lt;/h2>
-&lt;h6 id="this-is-an-index-into-languages-utilities-frameworks-and-libraries-that-i-have-invested-effort-into-in-research-and-projects-both-personal-and-professional">&lt;em>This is an index into languages, utilities, frameworks and libraries that I have invested effort into, in research and projects, both personal and professional&lt;/em>&lt;/h6>
-&lt;pre>&lt;code>Languages:
-
- - Primary : Golang, Python
- - Lisps &amp;amp; Schemes : Common-Lisp, E-lisp, Hy, Racket
- - Non-Trivial Exp : C, C++, Prolog, Eiffel, Vimscript
- - Trivial Exp : Haskell, Rust, Lua, Java, Javascript
- - Incumbent : mojo
-
-Tools and Frameworks:
-
- - Dev
-	- CLI : regex, sed, awk, grep, parallel
-	- Text-Editing : Emacs, Vi
-	- Markup : markdown, latex, org files
-	- Visualization : mermaid.js, PlantUML
-	- Testing : Selenium
-
- - Ops
-	- Cloud Compute : AWS , Paperspace, GCP
-	- Version Control : git, git-lfs
-	- Containerization : docker, podman
-	- Orchestration : kubernetes
-	- Virtualization : qemu, KVM, virtual box
-	- CI/CD : Github Actions, Gitlab CI, Jenkins
-
- - Databases
-	- Relational : PostGres, SQLite
-	- NoSQL : MongoDB, Redis
-	- Graph : Neo4j
-	- Multi-model : SurrealDB
- 
- - Computer Science
-	- Compilers : Lark, yacc, lex
-	- Quantum Computing : Qiskit
-
- - AI
- - LLMs : LangChain, LangGraph
- - DL : Pytorch, spaCy, nltk, fastai, hugging-face
- - ML : Scikit-learn, LightGBM, XGBoost
- - MLOps : MLFlow
- - Monitoring : Visdom, Tensorboard
- - Data Wrangling : Pandas, Xarray
- - Scientific Computing : Numpy, Scipy
- - Dashboards : Streamlit, Gradio
- - Visualization : Matplotlib, Seaborn
- - Convex Optimization : CVXPy
-
- - Web
-	- SSGs : Hugo, Jekyll, Quarto, Org-export
-	- Hypermedia : HTML, CSS, HTMX
 &lt;/code>&lt;/pre>
 &lt;hr>
 &lt;h3 id="further-musings">Further Musings&lt;/h3>
