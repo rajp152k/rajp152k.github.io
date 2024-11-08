@@ -10,7 +10,7 @@ sidebar: left
 
 For the programmatically enabled out there, here's a [js object](/resume/resume.json) for you to parse my work into tools of your choice.  
 
-[JQuery](https://jquery.com/) is a decent start:  
+[jq](https://jqlang.github.io/jq/) is a decent start:  
 
 ```
 curl -s https://thebitmage.com/resume/resume.json | jq -C
@@ -142,64 +142,6 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 	- Minor (2020-2022) : Artificial Intelligence           : 9.50/10
  
 ---
-
-## Technical Repertoire (Eternal WIP)
-
-###### *This is an index into languages, utilities, frameworks and libraries that I have invested effort into, in research and projects, both personal and professional*
-
-	
-	Languages:
-
-	    - Primary                    : Golang, Python
-	    - Lisps & Schemes            : Common-Lisp, E-lisp, Hy, Racket
-	    - Non-Trivial Exp            : C, C++,  Prolog, Eiffel, Vimscript
-	    - Trivial Exp                : Haskell, Rust, Lua, Java, Javascript
-        - Incumbent                  : mojo
-	
-	Tools and Frameworks:
-
-     - Dev
-		- CLI                    : regex, sed, awk, grep, parallel
-		- Text-Editing           : Emacs, Vi
-		- Markup                 : markdown, latex, org files
-		- Visualization          : mermaid.js, PlantUML
-		- Testing                : Selenium
-    
-	 - Ops
-		- Cloud Compute          : AWS , Paperspace, GCP
-		- Version Control        : git, git-lfs
-		- Containerization       : docker, podman
-		- Orchestration          : kubernetes
-		- Virtualization         : qemu, KVM, virtual box
-		- CI/CD                  : Github Actions, Gitlab CI, Jenkins
-
-	 - Databases
-		- Relational             : PostGres, SQLite
-		- NoSQL                  : MongoDB, Redis
-		- Graph                  : Neo4j
-		- Multi-model            : SurrealDB
-        
-     - Computer Science
-		- Compilers              : Lark, yacc, lex
-		- Quantum Computing      : Qiskit
-
-	 - AI
-        - LLMs                   : LangChain, LangGraph
-        - DL                     : Pytorch, spaCy, nltk, fastai, hugging-face
-        - ML                     : Scikit-learn, LightGBM, XGBoost
-        - MLOps                  : MLFlow
-        - Monitoring             : Visdom, Tensorboard
-        - Data Wrangling         : Pandas, Xarray
-        - Scientific Computing   : Numpy, Scipy
-        - Dashboards             : Streamlit, Gradio
-        - Visualization          : Matplotlib, Seaborn
-        - Convex Optimization    : CVXPy
-
-	 - Web
-		- SSGs                   : Hugo, Jekyll, Quarto, Org-export
-		- Hypermedia             : HTML, CSS, HTMX
----
-
 
 ### Further Musings
 
