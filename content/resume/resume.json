@@ -278,7 +278,6 @@
             "lisps_and_schemes": [
                 "Common-Lisp",
                 "E-lisp",
-
                 "Racket"
             ],
             "non_trivial_xp": [
@@ -297,6 +296,19 @@
             ],
             "incumbent": [
                 "mojo"
+            ]
+        },
+        "misc-skills": {
+            "llms": [
+                "RAG",
+                "Prompting",
+                "Fine-Tuning",
+                "RLHF",
+                "LLM Agents",
+                "LLM Deployment",
+                "Vector Databases",
+                "Eliminating Hallucination",
+                "Benchmarking Performance"
             ]
         },
         "tools_and_frameworks": {
@@ -398,7 +410,7 @@
             "ai": {
                 "llms": [
                     "LangChain",
-                    "LangGraph"
+                    "LlamaIndex"
                 ],
                 "dl": [
                     "Pytorch",
