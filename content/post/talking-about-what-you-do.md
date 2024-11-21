@@ -2,7 +2,7 @@
 title: "Talking About What You Do"
 date: 2024-05-14T19:30:36+05:30
 categories: ["Writing"]
-tags: ["microessay","update","boredom","rest","calibrate","history","past","purpose-less"]
+tags: ["microessays","update","boredom","rest","calibrate","history","past","purpose-less"]
 ---
 
 I haven't been writing quite as much as I'd like to lately and have

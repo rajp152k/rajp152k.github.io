@@ -2,7 +2,7 @@
 title: "Personalized Science"
 date: 2024-11-18T11:14:23+05:30
 categories: ["Research"]
-tags: ["research","microessay","delusional","science","evil","world","humanity"]
+tags: ["research","microessays","delusional","science","evil","world","humanity"]
 ---
 
 I like studying and exploring new things in the spirit of science. The science that happens today in institutions is more than just science and involves a lot of ancillary efforts directed towards the formalized production of research.  
