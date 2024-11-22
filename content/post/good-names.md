@@ -3,7 +3,6 @@ title: "on Naming your Projects"
 date: 2024-11-22T14:45:09+05:30
 categories: ["Polymathy"]
 tags: ["project","microessays"]
-draft: true
 ---
 
 As an aspiring polymath, you'll soon quickly out of books and courses if you really wish to explore the intersection of multiple domains based on your current intellectual requirements.  
