@@ -7,7 +7,7 @@ tags: ["microessays"]
 
 One cannot rely on objective standardized tests to gauge how good one is at the act of being.  
 
-They're good to indicate a specific aspect of what you wish to affirm you're competence in, but have exhibit numerous fallacies when you're trying to optimize a probabilistic, unstructured, instinct based behaviour over longer spans of durations, ranging from weeks to decades.  
+They're good to indicate a specific aspect of where you wish to affirm your competence in, but have exhibit numerous fallacies when you're trying to optimize a probabilistic, unstructured, instinct based behaviour over longer spans of durations, ranging from weeks to decades.  
 
 Such a gauge is probably only exhaustively captured in how the complexities of life unroll around you based on your behaviours.  
 
