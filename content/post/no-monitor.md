@@ -7,7 +7,7 @@ tags: ["microessays","monitor","laptop"]
 
 I recently have moved on from using monitors and am working (professional and writing endeavours) only via a 13 inch laptop. It is definitely a different workflow than what I'm used to.  
 
-It has been aroud 10 days I've been doing this and here are some observations:  
+It has been around 10 days I've been doing this and here are some observations:  
  - I'm able to focus better as I'm forced to enlarge my context maintaining capabilities; for I don't have the luxury to look back and forth with just my eye movements.    
  - I can work from anywhere. I change places and posture every 1.5 hours, 5 times a day.  
  - Given I move between a couple of meets during the day, I don't have to adjust to differing window management mannerisms as I only ever work on the same screen now.  
