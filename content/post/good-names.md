@@ -21,7 +21,7 @@ Do not use a vanilla name, it gets boring very quickly.
 
 Atleast during the incubation, choosing something that enlivens your intellect, has been a successful variable (not completely independent as, if I'm naming it, it must be confounding with my intent to follow through diligently) in dictating my will to work on it.  
 
-For instance, imagine creating an agentic AI that mentors humans in their journey towards learning to manipulate matter and energy in an immersive simulation, who would rather choose:  
+For instance, imagine creating an agentic AI that mentors humans in their journey towards learning to manipulate matter and energy in an immersive simulation, who would you rather choose:  
  - Morpheus, or ..  
  - Agent Smith? 
  
