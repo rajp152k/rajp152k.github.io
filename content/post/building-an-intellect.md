@@ -18,7 +18,7 @@ What's even more challenging is maintaining that feeling and staying in the gold
  - not too relaxed  
  - just right.., "resonant" rings just fine.  
  
-I'd like to think of it as an calm, but aggressive awareness of whatever you're participating in, in the moment. It allows the flexibility of accomodating your creatives sways, while pruning natural entropy's eventual effects.  
+I'd like to think of it as a calm, but aggressive awareness of whatever you're participating in, in the moment. It allows the flexibility of accomodating your creatives sways, while pruning natural entropy's eventual effects.  
 
 This state of being that I describe, I've gained and lost it a bunch of times over the past 5 years. I don't quite know the route to it. All I can ascertain about it is that, you don't experience it without investing some serious efforts (although finally, it all flows and feels effortless) but you do lose it if serious externalities consume too much of your time.  
 
