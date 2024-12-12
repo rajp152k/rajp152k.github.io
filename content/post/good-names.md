@@ -5,7 +5,7 @@ categories: ["Polymathy"]
 tags: ["project","microessays"]
 ---
 
-As an aspiring polymath, you'll soon quickly out of books and courses if you really wish to explore the intersection of multiple domains based on your current intellectual requirements.  
+As an aspiring polymath, you'll soon run out of books and courses if you really wish to explore the intersection of multiple domains based on your current intellectual requirements.  
 
 That is a great problem to have and the solution is to transition into the mindset of chunking your learnings into projects rather than subjects.  
 
