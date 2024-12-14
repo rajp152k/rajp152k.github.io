@@ -621,7 +621,7 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;tr>
  &lt;td>Sentinment Analysis for Support Tickets&lt;/td>
- &lt;td>implemented a primal ETL, fine-tuned an LLM (unsupervised) over a stratified subset, inference jobs formed integral part of business analysis crons&lt;/td>
+ &lt;td>implemented a primal ETL, fine-tuned a Language Model (weakly-supervised) over a (psuedo-labelled) stratified subset, inference jobs formed integral part of business analysis crons&lt;/td>
  &lt;td>Natural Language Processing, Data Engineering&lt;/td>
  &lt;/tr>
  &lt;tr>
