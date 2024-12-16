@@ -103,6 +103,7 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 
 ## Extracurricular
 
+
 ### Teaching Assistance
 
   - [Prof. Vineeth
@@ -131,6 +132,15 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
    issues
 
 ---
+
+## Conferences Attended
+
+This should serve as a quick index into my networking interests during phases of my career
+
+| Conf                                                               | When               | Where         | My Focus and Incentives             |
+|--------------------------------------------------------------------|--------------------|---------------|-------------------------------------|
+| [NVIDIA AI Summit](https://www.nvidia.com/en-in/events/ai-summit/) | October 24-25 2024 | Mumbai, India | Successful LLMs in Prod, Networking |
+
 
 ## Education 
 
