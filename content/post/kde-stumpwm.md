@@ -3,6 +3,7 @@ title: "KDE + StumPWM"
 date: 2024-12-21T17:55:32+05:30
 categories: ["Tooling"]
 tags: ["kde","lisp","window-manager","arch","debian","qubes","fedora","sway","i3wm","stumpwm","FreeBSD"]
+draft: true
 ---
 
 I can claim my fair share of distro-hopping and window-manager shopping.
