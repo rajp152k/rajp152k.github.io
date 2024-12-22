@@ -1,24 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>(bit-mage)</title><link>https://rajp152k.github.io/</link><description>Recent content on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 21 Dec 2024 17:55:32 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>KDE + StumPWM</title><link>https://rajp152k.github.io/post/kde-stumpwm/</link><pubDate>Sat, 21 Dec 2024 17:55:32 +0530</pubDate><guid>https://rajp152k.github.io/post/kde-stumpwm/</guid><description>&lt;p>I can claim my fair share of distro-hopping and window-manager shopping.&lt;/p>
-&lt;hr>
-&lt;h3 id="daily-driver">Daily Driver&lt;/h3>
-&lt;pre>&lt;code>- arch + i3 (xorg)
- - broke that in 2 weeks
-- qubes + ...
- - failed installation with kernel panics
-- fedora + sway (wayland)
- - broke that in 6 months
-- opensuse + kde + krohnkite (xorg)
- - broke it thrice
- - rolled back with snapper
-&lt;/code>&lt;/pre>
-&lt;h3 id="home-lab">Home Lab&lt;/h3>
-&lt;pre>&lt;code>- debian + i3 (xorg)
-- debian + KDE (wayland)
-- freeBSD + ttys 
- - still messing around
-&lt;/code>&lt;/pre>
-&lt;hr>
-&lt;p>KDE is great and all but I miss pure window manager experience. &lt;a href="https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-snapper.html">Snapper&lt;/a> is a life saver so I&amp;rsquo;m continuing with TumbleWeed.&lt;/p></description></item><item><title>I've given up on Monitors</title><link>https://rajp152k.github.io/post/no-monitor/</link><pubDate>Mon, 25 Nov 2024 20:58:12 +0530</pubDate><guid>https://rajp152k.github.io/post/no-monitor/</guid><description>&lt;p>I recently have moved on from using monitors and am working (professional and writing endeavours) only via a 13 inch laptop. It is definitely a different workflow than what I&amp;rsquo;m used to.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>(bit-mage)</title><link>https://rajp152k.github.io/</link><description>Recent content on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 25 Nov 2024 20:58:12 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>I've given up on Monitors</title><link>https://rajp152k.github.io/post/no-monitor/</link><pubDate>Mon, 25 Nov 2024 20:58:12 +0530</pubDate><guid>https://rajp152k.github.io/post/no-monitor/</guid><description>&lt;p>I recently have moved on from using monitors and am working (professional and writing endeavours) only via a 13 inch laptop. It is definitely a different workflow than what I&amp;rsquo;m used to.&lt;/p>
 &lt;p>It has been around 10 days I&amp;rsquo;ve been doing this and here are some observations:&lt;/p>
 &lt;ul>
 &lt;li>I&amp;rsquo;m able to focus better as I&amp;rsquo;m forced to enlarge my context maintaining capabilities; for I don&amp;rsquo;t have the luxury to look back and forth with just my eye movements.&lt;/li>
