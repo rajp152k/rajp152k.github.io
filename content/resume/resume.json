@@ -242,6 +242,9 @@
            "Participated in several cleanliness and plantation drives during my time at IIT-Hyderabad.",
            "Created several social awareness posters regarding various societal issues."
             ]
+        },
+        "HomeLab":{
+            "description": "I frequently mess around apart from my professional pursuits. This block indexes major components of my setup"
         }
     },
     "education": {
