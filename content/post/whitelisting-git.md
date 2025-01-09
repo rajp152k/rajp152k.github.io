@@ -1,9 +1,8 @@
 ---
 title: "Contextual .gitignores"
 date: 2025-01-09T09:01:27+05:30
-categories: [""]
-tags: [""]
-draft: true
+categories: ["Tooling"]
+tags: ["git","stackoverflow","context","desire"]
 ---
 
 A while ago, I had a strong desire to partition some of my professional work logs into mutually exclusive git repositories: Blacklists and Whitelists flipped in the one another.  
