@@ -1,12 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on (bit-mage)</title><link>https://rajp152k.github.io/tags/git/</link><description>Recent content in Git on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2025 09:01:27 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p>A while ago, I had a strong desire to partition some of my professional work logs into mutually exclusive git repositories: Blacklists and Whitelists flipped in the one another.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on (bit-mage)</title><link>https://rajp152k.github.io/tags/git/</link><description>Recent content in Git on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2025 09:01:27 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p>A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p>
 &lt;p>I was aware that the &lt;code>.gitignore&lt;/code> could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p>
-&lt;p>checkout [^1] &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git">this stackoverflow question&lt;/a>&lt;/p>
+&lt;p>checkout &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git">this stackoverflow question&lt;/a>&lt;/p>
 &lt;p>So if the first &lt;code>.gitignore&lt;/code> looks like&lt;/p>
 &lt;pre tabindex="0">&lt;code>asdf-pattern 
 more-asdf
 some-absolute-asdf
 dir-asdf/
-&lt;/code>&lt;/pre>&lt;p>the second one would look like:&lt;/p></description></item><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p>This is an auxilliary post collating resources for the recent video I
+&lt;/code>&lt;/pre>&lt;p>the second one would look like:&lt;/p>
+&lt;pre tabindex="0">&lt;code># blacklist everything first
+*
+
+# unignore the directories to capture nested existences
+!*/
+
+# then your usual unignores
+!asdf-pattern
+!more-asdf
+!some-absoluete-asdf
+!dir-asdf/
+&lt;/code>&lt;/pre>&lt;p>What I wonder now is if git would allow for a branch-contextual .gitignore (named with certain protocols) so that I don&amp;rsquo;t have to maintain two different repositories altogether.&lt;/p></description></item><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p>This is an auxilliary post collating resources for the recent video I
 posted &amp;hellip;&lt;/p>
 
  &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
