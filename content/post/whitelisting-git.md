@@ -5,12 +5,11 @@ categories: ["Tooling"]
 tags: ["git","stackoverflow","context","desire"]
 ---
 
-A while ago, I had a strong desire to partition some of my professional work logs into mutually exclusive git repositories: Blacklists and Whitelists flipped in the one another.  
+A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.  
 
 I was aware that the `.gitignore` could ignore stuff; today I found out that I can also whitelist stuff via that.  
 
 checkout [^1] [this stackoverflow question]( https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git)  
-
 
 So if the first `.gitignore` looks like  
 
@@ -42,3 +41,5 @@ What I wonder now is if git would allow for a branch-contextual .gitignore (name
 Maybe I should consider creating a pull request sometime down the line...  
 
 The generic desire I take away from this is to have contextual gitignores.  
+
+[^1]: The most voted answer was also built upon another stack overflow question: I like collaborative-augmentative intelligence.
