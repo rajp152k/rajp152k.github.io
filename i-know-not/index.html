@@ -86,6 +86,7 @@ that..,
 <a class="widget-taglist__link widget__link btn" href=/tags/config/ title=Config>Config (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/conquest/ title=Conquest>Conquest (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/content/ title=Content>Content (3)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/context/ title=Context>Context (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/control/ title=Control>Control (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/creation/ title=Creation>Creation (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/creativity/ title=Creativity>Creativity (1)</a>
@@ -94,6 +95,7 @@ that..,
 <a class="widget-taglist__link widget__link btn" href=/tags/deduplication/ title=Deduplication>Deduplication (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/delusional/ title=Delusional>Delusional (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/design/ title=Design>Design (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/desire/ title=Desire>Desire (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/dis-assembler/ title=Dis-Assembler>Dis-Assembler (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/documentation/ title=Documentation>Documentation (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/doom/ title=Doom>Doom (2)</a>
@@ -120,7 +122,7 @@ that..,
 <a class="widget-taglist__link widget__link btn" href=/tags/frequency/ title=Frequency>Frequency (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/gamble/ title=Gamble>Gamble (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/general.el/ title=General.el>General.el (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/git/ title=Git>Git (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/git/ title=Git>Git (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/github-actions/ title=Github-Actions>Github-Actions (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/gnu/ title=GNU>GNU (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/go/ title=Go>Go (1)</a>
@@ -261,6 +263,7 @@ that..,
 <a class="widget-taglist__link widget__link btn" href=/tags/species/ title=Species>Species (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/speed-reading/ title=Speed-Reading>Speed-Reading (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/spotify/ title=Spotify>Spotify (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/stackoverflow/ title=Stackoverflow>Stackoverflow (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/star-wars/ title=Star-Wars>Star-Wars (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/straight.el/ title=Straight.el>Straight.el (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/style/ title=Style>Style (1)</a>
@@ -300,7 +303,30 @@ that..,
 <a class="widget-taglist__link widget__link btn" href=/tags/writer/ title=Writer>Writer (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/writing/ title=Writing>Writing (9)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/yaml/ title=Yaml>Yaml (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/youtube/ title=Youtube>Youtube (6)</a></div></div></aside></div><script>window.store={"https://rajp152k.github.io/post/":{title:"Posts",tags:[],meta:`<article class="list__item post">
+<a class="widget-taglist__link widget__link btn" href=/tags/youtube/ title=Youtube>Youtube (6)</a></div></div></aside></div><script>window.store={"https://rajp152k.github.io/post/whitelisting-git/":{title:"Contextual .gitignores",tags:["git","stackoverflow","context","desire"],meta:`<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/whitelisting-git/" rel="bookmark">
+			Contextual .gitignores
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-01-09T09:01:27&#43;05:30">January 09, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tooling/" rel="category">Tooling</a>
+	</span>
+</div></div>
+	</header>
+</article>
+`,content:`A while ago, I had a strong desire to partition some of my professional work logs into mutually exclusive git repositories: Blacklists and Whitelists flipped in the one another.
+I was aware that the .gitignore could ignore stuff; today I found out that I can also whitelist stuff via that.
+checkout [^1] this stackoverflow question
+So if the first .gitignore looks like
+asdf-pattern more-asdf some-absolute-asdf dir-asdf/ the second one would look like:
+# blacklist everything first * # unignore the directories to capture nested existences !*/ # then your usual unignores !asdf-pattern !more-asdf !some-absoluete-asdf !dir-asdf/ What I wonder now is if git would allow for a branch-contextual .gitignore (named with certain protocols) so that I don&rsquo;t have to maintain two different repositories altogether.
+Maybe I should consider creating a pull request sometime down the line&hellip;
+The generic desire I take away from this is to have contextual gitignores.
+`,url:"https://rajp152k.github.io/post/whitelisting-git/"},"https://rajp152k.github.io/post/":{title:"Posts",tags:[],meta:`<article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">

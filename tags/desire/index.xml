@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Desire on (bit-mage)</title><link>https://rajp152k.github.io/tags/desire/</link><description>Recent content in Desire on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2025 09:01:27 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/desire/index.xml" rel="self" type="application/rss+xml"/><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p>A while ago, I had a strong desire to partition some of my professional work logs into mutually exclusive git repositories: Blacklists and Whitelists flipped in the one another.&lt;/p>
+&lt;p>I was aware that the &lt;code>.gitignore&lt;/code> could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p>
+&lt;p>checkout [^1] &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git">this stackoverflow question&lt;/a>&lt;/p>
+&lt;p>So if the first &lt;code>.gitignore&lt;/code> looks like&lt;/p>
+&lt;pre tabindex="0">&lt;code>asdf-pattern 
+more-asdf
+some-absolute-asdf
+dir-asdf/
+&lt;/code>&lt;/pre>&lt;p>the second one would look like:&lt;/p></description></item></channel></rss>
