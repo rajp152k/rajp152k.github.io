@@ -17,4 +17,4 @@ It has been around 10 days I've been doing this and here are some observations:
  - I've started preaching about the spartan-ish effects of working only via your laptop  
  - I spend more time on screen, on my bed: consequently I'm writing more.  
  
-I definitely do miss reading papers and books on a larger vertically oriented screen but I'm going to stick to this for a while.
+I definitely do miss reading papers and books on a larger vertically oriented screen but I'm going to stick to this for a while.  
