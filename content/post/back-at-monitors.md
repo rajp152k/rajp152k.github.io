@@ -11,3 +11,5 @@ I guess I need to cycle my dosage so that I don't end up being too dependent.
 
 I'm enjoying it though.  
 
+> EDIT: as of <2025-01-27 17:50:30 IST>, I've given up again
+
