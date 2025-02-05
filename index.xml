@@ -570,20 +570,28 @@ temporally impractical&amp;hellip;&lt;/p>
 injecting some more chaos into my life.&lt;/p></description></item><item><title>Open Source</title><link>https://rajp152k.github.io/open-source/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/open-source/</guid><description>&lt;p>A &lt;a href="https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747">reverse chronological index&lt;/a> of any contribution whatsover; Cause
 someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t be improved&amp;rdquo;..&lt;/p></description></item><item><title>Work Corpus</title><link>https://rajp152k.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/resume/</guid><description>&lt;hr>
 &lt;h4 id="resumejson">&lt;strong>RESUME.JSON&lt;/strong>&lt;/h4>
-&lt;p>For the programmatically enabled out there, here&amp;rsquo;s a &lt;a href="https://rajp152k.github.io/resume/resume.json">js object&lt;/a> for you to parse my work into tools of your choice.&lt;/p>
+&lt;p>For the programmatically able out there, here&amp;rsquo;s a &lt;a href="https://rajp152k.github.io/resume/resume.json">js object&lt;/a> for you to parse my work into tools of your choice.&lt;/p>
 &lt;p>&lt;a href="https://jqlang.github.io/jq/">jq&lt;/a> is a decent start:&lt;/p>
 &lt;pre tabindex="0">&lt;code>curl -s https://thebitmage.com/resume/resume.json | jq -C
 &lt;/code>&lt;/pre>&lt;p>&lt;a href="https://github.com/danielmiessler/fabric">Fabric&lt;/a> is great if you have it handy:&lt;/p>
 &lt;pre tabindex="0">&lt;code>curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern create_summary 
 &lt;/code>&lt;/pre>&lt;hr>
-&lt;h5 id="as-of-14th-oct-2024">&lt;em>As of 14th Oct 2024&lt;/em>&lt;/h5>
+&lt;h5 id="as-of-5th-feb-2025">&lt;em>As of 5th Feb 2025&lt;/em>&lt;/h5>
 &lt;h3 id="raj-patil--rajthebitmagecom">Raj Patil | &lt;a href="mailto:raj@thebitmage.com">raj@thebitmage.com&lt;/a>&lt;/h3>
 &lt;h2 id="experience">Experience&lt;/h2>
 &lt;h3 id="principal-engineer-esds-software-solutions">Principal Engineer: ESDS Software Solutions&lt;/h3>
 &lt;h6 id="march-2024---present">&lt;em>March 2024 - Present&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>principally researching and developing applications of AI and ML targeted towards IT Operations - AIOps.&lt;/li>
-&lt;li>overseeing an interdisciplinary research lab that operates across domains: AI, IOT, Cyber-Security, and more.&lt;/li>
+&lt;li>principally researching, designing and developing cloud computing interfaces across the broader horizontal of Compute, Networking and Storage, along the full vertical of Data Center Orchestration (Hypervisors, DC Hardware &amp;hellip; ) to Cloud Native (CNCF) operationalization (K8S, OKD, OpenShift &amp;hellip;)&lt;/li>
+&lt;li>overseeing an interdisciplinary research lab that operates across domains: AI, IOT, Cyber-Security, Data Center Operations and further miscellaneous knowledge bases&lt;/li>
+&lt;li>we explore whatever is necessary to craft solutions for problems spanning the vast cloud computing space&lt;/li>
+&lt;li>I am also invested in fostering a healthy engineering culture by/via:
+&lt;ul>
+&lt;li>hosting collaborative internal conferences and talks geared towards keeping the team up to date with SOTA&lt;/li>
+&lt;li>acting as an intermediary for inter-organization (universities, research-labs ..) engineering collaboration: the most prominent one being with C-DAC (Centre for Development of Advanced Computing) India&lt;/li>
+&lt;li>evangelizing &lt;a href="https://youtu.be/KsRCiL8ebmE">emacs&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;h3 id="ai-engineer-esds-software-solutions">AI Engineer: ESDS Software Solutions&lt;/h3>
 &lt;h6 id="nov-2022---march-2024">&lt;em>Nov 2022 - March 2024&lt;/em>&lt;/h6>
@@ -644,6 +652,26 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
+ &lt;tr>
+ &lt;td>LLM Augmented Continuous Integration with Self Hosted Giltab&lt;/td>
+ &lt;td>Kubernetes to manage varied workers along with SOTA development and integration practices (Linting, Static and Dynamic Application Security Testing (SonarQube) along with LLM augmented security analysis (Ollama, Langchain, LlamaIndex))&lt;/td>
+ &lt;td>NLP, Dev(LLM:ML)Ops, CyberSecurity&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Cloud Native GPU Operationalization&lt;/td>
+ &lt;td>Horizontally scaled self hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs to the engineering and support teams on heterogenous GPU clusters (from T4s to H100s)&lt;/td>
+ &lt;td>(LLM:ML)Ops&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Cloud Native Web Application Firewall&lt;/td>
+ &lt;td>Scalabely productized(Kubernetes Horizontal Pod AutoScaler &amp;amp; Event Driven AutoScaler (KEDA : CNCF Grad)) and benchmarked(Apache bench) Coraza(an OWASP compliant go WAF library)&lt;/td>
+ &lt;td>CyberSecurity&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Storage Virual Machine DR Replication Monitoring&lt;/td>
+ &lt;td>Designed, developed and operationalized a golang microservice cluster to manage real time analytics streaming to be integrated into the existing observability stack (NetApp ONTAP, RabbitMQ, InfluxDB, Prometheus)&lt;/td>
+ &lt;td>Real Time Observability&lt;/td>
+ &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection&lt;/a>&lt;/td>
  &lt;td>checkout blog link for more context&lt;/td>
