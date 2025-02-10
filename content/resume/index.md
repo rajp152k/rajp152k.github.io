@@ -80,7 +80,8 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 
 ### CVPR 2021 Workshop paper | AUTONUE 2021 : Research Assistant
 	
- - organized a [domain adaptation challenge](http://cvit.iiit.ac.in/autonue2021/challenge/) for semantic segmentation, contributing to a workshop paper.
+ - helped organize a [domain adaptation challenge](http://cvit.iiit.ac.in/autonue2021/challenge/) for semantic segmentation, contributing to a workshop paper.
+   - baselines posted here : https://github.com/rajp152k/AUTONUE-III-Baselines
  - Guided and mentored by [Prof. Vineeth N.B.](https://people.iith.ac.in/vineethnb/index.html) and [Prof. C.V. Jawahar](https://faculty.iiit.ac.in/~jawahar/)
 
 ---
