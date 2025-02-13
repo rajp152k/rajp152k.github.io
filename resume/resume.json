@@ -16,12 +16,14 @@
            "company": "ESDS Software Solutions",
            "period": "March 2024 - Present",
            "synopsis": [
-           "leading research and development directed towards bettering product offerings and operations in a cloud native context.",
-           "overseeing an interdisciplinary lab that operates across domains (AI, IOT, Cyber-Security, and counting (Domain Agnostic Engineering))."
+                "principally researching, designing and developing cloud computing interfaces across the broader horizontal of Compute, Networking and Storage, along the full vertical of Data Center Orchestration (Hypervisors, DC Hardware ... ) to Cloud Native (CNCF) operationalization (K8S, OKD, OpenShift ...)",
+                "overseeing an interdisciplinary research lab that operates across domains: AI, IOT, Cyber-Security, Data Center Operations and further miscellaneous knowledge bases",
+                "we explore whatever is necessary to craft solutions for problems spanning the vast cloud computing space",
+                "I am also invested in fostering a healthy engineering culture by/via: hosting collaborative internal conferences and talks geared towards keeping the team up to date with SOTA ; acting as an intermediary for inter-organization (universities, research-labs ..) engineering collaboration: the most prominent one being with C-DAC (Centre for Development of Advanced Computing) India;  evangelizing [emacs](https://youtu.be/KsRCiL8ebmE)"
             ]
         },
         {
-           "position": "AI Engineer",
+           "position": "Software Engineer",
            "company": "ESDS Software Solutions",
            "period": "Nov 2022 - March 2024",
            "synopsis": [
@@ -91,6 +93,26 @@
         }
     ],
     "projects": [
+        {
+            "Project": "LLM Augmented Continuous Integration with Self Hosted Giltab",
+            "Synopsis": "Kubernetes to manage varied workers along with SOTA development and integration practices (Linting, Static and Dynamic Application Security Testing (SonarQube) along with LLM augmented security analysis (Ollama, Langchain, LlamaIndex))",
+            "Principal Domains": ["NLP", "Dev(LLM:ML)Ops", "CyberSecurity"]
+        },
+        {
+            "Project": "Cloud Native GPU Operationalization",
+            "Synopsis": "Horizontally scaled self hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs to the engineering and support teams on heterogenous GPU clusters (from T4s to H100s)",
+            "Principal Domains": ["(LLM:ML)Ops"]
+        },
+        {
+            "Project": "Cloud Native Web Application Firewall",
+            "Synopsis": "Scalabely productized(Kubernetes Horizontal Pod AutoScaler & Event Driven AutoScaler (KEDA : CNCF Grad)) and benchmarked(Apache bench) Coraza(an OWASP compliant go WAF library)",
+            "Principal Domains": ["CyberSecurity"]
+        },
+        {
+            "Project": "Storage Virual Machine DR Replication Monitoring",
+            "Synopsis": "Designed, developed and operationalized a golang microservice cluster to manage real time analytics streaming to be integrated into the existing observability stack (NetApp ONTAP, RabbitMQ, InfluxDB, Prometheus)",
+            "Principal Domains": ["Real Time Observability"]
+        },
         {
            "Project": "Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection",
            "Synopsis": "checkout blog link for more context",
@@ -275,7 +297,7 @@
     "technical_repertoire": {
         "languages": {
             "professional": [
-                "Golang",
+                "Go",
                 "Python"
             ],
             "lisps_and_schemes": [
@@ -299,26 +321,6 @@
             ],
             "incumbent": [
                 "mojo"
-            ]
-        },
-        "abstractions_dealt_with": {
-            "philosophies|dogmas|practices":[
-                "twelve_factor_applications",
-                "The Unix Philosophy"
-            ],
-            "llms": [
-                "RAG",
-                "Prompting",
-                "Fine-Tuning",
-                "RLHF",
-                "LLM Agents",
-                "LLM Practices for Production",
-                "Vector Databases",
-                "Debugging Hallucination",
-                "Benchmarking Performance"
-            ],
-            "networking":[
-                "Software Defined Networking"
             ]
         },
         "tools_and_frameworks": {
@@ -375,9 +377,10 @@
            "podman"
                 ],
                 "kubernetes": [
-           "kubeadm",
-           "microk8s",
-           "minikube"
+            "kubeadm",
+            "microk8s",
+            "minikube",
+            "kind"
                 ],
                 "virtualization": [
            "qemu",
