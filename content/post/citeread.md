@@ -25,5 +25,5 @@ I liked the idea of having a [PaperShelf](https://arpitbhayani.me/papershelf) fr
 
 I've been a regular goodreads user and would enjoy something like that for papers. Google a little and reddit threads yield [citeread](https://citeread.com): here's my [profile](https://citeread.com/users/67b183a15a18eae4d6084ee7) if you'd like to follow along on what I'm reading.  
 
-I'm starting out with the computer sciences but hope to read more wholistically over the span of my life.  
+I'm starting out with the computer sciences but hope to read more holistically over the span of my life.  
 
