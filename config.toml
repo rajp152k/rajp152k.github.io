@@ -44,7 +44,6 @@ theme = "custom"
   youtube = "@The-Bit-Mage"
   goodreads = "rajp152k"
   twitter = "@rajpatil152k"
-  citeread = "67b183a15a18eae4d6084ee7"
 
 [Params.style.vars]
   highlightColor = "#f7f9f9"
@@ -68,25 +67,31 @@ theme = "custom"
   url = '/now/'
   weight = -109
 [[menu.main]]
-  name = 'Ideation Buffer'
+  name = 'notes'
   pre = "<i class='fa fa-road'></i>"
   url = 'https://buffer.thebitmage.com'
   weight = -108
 [[menu.main]]
-  name = 'Progress'
+  name = 'vlogs'
   pre = "<i class='fa fa-road'></i>"
   url = '/dd0x/'
   weight = -105
 [[menu.main]]
- name = 'Work'
+ name = 'work'
  pre = "<i class='fa fa-road'></i>"
  url = '/resume/'
  weight = -102
 [[menu.main]]
   identifier = 'all posts'
-  name = 'all-posts'
+  name = 'blogs'
   pre = "<i class='fa fa-road'></i>"
   url = '/all-posts/'
+  weight = -104
+[[menu.main]]
+  identifier = 'papershelf'
+  name = 'papershelf'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/papershelf/'
   weight = -104
 #[[menu.main]]
 #  name = 'I know not..'
