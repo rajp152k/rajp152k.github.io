@@ -2,7 +2,6 @@ baseURL = 'https://rajp152k.github.io'
 languageCode = 'en-us'
 title = '(bit-mage)'
 theme = "custom"
-paginate = "16"
 
 [Author]
   name = "(bit-mage)"
