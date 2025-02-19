@@ -21,9 +21,9 @@ I've recently taken to building [an index](https://buffer.thebitmage.com/sitemap
 
 I'm missing out on tons of great sources of inspiration so I decided to have a micro-essay, here onwards, whenever I find one worth integrating as a regular practice.  
 
-I liked the idea of having a [PaperShelf](https://arpitbhayani.me/papershelf) from [Arpit's](https://arpitbhayani.me/papershelf) blog.  
+I liked the idea of having a [PaperShelf](https://arpitbhayani.me/papershelf) from [Arpit's](https://arpitbhayani.me/) blog.  
 
 I've been a regular goodreads user and would enjoy something like that for papers. Google a little and reddit threads yield [citeread](https://citeread.com): here's my [profile](https://citeread.com/users/67b183a15a18eae4d6084ee7) if you'd like to follow along on what I'm reading.  
 
-I'm starting out with the computer sciences but hope to read more wholistically over the span of my life.  
+I'm starting out with the computer sciences but hope to read more holistically over the span of my life.  
 
