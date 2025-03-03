@@ -34,7 +34,7 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 ###### *March 2024 - Present*
 
  - principally researching, designing and developing cloud computing interfaces across the broader horizontal of Compute, Networking and Storage, along the full vertical of Data Center Orchestration (Hypervisors, DC Hardware ... ) to Cloud Native (CNCF) operationalization (K8S, OKD, OpenShift ...)
- - overseeing an interdisciplinary research lab that operates across domains - AI, IOT, Cyber-Security, Data Center Operations and further miscellaneous knowledge bases : to further quality of their array of products, the most prominent one being [a Data Center Orchestrator](https://www.esds.co.in/enlight360)
+ - overseeing an interdisciplinary research lab that operates across domains - AI, IOT, Cyber-Security, Data Center Operations and further miscellaneous knowledge bases : towards furthering the quality of their array of products, the most prominent one being [a Data Center Orchestrator](https://www.esds.co.in/enlight360)
  - I am also invested in fostering a healthy engineering culture by/via: 
    - hosting collaborative internal conferences and talks geared towards keeping the team up to date with SOTA
    - acting as an intermediary for inter-organization (universities, research-labs ..) engineering collaboration: the most prominent one being with C-DAC (Centre for Development of Advanced Computing) India
