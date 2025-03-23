@@ -8,7 +8,46 @@
 <span class=menu__text>blogs</span></a></li><li class=menu__item><a class=menu__link href=/papershelf/><i class='fa fa-road'></i>
 <span class=menu__text>papershelf</span></a></li><li class=menu__item><a class=menu__link href=/resume/><i class='fa fa-road'></i>
 <span class=menu__text>work</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>Open Source</h1></header><div class="content post__content clearfix"><p>A <a href=https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747>reverse chronological index</a> of any contribution whatsover; Cause
-someone once quoted &ldquo;what can&rsquo;t be measured, can&rsquo;t be improved&rdquo;..</p></div></article></main></div></div><script>window.store={"https://rajp152k.github.io/post/fabric-gpt.el/":{title:"I wrote an Emacs Package",tags:["emacs","automation","fabric","llm","package","lisp","elisp","open-source","software","alacritty","tmux","eshell","tooling","cli","programming","microessays"],meta:`<article class="list__item post">
+someone once quoted &ldquo;what can&rsquo;t be measured, can&rsquo;t be improved&rdquo;..</p></div></article></main></div></div><script>window.store={"https://rajp152k.github.io/post/bells-and-whistles/":{title:"Bells & Whistles",tags:["microessays","compute","network","storage","abstraction","turing","lambda","RAM","lisp","orchestration","Unix","BSD","Linux","Plan9","distributed","infrastructure","electrons","waves","descartes","fallacy","superhero","suits","info","man","state","software","hardware","systems","thinking","recursion","abstraction"],meta:`<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/bells-and-whistles/" rel="bookmark">
+			Bells &amp; Whistles
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-23T14:18:07&#43;05:30">March 23, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tooling/" rel="category">Tooling</a>
+	</span>
+</div></div>
+	</header>
+</article>
+`,content:`I&rsquo;ve started spending some time per day without the usual modern software engineering tooling (LLMs, the Internet, etc) to explicitly maintain my cyber-deduction skills (in the context of Unix-based systems (BSDs, Linux, yet to explore Plan9), mostly because they power the majority of the global compute infrastructure).
+It&rsquo;s fun: init your journey with a man man (I&rsquo;m an info info guy myself) and be extremely skeptical of your usual modus operandi, ditching all assumptions and tumbling down the rabbit hole.
+Things really start picking up when you begin thinking about the neatly tucked away manipulation and conveyance of state, orchestrated by your operating system. I prefer breaking down any computing abstraction into interactions of three abstract systems rather than one of more theoretically foundational models (Turing machines (The RAM model) and Lambda Calculus (The Lisps) being the two I&rsquo;m aware of):
+Processing(core and facilitative) Persistence (varying temporal granularity) Communications/Interfaces (internal and exposed) I would recommend you do not accept that categorization (also seen in the wild, more explicitly realized as Compute, Storage and Networking) right away and instead work towards your own understanding by observing and messing around.
+This helped me understand hardware better and that each constituent (seemingly responsible for one1 specific task) of the parent abstraction can be further broken down into a combination of those three:
+CPUs employ registers, caches and need to facilitate inter-core task orchestration NICs need buffers, protocol encoders/decoders to handle coms SSDs orchestrate concurrent IO, detect and repair corruptions, collaborate redundancy This is just one class2 of personal insights I&rsquo;ve developed by deliberately giving up on the &ldquo;superhero suits&rdquo; that are easily available to the usual software engineer today. Going down the local hood of your own computer will also help you understand the global distributed infrastructure as a unit (thank abstractual recursion again) with ease.
+Eventually, I&rsquo;ve begun doing this intuitively for any &ldquo;novel&rdquo; computing abstraction that I encounter and have been grasping the crux faster than usual.
+I might even be little ambitious and claim that this will help you not fall for a descartes&rsquo; fallacy3 and claim that the boundaries that we draw between hardware and software are fairly fluid.
+I&rsquo;m trying to be familiar with the examples&#160;&#x21a9;&#xfe0e;
+I&rsquo;ve lately been tempted to apply parallels of this to organisms, organizations and the global network formed by their interactions as well but that is a highly experimental thought as of now. A more generic tooling (systems thinking) would be better suited but I like being capable of different tints to my shades based on the mood I&rsquo;m in.&#160;&#x21a9;&#xfe0e;
+https://en.wikipedia.org/wiki/Descartes'_Error&#160;&#x21a9;&#xfe0e;
+`,url:"https://rajp152k.github.io/post/bells-and-whistles/"},"https://rajp152k.github.io/post/":{title:"Posts",tags:[],meta:`<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/" rel="bookmark">
+			Posts
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-23T14:18:07&#43;05:30">March 23, 2025</time></div></div>
+	</header>
+</article>
+`,content:"",url:"https://rajp152k.github.io/post/"},"https://rajp152k.github.io/post/fabric-gpt.el/":{title:"I wrote an Emacs Package",tags:["emacs","automation","fabric","llm","package","lisp","elisp","open-source","software","alacritty","tmux","eshell","tooling","cli","programming","microessays"],meta:`<article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
@@ -34,20 +73,7 @@ It has made my life a little simpler.
 Check out my .dotfiles for further insights into my Emacs configuration.
 https://github.com/danielmiessler/fabric&#160;&#x21a9;&#xfe0e;
 https://github.com/karthink/gptel&#160;&#x21a9;&#xfe0e;
-`,url:"https://rajp152k.github.io/post/fabric-gpt.el/"},"https://rajp152k.github.io/post/":{title:"Posts",tags:[],meta:`<article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/post/" rel="bookmark">
-			Posts
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-03-16T19:10:48&#43;05:30">March 16, 2025</time></div></div>
-	</header>
-</article>
-`,content:"",url:"https://rajp152k.github.io/post/"},"https://rajp152k.github.io/post/paper-read-strat/":{title:"Skim, Devour, Feynmanize",tags:["papers","research","study","microessays","feynman"],meta:`<article class="list__item post">
+`,url:"https://rajp152k.github.io/post/fabric-gpt.el/"},"https://rajp152k.github.io/post/paper-read-strat/":{title:"Skim, Devour, Feynmanize",tags:["papers","research","study","microessays","feynman"],meta:`<article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
