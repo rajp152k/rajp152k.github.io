@@ -682,8 +682,8 @@ address relevant challenges.&lt;/li>
  &lt;td>NLP, Dev(LLM:ML)Ops, CyberSecurity&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>Cloud Native GPU Operationalization&lt;/td>
- &lt;td>Horizontally scaled self hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs to the engineering and support teams on heterogenous GPU clusters (from T4s to H100s)&lt;/td>
+ &lt;td>Cloud Native LLM inference servers on heterogenous compute infrastructure&lt;/td>
+ &lt;td>Horizontally scaled self hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs (vLLMs) to the engineering and support teams on heterogenous compute infrastructure (Nvidia(T4s &amp;amp; H100s), AMD (MI300Xs and MI300A), X86 and ARM)&lt;/td>
  &lt;td>(LLM:ML)Ops&lt;/td>
  &lt;/tr>
  &lt;tr>
