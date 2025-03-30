@@ -677,14 +677,19 @@ address relevant challenges.&lt;/li>
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td>LLM Augmented Continuous Integration with Self Hosted Giltab&lt;/td>
- &lt;td>Kubernetes to manage varied workers along with SOTA development and integration practices (Linting, Static and Dynamic Application Security Testing (SonarQube) along with LLM augmented security analysis (Ollama, Langchain, LlamaIndex))&lt;/td>
- &lt;td>NLP, Dev(LLM:ML)Ops, CyberSecurity&lt;/td>
+ &lt;td>&lt;a href="https://github.com/rajp152k/fabric-gpt.el">fabric-gpt.el&lt;/a>&lt;/td>
+ &lt;td>An &lt;a href="https://youtu.be/39OsH_OeWSA?si=xQLvotelXMECh9Lw">Emacs Package&lt;/a> to employ crowd sourced prompts into the an emacs llm-client intuitively&lt;/td>
+ &lt;td>Software Engineering&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Cloud Native LLM inference servers on heterogeneous compute infrastructure&lt;/td>
  &lt;td>Horizontally scaled self hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs (vLLMs) to the engineering and support teams on heterogeneous compute infrastructure (Nvidia(T4s &amp;amp; H100s), AMD (MI300Xs and MI300A), X86 and ARM)&lt;/td>
  &lt;td>(LLM:ML)Ops&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>LLM Augmented Continuous Integration with Self Hosted Giltab&lt;/td>
+ &lt;td>Kubernetes to manage varied workers along with SOTA development and integration practices (Linting, Static and Dynamic Application Security Testing (SonarQube) along with LLM augmented security analysis (Ollama, Langchain, LlamaIndex))&lt;/td>
+ &lt;td>NLP, Dev(LLM:ML)Ops, CyberSecurity&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Cloud Native Web Application Firewall&lt;/td>
