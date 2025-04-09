@@ -11,6 +11,6 @@ Not so much because you lack self control (that's the easy part and have that fi
 
 Denial backed by rationales like you're on a cut or that it doesn't fit your macros is not going to cut it.  
 
-Indian relatives can be *very* stubborn and what I've found works is just declaring that I'm diabetic: they don't force me it any further.  
+Indian relatives can be *very* stubborn and what I've found works is just declaring that I'm diabetic: they don't force me any further.  
 
 PS: I'm not diabetic  
