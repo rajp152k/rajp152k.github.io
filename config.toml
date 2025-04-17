@@ -82,12 +82,12 @@ theme = "custom"
  pre = "<i class='fa fa-road'></i>"
  url = '/resume/'
  weight = -102
-[[menu.main]]
-  identifier = 'all posts'
-  name = 'blogs'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/all-posts/'
-  weight = -104
+# [[menu.main]]
+#   identifier = 'all posts'
+#   name = 'blogs'
+#   pre = "<i class='fa fa-road'></i>"
+#   url = '/all-posts/'
+#   weight = -104
 [[menu.main]]
   identifier = 'papershelf'
   name = 'papershelf'
