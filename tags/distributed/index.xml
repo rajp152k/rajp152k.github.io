@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Distributed on (bit-mage)</title><link>https://rajp152k.github.io/tags/distributed/</link><description>Recent content in Distributed on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 24 Mar 2025 15:18:39 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/distributed/index.xml" rel="self" type="application/rss+xml"/><item><title>Blub in the Unix Philosophy</title><link>https://rajp152k.github.io/post/unixier-unix/</link><pubDate>Mon, 24 Mar 2025 15:18:39 +0530</pubDate><guid>https://rajp152k.github.io/post/unixier-unix/</guid><description>&lt;p>I&amp;rsquo;ve always maintained a philosophical appetite for the tooling that I use.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Distributed on (bit-mage)</title><link>https://rajp152k.github.io/tags/distributed/</link><description>Recent content in Distributed on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 17 Apr 2025 06:36:56 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/distributed/index.xml" rel="self" type="application/rss+xml"/><item><title>Jargony Outlines</title><link>https://rajp152k.github.io/post/phrasal-outlines/</link><pubDate>Thu, 17 Apr 2025 06:36:56 +0530</pubDate><guid>https://rajp152k.github.io/post/phrasal-outlines/</guid><description>&lt;h2 id="context">Context&lt;/h2>
+&lt;blockquote>
+&lt;p>been reading more papers&lt;br>
+notes by jargony outlines&lt;br>
+no unnecessary words&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>if can express&lt;br>
+few words&lt;br>
+you get it&lt;br>
+get it?&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>concise, practical&lt;br>
+flowy, comprehensible&lt;br>
+jargon is fun&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>in org-roam&lt;br>
+links when depth&lt;br>
+more speed&lt;br>
+good&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt="">&lt;/p>
+&lt;blockquote>
+&lt;p>all left&lt;br>
+tech haikus&lt;br>
+challenge&lt;br>
+someday&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>until then&lt;/p>&lt;/blockquote>
+&lt;h2 id="enjoy-instance-for-this">&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org">Enjoy instance&lt;/a> for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf">this&lt;/a>&lt;/h2></description></item><item><title>Blub in the Unix Philosophy</title><link>https://rajp152k.github.io/post/unixier-unix/</link><pubDate>Mon, 24 Mar 2025 15:18:39 +0530</pubDate><guid>https://rajp152k.github.io/post/unixier-unix/</guid><description>&lt;p>I&amp;rsquo;ve always maintained a philosophical appetite for the tooling that I use.&lt;/p>
 &lt;p>One of the core tenets of the Unix Philosophy&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is that everything is a file&amp;hellip;&lt;/p>
 &lt;p>Plan9&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> has caught my eye due to its more homogenous design than the usual unix you&amp;rsquo;re used to.&lt;/p>
 &lt;p>The footnoted-paper (~pre-mature book) is somewhat unhinged and doesn&amp;rsquo;t shy away from taking a jab at the Unix ecosystem and design.&lt;/p>

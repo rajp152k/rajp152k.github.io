@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Org on (bit-mage)</title><link>https://rajp152k.github.io/tags/org/</link><description>Recent content in Org on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 03 Apr 2025 01:11:43 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/org/index.xml" rel="self" type="application/rss+xml"/><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p>&lt;a href="https://github.com/rajp152k/nth-roam/tree/master">Nth Roam&lt;/a> : An Emacs package to efficiently manage multiple roam instances&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Org on (bit-mage)</title><link>https://rajp152k.github.io/tags/org/</link><description>Recent content in Org on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 17 Apr 2025 06:36:56 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/org/index.xml" rel="self" type="application/rss+xml"/><item><title>Jargony Outlines</title><link>https://rajp152k.github.io/post/phrasal-outlines/</link><pubDate>Thu, 17 Apr 2025 06:36:56 +0530</pubDate><guid>https://rajp152k.github.io/post/phrasal-outlines/</guid><description>&lt;h2 id="context">Context&lt;/h2>
+&lt;blockquote>
+&lt;p>been reading more papers&lt;br>
+notes by jargony outlines&lt;br>
+no unnecessary words&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>if can express&lt;br>
+few words&lt;br>
+you get it&lt;br>
+get it?&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>concise, practical&lt;br>
+flowy, comprehensible&lt;br>
+jargon is fun&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>in org-roam&lt;br>
+links when depth&lt;br>
+more speed&lt;br>
+good&lt;/p>&lt;/blockquote>
+&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt="">&lt;/p>
+&lt;blockquote>
+&lt;p>all left&lt;br>
+tech haikus&lt;br>
+challenge&lt;br>
+someday&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>until then&lt;/p>&lt;/blockquote>
+&lt;h2 id="enjoy-instance-for-this">&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org">Enjoy instance&lt;/a> for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf">this&lt;/a>&lt;/h2></description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p>&lt;a href="https://github.com/rajp152k/nth-roam/tree/master">Nth Roam&lt;/a> : An Emacs package to efficiently manage multiple roam instances&lt;/p>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
  &lt;/div></description></item><item><title>Doom Emacs config'd for Python</title><link>https://rajp152k.github.io/post/doom-emacs-python/</link><pubDate>Thu, 19 Sep 2024 15:10:44 +0530</pubDate><guid>https://rajp152k.github.io/post/doom-emacs-python/</guid><description>&lt;p>Alter your doom block in init.el:&lt;/p>
