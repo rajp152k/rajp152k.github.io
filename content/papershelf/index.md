@@ -8,8 +8,9 @@ sidebar: left
 
 ---
 
+### 0x239D  [The Tao of IETF](https://datatracker.ietf.org/doc/rfc4677/)
+
 ### 0x239B  [Termite: A Lisp for Distributed Computing]( http://www.european-lisp-workshop.org/archives/05.germain.pdf)
- 
 
 ### 0x2384 [Why the Plan 9® Distributed System Matters](http://9p.io/sources/contrib/uriel/mirror/9book.pdf)
 
