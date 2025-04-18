@@ -4,8 +4,9 @@ toc: false
 sidebar: left
 ---
 
----
 
+<!--  
+---
 #### **RESUME.JSON**
 
 For the programmatically able out there, here's a [js object](/resume/resume.json) for you to parse my work into tools of your choice.  
@@ -21,8 +22,9 @@ curl -s https://thebitmage.com/resume/resume.json | jq -C
 ```
 curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_summary 
 ```
-
 ---
+-->
+
 
 ##### *As of 5th Feb 2025*
 
