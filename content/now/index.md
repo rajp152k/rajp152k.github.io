@@ -5,6 +5,14 @@ title: Now
 A [chronologically descending](https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x239D
+
+ - I hooked and ducked rapidly at the same time during a "light" boxing spar and dislocated my right shoulder around a month ago.
+ - had two major ligament tears so had to get an arthroscopy and been a week since I've been able to type again comfortably
+ - have to give the right a rest but strategizing rehab so I can get back to training again rapidly
+ - 3 hours (morning road work + evening skill work + weights) of MMA training (was prepping and cutting weight for a fight) every day have been freed up for further investing on competence
+ - will get back into training gradually post medical clearance : combat sports gave me a sense of stabilized high that powerlifting or bodybuilding couldn't - will chase that again ..
+
 ## 0x235B 
  - started MMA 
  - leaning out 
