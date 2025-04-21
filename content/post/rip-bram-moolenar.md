@@ -1,7 +1,7 @@
 ---
 title: "RIP, Bram Moolenar"
 date: 2023-08-17T18:09:15+05:30
-categories: ["Tribute"]
+categories: ["Pilgrimage"]
 tags: ["vim"]
 draft: false
 ---
