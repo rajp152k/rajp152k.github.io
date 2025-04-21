@@ -42,7 +42,7 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
    - acting as an intermediary for inter-organization (universities, research-labs ..) engineering collaboration: the most prominent one being with C-DAC (Centre for Development of Advanced Computing) India
    - evangelizing [emacs](https://youtu.be/KsRCiL8ebmE)
 
-### Software Engineer: ESDS Software Solutions
+### AI Engineer: ESDS Software Solutions
 ###### *Nov 2022 - March 2024*
 
  - developed a comprehensive sentiment analysis portal from the ground up, focusing on customer satisfaction within the ticketing portal.
