@@ -67,11 +67,11 @@ theme = "custom"
   pre = "<i class='fa fa-road'></i>"
   url = '/now/'
   weight = -109
-[[menu.main]]
-  name = 'notes'
-  pre = "<i class='fa fa-road'></i>"
-  url = 'https://buffer.thebitmage.com'
-  weight = -108
+# [[menu.main]]
+#   name = 'notes'
+#   pre = "<i class='fa fa-road'></i>"
+#   url = 'https://buffer.thebitmage.com'
+#   weight = -108
 [[menu.main]]
   name = 'vlogs'
   pre = "<i class='fa fa-road'></i>"
