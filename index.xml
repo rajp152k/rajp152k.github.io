@@ -640,18 +640,24 @@ someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t
 &lt;h3 id="0x239d--the-tao-of-ietf">0x239D &lt;a href="https://datatracker.ietf.org/doc/rfc4677/">The Tao of IETF&lt;/a>&lt;/h3>
 &lt;h3 id="0x239b--termite-a-lisp-for-distributed-computing">0x239B &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf">Termite: A Lisp for Distributed Computing&lt;/a>&lt;/h3>
 &lt;h3 id="0x2384-why-the-plan-9-distributed-system-matters">0x2384 &lt;a href="http://9p.io/sources/contrib/uriel/mirror/9book.pdf">Why the Plan 9® Distributed System Matters&lt;/a>&lt;/h3>
-&lt;h3 id="0x2363-how-to-break-software">0x2363 &lt;a href="https://research.google/pubs/how-to-break-software/">How to Break Software&lt;/a>&lt;/h3></description></item><item><title>Work Corpus</title><link>https://rajp152k.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/resume/</guid><description>&lt;h5 id="as-of-5th-feb-2025">&lt;em>As of 5th Feb 2025&lt;/em>&lt;/h5>
+&lt;h3 id="0x2363-how-to-break-software">0x2363 &lt;a href="https://research.google/pubs/how-to-break-software/">How to Break Software&lt;/a>&lt;/h3></description></item><item><title>Work Corpus</title><link>https://rajp152k.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/resume/</guid><description>&lt;h5 id="as-of-27th-april-2025">&lt;em>As of 27th April 2025&lt;/em>&lt;/h5>
 &lt;h3 id="raj-patil-">Raj Patil | &lt;a href="mailto:raj@thebitmage.com">raj@thebitmage.com&lt;/a>&lt;/h3>
-&lt;h2 id="experience">Experience&lt;/h2>
+&lt;h2 id="experience-logs">Experience Logs&lt;/h2>
 &lt;h3 id="principal-engineer-esds-software-solutions">Principal Engineer: ESDS Software Solutions&lt;/h3>
 &lt;h6 id="march-2024---present">&lt;em>March 2024 - Present&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>principally researching, designing and developing cloud computing interfaces across the broader horizontal of Compute, Networking and Storage, along the full vertical of Data Center Orchestration (Hypervisors, DC Hardware &amp;hellip; ) to Cloud Native (CNCF) operationalization (K8S, OKD, OpenShift &amp;hellip;)&lt;/li>
-&lt;li>overseeing an interdisciplinary research lab that operates across domains - AI, IOT, Cyber-Security, Data Center Operations and further miscellaneous knowledge bases : towards furthering the quality of their array of products, the most prominent one being &lt;a href="https://www.esds.co.in/enlight360">a Data Center Orchestrator&lt;/a>&lt;/li>
-&lt;li>I am also invested in fostering a healthy engineering culture by/via:
+&lt;li>Promoted into a more involved and expanded role geared towards optimizing their core product offering : &lt;a href="https://www.esds.co.in/enlight360">a Data Center Orchestrator&lt;/a>&lt;/li>
+&lt;li>Researching, designing, and developing cloud computing interfaces across the broader horizontal of Compute, Networking and Storage, along the full vertical of Data Center Orchestration (Hypervisors, DC Operations, Smart Racks, &amp;hellip; ) to Cloud Native operationalization (K8S, OKD, OpenShift &amp;hellip;)&lt;/li>
+&lt;li>Overseeing a growing interdisciplinary research lab that operates across domains : learning whatever the mission demands
 &lt;ul>
+&lt;li>further honing my collaboration acumen&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Also invested in fostering a healthy engineering culture via:
+&lt;ul>
+&lt;li>self-hosting (volunteered for this to further deepen my understanding of the practicalities of DevOps) a somewhat distributed internal developer platform (stitching several open source projects), towards making the lives of internal engineering teams (80 cumulative) easier.&lt;/li>
 &lt;li>hosting collaborative internal conferences and talks geared towards keeping the team up to date with SOTA&lt;/li>
-&lt;li>acting as an intermediary for inter-organization (universities, research-labs ..) engineering collaboration: the most prominent one being with C-DAC (Centre for Development of Advanced Computing) India&lt;/li>
+&lt;li>one of the technical proxies for inter-institutional (universities, research-labs, industry) engineering collaboration&lt;/li>
 &lt;li>evangelizing &lt;a href="https://youtu.be/KsRCiL8ebmE">emacs&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -659,31 +665,28 @@ someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t
 &lt;h3 id="ai-engineer-esds-software-solutions">AI Engineer: ESDS Software Solutions&lt;/h3>
 &lt;h6 id="nov-2022---march-2024">&lt;em>Nov 2022 - March 2024&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>developed a comprehensive sentiment analysis portal from the ground up, focusing on customer satisfaction within the ticketing portal.
+&lt;li>Developed a comprehensive sentiment analysis portal from the ground up, focusing on customer satisfaction within the ticketing portal.
 &lt;ul>
 &lt;li>now crucial within the organization, used to quantify customer satisfaction and identify areas of improvement with regards to customer experience.&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>headed AI integration across diverse departments, identifying and implementing multi-model pipelines (natural language processing, computer vision and traditional machine learning solutions)&lt;/li>
-&lt;li>served multiple client facing AI-related requests, most promiment of which resulted in the &lt;a href="https://education.maharashtra.gov.in/sanch/users">School Education and Sports Department of Maharashtra&lt;/a> winning a &lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness World Record&lt;/a>, for
+&lt;li>Headed AI integration across diverse departments, identifying and implementing multi-model pipelines (natural language processing, computer vision and traditional machine learning solutions)&lt;/li>
+&lt;li>First bout of architecting and engineering industry-scale AI solutions: the most prominent being &lt;a href="https://education.maharashtra.gov.in/sanch/users">School Education and Sports Department of Maharashtra&lt;/a> winning a &lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness World Record&lt;/a>, for
 which ESDS was the technical facilitator.&lt;/li>
 &lt;li>Mentored individuals across domains and began honing my managerial/leadership aptitude.&lt;/li>
 &lt;/ul>
-&lt;h3 id="personal-sabbatical">Personal Sabbatical&lt;/h3>
+&lt;h3 id="deliberate-hiatus">Deliberate Hiatus&lt;/h3>
 &lt;h6 id="aug-2022---nov-2022">&lt;em>Aug 2022 - Nov 2022&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>deliberate decision to take a hiatus to address health concerns
-&lt;ul>
-&lt;li>context: diagnosed with severe deficiencies in several micronutrients and minerals.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>delved in several epistemological works to further my personal intellectual pursuits.&lt;/li>
+&lt;li>Deliberate career break to realign my personal, career, health, and learning objectives&lt;/li>
+&lt;li>Overall health had taken a hit and needed to take a step back : later realized major underlying factor to be severe deficiencies in essential micronutrients&lt;/li>
 &lt;/ul>
 &lt;h3 id="goldman-sachs-analyst">Goldman Sachs: Analyst&lt;/h3>
 &lt;h6 id="july-2022---aug-2022">&lt;em>July 2022 - Aug 2022&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>briefly worked as an Analyst at Goldman Sachs, gaining valuable exposure to the financial industry.&lt;/li>
-&lt;li>Although a shorter engagement, had the opportunity to gain insights into the organization and its operations.&lt;/li>
+&lt;li>Briefly worked as a Strat in the Controllers Department, gaining valuable exposure to the financial industry.&lt;/li>
+&lt;li>Although a shorter engagement, gained insights into the organization and its operations.&lt;/li>
+&lt;li>Took a career break to address serious health concerns&lt;/li>
 &lt;/ul>
 &lt;h3 id="iit-hyderabad--kla-tencor-research-assistant">IIT Hyderabad | KLA Tencor: Research Assistant&lt;/h3>
 &lt;h6 id="aug-2021---may-2022">&lt;em>Aug 2021 - May 2022&lt;/em>&lt;/h6>
@@ -696,17 +699,19 @@ address relevant challenges.&lt;/li>
 &lt;h3 id="goldman-sachs-summer-analyst">Goldman Sachs: Summer Analyst&lt;/h3>
 &lt;h6 id="june-2021---july-2021">&lt;em>June 2021 - July 2021&lt;/em>&lt;/h6>
 &lt;ul>
-&lt;li>worked towards enhancing (unsupervised) clustering interpretability.&lt;/li>
-&lt;li>developed a versatile multidimensional hyperparameter grid search framework to automate model optimization and fine-tuning.&lt;/li>
+&lt;li>Worked towards enhancing (unsupervised) clustering interpretability.&lt;/li>
+&lt;li>Developed a versatile multidimensional hyperparameter grid search framework to automate model optimization and fine-tuning.&lt;/li>
+&lt;li>Was a remote engagement due to COVID-19 : valuable experience working with a distributed team&lt;/li>
 &lt;/ul>
 &lt;h3 id="cvpr-2021-workshop-paper--autonue-2021--research-assistant">CVPR 2021 Workshop paper | AUTONUE 2021 : Research Assistant&lt;/h3>
 &lt;ul>
-&lt;li>helped organize a &lt;a href="http://cvit.iiit.ac.in/autonue2021/challenge/">domain adaptation challenge&lt;/a> for semantic segmentation, contributing to a workshop paper.
+&lt;li>Part of the organizing team for a &lt;a href="http://cvit.iiit.ac.in/autonue2021/challenge/">domain adaptation challenge&lt;/a> for semantic segmentation, contributing to a workshop paper.
 &lt;ul>
-&lt;li>baselines posted here : &lt;a href="https://github.com/rajp152k/AUTONUE-III-Baselines">https://github.com/rajp152k/AUTONUE-III-Baselines&lt;/a>&lt;/li>
+&lt;li>baselines available here : &lt;a href="https://github.com/rajp152k/AUTONUE-III-Baselines">https://github.com/rajp152k/AUTONUE-III-Baselines&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Guided and mentored by &lt;a href="https://people.iith.ac.in/vineethnb/index.html">Prof. Vineeth N.B.&lt;/a> and &lt;a href="https://faculty.iiit.ac.in/~jawahar/">Prof. C.V. Jawahar&lt;/a>&lt;/li>
+&lt;li>This is when I began using reverse chronological streams of work logs to serve as indices into progress&lt;/li>
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="projects">Projects&lt;/h2>
@@ -741,7 +746,7 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;tr>
  &lt;td>Cloud Native Web Application Firewall&lt;/td>
- &lt;td>Scalabely productized(Kubernetes Horizontal Pod AutoScaler &amp;amp; Event Driven AutoScaler (KEDA : CNCF Grad)) and benchmarked(Apache bench) Coraza(an OWASP compliant go WAF library)&lt;/td>
+ &lt;td>Scalably productized(Kubernetes Horizontal Pod AutoScaler &amp;amp; Event Driven AutoScaler (KEDA : CNCF Grad)) and benchmarked(Apache bench) Coraza(an OWASP compliant go WAF library)&lt;/td>
  &lt;td>CyberSecurity&lt;/td>
  &lt;/tr>
  &lt;tr>
@@ -750,18 +755,18 @@ address relevant challenges.&lt;/li>
  &lt;td>CLI-fu&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>Storage Virual Machine DR Replication Monitoring&lt;/td>
+ &lt;td>Storage Virtual Machine DR Replication Monitoring&lt;/td>
  &lt;td>Designed, developed and operationalized a golang microservice cluster to manage real time analytics streaming to be integrated into the existing observability stack (NetApp ONTAP, RabbitMQ, InfluxDB, Prometheus)&lt;/td>
  &lt;td>Real Time Observability&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection&lt;/a>&lt;/td>
- &lt;td>checkout blog link for more context&lt;/td>
+ &lt;td>context elaborated in blog link&lt;/td>
  &lt;td>Computer Vision&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>Sentinment Analysis for Support Tickets&lt;/td>
- &lt;td>implemented a primal ETL, fine-tuned a Language Model (weakly-supervised) over a (psuedo-labelled) stratified subset, inference jobs formed integral part of business analysis crons&lt;/td>
+ &lt;td>Sentiment Analysis for Support Tickets&lt;/td>
+ &lt;td>implemented a primal ETL, fine-tuned a Language Model (weakly-supervised) over a (pseudo-labelled) stratified subset, inference jobs formed integral part of business analysis crons&lt;/td>
  &lt;td>Natural Language Processing, Data Engineering&lt;/td>
  &lt;/tr>
  &lt;tr>
@@ -776,7 +781,7 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/MA4340/CS18BTECH11039_MA4340_PROJECT">Option Pricing via Monte Carlo Simulations&lt;/a>&lt;/td>
- &lt;td>delved into monte carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)&lt;/td>
+ &lt;td>explored Monte Carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)&lt;/td>
  &lt;td>Stochastic Calculus&lt;/td>
  &lt;/tr>
  &lt;tr>
@@ -815,14 +820,24 @@ address relevant challenges.&lt;/li>
  &lt;td>Software Engineering&lt;/td>
  &lt;/tr>
  &lt;tr>
+ &lt;td>Mind Muscle Matrix&lt;/td>
+ &lt;td>My first blog. I was fresh into fitness, had watched the matrix more than a dozen of times and was overdosing with some heavy philosophical works. Setup a VPS, wordpress, mailing and distribution pipelines.&lt;/td>
+ &lt;td>Business&lt;/td>
+ &lt;/tr>
+ &lt;tr>
  &lt;td>Calculator&lt;/td>
  &lt;td>wrote C to simulate the finite state machine on an ATmega16U2 (Arduino), designed and soldered the circuit (buttons, display, and the ATMega) on a veroboard, functional with add,mul,sub,div&lt;/td>
  &lt;td>Electronics&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>3D-printed pin ball machine&lt;/td>
- &lt;td>designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon) into a functional pin ball setup&lt;/td>
- &lt;td>Computer Aided Design&lt;/td>
+ &lt;td>first major project at IIT Hyderabad. designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon, a slide, a star trooper helmet and it came in black) into a functional pin ball setup&lt;/td>
+ &lt;td>Computer Aided Design, Digital Fabrication&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>PLC HMI Design&lt;/td>
+ &lt;td>first explicit experience (in hindsight) with Finite State Machines when I was 14 as an Intern at &lt;a href="https://nashgroup.co.in/">Nash Robotics&lt;/a>. analysed and reasoned about the states and corresponding control flows on programmable logic controllers.&lt;/td>
+ &lt;td>Digital System Design&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
