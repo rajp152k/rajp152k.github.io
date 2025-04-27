@@ -4,66 +4,48 @@ toc: false
 sidebar: left
 ---
 
-
-<!--  
----
-#### **RESUME.JSON**
-
-For the programmatically able out there, here's a [js object](/resume/resume.json) for you to parse my work into tools of your choice.  
-
-[jq](https://jqlang.github.io/jq/) is a decent start:  
-
-```
-curl -s https://thebitmage.com/resume/resume.json | jq -C
-```
-
-[Fabric](https://github.com/danielmiessler/fabric) is great if you have it handy:  
-
-```
-curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_summary 
-```
----
--->
-
-
-##### *As of 5th Feb 2025*
+##### *As of 27th April 2025*
 
 ### Raj Patil | raj@thebitmage.com
 
-## Experience
+
+## Experience Logs
 
 ###  Principal Engineer: ESDS Software Solutions
 ###### *March 2024 - Present*
 
- - principally researching, designing and developing cloud computing interfaces across the broader horizontal of Compute, Networking and Storage, along the full vertical of Data Center Orchestration (Hypervisors, DC Hardware ... ) to Cloud Native (CNCF) operationalization (K8S, OKD, OpenShift ...)
- - overseeing an interdisciplinary research lab that operates across domains - AI, IOT, Cyber-Security, Data Center Operations and further miscellaneous knowledge bases : towards furthering the quality of their array of products, the most prominent one being [a Data Center Orchestrator](https://www.esds.co.in/enlight360)
- - I am also invested in fostering a healthy engineering culture by/via: 
+ - Promoted into a more involved and expanded role geared towards optimizing their core product offering : [a Data Center Orchestrator](https://www.esds.co.in/enlight360)
+ - Researching, designing, and developing cloud computing interfaces across the broader horizontal of Compute, Networking and Storage, along the full vertical of Data Center Orchestration (Hypervisors, DC Operations, Smart Racks, ... ) to Cloud Native operationalization (K8S, OKD, OpenShift ...)
+ - Overseeing a growing interdisciplinary research lab that operates across domains : learning whatever the mission demands
+    - further honing my collaboration acumen
+ - Also invested in fostering a healthy engineering culture via:
+   - self-hosting (volunteered for this to further deepen my understanding of the practicalities of DevOps) a somewhat distributed internal developer platform (stitching several open source projects), towards making the lives of internal engineering teams (80 cumulative) easier.
    - hosting collaborative internal conferences and talks geared towards keeping the team up to date with SOTA
-   - acting as an intermediary for inter-organization (universities, research-labs ..) engineering collaboration: the most prominent one being with C-DAC (Centre for Development of Advanced Computing) India
+   - one of the technical proxies for inter-institutional (universities, research-labs, industry) engineering collaboration
    - evangelizing [emacs](https://youtu.be/KsRCiL8ebmE)
 
 ### AI Engineer: ESDS Software Solutions
 ###### *Nov 2022 - March 2024*
 
- - developed a comprehensive sentiment analysis portal from the ground up, focusing on customer satisfaction within the ticketing portal.
+ - Developed a comprehensive sentiment analysis portal from the ground up, focusing on customer satisfaction within the ticketing portal.
    - now crucial within the organization, used to quantify customer satisfaction and identify areas of improvement with regards to customer experience.
- - headed AI integration across diverse departments, identifying and implementing multi-model pipelines (natural language processing, computer vision and traditional machine learning solutions)
- - served multiple client facing AI-related requests, most promiment of which resulted in the [School Education and Sports Department of Maharashtra](https://education.maharashtra.gov.in/sanch/users) winning a [Guinness World Record](https://thebitmage.com/post/guinness-dedup-anomaly/), for
+ - Headed AI integration across diverse departments, identifying and implementing multi-model pipelines (natural language processing, computer vision and traditional machine learning solutions)
+ - First bout of architecting and engineering industry-scale AI solutions: the most prominent being [School Education and Sports Department of Maharashtra](https://education.maharashtra.gov.in/sanch/users) winning a [Guinness World Record](https://thebitmage.com/post/guinness-dedup-anomaly/), for
    which ESDS was the technical facilitator. 
  - Mentored individuals across domains and began honing my managerial/leadership aptitude.
 
-### Personal Sabbatical
+### Deliberate Hiatus
 ###### *Aug 2022 - Nov 2022*
 
- - deliberate decision to take a hiatus to address health concerns
-   - context: diagnosed with severe deficiencies in several micronutrients and minerals.
- - delved in several epistemological works to further my personal intellectual pursuits.
+ - Deliberate career break to realign my personal, career, health, and learning objectives
+ - Overall health had taken a hit and needed to take a step back : later realized major underlying factor to be severe deficiencies in essential micronutrients
 
 ### Goldman Sachs: Analyst
 ###### *July 2022 - Aug 2022*
 
- - briefly worked as an Analyst at Goldman Sachs, gaining valuable exposure to the financial industry.
- - Although a shorter engagement, had the opportunity to gain insights into the organization and its operations.
+ - Briefly worked as a Strat in the Controllers Department, gaining valuable exposure to the financial industry.
+ - Although a shorter engagement, gained insights into the organization and its operations.
+ - Took a career break to address serious health concerns
 
 ### IIT Hyderabad | KLA Tencor: Research Assistant
 ###### *Aug 2021 - May 2022*
@@ -76,14 +58,16 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 ### Goldman Sachs: Summer Analyst
 ###### *June 2021 - July 2021*
 
- - worked towards enhancing (unsupervised) clustering interpretability.
- - developed a versatile multidimensional hyperparameter grid search framework to automate model optimization and fine-tuning.
+ - Worked towards enhancing (unsupervised) clustering interpretability.
+ - Developed a versatile multidimensional hyperparameter grid search framework to automate model optimization and fine-tuning.
+ - Was a remote engagement due to COVID-19 : valuable experience working with a distributed team
 
 ### CVPR 2021 Workshop paper | AUTONUE 2021 : Research Assistant
 	
- - helped organize a [domain adaptation challenge](http://cvit.iiit.ac.in/autonue2021/challenge/) for semantic segmentation, contributing to a workshop paper.
-   - baselines posted here : https://github.com/rajp152k/AUTONUE-III-Baselines
+ - Part of the organizing team for a [domain adaptation challenge](http://cvit.iiit.ac.in/autonue2021/challenge/) for semantic segmentation, contributing to a workshop paper.
+   - baselines available here : https://github.com/rajp152k/AUTONUE-III-Baselines
  - Guided and mentored by [Prof. Vineeth N.B.](https://people.iith.ac.in/vineethnb/index.html) and [Prof. C.V. Jawahar](https://faculty.iiit.ac.in/~jawahar/)
+ - This is when I began using reverse chronological streams of work logs to serve as indices into progress
 
 ---
 
@@ -95,14 +79,14 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 | [fabric-gpt.el](https://github.com/rajp152k/fabric-gpt.el)                                                                                                                                         | An [Emacs Package](https://youtu.be/39OsH_OeWSA?si=xQLvotelXMECh9Lw) to employ crowd sourced prompts into an llm-client intuitively                                                                                                                                              | Software Engineering                          |
 | Cloud Native LLM inference servers on heterogeneous compute infrastructure                                                                                                                         | Horizontally scaled self hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs (vLLMs) to the engineering and support teams on heterogeneous compute infrastructure (Nvidia(T4s & H100s), AMD (MI300Xs and MI300A), X86 and ARM) | (LLM:ML)Ops                                   |
 | LLM Augmented Continuous Integration with Self Hosted Giltab                                                                                                                                       | Kubernetes to manage varied workers along with SOTA development and integration practices (Linting, Static and Dynamic Application Security Testing (SonarQube) along with LLM augmented security analysis (Ollama, Langchain, LlamaIndex))                                      | NLP, Dev(LLM:ML)Ops, CyberSecurity            |
-| Cloud Native Web Application Firewall                                                                                                                                                              | Scalabely productized(Kubernetes Horizontal Pod AutoScaler & Event Driven AutoScaler (KEDA : CNCF Grad)) and benchmarked(Apache bench) Coraza(an OWASP compliant go WAF library)                                                                                                 | CyberSecurity                                 |
+| Cloud Native Web Application Firewall                                                                                                                                                              | Scalably productized(Kubernetes Horizontal Pod AutoScaler & Event Driven AutoScaler (KEDA : CNCF Grad)) and benchmarked(Apache bench) Coraza(an OWASP compliant go WAF library)                                                                                                 | CyberSecurity                                 |
 | [CLI timer](/post/cli-alarms)                                                                                                                                                                      | A bash func to save your soul                                                                                                                                                                                                                                                    | CLI-fu                                        |
-| Storage Virual Machine DR Replication Monitoring                                                                                                                                                   | Designed, developed and operationalized a golang microservice cluster to manage real time analytics streaming to be integrated into the existing observability stack (NetApp ONTAP, RabbitMQ, InfluxDB, Prometheus)                                                              | Real Time Observability                       |
-| [Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection](https://thebitmage.com/post/guinness-dedup-anomaly/)                                                               | checkout blog link for more context                                                                                                                                                                                                                                              | Computer Vision                               |
-| Sentinment Analysis for Support Tickets                                                                                                                                                            | implemented a primal ETL, fine-tuned a Language Model (weakly-supervised) over a (psuedo-labelled) stratified subset, inference jobs formed integral part of business analysis crons                                                                                             | Natural Language Processing, Data Engineering |
+| Storage Virtual Machine DR Replication Monitoring                                                                                                                                                   | Designed, developed and operationalized a golang microservice cluster to manage real time analytics streaming to be integrated into the existing observability stack (NetApp ONTAP, RabbitMQ, InfluxDB, Prometheus)                                                              | Real Time Observability                       |
+| [Guinness world Record : Deduplication, Anomaly Detection, Tampering Detection](https://thebitmage.com/post/guinness-dedup-anomaly/)                                                               | context elaborated in blog link                                                                                                                                                                                                                                              | Computer Vision                               |
+| Sentiment Analysis for Support Tickets                                                                                                                                                            | implemented a primal ETL, fine-tuned a Language Model (weakly-supervised) over a (pseudo-labelled) stratified subset, inference jobs formed integral part of business analysis crons                                                                                             | Natural Language Processing, Data Engineering |
 | [Quantum Error Correction Codes](https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_8/Quantum_Computing/Quantum_Project.ipynb)                          | created a framework to test efficacy of qubit allocation strategies for noise-resistant quantum computation                                                                                                                                                                      | Quantum Computing                             |
 | [Tic-Tac-Toe Reinforcement Learning](https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/AI3000/A2/RL%20A2%20Q5.ipynb)                                 | tested out RL algorithms with random and heuristics based agents                                                                                                                                                                                                                 | Reinforcement Learning                        |
-| [Option Pricing via Monte Carlo Simulations](https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/MA4340/CS18BTECH11039_MA4340_PROJECT)                 | delved into monte carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)                                                                                                                                                     | Stochastic Calculus                           |
+| [Option Pricing via Monte Carlo Simulations](https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/MA4340/CS18BTECH11039_MA4340_PROJECT)                 | explored Monte Carlo option pricers, while comparing results with conventional stochastic calculus models (Black Scholes)                                                                                                                                                     | Stochastic Calculus                           |
 | [Secure Multiparty Computation (for Deep Learning)](https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/CS6160/project/CS18BTECH11039_CS6160.pdf)      | Survey on how cryptographic techniques are used to maintain secrecy during multiparty computation (neural networks in this case)                                                                                                                                                 | Cryptography                                  |
 | [WDGAF(We Do Give a Figure)](https://github.com/rajp152k/Compilers-II)                                                                                                                             | Created plotting DSL using principals of compilers and published it to pip                                                                                                                                                                                                       | Compilers                                     |
 | [Relational Databases and Data Hygeine](https://github.com/rajp152k/coursework_IITH/tree/master/SEM_6/DBMSII)                                                                                      | Executed complex relational database queries on the imdb movie database; implemented scraping scripts to fetch relevant data                                                                                                                                                     | Relational Databases                          |
@@ -110,8 +94,11 @@ curl -s https://thebitmage.com/resume/resume.json | fabric -s --pattern  create_
 | [Musical Chairs: inter-process coms](https://github.com/rajp152k/musical_chairs)                                                                                                                   | Simulating a game of musical chairs using modern concurrency constructs from C++11 onwards                                                                                                                                                                                       | Concurrency                                   |
 | [Chat Room App](https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_5/Computer-Networks-I/socket%20programming/Computer-Networks)                        | created a command line chat room app using principles of socket programming                                                                                                                                                                                                      | Computer Networks                             |
 | [Custom Deep Learning Framework](https://github.com/rajp152k/cust_dl_lib)                                                                                                                          | created a deep learning library from scratch (axioms being high school math )                                                                                                                                                                                                    | Software Engineering                          |
+| Mind Muscle Matrix | My first blog. I was fresh into fitness, had watched the matrix more than a dozen of times and was overdosing with some heavy philosophical works. Setup a VPS, wordpress, mailing and distribution pipelines.  | Business |
 | Calculator                                                                                                                                                                                         | wrote C to simulate the finite state machine on an ATmega16U2 (Arduino), designed and soldered the circuit (buttons, display, and the ATMega) on a veroboard, functional with add,mul,sub,div                                                                                    | Electronics                                   |
-| 3D-printed pin ball machine                                                                                                                                                                        | designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon) into a functional pin ball setup                                                                                                                       | Computer Aided Design                         |
+| 3D-printed pin ball machine                                                                                                                                                                        | first major project at IIT Hyderabad. designed the individual components from scratch in CAD and assembled the same (star wars themed - had a millenium falcon, a slide, a star trooper helmet and it came in black) into a functional pin ball setup                                                                                                                       | Computer Aided Design, Digital Fabrication                         |
+| PLC HMI Design  | first explicit experience (in hindsight) with Finite State Machines when I was 14 as an Intern at [Nash Robotics](https://nashgroup.co.in/). analysed and reasoned about the states and corresponding control flows on programmable logic controllers.    | Digital System Design |
+
 
 ---
 
@@ -164,13 +151,10 @@ This should serve as a quick index into my networking interests during phases of
 
 	- Major (2018-2022) : Computer Science and Engineering  : 9.26/10
 	- Minor (2020-2022) : Artificial Intelligence           : 9.50/10
- 
----
 
-### Further Musings
+### *AutoDidacticism* (2000-Present)
 
-This is an index into my major deliverables that society might consider to be of relevance.
-There are several non-incentivised musings and works that I keep myself occupied with: they have been indexed in the [ideation buffer](https://buffer.thebitmage.com)
-
-As for my generic incentives, you'd find [this recursive-introspective terser composition](https://thebitmage.com/i-know-not/) to be a humble attempt towards expressing the same.
-
+ - reading, writing, thinking, conversations, teaching, disciplined curiosity and making mistakes play an essential role in how my learning trajectories unroll..
+ - I'm not trying to build a career any more than I'm trying to explore the world epistemologically, in general
+ - This was an index into major deliverables that might be societally gauge-able
+ - As for my generic incentives, [this recursive-introspective terser composition](https://thebitmage.com/i-know-not/) is a summarization attempt
