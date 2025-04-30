@@ -5,7 +5,7 @@ categories: ["Research"]
 tags: ["research","papers","science","microessays","blogs","works","journals","time","practice","reading"]
 ---
 
-From time to time, I like to make minor tweaks to my blog based on the treasure trinklets I find around in different corners of the internet from blogs/works of personalities I follow/find interesting.  
+From time to time, I like to make minor tweaks to my blog based on the treasure trinkets I find around in different corners of the internet from blogs/works of personalities I follow/find interesting.  
 
 I got into the practice of logging updates in reverse chronological streams from one of my professors in my sophomore year.  
 
