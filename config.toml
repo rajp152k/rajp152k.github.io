@@ -40,7 +40,7 @@ theme = "custom"
 [Params.widgets.social]
   # Enable parts of social widget
   github = "rajp152k"
-  email = "raj@thebitmage.com"
+  email = "raj@cognware.com"
   youtube = "@The-Bit-Mage"
   goodreads = "rajp152k"
   twitter = "@rajpatil152k"

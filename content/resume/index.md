@@ -6,7 +6,7 @@ sidebar: left
 
 ##### *As of 27th April 2025*
 
-### Raj Patil | raj@thebitmage.com
+### Raj Patil | raj@cognware.com
 
 
 ## Experience Logs
