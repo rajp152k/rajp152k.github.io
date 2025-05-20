@@ -22,7 +22,7 @@ sidebar: left
    - self-hosting (volunteered for this to further deepen my understanding of the practicalities of DevOps) a somewhat distributed internal developer platform (stitching several open source projects), towards making the lives of internal engineering teams (80 cumulative) easier.
    - hosting collaborative internal conferences and talks geared towards keeping the team up to date with SOTA
    - one of the technical proxies for inter-institutional (universities, research-labs, industry) engineering collaboration
-   - evangelizing [emacs](https://youtu.be/KsRCiL8ebmE)
+   - evangelizing [emacs](https://youtu.be/KsRCiL8ebmE) and [lisp](https://www.youtube.com/watch?v=guEbzVuYzPc)
 
 ### AI Engineer: ESDS Software Solutions
 ###### *Nov 2022 - March 2024*
