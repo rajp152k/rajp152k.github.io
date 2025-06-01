@@ -662,9 +662,9 @@ someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t
 &lt;/li>
 &lt;li>Also invested in fostering a healthy engineering culture via:
 &lt;ul>
-&lt;li>self-hosting (volunteered for this to further deepen my understanding of the practicalities of DevOps) a somewhat distributed internal developer platform (stitching several open source projects), towards making the lives of internal engineering teams (80 cumulative) easier.&lt;/li>
+&lt;li>self-hosting (volunteered for this to further deepen my understanding of the practicalities of DevOps) a somewhat distributed internal developer platform (stitching several open source projects), to make the lives of internal engineering teams (80 cumulative) easier.&lt;/li>
 &lt;li>hosting collaborative internal conferences and talks geared towards keeping the team up to date with SOTA&lt;/li>
-&lt;li>one of the technical proxies for inter-institutional (universities, research-labs, industry) engineering collaboration&lt;/li>
+&lt;li>one of the technical proxies for inter-institutional (universities, research labs, industry) engineering collaboration&lt;/li>
 &lt;li>evangelizing &lt;a href="https://youtu.be/KsRCiL8ebmE">emacs&lt;/a> and &lt;a href="https://www.youtube.com/watch?v=guEbzVuYzPc">lisp&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -678,9 +678,9 @@ someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t
 &lt;/ul>
 &lt;/li>
 &lt;li>Headed AI integration across diverse departments, identifying and implementing multi-model pipelines (natural language processing, computer vision and traditional machine learning solutions)&lt;/li>
-&lt;li>First bout of architecting and engineering industry-scale AI solutions: the most prominent being &lt;a href="https://education.maharashtra.gov.in/sanch/users">School Education and Sports Department of Maharashtra&lt;/a> winning a &lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness World Record&lt;/a>, for
+&lt;li>Architected and engineered industry-scale AI solutions: the most prominent being School Education and Sports Department of Maharashtra, winning a &lt;a href="https://thebitmage.com/post/guinness-dedup-anomaly/">Guinness World Record&lt;/a>, for
 which ESDS was the technical facilitator.&lt;/li>
-&lt;li>Mentored individuals across domains and began honing my managerial/leadership aptitude.&lt;/li>
+&lt;li>Mentored individuals across domains, honing my managerial/leadership aptitude.&lt;/li>
 &lt;/ul>
 &lt;h3 id="deliberate-hiatus">Deliberate Hiatus&lt;/h3>
 &lt;h6 id="aug-2022---nov-2022">&lt;em>Aug 2022 - Nov 2022&lt;/em>&lt;/h6>
@@ -733,7 +733,7 @@ address relevant challenges.&lt;/li>
  &lt;tbody>
  &lt;tr>
  &lt;td>L1.epsilon&lt;/td>
- &lt;td>An agentic swarm geared towards assisting Level 1 support technicians for swifter ticket resolution (integrating with self hosted Data and Knowledge Bases via ReST, RAG, HITL, swarm orchestration) with ag2 (autogen fork) with end to end best in class swe practices : DDD + BDD + TDD with gherkin + pytest + pytest-bdd - levelling up my philosophical acumen for engineering with this one&lt;/td>
+ &lt;td>An agentic swarm geared toward assisting Level 1 support technicians for swifter ticket resolution (integrating with self-hosted Data and Knowledge Bases via ReST, RAG, HITL, swarm orchestration) with ag2 (autogen fork) with end-to-end best-in-class swe practices : DDD + BDD + TDD with gherkin + pytest + pytest-bdd - levelling up my philosophical acumen for engineering with this one&lt;/td>
  &lt;td>Agentic-AI, Software Engineering&lt;/td>
  &lt;/tr>
  &lt;tr>
@@ -748,22 +748,22 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;tr>
  &lt;td>Cloud Native LLM inference servers on heterogeneous compute infrastructure&lt;/td>
- &lt;td>Horizontally scaled self hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs (vLLMs) to the engineering and support teams on heterogeneous compute infrastructure (Nvidia(T4s &amp;amp; H100s), AMD (MI300Xs and MI300A), X86 and ARM)&lt;/td>
+ &lt;td>Horizontally scaled self-hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs (vLLMs) to the engineering and support teams on heterogeneous compute infrastructure (Nvidia (T4s &amp;amp; H100s), AMD (MI300Xs and MI300A), X86 and ARM)&lt;/td>
  &lt;td>(LLM:ML)Ops&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>LLM Augmented Continuous Integration with Self Hosted Giltab&lt;/td>
+ &lt;td>LLM Augmented Continuous Integration with self-hosted Gitlab&lt;/td>
  &lt;td>Kubernetes to manage varied workers along with SOTA development and integration practices (Linting, Static and Dynamic Application Security Testing (SonarQube) along with LLM augmented security analysis (Ollama, Langchain, LlamaIndex))&lt;/td>
  &lt;td>NLP, Dev(LLM:ML)Ops, CyberSecurity&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Cloud Native Web Application Firewall&lt;/td>
- &lt;td>Scalably productized(Kubernetes Horizontal Pod AutoScaler &amp;amp; Event Driven AutoScaler (KEDA : CNCF Grad)) and benchmarked(Apache bench) Coraza(an OWASP compliant go WAF library)&lt;/td>
+ &lt;td>Scalably productized(Kubernetes Horizontal Pod AutoScaler &amp;amp; Event Driven AutoScaler (KEDA : CNCF Grad)) and benchmarked(Apache bench) Coraza(an OWASP compliant Go WAF library)&lt;/td>
  &lt;td>CyberSecurity&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://rajp152k.github.io/post/cli-alarms">CLI timer&lt;/a>&lt;/td>
- &lt;td>A bash func to save your soul&lt;/td>
+ &lt;td>A bash function to save your soul&lt;/td>
  &lt;td>CLI-fu&lt;/td>
  &lt;/tr>
  &lt;tr>
@@ -783,12 +783,12 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_8/Quantum_Computing/Quantum_Project.ipynb">Quantum Error Correction Codes&lt;/a>&lt;/td>
- &lt;td>created a framework to test efficacy of qubit allocation strategies for noise-resistant quantum computation&lt;/td>
+ &lt;td>created a framework to test the efficacy of qubit allocation strategies for noise-resistant quantum computation&lt;/td>
  &lt;td>Quantum Computing&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/coursework_IITH/blob/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_7/AI3000/A2/RL%20A2%20Q5.ipynb">Tic-Tac-Toe Reinforcement Learning&lt;/a>&lt;/td>
- &lt;td>tested out RL algorithms with random and heuristics based agents&lt;/td>
+ &lt;td>tested out RL algorithms with random and heuristics-based agents&lt;/td>
  &lt;td>Reinforcement Learning&lt;/td>
  &lt;/tr>
  &lt;tr>
@@ -803,17 +803,17 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/Compilers-II">WDGAF(We Do Give a Figure)&lt;/a>&lt;/td>
- &lt;td>Created plotting DSL using principals of compilers and published it to pip&lt;/td>
+ &lt;td>Created plotting DSL using principles of compilers and published it to pip&lt;/td>
  &lt;td>Compilers&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/coursework_IITH/tree/master/SEM_6/DBMSII">Relational Databases and Data Hygeine&lt;/a>&lt;/td>
- &lt;td>Executed complex relational database queries on the imdb movie database; implemented scraping scripts to fetch relevant data&lt;/td>
+ &lt;td>Executed complex relational database queries on the IMDb movie database; implemented scraping scripts to fetch relevant data&lt;/td>
  &lt;td>Relational Databases&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/coursework_IITH/blob/master/SEM_7/CS5280/CS5280%20cs18btech11039%20cs21resch11011/project_report_cs18btech11039_cs21resch11011.pdf">Optimizing scheduling algorithms&lt;/a>&lt;/td>
- &lt;td>researched into tweaks to optimize the scheduling algorithms BOCC, BTO, MVTO&lt;/td>
+ &lt;td>researched tweaks to optimize the scheduling algorithms BOCC, BTO, MVTO&lt;/td>
  &lt;td>Distributed Computing&lt;/td>
  &lt;/tr>
  &lt;tr>
@@ -823,18 +823,13 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/coursework_IITH/tree/536c1a74dcb877ee25eeb7708652e6d8fcde8c02/SEM_5/Computer-Networks-I/socket%20programming/Computer-Networks">Chat Room App&lt;/a>&lt;/td>
- &lt;td>created a command line chat room app using principles of socket programming&lt;/td>
+ &lt;td>created a command-line chat room app using principles of socket programming&lt;/td>
  &lt;td>Computer Networks&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/cust_dl_lib">Custom Deep Learning Framework&lt;/a>&lt;/td>
  &lt;td>created a deep learning library from scratch (axioms being high school math )&lt;/td>
  &lt;td>Software Engineering&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Mind Muscle Matrix&lt;/td>
- &lt;td>My first blog. I was fresh into fitness, had watched the matrix more than a dozen of times and was overdosing with some heavy philosophical works. Setup a VPS, wordpress, mailing and distribution pipelines.&lt;/td>
- &lt;td>Business&lt;/td>
  &lt;/tr>
  &lt;tr>
  &lt;td>Calculator&lt;/td>
@@ -848,7 +843,7 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;tr>
  &lt;td>PLC HMI Design&lt;/td>
- &lt;td>first explicit experience (in hindsight) with Finite State Machines when I was 14 as an Intern at &lt;a href="https://nashgroup.co.in/">Nash Robotics&lt;/a>. analysed and reasoned about the states and corresponding control flows on programmable logic controllers.&lt;/td>
+ &lt;td>first explicit experience (in hindsight) with Finite State Machines when I was 14 as an Intern at &lt;a href="https://nashgroup.co.in/">a local robotics firm&lt;/a>. analysed and reasoned about the states and corresponding control flows on programmable logic controllers.&lt;/td>
  &lt;td>Digital System Design&lt;/td>
  &lt;/tr>
  &lt;/tbody>
@@ -862,7 +857,7 @@ N.B.&lt;/a> - CS5590 :
 Foundations of Machine Learning&lt;/li>
 &lt;li>&lt;a href="https://sites.google.com/site/pksrijith/home">Prof Srijith
 P.K.&lt;/a> - AI1100 :
-Intro to Artificial Intelligence&lt;/li>
+Introduction to Artificial Intelligence&lt;/li>
 &lt;/ul>
 &lt;h3 id="fitsoc-2021-2022">&lt;a href="https://instagram.com/fitsoc_iith">FitSoc&lt;/a> 2021-2022&lt;/h3>
 &lt;ul>
@@ -883,5 +878,17 @@ time at IIT-Hyderabad&lt;/li>
 issues&lt;/li>
 &lt;/ul>
 &lt;hr>
-&lt;h2 id="conferences-attended">Conferences Attended&lt;/h2>
-&lt;p>This should serve as a quick index into my networking interests during phases of my career&lt;/p></description></item></channel></rss>
+&lt;h2 id="education">Education&lt;/h2>
+&lt;h3 id="btech--indian-institute-of-technology-hyderabad-2018-2022">B.Tech: &lt;strong>Indian Institute of Technology Hyderabad&lt;/strong> (2018-2022)&lt;/h3>
+&lt;pre>&lt;code>All India Rank (JEE Advance 2018) - 658
+
+- Major (2018-2022) : Computer Science and Engineering : 9.26/10
+- Minor (2020-2022) : Artificial Intelligence : 9.50/10
+&lt;/code>&lt;/pre>
+&lt;h3 id="autodidacticism-2000-present">&lt;em>AutoDidacticism&lt;/em> (2000-Present)&lt;/h3>
+&lt;ul>
+&lt;li>reading, writing, thinking, conversations, teaching, disciplined curiosity and making mistakes play an essential role in how my learning trajectories unroll..&lt;/li>
+&lt;li>I&amp;rsquo;m not trying to build a career any more than I&amp;rsquo;m trying to explore the world epistemologically, in general&lt;/li>
+&lt;li>This was an index into major deliverables that might be societally gauge-able&lt;/li>
+&lt;li>As for my generic incentives, &lt;a href="https://thebitmage.com/i-know-not/">this recursive-introspective terser composition&lt;/a> is a summarization attempt&lt;/li>
+&lt;/ul></description></item></channel></rss>
