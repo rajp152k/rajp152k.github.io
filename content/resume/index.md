@@ -4,7 +4,7 @@ toc: false
 sidebar: left
 ---
 
-##### *As of 27th April 2025*
+##### *As of 1st June 2025*
 
 ### Raj Patil | raj@cognware.com
 
@@ -75,6 +75,7 @@ sidebar: left
 
 | **Project**                                                                                                                                                                                        | **Synopsis**                                                                                                                                                                                                                                                                     | **Principal Domains**                         |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| L1.epsilon | An agentic swarm geared towards assisting Level 1 support technicians  for swifter ticket resolution (integrating with self hosted Data and Knowledge Bases via ReST, RAG, HITL, swarm orchestration) with ag2 (autogen fork) with end to end best in class swe practices : DDD + BDD + TDD with gherkin + pytest + pytest-bdd - levelling up my philosophical acumen for engineering with this one| Agentic-AI, Software Engineering |
 | [Nth-Roam](https://github.com/rajp152k/nth-roam)                                                                                                                                                   | An [Emacs Package](https://youtu.be/EobRvrZpp1s?si=e7_LPfK-hZ4TvOkO) to efficiently manage multiple instances of emacs org-roam                                                                                                                                                  | Software Engineering                          |
 | [fabric-gpt.el](https://github.com/rajp152k/fabric-gpt.el)                                                                                                                                         | An [Emacs Package](https://youtu.be/39OsH_OeWSA?si=xQLvotelXMECh9Lw) to employ crowd sourced prompts into an llm-client intuitively                                                                                                                                              | Software Engineering                          |
 | Cloud Native LLM inference servers on heterogeneous compute infrastructure                                                                                                                         | Horizontally scaled self hosted open source LLMs (OpenLLM, Kubernetes, nvidia-container-toolkit, VMWare ESXI) for serving LLMs (vLLMs) to the engineering and support teams on heterogeneous compute infrastructure (Nvidia(T4s & H100s), AMD (MI300Xs and MI300A), X86 and ARM) | (LLM:ML)Ops                                   |
