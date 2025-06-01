@@ -647,7 +647,7 @@ someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t
 &lt;h3 id="0x239d--the-tao-of-ietf">0x239D &lt;a href="https://datatracker.ietf.org/doc/rfc4677/">The Tao of IETF&lt;/a>&lt;/h3>
 &lt;h3 id="0x239b--termite-a-lisp-for-distributed-computing">0x239B &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf">Termite: A Lisp for Distributed Computing&lt;/a>&lt;/h3>
 &lt;h3 id="0x2384-why-the-plan-9-distributed-system-matters">0x2384 &lt;a href="http://9p.io/sources/contrib/uriel/mirror/9book.pdf">Why the Plan 9® Distributed System Matters&lt;/a>&lt;/h3>
-&lt;h3 id="0x2363-how-to-break-software">0x2363 &lt;a href="https://research.google/pubs/how-to-break-software/">How to Break Software&lt;/a>&lt;/h3></description></item><item><title>Work Corpus</title><link>https://rajp152k.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/resume/</guid><description>&lt;h5 id="as-of-27th-april-2025">&lt;em>As of 27th April 2025&lt;/em>&lt;/h5>
+&lt;h3 id="0x2363-how-to-break-software">0x2363 &lt;a href="https://research.google/pubs/how-to-break-software/">How to Break Software&lt;/a>&lt;/h3></description></item><item><title>Work Corpus</title><link>https://rajp152k.github.io/resume/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/resume/</guid><description>&lt;h5 id="as-of-1st-june-2025">&lt;em>As of 1st June 2025&lt;/em>&lt;/h5>
 &lt;h3 id="raj-patil-">Raj Patil | &lt;a href="mailto:raj@cognware.com">raj@cognware.com&lt;/a>&lt;/h3>
 &lt;h2 id="experience-logs">Experience Logs&lt;/h2>
 &lt;h3 id="principal-engineer-esds-software-solutions">Principal Engineer: ESDS Software Solutions&lt;/h3>
@@ -731,6 +731,11 @@ address relevant challenges.&lt;/li>
  &lt;/tr>
  &lt;/thead>
  &lt;tbody>
+ &lt;tr>
+ &lt;td>L1.epsilon&lt;/td>
+ &lt;td>An agentic swarm geared towards assisting Level 1 support technicians for swifter ticket resolution (integrating with self hosted Data and Knowledge Bases via ReST, RAG, HITL, swarm orchestration) with ag2 (autogen fork) with end to end best in class swe practices : DDD + BDD + TDD with gherkin + pytest + pytest-bdd - levelling up my philosophical acumen for engineering with this one&lt;/td>
+ &lt;td>Agentic-AI, Software Engineering&lt;/td>
+ &lt;/tr>
  &lt;tr>
  &lt;td>&lt;a href="https://github.com/rajp152k/nth-roam">Nth-Roam&lt;/a>&lt;/td>
  &lt;td>An &lt;a href="https://youtu.be/EobRvrZpp1s?si=e7_LPfK-hZ4TvOkO">Emacs Package&lt;/a> to efficiently manage multiple instances of emacs org-roam&lt;/td>
