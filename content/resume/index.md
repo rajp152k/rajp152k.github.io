@@ -8,8 +8,7 @@ sidebar: left
 
 ### Raj Patil | raj@cognware.com
 
-
-## Experience Logs
+## Experience
 
 ###  Principal Engineer: ESDS Software Solutions
 ###### *March 2024 - Present*
