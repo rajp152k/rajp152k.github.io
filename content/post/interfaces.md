@@ -2,7 +2,7 @@
 title: "The Un-Unified Heterogenous Irk"
 date: 2025-06-09T11:03:25+05:30
 categories: ["Tooling"]
-tags: ["microessays"]
+tags: ["microessays","intel","amd","nvidia","cpu","gpu","x86","arm","android","avx","ssh","vim","emacs","tumbleweed","bsd","freebsd","lab","vps","ubuntu","k8s","lisp","lisp machines","personal compute","meditation","wisdom","philosophy"]
 ---
 
 I've lately been thinking deeply about how I interact with my computing environments; when working, I've a  
