@@ -5,6 +5,13 @@ title: Now
 A [chronologically descending](https://github.com/rajp152k/buffer/blob/master/Content/20230712132109-timestamps.org) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x23DD 
+
+ - my ortho and physio gave me the green signal to lift heavy again
+ - combat (and contact) sports off the table for 2 months though
+ - back squatting off the table as well : swapping in zerchers and deficit hex bar deadlifts instead
+ - recomp for a while
+
 ## 0x239D
 
  - I hooked and ducked rapidly at the same time during a "light" boxing spar and dislocated my right shoulder around a month ago.
