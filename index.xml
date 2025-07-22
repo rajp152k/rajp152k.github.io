@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>(bit-mage)</title><link>https://rajp152k.github.io/</link><description>Recent content on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Jun 2025 11:03:25 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p>I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>(bit-mage)</title><link>https://rajp152k.github.io/</link><description>Recent content on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 22 Jul 2025 10:46:57 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>The DocShelf</title><link>https://rajp152k.github.io/post/docshelf/</link><pubDate>Tue, 22 Jul 2025 10:46:57 +0530</pubDate><guid>https://rajp152k.github.io/post/docshelf/</guid><description>&lt;p>Lately realized that I like reading the docs: don&amp;rsquo;t know if such a psychological disorder has been classified so far but I&amp;rsquo;m going to lean into it, for humanity&amp;rsquo;s sake, and document how my condition unfolds.&lt;/p>
+&lt;p>I, implicitly, have gathered a certain corpus of incommunicable collation of engineering wisdom (/ overenginering foolery?), surfing the architectural and conceptual sections of docs in quite some well-known, mystical, ancient or infamous sections of the internet.&lt;/p></description></item><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p>I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br>
 - an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br>
 - an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br>
 - a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br>
@@ -604,7 +605,7 @@ temporally impractical&amp;hellip;&lt;/p>
 &lt;ul>
 &lt;li>my ortho and physio gave me the green signal to lift heavy again&lt;/li>
 &lt;li>combat (and contact) sports off the table for 2 months though&lt;/li>
-&lt;li>back squatting off the table as well : swapping in zerchers and deficit hex bar deadlifts instead&lt;/li>
+&lt;li>back squatting off the table as well : swapping in zerchers and deficit (3 20 kilo bumpers) inverted hex bar deadlifts instead&lt;/li>
 &lt;li>recomp for a while&lt;/li>
 &lt;/ul>
 &lt;h2 id="0x239d">0x239D&lt;/h2>
@@ -655,7 +656,8 @@ temporally impractical&amp;hellip;&lt;/p>
 &lt;h2 id="0x2247">0x2247&lt;/h2>
 &lt;p>Alright, feel like I&amp;rsquo;ve stabilized enough and am currently voluntarily
 injecting some more chaos into my life.&lt;/p></description></item><item><title>Open Source</title><link>https://rajp152k.github.io/open-source/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/open-source/</guid><description>&lt;p>A &lt;a href="https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747">reverse chronological index&lt;/a> of any contribution whatsover; Cause
-someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t be improved&amp;rdquo;..&lt;/p></description></item><item><title>The PaperShelf</title><link>https://rajp152k.github.io/papershelf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/papershelf/</guid><description>&lt;h2 id="context">&lt;a href="https://thebitmage.com/post/citeread/">Context&lt;/a>&lt;/h2>
+someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t be improved&amp;rdquo;..&lt;/p></description></item><item><title>The DocShelf</title><link>https://rajp152k.github.io/docshelf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/docshelf/</guid><description>&lt;h2 id="context">&lt;a href="https://rajp152k.github.io/post/docshelf/">Context&lt;/a>&lt;/h2>
+&lt;hr></description></item><item><title>The PaperShelf</title><link>https://rajp152k.github.io/papershelf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/papershelf/</guid><description>&lt;h2 id="context">&lt;a href="https://thebitmage.com/post/citeread/">Context&lt;/a>&lt;/h2>
 &lt;hr>
 &lt;h3 id="0x23cf-neurosymbolic-ai-in-2024">0x23CF &lt;a href="https://arxiv.org/pdf/2501.05435">NeuroSymbolic AI in 2024&lt;/a>&lt;/h3>
 &lt;h3 id="0x239d--the-tao-of-ietf">0x239D &lt;a href="https://datatracker.ietf.org/doc/rfc4677/">The Tao of IETF&lt;/a>&lt;/h3>
@@ -902,7 +904,11 @@ issues&lt;/li>
 &lt;h3 id="autodidacticism-2000-present">&lt;em>AutoDidacticism&lt;/em> (2000-Present)&lt;/h3>
 &lt;ul>
 &lt;li>reading, writing, thinking, conversations, teaching, disciplined curiosity and making mistakes play an essential role in how my learning trajectories unroll..&lt;/li>
-&lt;li>I&amp;rsquo;m not trying to build a career any more than I&amp;rsquo;m trying to explore the world epistemologically, in general&lt;/li>
+&lt;li>I&amp;rsquo;m not trying to build a career any more than I&amp;rsquo;m trying to explore the world epistemologically, in general
+&lt;ul>
+&lt;li>tbh, somewhat broken games are more fun than extremely structured ones ..&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>This was an index into major deliverables that might be societally gauge-able&lt;/li>
 &lt;li>As for my generic incentives, &lt;a href="https://thebitmage.com/i-know-not/">this recursive-introspective terser composition&lt;/a> is a summarization attempt&lt;/li>
 &lt;/ul></description></item></channel></rss>
