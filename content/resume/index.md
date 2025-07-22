@@ -147,5 +147,6 @@ sidebar: left
 
  - reading, writing, thinking, conversations, teaching, disciplined curiosity and making mistakes play an essential role in how my learning trajectories unroll..
  - I'm not trying to build a career any more than I'm trying to explore the world epistemologically, in general
+   - tbh, somewhat broken games are more fun than extremely structured ones ..
  - This was an index into major deliverables that might be societally gauge-able
  - As for my generic incentives, [this recursive-introspective terser composition](https://thebitmage.com/i-know-not/) is a summarization attempt

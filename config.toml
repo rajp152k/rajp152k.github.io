@@ -94,6 +94,12 @@ theme = "custom"
   pre = "<i class='fa fa-road'></i>"
   url = '/papershelf/'
   weight = -104
+[[menu.main]]
+  identifier = 'docshelf'
+  name = 'docshelf'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/docshelf/'
+  weight = -104
 #[[menu.main]]
 #  name = 'I know not..'
 #  pre = "<i class='fa fa-road'></i>"

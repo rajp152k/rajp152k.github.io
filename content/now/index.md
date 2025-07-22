@@ -9,7 +9,7 @@ temporally impractical...
 
  - my ortho and physio gave me the green signal to lift heavy again
  - combat (and contact) sports off the table for 2 months though
- - back squatting off the table as well : swapping in zerchers and deficit hex bar deadlifts instead
+ - back squatting off the table as well : swapping in zerchers and deficit (3 20 kilo bumpers) inverted hex bar deadlifts instead
  - recomp for a while
 
 ## 0x239D
