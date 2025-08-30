@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tmux on (bit-mage)</title><link>https://rajp152k.github.io/tags/tmux/</link><description>Recent content in Tmux on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 16 Mar 2025 19:10:48 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/tmux/index.xml" rel="self" type="application/rss+xml"/><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p>Fabric&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p>
-&lt;p>Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p>
-&lt;p>Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p>
-&lt;p>Gptel&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p></description></item><item><title>Python like a Spartan</title><link>https://rajp152k.github.io/post/nvim-tmux-docker-python/</link><pubDate>Thu, 18 Jan 2024 12:15:48 +0530</pubDate><guid>https://rajp152k.github.io/post/nvim-tmux-docker-python/</guid><description>&lt;p>I&amp;rsquo;m an AI Research Engineer and that involves messing around a little
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tmux on (bit-mage)</title><link>https://rajp152k.github.io/tags/tmux/</link><description>Recent content in Tmux on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 16 Mar 2025 19:10:48 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/tmux/index.xml" rel="self" type="application/rss+xml"/><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p&gt;Fabric&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p&gt;
+&lt;p&gt;Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p&gt;
+&lt;p&gt;Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p&gt;
+&lt;p&gt;Gptel&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p&gt;</description></item><item><title>Python like a Spartan</title><link>https://rajp152k.github.io/post/nvim-tmux-docker-python/</link><pubDate>Thu, 18 Jan 2024 12:15:48 +0530</pubDate><guid>https://rajp152k.github.io/post/nvim-tmux-docker-python/</guid><description>&lt;p&gt;I&amp;rsquo;m an AI Research Engineer and that involves messing around a little
 with python. I&amp;rsquo;ve spent the past 4 years perfecting a disciplined,
-minimal, but enabling setup.&lt;/p>
-&lt;p>This is a tour of my trusty set of tools, in the hopes that it will help
-you find the same CLI zen that I&amp;rsquo;ve been enjoying for a while now.&lt;/p>
-&lt;h2 id="tmux--towards-an-eternal-shell">Tmux : towards an Eternal Shell&lt;/h2>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/setup/tmux.png" alt="tmux">&lt;/p>
-&lt;p>I start my work sessions off by ssh&amp;rsquo;ing into my remote compute
-cluster.&lt;/p></description></item><item><title>Learn Vim the smart way</title><link>https://rajp152k.github.io/post/learn-vim-the-smart-way/</link><pubDate>Fri, 20 Oct 2023 19:18:08 +0530</pubDate><guid>https://rajp152k.github.io/post/learn-vim-the-smart-way/</guid><description>&lt;p>I&amp;rsquo;ve been building up my vimrc again because emacs&amp;rsquo; tramp mode just
+minimal, but enabling setup.&lt;/p&gt;
+&lt;p&gt;This is a tour of my trusty set of tools, in the hopes that it will help
+you find the same CLI zen that I&amp;rsquo;ve been enjoying for a while now.&lt;/p&gt;
+&lt;h2 id="tmux--towards-an-eternal-shell"&gt;Tmux : towards an Eternal Shell&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/setup/tmux.png" alt="tmux"&gt;&lt;/p&gt;
+&lt;p&gt;I start my work sessions off by ssh&amp;rsquo;ing into my remote compute
+cluster.&lt;/p&gt;</description></item><item><title>Learn Vim the smart way</title><link>https://rajp152k.github.io/post/learn-vim-the-smart-way/</link><pubDate>Fri, 20 Oct 2023 19:18:08 +0530</pubDate><guid>https://rajp152k.github.io/post/learn-vim-the-smart-way/</guid><description>&lt;p&gt;I&amp;rsquo;ve been building up my vimrc again because emacs&amp;rsquo; tramp mode just
 wasn&amp;rsquo;t cutting it when it came to speed for my remote work
-environments.&lt;/p>
-&lt;p>I&amp;rsquo;ve been a vim user for around 4 years now and having read some books
+environments.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been a vim user for around 4 years now and having read some books
 partially and sampling a lot of blogs and conference recordings over
 this span, I decided I should commit and formally invest into a
-definitive resource to get me upto speed and beyond.&lt;/p></description></item></channel></rss>
+definitive resource to get me upto speed and beyond.&lt;/p&gt;</description></item></channel></rss>

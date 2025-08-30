@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Book on (bit-mage)</title><link>https://rajp152k.github.io/tags/book/</link><description>Recent content in Book on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 20 Oct 2023 19:18:08 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/book/index.xml" rel="self" type="application/rss+xml"/><item><title>Learn Vim the smart way</title><link>https://rajp152k.github.io/post/learn-vim-the-smart-way/</link><pubDate>Fri, 20 Oct 2023 19:18:08 +0530</pubDate><guid>https://rajp152k.github.io/post/learn-vim-the-smart-way/</guid><description>&lt;p>I&amp;rsquo;ve been building up my vimrc again because emacs&amp;rsquo; tramp mode just
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Book on (bit-mage)</title><link>https://rajp152k.github.io/tags/book/</link><description>Recent content in Book on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 20 Oct 2023 19:18:08 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/book/index.xml" rel="self" type="application/rss+xml"/><item><title>Learn Vim the smart way</title><link>https://rajp152k.github.io/post/learn-vim-the-smart-way/</link><pubDate>Fri, 20 Oct 2023 19:18:08 +0530</pubDate><guid>https://rajp152k.github.io/post/learn-vim-the-smart-way/</guid><description>&lt;p&gt;I&amp;rsquo;ve been building up my vimrc again because emacs&amp;rsquo; tramp mode just
 wasn&amp;rsquo;t cutting it when it came to speed for my remote work
-environments.&lt;/p>
-&lt;p>I&amp;rsquo;ve been a vim user for around 4 years now and having read some books
+environments.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been a vim user for around 4 years now and having read some books
 partially and sampling a lot of blogs and conference recordings over
 this span, I decided I should commit and formally invest into a
-definitive resource to get me upto speed and beyond.&lt;/p></description></item><item><title>The Hundred Page Machine Learning Book</title><link>https://rajp152k.github.io/post/100pagemlbook/</link><pubDate>Tue, 10 Oct 2023 19:40:19 +0530</pubDate><guid>https://rajp152k.github.io/post/100pagemlbook/</guid><description>&lt;p>I couldn&amp;rsquo;t have asked for a denser review of such a technical and
+definitive resource to get me upto speed and beyond.&lt;/p&gt;</description></item><item><title>The Hundred Page Machine Learning Book</title><link>https://rajp152k.github.io/post/100pagemlbook/</link><pubDate>Tue, 10 Oct 2023 19:40:19 +0530</pubDate><guid>https://rajp152k.github.io/post/100pagemlbook/</guid><description>&lt;p&gt;I couldn&amp;rsquo;t have asked for a denser review of such a technical and
 diverse domain. It&amp;rsquo;d been more a year since I graduated (majored in
 computer science and minored in artificial intelligence) and so I
 decided to brush up on some basics and consolidate what I&amp;rsquo;d studying
-since the past ~4 years.&lt;/p>
-&lt;p>I also picked up the book to systematically populate my org-roam
-buffer and have my root node rooted &lt;a href="https://buffer.thebitmage.com/20230911114632-the100pagemlbook.html">here in the
-braindump&lt;/a>.&lt;/p></description></item><item><title>Reading an Author</title><link>https://rajp152k.github.io/post/reading-an-author/</link><pubDate>Wed, 06 Sep 2023 16:46:47 +0530</pubDate><guid>https://rajp152k.github.io/post/reading-an-author/</guid><description>&lt;p>Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
-refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-old-works/">here&lt;/a>&lt;/p>
-&lt;h1 id="the-unaltered-entry">The Unaltered Entry&lt;/h1>
-&lt;h2 id="2022-02-01-tue-1011---7946">[2022-02-01 Tue 10:11] - 7946&lt;/h2>
-&lt;p>I, hitherto, have been reading books as a single unit of intellectual
+since the past ~4 years.&lt;/p&gt;
+&lt;p&gt;I also picked up the book to systematically populate my org-roam
+buffer and have my root node rooted &lt;a href="https://buffer.thebitmage.com/20230911114632-the100pagemlbook.html"&gt;here in the
+braindump&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Reading an Author</title><link>https://rajp152k.github.io/post/reading-an-author/</link><pubDate>Wed, 06 Sep 2023 16:46:47 +0530</pubDate><guid>https://rajp152k.github.io/post/reading-an-author/</guid><description>&lt;p&gt;Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
+refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-old-works/"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="the-unaltered-entry"&gt;The Unaltered Entry&lt;/h1&gt;
+&lt;h2 id="2022-02-01-tue-1011---7946"&gt;[2022-02-01 Tue 10:11] - 7946&lt;/h2&gt;
+&lt;p&gt;I, hitherto, have been reading books as a single unit of intellectual
 conveyance. However, that strategy doesn&amp;rsquo;t work for all the
 works. Some authors have their writings crisply intertwined with
-their other writings.&lt;/p>
-&lt;p>Approaching a single book as a part of a larger intellectual
+their other writings.&lt;/p&gt;
+&lt;p&gt;Approaching a single book as a part of a larger intellectual
 conveyance is more efficient in the longer term if one intends to read
 all the work of a particular author. Consequently, grouping these
-reads together has also been somewhat interesting lately.&lt;/p></description></item><item><title>The Definitive Guide to Books</title><link>https://rajp152k.github.io/post/the-definitive-guide-to-books/</link><pubDate>Thu, 31 Aug 2023 03:57:29 +0530</pubDate><guid>https://rajp152k.github.io/post/the-definitive-guide-to-books/</guid><description>&lt;p>Books play a pivotal role in the life of any aspiring and existing intellectual. I began
+reads together has also been somewhat interesting lately.&lt;/p&gt;</description></item><item><title>The Definitive Guide to Books</title><link>https://rajp152k.github.io/post/the-definitive-guide-to-books/</link><pubDate>Thu, 31 Aug 2023 03:57:29 +0530</pubDate><guid>https://rajp152k.github.io/post/the-definitive-guide-to-books/</guid><description>&lt;p&gt;Books play a pivotal role in the life of any aspiring and existing intellectual. I began
 reading diversely and seriously when I was 19 and immediately
-regretted not starting sooner.&lt;/p>
-&lt;p>Reading sets you up for an involved existence. If you read vastly,
-you&amp;rsquo;ll be a force to be reckoned with.&lt;/p>
-&lt;p>Over the span of 3 years (2019 - 2022), I read around a 100 books ranging from
+regretted not starting sooner.&lt;/p&gt;
+&lt;p&gt;Reading sets you up for an involved existence. If you read vastly,
+you&amp;rsquo;ll be a force to be reckoned with.&lt;/p&gt;
+&lt;p&gt;Over the span of 3 years (2019 - 2022), I read around a 100 books ranging from
 the classics, biographies, auto-biographies, physics, computer science,
 anthropology, data science, etymology, theology, game theory, mathematics, history,
 how-to-books, nutrition, physiology , fitness, health, psychology, neuroscience, linguistics,
@@ -36,21 +36,21 @@ self help (guilty as charged), spirituality, humor (guides to being
 funny and similar stuff), young adult (only 1 - please don&amp;rsquo;t chastise
 me - I could not handle the cringe), philosophy (a lot - please don&amp;rsquo;t chastise
 me) and meta books (speed reading, how to consume books, taking notes,
-etc).&lt;/p></description></item><item><title>Practical Natural Language Processing : Chapters 1-5</title><link>https://rajp152k.github.io/post/practical-nlp-c1-5/</link><pubDate>Tue, 29 Aug 2023 16:32:06 +0530</pubDate><guid>https://rajp152k.github.io/post/practical-nlp-c1-5/</guid><description>&lt;p>I took this up when I had to setup a bunch of NLP pipelines for work and
+etc).&lt;/p&gt;</description></item><item><title>Practical Natural Language Processing : Chapters 1-5</title><link>https://rajp152k.github.io/post/practical-nlp-c1-5/</link><pubDate>Tue, 29 Aug 2023 16:32:06 +0530</pubDate><guid>https://rajp152k.github.io/post/practical-nlp-c1-5/</guid><description>&lt;p&gt;I took this up when I had to setup a bunch of NLP pipelines for work and
 this does stand true to its name - it is a quick and practical index
 into approaches, introductory theory and useful libraries for the
-same.&lt;/p>
-&lt;p>I don&amp;rsquo;t like reading text books at a stretch due to several reasons:-
+same.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t like reading text books at a stretch due to several reasons:-
 &amp;ldquo;cross a bridge, when you get to it&amp;rdquo; is something that has stood the
 test of time for me when it comes to reading practical books. I don&amp;rsquo;t
 find it useful to read stuff without the doing if that is what the
-book is intended for.&lt;/p></description></item><item><title>Common Lisp - A Gentle Introduction to Symbolic Computation</title><link>https://rajp152k.github.io/post/cl-aitsc/</link><pubDate>Wed, 16 Aug 2023 17:51:13 +0530</pubDate><guid>https://rajp152k.github.io/post/cl-aitsc/</guid><description>&lt;p>Given I&amp;rsquo;ve passed through SICP once, quickly grasping common
+book is intended for.&lt;/p&gt;</description></item><item><title>Common Lisp - A Gentle Introduction to Symbolic Computation</title><link>https://rajp152k.github.io/post/cl-aitsc/</link><pubDate>Wed, 16 Aug 2023 17:51:13 +0530</pubDate><guid>https://rajp152k.github.io/post/cl-aitsc/</guid><description>&lt;p&gt;Given I&amp;rsquo;ve passed through SICP once, quickly grasping common
 lisp to build stuff and explore the
 traditional and industrial aspects of lisp (I know clojure exists but
 traditional&amp;hellip;) was my next objective: with decent speed and only
 solving the somewhat involved exercises, it took me two weeks to
-complete this book.&lt;/p>
-&lt;p>The exercises aren&amp;rsquo;t meant to be a challenge but to adapt to the
+complete this book.&lt;/p&gt;
+&lt;p&gt;The exercises aren&amp;rsquo;t meant to be a challenge but to adapt to the
 environment and the topics introduced. The book does not explore
 concepts with depth (CLOS, macros, etc&amp;hellip;) but that shouldn&amp;rsquo;t be the
-objective of an introduction anyway.&lt;/p></description></item></channel></rss>
+objective of an introduction anyway.&lt;/p&gt;</description></item></channel></rss>

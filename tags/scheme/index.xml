@@ -1,37 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scheme on (bit-mage)</title><link>https://rajp152k.github.io/tags/scheme/</link><description>Recent content in Scheme on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 17 Apr 2025 06:36:56 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/scheme/index.xml" rel="self" type="application/rss+xml"/><item><title>Jargony Outlines</title><link>https://rajp152k.github.io/post/phrasal-outlines/</link><pubDate>Thu, 17 Apr 2025 06:36:56 +0530</pubDate><guid>https://rajp152k.github.io/post/phrasal-outlines/</guid><description>&lt;h2 id="context">Context&lt;/h2>
-&lt;blockquote>
-&lt;p>been reading more papers&lt;br>
-notes by jargony outlines&lt;br>
-no unnecessary words&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>if can express&lt;br>
-few words&lt;br>
-you get it&lt;br>
-get it?&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>concise, practical&lt;br>
-flowy, comprehensible&lt;br>
-jargon is fun&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>in org-roam&lt;br>
-links when depth&lt;br>
-more speed&lt;br>
-good&lt;/p>&lt;/blockquote>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt="">&lt;/p>
-&lt;blockquote>
-&lt;p>all left&lt;br>
-tech haikus&lt;br>
-challenge&lt;br>
-someday&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>until then&lt;/p>&lt;/blockquote>
-&lt;h2 id="enjoy-instance-for-this">&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org">Enjoy instance&lt;/a> for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf">this&lt;/a>&lt;/h2></description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p>I finished my first pass of SICP (structure and interpretation of
-computer programs) around &lt;a href="https://github.com/rajp152k/SICP">3 years
-ago&lt;/a>. Since, I&amp;rsquo;ve realized the
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scheme on (bit-mage)</title><link>https://rajp152k.github.io/tags/scheme/</link><description>Recent content in Scheme on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 17 Apr 2025 06:36:56 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/scheme/index.xml" rel="self" type="application/rss+xml"/><item><title>Jargony Outlines</title><link>https://rajp152k.github.io/post/phrasal-outlines/</link><pubDate>Thu, 17 Apr 2025 06:36:56 +0530</pubDate><guid>https://rajp152k.github.io/post/phrasal-outlines/</guid><description>&lt;h2 id="context"&gt;Context&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;been reading more papers&lt;br&gt;
+notes by jargony outlines&lt;br&gt;
+no unnecessary words&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;if can express&lt;br&gt;
+few words&lt;br&gt;
+you get it&lt;br&gt;
+get it?&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;concise, practical&lt;br&gt;
+flowy, comprehensible&lt;br&gt;
+jargon is fun&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in org-roam&lt;br&gt;
+links when depth&lt;br&gt;
+more speed&lt;br&gt;
+good&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt=""&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;all left&lt;br&gt;
+tech haikus&lt;br&gt;
+challenge&lt;br&gt;
+someday&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;until then&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id="enjoy-instance-for-this"&gt;&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org"&gt;Enjoy instance&lt;/a&gt; for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf"&gt;this&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p&gt;I finished my first pass of SICP (structure and interpretation of
+computer programs) around &lt;a href="https://github.com/rajp152k/SICP"&gt;3 years
+ago&lt;/a&gt;. Since, I&amp;rsquo;ve realized the
 elegantly implicit existence of symbolic algebra in several domains
-that I personally explore on a regular basis.&lt;/p>
-&lt;p>That initial infatuation with Lisp ( and consequently symbolic
+that I personally explore on a regular basis.&lt;/p&gt;
+&lt;p&gt;That initial infatuation with Lisp ( and consequently symbolic
 computation ) has simmered and fermented enough in my mind to be
 realised as a potent generic thinking device. To cement my
 commitment to the same, I&amp;rsquo;ll regularly dive deeper into relevant academia
-so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p></description></item></channel></rss>
+so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p&gt;</description></item></channel></rss>

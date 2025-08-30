@@ -1,136 +1,136 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacs on (bit-mage)</title><link>https://rajp152k.github.io/tags/emacs/</link><description>Recent content in Emacs on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 23 Jul 2025 10:17:53 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml"/><item><title>The Home Row</title><link>https://rajp152k.github.io/post/the-home-row/</link><pubDate>Wed, 23 Jul 2025 10:17:53 +0530</pubDate><guid>https://rajp152k.github.io/post/the-home-row/</guid><description>&lt;p>Getting a little pedantic with my doom configs&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> these days..&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(defmacro generate-bindable-lambda (&lt;span style="color:#66d9ef">&amp;amp;rest&lt;/span> body)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">`&lt;/span>&lt;span style="color:#a6e22e">#&amp;#39;&lt;/span>(lambda ()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (interactive)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">,@&lt;/span>body))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;; .. the home row ..&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(map! :map evil-normal-state-map
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i p&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;+&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i n&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;-&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i u&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;_&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i e&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;=&amp;#34;&lt;/span>)))
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Maybe I should consider buying foot pedals.., and eye trackers (3 screens at the moment ) .., and setting up an array of interface sensors to truly begin exploiting emacs..,
-to the point of conducting an orchestra of text buffers.., somewhat musically (/ whimsically?)..&lt;/p></description></item><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p>I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br>
-- an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br>
-- an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br>
-- a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br>
-- several compute clusters (avx enabled x86s, ARM, &amp;ldquo;the propietary GPU driver guy on the street&amp;rdquo; GPUs, &amp;ldquo;the other open source GPU driver guy on the steet&amp;rdquo; GPUs, k8s orchestrated production &amp;amp; development playgrounds) for work&lt;br>
-- an AMD x86 Tumbleweed with emacs as the daily driver where I actually &amp;ldquo;work&amp;rdquo; : this is desk where I dissect, analyse, reconstruct and dispatch for usage across the above&lt;/p></description></item><item><title>Tetris-Complete</title><link>https://rajp152k.github.io/post/tetris-complete/</link><pubDate>Fri, 16 May 2025 15:39:43 +0530</pubDate><guid>https://rajp152k.github.io/post/tetris-complete/</guid><description>&lt;p>Emacs Lisp is &lt;a href="https://www.reddit.com/r/spacemacs/comments/dertfg/comment/f2ys9hq/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button">Tetris Complete&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>did not mean &lt;a href="https://www.reddit.com/r/spacemacs/comments/dertfg/comment/f31v6uf/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button">Turing Complete&lt;/a>&lt;/li>
-&lt;li>really did &lt;a href="https://www.reddit.com/r/ProgrammingLanguages/comments/8yct5s/comment/e29v03f/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button">not&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Decommissioning Roam Builds</title><link>https://rajp152k.github.io/post/decommissioning-roam-builds/</link><pubDate>Thu, 24 Apr 2025 14:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/decommissioning-roam-builds/</guid><description>&lt;p>As of &lt;a href="https://github.com/rajp152k/buffer/commit/ab67e8281cd4159077d4524e13c57c1d3a6623c8#diff-8b236f169972d04a6ef8a362fb84d1e2654e1ff5d347267fd78cfb10d904f0d5">today&lt;/a>, am decommissioning my org roam notes builds : there used to be a notes section in the banner above.&lt;/p>
-&lt;p>The current UI is not apt anymore for the scale of nodes accumulated - build times are high (2+ mins) and the navigation capabilities are archaic : will engineer and publish another navigation experience soon. Will continue publishing my notes to the &lt;a href="https://github.com/rajp152k/buffer">repository&lt;/a> as usual.&lt;/p></description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p>&lt;a href="https://github.com/rajp152k/nth-roam/tree/master">Nth Roam&lt;/a> : An Emacs package to efficiently manage multiple roam instances&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div></description></item><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p>Fabric&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p>
-&lt;p>Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p>
-&lt;p>Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p>
-&lt;p>Gptel&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p></description></item><item><title>Doom Emacs config'd for Python</title><link>https://rajp152k.github.io/post/doom-emacs-python/</link><pubDate>Thu, 19 Sep 2024 15:10:44 +0530</pubDate><guid>https://rajp152k.github.io/post/doom-emacs-python/</guid><description>&lt;p>Alter your doom block in init.el:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(doom! 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :lang 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (python +lsp +pyright +conda)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I recommend pyright, is snappier than pyls..&lt;/p>
-&lt;p>you&amp;rsquo;ll also need lsp enabled in your tools, I also have &lt;code>+peek&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(doom! 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :tools
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (lsp +peek)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>for more info, hit &lt;code>&amp;lt;space&amp;gt; h d m lsp&amp;lt;CR&amp;gt;&lt;/code>&lt;/p>
-&lt;p>Alter your config.el (I use miniforge to get mamba and conda):&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">; Conda&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(use-package! conda
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :config
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (setq conda-anaconda-home (&lt;span style="color:#a6e22e">expand-file-name&lt;/span> &lt;span style="color:#e6db74">&amp;#34;~/mambaforge&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-initialize-interactive-shells)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-initialize-eshell)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-autoactivate-mode &lt;span style="color:#66d9ef">t&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (add-hook &lt;span style="color:#e6db74">&amp;#39;find-file-hook&lt;/span> (lambda () (when (bound-and-true-p conda-project-env-path)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-activate-for-buffer)))))
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once that&amp;rsquo;s done, hit &lt;code>&amp;lt;space&amp;gt; h r r&lt;/code> and your ready to go.&lt;/p></description></item><item><title>I'm in the Business of Ideation</title><link>https://rajp152k.github.io/post/gaming-youtube/</link><pubDate>Tue, 17 Sep 2024 09:01:23 +0530</pubDate><guid>https://rajp152k.github.io/post/gaming-youtube/</guid><description>&lt;p>People have been responding to emacs and my beard.&lt;/p>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/youtube/screenshot_2024-09-17T09:06:11.png?updatedAt=1726544204857" alt="comments">&lt;/p>
-&lt;p>For a while I thought I did not have a lot to say. Turns out a lot of other humans are quite interested in the much of the same things that I&amp;rsquo;m into: my hatred for the mouse, and the consequent love for efficient workflows being some of them.&lt;/p>
-&lt;p>I&amp;rsquo;ll give the people what they want: I get to enjoy esoteric tech and spread the word, growing a cult, while other humans have enlightened experiences (believe me I do talk like this in person) and continue propogating the techno-propaganda about enjoying computer science.&lt;/p></description></item><item><title>My Emacs Journey</title><link>https://rajp152k.github.io/post/my-emacs-journey/</link><pubDate>Mon, 16 Sep 2024 20:13:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-journey/</guid><description>&lt;p>Emacs has been a trustworthy companion of mine for around 4+ years now. We&amp;rsquo;ve shared some highs and lows. I owe a major fraction of whatever conceptual depth I maintain in computer science to messing around with my tools.&lt;/p>
-&lt;p>Emacs is also the core of my first &lt;a href="https://youtu.be/UwfYn9lTm74">major youtube breakthrough&lt;/a>.&lt;/p>
-&lt;p>I haven&amp;rsquo;t yet explored the emacs niche completely and will be investing more time into honing my repertoire and understanding what sort of mindset the tooling expects from you rather than just fitting emacs into my thoughts.&lt;/p></description></item><item><title>Thinkpad X13 Gen 4 AMD Ryzen Pro 7840U &amp; Workflow Review</title><link>https://rajp152k.github.io/post/new-laptop/</link><pubDate>Thu, 06 Jun 2024 17:17:59 +0530</pubDate><guid>https://rajp152k.github.io/post/new-laptop/</guid><description>&lt;p>I recently shifted my operations to a thinkpad x13g4amd (Ryzen 7840U + 780M Radeon) and am using this transfer as an opportunity to realize and improve my work related habits.&lt;/p>
-&lt;h2 id="gnulinux">GNU/Linux&lt;/h2>
-&lt;p>All of my pipelines are based around Linux and the core GNU utils. I had to use windows for a while due to org-wide constraints but I&amp;rsquo;ve recently been given the signal to shift to linux.&lt;/p>
-&lt;p>I rarely used any windows native tools for my workflows and there was always a layer of linux emulation/virtualization (wsl, scoop, and the likes) upon which I conducted my usual operations. Given I use Debian at home, a non native linux experience was frustrating at best and depressing at worst. No more, do I have to confine myself.&lt;/p></description></item><item><title>Python like a Spartan</title><link>https://rajp152k.github.io/post/nvim-tmux-docker-python/</link><pubDate>Thu, 18 Jan 2024 12:15:48 +0530</pubDate><guid>https://rajp152k.github.io/post/nvim-tmux-docker-python/</guid><description>&lt;p>I&amp;rsquo;m an AI Research Engineer and that involves messing around a little
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emacs on (bit-mage)</title><link>https://rajp152k.github.io/tags/emacs/</link><description>Recent content in Emacs on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 23 Jul 2025 10:17:53 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml"/><item><title>The Home Row</title><link>https://rajp152k.github.io/post/the-home-row/</link><pubDate>Wed, 23 Jul 2025 10:17:53 +0530</pubDate><guid>https://rajp152k.github.io/post/the-home-row/</guid><description>&lt;p&gt;Getting a little pedantic with my doom configs&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; these days..&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(defmacro generate-bindable-lambda (&lt;span style="color:#66d9ef"&gt;&amp;amp;rest&lt;/span&gt; body)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;`&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;#&amp;#39;&lt;/span&gt;(lambda ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (interactive)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;,@&lt;/span&gt;body))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;; .. the home row ..&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(map! :map evil-normal-state-map
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i p&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;+&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i n&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;-&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i u&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;_&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i e&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;=&amp;#34;&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Maybe I should consider buying foot pedals.., and eye trackers (3 screens at the moment ) .., and setting up an array of interface sensors to truly begin exploiting emacs..,
+to the point of conducting an orchestra of text buffers.., somewhat musically (/ whimsically?)..&lt;/p&gt;</description></item><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p&gt;I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br&gt;
+- an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br&gt;
+- an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br&gt;
+- a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br&gt;
+- several compute clusters (avx enabled x86s, ARM, &amp;ldquo;the propietary GPU driver guy on the street&amp;rdquo; GPUs, &amp;ldquo;the other open source GPU driver guy on the steet&amp;rdquo; GPUs, k8s orchestrated production &amp;amp; development playgrounds) for work&lt;br&gt;
+- an AMD x86 Tumbleweed with emacs as the daily driver where I actually &amp;ldquo;work&amp;rdquo; : this is desk where I dissect, analyse, reconstruct and dispatch for usage across the above&lt;/p&gt;</description></item><item><title>Tetris-Complete</title><link>https://rajp152k.github.io/post/tetris-complete/</link><pubDate>Fri, 16 May 2025 15:39:43 +0530</pubDate><guid>https://rajp152k.github.io/post/tetris-complete/</guid><description>&lt;p&gt;Emacs Lisp is &lt;a href="https://www.reddit.com/r/spacemacs/comments/dertfg/comment/f2ys9hq/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button"&gt;Tetris Complete&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;did not mean &lt;a href="https://www.reddit.com/r/spacemacs/comments/dertfg/comment/f31v6uf/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button"&gt;Turing Complete&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;really did &lt;a href="https://www.reddit.com/r/ProgrammingLanguages/comments/8yct5s/comment/e29v03f/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button"&gt;not&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Decommissioning Roam Builds</title><link>https://rajp152k.github.io/post/decommissioning-roam-builds/</link><pubDate>Thu, 24 Apr 2025 14:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/decommissioning-roam-builds/</guid><description>&lt;p&gt;As of &lt;a href="https://github.com/rajp152k/buffer/commit/ab67e8281cd4159077d4524e13c57c1d3a6623c8#diff-8b236f169972d04a6ef8a362fb84d1e2654e1ff5d347267fd78cfb10d904f0d5"&gt;today&lt;/a&gt;, am decommissioning my org roam notes builds : there used to be a notes section in the banner above.&lt;/p&gt;
+&lt;p&gt;The current UI is not apt anymore for the scale of nodes accumulated - build times are high (2+ mins) and the navigation capabilities are archaic : will engineer and publish another navigation experience soon. Will continue publishing my notes to the &lt;a href="https://github.com/rajp152k/buffer"&gt;repository&lt;/a&gt; as usual.&lt;/p&gt;</description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p&gt;&lt;a href="https://github.com/rajp152k/nth-roam/tree/master"&gt;Nth Roam&lt;/a&gt; : An Emacs package to efficiently manage multiple roam instances&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;</description></item><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p&gt;Fabric&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p&gt;
+&lt;p&gt;Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p&gt;
+&lt;p&gt;Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p&gt;
+&lt;p&gt;Gptel&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p&gt;</description></item><item><title>Doom Emacs config'd for Python</title><link>https://rajp152k.github.io/post/doom-emacs-python/</link><pubDate>Thu, 19 Sep 2024 15:10:44 +0530</pubDate><guid>https://rajp152k.github.io/post/doom-emacs-python/</guid><description>&lt;p&gt;Alter your doom block in init.el:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(doom! 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; :lang 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (python +lsp +pyright +conda)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I recommend pyright, is snappier than pyls..&lt;/p&gt;
+&lt;p&gt;you&amp;rsquo;ll also need lsp enabled in your tools, I also have &lt;code&gt;+peek&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(doom! 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; :tools
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (lsp +peek)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;for more info, hit &lt;code&gt;&amp;lt;space&amp;gt; h d m lsp&amp;lt;CR&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Alter your config.el (I use miniforge to get mamba and conda):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;; Conda&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(use-package! conda
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; :config
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (setq conda-anaconda-home (&lt;span style="color:#a6e22e"&gt;expand-file-name&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;~/mambaforge&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (conda-env-initialize-interactive-shells)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (conda-env-initialize-eshell)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (conda-env-autoactivate-mode &lt;span style="color:#66d9ef"&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (add-hook &lt;span style="color:#e6db74"&gt;&amp;#39;find-file-hook&lt;/span&gt; (lambda () (when (bound-and-true-p conda-project-env-path)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (conda-env-activate-for-buffer)))))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once that&amp;rsquo;s done, hit &lt;code&gt;&amp;lt;space&amp;gt; h r r&lt;/code&gt; and your ready to go.&lt;/p&gt;</description></item><item><title>I'm in the Business of Ideation</title><link>https://rajp152k.github.io/post/gaming-youtube/</link><pubDate>Tue, 17 Sep 2024 09:01:23 +0530</pubDate><guid>https://rajp152k.github.io/post/gaming-youtube/</guid><description>&lt;p&gt;People have been responding to emacs and my beard.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/youtube/screenshot_2024-09-17T09:06:11.png?updatedAt=1726544204857" alt="comments"&gt;&lt;/p&gt;
+&lt;p&gt;For a while I thought I did not have a lot to say. Turns out a lot of other humans are quite interested in the much of the same things that I&amp;rsquo;m into: my hatred for the mouse, and the consequent love for efficient workflows being some of them.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll give the people what they want: I get to enjoy esoteric tech and spread the word, growing a cult, while other humans have enlightened experiences (believe me I do talk like this in person) and continue propogating the techno-propaganda about enjoying computer science.&lt;/p&gt;</description></item><item><title>My Emacs Journey</title><link>https://rajp152k.github.io/post/my-emacs-journey/</link><pubDate>Mon, 16 Sep 2024 20:13:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-journey/</guid><description>&lt;p&gt;Emacs has been a trustworthy companion of mine for around 4+ years now. We&amp;rsquo;ve shared some highs and lows. I owe a major fraction of whatever conceptual depth I maintain in computer science to messing around with my tools.&lt;/p&gt;
+&lt;p&gt;Emacs is also the core of my first &lt;a href="https://youtu.be/UwfYn9lTm74"&gt;major youtube breakthrough&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I haven&amp;rsquo;t yet explored the emacs niche completely and will be investing more time into honing my repertoire and understanding what sort of mindset the tooling expects from you rather than just fitting emacs into my thoughts.&lt;/p&gt;</description></item><item><title>Thinkpad X13 Gen 4 AMD Ryzen Pro 7840U &amp; Workflow Review</title><link>https://rajp152k.github.io/post/new-laptop/</link><pubDate>Thu, 06 Jun 2024 17:17:59 +0530</pubDate><guid>https://rajp152k.github.io/post/new-laptop/</guid><description>&lt;p&gt;I recently shifted my operations to a thinkpad x13g4amd (Ryzen 7840U + 780M Radeon) and am using this transfer as an opportunity to realize and improve my work related habits.&lt;/p&gt;
+&lt;h2 id="gnulinux"&gt;GNU/Linux&lt;/h2&gt;
+&lt;p&gt;All of my pipelines are based around Linux and the core GNU utils. I had to use windows for a while due to org-wide constraints but I&amp;rsquo;ve recently been given the signal to shift to linux.&lt;/p&gt;
+&lt;p&gt;I rarely used any windows native tools for my workflows and there was always a layer of linux emulation/virtualization (wsl, scoop, and the likes) upon which I conducted my usual operations. Given I use Debian at home, a non native linux experience was frustrating at best and depressing at worst. No more, do I have to confine myself.&lt;/p&gt;</description></item><item><title>Python like a Spartan</title><link>https://rajp152k.github.io/post/nvim-tmux-docker-python/</link><pubDate>Thu, 18 Jan 2024 12:15:48 +0530</pubDate><guid>https://rajp152k.github.io/post/nvim-tmux-docker-python/</guid><description>&lt;p&gt;I&amp;rsquo;m an AI Research Engineer and that involves messing around a little
 with python. I&amp;rsquo;ve spent the past 4 years perfecting a disciplined,
-minimal, but enabling setup.&lt;/p>
-&lt;p>This is a tour of my trusty set of tools, in the hopes that it will help
-you find the same CLI zen that I&amp;rsquo;ve been enjoying for a while now.&lt;/p>
-&lt;h2 id="tmux--towards-an-eternal-shell">Tmux : towards an Eternal Shell&lt;/h2>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/setup/tmux.png" alt="tmux">&lt;/p>
-&lt;p>I start my work sessions off by ssh&amp;rsquo;ing into my remote compute
-cluster.&lt;/p></description></item><item><title>Learn Vim the smart way</title><link>https://rajp152k.github.io/post/learn-vim-the-smart-way/</link><pubDate>Fri, 20 Oct 2023 19:18:08 +0530</pubDate><guid>https://rajp152k.github.io/post/learn-vim-the-smart-way/</guid><description>&lt;p>I&amp;rsquo;ve been building up my vimrc again because emacs&amp;rsquo; tramp mode just
+minimal, but enabling setup.&lt;/p&gt;
+&lt;p&gt;This is a tour of my trusty set of tools, in the hopes that it will help
+you find the same CLI zen that I&amp;rsquo;ve been enjoying for a while now.&lt;/p&gt;
+&lt;h2 id="tmux--towards-an-eternal-shell"&gt;Tmux : towards an Eternal Shell&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/setup/tmux.png" alt="tmux"&gt;&lt;/p&gt;
+&lt;p&gt;I start my work sessions off by ssh&amp;rsquo;ing into my remote compute
+cluster.&lt;/p&gt;</description></item><item><title>Learn Vim the smart way</title><link>https://rajp152k.github.io/post/learn-vim-the-smart-way/</link><pubDate>Fri, 20 Oct 2023 19:18:08 +0530</pubDate><guid>https://rajp152k.github.io/post/learn-vim-the-smart-way/</guid><description>&lt;p&gt;I&amp;rsquo;ve been building up my vimrc again because emacs&amp;rsquo; tramp mode just
 wasn&amp;rsquo;t cutting it when it came to speed for my remote work
-environments.&lt;/p>
-&lt;p>I&amp;rsquo;ve been a vim user for around 4 years now and having read some books
+environments.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been a vim user for around 4 years now and having read some books
 partially and sampling a lot of blogs and conference recordings over
 this span, I decided I should commit and formally invest into a
-definitive resource to get me upto speed and beyond.&lt;/p></description></item><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p>This is an auxilliary post collating resources for the recent video I
-posted &amp;hellip;&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dKU_mNaEo1g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+definitive resource to get me upto speed and beyond.&lt;/p&gt;</description></item><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p&gt;This is an auxilliary post collating resources for the recent video I
+posted &amp;hellip;&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dKU_mNaEo1g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;h2 id="the-pipeline">The Pipeline&lt;/h2>
-&lt;ol>
-&lt;li>All the ideas, resources that I want to process, any miscellaneous
-questions I have, are fed into the input-queue in the buffer&lt;/li>
-&lt;li>All the manipulation takes place in these buffers - they&amp;rsquo;re
-org-files and I use org-roam to maintain the connections&lt;/li>
-&lt;li>whenever a node set ripens and is worth sharing, I write a
-post or publish a video.&lt;/li>
-&lt;li>It can go both ways : I can force a set into maturity if I wish to
+&lt;h2 id="the-pipeline"&gt;The Pipeline&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;All the ideas, resources that I want to process, any miscellaneous
+questions I have, are fed into the input-queue in the buffer&lt;/li&gt;
+&lt;li&gt;All the manipulation takes place in these buffers - they&amp;rsquo;re
+org-files and I use org-roam to maintain the connections&lt;/li&gt;
+&lt;li&gt;whenever a node set ripens and is worth sharing, I write a
+post or publish a video.&lt;/li&gt;
+&lt;li&gt;It can go both ways : I can force a set into maturity if I wish to
 publish something specific or I may chance upon a concept when
-observing connections.&lt;/li>
-&lt;/ol>
-&lt;h2 id="observations">Observations&lt;/h2>
-&lt;p>I use &lt;a href="https://github.com/org-roam/org-roam-ui">org-roam-ui&lt;/a> to
+observing connections.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="observations"&gt;Observations&lt;/h2&gt;
+&lt;p&gt;I use &lt;a href="https://github.com/org-roam/org-roam-ui"&gt;org-roam-ui&lt;/a&gt; to
 visualize the buffer and check for linkages that might result in
 something useful. I also want to publish this graph (demonstrated in
 video) but there&amp;rsquo;s no explicit solution for that yet and I&amp;rsquo;m planning
 to build one myself with rust and webassembly as a compilation
-target.&lt;/p></description></item><item><title>Common Lisp : The Series - 0 : Introduction</title><link>https://rajp152k.github.io/post/clts/clts-0/</link><pubDate>Mon, 21 Aug 2023 12:03:07 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0/</guid><description>&lt;p>This is the first in a series of blog posts that follow the educational common lisp series on my &lt;a href="https://youtube.com/@rajp152k">youtube channel&lt;/a> as an
-auxilliary.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jLonMxrVPbY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+target.&lt;/p&gt;</description></item><item><title>Common Lisp : The Series - 0 : Introduction</title><link>https://rajp152k.github.io/post/clts/clts-0/</link><pubDate>Mon, 21 Aug 2023 12:03:07 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0/</guid><description>&lt;p&gt;This is the first in a series of blog posts that follow the educational common lisp series on my &lt;a href="https://youtube.com/@rajp152k"&gt;youtube channel&lt;/a&gt; as an
+auxilliary.&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jLonMxrVPbY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;hr>
-&lt;hr>
-&lt;p>I&amp;rsquo;ll be summarizing the videos in these blogs and be using these to
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;I&amp;rsquo;ll be summarizing the videos in these blogs and be using these to
 point to references and additional resources that further elaborate
-the matter.&lt;/p></description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p>&lt;strong>[&lt;em>As of 0x213B : 2023-08-17 Thu&lt;/em>]&lt;/strong>&lt;/p>
-&lt;p>I use emacs for a lot of my daily tasks and spend majority of my time
-in it. This is a review of some significant components of my init.el&lt;/p>
-&lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;keyboard all the way&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(menu-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(tool-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(scroll-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;I don&amp;#39;t like distractions&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq byte-compile-warnings &lt;span style="color:#f92672">&amp;#39;&lt;/span>(cl-functions))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq ring-bell-function &lt;span style="color:#e6db74">&amp;#39;ignore&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq visible-bell &lt;span style="color:#66d9ef">t&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;p>I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
+the matter.&lt;/p&gt;</description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p&gt;&lt;strong&gt;[&lt;em&gt;As of 0x213B : 2023-08-17 Thu&lt;/em&gt;]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I use emacs for a lot of my daily tasks and spend majority of my time
+in it. This is a review of some significant components of my init.el&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;keyboard all the way&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(menu-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(tool-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(scroll-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;I don&amp;#39;t like distractions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq byte-compile-warnings &lt;span style="color:#f92672"&gt;&amp;#39;&lt;/span&gt;(cl-functions))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq ring-bell-function &lt;span style="color:#e6db74"&gt;&amp;#39;ignore&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq visible-bell &lt;span style="color:#66d9ef"&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
 since and don&amp;rsquo;t think I&amp;rsquo;ll need to. Migrating from vim, I preferred a
 configuration file rather than installations via melpa interface.
-Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p></description></item><item><title>PICC: pragmatics of intellectual consumption and creation</title><link>https://rajp152k.github.io/post/picc/</link><pubDate>Tue, 01 Aug 2023 10:40:55 +0530</pubDate><guid>https://rajp152k.github.io/post/picc/</guid><description>&lt;blockquote>
-&lt;p>&lt;em>There&amp;rsquo;s a better way to do it - Find it.&lt;/em>&lt;br>
-&lt;em>Thomas Alva Edison&lt;/em>&lt;/p>&lt;/blockquote>
-&lt;p>Managing one&amp;rsquo;s intellectual appetite in these times of information
+Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p&gt;</description></item><item><title>PICC: pragmatics of intellectual consumption and creation</title><link>https://rajp152k.github.io/post/picc/</link><pubDate>Tue, 01 Aug 2023 10:40:55 +0530</pubDate><guid>https://rajp152k.github.io/post/picc/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;There&amp;rsquo;s a better way to do it - Find it.&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;Thomas Alva Edison&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Managing one&amp;rsquo;s intellectual appetite in these times of information
 (and noise) excess is quite an ordeal. Given superior
 tooling and methods to plough through dense
 knowledge forests, coming up with the right set of tools for
 oneself is still a commendable task. In this post, I sketch out
 how one could go about making such choices practically, from why you
-should bother, to what tangible actions you can get started with.&lt;/p></description></item></channel></rss>
+should bother, to what tangible actions you can get started with.&lt;/p&gt;</description></item></channel></rss>

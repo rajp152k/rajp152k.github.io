@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github-Actions on (bit-mage)</title><link>https://rajp152k.github.io/tags/github-actions/</link><description>Recent content in Github-Actions on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 23 Aug 2023 18:13:15 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/github-actions/index.xml" rel="self" type="application/rss+xml"/><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p>This is an auxilliary post collating resources for the recent video I
-posted &amp;hellip;&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dKU_mNaEo1g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github-Actions on (bit-mage)</title><link>https://rajp152k.github.io/tags/github-actions/</link><description>Recent content in Github-Actions on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 23 Aug 2023 18:13:15 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/github-actions/index.xml" rel="self" type="application/rss+xml"/><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p&gt;This is an auxilliary post collating resources for the recent video I
+posted &amp;hellip;&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dKU_mNaEo1g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;h2 id="the-pipeline">The Pipeline&lt;/h2>
-&lt;ol>
-&lt;li>All the ideas, resources that I want to process, any miscellaneous
-questions I have, are fed into the input-queue in the buffer&lt;/li>
-&lt;li>All the manipulation takes place in these buffers - they&amp;rsquo;re
-org-files and I use org-roam to maintain the connections&lt;/li>
-&lt;li>whenever a node set ripens and is worth sharing, I write a
-post or publish a video.&lt;/li>
-&lt;li>It can go both ways : I can force a set into maturity if I wish to
+&lt;h2 id="the-pipeline"&gt;The Pipeline&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;All the ideas, resources that I want to process, any miscellaneous
+questions I have, are fed into the input-queue in the buffer&lt;/li&gt;
+&lt;li&gt;All the manipulation takes place in these buffers - they&amp;rsquo;re
+org-files and I use org-roam to maintain the connections&lt;/li&gt;
+&lt;li&gt;whenever a node set ripens and is worth sharing, I write a
+post or publish a video.&lt;/li&gt;
+&lt;li&gt;It can go both ways : I can force a set into maturity if I wish to
 publish something specific or I may chance upon a concept when
-observing connections.&lt;/li>
-&lt;/ol>
-&lt;h2 id="observations">Observations&lt;/h2>
-&lt;p>I use &lt;a href="https://github.com/org-roam/org-roam-ui">org-roam-ui&lt;/a> to
+observing connections.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="observations"&gt;Observations&lt;/h2&gt;
+&lt;p&gt;I use &lt;a href="https://github.com/org-roam/org-roam-ui"&gt;org-roam-ui&lt;/a&gt; to
 visualize the buffer and check for linkages that might result in
 something useful. I also want to publish this graph (demonstrated in
 video) but there&amp;rsquo;s no explicit solution for that yet and I&amp;rsquo;m planning
 to build one myself with rust and webassembly as a compilation
-target.&lt;/p></description></item></channel></rss>
+target.&lt;/p&gt;</description></item></channel></rss>

@@ -1,138 +1,138 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lisp on (bit-mage)</title><link>https://rajp152k.github.io/tags/lisp/</link><description>Recent content in Lisp on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Jun 2025 11:03:25 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/lisp/index.xml" rel="self" type="application/rss+xml"/><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p>I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br>
-- an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br>
-- an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br>
-- a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br>
-- several compute clusters (avx enabled x86s, ARM, &amp;ldquo;the propietary GPU driver guy on the street&amp;rdquo; GPUs, &amp;ldquo;the other open source GPU driver guy on the steet&amp;rdquo; GPUs, k8s orchestrated production &amp;amp; development playgrounds) for work&lt;br>
-- an AMD x86 Tumbleweed with emacs as the daily driver where I actually &amp;ldquo;work&amp;rdquo; : this is desk where I dissect, analyse, reconstruct and dispatch for usage across the above&lt;/p></description></item><item><title>Jargony Outlines</title><link>https://rajp152k.github.io/post/phrasal-outlines/</link><pubDate>Thu, 17 Apr 2025 06:36:56 +0530</pubDate><guid>https://rajp152k.github.io/post/phrasal-outlines/</guid><description>&lt;h2 id="context">Context&lt;/h2>
-&lt;blockquote>
-&lt;p>been reading more papers&lt;br>
-notes by jargony outlines&lt;br>
-no unnecessary words&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>if can express&lt;br>
-few words&lt;br>
-you get it&lt;br>
-get it?&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>concise, practical&lt;br>
-flowy, comprehensible&lt;br>
-jargon is fun&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>in org-roam&lt;br>
-links when depth&lt;br>
-more speed&lt;br>
-good&lt;/p>&lt;/blockquote>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt="">&lt;/p>
-&lt;blockquote>
-&lt;p>all left&lt;br>
-tech haikus&lt;br>
-challenge&lt;br>
-someday&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>until then&lt;/p>&lt;/blockquote>
-&lt;h2 id="enjoy-instance-for-this">&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org">Enjoy instance&lt;/a> for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf">this&lt;/a>&lt;/h2></description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p>&lt;a href="https://github.com/rajp152k/nth-roam/tree/master">Nth Roam&lt;/a> : An Emacs package to efficiently manage multiple roam instances&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div></description></item><item><title>Bells &amp; Whistles</title><link>https://rajp152k.github.io/post/bells-and-whistles/</link><pubDate>Sun, 23 Mar 2025 14:18:07 +0530</pubDate><guid>https://rajp152k.github.io/post/bells-and-whistles/</guid><description>&lt;p>I&amp;rsquo;ve started spending some time per day without the usual modern software engineering tooling (LLMs, the Internet, etc) to explicitly maintain my cyber-deduction skills (in the context of Unix-based systems (BSDs, Linux, yet to explore Plan9), mostly because they power the majority of the global compute infrastructure).&lt;/p>
-&lt;p>It&amp;rsquo;s fun: init your journey with a &lt;code>man man&lt;/code> (I&amp;rsquo;m an &lt;code>info info&lt;/code> guy myself) and be extremely skeptical of your usual modus operandi, ditching all assumptions and tumbling down the rabbit hole.&lt;/p></description></item><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p>Fabric&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p>
-&lt;p>Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p>
-&lt;p>Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p>
-&lt;p>Gptel&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p></description></item><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p>There&amp;rsquo;s this saying :&lt;/p>
-&lt;blockquote>
-&lt;p>If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p>&lt;/blockquote>
-&lt;p>I&amp;rsquo;m going to do that with Go.&lt;/p>
-&lt;p>As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p></description></item><item><title>Building a Racket Based Operating System</title><link>https://rajp152k.github.io/post/tumbleweed/</link><pubDate>Mon, 23 Sep 2024 06:48:09 +0530</pubDate><guid>https://rajp152k.github.io/post/tumbleweed/</guid><description>&lt;h3 id="edit--0x22d2--fri-sep-27-035130-pm-ist-2024">EDIT : 0x22D2 : Fri Sep 27 03:51:30 PM IST 2024&lt;/h3>
-&lt;ul>
-&lt;li>I&amp;rsquo;m thinking I&amp;rsquo;ll proceed in common lisp&lt;/li>
-&lt;li>do read on for amusement though&lt;/li>
-&lt;/ul>
-&lt;p>As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I&amp;rsquo;ve used:&lt;/p>
-&lt;ul>
-&lt;li>Open Suse TumbleWeed&lt;/li>
-&lt;li>Fedora, CentOs, Rocky&lt;/li>
-&lt;li>Debian, Ubuntu, Kali&lt;/li>
-&lt;li>Arch&lt;/li>
-&lt;li>Windows XP,Vista,7,10,11&lt;/li>
-&lt;/ul>
-&lt;p>I recently moved away from Fedora 40 to Tumbleweed (I deleted some core python libraries that are essential for yum and dnf (I know, I&amp;rsquo;m an idiot))&amp;hellip;&lt;/p></description></item><item><title>IKN0X224C: Epistemological Polyglotism</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x224c/</link><pubDate>Tue, 14 May 2024 20:29:51 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x224c/</guid><description>&lt;p>&lt;em>check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/">here&lt;/a>&lt;/em>&lt;/p>
-&lt;p>Understanding different languages can open up one&amp;rsquo;s mind towards
-different cultures.&lt;/p>
-&lt;p>The evolution of languages over centuries and common ancestors
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lisp on (bit-mage)</title><link>https://rajp152k.github.io/tags/lisp/</link><description>Recent content in Lisp on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Jun 2025 11:03:25 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/lisp/index.xml" rel="self" type="application/rss+xml"/><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p&gt;I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br&gt;
+- an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br&gt;
+- an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br&gt;
+- a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br&gt;
+- several compute clusters (avx enabled x86s, ARM, &amp;ldquo;the propietary GPU driver guy on the street&amp;rdquo; GPUs, &amp;ldquo;the other open source GPU driver guy on the steet&amp;rdquo; GPUs, k8s orchestrated production &amp;amp; development playgrounds) for work&lt;br&gt;
+- an AMD x86 Tumbleweed with emacs as the daily driver where I actually &amp;ldquo;work&amp;rdquo; : this is desk where I dissect, analyse, reconstruct and dispatch for usage across the above&lt;/p&gt;</description></item><item><title>Jargony Outlines</title><link>https://rajp152k.github.io/post/phrasal-outlines/</link><pubDate>Thu, 17 Apr 2025 06:36:56 +0530</pubDate><guid>https://rajp152k.github.io/post/phrasal-outlines/</guid><description>&lt;h2 id="context"&gt;Context&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;been reading more papers&lt;br&gt;
+notes by jargony outlines&lt;br&gt;
+no unnecessary words&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;if can express&lt;br&gt;
+few words&lt;br&gt;
+you get it&lt;br&gt;
+get it?&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;concise, practical&lt;br&gt;
+flowy, comprehensible&lt;br&gt;
+jargon is fun&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in org-roam&lt;br&gt;
+links when depth&lt;br&gt;
+more speed&lt;br&gt;
+good&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt=""&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;all left&lt;br&gt;
+tech haikus&lt;br&gt;
+challenge&lt;br&gt;
+someday&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;until then&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id="enjoy-instance-for-this"&gt;&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org"&gt;Enjoy instance&lt;/a&gt; for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf"&gt;this&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p&gt;&lt;a href="https://github.com/rajp152k/nth-roam/tree/master"&gt;Nth Roam&lt;/a&gt; : An Emacs package to efficiently manage multiple roam instances&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;</description></item><item><title>Bells &amp; Whistles</title><link>https://rajp152k.github.io/post/bells-and-whistles/</link><pubDate>Sun, 23 Mar 2025 14:18:07 +0530</pubDate><guid>https://rajp152k.github.io/post/bells-and-whistles/</guid><description>&lt;p&gt;I&amp;rsquo;ve started spending some time per day without the usual modern software engineering tooling (LLMs, the Internet, etc) to explicitly maintain my cyber-deduction skills (in the context of Unix-based systems (BSDs, Linux, yet to explore Plan9), mostly because they power the majority of the global compute infrastructure).&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s fun: init your journey with a &lt;code&gt;man man&lt;/code&gt; (I&amp;rsquo;m an &lt;code&gt;info info&lt;/code&gt; guy myself) and be extremely skeptical of your usual modus operandi, ditching all assumptions and tumbling down the rabbit hole.&lt;/p&gt;</description></item><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p&gt;Fabric&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p&gt;
+&lt;p&gt;Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p&gt;
+&lt;p&gt;Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p&gt;
+&lt;p&gt;Gptel&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p&gt;</description></item><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p&gt;There&amp;rsquo;s this saying :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I&amp;rsquo;m going to do that with Go.&lt;/p&gt;
+&lt;p&gt;As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p&gt;</description></item><item><title>Building a Racket Based Operating System</title><link>https://rajp152k.github.io/post/tumbleweed/</link><pubDate>Mon, 23 Sep 2024 06:48:09 +0530</pubDate><guid>https://rajp152k.github.io/post/tumbleweed/</guid><description>&lt;h3 id="edit--0x22d2--fri-sep-27-035130-pm-ist-2024"&gt;EDIT : 0x22D2 : Fri Sep 27 03:51:30 PM IST 2024&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;m thinking I&amp;rsquo;ll proceed in common lisp&lt;/li&gt;
+&lt;li&gt;do read on for amusement though&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I&amp;rsquo;ve used:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open Suse TumbleWeed&lt;/li&gt;
+&lt;li&gt;Fedora, CentOs, Rocky&lt;/li&gt;
+&lt;li&gt;Debian, Ubuntu, Kali&lt;/li&gt;
+&lt;li&gt;Arch&lt;/li&gt;
+&lt;li&gt;Windows XP,Vista,7,10,11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I recently moved away from Fedora 40 to Tumbleweed (I deleted some core python libraries that are essential for yum and dnf (I know, I&amp;rsquo;m an idiot))&amp;hellip;&lt;/p&gt;</description></item><item><title>IKN0X224C: Epistemological Polyglotism</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x224c/</link><pubDate>Tue, 14 May 2024 20:29:51 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x224c/</guid><description>&lt;p&gt;&lt;em&gt;check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/"&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Understanding different languages can open up one&amp;rsquo;s mind towards
+different cultures.&lt;/p&gt;
+&lt;p&gt;The evolution of languages over centuries and common ancestors
 there-of over millenia indicates the evolution of cultural
-complexity.&lt;/p>
-&lt;h2 id="the-conventional-take">The Conventional Take&lt;/h2>
-&lt;p>I grew up actively conversing in 4 languages: English, Hindi,
+complexity.&lt;/p&gt;
+&lt;h2 id="the-conventional-take"&gt;The Conventional Take&lt;/h2&gt;
+&lt;p&gt;I grew up actively conversing in 4 languages: English, Hindi,
 Marathi and Gujrati. French was my first romance language I was
 exposed to for over 8 years (I say exposed as was learning this
 academically as a third language and didn&amp;rsquo;t use this as a &amp;ldquo;natural&amp;rdquo;
-language as much as the others).&lt;/p></description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p>I finished my first pass of SICP (structure and interpretation of
-computer programs) around &lt;a href="https://github.com/rajp152k/SICP">3 years
-ago&lt;/a>. Since, I&amp;rsquo;ve realized the
+language as much as the others).&lt;/p&gt;</description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p&gt;I finished my first pass of SICP (structure and interpretation of
+computer programs) around &lt;a href="https://github.com/rajp152k/SICP"&gt;3 years
+ago&lt;/a&gt;. Since, I&amp;rsquo;ve realized the
 elegantly implicit existence of symbolic algebra in several domains
-that I personally explore on a regular basis.&lt;/p>
-&lt;p>That initial infatuation with Lisp ( and consequently symbolic
+that I personally explore on a regular basis.&lt;/p&gt;
+&lt;p&gt;That initial infatuation with Lisp ( and consequently symbolic
 computation ) has simmered and fermented enough in my mind to be
 realised as a potent generic thinking device. To cement my
 commitment to the same, I&amp;rsquo;ll regularly dive deeper into relevant academia
-so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p></description></item><item><title>Common Lisp : The Series - 0.1 : Representing Programs</title><link>https://rajp152k.github.io/post/clts/clts-0.1/</link><pubDate>Tue, 29 Aug 2023 11:09:43 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0.1/</guid><description>&lt;p>What makes lisp so unique is the way its code is structured - you
+so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p&gt;</description></item><item><title>Common Lisp : The Series - 0.1 : Representing Programs</title><link>https://rajp152k.github.io/post/clts/clts-0.1/</link><pubDate>Tue, 29 Aug 2023 11:09:43 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0.1/</guid><description>&lt;p&gt;What makes lisp so unique is the way its code is structured - you
 definitely can&amp;rsquo;t miss all those parentheses. In this section of the
 series, I discuss the cause for such a representation and how that
-makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SuI2ns1D9Es?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SuI2ns1D9Es?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;hr>
-&lt;hr>
-&lt;h2 id="further-reading">Further reading&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://docs.python.org/3/library/dis.html">Python disassembler&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoiconity&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Bytecode">Byte Code&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/S-expression">S-expressions&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Common_operator_notation">Common Operator Notation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Abstract Syntax Tree&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://wiki.c2.com/?BlubParadox">The Blub Paradox&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="call-to-collaborate">Call to collaborate&lt;/h2>
-&lt;p>If you&amp;rsquo;re someone who shares the dream of making lisp popular and
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h2 id="further-reading"&gt;Further reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/dis.html"&gt;Python disassembler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Homoiconicity"&gt;Homoiconity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Bytecode"&gt;Byte Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/S-expression"&gt;S-expressions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Common_operator_notation"&gt;Common Operator Notation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree"&gt;Abstract Syntax Tree&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.c2.com/?BlubParadox"&gt;The Blub Paradox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="call-to-collaborate"&gt;Call to collaborate&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re someone who shares the dream of making lisp popular and
 mainstream so that we can use it for our jobs and don&amp;rsquo;t have to switch
 to blubs to make a living (without denting its charm of course) ,
 consider contributing to the notes and hit me up via mail or any of
-the other media I&amp;rsquo;m present on.&lt;/p></description></item><item><title>Common Lisp : The Series - 0 : Introduction</title><link>https://rajp152k.github.io/post/clts/clts-0/</link><pubDate>Mon, 21 Aug 2023 12:03:07 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0/</guid><description>&lt;p>This is the first in a series of blog posts that follow the educational common lisp series on my &lt;a href="https://youtube.com/@rajp152k">youtube channel&lt;/a> as an
-auxilliary.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jLonMxrVPbY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+the other media I&amp;rsquo;m present on.&lt;/p&gt;</description></item><item><title>Common Lisp : The Series - 0 : Introduction</title><link>https://rajp152k.github.io/post/clts/clts-0/</link><pubDate>Mon, 21 Aug 2023 12:03:07 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0/</guid><description>&lt;p&gt;This is the first in a series of blog posts that follow the educational common lisp series on my &lt;a href="https://youtube.com/@rajp152k"&gt;youtube channel&lt;/a&gt; as an
+auxilliary.&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jLonMxrVPbY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;hr>
-&lt;hr>
-&lt;p>I&amp;rsquo;ll be summarizing the videos in these blogs and be using these to
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;I&amp;rsquo;ll be summarizing the videos in these blogs and be using these to
 point to references and additional resources that further elaborate
-the matter.&lt;/p></description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p>&lt;strong>[&lt;em>As of 0x213B : 2023-08-17 Thu&lt;/em>]&lt;/strong>&lt;/p>
-&lt;p>I use emacs for a lot of my daily tasks and spend majority of my time
-in it. This is a review of some significant components of my init.el&lt;/p>
-&lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;keyboard all the way&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(menu-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(tool-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(scroll-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;I don&amp;#39;t like distractions&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq byte-compile-warnings &lt;span style="color:#f92672">&amp;#39;&lt;/span>(cl-functions))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq ring-bell-function &lt;span style="color:#e6db74">&amp;#39;ignore&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq visible-bell &lt;span style="color:#66d9ef">t&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;p>I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
+the matter.&lt;/p&gt;</description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p&gt;&lt;strong&gt;[&lt;em&gt;As of 0x213B : 2023-08-17 Thu&lt;/em&gt;]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I use emacs for a lot of my daily tasks and spend majority of my time
+in it. This is a review of some significant components of my init.el&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;keyboard all the way&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(menu-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(tool-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(scroll-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;I don&amp;#39;t like distractions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq byte-compile-warnings &lt;span style="color:#f92672"&gt;&amp;#39;&lt;/span&gt;(cl-functions))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq ring-bell-function &lt;span style="color:#e6db74"&gt;&amp;#39;ignore&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq visible-bell &lt;span style="color:#66d9ef"&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
 since and don&amp;rsquo;t think I&amp;rsquo;ll need to. Migrating from vim, I preferred a
 configuration file rather than installations via melpa interface.
-Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p></description></item><item><title>Common Lisp - A Gentle Introduction to Symbolic Computation</title><link>https://rajp152k.github.io/post/cl-aitsc/</link><pubDate>Wed, 16 Aug 2023 17:51:13 +0530</pubDate><guid>https://rajp152k.github.io/post/cl-aitsc/</guid><description>&lt;p>Given I&amp;rsquo;ve passed through SICP once, quickly grasping common
+Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p&gt;</description></item><item><title>Common Lisp - A Gentle Introduction to Symbolic Computation</title><link>https://rajp152k.github.io/post/cl-aitsc/</link><pubDate>Wed, 16 Aug 2023 17:51:13 +0530</pubDate><guid>https://rajp152k.github.io/post/cl-aitsc/</guid><description>&lt;p&gt;Given I&amp;rsquo;ve passed through SICP once, quickly grasping common
 lisp to build stuff and explore the
 traditional and industrial aspects of lisp (I know clojure exists but
 traditional&amp;hellip;) was my next objective: with decent speed and only
 solving the somewhat involved exercises, it took me two weeks to
-complete this book.&lt;/p>
-&lt;p>The exercises aren&amp;rsquo;t meant to be a challenge but to adapt to the
+complete this book.&lt;/p&gt;
+&lt;p&gt;The exercises aren&amp;rsquo;t meant to be a challenge but to adapt to the
 environment and the topics introduced. The book does not explore
 concepts with depth (CLOS, macros, etc&amp;hellip;) but that shouldn&amp;rsquo;t be the
-objective of an introduction anyway.&lt;/p></description></item></channel></rss>
+objective of an introduction anyway.&lt;/p&gt;</description></item></channel></rss>

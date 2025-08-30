@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Configs on (bit-mage)</title><link>https://rajp152k.github.io/categories/configs/</link><description>Recent content in Configs on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 23 Jul 2025 10:17:53 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/categories/configs/index.xml" rel="self" type="application/rss+xml"/><item><title>The Home Row</title><link>https://rajp152k.github.io/post/the-home-row/</link><pubDate>Wed, 23 Jul 2025 10:17:53 +0530</pubDate><guid>https://rajp152k.github.io/post/the-home-row/</guid><description>&lt;p>Getting a little pedantic with my doom configs&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> these days..&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(defmacro generate-bindable-lambda (&lt;span style="color:#66d9ef">&amp;amp;rest&lt;/span> body)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">`&lt;/span>&lt;span style="color:#a6e22e">#&amp;#39;&lt;/span>(lambda ()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (interactive)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">,@&lt;/span>body))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;; .. the home row ..&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(map! :map evil-normal-state-map
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i p&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;+&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i n&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;-&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i u&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;_&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i e&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;=&amp;#34;&lt;/span>)))
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Maybe I should consider buying foot pedals.., and eye trackers (3 screens at the moment ) .., and setting up an array of interface sensors to truly begin exploiting emacs..,
-to the point of conducting an orchestra of text buffers.., somewhat musically (/ whimsically?)..&lt;/p></description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p>&lt;strong>[&lt;em>As of 0x213B : 2023-08-17 Thu&lt;/em>]&lt;/strong>&lt;/p>
-&lt;p>I use emacs for a lot of my daily tasks and spend majority of my time
-in it. This is a review of some significant components of my init.el&lt;/p>
-&lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;keyboard all the way&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(menu-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(tool-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(scroll-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;I don&amp;#39;t like distractions&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq byte-compile-warnings &lt;span style="color:#f92672">&amp;#39;&lt;/span>(cl-functions))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq ring-bell-function &lt;span style="color:#e6db74">&amp;#39;ignore&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq visible-bell &lt;span style="color:#66d9ef">t&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;p>I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Configs on (bit-mage)</title><link>https://rajp152k.github.io/categories/configs/</link><description>Recent content in Configs on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 23 Jul 2025 10:17:53 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/categories/configs/index.xml" rel="self" type="application/rss+xml"/><item><title>The Home Row</title><link>https://rajp152k.github.io/post/the-home-row/</link><pubDate>Wed, 23 Jul 2025 10:17:53 +0530</pubDate><guid>https://rajp152k.github.io/post/the-home-row/</guid><description>&lt;p&gt;Getting a little pedantic with my doom configs&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; these days..&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(defmacro generate-bindable-lambda (&lt;span style="color:#66d9ef"&gt;&amp;amp;rest&lt;/span&gt; body)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;`&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;#&amp;#39;&lt;/span&gt;(lambda ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (interactive)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;,@&lt;/span&gt;body))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;; .. the home row ..&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(map! :map evil-normal-state-map
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i p&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;+&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i n&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;-&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i u&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;_&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i e&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;=&amp;#34;&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Maybe I should consider buying foot pedals.., and eye trackers (3 screens at the moment ) .., and setting up an array of interface sensors to truly begin exploiting emacs..,
+to the point of conducting an orchestra of text buffers.., somewhat musically (/ whimsically?)..&lt;/p&gt;</description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p&gt;&lt;strong&gt;[&lt;em&gt;As of 0x213B : 2023-08-17 Thu&lt;/em&gt;]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I use emacs for a lot of my daily tasks and spend majority of my time
+in it. This is a review of some significant components of my init.el&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;keyboard all the way&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(menu-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(tool-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(scroll-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;I don&amp;#39;t like distractions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq byte-compile-warnings &lt;span style="color:#f92672"&gt;&amp;#39;&lt;/span&gt;(cl-functions))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq ring-bell-function &lt;span style="color:#e6db74"&gt;&amp;#39;ignore&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq visible-bell &lt;span style="color:#66d9ef"&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
 since and don&amp;rsquo;t think I&amp;rsquo;ll need to. Migrating from vim, I preferred a
 configuration file rather than installations via melpa interface.
-Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p></description></item></channel></rss>
+Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p&gt;</description></item></channel></rss>

@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tooling on (bit-mage)</title><link>https://rajp152k.github.io/categories/tooling/</link><description>Recent content in Tooling on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Jun 2025 11:03:25 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/categories/tooling/index.xml" rel="self" type="application/rss+xml"/><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p>I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br>
-- an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br>
-- an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br>
-- a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br>
-- several compute clusters (avx enabled x86s, ARM, &amp;ldquo;the propietary GPU driver guy on the street&amp;rdquo; GPUs, &amp;ldquo;the other open source GPU driver guy on the steet&amp;rdquo; GPUs, k8s orchestrated production &amp;amp; development playgrounds) for work&lt;br>
-- an AMD x86 Tumbleweed with emacs as the daily driver where I actually &amp;ldquo;work&amp;rdquo; : this is desk where I dissect, analyse, reconstruct and dispatch for usage across the above&lt;/p></description></item><item><title>Assume Competence</title><link>https://rajp152k.github.io/post/jargon-ai/</link><pubDate>Tue, 22 Apr 2025 16:12:43 +0530</pubDate><guid>https://rajp152k.github.io/post/jargon-ai/</guid><description>&lt;p>Following a recent realization that &lt;a href="https://rajp152k.github.io/post/phrasal-outlines">jargons are fun&lt;/a>, experimenting with prompts that inform LLMs to talk in outlines and jargons, assuming the reader is competent. Producitvity is up.&lt;/p>
-&lt;p>.dotfiles commit for linked context : &lt;a href="https://github.com/rajp152k/.dotfiles/commit/28dd1385cc4370dd0b15774bb96a661b3cab628f">https://github.com/rajp152k/.dotfiles/commit/28dd1385cc4370dd0b15774bb96a661b3cab628f&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>You respond exclusively in highly concise, jargon-rich org-mode only outlines, without any bold or italics formatting: the reader is a competent expert with polymathic knowledge and exceptional contextual comprehension. Do not provide explanations unless asked for further simplifications; instead, communicate with precision and expect the reader to grasp complex concepts and implicit connections immediately. Do not use any filler sentences and collabaratively contribute in constructing whatever topic is being expanded upon&lt;/p></description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p>&lt;a href="https://github.com/rajp152k/nth-roam/tree/master">Nth Roam&lt;/a> : An Emacs package to efficiently manage multiple roam instances&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div></description></item><item><title>Blub in the Unix Philosophy</title><link>https://rajp152k.github.io/post/unixier-unix/</link><pubDate>Mon, 24 Mar 2025 15:18:39 +0530</pubDate><guid>https://rajp152k.github.io/post/unixier-unix/</guid><description>&lt;p>I&amp;rsquo;ve always maintained a philosophical appetite for the tooling that I use.&lt;/p>
-&lt;p>One of the core tenets of the Unix Philosophy&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is that everything is a file&amp;hellip;&lt;/p>
-&lt;p>Plan9&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> has caught my eye due to its more homogenous design than the usual unix you&amp;rsquo;re used to.&lt;/p>
-&lt;p>The footnoted-paper (~pre-mature book) is somewhat unhinged and doesn&amp;rsquo;t shy away from taking a jab at the Unix ecosystem and design.&lt;/p>
-&lt;p>Apart from the several points the author makes, what stands out the most for me is the idea of &lt;em>everything&lt;/em> truly being a file: in hindsight, Unix only realizes a fraction of the principle.&lt;/p></description></item><item><title>Bells &amp; Whistles</title><link>https://rajp152k.github.io/post/bells-and-whistles/</link><pubDate>Sun, 23 Mar 2025 14:18:07 +0530</pubDate><guid>https://rajp152k.github.io/post/bells-and-whistles/</guid><description>&lt;p>I&amp;rsquo;ve started spending some time per day without the usual modern software engineering tooling (LLMs, the Internet, etc) to explicitly maintain my cyber-deduction skills (in the context of Unix-based systems (BSDs, Linux, yet to explore Plan9), mostly because they power the majority of the global compute infrastructure).&lt;/p>
-&lt;p>It&amp;rsquo;s fun: init your journey with a &lt;code>man man&lt;/code> (I&amp;rsquo;m an &lt;code>info info&lt;/code> guy myself) and be extremely skeptical of your usual modus operandi, ditching all assumptions and tumbling down the rabbit hole.&lt;/p></description></item><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p>Fabric&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p>
-&lt;p>Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p>
-&lt;p>Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p>
-&lt;p>Gptel&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p></description></item><item><title>I'm using Monitors again</title><link>https://rajp152k.github.io/post/back-at-monitors/</link><pubDate>Mon, 20 Jan 2025 16:35:52 +0530</pubDate><guid>https://rajp152k.github.io/post/back-at-monitors/</guid><description>&lt;p>I&amp;rsquo;m using &lt;a href="https://thebitmage.com/post/no-monitor/">monitors again&lt;/a> and it&amp;rsquo;s like consuming caffeine after a long time (last recorded usage circa mid November 2024).&lt;/p>
-&lt;p>I guess I need to cycle my dosage so that I don&amp;rsquo;t end up being too dependent.&lt;/p>
-&lt;p>I&amp;rsquo;m enjoying it though.&lt;/p>
-&lt;blockquote>
-&lt;p>EDIT: as of &amp;lt;2025-01-27 17:50:30 IST&amp;gt;, I&amp;rsquo;ve given up again&lt;/p>&lt;/blockquote></description></item><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p>A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p>
-&lt;p>I was aware that the &lt;code>.gitignore&lt;/code> could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p>
-&lt;p>checkout &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git">this stackoverflow question&lt;/a>&lt;/p>
-&lt;p>So if the first &lt;code>.gitignore&lt;/code> looks like&lt;/p>
-&lt;pre tabindex="0">&lt;code>asdf-pattern 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tooling on (bit-mage)</title><link>https://rajp152k.github.io/categories/tooling/</link><description>Recent content in Tooling on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Jun 2025 11:03:25 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/categories/tooling/index.xml" rel="self" type="application/rss+xml"/><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p&gt;I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br&gt;
+- an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br&gt;
+- an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br&gt;
+- a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br&gt;
+- several compute clusters (avx enabled x86s, ARM, &amp;ldquo;the propietary GPU driver guy on the street&amp;rdquo; GPUs, &amp;ldquo;the other open source GPU driver guy on the steet&amp;rdquo; GPUs, k8s orchestrated production &amp;amp; development playgrounds) for work&lt;br&gt;
+- an AMD x86 Tumbleweed with emacs as the daily driver where I actually &amp;ldquo;work&amp;rdquo; : this is desk where I dissect, analyse, reconstruct and dispatch for usage across the above&lt;/p&gt;</description></item><item><title>Assume Competence</title><link>https://rajp152k.github.io/post/jargon-ai/</link><pubDate>Tue, 22 Apr 2025 16:12:43 +0530</pubDate><guid>https://rajp152k.github.io/post/jargon-ai/</guid><description>&lt;p&gt;Following a recent realization that &lt;a href="https://rajp152k.github.io/post/phrasal-outlines"&gt;jargons are fun&lt;/a&gt;, experimenting with prompts that inform LLMs to talk in outlines and jargons, assuming the reader is competent. Producitvity is up.&lt;/p&gt;
+&lt;p&gt;.dotfiles commit for linked context : &lt;a href="https://github.com/rajp152k/.dotfiles/commit/28dd1385cc4370dd0b15774bb96a661b3cab628f"&gt;https://github.com/rajp152k/.dotfiles/commit/28dd1385cc4370dd0b15774bb96a661b3cab628f&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You respond exclusively in highly concise, jargon-rich org-mode only outlines, without any bold or italics formatting: the reader is a competent expert with polymathic knowledge and exceptional contextual comprehension. Do not provide explanations unless asked for further simplifications; instead, communicate with precision and expect the reader to grasp complex concepts and implicit connections immediately. Do not use any filler sentences and collabaratively contribute in constructing whatever topic is being expanded upon&lt;/p&gt;</description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p&gt;&lt;a href="https://github.com/rajp152k/nth-roam/tree/master"&gt;Nth Roam&lt;/a&gt; : An Emacs package to efficiently manage multiple roam instances&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;</description></item><item><title>Blub in the Unix Philosophy</title><link>https://rajp152k.github.io/post/unixier-unix/</link><pubDate>Mon, 24 Mar 2025 15:18:39 +0530</pubDate><guid>https://rajp152k.github.io/post/unixier-unix/</guid><description>&lt;p&gt;I&amp;rsquo;ve always maintained a philosophical appetite for the tooling that I use.&lt;/p&gt;
+&lt;p&gt;One of the core tenets of the Unix Philosophy&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is that everything is a file&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Plan9&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; has caught my eye due to its more homogenous design than the usual unix you&amp;rsquo;re used to.&lt;/p&gt;
+&lt;p&gt;The footnoted-paper (~pre-mature book) is somewhat unhinged and doesn&amp;rsquo;t shy away from taking a jab at the Unix ecosystem and design.&lt;/p&gt;
+&lt;p&gt;Apart from the several points the author makes, what stands out the most for me is the idea of &lt;em&gt;everything&lt;/em&gt; truly being a file: in hindsight, Unix only realizes a fraction of the principle.&lt;/p&gt;</description></item><item><title>Bells &amp; Whistles</title><link>https://rajp152k.github.io/post/bells-and-whistles/</link><pubDate>Sun, 23 Mar 2025 14:18:07 +0530</pubDate><guid>https://rajp152k.github.io/post/bells-and-whistles/</guid><description>&lt;p&gt;I&amp;rsquo;ve started spending some time per day without the usual modern software engineering tooling (LLMs, the Internet, etc) to explicitly maintain my cyber-deduction skills (in the context of Unix-based systems (BSDs, Linux, yet to explore Plan9), mostly because they power the majority of the global compute infrastructure).&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s fun: init your journey with a &lt;code&gt;man man&lt;/code&gt; (I&amp;rsquo;m an &lt;code&gt;info info&lt;/code&gt; guy myself) and be extremely skeptical of your usual modus operandi, ditching all assumptions and tumbling down the rabbit hole.&lt;/p&gt;</description></item><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p&gt;Fabric&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p&gt;
+&lt;p&gt;Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p&gt;
+&lt;p&gt;Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p&gt;
+&lt;p&gt;Gptel&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p&gt;</description></item><item><title>I'm using Monitors again</title><link>https://rajp152k.github.io/post/back-at-monitors/</link><pubDate>Mon, 20 Jan 2025 16:35:52 +0530</pubDate><guid>https://rajp152k.github.io/post/back-at-monitors/</guid><description>&lt;p&gt;I&amp;rsquo;m using &lt;a href="https://thebitmage.com/post/no-monitor/"&gt;monitors again&lt;/a&gt; and it&amp;rsquo;s like consuming caffeine after a long time (last recorded usage circa mid November 2024).&lt;/p&gt;
+&lt;p&gt;I guess I need to cycle my dosage so that I don&amp;rsquo;t end up being too dependent.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m enjoying it though.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EDIT: as of &amp;lt;2025-01-27 17:50:30 IST&amp;gt;, I&amp;rsquo;ve given up again&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p&gt;A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p&gt;
+&lt;p&gt;I was aware that the &lt;code&gt;.gitignore&lt;/code&gt; could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p&gt;
+&lt;p&gt;checkout &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git"&gt;this stackoverflow question&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So if the first &lt;code&gt;.gitignore&lt;/code&gt; looks like&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;asdf-pattern 
 more-asdf
 some-absolute-asdf
 dir-asdf/
-&lt;/code>&lt;/pre>&lt;p>the second one would look like:&lt;/p>
-&lt;pre tabindex="0">&lt;code># blacklist everything first
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;the second one would look like:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;# blacklist everything first
 *
 
 # unignore the directories to capture nested existences
@@ -41,29 +41,29 @@ dir-asdf/
 !more-asdf
 !some-absoluete-asdf
 !dir-asdf/
-&lt;/code>&lt;/pre>&lt;p>What I wonder now is if git would allow for a branch-contextual .gitignore (named with certain protocols) so that I don&amp;rsquo;t have to maintain two different repositories altogether.&lt;/p></description></item><item><title>I've given up on Monitors</title><link>https://rajp152k.github.io/post/no-monitor/</link><pubDate>Mon, 25 Nov 2024 20:58:12 +0530</pubDate><guid>https://rajp152k.github.io/post/no-monitor/</guid><description>&lt;p>I recently have moved on from using monitors and am working (professional and writing endeavours) only via a 13 inch laptop. It is definitely a different workflow than what I&amp;rsquo;m used to.&lt;/p>
-&lt;p>It has been around 10 days I&amp;rsquo;ve been doing this and here are some observations:&lt;/p>
-&lt;ul>
-&lt;li>I&amp;rsquo;m able to focus better as I&amp;rsquo;m forced to enlarge my context maintaining capabilities; for I don&amp;rsquo;t have the luxury to look back and forth with just my eye movements.&lt;/li>
-&lt;li>I can work from anywhere. I change places and posture every 1.5 hours, 5 times a day.&lt;/li>
-&lt;li>Given I move between a couple of meets during the day, I don&amp;rsquo;t have to adjust to differing window management mannerisms as I only ever work on the same screen now.&lt;/li>
-&lt;li>I work in at most two splits now compared to the 5+ previously: it is all simpler and the monitor has started to seem like a vanity rather than essential accessory.&lt;/li>
-&lt;li>I don&amp;rsquo;t have to switch keyboards between my desk and meets: I don&amp;rsquo;t mess enough as much now.&lt;/li>
-&lt;li>I can start looking down upon people that are bound to monitors, thinking that they&amp;rsquo;re spoiled or aren&amp;rsquo;t minimal enough.&lt;/li>
-&lt;li>I&amp;rsquo;ve started preaching about the spartan-ish effects of working only via your laptop&lt;/li>
-&lt;li>I spend more time on screen, on my bed: consequently I&amp;rsquo;m writing more.&lt;/li>
-&lt;/ul>
-&lt;p>I definitely do miss reading papers and books on a larger vertically oriented screen but I&amp;rsquo;m going to stick to this for a while.&lt;/p></description></item><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p>There&amp;rsquo;s this saying :&lt;/p>
-&lt;blockquote>
-&lt;p>If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p>&lt;/blockquote>
-&lt;p>I&amp;rsquo;m going to do that with Go.&lt;/p>
-&lt;p>As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p></description></item><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p>This is how I time my workblocks these days&amp;hellip;&lt;/p>
-&lt;h3 id="prerequisites">Prerequisites&lt;/h3>
-&lt;ul>
-&lt;li>ALSA : &lt;a href="https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture">https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="functions">Functions&lt;/h3>
-&lt;pre tabindex="0">&lt;code>single_beep() {
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;What I wonder now is if git would allow for a branch-contextual .gitignore (named with certain protocols) so that I don&amp;rsquo;t have to maintain two different repositories altogether.&lt;/p&gt;</description></item><item><title>I've given up on Monitors</title><link>https://rajp152k.github.io/post/no-monitor/</link><pubDate>Mon, 25 Nov 2024 20:58:12 +0530</pubDate><guid>https://rajp152k.github.io/post/no-monitor/</guid><description>&lt;p&gt;I recently have moved on from using monitors and am working (professional and writing endeavours) only via a 13 inch laptop. It is definitely a different workflow than what I&amp;rsquo;m used to.&lt;/p&gt;
+&lt;p&gt;It has been around 10 days I&amp;rsquo;ve been doing this and here are some observations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;m able to focus better as I&amp;rsquo;m forced to enlarge my context maintaining capabilities; for I don&amp;rsquo;t have the luxury to look back and forth with just my eye movements.&lt;/li&gt;
+&lt;li&gt;I can work from anywhere. I change places and posture every 1.5 hours, 5 times a day.&lt;/li&gt;
+&lt;li&gt;Given I move between a couple of meets during the day, I don&amp;rsquo;t have to adjust to differing window management mannerisms as I only ever work on the same screen now.&lt;/li&gt;
+&lt;li&gt;I work in at most two splits now compared to the 5+ previously: it is all simpler and the monitor has started to seem like a vanity rather than essential accessory.&lt;/li&gt;
+&lt;li&gt;I don&amp;rsquo;t have to switch keyboards between my desk and meets: I don&amp;rsquo;t mess enough as much now.&lt;/li&gt;
+&lt;li&gt;I can start looking down upon people that are bound to monitors, thinking that they&amp;rsquo;re spoiled or aren&amp;rsquo;t minimal enough.&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;ve started preaching about the spartan-ish effects of working only via your laptop&lt;/li&gt;
+&lt;li&gt;I spend more time on screen, on my bed: consequently I&amp;rsquo;m writing more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I definitely do miss reading papers and books on a larger vertically oriented screen but I&amp;rsquo;m going to stick to this for a while.&lt;/p&gt;</description></item><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p&gt;There&amp;rsquo;s this saying :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I&amp;rsquo;m going to do that with Go.&lt;/p&gt;
+&lt;p&gt;As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p&gt;</description></item><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p&gt;This is how I time my workblocks these days&amp;hellip;&lt;/p&gt;
+&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ALSA : &lt;a href="https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture"&gt;https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="functions"&gt;Functions&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;single_beep() {
 ( \speaker-test --frequency $1 --test sine )&amp;amp;
 pid=$!
 \sleep 0.${2}s
@@ -87,30 +87,30 @@ sos() {
 timer() {
  \sleep $1 &amp;amp;&amp;amp; sos &amp;amp;
 }
-&lt;/code>&lt;/pre>&lt;h3 id="usage">Usage&lt;/h3>
-&lt;p>The above can be sourced in your shell rc.&lt;br>
-I store it in a &lt;code>.bash_funcs&lt;/code> where I have all my functions and source them in the end of my rc as &lt;code>source ~/.bash_funcs&lt;/code>.&lt;/p></description></item><item><title>Building a Racket Based Operating System</title><link>https://rajp152k.github.io/post/tumbleweed/</link><pubDate>Mon, 23 Sep 2024 06:48:09 +0530</pubDate><guid>https://rajp152k.github.io/post/tumbleweed/</guid><description>&lt;h3 id="edit--0x22d2--fri-sep-27-035130-pm-ist-2024">EDIT : 0x22D2 : Fri Sep 27 03:51:30 PM IST 2024&lt;/h3>
-&lt;ul>
-&lt;li>I&amp;rsquo;m thinking I&amp;rsquo;ll proceed in common lisp&lt;/li>
-&lt;li>do read on for amusement though&lt;/li>
-&lt;/ul>
-&lt;p>As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I&amp;rsquo;ve used:&lt;/p>
-&lt;ul>
-&lt;li>Open Suse TumbleWeed&lt;/li>
-&lt;li>Fedora, CentOs, Rocky&lt;/li>
-&lt;li>Debian, Ubuntu, Kali&lt;/li>
-&lt;li>Arch&lt;/li>
-&lt;li>Windows XP,Vista,7,10,11&lt;/li>
-&lt;/ul>
-&lt;p>I recently moved away from Fedora 40 to Tumbleweed (I deleted some core python libraries that are essential for yum and dnf (I know, I&amp;rsquo;m an idiot))&amp;hellip;&lt;/p></description></item><item><title>Thinkpad X13 Gen 4 AMD Ryzen Pro 7840U &amp; Workflow Review</title><link>https://rajp152k.github.io/post/new-laptop/</link><pubDate>Thu, 06 Jun 2024 17:17:59 +0530</pubDate><guid>https://rajp152k.github.io/post/new-laptop/</guid><description>&lt;p>I recently shifted my operations to a thinkpad x13g4amd (Ryzen 7840U + 780M Radeon) and am using this transfer as an opportunity to realize and improve my work related habits.&lt;/p>
-&lt;h2 id="gnulinux">GNU/Linux&lt;/h2>
-&lt;p>All of my pipelines are based around Linux and the core GNU utils. I had to use windows for a while due to org-wide constraints but I&amp;rsquo;ve recently been given the signal to shift to linux.&lt;/p>
-&lt;p>I rarely used any windows native tools for my workflows and there was always a layer of linux emulation/virtualization (wsl, scoop, and the likes) upon which I conducted my usual operations. Given I use Debian at home, a non native linux experience was frustrating at best and depressing at worst. No more, do I have to confine myself.&lt;/p></description></item><item><title>Python like a Spartan</title><link>https://rajp152k.github.io/post/nvim-tmux-docker-python/</link><pubDate>Thu, 18 Jan 2024 12:15:48 +0530</pubDate><guid>https://rajp152k.github.io/post/nvim-tmux-docker-python/</guid><description>&lt;p>I&amp;rsquo;m an AI Research Engineer and that involves messing around a little
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="usage"&gt;Usage&lt;/h3&gt;
+&lt;p&gt;The above can be sourced in your shell rc.&lt;br&gt;
+I store it in a &lt;code&gt;.bash_funcs&lt;/code&gt; where I have all my functions and source them in the end of my rc as &lt;code&gt;source ~/.bash_funcs&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Building a Racket Based Operating System</title><link>https://rajp152k.github.io/post/tumbleweed/</link><pubDate>Mon, 23 Sep 2024 06:48:09 +0530</pubDate><guid>https://rajp152k.github.io/post/tumbleweed/</guid><description>&lt;h3 id="edit--0x22d2--fri-sep-27-035130-pm-ist-2024"&gt;EDIT : 0x22D2 : Fri Sep 27 03:51:30 PM IST 2024&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;m thinking I&amp;rsquo;ll proceed in common lisp&lt;/li&gt;
+&lt;li&gt;do read on for amusement though&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I&amp;rsquo;ve used:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open Suse TumbleWeed&lt;/li&gt;
+&lt;li&gt;Fedora, CentOs, Rocky&lt;/li&gt;
+&lt;li&gt;Debian, Ubuntu, Kali&lt;/li&gt;
+&lt;li&gt;Arch&lt;/li&gt;
+&lt;li&gt;Windows XP,Vista,7,10,11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I recently moved away from Fedora 40 to Tumbleweed (I deleted some core python libraries that are essential for yum and dnf (I know, I&amp;rsquo;m an idiot))&amp;hellip;&lt;/p&gt;</description></item><item><title>Thinkpad X13 Gen 4 AMD Ryzen Pro 7840U &amp; Workflow Review</title><link>https://rajp152k.github.io/post/new-laptop/</link><pubDate>Thu, 06 Jun 2024 17:17:59 +0530</pubDate><guid>https://rajp152k.github.io/post/new-laptop/</guid><description>&lt;p&gt;I recently shifted my operations to a thinkpad x13g4amd (Ryzen 7840U + 780M Radeon) and am using this transfer as an opportunity to realize and improve my work related habits.&lt;/p&gt;
+&lt;h2 id="gnulinux"&gt;GNU/Linux&lt;/h2&gt;
+&lt;p&gt;All of my pipelines are based around Linux and the core GNU utils. I had to use windows for a while due to org-wide constraints but I&amp;rsquo;ve recently been given the signal to shift to linux.&lt;/p&gt;
+&lt;p&gt;I rarely used any windows native tools for my workflows and there was always a layer of linux emulation/virtualization (wsl, scoop, and the likes) upon which I conducted my usual operations. Given I use Debian at home, a non native linux experience was frustrating at best and depressing at worst. No more, do I have to confine myself.&lt;/p&gt;</description></item><item><title>Python like a Spartan</title><link>https://rajp152k.github.io/post/nvim-tmux-docker-python/</link><pubDate>Thu, 18 Jan 2024 12:15:48 +0530</pubDate><guid>https://rajp152k.github.io/post/nvim-tmux-docker-python/</guid><description>&lt;p&gt;I&amp;rsquo;m an AI Research Engineer and that involves messing around a little
 with python. I&amp;rsquo;ve spent the past 4 years perfecting a disciplined,
-minimal, but enabling setup.&lt;/p>
-&lt;p>This is a tour of my trusty set of tools, in the hopes that it will help
-you find the same CLI zen that I&amp;rsquo;ve been enjoying for a while now.&lt;/p>
-&lt;h2 id="tmux--towards-an-eternal-shell">Tmux : towards an Eternal Shell&lt;/h2>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/setup/tmux.png" alt="tmux">&lt;/p>
-&lt;p>I start my work sessions off by ssh&amp;rsquo;ing into my remote compute
-cluster.&lt;/p></description></item></channel></rss>
+minimal, but enabling setup.&lt;/p&gt;
+&lt;p&gt;This is a tour of my trusty set of tools, in the hopes that it will help
+you find the same CLI zen that I&amp;rsquo;ve been enjoying for a while now.&lt;/p&gt;
+&lt;h2 id="tmux--towards-an-eternal-shell"&gt;Tmux : towards an Eternal Shell&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/setup/tmux.png" alt="tmux"&gt;&lt;/p&gt;
+&lt;p&gt;I start my work sessions off by ssh&amp;rsquo;ing into my remote compute
+cluster.&lt;/p&gt;</description></item></channel></rss>

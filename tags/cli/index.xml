@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cli on (bit-mage)</title><link>https://rajp152k.github.io/tags/cli/</link><description>Recent content in Cli on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 16 Mar 2025 19:10:48 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p>Fabric&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p>
-&lt;p>Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p>
-&lt;p>Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p>
-&lt;p>Gptel&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p></description></item><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p>This is how I time my workblocks these days&amp;hellip;&lt;/p>
-&lt;h3 id="prerequisites">Prerequisites&lt;/h3>
-&lt;ul>
-&lt;li>ALSA : &lt;a href="https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture">https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="functions">Functions&lt;/h3>
-&lt;pre tabindex="0">&lt;code>single_beep() {
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cli on (bit-mage)</title><link>https://rajp152k.github.io/tags/cli/</link><description>Recent content in Cli on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 16 Mar 2025 19:10:48 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p&gt;Fabric&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p&gt;
+&lt;p&gt;Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p&gt;
+&lt;p&gt;Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p&gt;
+&lt;p&gt;Gptel&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p&gt;</description></item><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p&gt;This is how I time my workblocks these days&amp;hellip;&lt;/p&gt;
+&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ALSA : &lt;a href="https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture"&gt;https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="functions"&gt;Functions&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;single_beep() {
 ( \speaker-test --frequency $1 --test sine )&amp;amp;
 pid=$!
 \sleep 0.${2}s
@@ -31,6 +31,6 @@ sos() {
 timer() {
  \sleep $1 &amp;amp;&amp;amp; sos &amp;amp;
 }
-&lt;/code>&lt;/pre>&lt;h3 id="usage">Usage&lt;/h3>
-&lt;p>The above can be sourced in your shell rc.&lt;br>
-I store it in a &lt;code>.bash_funcs&lt;/code> where I have all my functions and source them in the end of my rc as &lt;code>source ~/.bash_funcs&lt;/code>.&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="usage"&gt;Usage&lt;/h3&gt;
+&lt;p&gt;The above can be sourced in your shell rc.&lt;br&gt;
+I store it in a &lt;code&gt;.bash_funcs&lt;/code&gt; where I have all my functions and source them in the end of my rc as &lt;code&gt;source ~/.bash_funcs&lt;/code&gt;.&lt;/p&gt;</description></item></channel></rss>

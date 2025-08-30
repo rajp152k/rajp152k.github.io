@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Engineering on (bit-mage)</title><link>https://rajp152k.github.io/tags/engineering/</link><description>Recent content in Engineering on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 May 2025 09:36:23 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Engineering Cognitive Infrastructure</title><link>https://rajp152k.github.io/post/cognware-industries/</link><pubDate>Mon, 05 May 2025 09:36:23 +0530</pubDate><guid>https://rajp152k.github.io/post/cognware-industries/</guid><description>&lt;p>I&amp;rsquo;m a Philosopher (etymologically speaking, I do love wisdom).&lt;/p>
-&lt;p>&lt;a href="https://cognware.com">CognWare Industries&lt;/a> was established on the 1st of May to philosophically channel my cognitive energies.&lt;/p>
-&lt;p>Explicitly addressing them allows me to separate out my identities of being technicality oriented (in here) and being too abstract (given the lisp aficionado that I am).&lt;/p>
-&lt;p>Of course, a fusion of being overtly-abstract and over-engineering my thoughts are fundamental to my operations and my personalit(y/ies).&lt;/p></description></item><item><title>Campfire Talks</title><link>https://rajp152k.github.io/post/campfiretalks/</link><pubDate>Tue, 07 Jan 2025 13:18:26 +0530</pubDate><guid>https://rajp152k.github.io/post/campfiretalks/</guid><description>&lt;p>I&amp;rsquo;ve lately taken to watching Alan Kay talks during my lunches and dinners.&lt;/p>
-&lt;hr>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/D43PlUr1x_E?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Engineering on (bit-mage)</title><link>https://rajp152k.github.io/tags/engineering/</link><description>Recent content in Engineering on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 May 2025 09:36:23 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Engineering Cognitive Infrastructure</title><link>https://rajp152k.github.io/post/cognware-industries/</link><pubDate>Mon, 05 May 2025 09:36:23 +0530</pubDate><guid>https://rajp152k.github.io/post/cognware-industries/</guid><description>&lt;p&gt;I&amp;rsquo;m a Philosopher (etymologically speaking, I do love wisdom).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cognware.com"&gt;CognWare Industries&lt;/a&gt; was established on the 1st of May to philosophically channel my cognitive energies.&lt;/p&gt;
+&lt;p&gt;Explicitly addressing them allows me to separate out my identities of being technicality oriented (in here) and being too abstract (given the lisp aficionado that I am).&lt;/p&gt;
+&lt;p&gt;Of course, a fusion of being overtly-abstract and over-engineering my thoughts are fundamental to my operations and my personalit(y/ies).&lt;/p&gt;</description></item><item><title>Campfire Talks</title><link>https://rajp152k.github.io/post/campfiretalks/</link><pubDate>Tue, 07 Jan 2025 13:18:26 +0530</pubDate><guid>https://rajp152k.github.io/post/campfiretalks/</guid><description>&lt;p&gt;I&amp;rsquo;ve lately taken to watching Alan Kay talks during my lunches and dinners.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/D43PlUr1x_E?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;hr>
-&lt;p>The idea of this being a &lt;a href="https://youtu.be/D43PlUr1x_E?si=uIdbm6e5FYrXLSdr&amp;amp;t=3025">campfire talk&lt;/a> near the end caught me offguard and is something I would like to use in the future.&lt;/p></description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p>I finished my first pass of SICP (structure and interpretation of
-computer programs) around &lt;a href="https://github.com/rajp152k/SICP">3 years
-ago&lt;/a>. Since, I&amp;rsquo;ve realized the
+&lt;hr&gt;
+&lt;p&gt;The idea of this being a &lt;a href="https://youtu.be/D43PlUr1x_E?si=uIdbm6e5FYrXLSdr&amp;amp;t=3025"&gt;campfire talk&lt;/a&gt; near the end caught me offguard and is something I would like to use in the future.&lt;/p&gt;</description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p&gt;I finished my first pass of SICP (structure and interpretation of
+computer programs) around &lt;a href="https://github.com/rajp152k/SICP"&gt;3 years
+ago&lt;/a&gt;. Since, I&amp;rsquo;ve realized the
 elegantly implicit existence of symbolic algebra in several domains
-that I personally explore on a regular basis.&lt;/p>
-&lt;p>That initial infatuation with Lisp ( and consequently symbolic
+that I personally explore on a regular basis.&lt;/p&gt;
+&lt;p&gt;That initial infatuation with Lisp ( and consequently symbolic
 computation ) has simmered and fermented enough in my mind to be
 realised as a potent generic thinking device. To cement my
 commitment to the same, I&amp;rsquo;ll regularly dive deeper into relevant academia
-so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p></description></item></channel></rss>
+so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p&gt;</description></item></channel></rss>

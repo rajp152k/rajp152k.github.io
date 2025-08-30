@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Infix on (bit-mage)</title><link>https://rajp152k.github.io/tags/infix/</link><description>Recent content in Infix on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 29 Aug 2023 11:09:43 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/infix/index.xml" rel="self" type="application/rss+xml"/><item><title>Common Lisp : The Series - 0.1 : Representing Programs</title><link>https://rajp152k.github.io/post/clts/clts-0.1/</link><pubDate>Tue, 29 Aug 2023 11:09:43 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0.1/</guid><description>&lt;p>What makes lisp so unique is the way its code is structured - you
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Infix on (bit-mage)</title><link>https://rajp152k.github.io/tags/infix/</link><description>Recent content in Infix on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 29 Aug 2023 11:09:43 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/infix/index.xml" rel="self" type="application/rss+xml"/><item><title>Common Lisp : The Series - 0.1 : Representing Programs</title><link>https://rajp152k.github.io/post/clts/clts-0.1/</link><pubDate>Tue, 29 Aug 2023 11:09:43 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0.1/</guid><description>&lt;p&gt;What makes lisp so unique is the way its code is structured - you
 definitely can&amp;rsquo;t miss all those parentheses. In this section of the
 series, I discuss the cause for such a representation and how that
-makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SuI2ns1D9Es?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SuI2ns1D9Es?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;hr>
-&lt;hr>
-&lt;h2 id="further-reading">Further reading&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://docs.python.org/3/library/dis.html">Python disassembler&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoiconity&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Bytecode">Byte Code&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/S-expression">S-expressions&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Common_operator_notation">Common Operator Notation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Abstract Syntax Tree&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://wiki.c2.com/?BlubParadox">The Blub Paradox&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="call-to-collaborate">Call to collaborate&lt;/h2>
-&lt;p>If you&amp;rsquo;re someone who shares the dream of making lisp popular and
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h2 id="further-reading"&gt;Further reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/dis.html"&gt;Python disassembler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Homoiconicity"&gt;Homoiconity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Bytecode"&gt;Byte Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/S-expression"&gt;S-expressions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Common_operator_notation"&gt;Common Operator Notation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree"&gt;Abstract Syntax Tree&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.c2.com/?BlubParadox"&gt;The Blub Paradox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="call-to-collaborate"&gt;Call to collaborate&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re someone who shares the dream of making lisp popular and
 mainstream so that we can use it for our jobs and don&amp;rsquo;t have to switch
 to blubs to make a living (without denting its charm of course) ,
 consider contributing to the notes and hit me up via mail or any of
-the other media I&amp;rsquo;m present on.&lt;/p></description></item></channel></rss>
+the other media I&amp;rsquo;m present on.&lt;/p&gt;</description></item></channel></rss>

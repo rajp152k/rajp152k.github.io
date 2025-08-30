@@ -1,111 +1,111 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on (bit-mage)</title><link>https://rajp152k.github.io/post/</link><description>Recent content in Posts on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 22 Aug 2025 16:02:43 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>One Off ..</title><link>https://rajp152k.github.io/post/one-off/</link><pubDate>Fri, 22 Aug 2025 16:02:43 +0530</pubDate><guid>https://rajp152k.github.io/post/one-off/</guid><description>&lt;p>I wrestle with boredom from time to time: probably because I maintain a healthy addiction for novelty.&lt;/p>
-&lt;p>Although my days are scheduled along with a mostly invariable undercurrent of overarching directives, a deliberate portion of &amp;ldquo;something new&amp;rdquo; keeps me engaged and aware in the longer run.&lt;/p>
-&lt;p>This idea of needing &amp;ldquo;something new&amp;rdquo; everyday has become the most recent constant in my life: to the point of me considering adopting a &amp;ldquo;new new&amp;rdquo; of &amp;ldquo;nothing new for a while and seeing how that feels&amp;rdquo;.&lt;/p></description></item><item><title>The Home Row</title><link>https://rajp152k.github.io/post/the-home-row/</link><pubDate>Wed, 23 Jul 2025 10:17:53 +0530</pubDate><guid>https://rajp152k.github.io/post/the-home-row/</guid><description>&lt;p>Getting a little pedantic with my doom configs&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> these days..&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(defmacro generate-bindable-lambda (&lt;span style="color:#66d9ef">&amp;amp;rest&lt;/span> body)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">`&lt;/span>&lt;span style="color:#a6e22e">#&amp;#39;&lt;/span>(lambda ()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (interactive)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">,@&lt;/span>body))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;; .. the home row ..&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(map! :map evil-normal-state-map
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i p&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;+&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i n&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;-&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i u&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;_&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;C-M-i e&amp;#34;&lt;/span> (generate-bindable-lambda (&lt;span style="color:#a6e22e">insert&lt;/span> &lt;span style="color:#e6db74">&amp;#34;=&amp;#34;&lt;/span>)))
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Maybe I should consider buying foot pedals.., and eye trackers (3 screens at the moment ) .., and setting up an array of interface sensors to truly begin exploiting emacs..,
-to the point of conducting an orchestra of text buffers.., somewhat musically (/ whimsically?)..&lt;/p></description></item><item><title>The DocShelf</title><link>https://rajp152k.github.io/post/docshelf/</link><pubDate>Tue, 22 Jul 2025 10:46:57 +0530</pubDate><guid>https://rajp152k.github.io/post/docshelf/</guid><description>&lt;p>Lately realized that I like reading the docs: don&amp;rsquo;t know if such a psychological disorder has been classified so far but I&amp;rsquo;m going to lean into it, for humanity&amp;rsquo;s sake, and document how my condition unfolds.&lt;/p>
-&lt;p>I, implicitly, have gathered a certain corpus of incommunicable collation of engineering wisdom (/ overenginering foolery?), surfing the architectural and conceptual sections of docs in quite some well-known, mystical, ancient or infamous sections of the internet.&lt;/p></description></item><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p>I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br>
-- an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br>
-- an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br>
-- a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br>
-- several compute clusters (avx enabled x86s, ARM, &amp;ldquo;the propietary GPU driver guy on the street&amp;rdquo; GPUs, &amp;ldquo;the other open source GPU driver guy on the steet&amp;rdquo; GPUs, k8s orchestrated production &amp;amp; development playgrounds) for work&lt;br>
-- an AMD x86 Tumbleweed with emacs as the daily driver where I actually &amp;ldquo;work&amp;rdquo; : this is desk where I dissect, analyse, reconstruct and dispatch for usage across the above&lt;/p></description></item><item><title>Software Galaxies</title><link>https://rajp152k.github.io/post/software-galaxies/</link><pubDate>Thu, 05 Jun 2025 13:27:39 +0530</pubDate><guid>https://rajp152k.github.io/post/software-galaxies/</guid><description>&lt;p>&lt;a href="https://anvaka.github.io/pm/#/?_k=ncqlmc">This&lt;/a>&lt;/p>
-&lt;p>you&amp;rsquo;ll need &lt;a href="https://github.com/anvaka/pm/tree/master/about#software-galaxies-documentation">this&lt;/a> to grasp that&lt;/p></description></item><item><title>Tetris-Complete</title><link>https://rajp152k.github.io/post/tetris-complete/</link><pubDate>Fri, 16 May 2025 15:39:43 +0530</pubDate><guid>https://rajp152k.github.io/post/tetris-complete/</guid><description>&lt;p>Emacs Lisp is &lt;a href="https://www.reddit.com/r/spacemacs/comments/dertfg/comment/f2ys9hq/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button">Tetris Complete&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>did not mean &lt;a href="https://www.reddit.com/r/spacemacs/comments/dertfg/comment/f31v6uf/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button">Turing Complete&lt;/a>&lt;/li>
-&lt;li>really did &lt;a href="https://www.reddit.com/r/ProgrammingLanguages/comments/8yct5s/comment/e29v03f/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button">not&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Engineering Cognitive Infrastructure</title><link>https://rajp152k.github.io/post/cognware-industries/</link><pubDate>Mon, 05 May 2025 09:36:23 +0530</pubDate><guid>https://rajp152k.github.io/post/cognware-industries/</guid><description>&lt;p>I&amp;rsquo;m a Philosopher (etymologically speaking, I do love wisdom).&lt;/p>
-&lt;p>&lt;a href="https://cognware.com">CognWare Industries&lt;/a> was established on the 1st of May to philosophically channel my cognitive energies.&lt;/p>
-&lt;p>Explicitly addressing them allows me to separate out my identities of being technicality oriented (in here) and being too abstract (given the lisp aficionado that I am).&lt;/p>
-&lt;p>Of course, a fusion of being overtly-abstract and over-engineering my thoughts are fundamental to my operations and my personalit(y/ies).&lt;/p></description></item><item><title>Decommissioning Roam Builds</title><link>https://rajp152k.github.io/post/decommissioning-roam-builds/</link><pubDate>Thu, 24 Apr 2025 14:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/decommissioning-roam-builds/</guid><description>&lt;p>As of &lt;a href="https://github.com/rajp152k/buffer/commit/ab67e8281cd4159077d4524e13c57c1d3a6623c8#diff-8b236f169972d04a6ef8a362fb84d1e2654e1ff5d347267fd78cfb10d904f0d5">today&lt;/a>, am decommissioning my org roam notes builds : there used to be a notes section in the banner above.&lt;/p>
-&lt;p>The current UI is not apt anymore for the scale of nodes accumulated - build times are high (2+ mins) and the navigation capabilities are archaic : will engineer and publish another navigation experience soon. Will continue publishing my notes to the &lt;a href="https://github.com/rajp152k/buffer">repository&lt;/a> as usual.&lt;/p></description></item><item><title>Assume Competence</title><link>https://rajp152k.github.io/post/jargon-ai/</link><pubDate>Tue, 22 Apr 2025 16:12:43 +0530</pubDate><guid>https://rajp152k.github.io/post/jargon-ai/</guid><description>&lt;p>Following a recent realization that &lt;a href="https://rajp152k.github.io/post/phrasal-outlines">jargons are fun&lt;/a>, experimenting with prompts that inform LLMs to talk in outlines and jargons, assuming the reader is competent. Producitvity is up.&lt;/p>
-&lt;p>.dotfiles commit for linked context : &lt;a href="https://github.com/rajp152k/.dotfiles/commit/28dd1385cc4370dd0b15774bb96a661b3cab628f">https://github.com/rajp152k/.dotfiles/commit/28dd1385cc4370dd0b15774bb96a661b3cab628f&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>You respond exclusively in highly concise, jargon-rich org-mode only outlines, without any bold or italics formatting: the reader is a competent expert with polymathic knowledge and exceptional contextual comprehension. Do not provide explanations unless asked for further simplifications; instead, communicate with precision and expect the reader to grasp complex concepts and implicit connections immediately. Do not use any filler sentences and collabaratively contribute in constructing whatever topic is being expanded upon&lt;/p></description></item><item><title>Software Archaeology</title><link>https://rajp152k.github.io/post/programming-pilgrimages/</link><pubDate>Mon, 21 Apr 2025 08:42:54 +0530</pubDate><guid>https://rajp152k.github.io/post/programming-pilgrimages/</guid><description>&lt;p>During a recent surf, I chanced upon this beast.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290">The Information Manager from Hell&lt;/a>&lt;br>
-&amp;ndash; Linus&lt;/p>&lt;/blockquote>
-&lt;p>Thinking about compiling more such landmarks &amp;ndash; an itinerary for fellow cyber pilgrims&lt;/p>
-&lt;p>Reviewing older codebases is an underrated exercise for software engineers&lt;/p>
-&lt;p>It&amp;rsquo;s a journey through the evolution of code, revealing the engineering decisions that moulded what we deal with today&lt;/p>
-&lt;p>Tracing the history of a project – understanding what worked, what didn&amp;rsquo;t, and how technical components evolved – has been a joy lately&lt;/p></description></item><item><title>Jargony Outlines</title><link>https://rajp152k.github.io/post/phrasal-outlines/</link><pubDate>Thu, 17 Apr 2025 06:36:56 +0530</pubDate><guid>https://rajp152k.github.io/post/phrasal-outlines/</guid><description>&lt;h2 id="context">Context&lt;/h2>
-&lt;blockquote>
-&lt;p>been reading more papers&lt;br>
-notes by jargony outlines&lt;br>
-no unnecessary words&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>if can express&lt;br>
-few words&lt;br>
-you get it&lt;br>
-get it?&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>concise, practical&lt;br>
-flowy, comprehensible&lt;br>
-jargon is fun&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>in org-roam&lt;br>
-links when depth&lt;br>
-more speed&lt;br>
-good&lt;/p>&lt;/blockquote>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt="">&lt;/p>
-&lt;blockquote>
-&lt;p>all left&lt;br>
-tech haikus&lt;br>
-challenge&lt;br>
-someday&lt;/p>&lt;/blockquote>
-&lt;blockquote>
-&lt;p>until then&lt;/p>&lt;/blockquote>
-&lt;h2 id="enjoy-instance-for-this">&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org">Enjoy instance&lt;/a> for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf">this&lt;/a>&lt;/h2></description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p>&lt;a href="https://github.com/rajp152k/nth-roam/tree/master">Nth Roam&lt;/a> : An Emacs package to efficiently manage multiple roam instances&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div></description></item><item><title>Blub in the Unix Philosophy</title><link>https://rajp152k.github.io/post/unixier-unix/</link><pubDate>Mon, 24 Mar 2025 15:18:39 +0530</pubDate><guid>https://rajp152k.github.io/post/unixier-unix/</guid><description>&lt;p>I&amp;rsquo;ve always maintained a philosophical appetite for the tooling that I use.&lt;/p>
-&lt;p>One of the core tenets of the Unix Philosophy&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is that everything is a file&amp;hellip;&lt;/p>
-&lt;p>Plan9&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> has caught my eye due to its more homogenous design than the usual unix you&amp;rsquo;re used to.&lt;/p>
-&lt;p>The footnoted-paper (~pre-mature book) is somewhat unhinged and doesn&amp;rsquo;t shy away from taking a jab at the Unix ecosystem and design.&lt;/p>
-&lt;p>Apart from the several points the author makes, what stands out the most for me is the idea of &lt;em>everything&lt;/em> truly being a file: in hindsight, Unix only realizes a fraction of the principle.&lt;/p></description></item><item><title>Bells &amp; Whistles</title><link>https://rajp152k.github.io/post/bells-and-whistles/</link><pubDate>Sun, 23 Mar 2025 14:18:07 +0530</pubDate><guid>https://rajp152k.github.io/post/bells-and-whistles/</guid><description>&lt;p>I&amp;rsquo;ve started spending some time per day without the usual modern software engineering tooling (LLMs, the Internet, etc) to explicitly maintain my cyber-deduction skills (in the context of Unix-based systems (BSDs, Linux, yet to explore Plan9), mostly because they power the majority of the global compute infrastructure).&lt;/p>
-&lt;p>It&amp;rsquo;s fun: init your journey with a &lt;code>man man&lt;/code> (I&amp;rsquo;m an &lt;code>info info&lt;/code> guy myself) and be extremely skeptical of your usual modus operandi, ditching all assumptions and tumbling down the rabbit hole.&lt;/p></description></item><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p>Fabric&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p>
-&lt;p>Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p>
-&lt;p>Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p>
-&lt;p>Gptel&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p></description></item><item><title>Skim, Devour, Feynmanize</title><link>https://rajp152k.github.io/post/paper-read-strat/</link><pubDate>Thu, 20 Feb 2025 16:01:03 +0530</pubDate><guid>https://rajp152k.github.io/post/paper-read-strat/</guid><description>&lt;p>For a while, I&amp;rsquo;d limited my studying endeavours to be project oriented and not domain oriented. While I enjoy the pragmatism of the former, I also wish to build up my innate curiosity to get under the hood, disassemble the engine and be able to put it back together: no project (except the explicit choice of doing so) is going to help me fit that in my studies.&lt;/p>
-&lt;p>Consequently, I&amp;rsquo;m planning on getting started with a regulary habit of exploring domains with depth.&lt;/p></description></item><item><title>The PaperShelf</title><link>https://rajp152k.github.io/post/citeread/</link><pubDate>Sun, 16 Feb 2025 17:38:16 +0530</pubDate><guid>https://rajp152k.github.io/post/citeread/</guid><description>&lt;p>From time to time, I like to make minor tweaks to my blog based on the treasure trinkets I find around in different corners of the internet from blogs/works of personalities I follow/find interesting.&lt;/p>
-&lt;p>I got into the practice of logging updates in reverse chronological streams from one of my professors in my sophomore year.&lt;/p>
-&lt;p>I began personalized hex timestamps (today is 0x2360 for me) because I don&amp;rsquo;t intuitively gel well with the (Julian -&amp;gt; Gregorian) cycles. The combination of lunar, solar and planetary cycles is my most recent experimental initiative for calibrating long term efforts but that would be a little too chaotic for the part of the world wide web that I mostly interact with these days.&lt;/p></description></item><item><title>Quote-Unquote: I'm Diabetic</title><link>https://rajp152k.github.io/post/diabetic/</link><pubDate>Thu, 13 Feb 2025 22:33:23 +0530</pubDate><guid>https://rajp152k.github.io/post/diabetic/</guid><description>&lt;p>One of my cousin&amp;rsquo;s getting hitched and maneuvering your way through &amp;ldquo;the great indian wedding&amp;rdquo; while sticking to your nutritional routine is tough.&lt;/p>
-&lt;p>Not so much because you lack self control (that&amp;rsquo;s the easy part and have that figured out) but more because all the relatives are out there stuffing delicacies down your throat at all times through a whole bunch of ceremonies (I don&amp;rsquo;t have enough fingers to keep up with the count).&lt;/p></description></item><item><title>I'm using Monitors again</title><link>https://rajp152k.github.io/post/back-at-monitors/</link><pubDate>Mon, 20 Jan 2025 16:35:52 +0530</pubDate><guid>https://rajp152k.github.io/post/back-at-monitors/</guid><description>&lt;p>I&amp;rsquo;m using &lt;a href="https://thebitmage.com/post/no-monitor/">monitors again&lt;/a> and it&amp;rsquo;s like consuming caffeine after a long time (last recorded usage circa mid November 2024).&lt;/p>
-&lt;p>I guess I need to cycle my dosage so that I don&amp;rsquo;t end up being too dependent.&lt;/p>
-&lt;p>I&amp;rsquo;m enjoying it though.&lt;/p>
-&lt;blockquote>
-&lt;p>EDIT: as of &amp;lt;2025-01-27 17:50:30 IST&amp;gt;, I&amp;rsquo;ve given up again&lt;/p>&lt;/blockquote></description></item><item><title>On Achievements</title><link>https://rajp152k.github.io/post/achievements/</link><pubDate>Fri, 17 Jan 2025 06:12:55 +0530</pubDate><guid>https://rajp152k.github.io/post/achievements/</guid><description>&lt;p>I have a somewhat indifferent approach towards achievements(mine and others&amp;rsquo;): with tendencies to gauge the personalities based on how their conversations flow and in terms of the quality of the questions and problems they are working on.&lt;/p>
-&lt;p>Recently, I&amp;rsquo;ve began to grasp why they actually might be a necessary construct:&lt;/p>
-&lt;ul>
-&lt;li>when leading larger societal initiatives, simply claiming ethical superiority doesn&amp;rsquo;t pan out well (and it shouldn&amp;rsquo;t) with the need to gain the trust of masses.&lt;/li>
-&lt;li>you need displays of competence for people to will their incentives to align with yours somehow (necessary for collective progress).&lt;/li>
-&lt;li>claiming dignity is simply not enough and that is a good thing.&lt;/li>
-&lt;li>of course, this opens up a whole bunch of societal games and dynamics that are too complicated for me to completely break down right now.&lt;/li>
-&lt;/ul>
-&lt;p>If you do wish to make a change, you will someday have to take the helm of larger groups of humans. This is when being competent and having proofs for it becomes indispensible.&lt;/p></description></item><item><title>IKN0X223B: LAUNCHING THE ICBM</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x233b/</link><pubDate>Fri, 10 Jan 2025 11:58:22 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x233b/</guid><description>&lt;p>&lt;em>check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/">here&lt;/a>&lt;/em>&lt;/p>
-&lt;p>&lt;a href="https://buffer.thebitmage.com/20250109100230-icbm_intellectual_cluster_bootstrap_methodology.html">ICBM&lt;/a>, in here, is an abbreviation for the &amp;ldquo;Intellectual Cluster Bootstrap Methodology&amp;rdquo;.&lt;/p>
-&lt;p>I&amp;rsquo;ve only recently began enjoying the joys of maintaining scaffolds in multiple intellectual domains.&lt;/p>
-&lt;p>Given you maintain good generic fundamentals of various root domains, you get to enjoy grasping new specific ones in an expedited manner.&lt;/p>
-&lt;p>These days when I have to assimilate a previously unseen domain, a weekend long pragmatic study marathon yields results comparable to what would&amp;rsquo;ve required at least a week, before &lt;a href="https://github.com/rajp152k/19-22_archive/blob/3579ed21d07e2c52aeb218e409693f54872e2a6b/_posts/books/2020-11-09-LdaV.md">I deliberately chose&lt;/a> to set out on this path.&lt;/p></description></item><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p>A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p>
-&lt;p>I was aware that the &lt;code>.gitignore&lt;/code> could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p>
-&lt;p>checkout &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git">this stackoverflow question&lt;/a>&lt;/p>
-&lt;p>So if the first &lt;code>.gitignore&lt;/code> looks like&lt;/p>
-&lt;pre tabindex="0">&lt;code>asdf-pattern 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on (bit-mage)</title><link>https://rajp152k.github.io/post/</link><description>Recent content in Posts on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 22 Aug 2025 16:02:43 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>One Off ..</title><link>https://rajp152k.github.io/post/one-off/</link><pubDate>Fri, 22 Aug 2025 16:02:43 +0530</pubDate><guid>https://rajp152k.github.io/post/one-off/</guid><description>&lt;p&gt;I wrestle with boredom from time to time: probably because I maintain a healthy addiction for novelty.&lt;/p&gt;
+&lt;p&gt;Although my days are scheduled along with a mostly invariable undercurrent of overarching directives, a deliberate portion of &amp;ldquo;something new&amp;rdquo; keeps me engaged and aware in the longer run.&lt;/p&gt;
+&lt;p&gt;This idea of needing &amp;ldquo;something new&amp;rdquo; everyday has become the most recent constant in my life: to the point of me considering adopting a &amp;ldquo;new new&amp;rdquo; of &amp;ldquo;nothing new for a while and seeing how that feels&amp;rdquo;.&lt;/p&gt;</description></item><item><title>The Home Row</title><link>https://rajp152k.github.io/post/the-home-row/</link><pubDate>Wed, 23 Jul 2025 10:17:53 +0530</pubDate><guid>https://rajp152k.github.io/post/the-home-row/</guid><description>&lt;p&gt;Getting a little pedantic with my doom configs&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; these days..&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(defmacro generate-bindable-lambda (&lt;span style="color:#66d9ef"&gt;&amp;amp;rest&lt;/span&gt; body)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;`&lt;/span&gt;&lt;span style="color:#a6e22e"&gt;#&amp;#39;&lt;/span&gt;(lambda ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (interactive)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;,@&lt;/span&gt;body))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;; .. the home row ..&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(map! :map evil-normal-state-map
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i p&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;+&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i n&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;-&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i u&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;_&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;C-M-i e&amp;#34;&lt;/span&gt; (generate-bindable-lambda (&lt;span style="color:#a6e22e"&gt;insert&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;=&amp;#34;&lt;/span&gt;)))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Maybe I should consider buying foot pedals.., and eye trackers (3 screens at the moment ) .., and setting up an array of interface sensors to truly begin exploiting emacs..,
+to the point of conducting an orchestra of text buffers.., somewhat musically (/ whimsically?)..&lt;/p&gt;</description></item><item><title>The DocShelf</title><link>https://rajp152k.github.io/post/docshelf/</link><pubDate>Tue, 22 Jul 2025 10:46:57 +0530</pubDate><guid>https://rajp152k.github.io/post/docshelf/</guid><description>&lt;p&gt;Lately realized that I like reading the docs: don&amp;rsquo;t know if such a psychological disorder has been classified so far but I&amp;rsquo;m going to lean into it, for humanity&amp;rsquo;s sake, and document how my condition unfolds.&lt;/p&gt;
+&lt;p&gt;I, implicitly, have gathered a certain corpus of incommunicable collation of engineering wisdom (/ overenginering foolery?), surfing the architectural and conceptual sections of docs in quite some well-known, mystical, ancient or infamous sections of the internet.&lt;/p&gt;</description></item><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p&gt;I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br&gt;
+- an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br&gt;
+- an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br&gt;
+- a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br&gt;
+- several compute clusters (avx enabled x86s, ARM, &amp;ldquo;the propietary GPU driver guy on the street&amp;rdquo; GPUs, &amp;ldquo;the other open source GPU driver guy on the steet&amp;rdquo; GPUs, k8s orchestrated production &amp;amp; development playgrounds) for work&lt;br&gt;
+- an AMD x86 Tumbleweed with emacs as the daily driver where I actually &amp;ldquo;work&amp;rdquo; : this is desk where I dissect, analyse, reconstruct and dispatch for usage across the above&lt;/p&gt;</description></item><item><title>Software Galaxies</title><link>https://rajp152k.github.io/post/software-galaxies/</link><pubDate>Thu, 05 Jun 2025 13:27:39 +0530</pubDate><guid>https://rajp152k.github.io/post/software-galaxies/</guid><description>&lt;p&gt;&lt;a href="https://anvaka.github.io/pm/#/?_k=ncqlmc"&gt;This&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;you&amp;rsquo;ll need &lt;a href="https://github.com/anvaka/pm/tree/master/about#software-galaxies-documentation"&gt;this&lt;/a&gt; to grasp that&lt;/p&gt;</description></item><item><title>Tetris-Complete</title><link>https://rajp152k.github.io/post/tetris-complete/</link><pubDate>Fri, 16 May 2025 15:39:43 +0530</pubDate><guid>https://rajp152k.github.io/post/tetris-complete/</guid><description>&lt;p&gt;Emacs Lisp is &lt;a href="https://www.reddit.com/r/spacemacs/comments/dertfg/comment/f2ys9hq/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button"&gt;Tetris Complete&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;did not mean &lt;a href="https://www.reddit.com/r/spacemacs/comments/dertfg/comment/f31v6uf/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button"&gt;Turing Complete&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;really did &lt;a href="https://www.reddit.com/r/ProgrammingLanguages/comments/8yct5s/comment/e29v03f/?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button"&gt;not&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Engineering Cognitive Infrastructure</title><link>https://rajp152k.github.io/post/cognware-industries/</link><pubDate>Mon, 05 May 2025 09:36:23 +0530</pubDate><guid>https://rajp152k.github.io/post/cognware-industries/</guid><description>&lt;p&gt;I&amp;rsquo;m a Philosopher (etymologically speaking, I do love wisdom).&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cognware.com"&gt;CognWare Industries&lt;/a&gt; was established on the 1st of May to philosophically channel my cognitive energies.&lt;/p&gt;
+&lt;p&gt;Explicitly addressing them allows me to separate out my identities of being technicality oriented (in here) and being too abstract (given the lisp aficionado that I am).&lt;/p&gt;
+&lt;p&gt;Of course, a fusion of being overtly-abstract and over-engineering my thoughts are fundamental to my operations and my personalit(y/ies).&lt;/p&gt;</description></item><item><title>Decommissioning Roam Builds</title><link>https://rajp152k.github.io/post/decommissioning-roam-builds/</link><pubDate>Thu, 24 Apr 2025 14:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/decommissioning-roam-builds/</guid><description>&lt;p&gt;As of &lt;a href="https://github.com/rajp152k/buffer/commit/ab67e8281cd4159077d4524e13c57c1d3a6623c8#diff-8b236f169972d04a6ef8a362fb84d1e2654e1ff5d347267fd78cfb10d904f0d5"&gt;today&lt;/a&gt;, am decommissioning my org roam notes builds : there used to be a notes section in the banner above.&lt;/p&gt;
+&lt;p&gt;The current UI is not apt anymore for the scale of nodes accumulated - build times are high (2+ mins) and the navigation capabilities are archaic : will engineer and publish another navigation experience soon. Will continue publishing my notes to the &lt;a href="https://github.com/rajp152k/buffer"&gt;repository&lt;/a&gt; as usual.&lt;/p&gt;</description></item><item><title>Assume Competence</title><link>https://rajp152k.github.io/post/jargon-ai/</link><pubDate>Tue, 22 Apr 2025 16:12:43 +0530</pubDate><guid>https://rajp152k.github.io/post/jargon-ai/</guid><description>&lt;p&gt;Following a recent realization that &lt;a href="https://rajp152k.github.io/post/phrasal-outlines"&gt;jargons are fun&lt;/a&gt;, experimenting with prompts that inform LLMs to talk in outlines and jargons, assuming the reader is competent. Producitvity is up.&lt;/p&gt;
+&lt;p&gt;.dotfiles commit for linked context : &lt;a href="https://github.com/rajp152k/.dotfiles/commit/28dd1385cc4370dd0b15774bb96a661b3cab628f"&gt;https://github.com/rajp152k/.dotfiles/commit/28dd1385cc4370dd0b15774bb96a661b3cab628f&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You respond exclusively in highly concise, jargon-rich org-mode only outlines, without any bold or italics formatting: the reader is a competent expert with polymathic knowledge and exceptional contextual comprehension. Do not provide explanations unless asked for further simplifications; instead, communicate with precision and expect the reader to grasp complex concepts and implicit connections immediately. Do not use any filler sentences and collabaratively contribute in constructing whatever topic is being expanded upon&lt;/p&gt;</description></item><item><title>Software Archaeology</title><link>https://rajp152k.github.io/post/programming-pilgrimages/</link><pubDate>Mon, 21 Apr 2025 08:42:54 +0530</pubDate><guid>https://rajp152k.github.io/post/programming-pilgrimages/</guid><description>&lt;p&gt;During a recent surf, I chanced upon this beast.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290"&gt;The Information Manager from Hell&lt;/a&gt;&lt;br&gt;
+&amp;ndash; Linus&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Thinking about compiling more such landmarks &amp;ndash; an itinerary for fellow cyber pilgrims&lt;/p&gt;
+&lt;p&gt;Reviewing older codebases is an underrated exercise for software engineers&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a journey through the evolution of code, revealing the engineering decisions that moulded what we deal with today&lt;/p&gt;
+&lt;p&gt;Tracing the history of a project – understanding what worked, what didn&amp;rsquo;t, and how technical components evolved – has been a joy lately&lt;/p&gt;</description></item><item><title>Jargony Outlines</title><link>https://rajp152k.github.io/post/phrasal-outlines/</link><pubDate>Thu, 17 Apr 2025 06:36:56 +0530</pubDate><guid>https://rajp152k.github.io/post/phrasal-outlines/</guid><description>&lt;h2 id="context"&gt;Context&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;been reading more papers&lt;br&gt;
+notes by jargony outlines&lt;br&gt;
+no unnecessary words&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;if can express&lt;br&gt;
+few words&lt;br&gt;
+you get it&lt;br&gt;
+get it?&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;concise, practical&lt;br&gt;
+flowy, comprehensible&lt;br&gt;
+jargon is fun&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;in org-roam&lt;br&gt;
+links when depth&lt;br&gt;
+more speed&lt;br&gt;
+good&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt=""&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;all left&lt;br&gt;
+tech haikus&lt;br&gt;
+challenge&lt;br&gt;
+someday&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;until then&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id="enjoy-instance-for-this"&gt;&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org"&gt;Enjoy instance&lt;/a&gt; for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf"&gt;this&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p&gt;&lt;a href="https://github.com/rajp152k/nth-roam/tree/master"&gt;Nth Roam&lt;/a&gt; : An Emacs package to efficiently manage multiple roam instances&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;</description></item><item><title>Blub in the Unix Philosophy</title><link>https://rajp152k.github.io/post/unixier-unix/</link><pubDate>Mon, 24 Mar 2025 15:18:39 +0530</pubDate><guid>https://rajp152k.github.io/post/unixier-unix/</guid><description>&lt;p&gt;I&amp;rsquo;ve always maintained a philosophical appetite for the tooling that I use.&lt;/p&gt;
+&lt;p&gt;One of the core tenets of the Unix Philosophy&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is that everything is a file&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Plan9&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; has caught my eye due to its more homogenous design than the usual unix you&amp;rsquo;re used to.&lt;/p&gt;
+&lt;p&gt;The footnoted-paper (~pre-mature book) is somewhat unhinged and doesn&amp;rsquo;t shy away from taking a jab at the Unix ecosystem and design.&lt;/p&gt;
+&lt;p&gt;Apart from the several points the author makes, what stands out the most for me is the idea of &lt;em&gt;everything&lt;/em&gt; truly being a file: in hindsight, Unix only realizes a fraction of the principle.&lt;/p&gt;</description></item><item><title>Bells &amp; Whistles</title><link>https://rajp152k.github.io/post/bells-and-whistles/</link><pubDate>Sun, 23 Mar 2025 14:18:07 +0530</pubDate><guid>https://rajp152k.github.io/post/bells-and-whistles/</guid><description>&lt;p&gt;I&amp;rsquo;ve started spending some time per day without the usual modern software engineering tooling (LLMs, the Internet, etc) to explicitly maintain my cyber-deduction skills (in the context of Unix-based systems (BSDs, Linux, yet to explore Plan9), mostly because they power the majority of the global compute infrastructure).&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s fun: init your journey with a &lt;code&gt;man man&lt;/code&gt; (I&amp;rsquo;m an &lt;code&gt;info info&lt;/code&gt; guy myself) and be extremely skeptical of your usual modus operandi, ditching all assumptions and tumbling down the rabbit hole.&lt;/p&gt;</description></item><item><title>I wrote an Emacs Package</title><link>https://rajp152k.github.io/post/fabric-gpt.el/</link><pubDate>Sun, 16 Mar 2025 19:10:48 +0530</pubDate><guid>https://rajp152k.github.io/post/fabric-gpt.el/</guid><description>&lt;p&gt;Fabric&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; is a collection of crowd-sourced prompts, exposed via a CLI tool. I used it for a while some time ago but never fully exploited it because I prefer Emacs.&lt;/p&gt;
+&lt;p&gt;Eshell buffers are an option, but I am principled in my tool usage and prefer to delegate longer-running CLI tasks to a combination of Alacritty and Tmux.&lt;/p&gt;
+&lt;p&gt;Maintaining my Emacs shell usage to ephemeral popups feels natural.&lt;/p&gt;
+&lt;p&gt;Gptel&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt; is a versatile LLM client that integrates smoothly into my workflow (buffer/text manipulation and management) without disrupting my thought flow.&lt;/p&gt;</description></item><item><title>Skim, Devour, Feynmanize</title><link>https://rajp152k.github.io/post/paper-read-strat/</link><pubDate>Thu, 20 Feb 2025 16:01:03 +0530</pubDate><guid>https://rajp152k.github.io/post/paper-read-strat/</guid><description>&lt;p&gt;For a while, I&amp;rsquo;d limited my studying endeavours to be project oriented and not domain oriented. While I enjoy the pragmatism of the former, I also wish to build up my innate curiosity to get under the hood, disassemble the engine and be able to put it back together: no project (except the explicit choice of doing so) is going to help me fit that in my studies.&lt;/p&gt;
+&lt;p&gt;Consequently, I&amp;rsquo;m planning on getting started with a regulary habit of exploring domains with depth.&lt;/p&gt;</description></item><item><title>The PaperShelf</title><link>https://rajp152k.github.io/post/citeread/</link><pubDate>Sun, 16 Feb 2025 17:38:16 +0530</pubDate><guid>https://rajp152k.github.io/post/citeread/</guid><description>&lt;p&gt;From time to time, I like to make minor tweaks to my blog based on the treasure trinkets I find around in different corners of the internet from blogs/works of personalities I follow/find interesting.&lt;/p&gt;
+&lt;p&gt;I got into the practice of logging updates in reverse chronological streams from one of my professors in my sophomore year.&lt;/p&gt;
+&lt;p&gt;I began personalized hex timestamps (today is 0x2360 for me) because I don&amp;rsquo;t intuitively gel well with the (Julian -&amp;gt; Gregorian) cycles. The combination of lunar, solar and planetary cycles is my most recent experimental initiative for calibrating long term efforts but that would be a little too chaotic for the part of the world wide web that I mostly interact with these days.&lt;/p&gt;</description></item><item><title>Quote-Unquote: I'm Diabetic</title><link>https://rajp152k.github.io/post/diabetic/</link><pubDate>Thu, 13 Feb 2025 22:33:23 +0530</pubDate><guid>https://rajp152k.github.io/post/diabetic/</guid><description>&lt;p&gt;One of my cousin&amp;rsquo;s getting hitched and maneuvering your way through &amp;ldquo;the great indian wedding&amp;rdquo; while sticking to your nutritional routine is tough.&lt;/p&gt;
+&lt;p&gt;Not so much because you lack self control (that&amp;rsquo;s the easy part and have that figured out) but more because all the relatives are out there stuffing delicacies down your throat at all times through a whole bunch of ceremonies (I don&amp;rsquo;t have enough fingers to keep up with the count).&lt;/p&gt;</description></item><item><title>I'm using Monitors again</title><link>https://rajp152k.github.io/post/back-at-monitors/</link><pubDate>Mon, 20 Jan 2025 16:35:52 +0530</pubDate><guid>https://rajp152k.github.io/post/back-at-monitors/</guid><description>&lt;p&gt;I&amp;rsquo;m using &lt;a href="https://thebitmage.com/post/no-monitor/"&gt;monitors again&lt;/a&gt; and it&amp;rsquo;s like consuming caffeine after a long time (last recorded usage circa mid November 2024).&lt;/p&gt;
+&lt;p&gt;I guess I need to cycle my dosage so that I don&amp;rsquo;t end up being too dependent.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m enjoying it though.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;EDIT: as of &amp;lt;2025-01-27 17:50:30 IST&amp;gt;, I&amp;rsquo;ve given up again&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>On Achievements</title><link>https://rajp152k.github.io/post/achievements/</link><pubDate>Fri, 17 Jan 2025 06:12:55 +0530</pubDate><guid>https://rajp152k.github.io/post/achievements/</guid><description>&lt;p&gt;I have a somewhat indifferent approach towards achievements(mine and others&amp;rsquo;): with tendencies to gauge the personalities based on how their conversations flow and in terms of the quality of the questions and problems they are working on.&lt;/p&gt;
+&lt;p&gt;Recently, I&amp;rsquo;ve began to grasp why they actually might be a necessary construct:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;when leading larger societal initiatives, simply claiming ethical superiority doesn&amp;rsquo;t pan out well (and it shouldn&amp;rsquo;t) with the need to gain the trust of masses.&lt;/li&gt;
+&lt;li&gt;you need displays of competence for people to will their incentives to align with yours somehow (necessary for collective progress).&lt;/li&gt;
+&lt;li&gt;claiming dignity is simply not enough and that is a good thing.&lt;/li&gt;
+&lt;li&gt;of course, this opens up a whole bunch of societal games and dynamics that are too complicated for me to completely break down right now.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you do wish to make a change, you will someday have to take the helm of larger groups of humans. This is when being competent and having proofs for it becomes indispensible.&lt;/p&gt;</description></item><item><title>IKN0X223B: LAUNCHING THE ICBM</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x233b/</link><pubDate>Fri, 10 Jan 2025 11:58:22 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x233b/</guid><description>&lt;p&gt;&lt;em&gt;check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/"&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://buffer.thebitmage.com/20250109100230-icbm_intellectual_cluster_bootstrap_methodology.html"&gt;ICBM&lt;/a&gt;, in here, is an abbreviation for the &amp;ldquo;Intellectual Cluster Bootstrap Methodology&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve only recently began enjoying the joys of maintaining scaffolds in multiple intellectual domains.&lt;/p&gt;
+&lt;p&gt;Given you maintain good generic fundamentals of various root domains, you get to enjoy grasping new specific ones in an expedited manner.&lt;/p&gt;
+&lt;p&gt;These days when I have to assimilate a previously unseen domain, a weekend long pragmatic study marathon yields results comparable to what would&amp;rsquo;ve required at least a week, before &lt;a href="https://github.com/rajp152k/19-22_archive/blob/3579ed21d07e2c52aeb218e409693f54872e2a6b/_posts/books/2020-11-09-LdaV.md"&gt;I deliberately chose&lt;/a&gt; to set out on this path.&lt;/p&gt;</description></item><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p&gt;A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p&gt;
+&lt;p&gt;I was aware that the &lt;code&gt;.gitignore&lt;/code&gt; could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p&gt;
+&lt;p&gt;checkout &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git"&gt;this stackoverflow question&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So if the first &lt;code&gt;.gitignore&lt;/code&gt; looks like&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;asdf-pattern 
 more-asdf
 some-absolute-asdf
 dir-asdf/
-&lt;/code>&lt;/pre>&lt;p>the second one would look like:&lt;/p>
-&lt;pre tabindex="0">&lt;code># blacklist everything first
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;the second one would look like:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;# blacklist everything first
 *
 
 # unignore the directories to capture nested existences
@@ -116,41 +116,41 @@ dir-asdf/
 !more-asdf
 !some-absoluete-asdf
 !dir-asdf/
-&lt;/code>&lt;/pre>&lt;p>What I wonder now is if git would allow for a branch-contextual .gitignore (named with certain protocols) so that I don&amp;rsquo;t have to maintain two different repositories altogether.&lt;/p></description></item><item><title>Campfire Talks</title><link>https://rajp152k.github.io/post/campfiretalks/</link><pubDate>Tue, 07 Jan 2025 13:18:26 +0530</pubDate><guid>https://rajp152k.github.io/post/campfiretalks/</guid><description>&lt;p>I&amp;rsquo;ve lately taken to watching Alan Kay talks during my lunches and dinners.&lt;/p>
-&lt;hr>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/D43PlUr1x_E?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;What I wonder now is if git would allow for a branch-contextual .gitignore (named with certain protocols) so that I don&amp;rsquo;t have to maintain two different repositories altogether.&lt;/p&gt;</description></item><item><title>Campfire Talks</title><link>https://rajp152k.github.io/post/campfiretalks/</link><pubDate>Tue, 07 Jan 2025 13:18:26 +0530</pubDate><guid>https://rajp152k.github.io/post/campfiretalks/</guid><description>&lt;p&gt;I&amp;rsquo;ve lately taken to watching Alan Kay talks during my lunches and dinners.&lt;/p&gt;
+&lt;hr&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/D43PlUr1x_E?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;hr>
-&lt;p>The idea of this being a &lt;a href="https://youtu.be/D43PlUr1x_E?si=uIdbm6e5FYrXLSdr&amp;amp;t=3025">campfire talk&lt;/a> near the end caught me offguard and is something I would like to use in the future.&lt;/p></description></item><item><title>I've given up on Monitors</title><link>https://rajp152k.github.io/post/no-monitor/</link><pubDate>Mon, 25 Nov 2024 20:58:12 +0530</pubDate><guid>https://rajp152k.github.io/post/no-monitor/</guid><description>&lt;p>I recently have moved on from using monitors and am working (professional and writing endeavours) only via a 13 inch laptop. It is definitely a different workflow than what I&amp;rsquo;m used to.&lt;/p>
-&lt;p>It has been around 10 days I&amp;rsquo;ve been doing this and here are some observations:&lt;/p>
-&lt;ul>
-&lt;li>I&amp;rsquo;m able to focus better as I&amp;rsquo;m forced to enlarge my context maintaining capabilities; for I don&amp;rsquo;t have the luxury to look back and forth with just my eye movements.&lt;/li>
-&lt;li>I can work from anywhere. I change places and posture every 1.5 hours, 5 times a day.&lt;/li>
-&lt;li>Given I move between a couple of meets during the day, I don&amp;rsquo;t have to adjust to differing window management mannerisms as I only ever work on the same screen now.&lt;/li>
-&lt;li>I work in at most two splits now compared to the 5+ previously: it is all simpler and the monitor has started to seem like a vanity rather than essential accessory.&lt;/li>
-&lt;li>I don&amp;rsquo;t have to switch keyboards between my desk and meets: I don&amp;rsquo;t mess enough as much now.&lt;/li>
-&lt;li>I can start looking down upon people that are bound to monitors, thinking that they&amp;rsquo;re spoiled or aren&amp;rsquo;t minimal enough.&lt;/li>
-&lt;li>I&amp;rsquo;ve started preaching about the spartan-ish effects of working only via your laptop&lt;/li>
-&lt;li>I spend more time on screen, on my bed: consequently I&amp;rsquo;m writing more.&lt;/li>
-&lt;/ul>
-&lt;p>I definitely do miss reading papers and books on a larger vertically oriented screen but I&amp;rsquo;m going to stick to this for a while.&lt;/p></description></item><item><title>on Naming your Projects</title><link>https://rajp152k.github.io/post/good-names/</link><pubDate>Fri, 22 Nov 2024 14:45:09 +0530</pubDate><guid>https://rajp152k.github.io/post/good-names/</guid><description>&lt;p>As an aspiring polymath, you&amp;rsquo;ll soon run out of books and courses if you really wish to explore the intersection of multiple domains based on your current intellectual requirements.&lt;/p>
-&lt;p>That is a great problem to have and the solution is to transition into the mindset of chunking your learnings into projects rather than subjects.&lt;/p>
-&lt;p>I&amp;rsquo;ll recommend maintaining a sense of pragmatism (incentivize application of what you&amp;rsquo;re learning in the foreseeable future (with non-pedagogical intent)) and haste during your initial iterations. Perfection (The will to tend towards it, rather..) can follow once the prototype is principally sound.&lt;/p></description></item><item><title>Building (and Maintaining) a &lt;desc. follows> Being</title><link>https://rajp152k.github.io/post/building-an-intellect/</link><pubDate>Thu, 21 Nov 2024 17:57:13 +0530</pubDate><guid>https://rajp152k.github.io/post/building-an-intellect/</guid><description>&lt;p>One cannot rely on objective standardized tests to gauge how good one is at the act of being.&lt;/p>
-&lt;p>They&amp;rsquo;re good to indicate a specific aspect of where you wish to affirm your competence in, but have exhibit numerous fallacies when you&amp;rsquo;re trying to optimize a probabilistic, unstructured, instinct based behaviour over longer spans of durations, ranging from weeks to decades.&lt;/p>
-&lt;p>Such a gauge is probably only exhaustively captured in how the complexities of life unroll around you based on your behaviours.&lt;/p></description></item><item><title>Personalized Science</title><link>https://rajp152k.github.io/post/personal-research/</link><pubDate>Mon, 18 Nov 2024 11:14:23 +0530</pubDate><guid>https://rajp152k.github.io/post/personal-research/</guid><description>&lt;p>I like studying and exploring new things in the spirit of science. The science that happens today in institutions is more than just science and involves a lot of ancillary efforts directed towards the formalized production of research.&lt;/p>
-&lt;p>I respect formalized scientific efforts but feel like humanity as whole is losing out on the idea of having personalized problem statements to work on without worrying about applications, citations or what the next big thing is going to be.&lt;/p></description></item><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p>There&amp;rsquo;s this saying :&lt;/p>
-&lt;blockquote>
-&lt;p>If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p>&lt;/blockquote>
-&lt;p>I&amp;rsquo;m going to do that with Go.&lt;/p>
-&lt;p>As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p></description></item><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p>This is how I time my workblocks these days&amp;hellip;&lt;/p>
-&lt;h3 id="prerequisites">Prerequisites&lt;/h3>
-&lt;ul>
-&lt;li>ALSA : &lt;a href="https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture">https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="functions">Functions&lt;/h3>
-&lt;pre tabindex="0">&lt;code>single_beep() {
+&lt;hr&gt;
+&lt;p&gt;The idea of this being a &lt;a href="https://youtu.be/D43PlUr1x_E?si=uIdbm6e5FYrXLSdr&amp;amp;t=3025"&gt;campfire talk&lt;/a&gt; near the end caught me offguard and is something I would like to use in the future.&lt;/p&gt;</description></item><item><title>I've given up on Monitors</title><link>https://rajp152k.github.io/post/no-monitor/</link><pubDate>Mon, 25 Nov 2024 20:58:12 +0530</pubDate><guid>https://rajp152k.github.io/post/no-monitor/</guid><description>&lt;p&gt;I recently have moved on from using monitors and am working (professional and writing endeavours) only via a 13 inch laptop. It is definitely a different workflow than what I&amp;rsquo;m used to.&lt;/p&gt;
+&lt;p&gt;It has been around 10 days I&amp;rsquo;ve been doing this and here are some observations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;m able to focus better as I&amp;rsquo;m forced to enlarge my context maintaining capabilities; for I don&amp;rsquo;t have the luxury to look back and forth with just my eye movements.&lt;/li&gt;
+&lt;li&gt;I can work from anywhere. I change places and posture every 1.5 hours, 5 times a day.&lt;/li&gt;
+&lt;li&gt;Given I move between a couple of meets during the day, I don&amp;rsquo;t have to adjust to differing window management mannerisms as I only ever work on the same screen now.&lt;/li&gt;
+&lt;li&gt;I work in at most two splits now compared to the 5+ previously: it is all simpler and the monitor has started to seem like a vanity rather than essential accessory.&lt;/li&gt;
+&lt;li&gt;I don&amp;rsquo;t have to switch keyboards between my desk and meets: I don&amp;rsquo;t mess enough as much now.&lt;/li&gt;
+&lt;li&gt;I can start looking down upon people that are bound to monitors, thinking that they&amp;rsquo;re spoiled or aren&amp;rsquo;t minimal enough.&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;ve started preaching about the spartan-ish effects of working only via your laptop&lt;/li&gt;
+&lt;li&gt;I spend more time on screen, on my bed: consequently I&amp;rsquo;m writing more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I definitely do miss reading papers and books on a larger vertically oriented screen but I&amp;rsquo;m going to stick to this for a while.&lt;/p&gt;</description></item><item><title>on Naming your Projects</title><link>https://rajp152k.github.io/post/good-names/</link><pubDate>Fri, 22 Nov 2024 14:45:09 +0530</pubDate><guid>https://rajp152k.github.io/post/good-names/</guid><description>&lt;p&gt;As an aspiring polymath, you&amp;rsquo;ll soon run out of books and courses if you really wish to explore the intersection of multiple domains based on your current intellectual requirements.&lt;/p&gt;
+&lt;p&gt;That is a great problem to have and the solution is to transition into the mindset of chunking your learnings into projects rather than subjects.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll recommend maintaining a sense of pragmatism (incentivize application of what you&amp;rsquo;re learning in the foreseeable future (with non-pedagogical intent)) and haste during your initial iterations. Perfection (The will to tend towards it, rather..) can follow once the prototype is principally sound.&lt;/p&gt;</description></item><item><title>Building (and Maintaining) a &lt;desc. follows&gt; Being</title><link>https://rajp152k.github.io/post/building-an-intellect/</link><pubDate>Thu, 21 Nov 2024 17:57:13 +0530</pubDate><guid>https://rajp152k.github.io/post/building-an-intellect/</guid><description>&lt;p&gt;One cannot rely on objective standardized tests to gauge how good one is at the act of being.&lt;/p&gt;
+&lt;p&gt;They&amp;rsquo;re good to indicate a specific aspect of where you wish to affirm your competence in, but have exhibit numerous fallacies when you&amp;rsquo;re trying to optimize a probabilistic, unstructured, instinct based behaviour over longer spans of durations, ranging from weeks to decades.&lt;/p&gt;
+&lt;p&gt;Such a gauge is probably only exhaustively captured in how the complexities of life unroll around you based on your behaviours.&lt;/p&gt;</description></item><item><title>Personalized Science</title><link>https://rajp152k.github.io/post/personal-research/</link><pubDate>Mon, 18 Nov 2024 11:14:23 +0530</pubDate><guid>https://rajp152k.github.io/post/personal-research/</guid><description>&lt;p&gt;I like studying and exploring new things in the spirit of science. The science that happens today in institutions is more than just science and involves a lot of ancillary efforts directed towards the formalized production of research.&lt;/p&gt;
+&lt;p&gt;I respect formalized scientific efforts but feel like humanity as whole is losing out on the idea of having personalized problem statements to work on without worrying about applications, citations or what the next big thing is going to be.&lt;/p&gt;</description></item><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p&gt;There&amp;rsquo;s this saying :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I&amp;rsquo;m going to do that with Go.&lt;/p&gt;
+&lt;p&gt;As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p&gt;</description></item><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p&gt;This is how I time my workblocks these days&amp;hellip;&lt;/p&gt;
+&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ALSA : &lt;a href="https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture"&gt;https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="functions"&gt;Functions&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;single_beep() {
 ( \speaker-test --frequency $1 --test sine )&amp;amp;
 pid=$!
 \sleep 0.${2}s
@@ -174,295 +174,295 @@ sos() {
 timer() {
  \sleep $1 &amp;amp;&amp;amp; sos &amp;amp;
 }
-&lt;/code>&lt;/pre>&lt;h3 id="usage">Usage&lt;/h3>
-&lt;p>The above can be sourced in your shell rc.&lt;br>
-I store it in a &lt;code>.bash_funcs&lt;/code> where I have all my functions and source them in the end of my rc as &lt;code>source ~/.bash_funcs&lt;/code>.&lt;/p></description></item><item><title>Building a Racket Based Operating System</title><link>https://rajp152k.github.io/post/tumbleweed/</link><pubDate>Mon, 23 Sep 2024 06:48:09 +0530</pubDate><guid>https://rajp152k.github.io/post/tumbleweed/</guid><description>&lt;h3 id="edit--0x22d2--fri-sep-27-035130-pm-ist-2024">EDIT : 0x22D2 : Fri Sep 27 03:51:30 PM IST 2024&lt;/h3>
-&lt;ul>
-&lt;li>I&amp;rsquo;m thinking I&amp;rsquo;ll proceed in common lisp&lt;/li>
-&lt;li>do read on for amusement though&lt;/li>
-&lt;/ul>
-&lt;p>As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I&amp;rsquo;ve used:&lt;/p>
-&lt;ul>
-&lt;li>Open Suse TumbleWeed&lt;/li>
-&lt;li>Fedora, CentOs, Rocky&lt;/li>
-&lt;li>Debian, Ubuntu, Kali&lt;/li>
-&lt;li>Arch&lt;/li>
-&lt;li>Windows XP,Vista,7,10,11&lt;/li>
-&lt;/ul>
-&lt;p>I recently moved away from Fedora 40 to Tumbleweed (I deleted some core python libraries that are essential for yum and dnf (I know, I&amp;rsquo;m an idiot))&amp;hellip;&lt;/p></description></item><item><title>Temporal Specialization</title><link>https://rajp152k.github.io/post/temporal-specialization/</link><pubDate>Thu, 19 Sep 2024 15:32:02 +0530</pubDate><guid>https://rajp152k.github.io/post/temporal-specialization/</guid><description>&lt;p>If you&amp;rsquo;re new to the concept of polymathy (I personally ventured into the idea when I read Da Vinci&amp;rsquo;s biography by Walter Isaacson), a lot of counter-intuitive traps await you when trying to build competence in multiple areas.&lt;/p>
-&lt;p>You don&amp;rsquo;t need to be a generalist at all times during your journey into polymathy. I mentally grasped this fairly recently that you don&amp;rsquo;t need to shun specializing for smaller durations.
-Something like a day is obvious as a candidate but, in the past, I would shy away from even periods of a month to actually focus on a singular thing. I&amp;rsquo;m fairly comfortable doing that for upto three months now but would recommend touching a large span of domains over the span of six months for you don&amp;rsquo;t want to start losing out on the humility that interdisciplinary pursuits enforce on you.&lt;/p></description></item><item><title>Doom Emacs config'd for Python</title><link>https://rajp152k.github.io/post/doom-emacs-python/</link><pubDate>Thu, 19 Sep 2024 15:10:44 +0530</pubDate><guid>https://rajp152k.github.io/post/doom-emacs-python/</guid><description>&lt;p>Alter your doom block in init.el:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(doom! 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :lang 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (python +lsp +pyright +conda)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I recommend pyright, is snappier than pyls..&lt;/p>
-&lt;p>you&amp;rsquo;ll also need lsp enabled in your tools, I also have &lt;code>+peek&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>(doom! 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :tools
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (lsp +peek)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">...&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>for more info, hit &lt;code>&amp;lt;space&amp;gt; h d m lsp&amp;lt;CR&amp;gt;&lt;/code>&lt;/p>
-&lt;p>Alter your config.el (I use miniforge to get mamba and conda):&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">; Conda&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(use-package! conda
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> :config
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (setq conda-anaconda-home (&lt;span style="color:#a6e22e">expand-file-name&lt;/span> &lt;span style="color:#e6db74">&amp;#34;~/mambaforge&amp;#34;&lt;/span>))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-initialize-interactive-shells)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-initialize-eshell)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-autoactivate-mode &lt;span style="color:#66d9ef">t&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (add-hook &lt;span style="color:#e6db74">&amp;#39;find-file-hook&lt;/span> (lambda () (when (bound-and-true-p conda-project-env-path)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> (conda-env-activate-for-buffer)))))
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once that&amp;rsquo;s done, hit &lt;code>&amp;lt;space&amp;gt; h r r&lt;/code> and your ready to go.&lt;/p></description></item><item><title>I'm in the Business of Ideation</title><link>https://rajp152k.github.io/post/gaming-youtube/</link><pubDate>Tue, 17 Sep 2024 09:01:23 +0530</pubDate><guid>https://rajp152k.github.io/post/gaming-youtube/</guid><description>&lt;p>People have been responding to emacs and my beard.&lt;/p>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/youtube/screenshot_2024-09-17T09:06:11.png?updatedAt=1726544204857" alt="comments">&lt;/p>
-&lt;p>For a while I thought I did not have a lot to say. Turns out a lot of other humans are quite interested in the much of the same things that I&amp;rsquo;m into: my hatred for the mouse, and the consequent love for efficient workflows being some of them.&lt;/p>
-&lt;p>I&amp;rsquo;ll give the people what they want: I get to enjoy esoteric tech and spread the word, growing a cult, while other humans have enlightened experiences (believe me I do talk like this in person) and continue propogating the techno-propaganda about enjoying computer science.&lt;/p></description></item><item><title>Quick Musings</title><link>https://rajp152k.github.io/post/quickies/</link><pubDate>Mon, 16 Sep 2024 20:24:28 +0530</pubDate><guid>https://rajp152k.github.io/post/quickies/</guid><description>&lt;p>From time to time, I do encounter ideas that intrigue my intellect for quite some time.&lt;br>
-I do maintain the &lt;a href="https://buffer.thebitmage.com">ideation buffer&lt;/a> to index these ideas into the larger context of my past musings, but I would also like a conveniently accessible chronological search available for cross-domain ideas.&lt;br>
-I&amp;rsquo;ll hence be increasing the frequency of premature technical thoughts being packaged into a micro-blogs.&lt;/p>
-&lt;p>I might not elaborate a whole lot in terms of the theoretical aspects of the tooling but I&amp;rsquo;ll be conceptually outlining my current thoughts over the same.&lt;/p></description></item><item><title>My Emacs Journey</title><link>https://rajp152k.github.io/post/my-emacs-journey/</link><pubDate>Mon, 16 Sep 2024 20:13:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-journey/</guid><description>&lt;p>Emacs has been a trustworthy companion of mine for around 4+ years now. We&amp;rsquo;ve shared some highs and lows. I owe a major fraction of whatever conceptual depth I maintain in computer science to messing around with my tools.&lt;/p>
-&lt;p>Emacs is also the core of my first &lt;a href="https://youtu.be/UwfYn9lTm74">major youtube breakthrough&lt;/a>.&lt;/p>
-&lt;p>I haven&amp;rsquo;t yet explored the emacs niche completely and will be investing more time into honing my repertoire and understanding what sort of mindset the tooling expects from you rather than just fitting emacs into my thoughts.&lt;/p></description></item><item><title>Thinkpad X13 Gen 4 AMD Ryzen Pro 7840U &amp; Workflow Review</title><link>https://rajp152k.github.io/post/new-laptop/</link><pubDate>Thu, 06 Jun 2024 17:17:59 +0530</pubDate><guid>https://rajp152k.github.io/post/new-laptop/</guid><description>&lt;p>I recently shifted my operations to a thinkpad x13g4amd (Ryzen 7840U + 780M Radeon) and am using this transfer as an opportunity to realize and improve my work related habits.&lt;/p>
-&lt;h2 id="gnulinux">GNU/Linux&lt;/h2>
-&lt;p>All of my pipelines are based around Linux and the core GNU utils. I had to use windows for a while due to org-wide constraints but I&amp;rsquo;ve recently been given the signal to shift to linux.&lt;/p>
-&lt;p>I rarely used any windows native tools for my workflows and there was always a layer of linux emulation/virtualization (wsl, scoop, and the likes) upon which I conducted my usual operations. Given I use Debian at home, a non native linux experience was frustrating at best and depressing at worst. No more, do I have to confine myself.&lt;/p></description></item><item><title>IKN0X224C: Epistemological Polyglotism</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x224c/</link><pubDate>Tue, 14 May 2024 20:29:51 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x224c/</guid><description>&lt;p>&lt;em>check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/">here&lt;/a>&lt;/em>&lt;/p>
-&lt;p>Understanding different languages can open up one&amp;rsquo;s mind towards
-different cultures.&lt;/p>
-&lt;p>The evolution of languages over centuries and common ancestors
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="usage"&gt;Usage&lt;/h3&gt;
+&lt;p&gt;The above can be sourced in your shell rc.&lt;br&gt;
+I store it in a &lt;code&gt;.bash_funcs&lt;/code&gt; where I have all my functions and source them in the end of my rc as &lt;code&gt;source ~/.bash_funcs&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Building a Racket Based Operating System</title><link>https://rajp152k.github.io/post/tumbleweed/</link><pubDate>Mon, 23 Sep 2024 06:48:09 +0530</pubDate><guid>https://rajp152k.github.io/post/tumbleweed/</guid><description>&lt;h3 id="edit--0x22d2--fri-sep-27-035130-pm-ist-2024"&gt;EDIT : 0x22D2 : Fri Sep 27 03:51:30 PM IST 2024&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I&amp;rsquo;m thinking I&amp;rsquo;ll proceed in common lisp&lt;/li&gt;
+&lt;li&gt;do read on for amusement though&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As of 0x22CE (Mon Sep 23 06:48:40 AM IST 2024), These are the operating systems I&amp;rsquo;ve used:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open Suse TumbleWeed&lt;/li&gt;
+&lt;li&gt;Fedora, CentOs, Rocky&lt;/li&gt;
+&lt;li&gt;Debian, Ubuntu, Kali&lt;/li&gt;
+&lt;li&gt;Arch&lt;/li&gt;
+&lt;li&gt;Windows XP,Vista,7,10,11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I recently moved away from Fedora 40 to Tumbleweed (I deleted some core python libraries that are essential for yum and dnf (I know, I&amp;rsquo;m an idiot))&amp;hellip;&lt;/p&gt;</description></item><item><title>Temporal Specialization</title><link>https://rajp152k.github.io/post/temporal-specialization/</link><pubDate>Thu, 19 Sep 2024 15:32:02 +0530</pubDate><guid>https://rajp152k.github.io/post/temporal-specialization/</guid><description>&lt;p&gt;If you&amp;rsquo;re new to the concept of polymathy (I personally ventured into the idea when I read Da Vinci&amp;rsquo;s biography by Walter Isaacson), a lot of counter-intuitive traps await you when trying to build competence in multiple areas.&lt;/p&gt;
+&lt;p&gt;You don&amp;rsquo;t need to be a generalist at all times during your journey into polymathy. I mentally grasped this fairly recently that you don&amp;rsquo;t need to shun specializing for smaller durations.
+Something like a day is obvious as a candidate but, in the past, I would shy away from even periods of a month to actually focus on a singular thing. I&amp;rsquo;m fairly comfortable doing that for upto three months now but would recommend touching a large span of domains over the span of six months for you don&amp;rsquo;t want to start losing out on the humility that interdisciplinary pursuits enforce on you.&lt;/p&gt;</description></item><item><title>Doom Emacs config'd for Python</title><link>https://rajp152k.github.io/post/doom-emacs-python/</link><pubDate>Thu, 19 Sep 2024 15:10:44 +0530</pubDate><guid>https://rajp152k.github.io/post/doom-emacs-python/</guid><description>&lt;p&gt;Alter your doom block in init.el:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(doom! 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; :lang 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (python +lsp +pyright +conda)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I recommend pyright, is snappier than pyls..&lt;/p&gt;
+&lt;p&gt;you&amp;rsquo;ll also need lsp enabled in your tools, I also have &lt;code&gt;+peek&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(doom! 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; :tools
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (lsp +peek)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;...&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;for more info, hit &lt;code&gt;&amp;lt;space&amp;gt; h d m lsp&amp;lt;CR&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Alter your config.el (I use miniforge to get mamba and conda):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;; Conda&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(use-package! conda
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; :config
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (setq conda-anaconda-home (&lt;span style="color:#a6e22e"&gt;expand-file-name&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;~/mambaforge&amp;#34;&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (conda-env-initialize-interactive-shells)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (conda-env-initialize-eshell)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (conda-env-autoactivate-mode &lt;span style="color:#66d9ef"&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (add-hook &lt;span style="color:#e6db74"&gt;&amp;#39;find-file-hook&lt;/span&gt; (lambda () (when (bound-and-true-p conda-project-env-path)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (conda-env-activate-for-buffer)))))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once that&amp;rsquo;s done, hit &lt;code&gt;&amp;lt;space&amp;gt; h r r&lt;/code&gt; and your ready to go.&lt;/p&gt;</description></item><item><title>I'm in the Business of Ideation</title><link>https://rajp152k.github.io/post/gaming-youtube/</link><pubDate>Tue, 17 Sep 2024 09:01:23 +0530</pubDate><guid>https://rajp152k.github.io/post/gaming-youtube/</guid><description>&lt;p&gt;People have been responding to emacs and my beard.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/youtube/screenshot_2024-09-17T09:06:11.png?updatedAt=1726544204857" alt="comments"&gt;&lt;/p&gt;
+&lt;p&gt;For a while I thought I did not have a lot to say. Turns out a lot of other humans are quite interested in the much of the same things that I&amp;rsquo;m into: my hatred for the mouse, and the consequent love for efficient workflows being some of them.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll give the people what they want: I get to enjoy esoteric tech and spread the word, growing a cult, while other humans have enlightened experiences (believe me I do talk like this in person) and continue propogating the techno-propaganda about enjoying computer science.&lt;/p&gt;</description></item><item><title>Quick Musings</title><link>https://rajp152k.github.io/post/quickies/</link><pubDate>Mon, 16 Sep 2024 20:24:28 +0530</pubDate><guid>https://rajp152k.github.io/post/quickies/</guid><description>&lt;p&gt;From time to time, I do encounter ideas that intrigue my intellect for quite some time.&lt;br&gt;
+I do maintain the &lt;a href="https://buffer.thebitmage.com"&gt;ideation buffer&lt;/a&gt; to index these ideas into the larger context of my past musings, but I would also like a conveniently accessible chronological search available for cross-domain ideas.&lt;br&gt;
+I&amp;rsquo;ll hence be increasing the frequency of premature technical thoughts being packaged into a micro-blogs.&lt;/p&gt;
+&lt;p&gt;I might not elaborate a whole lot in terms of the theoretical aspects of the tooling but I&amp;rsquo;ll be conceptually outlining my current thoughts over the same.&lt;/p&gt;</description></item><item><title>My Emacs Journey</title><link>https://rajp152k.github.io/post/my-emacs-journey/</link><pubDate>Mon, 16 Sep 2024 20:13:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-journey/</guid><description>&lt;p&gt;Emacs has been a trustworthy companion of mine for around 4+ years now. We&amp;rsquo;ve shared some highs and lows. I owe a major fraction of whatever conceptual depth I maintain in computer science to messing around with my tools.&lt;/p&gt;
+&lt;p&gt;Emacs is also the core of my first &lt;a href="https://youtu.be/UwfYn9lTm74"&gt;major youtube breakthrough&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I haven&amp;rsquo;t yet explored the emacs niche completely and will be investing more time into honing my repertoire and understanding what sort of mindset the tooling expects from you rather than just fitting emacs into my thoughts.&lt;/p&gt;</description></item><item><title>Thinkpad X13 Gen 4 AMD Ryzen Pro 7840U &amp; Workflow Review</title><link>https://rajp152k.github.io/post/new-laptop/</link><pubDate>Thu, 06 Jun 2024 17:17:59 +0530</pubDate><guid>https://rajp152k.github.io/post/new-laptop/</guid><description>&lt;p&gt;I recently shifted my operations to a thinkpad x13g4amd (Ryzen 7840U + 780M Radeon) and am using this transfer as an opportunity to realize and improve my work related habits.&lt;/p&gt;
+&lt;h2 id="gnulinux"&gt;GNU/Linux&lt;/h2&gt;
+&lt;p&gt;All of my pipelines are based around Linux and the core GNU utils. I had to use windows for a while due to org-wide constraints but I&amp;rsquo;ve recently been given the signal to shift to linux.&lt;/p&gt;
+&lt;p&gt;I rarely used any windows native tools for my workflows and there was always a layer of linux emulation/virtualization (wsl, scoop, and the likes) upon which I conducted my usual operations. Given I use Debian at home, a non native linux experience was frustrating at best and depressing at worst. No more, do I have to confine myself.&lt;/p&gt;</description></item><item><title>IKN0X224C: Epistemological Polyglotism</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x224c/</link><pubDate>Tue, 14 May 2024 20:29:51 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x224c/</guid><description>&lt;p&gt;&lt;em&gt;check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/"&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Understanding different languages can open up one&amp;rsquo;s mind towards
+different cultures.&lt;/p&gt;
+&lt;p&gt;The evolution of languages over centuries and common ancestors
 there-of over millenia indicates the evolution of cultural
-complexity.&lt;/p>
-&lt;h2 id="the-conventional-take">The Conventional Take&lt;/h2>
-&lt;p>I grew up actively conversing in 4 languages: English, Hindi,
+complexity.&lt;/p&gt;
+&lt;h2 id="the-conventional-take"&gt;The Conventional Take&lt;/h2&gt;
+&lt;p&gt;I grew up actively conversing in 4 languages: English, Hindi,
 Marathi and Gujrati. French was my first romance language I was
 exposed to for over 8 years (I say exposed as was learning this
 academically as a third language and didn&amp;rsquo;t use this as a &amp;ldquo;natural&amp;rdquo;
-language as much as the others).&lt;/p></description></item><item><title>Talking About What You Do</title><link>https://rajp152k.github.io/post/talking-about-what-you-do/</link><pubDate>Tue, 14 May 2024 19:30:36 +0530</pubDate><guid>https://rajp152k.github.io/post/talking-about-what-you-do/</guid><description>&lt;p>I haven&amp;rsquo;t been writing quite as much as I&amp;rsquo;d like to lately and have
-been considering how I approach the whole thing.&lt;/p>
-&lt;p>Instead of talking about what I&amp;rsquo;m thinking in the moment (pretty
-fleeting), I&amp;rsquo;m &amp;hellip;&amp;hellip;&lt;/p>
-&lt;p>This is exactly the point where I&amp;rsquo;ll go &amp;ldquo;I&amp;rsquo;m planning on &amp;hellip;&amp;rdquo; : I do
+language as much as the others).&lt;/p&gt;</description></item><item><title>Talking About What You Do</title><link>https://rajp152k.github.io/post/talking-about-what-you-do/</link><pubDate>Tue, 14 May 2024 19:30:36 +0530</pubDate><guid>https://rajp152k.github.io/post/talking-about-what-you-do/</guid><description>&lt;p&gt;I haven&amp;rsquo;t been writing quite as much as I&amp;rsquo;d like to lately and have
+been considering how I approach the whole thing.&lt;/p&gt;
+&lt;p&gt;Instead of talking about what I&amp;rsquo;m thinking in the moment (pretty
+fleeting), I&amp;rsquo;m &amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;This is exactly the point where I&amp;rsquo;ll go &amp;ldquo;I&amp;rsquo;m planning on &amp;hellip;&amp;rdquo; : I do
 not wish like doing that anymore. Talking about my momentary plans for
-a while has been quite the distraction that I occasionally enjoy.&lt;/p></description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p>I finished my first pass of SICP (structure and interpretation of
-computer programs) around &lt;a href="https://github.com/rajp152k/SICP">3 years
-ago&lt;/a>. Since, I&amp;rsquo;ve realized the
+a while has been quite the distraction that I occasionally enjoy.&lt;/p&gt;</description></item><item><title>Adventures in Advanced Symbolic Programming : MIT-OCW - 6.945</title><link>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</link><pubDate>Wed, 10 Apr 2024 11:31:01 +0530</pubDate><guid>https://rajp152k.github.io/post/adventures-in-advanced-symbolic-programming/</guid><description>&lt;p&gt;I finished my first pass of SICP (structure and interpretation of
+computer programs) around &lt;a href="https://github.com/rajp152k/SICP"&gt;3 years
+ago&lt;/a&gt;. Since, I&amp;rsquo;ve realized the
 elegantly implicit existence of symbolic algebra in several domains
-that I personally explore on a regular basis.&lt;/p>
-&lt;p>That initial infatuation with Lisp ( and consequently symbolic
+that I personally explore on a regular basis.&lt;/p&gt;
+&lt;p&gt;That initial infatuation with Lisp ( and consequently symbolic
 computation ) has simmered and fermented enough in my mind to be
 realised as a potent generic thinking device. To cement my
 commitment to the same, I&amp;rsquo;ll regularly dive deeper into relevant academia
-so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p></description></item><item><title>IKN0X2223: Epistemological Cartography</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x2223/</link><pubDate>Fri, 05 Apr 2024 05:54:07 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x2223/</guid><description>&lt;p>&lt;em>check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/">here&lt;/a>&lt;/em>&lt;/p>
-&lt;p>&lt;em>Snap-shotting projections of the mind over time is a good habit
-that you should practice.&lt;/em>&lt;/p>
-&lt;p>I will try my best to persuade you of that&amp;hellip;&lt;/p>
-&lt;p>An over-powered upside to pursuing multiple interests
+so I don&amp;rsquo;t lose out on the joys of thinking for the sake of itself.&lt;/p&gt;</description></item><item><title>IKN0X2223: Epistemological Cartography</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x2223/</link><pubDate>Fri, 05 Apr 2024 05:54:07 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x2223/</guid><description>&lt;p&gt;&lt;em&gt;check out what an IKN0x means &lt;a href="https://thebitmage.com/post/ikn0x0/"&gt;here&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Snap-shotting projections of the mind over time is a good habit
+that you should practice.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I will try my best to persuade you of that&amp;hellip;&lt;/p&gt;
+&lt;p&gt;An over-powered upside to pursuing multiple interests
 over the span of your life is to have the ability to compare and
 contrast multiple domains, akin to having multiple hill forts over
-your territory than only establishing a centralized castle.&lt;/p></description></item><item><title>I turned 0x2222 today</title><link>https://rajp152k.github.io/post/0x2222/</link><pubDate>Thu, 04 Apr 2024 19:09:37 +0530</pubDate><guid>https://rajp152k.github.io/post/0x2222/</guid><description>&lt;p>Currently, I prefer tracking the temporal increments of my existence
-(&amp;ldquo;age&amp;rdquo; is what normal humans would say this means) via &lt;a href="https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747">hex
-timestamps&lt;/a>.&lt;/p>
-&lt;p>Years ago, I kept track of my age in years and months like
-normal humans do.&lt;/p>
-&lt;p>I maintain the habit of analysing my mindset every major temporal
+your territory than only establishing a centralized castle.&lt;/p&gt;</description></item><item><title>I turned 0x2222 today</title><link>https://rajp152k.github.io/post/0x2222/</link><pubDate>Thu, 04 Apr 2024 19:09:37 +0530</pubDate><guid>https://rajp152k.github.io/post/0x2222/</guid><description>&lt;p&gt;Currently, I prefer tracking the temporal increments of my existence
+(&amp;ldquo;age&amp;rdquo; is what normal humans would say this means) via &lt;a href="https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747"&gt;hex
+timestamps&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Years ago, I kept track of my age in years and months like
+normal humans do.&lt;/p&gt;
+&lt;p&gt;I maintain the habit of analysing my mindset every major temporal
 mileston in my life - when I turned 10 (I don&amp;rsquo;t quite remember
 exactly how I felt then) or 20, for instance, in accordance with the
-widely accepted gregorian calendar.&lt;/p></description></item><item><title>IKN0x221F : Pragmatic Polymathy</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x0/</link><pubDate>Sun, 31 Mar 2024 16:00:27 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x0/</guid><description>&lt;p>&lt;em>Checkout the &lt;a href="https://thebitmage.com/categories/polymathy/">previous polymathy musings&lt;/a>&lt;/em>&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Xl2QISDKhQA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+widely accepted gregorian calendar.&lt;/p&gt;</description></item><item><title>IKN0x221F : Pragmatic Polymathy</title><link>https://rajp152k.github.io/post/ikn0x/ikn0x0/</link><pubDate>Sun, 31 Mar 2024 16:00:27 +0530</pubDate><guid>https://rajp152k.github.io/post/ikn0x/ikn0x0/</guid><description>&lt;p&gt;&lt;em&gt;Checkout the &lt;a href="https://thebitmage.com/categories/polymathy/"&gt;previous polymathy musings&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Xl2QISDKhQA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;h1 id="context">Context&lt;/h1>
-&lt;p>I intend to formalize my plans of getting good at multiple domains not
+&lt;h1 id="context"&gt;Context&lt;/h1&gt;
+&lt;p&gt;I intend to formalize my plans of getting good at multiple domains not
 for the reputation that follows but for the generic insight about the
-world that you may harness as a result.&lt;/p>
-&lt;p>This is the second refactor of the way I approach this subject and
+world that you may harness as a result.&lt;/p&gt;
+&lt;p&gt;This is the second refactor of the way I approach this subject and
 this time around I will be pushing for practical indicators that allow
-me to gauge my progress over time.&lt;/p></description></item><item><title>Teh worth of a workd</title><link>https://rajp152k.github.io/post/free-writing/</link><pubDate>Tue, 12 Mar 2024 10:21:37 +0530</pubDate><guid>https://rajp152k.github.io/post/free-writing/</guid><description>&lt;p>Writing is an involved process. A rough overview is as follows:&lt;/p>
-&lt;ul>
-&lt;li>you think of an idea&lt;/li>
-&lt;li>you build upon that idea with what you already know&lt;/li>
-&lt;li>you structure out some initial drafts&lt;/li>
-&lt;li>you run it under a careful eye to scrape out the loopholes&lt;/li>
-&lt;li>you edit it, to the point of satisfaction&lt;/li>
-&lt;/ul>
-&lt;p>The problem with that process is the last bullet right there. It makes
+me to gauge my progress over time.&lt;/p&gt;</description></item><item><title>Teh worth of a workd</title><link>https://rajp152k.github.io/post/free-writing/</link><pubDate>Tue, 12 Mar 2024 10:21:37 +0530</pubDate><guid>https://rajp152k.github.io/post/free-writing/</guid><description>&lt;p&gt;Writing is an involved process. A rough overview is as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;you think of an idea&lt;/li&gt;
+&lt;li&gt;you build upon that idea with what you already know&lt;/li&gt;
+&lt;li&gt;you structure out some initial drafts&lt;/li&gt;
+&lt;li&gt;you run it under a careful eye to scrape out the loopholes&lt;/li&gt;
+&lt;li&gt;you edit it, to the point of satisfaction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The problem with that process is the last bullet right there. It makes
 the worth of a word in the moment diminish than the act of etching
-something down in stone.&lt;/p></description></item><item><title>Most News is Noise</title><link>https://rajp152k.github.io/post/news-noise/</link><pubDate>Sun, 10 Mar 2024 20:37:42 +0530</pubDate><guid>https://rajp152k.github.io/post/news-noise/</guid><description>&lt;p>I find most sources of information these days (since several years) to
+something down in stone.&lt;/p&gt;</description></item><item><title>Most News is Noise</title><link>https://rajp152k.github.io/post/news-noise/</link><pubDate>Sun, 10 Mar 2024 20:37:42 +0530</pubDate><guid>https://rajp152k.github.io/post/news-noise/</guid><description>&lt;p&gt;I find most sources of information these days (since several years) to
 be too noisy compared to the actual signals of wisdom you expect from
-a popular source.&lt;/p>
-&lt;p>Rarely, I&amp;rsquo;ll pull up the news application on my phone and consume a
-whole bunch of generic, and some domain specific news.&lt;/p>
-&lt;p>Other than state of the art research in a technical domain, which is
+a popular source.&lt;/p&gt;
+&lt;p&gt;Rarely, I&amp;rsquo;ll pull up the news application on my phone and consume a
+whole bunch of generic, and some domain specific news.&lt;/p&gt;
+&lt;p&gt;Other than state of the art research in a technical domain, which is
 based upon a corpora of established citations, most other &amp;ldquo;new&amp;rdquo; stuff is
-noise.&lt;/p></description></item><item><title>Project : Guinness World Record - Plaque and Announcement</title><link>https://rajp152k.github.io/post/guinness-dedup-anomaly/</link><pubDate>Fri, 08 Mar 2024 15:21:07 +0530</pubDate><guid>https://rajp152k.github.io/post/guinness-dedup-anomaly/</guid><description>&lt;p>ESDS Software Solutions Ltd. (where I work currently) was lately the
+noise.&lt;/p&gt;</description></item><item><title>Project : Guinness World Record - Plaque and Announcement</title><link>https://rajp152k.github.io/post/guinness-dedup-anomaly/</link><pubDate>Fri, 08 Mar 2024 15:21:07 +0530</pubDate><guid>https://rajp152k.github.io/post/guinness-dedup-anomaly/</guid><description>&lt;p&gt;ESDS Software Solutions Ltd. (where I work currently) was lately the
 technical facilitator for the School Education Department of the
 Government of Maharashtra, towards conducting a state level slogan
 competition, the winner of which was rewarded by a lunch with the
-chief minister of Maharashtra.&lt;/p>
-&lt;h2 id="brief-context">Brief Context&lt;/h2>
-&lt;p>One of the records (total of 3) they were going for was the most number of
-handwritten notes uploaded to a bespoke platform in 24 hours.&lt;/p></description></item><item><title>Converging Expression - thought, speech and the word writ</title><link>https://rajp152k.github.io/post/conciser/</link><pubDate>Mon, 04 Mar 2024 17:26:33 +0530</pubDate><guid>https://rajp152k.github.io/post/conciser/</guid><description>&lt;p>Speech and the word written, are potential expressions of a
+chief minister of Maharashtra.&lt;/p&gt;
+&lt;h2 id="brief-context"&gt;Brief Context&lt;/h2&gt;
+&lt;p&gt;One of the records (total of 3) they were going for was the most number of
+handwritten notes uploaded to a bespoke platform in 24 hours.&lt;/p&gt;</description></item><item><title>Converging Expression - thought, speech and the word writ</title><link>https://rajp152k.github.io/post/conciser/</link><pubDate>Mon, 04 Mar 2024 17:26:33 +0530</pubDate><guid>https://rajp152k.github.io/post/conciser/</guid><description>&lt;p&gt;Speech and the word written, are potential expressions of a
 thought. Each one of us enjoys a different mix of how we best convey
-ourself.&lt;/p>
-&lt;p>Ever since I began blogging when I was 19, I&amp;rsquo;ve been prioritising
+ourself.&lt;/p&gt;
+&lt;p&gt;Ever since I began blogging when I was 19, I&amp;rsquo;ve been prioritising
 descriptiveness over precision. I feel I&amp;rsquo;ve entered a
 mental state where I value the distilled value of the transmission
-more than the exhaustiveness of the message.&lt;/p>
-&lt;p>I also notice a rift between the way I speak and the way I write. Not
+more than the exhaustiveness of the message.&lt;/p&gt;
+&lt;p&gt;I also notice a rift between the way I speak and the way I write. Not
 to say that any one of them is superior than the other but I could use
 an exercise in convergence - projecting them both onto a common
-ground.&lt;/p></description></item><item><title>Testing Magnesium and ramping up Cardio</title><link>https://rajp152k.github.io/post/nootropics-0x0/</link><pubDate>Mon, 04 Mar 2024 16:26:32 +0530</pubDate><guid>https://rajp152k.github.io/post/nootropics-0x0/</guid><description>&lt;p>This is a brief update on the
-&lt;a href="https://thebitmage.com/post/nootropics-init/">nootropics&lt;/a> post in which
+ground.&lt;/p&gt;</description></item><item><title>Testing Magnesium and ramping up Cardio</title><link>https://rajp152k.github.io/post/nootropics-0x0/</link><pubDate>Mon, 04 Mar 2024 16:26:32 +0530</pubDate><guid>https://rajp152k.github.io/post/nootropics-0x0/</guid><description>&lt;p&gt;This is a brief update on the
+&lt;a href="https://thebitmage.com/post/nootropics-init/"&gt;nootropics&lt;/a&gt; post in which
 I initialized my current stack and promised for a review down the
-lane.&lt;/p>
-&lt;p>I&amp;rsquo;m back on a controlled dosage of caffeine - 80 mg (dawn) + 80 mg
+lane.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m back on a controlled dosage of caffeine - 80 mg (dawn) + 80 mg
 (afternoon). Each cup is supplmented with 100 mg of L-theanine and
 also dump in 5+ grams of creatine in the dawn. Both do their job well
-and will continue them this cycle.&lt;/p></description></item><item><title>Python like a Spartan</title><link>https://rajp152k.github.io/post/nvim-tmux-docker-python/</link><pubDate>Thu, 18 Jan 2024 12:15:48 +0530</pubDate><guid>https://rajp152k.github.io/post/nvim-tmux-docker-python/</guid><description>&lt;p>I&amp;rsquo;m an AI Research Engineer and that involves messing around a little
+and will continue them this cycle.&lt;/p&gt;</description></item><item><title>Python like a Spartan</title><link>https://rajp152k.github.io/post/nvim-tmux-docker-python/</link><pubDate>Thu, 18 Jan 2024 12:15:48 +0530</pubDate><guid>https://rajp152k.github.io/post/nvim-tmux-docker-python/</guid><description>&lt;p&gt;I&amp;rsquo;m an AI Research Engineer and that involves messing around a little
 with python. I&amp;rsquo;ve spent the past 4 years perfecting a disciplined,
-minimal, but enabling setup.&lt;/p>
-&lt;p>This is a tour of my trusty set of tools, in the hopes that it will help
-you find the same CLI zen that I&amp;rsquo;ve been enjoying for a while now.&lt;/p>
-&lt;h2 id="tmux--towards-an-eternal-shell">Tmux : towards an Eternal Shell&lt;/h2>
-&lt;p>&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/setup/tmux.png" alt="tmux">&lt;/p>
-&lt;p>I start my work sessions off by ssh&amp;rsquo;ing into my remote compute
-cluster.&lt;/p></description></item><item><title>Understand Reality and Imparting Meaning</title><link>https://rajp152k.github.io/post/understand-v-impart/</link><pubDate>Wed, 13 Dec 2023 17:39:45 +0530</pubDate><guid>https://rajp152k.github.io/post/understand-v-impart/</guid><description>&lt;p>I&amp;rsquo;ve been formally delving into epistemology and relevant lateral root
+minimal, but enabling setup.&lt;/p&gt;
+&lt;p&gt;This is a tour of my trusty set of tools, in the hopes that it will help
+you find the same CLI zen that I&amp;rsquo;ve been enjoying for a while now.&lt;/p&gt;
+&lt;h2 id="tmux--towards-an-eternal-shell"&gt;Tmux : towards an Eternal Shell&lt;/h2&gt;
+&lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/setup/tmux.png" alt="tmux"&gt;&lt;/p&gt;
+&lt;p&gt;I start my work sessions off by ssh&amp;rsquo;ing into my remote compute
+cluster.&lt;/p&gt;</description></item><item><title>Understand Reality and Imparting Meaning</title><link>https://rajp152k.github.io/post/understand-v-impart/</link><pubDate>Wed, 13 Dec 2023 17:39:45 +0530</pubDate><guid>https://rajp152k.github.io/post/understand-v-impart/</guid><description>&lt;p&gt;I&amp;rsquo;ve been formally delving into epistemology and relevant lateral root
 domains recently and have been re-encountering several ideas that I&amp;rsquo;d
-previously casually explored with intrinsic motivation.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
-&lt;p>This isn&amp;rsquo;t my first accidental implicit intersection of thoughts with
+previously casually explored with intrinsic motivation.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;This isn&amp;rsquo;t my first accidental implicit intersection of thoughts with
 core philosophical theories like constructivist epistemology and
-ontology.&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
-&lt;p>Given my natural inclinations towards personal interdisciplinary
+ontology.&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Given my natural inclinations towards personal interdisciplinary
 research, apart from my core specializations, I do deliberately maintain an
 extensive scaffolding around several domains that I plan to build
 foundations in soon. This allows me to generalize over multiple
 realizations of similar concepts in different epistemological clusters
-and identify some interesting patterns.&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/p></description></item><item><title>Hunt, Feast, Repeat</title><link>https://rajp152k.github.io/post/hunt-feast-repeat/</link><pubDate>Tue, 12 Dec 2023 09:05:15 +0530</pubDate><guid>https://rajp152k.github.io/post/hunt-feast-repeat/</guid><description>&lt;p>I partition my days in phases of different mindsets that allow me to
+and identify some interesting patterns.&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description></item><item><title>Hunt, Feast, Repeat</title><link>https://rajp152k.github.io/post/hunt-feast-repeat/</link><pubDate>Tue, 12 Dec 2023 09:05:15 +0530</pubDate><guid>https://rajp152k.github.io/post/hunt-feast-repeat/</guid><description>&lt;p&gt;I partition my days in phases of different mindsets that allow me to
 cater to my varying epistemological hungers. One of them is a daily
-ninety minute ideation hunt and feast that helps keep my skills sharp.&lt;/p>
-&lt;p>The laws of thermodynamics do form a formidable devil that really does
+ninety minute ideation hunt and feast that helps keep my skills sharp.&lt;/p&gt;
+&lt;p&gt;The laws of thermodynamics do form a formidable devil that really does
 mess up your ordered habits if you do not inject in the necessary
-energy from time to time.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
-&lt;p>As a way to sharpen the intellectual axe, I envision
+energy from time to time.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;As a way to sharpen the intellectual axe, I envision
 myself going on domain hunts to allot myself a new class of game to
 look forward to during minor breaks from my usual, comparatively
-conventional endeavors.&lt;/p></description></item><item><title>Solitude, Society, Originality</title><link>https://rajp152k.github.io/post/solitude-society-originality/</link><pubDate>Mon, 13 Nov 2023 21:49:20 +0530</pubDate><guid>https://rajp152k.github.io/post/solitude-society-originality/</guid><description>&lt;p>Some-days, I wonder that I&amp;rsquo;m born half a millennia too late
+conventional endeavors.&lt;/p&gt;</description></item><item><title>Solitude, Society, Originality</title><link>https://rajp152k.github.io/post/solitude-society-originality/</link><pubDate>Mon, 13 Nov 2023 21:49:20 +0530</pubDate><guid>https://rajp152k.github.io/post/solitude-society-originality/</guid><description>&lt;p&gt;Some-days, I wonder that I&amp;rsquo;m born half a millennia too late
 into this world given the extent of novel societal tendencies that I&amp;rsquo;m
-not fond of.&lt;/p>
-&lt;p>Although, the notion of Batman didn&amp;rsquo;t exist then, given a
+not fond of.&lt;/p&gt;
+&lt;p&gt;Although, the notion of Batman didn&amp;rsquo;t exist then, given a
 choice, I&amp;rsquo;d probably consider time traveling to an intellectually simpler
 life when much of what the present science and engineering entails was
-just beginning to be discovered and invented.&lt;/p>
-&lt;p>Research options then weren&amp;rsquo;t thresholded by who&amp;rsquo;s packing heavier
+just beginning to be discovered and invented.&lt;/p&gt;
+&lt;p&gt;Research options then weren&amp;rsquo;t thresholded by who&amp;rsquo;s packing heavier
 compute but rather open to all that could observe patiently and
-portrayed the will to ask, sceptic-ize and act according to their whims.&lt;/p></description></item><item><title>Consumption Update</title><link>https://rajp152k.github.io/post/consumption-update/</link><pubDate>Wed, 25 Oct 2023 11:49:03 +0530</pubDate><guid>https://rajp152k.github.io/post/consumption-update/</guid><description>&lt;p>Two days ago I found myself scrolling mindlessly for half an hour and
+portrayed the will to ask, sceptic-ize and act according to their whims.&lt;/p&gt;</description></item><item><title>Consumption Update</title><link>https://rajp152k.github.io/post/consumption-update/</link><pubDate>Wed, 25 Oct 2023 11:49:03 +0530</pubDate><guid>https://rajp152k.github.io/post/consumption-update/</guid><description>&lt;p&gt;Two days ago I found myself scrolling mindlessly for half an hour and
 I decided I need to decide for real as to how I&amp;rsquo;m going to deal with
-this issue.&lt;/p>
-&lt;p>The problem with such a habit is that it is very convenient, engaging
+this issue.&lt;/p&gt;
+&lt;p&gt;The problem with such a habit is that it is very convenient, engaging
 and it slices into precious time that I&amp;rsquo;d rather spend doing something
-more difficult and rewarding like reading.&lt;/p>
-&lt;p>While devising a strategy to deal with this behaviour, I concluded
+more difficult and rewarding like reading.&lt;/p&gt;
+&lt;p&gt;While devising a strategy to deal with this behaviour, I concluded
 that videos themselves (long and short form) are the culprit to these
-new time sinks that I&amp;rsquo;ve been experiencing.&lt;/p></description></item><item><title>Learn Vim the smart way</title><link>https://rajp152k.github.io/post/learn-vim-the-smart-way/</link><pubDate>Fri, 20 Oct 2023 19:18:08 +0530</pubDate><guid>https://rajp152k.github.io/post/learn-vim-the-smart-way/</guid><description>&lt;p>I&amp;rsquo;ve been building up my vimrc again because emacs&amp;rsquo; tramp mode just
+new time sinks that I&amp;rsquo;ve been experiencing.&lt;/p&gt;</description></item><item><title>Learn Vim the smart way</title><link>https://rajp152k.github.io/post/learn-vim-the-smart-way/</link><pubDate>Fri, 20 Oct 2023 19:18:08 +0530</pubDate><guid>https://rajp152k.github.io/post/learn-vim-the-smart-way/</guid><description>&lt;p&gt;I&amp;rsquo;ve been building up my vimrc again because emacs&amp;rsquo; tramp mode just
 wasn&amp;rsquo;t cutting it when it came to speed for my remote work
-environments.&lt;/p>
-&lt;p>I&amp;rsquo;ve been a vim user for around 4 years now and having read some books
+environments.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been a vim user for around 4 years now and having read some books
 partially and sampling a lot of blogs and conference recordings over
 this span, I decided I should commit and formally invest into a
-definitive resource to get me upto speed and beyond.&lt;/p></description></item><item><title>Micro-Essays</title><link>https://rajp152k.github.io/post/micro-essays/</link><pubDate>Mon, 16 Oct 2023 14:01:01 +0530</pubDate><guid>https://rajp152k.github.io/post/micro-essays/</guid><description>&lt;p>I&amp;rsquo;ve decided to increase my frequency of writing on the main blog to get
+definitive resource to get me upto speed and beyond.&lt;/p&gt;</description></item><item><title>Micro-Essays</title><link>https://rajp152k.github.io/post/micro-essays/</link><pubDate>Mon, 16 Oct 2023 14:01:01 +0530</pubDate><guid>https://rajp152k.github.io/post/micro-essays/</guid><description>&lt;p&gt;I&amp;rsquo;ve decided to increase my frequency of writing on the main blog to get
 more reps in and converge onto my style quickly than if I continued
-with long form content only.&lt;/p>
-&lt;p>I&amp;rsquo;m also going to practice being more concise, and blogging a little
-more on technical aspects as well.&lt;/p>
-&lt;p>My usual blog post goes to around 1500-2000 words and that isn&amp;rsquo;t
-helpful for covering some minor writing prompts I&amp;rsquo;d like to explore.&lt;/p></description></item><item><title>The Hundred Page Machine Learning Book</title><link>https://rajp152k.github.io/post/100pagemlbook/</link><pubDate>Tue, 10 Oct 2023 19:40:19 +0530</pubDate><guid>https://rajp152k.github.io/post/100pagemlbook/</guid><description>&lt;p>I couldn&amp;rsquo;t have asked for a denser review of such a technical and
+with long form content only.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m also going to practice being more concise, and blogging a little
+more on technical aspects as well.&lt;/p&gt;
+&lt;p&gt;My usual blog post goes to around 1500-2000 words and that isn&amp;rsquo;t
+helpful for covering some minor writing prompts I&amp;rsquo;d like to explore.&lt;/p&gt;</description></item><item><title>The Hundred Page Machine Learning Book</title><link>https://rajp152k.github.io/post/100pagemlbook/</link><pubDate>Tue, 10 Oct 2023 19:40:19 +0530</pubDate><guid>https://rajp152k.github.io/post/100pagemlbook/</guid><description>&lt;p&gt;I couldn&amp;rsquo;t have asked for a denser review of such a technical and
 diverse domain. It&amp;rsquo;d been more a year since I graduated (majored in
 computer science and minored in artificial intelligence) and so I
 decided to brush up on some basics and consolidate what I&amp;rsquo;d studying
-since the past ~4 years.&lt;/p>
-&lt;p>I also picked up the book to systematically populate my org-roam
-buffer and have my root node rooted &lt;a href="https://buffer.thebitmage.com/20230911114632-the100pagemlbook.html">here in the
-braindump&lt;/a>.&lt;/p></description></item><item><title>The Most Important Book You'll Ever Read</title><link>https://rajp152k.github.io/post/most-important-book/</link><pubDate>Sun, 01 Oct 2023 04:05:55 +0530</pubDate><guid>https://rajp152k.github.io/post/most-important-book/</guid><description>&lt;blockquote>
-&lt;p>To know thyself, is the beginning of wisdom&lt;br>
-&lt;em>Socrates&lt;/em>&lt;/p>&lt;/blockquote>
-&lt;h2 id="on-tangibility-of-the-past">On tangibility of the past&lt;/h2>
-&lt;p>All of us create content, every moment, tuned to varying extents of influence and
-permanence.&lt;/p>
-&lt;p>It&amp;rsquo;s intent that separates us all into different leagues of
-producers.&lt;br>
+since the past ~4 years.&lt;/p&gt;
+&lt;p&gt;I also picked up the book to systematically populate my org-roam
+buffer and have my root node rooted &lt;a href="https://buffer.thebitmage.com/20230911114632-the100pagemlbook.html"&gt;here in the
+braindump&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>The Most Important Book You'll Ever Read</title><link>https://rajp152k.github.io/post/most-important-book/</link><pubDate>Sun, 01 Oct 2023 04:05:55 +0530</pubDate><guid>https://rajp152k.github.io/post/most-important-book/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;To know thyself, is the beginning of wisdom&lt;br&gt;
+&lt;em&gt;Socrates&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id="on-tangibility-of-the-past"&gt;On tangibility of the past&lt;/h2&gt;
+&lt;p&gt;All of us create content, every moment, tuned to varying extents of influence and
+permanence.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s intent that separates us all into different leagues of
+producers.&lt;br&gt;
 Let me explain via a hierarchical build up of selected formats of content with
-varying intensity.&lt;br>
+varying intensity.&lt;br&gt;
 Note that the list isn&amp;rsquo;t exhaustive by any means and I&amp;rsquo;ve deliberately
 excluded works of larger scale (movies, video games : they have the
-potential to be the most influential kind of content out there).&lt;/p></description></item><item><title>Engineering a(n) (Ergogenic) Nootropic Stack</title><link>https://rajp152k.github.io/post/nootropics-init/</link><pubDate>Fri, 29 Sep 2023 05:52:56 +0530</pubDate><guid>https://rajp152k.github.io/post/nootropics-init/</guid><description>&lt;blockquote>
-&lt;p>Nootropics are cognitive enhancers, boosting brainpower and mental abilities, while ergogenic variants focus on elevating physical performance, creating a powerful combo for unleashing your potential.&lt;/p>&lt;/blockquote>
-&lt;p>I&amp;rsquo;ve got my core habits dialed down now (sleep, exercise, nutrition)
+potential to be the most influential kind of content out there).&lt;/p&gt;</description></item><item><title>Engineering a(n) (Ergogenic) Nootropic Stack</title><link>https://rajp152k.github.io/post/nootropics-init/</link><pubDate>Fri, 29 Sep 2023 05:52:56 +0530</pubDate><guid>https://rajp152k.github.io/post/nootropics-init/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Nootropics are cognitive enhancers, boosting brainpower and mental abilities, while ergogenic variants focus on elevating physical performance, creating a powerful combo for unleashing your potential.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I&amp;rsquo;ve got my core habits dialed down now (sleep, exercise, nutrition)
 and have some good routines in place to actually start converging upon
 a diet that suits my goal of clocking in stable, moderately high
-levels of physical and mental performance throughout the day.&lt;/p></description></item><item><title>Prompt Crafting Distilled</title><link>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</link><pubDate>Thu, 21 Sep 2023 16:38:07 +0530</pubDate><guid>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</guid><description>&lt;h1 id="the-premise">The Premise&lt;/h1>
-&lt;p>I was initially reluctant on using generative AI for my writing
-process.&lt;/p>
-&lt;p>That being said, I was quite aware of the potential of large language
+levels of physical and mental performance throughout the day.&lt;/p&gt;</description></item><item><title>Prompt Crafting Distilled</title><link>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</link><pubDate>Thu, 21 Sep 2023 16:38:07 +0530</pubDate><guid>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</guid><description>&lt;h1 id="the-premise"&gt;The Premise&lt;/h1&gt;
+&lt;p&gt;I was initially reluctant on using generative AI for my writing
+process.&lt;/p&gt;
+&lt;p&gt;That being said, I was quite aware of the potential of large language
 models (generically addressed as LLMs in here henceforth) -
 especially true in the case of content creators and/or eccentrically
-curious individuals.&lt;/p>
-&lt;p>I, therefore, decided to clarify how I&amp;rsquo;ll be using generative AI for
-my ideation process.&lt;/p>
-&lt;h1 id="the-promise">The Promise&lt;/h1>
-&lt;p>Before we get onto that, as promised by the title, distilling the
+curious individuals.&lt;/p&gt;
+&lt;p&gt;I, therefore, decided to clarify how I&amp;rsquo;ll be using generative AI for
+my ideation process.&lt;/p&gt;
+&lt;h1 id="the-promise"&gt;The Promise&lt;/h1&gt;
+&lt;p&gt;Before we get onto that, as promised by the title, distilling the
 over-arching skills needed to extract good insights from a
-conversation with an LLM (an el-el-em; please don&amp;rsquo;t read it as large, please..).&lt;/p></description></item><item><title>I have a Writing Tutor now ...</title><link>https://rajp152k.github.io/post/better-writer/</link><pubDate>Wed, 20 Sep 2023 19:30:13 +0530</pubDate><guid>https://rajp152k.github.io/post/better-writer/</guid><description>&lt;p>So, I&amp;rsquo;ve been reading a &lt;a href="https://buffer.thebitmage.com/sitemap?stack=%2F20230920144401-prompt_engineering.html">book on prompt engineering&lt;/a> and decided to
-practice a little&amp;hellip;&lt;/p>
-&lt;p>Here&amp;rsquo;s a conversation I had with chatGPT regarding a small essay I
-wrote recently and fortunately, there&amp;rsquo;s room to improve.&lt;/p>
-&lt;p>Here&amp;rsquo;s how it went&amp;hellip;&lt;/p>
-&lt;h2 id="criticize-my-writing-">Criticize my writing &amp;hellip;&lt;/h2>
-&lt;p>Raj: You are my writing critic for this session; do not make any intellectual changes in any text I paste; do not heavily influence my style; only analyze what I say and generate pointers as to how I can become a better writer.&lt;/p></description></item><item><title>Do you really wanna be a Polymath?</title><link>https://rajp152k.github.io/post/aefraisk/</link><pubDate>Mon, 18 Sep 2023 17:01:45 +0530</pubDate><guid>https://rajp152k.github.io/post/aefraisk/</guid><description>&lt;p>Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
-refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-old-works/">here&lt;/a>&lt;/p>
-&lt;h1 id="the-unaltered-entry">The Unaltered Entry&lt;/h1>
-&lt;h3 id="2022-04-17-sun-1709---8021">[2022-04-17 Sun 17:09] - 8021&lt;/h3>
-&lt;p>3 hours ago, I encountered a semantic crisis. It all started with the
+conversation with an LLM (an el-el-em; please don&amp;rsquo;t read it as large, please..).&lt;/p&gt;</description></item><item><title>I have a Writing Tutor now ...</title><link>https://rajp152k.github.io/post/better-writer/</link><pubDate>Wed, 20 Sep 2023 19:30:13 +0530</pubDate><guid>https://rajp152k.github.io/post/better-writer/</guid><description>&lt;p&gt;So, I&amp;rsquo;ve been reading a &lt;a href="https://buffer.thebitmage.com/sitemap?stack=%2F20230920144401-prompt_engineering.html"&gt;book on prompt engineering&lt;/a&gt; and decided to
+practice a little&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a conversation I had with chatGPT regarding a small essay I
+wrote recently and fortunately, there&amp;rsquo;s room to improve.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how it went&amp;hellip;&lt;/p&gt;
+&lt;h2 id="criticize-my-writing-"&gt;Criticize my writing &amp;hellip;&lt;/h2&gt;
+&lt;p&gt;Raj: You are my writing critic for this session; do not make any intellectual changes in any text I paste; do not heavily influence my style; only analyze what I say and generate pointers as to how I can become a better writer.&lt;/p&gt;</description></item><item><title>Do you really wanna be a Polymath?</title><link>https://rajp152k.github.io/post/aefraisk/</link><pubDate>Mon, 18 Sep 2023 17:01:45 +0530</pubDate><guid>https://rajp152k.github.io/post/aefraisk/</guid><description>&lt;p&gt;Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
+refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-old-works/"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="the-unaltered-entry"&gt;The Unaltered Entry&lt;/h1&gt;
+&lt;h3 id="2022-04-17-sun-1709---8021"&gt;[2022-04-17 Sun 17:09] - 8021&lt;/h3&gt;
+&lt;p&gt;3 hours ago, I encountered a semantic crisis. It all started with the
 thought that I&amp;rsquo;m not really prepared for a lot of things in life. Now,
 that in itself is a toxic thought - one can never be prepared for it
 all but I definitely have time to figure out several things with
 minimal extra effort. This would definitely result in a lot of
 uncertainty being cared for. I&amp;rsquo;ve encountered the nihilistic
 philosophy before: if complete certainty cannot be achieved, why try
-clearing away any of the uncertainty you have around you.&lt;/p></description></item><item><title>The Polymathic Gamble</title><link>https://rajp152k.github.io/post/polymathy/</link><pubDate>Mon, 18 Sep 2023 16:57:18 +0530</pubDate><guid>https://rajp152k.github.io/post/polymathy/</guid><description>&lt;p>Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
-refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-old-works/">here&lt;/a>&lt;/p>
-&lt;h1 id="the-unaltered-entry">The Unaltered Entry&lt;/h1>
-&lt;h3 id="2022-02-23-wed-1811---7968">[2022-02-23 Wed 18:11] - 7968&lt;/h3>
-&lt;blockquote>
-&lt;p>A polymath (Greek: πολυμαθής, polymathēs, &amp;ldquo;having learned much&amp;rdquo;; Latin: homo universalis, &amp;ldquo;universal human&amp;rdquo;) is an individual whose knowledge spans a substantial number of subjects, known to draw on complex bodies of knowledge to solve specific problems.&lt;/p>&lt;/blockquote>
-&lt;p>For the past 2 years, I&amp;rsquo;ve begun exploring several domains
+clearing away any of the uncertainty you have around you.&lt;/p&gt;</description></item><item><title>The Polymathic Gamble</title><link>https://rajp152k.github.io/post/polymathy/</link><pubDate>Mon, 18 Sep 2023 16:57:18 +0530</pubDate><guid>https://rajp152k.github.io/post/polymathy/</guid><description>&lt;p&gt;Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
+refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-old-works/"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="the-unaltered-entry"&gt;The Unaltered Entry&lt;/h1&gt;
+&lt;h3 id="2022-02-23-wed-1811---7968"&gt;[2022-02-23 Wed 18:11] - 7968&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A polymath (Greek: πολυμαθής, polymathēs, &amp;ldquo;having learned much&amp;rdquo;; Latin: homo universalis, &amp;ldquo;universal human&amp;rdquo;) is an individual whose knowledge spans a substantial number of subjects, known to draw on complex bodies of knowledge to solve specific problems.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;For the past 2 years, I&amp;rsquo;ve begun exploring several domains
 simultaneously, maintaining a generic enthusiasm and curiosity for most of them.
-Here are some thoughts on what I feel now, actively pursuing polymathy.&lt;/p></description></item><item><title>Reading an Author</title><link>https://rajp152k.github.io/post/reading-an-author/</link><pubDate>Wed, 06 Sep 2023 16:46:47 +0530</pubDate><guid>https://rajp152k.github.io/post/reading-an-author/</guid><description>&lt;p>Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
-refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-old-works/">here&lt;/a>&lt;/p>
-&lt;h1 id="the-unaltered-entry">The Unaltered Entry&lt;/h1>
-&lt;h2 id="2022-02-01-tue-1011---7946">[2022-02-01 Tue 10:11] - 7946&lt;/h2>
-&lt;p>I, hitherto, have been reading books as a single unit of intellectual
+Here are some thoughts on what I feel now, actively pursuing polymathy.&lt;/p&gt;</description></item><item><title>Reading an Author</title><link>https://rajp152k.github.io/post/reading-an-author/</link><pubDate>Wed, 06 Sep 2023 16:46:47 +0530</pubDate><guid>https://rajp152k.github.io/post/reading-an-author/</guid><description>&lt;p&gt;Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
+refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-old-works/"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="the-unaltered-entry"&gt;The Unaltered Entry&lt;/h1&gt;
+&lt;h2 id="2022-02-01-tue-1011---7946"&gt;[2022-02-01 Tue 10:11] - 7946&lt;/h2&gt;
+&lt;p&gt;I, hitherto, have been reading books as a single unit of intellectual
 conveyance. However, that strategy doesn&amp;rsquo;t work for all the
 works. Some authors have their writings crisply intertwined with
-their other writings.&lt;/p>
-&lt;p>Approaching a single book as a part of a larger intellectual
+their other writings.&lt;/p&gt;
+&lt;p&gt;Approaching a single book as a part of a larger intellectual
 conveyance is more efficient in the longer term if one intends to read
 all the work of a particular author. Consequently, grouping these
-reads together has also been somewhat interesting lately.&lt;/p></description></item><item><title>Refactoring Old Works</title><link>https://rajp152k.github.io/post/refactoring-old-works/</link><pubDate>Wed, 06 Sep 2023 16:21:44 +0530</pubDate><guid>https://rajp152k.github.io/post/refactoring-old-works/</guid><description>&lt;p>I&amp;rsquo;d managed to produce some fairly original essays on my last blog and
+reads together has also been somewhat interesting lately.&lt;/p&gt;</description></item><item><title>Refactoring Old Works</title><link>https://rajp152k.github.io/post/refactoring-old-works/</link><pubDate>Wed, 06 Sep 2023 16:21:44 +0530</pubDate><guid>https://rajp152k.github.io/post/refactoring-old-works/</guid><description>&lt;p&gt;I&amp;rsquo;d managed to produce some fairly original essays on my last blog and
 I&amp;rsquo;ll soon be incorporating them into posts here. I had a habit of
 writing in streams in the main blog itself and there is a lot of
-insight stored in the chronology of some such logs.&lt;/p>
-&lt;p>The old blog is archived in the repository
-&lt;a href="https://github.com/rajp152k/19-22_archive">here&lt;/a> and I could benefit
-from repurposing old works into the present setup.&lt;/p>
-&lt;p>I&amp;rsquo;ll mainly be focusing on editing the fluff out, finding what good
+insight stored in the chronology of some such logs.&lt;/p&gt;
+&lt;p&gt;The old blog is archived in the repository
+&lt;a href="https://github.com/rajp152k/19-22_archive"&gt;here&lt;/a&gt; and I could benefit
+from repurposing old works into the present setup.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll mainly be focusing on editing the fluff out, finding what good
 stylistic knacks I&amp;rsquo;ve accumulated over the years, and rejecting the
-questionable habits that don&amp;rsquo;t serve me so well.&lt;/p></description></item><item><title>The Definitive Guide to Books</title><link>https://rajp152k.github.io/post/the-definitive-guide-to-books/</link><pubDate>Thu, 31 Aug 2023 03:57:29 +0530</pubDate><guid>https://rajp152k.github.io/post/the-definitive-guide-to-books/</guid><description>&lt;p>Books play a pivotal role in the life of any aspiring and existing intellectual. I began
+questionable habits that don&amp;rsquo;t serve me so well.&lt;/p&gt;</description></item><item><title>The Definitive Guide to Books</title><link>https://rajp152k.github.io/post/the-definitive-guide-to-books/</link><pubDate>Thu, 31 Aug 2023 03:57:29 +0530</pubDate><guid>https://rajp152k.github.io/post/the-definitive-guide-to-books/</guid><description>&lt;p&gt;Books play a pivotal role in the life of any aspiring and existing intellectual. I began
 reading diversely and seriously when I was 19 and immediately
-regretted not starting sooner.&lt;/p>
-&lt;p>Reading sets you up for an involved existence. If you read vastly,
-you&amp;rsquo;ll be a force to be reckoned with.&lt;/p>
-&lt;p>Over the span of 3 years (2019 - 2022), I read around a 100 books ranging from
+regretted not starting sooner.&lt;/p&gt;
+&lt;p&gt;Reading sets you up for an involved existence. If you read vastly,
+you&amp;rsquo;ll be a force to be reckoned with.&lt;/p&gt;
+&lt;p&gt;Over the span of 3 years (2019 - 2022), I read around a 100 books ranging from
 the classics, biographies, auto-biographies, physics, computer science,
 anthropology, data science, etymology, theology, game theory, mathematics, history,
 how-to-books, nutrition, physiology , fitness, health, psychology, neuroscience, linguistics,
@@ -471,120 +471,120 @@ self help (guilty as charged), spirituality, humor (guides to being
 funny and similar stuff), young adult (only 1 - please don&amp;rsquo;t chastise
 me - I could not handle the cringe), philosophy (a lot - please don&amp;rsquo;t chastise
 me) and meta books (speed reading, how to consume books, taking notes,
-etc).&lt;/p></description></item><item><title>Practical Natural Language Processing : Chapters 1-5</title><link>https://rajp152k.github.io/post/practical-nlp-c1-5/</link><pubDate>Tue, 29 Aug 2023 16:32:06 +0530</pubDate><guid>https://rajp152k.github.io/post/practical-nlp-c1-5/</guid><description>&lt;p>I took this up when I had to setup a bunch of NLP pipelines for work and
+etc).&lt;/p&gt;</description></item><item><title>Practical Natural Language Processing : Chapters 1-5</title><link>https://rajp152k.github.io/post/practical-nlp-c1-5/</link><pubDate>Tue, 29 Aug 2023 16:32:06 +0530</pubDate><guid>https://rajp152k.github.io/post/practical-nlp-c1-5/</guid><description>&lt;p&gt;I took this up when I had to setup a bunch of NLP pipelines for work and
 this does stand true to its name - it is a quick and practical index
 into approaches, introductory theory and useful libraries for the
-same.&lt;/p>
-&lt;p>I don&amp;rsquo;t like reading text books at a stretch due to several reasons:-
+same.&lt;/p&gt;
+&lt;p&gt;I don&amp;rsquo;t like reading text books at a stretch due to several reasons:-
 &amp;ldquo;cross a bridge, when you get to it&amp;rdquo; is something that has stood the
 test of time for me when it comes to reading practical books. I don&amp;rsquo;t
 find it useful to read stuff without the doing if that is what the
-book is intended for.&lt;/p></description></item><item><title>Common Lisp : The Series - 0.1 : Representing Programs</title><link>https://rajp152k.github.io/post/clts/clts-0.1/</link><pubDate>Tue, 29 Aug 2023 11:09:43 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0.1/</guid><description>&lt;p>What makes lisp so unique is the way its code is structured - you
+book is intended for.&lt;/p&gt;</description></item><item><title>Common Lisp : The Series - 0.1 : Representing Programs</title><link>https://rajp152k.github.io/post/clts/clts-0.1/</link><pubDate>Tue, 29 Aug 2023 11:09:43 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0.1/</guid><description>&lt;p&gt;What makes lisp so unique is the way its code is structured - you
 definitely can&amp;rsquo;t miss all those parentheses. In this section of the
 series, I discuss the cause for such a representation and how that
-makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SuI2ns1D9Es?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+makes lisp unique in terms of how it views its code as data as code (aka homo-iconicity).&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SuI2ns1D9Es?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;hr>
-&lt;hr>
-&lt;h2 id="further-reading">Further reading&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://docs.python.org/3/library/dis.html">Python disassembler&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Homoiconicity">Homoiconity&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Bytecode">Byte Code&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/S-expression">S-expressions&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Common_operator_notation">Common Operator Notation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Abstract Syntax Tree&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://wiki.c2.com/?BlubParadox">The Blub Paradox&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="call-to-collaborate">Call to collaborate&lt;/h2>
-&lt;p>If you&amp;rsquo;re someone who shares the dream of making lisp popular and
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;h2 id="further-reading"&gt;Further reading&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3/library/dis.html"&gt;Python disassembler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Homoiconicity"&gt;Homoiconity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Bytecode"&gt;Byte Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/S-expression"&gt;S-expressions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Common_operator_notation"&gt;Common Operator Notation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree"&gt;Abstract Syntax Tree&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.c2.com/?BlubParadox"&gt;The Blub Paradox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="call-to-collaborate"&gt;Call to collaborate&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re someone who shares the dream of making lisp popular and
 mainstream so that we can use it for our jobs and don&amp;rsquo;t have to switch
 to blubs to make a living (without denting its charm of course) ,
 consider contributing to the notes and hit me up via mail or any of
-the other media I&amp;rsquo;m present on.&lt;/p></description></item><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p>This is an auxilliary post collating resources for the recent video I
-posted &amp;hellip;&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dKU_mNaEo1g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+the other media I&amp;rsquo;m present on.&lt;/p&gt;</description></item><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p&gt;This is an auxilliary post collating resources for the recent video I
+posted &amp;hellip;&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dKU_mNaEo1g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;h2 id="the-pipeline">The Pipeline&lt;/h2>
-&lt;ol>
-&lt;li>All the ideas, resources that I want to process, any miscellaneous
-questions I have, are fed into the input-queue in the buffer&lt;/li>
-&lt;li>All the manipulation takes place in these buffers - they&amp;rsquo;re
-org-files and I use org-roam to maintain the connections&lt;/li>
-&lt;li>whenever a node set ripens and is worth sharing, I write a
-post or publish a video.&lt;/li>
-&lt;li>It can go both ways : I can force a set into maturity if I wish to
+&lt;h2 id="the-pipeline"&gt;The Pipeline&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;All the ideas, resources that I want to process, any miscellaneous
+questions I have, are fed into the input-queue in the buffer&lt;/li&gt;
+&lt;li&gt;All the manipulation takes place in these buffers - they&amp;rsquo;re
+org-files and I use org-roam to maintain the connections&lt;/li&gt;
+&lt;li&gt;whenever a node set ripens and is worth sharing, I write a
+post or publish a video.&lt;/li&gt;
+&lt;li&gt;It can go both ways : I can force a set into maturity if I wish to
 publish something specific or I may chance upon a concept when
-observing connections.&lt;/li>
-&lt;/ol>
-&lt;h2 id="observations">Observations&lt;/h2>
-&lt;p>I use &lt;a href="https://github.com/org-roam/org-roam-ui">org-roam-ui&lt;/a> to
+observing connections.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="observations"&gt;Observations&lt;/h2&gt;
+&lt;p&gt;I use &lt;a href="https://github.com/org-roam/org-roam-ui"&gt;org-roam-ui&lt;/a&gt; to
 visualize the buffer and check for linkages that might result in
 something useful. I also want to publish this graph (demonstrated in
 video) but there&amp;rsquo;s no explicit solution for that yet and I&amp;rsquo;m planning
 to build one myself with rust and webassembly as a compilation
-target.&lt;/p></description></item><item><title>Common Lisp : The Series - 0 : Introduction</title><link>https://rajp152k.github.io/post/clts/clts-0/</link><pubDate>Mon, 21 Aug 2023 12:03:07 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0/</guid><description>&lt;p>This is the first in a series of blog posts that follow the educational common lisp series on my &lt;a href="https://youtube.com/@rajp152k">youtube channel&lt;/a> as an
-auxilliary.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jLonMxrVPbY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+target.&lt;/p&gt;</description></item><item><title>Common Lisp : The Series - 0 : Introduction</title><link>https://rajp152k.github.io/post/clts/clts-0/</link><pubDate>Mon, 21 Aug 2023 12:03:07 +0530</pubDate><guid>https://rajp152k.github.io/post/clts/clts-0/</guid><description>&lt;p&gt;This is the first in a series of blog posts that follow the educational common lisp series on my &lt;a href="https://youtube.com/@rajp152k"&gt;youtube channel&lt;/a&gt; as an
+auxilliary.&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/jLonMxrVPbY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;hr>
-&lt;hr>
-&lt;p>I&amp;rsquo;ll be summarizing the videos in these blogs and be using these to
+&lt;hr&gt;
+&lt;hr&gt;
+&lt;p&gt;I&amp;rsquo;ll be summarizing the videos in these blogs and be using these to
 point to references and additional resources that further elaborate
-the matter.&lt;/p></description></item><item><title>RIP, Bram Moolenar</title><link>https://rajp152k.github.io/post/rip-bram-moolenar/</link><pubDate>Thu, 17 Aug 2023 18:09:15 +0530</pubDate><guid>https://rajp152k.github.io/post/rip-bram-moolenar/</guid><description>&lt;p>In memory of the author of vim, arguably the most influential
-programming utility ever&amp;hellip;&lt;/p>
-&lt;p>Here is a paper : &amp;ldquo;&lt;a href="https://www.moolenaar.net/habits_paper.pdf"> Seven habits of effective text editing
-&lt;/a>&amp;rdquo; by him that I hope continues
-to inspire programmers, as it did me when I was a novice.&lt;/p></description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p>&lt;strong>[&lt;em>As of 0x213B : 2023-08-17 Thu&lt;/em>]&lt;/strong>&lt;/p>
-&lt;p>I use emacs for a lot of my daily tasks and spend majority of my time
-in it. This is a review of some significant components of my init.el&lt;/p>
-&lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;keyboard all the way&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(menu-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(tool-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(scroll-bar-mode &lt;span style="color:#ae81ff">-1&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-elisp" data-lang="elisp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">;I don&amp;#39;t like distractions&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq byte-compile-warnings &lt;span style="color:#f92672">&amp;#39;&lt;/span>(cl-functions))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq ring-bell-function &lt;span style="color:#e6db74">&amp;#39;ignore&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>(setq visible-bell &lt;span style="color:#66d9ef">t&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;p>I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
+the matter.&lt;/p&gt;</description></item><item><title>RIP, Bram Moolenar</title><link>https://rajp152k.github.io/post/rip-bram-moolenar/</link><pubDate>Thu, 17 Aug 2023 18:09:15 +0530</pubDate><guid>https://rajp152k.github.io/post/rip-bram-moolenar/</guid><description>&lt;p&gt;In memory of the author of vim, arguably the most influential
+programming utility ever&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Here is a paper : &amp;ldquo;&lt;a href="https://www.moolenaar.net/habits_paper.pdf"&gt; Seven habits of effective text editing
+&lt;/a&gt;&amp;rdquo; by him that I hope continues
+to inspire programmers, as it did me when I was a novice.&lt;/p&gt;</description></item><item><title>My Emacs Configuration</title><link>https://rajp152k.github.io/post/my-emacs-config-0x213b/</link><pubDate>Thu, 17 Aug 2023 11:23:10 +0530</pubDate><guid>https://rajp152k.github.io/post/my-emacs-config-0x213b/</guid><description>&lt;p&gt;&lt;strong&gt;[&lt;em&gt;As of 0x213B : 2023-08-17 Thu&lt;/em&gt;]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I use emacs for a lot of my daily tasks and spend majority of my time
+in it. This is a review of some significant components of my init.el&lt;/p&gt;
+&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;keyboard all the way&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(menu-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(tool-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(scroll-bar-mode &lt;span style="color:#ae81ff"&gt;-1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-elisp" data-lang="elisp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;;I don&amp;#39;t like distractions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq byte-compile-warnings &lt;span style="color:#f92672"&gt;&amp;#39;&lt;/span&gt;(cl-functions))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq ring-bell-function &lt;span style="color:#e6db74"&gt;&amp;#39;ignore&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;(setq visible-bell &lt;span style="color:#66d9ef"&gt;t&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;I chose the most recently engineered package-management solution when I began with emacs, haven&amp;rsquo;t switched
 since and don&amp;rsquo;t think I&amp;rsquo;ll need to. Migrating from vim, I preferred a
 configuration file rather than installations via melpa interface.
-Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p></description></item><item><title>Common Lisp - A Gentle Introduction to Symbolic Computation</title><link>https://rajp152k.github.io/post/cl-aitsc/</link><pubDate>Wed, 16 Aug 2023 17:51:13 +0530</pubDate><guid>https://rajp152k.github.io/post/cl-aitsc/</guid><description>&lt;p>Given I&amp;rsquo;ve passed through SICP once, quickly grasping common
+Also, freezing and thawing is cool : exact reproducibility is guaranteed.&lt;/p&gt;</description></item><item><title>Common Lisp - A Gentle Introduction to Symbolic Computation</title><link>https://rajp152k.github.io/post/cl-aitsc/</link><pubDate>Wed, 16 Aug 2023 17:51:13 +0530</pubDate><guid>https://rajp152k.github.io/post/cl-aitsc/</guid><description>&lt;p&gt;Given I&amp;rsquo;ve passed through SICP once, quickly grasping common
 lisp to build stuff and explore the
 traditional and industrial aspects of lisp (I know clojure exists but
 traditional&amp;hellip;) was my next objective: with decent speed and only
 solving the somewhat involved exercises, it took me two weeks to
-complete this book.&lt;/p>
-&lt;p>The exercises aren&amp;rsquo;t meant to be a challenge but to adapt to the
+complete this book.&lt;/p&gt;
+&lt;p&gt;The exercises aren&amp;rsquo;t meant to be a challenge but to adapt to the
 environment and the topics introduced. The book does not explore
 concepts with depth (CLOS, macros, etc&amp;hellip;) but that shouldn&amp;rsquo;t be the
-objective of an introduction anyway.&lt;/p></description></item><item><title>PICC: pragmatics of intellectual consumption and creation</title><link>https://rajp152k.github.io/post/picc/</link><pubDate>Tue, 01 Aug 2023 10:40:55 +0530</pubDate><guid>https://rajp152k.github.io/post/picc/</guid><description>&lt;blockquote>
-&lt;p>&lt;em>There&amp;rsquo;s a better way to do it - Find it.&lt;/em>&lt;br>
-&lt;em>Thomas Alva Edison&lt;/em>&lt;/p>&lt;/blockquote>
-&lt;p>Managing one&amp;rsquo;s intellectual appetite in these times of information
+objective of an introduction anyway.&lt;/p&gt;</description></item><item><title>PICC: pragmatics of intellectual consumption and creation</title><link>https://rajp152k.github.io/post/picc/</link><pubDate>Tue, 01 Aug 2023 10:40:55 +0530</pubDate><guid>https://rajp152k.github.io/post/picc/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;There&amp;rsquo;s a better way to do it - Find it.&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;Thomas Alva Edison&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Managing one&amp;rsquo;s intellectual appetite in these times of information
 (and noise) excess is quite an ordeal. Given superior
 tooling and methods to plough through dense
 knowledge forests, coming up with the right set of tools for
 oneself is still a commendable task. In this post, I sketch out
 how one could go about making such choices practically, from why you
-should bother, to what tangible actions you can get started with.&lt;/p></description></item><item><title>Here we go again...</title><link>https://rajp152k.github.io/post/writing-setup/</link><pubDate>Sun, 16 Jul 2023 20:12:55 +0530</pubDate><guid>https://rajp152k.github.io/post/writing-setup/</guid><description>&lt;blockquote>
-&lt;p>&lt;em>If you wish to be a writer, write.&lt;/em>
-&lt;em>Epictetus&lt;/em>&lt;/p>&lt;/blockquote>
-&lt;h2 id="a-brief-history">A Brief History&lt;/h2>
-&lt;p>I took up writing as a hobby in the sophomore year of my bachelors and
+should bother, to what tangible actions you can get started with.&lt;/p&gt;</description></item><item><title>Here we go again...</title><link>https://rajp152k.github.io/post/writing-setup/</link><pubDate>Sun, 16 Jul 2023 20:12:55 +0530</pubDate><guid>https://rajp152k.github.io/post/writing-setup/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;If you wish to be a writer, write.&lt;/em&gt;
+&lt;em&gt;Epictetus&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id="a-brief-history"&gt;A Brief History&lt;/h2&gt;
+&lt;p&gt;I took up writing as a hobby in the sophomore year of my bachelors and
 it turned out to be the most definitive step towards bettering my way
-with words and expressing myself accurately.&lt;/p>
-&lt;p>This is the fourth major iteration on my blogging system and I&amp;rsquo;ve
+with words and expressing myself accurately.&lt;/p&gt;
+&lt;p&gt;This is the fourth major iteration on my blogging system and I&amp;rsquo;ve
 noticed that I&amp;rsquo;m slowly tending towards minimalism and an overall
 clutter-free approach with each step, building up from my past
 stylistic mistakes and experiences. As with any beginner, I began with
@@ -592,4 +592,4 @@ enthusiasm and held my ideas in high regard - a major reason for why I
 felt they should be out there. Over time, as I read more, I
 learned I had a lot more to learn and finally after a long break of
 writing frequently, here I am again, at symbolic ground zero -
-drafting a first post.&lt;/p></description></item></channel></rss>
+drafting a first post.&lt;/p&gt;</description></item></channel></rss>

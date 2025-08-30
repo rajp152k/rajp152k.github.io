@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on (bit-mage)</title><link>https://rajp152k.github.io/tags/git/</link><description>Recent content in Git on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2025 08:42:54 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Software Archaeology</title><link>https://rajp152k.github.io/post/programming-pilgrimages/</link><pubDate>Mon, 21 Apr 2025 08:42:54 +0530</pubDate><guid>https://rajp152k.github.io/post/programming-pilgrimages/</guid><description>&lt;p>During a recent surf, I chanced upon this beast.&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;a href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290">The Information Manager from Hell&lt;/a>&lt;br>
-&amp;ndash; Linus&lt;/p>&lt;/blockquote>
-&lt;p>Thinking about compiling more such landmarks &amp;ndash; an itinerary for fellow cyber pilgrims&lt;/p>
-&lt;p>Reviewing older codebases is an underrated exercise for software engineers&lt;/p>
-&lt;p>It&amp;rsquo;s a journey through the evolution of code, revealing the engineering decisions that moulded what we deal with today&lt;/p>
-&lt;p>Tracing the history of a project – understanding what worked, what didn&amp;rsquo;t, and how technical components evolved – has been a joy lately&lt;/p></description></item><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p>A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p>
-&lt;p>I was aware that the &lt;code>.gitignore&lt;/code> could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p>
-&lt;p>checkout &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git">this stackoverflow question&lt;/a>&lt;/p>
-&lt;p>So if the first &lt;code>.gitignore&lt;/code> looks like&lt;/p>
-&lt;pre tabindex="0">&lt;code>asdf-pattern 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on (bit-mage)</title><link>https://rajp152k.github.io/tags/git/</link><description>Recent content in Git on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 21 Apr 2025 08:42:54 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Software Archaeology</title><link>https://rajp152k.github.io/post/programming-pilgrimages/</link><pubDate>Mon, 21 Apr 2025 08:42:54 +0530</pubDate><guid>https://rajp152k.github.io/post/programming-pilgrimages/</guid><description>&lt;p&gt;During a recent surf, I chanced upon this beast.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290"&gt;The Information Manager from Hell&lt;/a&gt;&lt;br&gt;
+&amp;ndash; Linus&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Thinking about compiling more such landmarks &amp;ndash; an itinerary for fellow cyber pilgrims&lt;/p&gt;
+&lt;p&gt;Reviewing older codebases is an underrated exercise for software engineers&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a journey through the evolution of code, revealing the engineering decisions that moulded what we deal with today&lt;/p&gt;
+&lt;p&gt;Tracing the history of a project – understanding what worked, what didn&amp;rsquo;t, and how technical components evolved – has been a joy lately&lt;/p&gt;</description></item><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p&gt;A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p&gt;
+&lt;p&gt;I was aware that the &lt;code&gt;.gitignore&lt;/code&gt; could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p&gt;
+&lt;p&gt;checkout &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git"&gt;this stackoverflow question&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So if the first &lt;code&gt;.gitignore&lt;/code&gt; looks like&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;asdf-pattern 
 more-asdf
 some-absolute-asdf
 dir-asdf/
-&lt;/code>&lt;/pre>&lt;p>the second one would look like:&lt;/p>
-&lt;pre tabindex="0">&lt;code># blacklist everything first
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;the second one would look like:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;# blacklist everything first
 *
 
 # unignore the directories to capture nested existences
@@ -25,28 +25,28 @@ dir-asdf/
 !more-asdf
 !some-absoluete-asdf
 !dir-asdf/
-&lt;/code>&lt;/pre>&lt;p>What I wonder now is if git would allow for a branch-contextual .gitignore (named with certain protocols) so that I don&amp;rsquo;t have to maintain two different repositories altogether.&lt;/p></description></item><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p>This is an auxilliary post collating resources for the recent video I
-posted &amp;hellip;&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dKU_mNaEo1g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
- &lt;/div>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;What I wonder now is if git would allow for a branch-contextual .gitignore (named with certain protocols) so that I don&amp;rsquo;t have to maintain two different repositories altogether.&lt;/p&gt;</description></item><item><title>My Creation and Publishing Pipeline</title><link>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</link><pubDate>Wed, 23 Aug 2023 18:13:15 +0530</pubDate><guid>https://rajp152k.github.io/post/my-creation-and-publishing-pipeline/</guid><description>&lt;p&gt;This is an auxilliary post collating resources for the recent video I
+posted &amp;hellip;&lt;/p&gt;
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dKU_mNaEo1g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
 
-&lt;h2 id="the-pipeline">The Pipeline&lt;/h2>
-&lt;ol>
-&lt;li>All the ideas, resources that I want to process, any miscellaneous
-questions I have, are fed into the input-queue in the buffer&lt;/li>
-&lt;li>All the manipulation takes place in these buffers - they&amp;rsquo;re
-org-files and I use org-roam to maintain the connections&lt;/li>
-&lt;li>whenever a node set ripens and is worth sharing, I write a
-post or publish a video.&lt;/li>
-&lt;li>It can go both ways : I can force a set into maturity if I wish to
+&lt;h2 id="the-pipeline"&gt;The Pipeline&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;All the ideas, resources that I want to process, any miscellaneous
+questions I have, are fed into the input-queue in the buffer&lt;/li&gt;
+&lt;li&gt;All the manipulation takes place in these buffers - they&amp;rsquo;re
+org-files and I use org-roam to maintain the connections&lt;/li&gt;
+&lt;li&gt;whenever a node set ripens and is worth sharing, I write a
+post or publish a video.&lt;/li&gt;
+&lt;li&gt;It can go both ways : I can force a set into maturity if I wish to
 publish something specific or I may chance upon a concept when
-observing connections.&lt;/li>
-&lt;/ol>
-&lt;h2 id="observations">Observations&lt;/h2>
-&lt;p>I use &lt;a href="https://github.com/org-roam/org-roam-ui">org-roam-ui&lt;/a> to
+observing connections.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="observations"&gt;Observations&lt;/h2&gt;
+&lt;p&gt;I use &lt;a href="https://github.com/org-roam/org-roam-ui"&gt;org-roam-ui&lt;/a&gt; to
 visualize the buffer and check for linkages that might result in
 something useful. I also want to publish this graph (demonstrated in
 video) but there&amp;rsquo;s no explicit solution for that yet and I&amp;rsquo;m planning
 to build one myself with rust and webassembly as a compilation
-target.&lt;/p></description></item></channel></rss>
+target.&lt;/p&gt;</description></item></channel></rss>
