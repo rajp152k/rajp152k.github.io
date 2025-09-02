@@ -5,6 +5,20 @@ title: Now
 A [chronologically descending](https://github.com/rajp152k/buffer/blob/master/Content/20230712132109-timestamps.org) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x2426 
+
+ - writing this from terminal GCC Doom Emacs in Cool Retro Term with a horizontal sync and a split keyboard
+    - appropriately L-theaninated and caffeinated 
+ - back on MMA skill work 
+    - three days of compounds and three days of MMA
+    - punching after a long while : feels good
+ - not reading as much as I'd like to ...
+ - alive on cognware and the dd0xes again
+    - sort of a thinking rut when it comes to the (Bit-Mage) : wondering what should I talk about next
+ - init a lil bit of CyberSec (roadmap.sh is how I usually bootstrap) 
+ - been up to a lot lately : entering into a more relaxed consolidation phase for a couple of months
+ - kind of a cognitive deload before the next ramp up
+
 ## 0x23DD 
 
  - my ortho and physio gave me the green signal to lift heavy again
