@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on (bit-mage)</title><link>https://rajp152k.github.io/post/</link><description>Recent content in Posts on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 05 Oct 2025 18:03:33 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Pragmatic Opacity</title><link>https://rajp152k.github.io/post/pragmatic-opacity/</link><pubDate>Sun, 05 Oct 2025 18:03:33 +0530</pubDate><guid>https://rajp152k.github.io/post/pragmatic-opacity/</guid><description>&lt;hr&gt;
-&lt;h2 id="hahahugoshortcode60s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode63s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/nimOCOiBXsA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
 &lt;p&gt;This video explores a productivity workflow in Emacs that leverages window opacity, moving it beyond a purely aesthetic feature. The creator demonstrates how a translucent Emacs frame can be used as an overlay to view and control background applications, improving efficiency and saving screen real estate.&lt;/p&gt;</description></item><item><title>OSDEV[0x1]: Studying Strategy (for Writing an Operating System)</title><link>https://rajp152k.github.io/post/osdev/0x1/</link><pubDate>Mon, 22 Sep 2025 10:20:05 +0530</pubDate><guid>https://rajp152k.github.io/post/osdev/0x1/</guid><description>&lt;hr&gt;
-&lt;h2 id="hahahugoshortcode87s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode88s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/RVjGAbQKuCk?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
 &lt;p&gt;This video is the second part (0x1) of a series on writing an operating system. The creator, Raj, details the comprehensive studying and logging strategy he has designed to tackle this long-term project. The goal is to create a structured approach that fosters deep understanding, maintains motivation, and effectively manages the vast scope of the endeavor.&lt;/p&gt;</description></item><item><title>OSDev[0x0]: Writing an Operating System</title><link>https://rajp152k.github.io/post/osdev/0x0/</link><pubDate>Mon, 22 Sep 2025 10:15:06 +0530</pubDate><guid>https://rajp152k.github.io/post/osdev/0x0/</guid><description>&lt;hr&gt;
-&lt;h2 id="hahahugoshortcode88s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode87s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WoMibNj7XYM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
@@ -84,7 +84,8 @@ to the point of conducting an orchestra of text buffers.., somewhat musically (/
 &lt;p&gt;You respond exclusively in highly concise, jargon-rich org-mode only outlines, without any bold or italics formatting: the reader is a competent expert with polymathic knowledge and exceptional contextual comprehension. Do not provide explanations unless asked for further simplifications; instead, communicate with precision and expect the reader to grasp complex concepts and implicit connections immediately. Do not use any filler sentences and collabaratively contribute in constructing whatever topic is being expanded upon&lt;/p&gt;</description></item><item><title>Software Archaeology</title><link>https://rajp152k.github.io/post/programming-pilgrimages/</link><pubDate>Mon, 21 Apr 2025 08:42:54 +0530</pubDate><guid>https://rajp152k.github.io/post/programming-pilgrimages/</guid><description>&lt;p&gt;During a recent surf, I chanced upon this beast.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290"&gt;The Information Manager from Hell&lt;/a&gt;&lt;br&gt;
-&amp;ndash; Linus&lt;/p&gt;&lt;/blockquote&gt;
+&amp;ndash; Linus&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Thinking about compiling more such landmarks &amp;ndash; an itinerary for fellow cyber pilgrims&lt;/p&gt;
 &lt;p&gt;Reviewing older codebases is an underrated exercise for software engineers&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s a journey through the evolution of code, revealing the engineering decisions that moulded what we deal with today&lt;/p&gt;
@@ -92,29 +93,35 @@ to the point of conducting an orchestra of text buffers.., somewhat musically (/
 &lt;blockquote&gt;
 &lt;p&gt;been reading more papers&lt;br&gt;
 notes by jargony outlines&lt;br&gt;
-no unnecessary words&lt;/p&gt;&lt;/blockquote&gt;
+no unnecessary words&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;if can express&lt;br&gt;
 few words&lt;br&gt;
 you get it&lt;br&gt;
-get it?&lt;/p&gt;&lt;/blockquote&gt;
+get it?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;concise, practical&lt;br&gt;
 flowy, comprehensible&lt;br&gt;
-jargon is fun&lt;/p&gt;&lt;/blockquote&gt;
+jargon is fun&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;in org-roam&lt;br&gt;
 links when depth&lt;br&gt;
 more speed&lt;br&gt;
-good&lt;/p&gt;&lt;/blockquote&gt;
+good&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt=""&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;all left&lt;br&gt;
 tech haikus&lt;br&gt;
 challenge&lt;br&gt;
-someday&lt;/p&gt;&lt;/blockquote&gt;
+someday&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;until then&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;until then&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="enjoy-instance-for-this"&gt;&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org"&gt;Enjoy instance&lt;/a&gt; for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf"&gt;this&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>Nth Roam</title><link>https://rajp152k.github.io/post/nth-roam/</link><pubDate>Thu, 03 Apr 2025 01:11:43 +0530</pubDate><guid>https://rajp152k.github.io/post/nth-roam/</guid><description>&lt;p&gt;&lt;a href="https://github.com/rajp152k/nth-roam/tree/master"&gt;Nth Roam&lt;/a&gt; : An Emacs package to efficiently manage multiple roam instances&lt;/p&gt;
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EobRvrZpp1s?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
@@ -134,7 +141,8 @@ someday&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;I guess I need to cycle my dosage so that I don&amp;rsquo;t end up being too dependent.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m enjoying it though.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;EDIT: as of &amp;lt;2025-01-27 17:50:30 IST&amp;gt;, I&amp;rsquo;ve given up again&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>On Achievements</title><link>https://rajp152k.github.io/post/achievements/</link><pubDate>Fri, 17 Jan 2025 06:12:55 +0530</pubDate><guid>https://rajp152k.github.io/post/achievements/</guid><description>&lt;p&gt;I have a somewhat indifferent approach towards achievements(mine and others&amp;rsquo;): with tendencies to gauge the personalities based on how their conversations flow and in terms of the quality of the questions and problems they are working on.&lt;/p&gt;
+&lt;p&gt;EDIT: as of &amp;lt;2025-01-27 17:50:30 IST&amp;gt;, I&amp;rsquo;ve given up again&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>On Achievements</title><link>https://rajp152k.github.io/post/achievements/</link><pubDate>Fri, 17 Jan 2025 06:12:55 +0530</pubDate><guid>https://rajp152k.github.io/post/achievements/</guid><description>&lt;p&gt;I have a somewhat indifferent approach towards achievements(mine and others&amp;rsquo;): with tendencies to gauge the personalities based on how their conversations flow and in terms of the quality of the questions and problems they are working on.&lt;/p&gt;
 &lt;p&gt;Recently, I&amp;rsquo;ve began to grasp why they actually might be a necessary construct:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;when leading larger societal initiatives, simply claiming ethical superiority doesn&amp;rsquo;t pan out well (and it shouldn&amp;rsquo;t) with the need to gain the trust of masses.&lt;/li&gt;
@@ -192,7 +200,8 @@ dir-asdf/
 &lt;p&gt;Such a gauge is probably only exhaustively captured in how the complexities of life unroll around you based on your behaviours.&lt;/p&gt;</description></item><item><title>Personalized Science</title><link>https://rajp152k.github.io/post/personal-research/</link><pubDate>Mon, 18 Nov 2024 11:14:23 +0530</pubDate><guid>https://rajp152k.github.io/post/personal-research/</guid><description>&lt;p&gt;I like studying and exploring new things in the spirit of science. The science that happens today in institutions is more than just science and involves a lot of ancillary efforts directed towards the formalized production of research.&lt;/p&gt;
 &lt;p&gt;I respect formalized scientific efforts but feel like humanity as whole is losing out on the idea of having personalized problem statements to work on without worrying about applications, citations or what the next big thing is going to be.&lt;/p&gt;</description></item><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p&gt;There&amp;rsquo;s this saying :&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;I&amp;rsquo;m going to do that with Go.&lt;/p&gt;
 &lt;p&gt;As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p&gt;</description></item><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p&gt;This is how I time my workblocks these days&amp;hellip;&lt;/p&gt;
 &lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt;
@@ -435,7 +444,8 @@ since the past ~4 years.&lt;/p&gt;
 buffer and have my root node rooted &lt;a href="https://buffer.thebitmage.com/20230911114632-the100pagemlbook.html"&gt;here in the
 braindump&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>The Most Important Book You'll Ever Read</title><link>https://rajp152k.github.io/post/most-important-book/</link><pubDate>Sun, 01 Oct 2023 04:05:55 +0530</pubDate><guid>https://rajp152k.github.io/post/most-important-book/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;To know thyself, is the beginning of wisdom&lt;br&gt;
-&lt;em&gt;Socrates&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;em&gt;Socrates&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="on-tangibility-of-the-past"&gt;On tangibility of the past&lt;/h2&gt;
 &lt;p&gt;All of us create content, every moment, tuned to varying extents of influence and
 permanence.&lt;/p&gt;
@@ -446,11 +456,14 @@ varying intensity.&lt;br&gt;
 Note that the list isn&amp;rsquo;t exhaustive by any means and I&amp;rsquo;ve deliberately
 excluded works of larger scale (movies, video games : they have the
 potential to be the most influential kind of content out there).&lt;/p&gt;</description></item><item><title>Engineering a(n) (Ergogenic) Nootropic Stack</title><link>https://rajp152k.github.io/post/nootropics-init/</link><pubDate>Fri, 29 Sep 2023 05:52:56 +0530</pubDate><guid>https://rajp152k.github.io/post/nootropics-init/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;Nootropics are cognitive enhancers, boosting brainpower and mental abilities, while ergogenic variants focus on elevating physical performance, creating a powerful combo for unleashing your potential.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Nootropics are cognitive enhancers, boosting brainpower and mental abilities, while ergogenic variants focus on elevating physical performance, creating a powerful combo for unleashing your potential.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;I&amp;rsquo;ve got my core habits dialed down now (sleep, exercise, nutrition)
 and have some good routines in place to actually start converging upon
 a diet that suits my goal of clocking in stable, moderately high
-levels of physical and mental performance throughout the day.&lt;/p&gt;</description></item><item><title>Prompt Crafting Distilled</title><link>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</link><pubDate>Thu, 21 Sep 2023 16:38:07 +0530</pubDate><guid>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</guid><description>&lt;h1 id="the-premise"&gt;The Premise&lt;/h1&gt;
+levels of physical and mental performance throughout the day.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m in a phase now where minor tweaks and changes won&amp;rsquo;t be held back
+by poor staple habits.&lt;/p&gt;</description></item><item><title>Prompt Crafting Distilled</title><link>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</link><pubDate>Thu, 21 Sep 2023 16:38:07 +0530</pubDate><guid>https://rajp152k.github.io/post/dense-guide-prompt-engineering/</guid><description>&lt;h1 id="the-premise"&gt;The Premise&lt;/h1&gt;
 &lt;p&gt;I was initially reluctant on using generative AI for my writing
 process.&lt;/p&gt;
 &lt;p&gt;That being said, I was quite aware of the potential of large language
@@ -484,7 +497,8 @@ refactoring : more on that &lt;a href="https://thebitmage.com/post/refactoring-o
 &lt;h1 id="the-unaltered-entry"&gt;The Unaltered Entry&lt;/h1&gt;
 &lt;h3 id="2022-02-23-wed-1811---7968"&gt;[2022-02-23 Wed 18:11] - 7968&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;A polymath (Greek: πολυμαθής, polymathēs, &amp;ldquo;having learned much&amp;rdquo;; Latin: homo universalis, &amp;ldquo;universal human&amp;rdquo;) is an individual whose knowledge spans a substantial number of subjects, known to draw on complex bodies of knowledge to solve specific problems.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;A polymath (Greek: πολυμαθής, polymathēs, &amp;ldquo;having learned much&amp;rdquo;; Latin: homo universalis, &amp;ldquo;universal human&amp;rdquo;) is an individual whose knowledge spans a substantial number of subjects, known to draw on complex bodies of knowledge to solve specific problems.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;For the past 2 years, I&amp;rsquo;ve begun exploring several domains
 simultaneously, maintaining a generic enthusiasm and curiosity for most of them.
 Here are some thoughts on what I feel now, actively pursuing polymathy.&lt;/p&gt;</description></item><item><title>Reading an Author</title><link>https://rajp152k.github.io/post/reading-an-author/</link><pubDate>Wed, 06 Sep 2023 16:46:47 +0530</pubDate><guid>https://rajp152k.github.io/post/reading-an-author/</guid><description>&lt;p&gt;Do note that this is an old post (from my last archived blog) that I&amp;rsquo;m
@@ -620,7 +634,8 @@ environment and the topics introduced. The book does not explore
 concepts with depth (CLOS, macros, etc&amp;hellip;) but that shouldn&amp;rsquo;t be the
 objective of an introduction anyway.&lt;/p&gt;</description></item><item><title>PICC: pragmatics of intellectual consumption and creation</title><link>https://rajp152k.github.io/post/picc/</link><pubDate>Tue, 01 Aug 2023 10:40:55 +0530</pubDate><guid>https://rajp152k.github.io/post/picc/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;There&amp;rsquo;s a better way to do it - Find it.&lt;/em&gt;&lt;br&gt;
-&lt;em&gt;Thomas Alva Edison&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;em&gt;Thomas Alva Edison&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Managing one&amp;rsquo;s intellectual appetite in these times of information
 (and noise) excess is quite an ordeal. Given superior
 tooling and methods to plough through dense
@@ -629,7 +644,8 @@ oneself is still a commendable task. In this post, I sketch out
 how one could go about making such choices practically, from why you
 should bother, to what tangible actions you can get started with.&lt;/p&gt;</description></item><item><title>Here we go again...</title><link>https://rajp152k.github.io/post/writing-setup/</link><pubDate>Sun, 16 Jul 2023 20:12:55 +0530</pubDate><guid>https://rajp152k.github.io/post/writing-setup/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;If you wish to be a writer, write.&lt;/em&gt;
-&lt;em&gt;Epictetus&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;em&gt;Epictetus&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="a-brief-history"&gt;A Brief History&lt;/h2&gt;
 &lt;p&gt;I took up writing as a hobby in the sophomore year of my bachelors and
 it turned out to be the most definitive step towards bettering my way

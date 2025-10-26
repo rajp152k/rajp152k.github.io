@@ -21,7 +21,8 @@
 &lt;p&gt;I guess I need to cycle my dosage so that I don&amp;rsquo;t end up being too dependent.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m enjoying it though.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;EDIT: as of &amp;lt;2025-01-27 17:50:30 IST&amp;gt;, I&amp;rsquo;ve given up again&lt;/p&gt;&lt;/blockquote&gt;</description></item><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p&gt;A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p&gt;
+&lt;p&gt;EDIT: as of &amp;lt;2025-01-27 17:50:30 IST&amp;gt;, I&amp;rsquo;ve given up again&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>Contextual .gitignores</title><link>https://rajp152k.github.io/post/whitelisting-git/</link><pubDate>Thu, 09 Jan 2025 09:01:27 +0530</pubDate><guid>https://rajp152k.github.io/post/whitelisting-git/</guid><description>&lt;p&gt;A while ago, I had the strong desire to partition some of my professional work logs into mutually exclusive git repositories: with Blacklists and Whitelists flipped.&lt;/p&gt;
 &lt;p&gt;I was aware that the &lt;code&gt;.gitignore&lt;/code&gt; could ignore stuff; today I found out that I can also whitelist stuff via that.&lt;/p&gt;
 &lt;p&gt;checkout &lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;a href="https://stackoverflow.com/questions/9162919/whitelisting-and-subdirectories-in-git"&gt;this stackoverflow question&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So if the first &lt;code&gt;.gitignore&lt;/code&gt; looks like&lt;/p&gt;
@@ -55,7 +56,8 @@ dir-asdf/
 &lt;/ul&gt;
 &lt;p&gt;I definitely do miss reading papers and books on a larger vertically oriented screen but I&amp;rsquo;m going to stick to this for a while.&lt;/p&gt;</description></item><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p&gt;There&amp;rsquo;s this saying :&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;I&amp;rsquo;m going to do that with Go.&lt;/p&gt;
 &lt;p&gt;As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p&gt;</description></item><item><title>A CLI Timer to save your soul</title><link>https://rajp152k.github.io/post/cli-alarms/</link><pubDate>Thu, 26 Sep 2024 11:26:45 +0530</pubDate><guid>https://rajp152k.github.io/post/cli-alarms/</guid><description>&lt;p&gt;This is how I time my workblocks these days&amp;hellip;&lt;/p&gt;
 &lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt;

@@ -2,29 +2,35 @@
 &lt;blockquote&gt;
 &lt;p&gt;been reading more papers&lt;br&gt;
 notes by jargony outlines&lt;br&gt;
-no unnecessary words&lt;/p&gt;&lt;/blockquote&gt;
+no unnecessary words&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;if can express&lt;br&gt;
 few words&lt;br&gt;
 you get it&lt;br&gt;
-get it?&lt;/p&gt;&lt;/blockquote&gt;
+get it?&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;concise, practical&lt;br&gt;
 flowy, comprehensible&lt;br&gt;
-jargon is fun&lt;/p&gt;&lt;/blockquote&gt;
+jargon is fun&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;in org-roam&lt;br&gt;
 links when depth&lt;br&gt;
 more speed&lt;br&gt;
-good&lt;/p&gt;&lt;/blockquote&gt;
+good&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src="https://ik.imagekit.io/rajp152k/rpdev/termite%20lisp/termite.png" alt=""&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;all left&lt;br&gt;
 tech haikus&lt;br&gt;
 challenge&lt;br&gt;
-someday&lt;/p&gt;&lt;/blockquote&gt;
+someday&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;until then&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;until then&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="enjoy-instance-for-this"&gt;&lt;a href="https://github.com/rajp152k/buffer/blob/master/20250416130434-termite_distributed_lisp.org"&gt;Enjoy instance&lt;/a&gt; for &lt;a href="http://www.european-lisp-workshop.org/archives/05.germain.pdf"&gt;this&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>Quick Musings</title><link>https://rajp152k.github.io/post/quickies/</link><pubDate>Mon, 16 Sep 2024 20:24:28 +0530</pubDate><guid>https://rajp152k.github.io/post/quickies/</guid><description>&lt;p&gt;From time to time, I do encounter ideas that intrigue my intellect for quite some time.&lt;br&gt;
 I do maintain the &lt;a href="https://buffer.thebitmage.com"&gt;ideation buffer&lt;/a&gt; to index these ideas into the larger context of my past musings, but I would also like a conveniently accessible chronological search available for cross-domain ideas.&lt;br&gt;
 I&amp;rsquo;ll hence be increasing the frequency of premature technical thoughts being packaged into a micro-blogs.&lt;/p&gt;
@@ -52,7 +58,8 @@ more on technical aspects as well.&lt;/p&gt;
 &lt;p&gt;My usual blog post goes to around 1500-2000 words and that isn&amp;rsquo;t
 helpful for covering some minor writing prompts I&amp;rsquo;d like to explore.&lt;/p&gt;</description></item><item><title>The Most Important Book You'll Ever Read</title><link>https://rajp152k.github.io/post/most-important-book/</link><pubDate>Sun, 01 Oct 2023 04:05:55 +0530</pubDate><guid>https://rajp152k.github.io/post/most-important-book/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;To know thyself, is the beginning of wisdom&lt;br&gt;
-&lt;em&gt;Socrates&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;em&gt;Socrates&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="on-tangibility-of-the-past"&gt;On tangibility of the past&lt;/h2&gt;
 &lt;p&gt;All of us create content, every moment, tuned to varying extents of influence and
 permanence.&lt;/p&gt;
@@ -117,7 +124,8 @@ video) but there&amp;rsquo;s no explicit solution for that yet and I&amp;rsquo;m
 to build one myself with rust and webassembly as a compilation
 target.&lt;/p&gt;</description></item><item><title>Here we go again...</title><link>https://rajp152k.github.io/post/writing-setup/</link><pubDate>Sun, 16 Jul 2023 20:12:55 +0530</pubDate><guid>https://rajp152k.github.io/post/writing-setup/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;If you wish to be a writer, write.&lt;/em&gt;
-&lt;em&gt;Epictetus&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;em&gt;Epictetus&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="a-brief-history"&gt;A Brief History&lt;/h2&gt;
 &lt;p&gt;I took up writing as a hobby in the sophomore year of my bachelors and
 it turned out to be the most definitive step towards bettering my way

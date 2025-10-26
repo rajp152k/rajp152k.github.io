@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go on (bit-mage)</title><link>https://rajp152k.github.io/tags/go/</link><description>Recent content in Go on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 30 Sep 2024 09:38:57 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Stuck on an Island</title><link>https://rajp152k.github.io/post/stuck-island/</link><pubDate>Mon, 30 Sep 2024 09:38:57 +0530</pubDate><guid>https://rajp152k.github.io/post/stuck-island/</guid><description>&lt;p&gt;There&amp;rsquo;s this saying :&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;If you&amp;rsquo;re stuck on an island and have the opportunity to build all of the software landscape again, the programming language you should choose is C. But the first thing you should write is a lisp interpreter.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;I&amp;rsquo;m going to do that with Go.&lt;/p&gt;
 &lt;p&gt;As for the saying, I&amp;rsquo;ve heavily paraphrased (aka butchered) that and don&amp;rsquo;t quite recall the source so do excuse me for that.&lt;/p&gt;</description></item></channel></rss>
