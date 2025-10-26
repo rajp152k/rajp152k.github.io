@@ -5,6 +5,14 @@ title: Now
 A [chronologically descending](https://github.com/rajp152k/buffer/blob/master/Content/20230712132109-timestamps.org) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x245C 
+
+ - thinking about a side-career in algo-raving 
+  - IO reactive ambient music with multiple layers
+  - a core that you operate on 
+  - a more subtle, superficial, slightly noisy (salty) layer that reacts to the computers IO stream
+  - would be cool
+
 ## 0x2426 
 
  - writing this from terminal GCC Doom Emacs in Cool Retro Term with a horizontal sync and a split keyboard
