@@ -67,16 +67,22 @@ theme = "custom"
   pre = "<i class='fa fa-road'></i>"
   url = '/now/'
   weight = -109
+[[menu.main]]
+  identifier = 'scroll'
+  name = 'less'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/scroll/'
+  weight = -108
 # [[menu.main]]
 #   name = 'notes'
 #   pre = "<i class='fa fa-road'></i>"
 #   url = 'https://buffer.thebitmage.com'
 #   weight = -108
-[[menu.main]]
-  name = 'vlogs'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/dd0x/'
-  weight = -105
+#[[menu.main]]
+#  name = 'vlogs'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = '/dd0x/'
+#  weight = -105
 [[menu.main]]
  name = 'work'
  pre = "<i class='fa fa-road'></i>"
