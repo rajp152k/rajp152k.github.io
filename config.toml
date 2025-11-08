@@ -44,7 +44,7 @@ theme = "custom"
   youtube = "@The-Bit-Mage"
   goodreads = "rajp152k"
   twitter = "@rajpatil152k"
-  instagram = "ln2.thebitmage"
+  #instagram = "ln2.thebitmage"
 
 [Params.style.vars]
   highlightColor = "#f7f9f9"
@@ -67,16 +67,22 @@ theme = "custom"
   pre = "<i class='fa fa-road'></i>"
   url = '/now/'
   weight = -109
+[[menu.main]]
+  identifier = 'scroll'
+  name = 'less'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/scroll/'
+  weight = -108
 # [[menu.main]]
 #   name = 'notes'
 #   pre = "<i class='fa fa-road'></i>"
 #   url = 'https://buffer.thebitmage.com'
 #   weight = -108
-[[menu.main]]
-  name = 'vlogs'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/dd0x/'
-  weight = -105
+#[[menu.main]]
+#  name = 'vlogs'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = '/dd0x/'
+#  weight = -105
 # [[menu.main]]
 #  name = 'work'
 #  pre = "<i class='fa fa-road'></i>"
@@ -88,18 +94,18 @@ theme = "custom"
 #   pre = "<i class='fa fa-road'></i>"
 #   url = '/all-posts/'
 #   weight = -104
-[[menu.main]]
-  identifier = 'papershelf'
-  name = 'papershelf'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/papershelf/'
-  weight = -104
-[[menu.main]]
-  identifier = 'docshelf'
-  name = 'docshelf'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/docshelf/'
-  weight = -104
+#[[menu.main]]
+#  identifier = 'papershelf'
+#  name = 'papershelf'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = '/papershelf/'
+#  weight = -104
+#[[menu.main]]
+#  identifier = 'docshelf'
+#  name = 'docshelf'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = '/docshelf/'
+#  weight = -104
 #[[menu.main]]
 #  name = 'I know not..'
 #  pre = "<i class='fa fa-road'></i>"

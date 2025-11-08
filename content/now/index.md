@@ -5,6 +5,16 @@ title: Now
 A [chronologically descending](https://github.com/rajp152k/buffer/blob/master/Content/20230712132109-timestamps.org) log of my "nows" : cause an "about" is
 temporally impractical...  
 
+## 0x2463
+
+ - been using termux more lately
+ - bought two small foldable bluetooth keyboards (they apparently don't sell portable bluetooth split keyboards (some redundancy isn't that bad afterall))
+ - so blogging this from my phone via termux
+ - when need more compute/ need to dispatch longer running tasks, just sshing into a vps
+ - basic self hosting on a vps finally initialized : had been in the pipes for a while now : nginx with some basics for starters
+ - slowly adding more services : spending some time on the self hosting subreddit
+ - post keyboard and termux, the phone feels more powerful : writing out here feels more like the beginning of maintaining a comp-sci pokedex.
+
 ## 0x245C 
 
  - thinking about a side-career in algo-raving 
