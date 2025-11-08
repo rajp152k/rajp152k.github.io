@@ -77,11 +77,11 @@ theme = "custom"
   pre = "<i class='fa fa-road'></i>"
   url = '/dd0x/'
   weight = -105
-[[menu.main]]
- name = 'work'
- pre = "<i class='fa fa-road'></i>"
- url = '/resume/'
- weight = -102
+# [[menu.main]]
+#  name = 'work'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = '/resume/'
+#  weight = -102
 # [[menu.main]]
 #   identifier = 'all posts'
 #   name = 'blogs'
