@@ -12,19 +12,20 @@ This is a reverse chronological listing of my progress rambles (I address them a
 
 | 0X#  | YYYY-MM-DD | link                         |
 |------|------------|------------------------------|
+| 0x1B | 2025-11-09 | https://youtu.be/_Ub_Cv7o4Bg |
 | 0x1A | 2025-09-28 | https://youtu.be/X4WzLyrC4bk |
 | 0x19 | 2025-08-30 | https://youtu.be/mT1gt8G_YTs |
 | 0x18 | 2025-05-31 | https://youtu.be/KPcm1wxPxPY |
 | 0x17 | 2025-05-25 | https://youtu.be/cBIffOV1oLA |
 | 0x16 | 2025-05-10 | https://youtu.be/4EvQVCMpVrA |
 | 0x15 | 2025-04-30 | https://youtu.be/V5CYNWQhrbU |
-| 0x14 | 2025-4-28  | https://youtu.be/RQU-dxDkPtw |
-| 0x13 | 2025-4-26  | https://youtu.be/syeSifLxLuc |
-| 0x12 | 2025-4-13  | https://youtu.be/UQbCJbmPtMU |
-| 0x11 | 2025-4-6   | https://youtu.be/cN8QTwgiqpU |
-| 0x10 | 2025-4-2   | https://youtu.be/D-f2HOag_qU |
-| 0xF  | 2025-3-14  | https://youtu.be/i7OkehNnzuk |
-| 0xE  | 2025-2-02  | https://youtu.be/16w02450P5Y |
+| 0x14 | 2025-04-28 | https://youtu.be/RQU-dxDkPtw |
+| 0x13 | 2025-04-26 | https://youtu.be/syeSifLxLuc |
+| 0x12 | 2025-04-13 | https://youtu.be/UQbCJbmPtMU |
+| 0x11 | 2025-04-6  | https://youtu.be/cN8QTwgiqpU |
+| 0x10 | 2025-04-2  | https://youtu.be/D-f2HOag_qU |
+| 0xF  | 2025-03-14 | https://youtu.be/i7OkehNnzuk |
+| 0xE  | 2025-02-02 | https://youtu.be/16w02450P5Y |
 | 0xD  | 2024-11-06 | https://youtu.be/MeB7jV79rvE |
 | 0xC  | 2024-08-12 | https://youtu.be/ZYma-8rrJms |
 | 0xB  | 2024-07-20 | https://youtu.be/oDGH08DGwmI |
