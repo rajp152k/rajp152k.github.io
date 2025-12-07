@@ -1,15 +1,17 @@
 ---
-title: less
+title: Scroll
 ---
 
-## init
+### [*reverse chronological*](#init)
 
- - two lives  
-    - maximalist (doom emacs, open suse tumbleweed, spilt keyboards, more, loc-lock)  
-    - minimalist (termux, ssh, vps, vi, less, loc-free) (this)  
- - bullets   
- - zero config (almost) cli life  
-    - UNIX philosophy  
-    - spartanish  
-    - EDC : phone, foldable keyboard, small notepad, ball point pen  
-    - immutable reverse chronological streams (as usual)
+---
+
+### init
+
+## [ 0x2486|1765115717 ] 
+
+
+```
+ - scrolls init : towards pseudo-enlightenment
+ - regular logs init
+```

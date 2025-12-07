@@ -4,14 +4,19 @@ toc: false
 sidebar: left
 ---
 
-##### *As of 1st June 2025*
+##### *As of 7 Dec 2025*
 
 ### Raj Patil | raj@cognware.com
 
 ## Experience
 
+### Engineer : [NilEnso](https://nilenso.com/)
+###### *Nov 2025 - Present*
+
+ - deepening my interest for all things comp-sci..
+
 ###  Principal Engineer: ESDS Software Solutions
-###### *March 2024 - Present*
+###### *March 2024 - Nov 2025*
 
  - Promoted into a more involved and expanded role geared towards optimizing their core product offering : [a Data Center Orchestrator](https://www.esds.co.in/enlight360)
  - Researching, designing, and developing cloud computing interfaces across the broader horizontal of Compute, Networking and Storage, along the full vertical of Data Center Orchestration (Hypervisors, DC Operations, Smart Racks, ... ) to Cloud Native operationalization (K8S, OKD, OpenShift ...)

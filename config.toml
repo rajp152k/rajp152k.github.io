@@ -69,7 +69,7 @@ theme = "custom"
   weight = -109
 [[menu.main]]
   identifier = 'scroll'
-  name = 'less'
+  name = 'scroll'
   pre = "<i class='fa fa-road'></i>"
   url = '/scroll/'
   weight = -108
@@ -83,10 +83,10 @@ theme = "custom"
 #  pre = "<i class='fa fa-road'></i>"
 #  url = '/dd0x/'
 #  weight = -105
-# [[menu.main]]
-#  name = 'work'
-#  pre = "<i class='fa fa-road'></i>"
-#  url = '/resume/'
+[[menu.main]]
+ name = 'work'
+ pre = "<i class='fa fa-road'></i>"
+ url = '/resume/'
 #  weight = -102
 # [[menu.main]]
 #   identifier = 'all posts'
