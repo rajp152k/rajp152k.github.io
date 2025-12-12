@@ -6,12 +6,12 @@
  &lt;/div&gt;
 &lt;/h2&gt;
 &lt;p&gt;This video explores a productivity workflow in Emacs that leverages window opacity, moving it beyond a purely aesthetic feature. The creator demonstrates how a translucent Emacs frame can be used as an overlay to view and control background applications, improving efficiency and saving screen real estate.&lt;/p&gt;</description></item><item><title>OSDEV[0x1]: Studying Strategy (for Writing an Operating System)</title><link>https://rajp152k.github.io/post/osdev/0x1/</link><pubDate>Mon, 22 Sep 2025 10:20:05 +0530</pubDate><guid>https://rajp152k.github.io/post/osdev/0x1/</guid><description>&lt;hr&gt;
-&lt;h2 id="hahahugoshortcode86s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode87s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/RVjGAbQKuCk?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
 &lt;p&gt;This video is the second part (0x1) of a series on writing an operating system. The creator, Raj, details the comprehensive studying and logging strategy he has designed to tackle this long-term project. The goal is to create a structured approach that fosters deep understanding, maintains motivation, and effectively manages the vast scope of the endeavor.&lt;/p&gt;</description></item><item><title>OSDev[0x0]: Writing an Operating System</title><link>https://rajp152k.github.io/post/osdev/0x0/</link><pubDate>Mon, 22 Sep 2025 10:15:06 +0530</pubDate><guid>https://rajp152k.github.io/post/osdev/0x0/</guid><description>&lt;hr&gt;
-&lt;h2 id="hahahugoshortcode88s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
+&lt;h2 id="hahahugoshortcode86s0hbhb"&gt;&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
  &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WoMibNj7XYM?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
 &lt;/h2&gt;
@@ -787,13 +787,18 @@ temporally impractical&amp;hellip;&lt;/p&gt;
 injecting some more chaos into my life.&lt;/p&gt;</description></item><item><title>Open Source</title><link>https://rajp152k.github.io/open-source/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/open-source/</guid><description>&lt;p&gt;A &lt;a href="https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747"&gt;reverse chronological index&lt;/a&gt; of any contribution whatsover; Cause
 someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t be improved&amp;rdquo;..&lt;/p&gt;</description></item><item><title>Scroll</title><link>https://rajp152k.github.io/scroll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/scroll/</guid><description>&lt;h3 id="reverse-chronological"&gt;&lt;a href="#init"&gt;&lt;em&gt;reverse chronological&lt;/em&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;hr&gt;
-&lt;h4 id="-0x24871765117069-"&gt;[ 0x2487|1765117069 ]&lt;/h4&gt;
+&lt;h4 id="-0x248b1765510555-"&gt;[ 0x248B|1765510555 ]&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;- increased usage of (zotero, browser, emacs(org, citar, roam)) towards maintaining a corpus of papers
+- infusing more curiousity driven reads 
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="-0x24881765275905-"&gt;[ 0x2488|1765275905 ]&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;- moving from aider to opencode for agentic ops
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="-0x24871765117069-"&gt;[ 0x2487|1765117069 ]&lt;/h4&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;- taskfiles replace makefiles for library of shortcuts
 - aidermacs augmented task collections good mix of control
  and flow
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id="-0x24871765116862-"&gt;[ 0x2487|1765116862 ]&lt;/h4&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt;- used to microblog quite a lot a while ago
-- tech here, neo-philosophy/cognition at cognware
+- tech here neo-philosophy/cognition at cognware
 - emacs buffers open at all times whenever I need
  to capture something
 - monospace verbatim hence what I type (and what I see)
