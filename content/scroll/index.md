@@ -6,6 +6,12 @@ title: Scroll
 
 ---
 
+#### [ 0x248F|1765879029 ] 
+
+```
+- not reading the joy of clojure
+```
+
 #### [ 0x248F|1765867153 ] 
 
 ```
