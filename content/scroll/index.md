@@ -6,6 +6,14 @@ title: Scroll
 
 ---
 
+#### [ 0x248F|1765861531 ] 
+
+```
+- investing in clojure : good industrial span and lisp heritage : moving away from common lisp for a while : along the lines of the video : "lisp, but why." (been a while) : https://www.youtube.com/watch?v=guEbzVuYzPc&t=5s&pp=0gcJCTwKAYcqIYzv
+- Neurosymbolic is one of the more older interests of mine that stands at the hazy intersection of what's very enjoyable for me and somewhat valuable for the world
+- augmenting and parsing my personal knowledge graph is something that I might explore shortly
+```
+
 #### [ 0x248B|1765510555 ] 
 
 ```
