@@ -10,7 +10,7 @@ sidebar: left
 
 ## Experience
 
-### Engineer : [NilEnso](https://nilenso.com/)
+### Engineer : [nilenso](https://nilenso.com/)
 ###### *Nov 2025 - Present*
 
  - deepening my interest for all things comp-sci..

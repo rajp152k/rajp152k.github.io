@@ -9,7 +9,9 @@ title: Scroll
 #### [ 0x248B|1765510555 ] 
 
 ```
-- increased usage of (zotero, browser, emacs(org, citar, roam)) towards maintaining a corpus of papers
+- increased usage of
+  (zotero, browser, emacs(org, citar, roam)) 
+  towards maintaining a corpus of papers
 - infusing more curiousity driven reads 
 ```
 
