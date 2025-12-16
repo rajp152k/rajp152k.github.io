@@ -6,6 +6,13 @@ title: Scroll
 
 ---
 
+#### [ 0x248F|1765867153 ] 
+
+```
+- reading the joy of clojure
+- getting into the scicloj ecosystem
+```
+
 #### [ 0x248F|1765861531 ] 
 
 ```
