@@ -6,6 +6,14 @@ title: Scroll
 
 ---
 
+#### [ 0x2495|1766338272 ] 
+
+```
+- applied NeSy AI : is what I'm going after this season with resolve
+- init indexing and reading papers, study groups and building a corpus
+- excited
+``` 
+
 #### [ 0x248F|1765879029 ] 
 
 ```
