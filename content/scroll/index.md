@@ -6,6 +6,23 @@ title: Scroll
 
 ---
 
+#### [ 0x2495|1766369296 ] 
+
+```
+- moving out to distro-agnostic workflows 
+- all I need is emacs, tmux, and a browser with certain binds
+- then I'm immediately productive post stows
+- considering keyboard native browsers rather than extensions
+- Nyxt has been on my mind for a while now: might give it an actual shot 
+  the next weekend
+- hurdles involve lack of convenience extensions that are easily avaiable 
+  for firefox/chromiums
+- honestly, might just start using eww more and then firefox only when need 
+  arises
+- could also give the perplexity sonar APIs a good shot for usual operations
+- need to meditate upon this
+```
+
 #### [ 0x2495|1766338272 ] 
 
 ```
