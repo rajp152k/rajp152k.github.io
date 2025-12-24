@@ -6,6 +6,28 @@ title: Scroll
 
 ---
 
+
+#### [ 0x2497|1766544851 ] 
+
+```
+- have multiple systems around me working at a time now
+  (three, to be precise)
+  - work on one, cognware on one, bit-mage and misc stuff on one
+  - document all ideas in specific roam and GTD branches
+- cognitively speaking : switching to a different ecosystem 
+  feels better than moving around with my window manager 
+  on the same machine
+- lately thinking of breaking some self-imposed restrictions in terms
+  of my ideation throughput
+```
+
+#### [ 0x2497|1766544781 ] 
+
+```
+- would enjoy repls as my de-facto interfaces for any 
+  tooling/software I consume
+```
+
 #### [ 0x2495|1766369296 ] 
 
 ```
