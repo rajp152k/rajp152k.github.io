@@ -78,11 +78,11 @@ theme = "custom"
 #   pre = "<i class='fa fa-road'></i>"
 #   url = 'https://buffer.thebitmage.com'
 #   weight = -108
-#[[menu.main]]
-#  name = 'vlogs'
-#  pre = "<i class='fa fa-road'></i>"
-#  url = '/dd0x/'
-#  weight = -105
+[[menu.main]]
+  name = 'DD0Xes'
+  pre = "<i class='fa fa-road'></i>"
+  url = '/dd0x/'
+  weight = -105
 [[menu.main]]
  name = 'work'
  pre = "<i class='fa fa-road'></i>"
