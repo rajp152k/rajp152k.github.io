@@ -6,6 +6,12 @@ title: Scroll
 
 ---
 
+#### [ 0x24A1|1767393589 ] 
+```
+- archiving(unlisting) the "now"
+- the scrolls replaces that 
+- check "/now" for past entries
+```
 
 #### [ 0x2497|1766544851 ] 
 

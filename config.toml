@@ -61,12 +61,12 @@ theme = "custom"
   pre = "<i class='fa fa-heart'></i>"
   url = '/about/'
   weight = -110
-[[menu.main]]
-  identifier = 'now'
-  name = 'now'
-  pre = "<i class='fa fa-road'></i>"
-  url = '/now/'
-  weight = -109
+#[[menu.main]]
+#  identifier = 'now'
+#  name = 'now'
+#  pre = "<i class='fa fa-road'></i>"
+#  url = '/now/'
+#  weight = -109
 [[menu.main]]
   identifier = 'scroll'
   name = 'scroll'
