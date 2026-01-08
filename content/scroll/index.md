@@ -9,8 +9,10 @@ title: Scroll
 #### [ 0x24A6|1767859679 ] 
 
 ```
-- set up a self hosted wakapi with wakatime-mode in emacs
+- set up a self hosted wakapi with wakatime-mode in emacs and opencode
 - proceeding to programmatically orchestrate more of my life (finances, coms, health metrics, etc)
+- the setup is fairly minimal as of now : nginx + n8n and wakapi 
+  - slowly building up my appetite for self hosting
 ```
 
 #### [ 0x24A1|1767393589 ] 
