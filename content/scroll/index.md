@@ -6,6 +6,13 @@ title: Scroll
 
 ---
 
+#### [ 0x24A6|1767859679 ] 
+
+```
+- set up a self hosted wakapi with wakatime-mode in emacs
+- proceeding to programmatically orchestrate more of my life (finances, coms, health metrics, etc)
+```
+
 #### [ 0x24A1|1767393589 ] 
 ```
 - archiving(unlisting) the "now"
