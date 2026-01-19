@@ -1,6 +1,6 @@
 <!doctype html><html class=no-js lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><title>Common Lisp - A Gentle Introduction to Symbolic Computation - (bit-mage)</title><script>(function(e,t){e[t]=e[t].replace("no-js","js")})(document.documentElement,"className")</script><meta name=description content><meta property="og:url" content="https://rajp152k.github.io/post/cl-aitsc/"><meta property="og:site_name" content="(bit-mage)"><meta property="og:title" content="Common Lisp - A Gentle Introduction to Symbolic Computation"><meta property="og:description" content="Given I’ve passed through SICP once, quickly grasping common lisp to build stuff and explore the traditional and industrial aspects of lisp (I know clojure exists but traditional…) was my next objective: with decent speed and only solving the somewhat involved exercises, it took me two weeks to complete this book.
-The exercises aren’t meant to be a challenge but to adapt to the environment and the topics introduced. The book does not explore concepts with depth (CLOS, macros, etc…) but that shouldn’t be the objective of an introduction anyway."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2023-08-16T17:51:13+05:30"><meta property="article:modified_time" content="2023-08-16T17:51:13+05:30"><meta property="article:tag" content="Lisp"><meta property="article:tag" content="Common Lisp"><meta property="article:tag" content="Book"><meta property="article:tag" content="Review"><meta itemprop=name content="Common Lisp - A Gentle Introduction to Symbolic Computation"><meta itemprop=description content="Given I’ve passed through SICP once, quickly grasping common lisp to build stuff and explore the traditional and industrial aspects of lisp (I know clojure exists but traditional…) was my next objective: with decent speed and only solving the somewhat involved exercises, it took me two weeks to complete this book.
-The exercises aren’t meant to be a challenge but to adapt to the environment and the topics introduced. The book does not explore concepts with depth (CLOS, macros, etc…) but that shouldn’t be the objective of an introduction anyway."><meta itemprop=datePublished content="2023-08-16T17:51:13+05:30"><meta itemprop=dateModified content="2023-08-16T17:51:13+05:30"><meta itemprop=wordCount content="188"><meta itemprop=keywords content="Lisp,Common Lisp,Book,Review"><meta name=twitter:card content="summary"><meta name=twitter:title content="Common Lisp - A Gentle Introduction to Symbolic Computation"><meta name=twitter:description content="Given I’ve passed through SICP once, quickly grasping common lisp to build stuff and explore the traditional and industrial aspects of lisp (I know clojure exists but traditional…) was my next objective: with decent speed and only solving the somewhat involved exercises, it took me two weeks to complete this book.
+The exercises aren’t meant to be a challenge but to adapt to the environment and the topics introduced. The book does not explore concepts with depth (CLOS, macros, etc…) but that shouldn’t be the objective of an introduction anyway."><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="post"><meta property="article:published_time" content="2023-08-16T17:51:13+05:30"><meta property="article:modified_time" content="2023-08-16T17:51:13+05:30"><meta property="article:tag" content="Lisp"><meta property="article:tag" content="Common-Lisp"><meta property="article:tag" content="Book"><meta property="article:tag" content="Review"><meta itemprop=name content="Common Lisp - A Gentle Introduction to Symbolic Computation"><meta itemprop=description content="Given I’ve passed through SICP once, quickly grasping common lisp to build stuff and explore the traditional and industrial aspects of lisp (I know clojure exists but traditional…) was my next objective: with decent speed and only solving the somewhat involved exercises, it took me two weeks to complete this book.
+The exercises aren’t meant to be a challenge but to adapt to the environment and the topics introduced. The book does not explore concepts with depth (CLOS, macros, etc…) but that shouldn’t be the objective of an introduction anyway."><meta itemprop=datePublished content="2023-08-16T17:51:13+05:30"><meta itemprop=dateModified content="2023-08-16T17:51:13+05:30"><meta itemprop=wordCount content="188"><meta itemprop=keywords content="Lisp,Common-Lisp,Book,Review"><meta name=twitter:card content="summary"><meta name=twitter:title content="Common Lisp - A Gentle Introduction to Symbolic Computation"><meta name=twitter:description content="Given I’ve passed through SICP once, quickly grasping common lisp to build stuff and explore the traditional and industrial aspects of lisp (I know clojure exists but traditional…) was my next objective: with decent speed and only solving the somewhat involved exercises, it took me two weeks to complete this book.
 The exercises aren’t meant to be a challenge but to adapt to the environment and the topics introduced. The book does not explore concepts with depth (CLOS, macros, etc…) but that shouldn’t be the objective of an introduction anyway."><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=dns-prefetch href=//fonts.googleapis.com><link rel=dns-prefetch href=//fonts.gstatic.com><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700"><link rel=stylesheet href=/css/style.css><link rel="shortcut icon" href=/favicon.ico><script>(function(e,t,n,s,o){e.Sender=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date;var i=t.createElement(n),a=t.getElementsByTagName(n)[0];i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://cdn.sender.net/accounts_resources/universal.js","sender"),sender("17d1fe83579561")</script><script type=text/javascript>(function(e,t,n,s,o,i,a){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},i=t.createElement(s),i.async=1,i.src="https://www.clarity.ms/tag/"+o,a=t.getElementsByTagName(s)[0],a.parentNode.insertBefore(i,a)})(window,document,"clarity","script","idey8dw0cf")</script><link rel=icon href=false type=image/x-icon><script defer src=https://cloud.umami.is/script.js data-website-id=96d588b9-d7c5-48a7-b3db-94fe392c06c9></script></head><body class=body><div class="container container--outer"><header class=header><div class="container header__container"><div class="logo logo--mixed"><a class=logo__link href=/ title=(Bit-Mage) rel=home><div class="logo__item logo__imagebox"><img class=logo__img src=https://ik.imagekit.io/rajp152k/branding/Bit-Mage.png></div><div class="logo__item logo__text"><div class=logo__title>(Bit-Mage)</div><div class=logo__tagline>(apply #'eval `((sudo ,explore ,exploit)))</div></div></a></div><nav class=menu><button class=menu__btn aria-haspopup=true aria-expanded=false tabindex=0>
 <span class=menu__btn-title tabindex=-1>Menu</span></button><ul class=menu__list><li class=menu__item><a class=menu__link href=/about/><i class='fa fa-heart'></i>
 <span class=menu__text>about</span></a></li><li class=menu__item><a class=menu__link href=/scroll/><i class='fa fa-road'></i>
@@ -76,7 +76,7 @@ technical details.</p><p>A free distribution released in the public domain can b
 <a class="widget-taglist__link widget__link btn" href=/tags/cognition/ title=Cognition>Cognition (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/cognitive-dissonance/ title=Cognitive-Dissonance>Cognitive-Dissonance (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/collaboration/ title=Collaboration>Collaboration (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/common-lisp/ title="Common Lisp">Common Lisp (3)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/common-lisp/ title=Common-Lisp>Common-Lisp (3)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/competence/ title=Competence>Competence (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/complexity/ title=Complexity>Complexity (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/composition/ title=Composition>Composition (1)</a>
@@ -143,7 +143,7 @@ technical details.</p><p>A free distribution released in the public domain can b
 <a class="widget-taglist__link widget__link btn" href=/tags/general.el/ title=General.el>General.el (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/git/ title=Git>Git (3)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/github-actions/ title=Github-Actions>Github-Actions (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/gnu/ title=Gnu>Gnu (2)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/gnu/ title=GNU>GNU (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/go/ title=Go>Go (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/gpu/ title=Gpu>Gpu (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/graph/ title=Graph>Graph (1)</a>
@@ -195,7 +195,7 @@ technical details.</p><p>A free distribution released in the public domain can b
 <a class="widget-taglist__link widget__link btn" href=/tags/lenovo/ title=Lenovo>Lenovo (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/linguistics/ title=Linguistics>Linguistics (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/linux/ title=Linux>Linux (7)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/lisp/ title=Lisp>Lisp (14)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/lisp/ title=Lisp>Lisp (15)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/lisp-machines/ title="Lisp Machines">Lisp Machines (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/lists/ title=Lists>Lists (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/llm/ title=Llm>Llm (3)</a>
@@ -215,6 +215,7 @@ technical details.</p><p>A free distribution released in the public domain can b
 <a class="widget-taglist__link widget__link btn" href=/tags/maturity/ title=Maturity>Maturity (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/meditation/ title=Meditation>Meditation (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/memories/ title=Memories>Memories (1)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/microessay/ title=Microessay>Microessay (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/microessays/ title=Microessays>Microessays (26)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/miniforge/ title=Miniforge>Miniforge (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/missile/ title=Missile>Missile (1)</a>
@@ -271,6 +272,7 @@ technical details.</p><p>A free distribution released in the public domain can b
 <a class="widget-taglist__link widget__link btn" href=/tags/plan9/ title=Plan9>Plan9 (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/play/ title=Play>Play (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/poetry/ title=Poetry>Poetry (3)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/pokemon/ title=Pokemon>Pokemon (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/polyglot/ title=Polyglot>Polyglot (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/polymathy/ title=Polymathy>Polymathy (6)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/practice/ title=Practice>Practice (1)</a>
@@ -405,10 +407,34 @@ technical details.</p><p>A free distribution released in the public domain can b
 		</h2>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-01-17T17:47:30&#43;05:30">January 17, 2026</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-01-19T17:56:53&#43;05:30">January 19, 2026</time></div></div>
 	</header>
 </article>
-`,content:"",url:"https://rajp152k.github.io/post/"},"https://rajp152k.github.io/post/this-is-work-now/":{title:"This Is Work Now",tags:["lisp","clojure","work"],meta:`<article class="list__item post">
+`,content:"",url:"https://rajp152k.github.io/post/"},"https://rajp152k.github.io/post/theres-a-lisp-for-that/":{title:"there's a lisp for that",tags:["lisp","microessay","pokemon"],meta:`<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/theres-a-lisp-for-that/" rel="bookmark">
+			there&#39;s a lisp for that
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-01-19T17:56:53&#43;05:30">January 19, 2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/lisp/" rel="category">Lisp</a>
+	</span>
+</div></div>
+	</header>
+</article>
+`,content:`&ldquo;For years, I&rsquo;ve defended lisp in pragmatism oriented SWE back and forths with &rsquo;they&rsquo;re all an AST underneath, anyway..&rdquo;
+Now that I&rsquo;m writing lisp on the job, I&rsquo;m in a &ldquo;gotta catch&rsquo;em all&rdquo; kinda mood and thinking of elaborating upon the eccentricities in my upcoming blogs and videos.
+There&rsquo;s a lot of questions I have:
+- when do you deploy which one?
+- are there any bad ones?
+- why does that one exist?
+- ..
+chasing that enlightenment : going all in on the lisp build in when it comes to my SWE career for a while ..
+so far, it&rsquo;s been Hy, Racket, Common Lisp, and now Clojure : need to start getting into the distinctions rather than just the common abstractions (already been doing that for a while) that make a lisp a lisp : would help me better answer the cause of their exististence ig ..
+`,url:"https://rajp152k.github.io/post/theres-a-lisp-for-that/"},"https://rajp152k.github.io/post/this-is-work-now/":{title:"This Is Work Now",tags:["lisp","clojure","work"],meta:`<article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
