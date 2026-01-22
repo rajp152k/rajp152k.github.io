@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microessay on (bit-mage)</title><link>https://rajp152k.github.io/tags/microessay/</link><description>Recent content in Microessay on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 19 Jan 2026 17:56:53 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/microessay/index.xml" rel="self" type="application/rss+xml"/><item><title>there's a lisp for that</title><link>https://rajp152k.github.io/post/theres-a-lisp-for-that/</link><pubDate>Mon, 19 Jan 2026 17:56:53 +0530</pubDate><guid>https://rajp152k.github.io/post/theres-a-lisp-for-that/</guid><description>&lt;p&gt;&amp;ldquo;For years, I&amp;rsquo;ve defended lisp in pragmatism oriented SWE back and forths with &amp;rsquo;they&amp;rsquo;re all an AST underneath, anyway..&amp;rdquo;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microessay on (bit-mage)</title><link>https://rajp152k.github.io/tags/microessay/</link><description>Recent content in Microessay on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 22 Jan 2026 11:06:53 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/tags/microessay/index.xml" rel="self" type="application/rss+xml"/><item><title>Staples</title><link>https://rajp152k.github.io/post/staple/</link><pubDate>Thu, 22 Jan 2026 11:06:53 +0530</pubDate><guid>https://rajp152k.github.io/post/staple/</guid><description>&lt;ul&gt;
+&lt;li&gt;Have converged onto a DE agnostic workflow.&lt;/li&gt;
+&lt;li&gt;need only a few keybinds to help me move across windows and monitors.&lt;/li&gt;
+&lt;li&gt;window estate management is done via emacs and tmux : don&amp;rsquo;t really need a tiling wm.&lt;/li&gt;
+&lt;li&gt;opencode when I&amp;rsquo;m not learning anything and mostly know what needs to be done.
+&lt;ul&gt;
+&lt;li&gt;open a bunch of these in multiple tmux panes and you&amp;rsquo;re good.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;a vim-keybinds enabled browser&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>there's a lisp for that</title><link>https://rajp152k.github.io/post/theres-a-lisp-for-that/</link><pubDate>Mon, 19 Jan 2026 17:56:53 +0530</pubDate><guid>https://rajp152k.github.io/post/theres-a-lisp-for-that/</guid><description>&lt;p&gt;&amp;ldquo;For years, I&amp;rsquo;ve defended lisp in pragmatism oriented SWE back and forths with &amp;rsquo;they&amp;rsquo;re all an AST underneath, anyway..&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Now that I&amp;rsquo;m writing lisp on the job, I&amp;rsquo;m in a &amp;ldquo;gotta catch&amp;rsquo;em all&amp;rdquo; kinda mood and thinking of elaborating upon the eccentricities in my upcoming blogs and videos.&lt;/p&gt;
 &lt;p&gt;There&amp;rsquo;s a lot of questions I have:&lt;br&gt;
 - when do you deploy which one?&lt;br&gt;

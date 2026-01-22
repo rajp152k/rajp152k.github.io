@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tooling on (bit-mage)</title><link>https://rajp152k.github.io/categories/tooling/</link><description>Recent content in Tooling on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Jun 2025 11:03:25 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/categories/tooling/index.xml" rel="self" type="application/rss+xml"/><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p&gt;I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tooling on (bit-mage)</title><link>https://rajp152k.github.io/categories/tooling/</link><description>Recent content in Tooling on (bit-mage)</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 22 Jan 2026 11:06:53 +0530</lastBuildDate><atom:link href="https://rajp152k.github.io/categories/tooling/index.xml" rel="self" type="application/rss+xml"/><item><title>Staples</title><link>https://rajp152k.github.io/post/staple/</link><pubDate>Thu, 22 Jan 2026 11:06:53 +0530</pubDate><guid>https://rajp152k.github.io/post/staple/</guid><description>&lt;ul&gt;
+&lt;li&gt;Have converged onto a DE agnostic workflow.&lt;/li&gt;
+&lt;li&gt;need only a few keybinds to help me move across windows and monitors.&lt;/li&gt;
+&lt;li&gt;window estate management is done via emacs and tmux : don&amp;rsquo;t really need a tiling wm.&lt;/li&gt;
+&lt;li&gt;opencode when I&amp;rsquo;m not learning anything and mostly know what needs to be done.
+&lt;ul&gt;
+&lt;li&gt;open a bunch of these in multiple tmux panes and you&amp;rsquo;re good.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;a vim-keybinds enabled browser&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>The Un-Unified Heterogenous Irk</title><link>https://rajp152k.github.io/post/interfaces/</link><pubDate>Mon, 09 Jun 2025 11:03:25 +0530</pubDate><guid>https://rajp152k.github.io/post/interfaces/</guid><description>&lt;p&gt;I&amp;rsquo;ve lately been thinking deeply about how I interact with my computing environments; when working, I&amp;rsquo;ve a&lt;br&gt;
 - an unrooted snapdragon ARM Android with Termux and Tmux for ephemeral vimmin &amp;amp; sshing around when on the move&lt;br&gt;
 - an Intel x86 FreeBSD home lab for some asynchronous compute that I don&amp;rsquo;t need right away and some redundancy for my important files&lt;br&gt;
 - a personal ubuntu VPS with a couple of intel x86 vCPUs for my self hosting endeavours and overall context orchestration&lt;br&gt;
