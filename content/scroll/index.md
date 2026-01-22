@@ -2,9 +2,19 @@
 title: Scroll
 ---
 
+
 ### [*reverse chronological*](#init)
 
 ---
+
+#### [ 0x24B4|1769062501 ] 
+
+```
+- lix with nix-darwin over the weekend
+- aidermacs watch mode good : actually pair programming 
+- bitmage color spec all around (tmux, emacs, opencode)
+  - really easy on the eyes
+```
 
 #### [ 0x24A6|1767859679 ] 
 
