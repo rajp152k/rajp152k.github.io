@@ -7,6 +7,29 @@ title: Scroll
 
 ---
 
+#### [ 0x24BB|1769657389 ] 
+
+```
+- investing some time bringing the bit-mage-theme upto speed
+- included font faces for repl-driven dev (cider, eval-sexp-fu)
+  for clojure and elisp
+- limiting my deep work blocks to only one thing for certain durations
+  - will actively decrease the seriousness/intensity for activities 
+    other than that one thing
+  - I usually do 2-3 at once but this time, hammering down 
+  - trying out focus feels like : I'm big on polymathy but have considered 
+    serious focus for longer work bouts (months/semi-annual) instead of the usual
+    balancing act I've been maintaining for a while
+    - both are different difficults of their own kind with their own kind of stressors
+    - also different benefits and results 
+    - been doing the juggling act for a while (~3 years)
+    - planning on the focused exec model for the next 3
+    - the instantaneous distribution(normalized scalar field) of intensity/attention allocation
+      is going to be more skewed henceforth over the hyperspace of domains henceforth.
+    - will have to stick through this decision (and the associated boredom) to see through the 
+      benefits
+``` 
+
 #### [ 0x24B4|1769062501 ] 
 
 ```
