@@ -10,18 +10,18 @@ I use emacs for a lot of my daily tasks and spend majority of my time in it. Thi
 <span class=menu__text>scroll</span></a></li><li class=menu__item><a class=menu__link href=/dd0x/><i class='fa fa-road'></i>
 <span class=menu__text>DD0Xes</span></a></li><li class=menu__item><a class=menu__link href=/resume/><i class='fa fa-road'></i>
 <span class=menu__text>work</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>My Emacs Configuration</h1><div class="post__meta meta"><div class="meta__item-datetime meta__item"><svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class=meta__text datetime=2023-08-17T11:23:10+05:30>August 17, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class=meta__text><a class=meta__link href=/categories/configs/ rel=category>Configs</a></span></div></div></header><div class="content post__content clearfix"><p><strong>[<em>As of 0x213B : 2023-08-17 Thu</em>]</strong></p><p>I use emacs for a lot of my daily tasks and spend majority of my time
-in it. This is a review of some significant components of my init.el</p><hr><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;keyboard all the way</span>
+in it. This is a review of some significant components of my init.el</p><hr><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;keyboard all the way</span>
 </span></span><span style=display:flex><span>(menu-bar-mode <span style=color:#ae81ff>-1</span>)
 </span></span><span style=display:flex><span>(tool-bar-mode <span style=color:#ae81ff>-1</span>)
 </span></span><span style=display:flex><span>(scroll-bar-mode <span style=color:#ae81ff>-1</span>)
-</span></span></code></pre></div><hr><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;I don&#39;t like distractions</span>
+</span></span></code></pre></div><hr><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;I don&#39;t like distractions</span>
 </span></span><span style=display:flex><span>(setq byte-compile-warnings <span style=color:#f92672>&#39;</span>(cl-functions))
 </span></span><span style=display:flex><span>(setq ring-bell-function <span style=color:#e6db74>&#39;ignore</span>)
 </span></span><span style=display:flex><span>(setq visible-bell <span style=color:#66d9ef>t</span>)
 </span></span></code></pre></div><hr><p>I chose the most recently engineered package-management solution when I began with emacs, haven&rsquo;t switched
 since and don&rsquo;t think I&rsquo;ll need to. Migrating from vim, I preferred a
 configuration file rather than installations via melpa interface.
-Also, freezing and thawing is cool : exact reproducibility is guaranteed.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;;BOOTSTRAPPING STRAIGHT.EL (defvar bootstrap-version)</span>
+Also, freezing and thawing is cool : exact reproducibility is guaranteed.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;;BOOTSTRAPPING STRAIGHT.EL (defvar bootstrap-version)</span>
 </span></span><span style=display:flex><span>(let ((bootstrap-file
 </span></span><span style=display:flex><span>       (<span style=color:#a6e22e>expand-file-name</span> <span style=color:#e6db74>&#34;straight/repos/straight.el/bootstrap.el&#34;</span> user-emacs-directory))
 </span></span><span style=display:flex><span>      (bootstrap-version <span style=color:#ae81ff>5</span>))
@@ -38,7 +38,7 @@ Also, freezing and thawing is cool : exact reproducibility is guaranteed.</p><di
 </span></span><span style=display:flex><span>(setq straight-path <span style=color:#e6db74>&#34;~/.emacs.d/straight/&#34;</span>)
 </span></span></code></pre></div><hr><p>Again, I chose the most well-thought out packages when I began two
 years ago: I don&rsquo;t particularly know the ins and outs of <code>general</code>
-but I do know it can do what I wish for elegantly and the proper way</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;GENERAL + binding free ups</span>
+but I do know it can do what I wish for elegantly and the proper way</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;GENERAL + binding free ups</span>
 </span></span><span style=display:flex><span>(use-package general
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>  :config
@@ -49,7 +49,7 @@ but I do know it can do what I wish for elegantly and the proper way</p><div cla
 </span></span><span style=display:flex><span>	))
 </span></span></code></pre></div><hr><p>I like being greeted by cultish messages and calls to freedom when I
 get to work. Also serves as an index for the most recently and the
-most frequently accessed files.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;DASHBOARD</span>
+most frequently accessed files.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;DASHBOARD</span>
 </span></span><span style=display:flex><span>(use-package dashboard
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>  :config
@@ -62,7 +62,7 @@ most frequently accessed files.</p><div class=highlight><pre tabindex=0 style=co
 </span></span><span style=display:flex><span>   dashboard-startup-banner <span style=color:#e6db74>&#39;logo</span>))
 </span></span></code></pre></div><hr><p>I wouldn&rsquo;t be using emacs if not for this. Modal editing is a must and
 not using vi keybindings once you&rsquo;re used to them is an extremely questionable
-way to go about your life.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;EVIL ENV</span>
+way to go about your life.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;EVIL ENV</span>
 </span></span><span style=display:flex><span>(use-package evil
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>  :init
@@ -100,7 +100,7 @@ way to go about your life.</p><div class=highlight><pre tabindex=0 style=color:#
 </span></span><span style=display:flex><span>  :config
 </span></span><span style=display:flex><span>  (global-evil-surround-mode <span style=color:#ae81ff>1</span>))
 </span></span></code></pre></div><hr><p>Supercharges any lookup and makes any basic operation much more user
-friendly.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;HELM</span>
+friendly.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;HELM</span>
 </span></span><span style=display:flex><span>(use-package helm
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>  :config
@@ -111,7 +111,7 @@ friendly.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background
 </span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;C-x C-f&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-find-files)
 </span></span><span style=display:flex><span>  (helm-mode <span style=color:#ae81ff>1</span>))
 </span></span></code></pre></div><hr><p>Ack&rsquo;ing large directories and getting referenced instances of all
-occurences of a pattern in a matter of seconds is not bad.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;PROJECTILE</span>
+occurences of a pattern in a matter of seconds is not bad.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;PROJECTILE</span>
 </span></span><span style=display:flex><span>(use-package projectile
 </span></span><span style=display:flex><span>  :init
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
@@ -126,7 +126,7 @@ occurences of a pattern in a matter of seconds is not bad.</p><div class=highlig
 </span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;f d&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-projectile-find-dir
 </span></span><span style=display:flex><span>     <span style=color:#e6db74>&#34;a&#34;</span> <span style=color:#a6e22e>#&#39;</span>helm-projectile-ack)))
 </span></span></code></pre></div><hr><p>There&rsquo;s an adage going around since I don&rsquo;t know when: This is the
-last file manager you&rsquo;ll ever need.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;FILE MANAGEMENT : DIRED-X</span>
+last file manager you&rsquo;ll ever need.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;FILE MANAGEMENT : DIRED-X</span>
 </span></span><span style=display:flex><span>(setq find-file-visit-truename <span style=color:#66d9ef>t</span>)
 </span></span><span style=display:flex><span>(general-add-hook <span style=color:#e6db74>&#39;dired-load-hook</span>
 </span></span><span style=display:flex><span>		  (<span style=color:#a6e22e>list</span> (lambda ()
@@ -135,7 +135,7 @@ last file manager you&rsquo;ll ever need.</p><div class=highlight><pre tabindex=
 </span></span><span style=display:flex><span>			  <span style=color:#75715e>;; (setq dired-guess-shell-gnutar &#34;gtar&#34;)</span>
 </span></span><span style=display:flex><span>			  <span style=color:#75715e>;; (setq dired-x-hands-off-my-keys nil)</span>
 </span></span><span style=display:flex><span>			  )))
-</span></span></code></pre></div><hr><p>Guilty as charged : my emacs isn&rsquo;t vanilla&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;AESTHETICS</span>
+</span></span></code></pre></div><hr><p>Guilty as charged : my emacs isn&rsquo;t vanilla&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;AESTHETICS</span>
 </span></span><span style=display:flex><span>(use-package darkroom <span style=color:#75715e>;; when reading/writing </span>
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>)
 </span></span><span style=display:flex><span>(use-package nimbus-theme <span style=color:#75715e>;; a healthy mix all the shades you need to</span>
@@ -156,7 +156,7 @@ last file manager you&rsquo;ll ever need.</p><div class=highlight><pre tabindex=
 </span></span><span style=display:flex><span>  :config
 </span></span><span style=display:flex><span>  (beacon-mode <span style=color:#ae81ff>1</span>))
 </span></span></code></pre></div><hr><p>Hot-reloads and some buffer space to mess around with new
-components I&rsquo;m testing out.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;QUICK CONFIG</span>
+components I&rsquo;m testing out.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;QUICK CONFIG</span>
 </span></span><span style=display:flex><span>(defun edit-init ()
 </span></span><span style=display:flex><span>  (interactive)
 </span></span><span style=display:flex><span>  (<span style=color:#a6e22e>message</span> (<span style=color:#a6e22e>concat</span> <span style=color:#e6db74>&#34;editing user-init-file @ &#34;</span> user-init-file))
@@ -172,7 +172,7 @@ components I&rsquo;m testing out.</p><div class=highlight><pre tabindex=0 style=
 </span></span><span style=display:flex><span> <span style=color:#e6db74>&#34;e&#34;</span> <span style=color:#a6e22e>#&#39;</span>edit-init
 </span></span><span style=display:flex><span> <span style=color:#e6db74>&#34;s&#34;</span> <span style=color:#a6e22e>#&#39;</span>open-scratch-space)
 </span></span></code></pre></div><hr><p>This makes organizing multiple workspaces and panes easy and you&rsquo;re
-missing out on a lot if you don&rsquo;t have sensible tab-management figured out.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;Window management</span>
+missing out on a lot if you don&rsquo;t have sensible tab-management figured out.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;Window management</span>
 </span></span><span style=display:flex><span>(use-package window-purpose
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>  :config
@@ -187,14 +187,14 @@ missing out on a lot if you don&rsquo;t have sensible tab-management figured out
 </span></span><span style=display:flex><span>	   (interactive)
 </span></span><span style=display:flex><span>	   (<span style=color:#a6e22e>message</span> <span style=color:#e6db74>&#34;undedicating current window&#34;</span>)
 </span></span><span style=display:flex><span>	   (<span style=color:#a6e22e>set-window-dedicated-p</span> (<span style=color:#a6e22e>selected-window</span>) <span style=color:#66d9ef>nil</span>))))
-</span></span></code></pre></div><hr><p>The self-documenting editor in action&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;WHICH-KEY</span>
+</span></span></code></pre></div><hr><p>The self-documenting editor in action&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;WHICH-KEY</span>
 </span></span><span style=display:flex><span>(use-package which-key
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>  :config
 </span></span><span style=display:flex><span>  (which-key-mode)
 </span></span><span style=display:flex><span>  (general-define-key <span style=color:#e6db74>&#34;C-h C-k&#34;</span> <span style=color:#a6e22e>#&#39;</span>which-key-show-top-level)
 </span></span><span style=display:flex><span>  (which-key-setup-side-window-bottom))
-</span></span></code></pre></div><hr><p>I prefer reading technical texts right within emacs besides my notes..</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;PDF INTEROP</span>
+</span></span></code></pre></div><hr><p>I prefer reading technical texts right within emacs besides my notes..</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;PDF INTEROP</span>
 </span></span><span style=display:flex><span>(use-package pdf-tools
 </span></span><span style=display:flex><span>  :straight (pdf-tools :host github
 </span></span><span style=display:flex><span>		       :repo <span style=color:#e6db74>&#34;vedang/pdf-tools&#34;</span>)
@@ -204,7 +204,7 @@ missing out on a lot if you don&rsquo;t have sensible tab-management figured out
 interface for basic stuff but I can vouch for the unparalleled
 experience it provides in terms of executing even the most complicated
 operations with a few chords and strokes. Now that&rsquo;s Magit.</p><p>If you like the the interface in itself and would like to implement a
-similar functionality for your extensions, checkout <a href=https://github.com/magit/transient>Transient</a> or <a href=https://github.com/abo-abo/hydra>Hydra</a></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;MAGIT</span>
+similar functionality for your extensions, checkout <a href=https://github.com/magit/transient>Transient</a> or <a href=https://github.com/abo-abo/hydra>Hydra</a></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;MAGIT</span>
 </span></span><span style=display:flex><span>(use-package magit :straight <span style=color:#66d9ef>t</span>)
 </span></span></code></pre></div><hr><p>Well, enough can&rsquo;t be said about this. All of it can be
 <a href=https://orgmode.org/>documented</a> though&mldr;&mldr;..,
@@ -214,7 +214,7 @@ and I personally am not aware of exactly what breaks what stuff..).</p><p>The ta
 tad too much and many programmers - along with me - will be judging
 you hard for that.</p><p>Org is an ecosystem in itself and I&rsquo;m not including my capture
 templates, tree manipulators, and babel bindings in here to keep
-things concise&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;ORG-OPS</span>
+things concise&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;ORG-OPS</span>
 </span></span><span style=display:flex><span>(<span style=color:#a6e22e>put</span> <span style=color:#e6db74>&#39;narrow-to-region</span> <span style=color:#e6db74>&#39;disabled</span> <span style=color:#66d9ef>nil</span>)
 </span></span><span style=display:flex><span>(use-package org
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
@@ -250,7 +250,7 @@ things concise&mldr;</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2
 </span></span></code></pre></div><hr><p>I&rsquo;ve used notion, obsidian, vimwiki, evernote, and anything that was
 available before I settled on org-roam (well .., roam research was
 paid and I could afford to spend time and effort when I was an
-undergrad, but not a subscription).</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;ORG-ROAM</span>
+undergrad, but not a subscription).</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;ORG-ROAM</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>  (use-package org-roam
 </span></span><span style=display:flex><span>    :straight (org-roam :host github
@@ -301,12 +301,12 @@ undergrad, but not a subscription).</p><div class=highlight><pre tabindex=0 styl
 </span></span><span style=display:flex><span>	  org-roam-ui-follow <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>	  org-roam-ui-update-on-save <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>	  org-roam-ui-open-on-start <span style=color:#66d9ef>t</span>))
-</span></span></code></pre></div><hr><p>You definitely need this.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;YAML</span>
+</span></span></code></pre></div><hr><p>You definitely need this.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;YAML</span>
 </span></span><span style=display:flex><span>(use-package yaml-mode
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>  :config
 </span></span><span style=display:flex><span>  (add-to-list <span style=color:#e6db74>&#39;auto-mode-alist</span> <span style=color:#f92672>&#39;</span>(<span style=color:#e6db74>&#34;\\.yml\\&#39;&#34;</span> <span style=color:#f92672>.</span> yaml-mode)))
-</span></span></code></pre></div><hr><p>Life is too short to not try a lisp</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;LISP ADD ONS</span>
+</span></span></code></pre></div><hr><p>Life is too short to not try a lisp</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;LISP ADD ONS</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>(use-package smartparens
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
@@ -339,7 +339,7 @@ undergrad, but not a subscription).</p><div class=highlight><pre tabindex=0 styl
 </span></span><span style=display:flex><span>(general-add-hook <span style=color:#e6db74>&#39;emacs-lisp-mode-hook</span>
 </span></span><span style=display:flex><span>		  (<span style=color:#a6e22e>list</span> <span style=color:#e6db74>&#39;smartparens-mode</span> <span style=color:#75715e>;;use (kbd `C-q &#39;`) for single quoting</span>
 </span></span><span style=display:flex><span>			<span style=color:#e6db74>&#39;rainbow-delimiters-mode</span>))
-</span></span></code></pre></div><hr><p>We all have our moments of self-doubt. Independence is a fabricated notion.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;DICTIONARY</span>
+</span></span></code></pre></div><hr><p>We all have our moments of self-doubt. Independence is a fabricated notion.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;DICTIONARY</span>
 </span></span><span style=display:flex><span>(use-package define-word
 </span></span><span style=display:flex><span>  :straight <span style=color:#66d9ef>t</span>
 </span></span><span style=display:flex><span>  :config
@@ -347,7 +347,7 @@ undergrad, but not a subscription).</p><div class=highlight><pre tabindex=0 styl
 </span></span><span style=display:flex><span>   :prefix <span style=color:#e6db74>&#34;C-c&#34;</span>
 </span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;d&#34;</span> <span style=color:#a6e22e>#&#39;</span>define-word-at-point
 </span></span><span style=display:flex><span>   <span style=color:#e6db74>&#34;D&#34;</span> <span style=color:#a6e22e>#&#39;</span>define-word))
-</span></span></code></pre></div><hr><p>You should blog too.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;BLOG</span>
+</span></span></code></pre></div><hr><p>You should blog too.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-elisp data-lang=elisp><span style=display:flex><span><span style=color:#75715e>;BLOG</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>  (use-package easy-hugo
 </span></span><span style=display:flex><span>    :straight <span style=color:#66d9ef>t</span>
@@ -431,7 +431,7 @@ discovered it&mldr;</p></div><footer class=post__footer><div class="post__tags t
 <a class="widget-taglist__link widget__link btn" href=/tags/boredom/ title=Boredom>Boredom (3)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/brain/ title=Brain>Brain (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/browser/ title=Browser>Browser (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/bsd/ title=Bsd>Bsd (2)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/bsd/ title=BSD>BSD (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/c/ title=C>C (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/calculus/ title=Calculus>Calculus (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/calendar/ title=Calendar>Calendar (1)</a>
@@ -516,7 +516,7 @@ discovered it&mldr;</p></div><footer class=post__footer><div class="post__tags t
 <a class="widget-taglist__link widget__link btn" href=/tags/general.el/ title=General.el>General.el (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/git/ title=Git>Git (3)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/github-actions/ title=Github-Actions>Github-Actions (1)</a>
-<a class="widget-taglist__link widget__link btn" href=/tags/gnu/ title=Gnu>Gnu (2)</a>
+<a class="widget-taglist__link widget__link btn" href=/tags/gnu/ title=GNU>GNU (2)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/go/ title=Go>Go (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/gpu/ title=Gpu>Gpu (1)</a>
 <a class="widget-taglist__link widget__link btn" href=/tags/graph/ title=Graph>Graph (1)</a>
