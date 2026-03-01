@@ -41,5 +41,3 @@ This is a reverse chronological listing of my progress rambles (I address them a
 | 0x2  | 2023-11-02 | https://youtu.be/_4aIqyzp9io |
 | 0x1  | 2023-10-24 | https://youtu.be/Jhsxds1TMv4 |
 | 0x0  | 2023-10-24 | https://youtu.be/3lPTciwgXgk |
-
-

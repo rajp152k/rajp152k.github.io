@@ -7,6 +7,26 @@ title: Scroll
 
 ---
 
+#### [ 0x24DA|1772367322 ] 
+
+```
+- reading "distributed computing: for fun and profit"
+    - open source book
+- entering an era of text books 
+- reviving the speed reading blocks that I used to force a while ago
+- this time for technical texts 
+- been off yt, vid essays and blogging for a while
+    - building momentum again with micro-essays, notions and thoughts 
+- working cyclically again: relax intensely for latter half of Friday,
+  and a Saturday; start ramping up on Sunday morning, sustain high intensity
+  until Friday and force a deliberate crash (used to induce burnouts a while ago
+  (fun times (simulating high stress situations is a thing that makes normal life 
+  seem easy))) : fake deadlines, biting off more than you could chew, over promising 
+  and falling a little short has been accelerating the convergence to the kind of work
+  ethic I plan on sustain for the following phase of life
+- time to be delusional again
+```
+
 #### [ 0x24BB|1769657389 ] 
 
 ```
