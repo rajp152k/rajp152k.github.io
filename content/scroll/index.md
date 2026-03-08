@@ -7,6 +7,24 @@ title: Scroll
 
 ---
 
+#### [ 0x24E2|1772982396 ] 
+
+```
+- pragmatic opacity w/ emacs idea (https://www.youtube.com/watch?v=nimOCOiBXsA&pp=0gcJCa4KAYcqIYzv) 
+    - working quite well : roam, firefox, any other appliation in the background with preset settings:
+    - mnemonic conveniences :
+(... 
+    "m o l l" (generate-bindable-lambda
+                (doom/set-frame-opacity 20 (list (selected-frame))))
+    "m o l m" (generate-bindable-lambda
+                (doom/set-frame-opacity 50 (list (selected-frame))))
+    "m o h m" (generate-bindable-lambda
+                (doom/set-frame-opacity 80 (list (selected-frame))))
+    "m o h h" (generate-bindable-lambda
+                (doom/set-frame-opacity 95 (list (selected-frame))))
+            ...)
+```
+
 #### [ 0x24DA|1772367322 ] 
 
 ```
