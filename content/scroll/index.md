@@ -7,6 +7,16 @@ title: Scroll
 
 ---
 
+#### [ 0x24FC|1775226140 ] 
+
+```
+ - editor code assistant : the lsp-fication of agent interfaces
+  - around the idea that diffs across models aren't as important as the UX of it all 
+ - using eca-emacs and very natural and smooth so for : found a new local optimum for a while
+ - terminal native agents (opencode, cc, pi) were functional but didn't feel right
+ - the last best thing I found right was aidermacs : 
+```
+
 #### [ 0x24E2|1772982396 ] 
 
 ```
