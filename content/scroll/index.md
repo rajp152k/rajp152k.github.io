@@ -17,6 +17,13 @@ title: Scroll
  - the last best thing I found right was aidermacs : 
 ```
 
+#### [ 0x24F3|1774446653 ]
+
+```
+ - homelab hq on debian zellij + pi + vi
+ - the CLI feels like home
+```
+
 #### [ 0x24E2|1772982396 ] 
 
 ```
