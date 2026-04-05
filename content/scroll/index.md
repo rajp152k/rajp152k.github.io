@@ -2,10 +2,17 @@
 title: Scroll
 ---
 
-
 ### [*reverse chronological*](#init)
 
 ---
+
+#### [ 0x24FD|1775389116 ]
+```
+ - I've started using Emacs whisper.el for dictation : Pretty convenient.
+ - This is the first of such scrolls that I have dictated to Emax.
+    - meta: writes Emacs as Emax
+
+```
 
 #### [ 0x24FC|1775226140 ] 
 
@@ -14,7 +21,7 @@ title: Scroll
   - around the idea that diffs across models aren't as important as the UX of it all 
  - using eca-emacs and very natural and smooth so for : found a new local optimum for a while
  - terminal native agents (opencode, cc, pi) were functional but didn't feel right
- - the last best thing I found right was aidermacs : 
+ - the last best thing I found right was aidermacs 
 ```
 
 #### [ 0x24F3|1774446653 ]
