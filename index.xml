@@ -817,7 +817,15 @@ temporally impractical&amp;hellip;&lt;/p&gt;
 injecting some more chaos into my life.&lt;/p&gt;</description></item><item><title>Open Source</title><link>https://rajp152k.github.io/open-source/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/open-source/</guid><description>&lt;p&gt;A &lt;a href="https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747"&gt;reverse chronological index&lt;/a&gt; of any contribution whatsover; Cause
 someone once quoted &amp;ldquo;what can&amp;rsquo;t be measured, can&amp;rsquo;t be improved&amp;rdquo;..&lt;/p&gt;</description></item><item><title>Scroll</title><link>https://rajp152k.github.io/scroll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rajp152k.github.io/scroll/</guid><description>&lt;h3 id="reverse-chronological"&gt;&lt;a href="#init"&gt;&lt;em&gt;reverse chronological&lt;/em&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;hr&gt;
-&lt;h4 id="-0x24fd1775389116-"&gt;[ 0x24FD|1775389116 ]&lt;/h4&gt;
+&lt;h4 id="-0x24fe1775479852-"&gt;[ 0x24FE|1775479852 ]&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; - -/+ of my thinkpad weren&amp;#39;t functional : got them fixed today
+ - wondering what I do next with it : am not moving OSes again
+ - continuing with OpenSuse Tumbleweed
+ - also need to revamp my emacs config and make it usable across multiple systems
+ - the immediate solution is to just extract out system specific configs out in an env.el,
+ like I already do with unstowed secrets.el
+ - will be doing that to get upto speed quickly, might be moving on to org files soon
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id="-0x24fd1775389116-"&gt;[ 0x24FD|1775389116 ]&lt;/h4&gt;
 &lt;pre tabindex="0"&gt;&lt;code&gt; - I&amp;#39;ve started using Emacs whisper.el for dictation : Pretty convenient.
  - This is the first of such scrolls that I have dictated to Emax.
  - meta: writes Emacs as Emax
