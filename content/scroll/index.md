@@ -6,6 +6,17 @@ title: Scroll
 
 ---
 
+#### [ 0x24FE|1775479852 ]
+```
+ - -/+ of my thinkpad weren't functional : got them fixed today
+ - wondering what I do next with it : am not moving OSes again
+ - continuing with OpenSuse Tumbleweed
+ - also need to revamp my emacs config and make it usable across multiple systems
+ - the immediate solution is to just extract out system specific configs out in an env.el,
+    like I already do with unstowed secrets.el
+ - will be doing that to get upto speed quickly, might be moving on to org files soon
+```
+
 #### [ 0x24FD|1775389116 ]
 ```
  - I've started using Emacs whisper.el for dictation : Pretty convenient.
