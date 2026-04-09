@@ -6,6 +6,12 @@ title: Scroll
 
 ---
 
+#### [ 0x2501|1775727954 ]
+```
+- doing some clojure and Java reflection : I read the Class Class docs
+- https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html 
+```
+
 #### [ 0x24FE|1775479852 ]
 ```
  - -/+ of my thinkpad weren't functional : got them fixed today
