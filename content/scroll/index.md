@@ -6,6 +6,12 @@ title: Scroll
 
 ---
 
+#### [ 0x2525|1778852756 ]
+```
+ - returning to Hy after a bunch of years again as my side project language for a while
+ - full circle : was the first lisp I tried back in the day (2020)
+```
+
 #### [ 0x2501|1775727954 ]
 ```
 - doing some clojure and Java reflection : I read the Class Class docs
