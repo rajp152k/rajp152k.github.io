@@ -4,7 +4,39 @@
 <span class=menu__text>scroll</span></a></li><li class=menu__item><a class=menu__link href=/dd0x/><i class='fa fa-road'></i>
 <span class=menu__text>DD0Xes</span></a></li><li class=menu__item><a class=menu__link href=/resume/><i class='fa fa-road'></i>
 <span class=menu__text>work</span></a></li></ul></nav></div></header><div class="wrapper flex"><div class=primary><main class=main role=main><article class=post><header class=post__header><h1 class=post__title>Open Source</h1></header><div class="content post__content clearfix"><p>A <a href=https://buffer.thebitmage.com/20230712132109-timestamps.html#ID-20230712T132110.496747>reverse chronological index</a> of any contribution whatsover; Cause
-someone once quoted &ldquo;what can&rsquo;t be measured, can&rsquo;t be improved&rdquo;..</p></div></article></main></div></div><script>window.store={"https://rajp152k.github.io/post/flexible-swe-experiments/":{title:"Flexible SWE Experiments",tags:["swe","polylith","architecture","tooling","organization","experiment","strategy","flexibility","legos","monorepo","structure","code","microessays"],meta:`<article class="list__item post">
+someone once quoted &ldquo;what can&rsquo;t be measured, can&rsquo;t be improved&rdquo;..</p></div></article></main></div></div><script>window.store={"https://rajp152k.github.io/post/planning-for-evolution/":{title:"Engineering for Evolution",tags:["emacs","documentation","transparency","opacity","abstraction","concrete","super user","user"],meta:`<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/planning-for-evolution/" rel="bookmark">
+			Engineering for Evolution
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-05-19T06:55:02&#43;05:30">May 19, 2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/ux/" rel="category">UX</a>
+	</span>
+</div></div>
+	</header>
+</article>
+`,content:`The criteria for engineering a good user experience spans across diverse incentives.
+Ease of use is the most well known one, but I find it to be subjective. A cognitive device that helps me when in the development cycle is a flavor of iterating with the question of &ldquo;how do I make this more intuitive?&rdquo;. This follows from the realization that even for measurement along qualitative dimensions, we generally find comparing two entities (and ranking them higher/lower) easier than to come up with an absolute measure of that quality and resuming with a global sort. Working on concrete iterations also allows me explicitly think out loud in terms of what worked and what did not and then abstract later on for future wisdom.
+I usually see transparency being deprioritized under the guise of ease of use. A deliberately high opacity of abstractions so that the user only deals with what they need is slightly demeaning for me as a super user. In my experience, Emacs does transparency really well : I can have highly abstract M-x bindings along with the choice to jump around and into the source and be able to modify it for myself. Consequently : the idea of Adaptive User Interfaces emerges : think of having a completely transparent set of exposed utilities that are masked/flavoured based on the level of the user&rsquo;s inquisitiveness about the tool itself. Again, drawing out of concretes, you have to tinker around enough to finally/accidentally (keystroke seizure?) unlock a feature (buffer narrows for instance) and feel the need to use it. One could even think of it as engineering/planning for the users&rsquo; evolution.
+This is a reason to like emacs: the &ldquo;self documenting&rdquo; aspect really starts compounding over continued use.
+`,url:"https://rajp152k.github.io/post/planning-for-evolution/"},"https://rajp152k.github.io/post/":{title:"Posts",tags:[],meta:`<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/post/" rel="bookmark">
+			Posts
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-05-19T06:55:02&#43;05:30">May 19, 2026</time></div></div>
+	</header>
+</article>
+`,content:"",url:"https://rajp152k.github.io/post/"},"https://rajp152k.github.io/post/flexible-swe-experiments/":{title:"Flexible SWE Experiments",tags:["swe","polylith","architecture","tooling","organization","experiment","strategy","flexibility","legos","monorepo","structure","code","microessays"],meta:`<article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
@@ -26,20 +58,7 @@ The idea evolved from clojure but usable anywhere: it&rsquo;s just an idea.
 As for the nature of the experiments themselves: they span along dimensions of being ephemeral/long-running, domain specific/higher order, personally optimized/ conventional UX focused, seeded with firm intent right way/ purely exploratory and with the intent of figuring the next class of experiments out.
 I haven&rsquo;t had an un-intuitive refactor so far..
 There&rsquo;s a lot of literature on building good software compared to building throw aways; there&rsquo;s a lot of value to maintaining structure with your throw aways, is my recent finding.
-`,url:"https://rajp152k.github.io/post/flexible-swe-experiments/"},"https://rajp152k.github.io/post/":{title:"Posts",tags:[],meta:`<article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/post/" rel="bookmark">
-			Posts
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-05-18T06:03:19&#43;05:30">May 18, 2026</time></div></div>
-	</header>
-</article>
-`,content:"",url:"https://rajp152k.github.io/post/"},"https://rajp152k.github.io/post/snapper-on-arch/":{title:"Setting up snapper on Arch",tags:["arch","opensuse","tumbleweed","snapshots","btrfs","bed rock linux","linux"],meta:`<article class="list__item post">
+`,url:"https://rajp152k.github.io/post/flexible-swe-experiments/"},"https://rajp152k.github.io/post/snapper-on-arch/":{title:"Setting up snapper on Arch",tags:["arch","opensuse","tumbleweed","snapshots","btrfs","bed rock linux","linux"],meta:`<article class="list__item post">
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
