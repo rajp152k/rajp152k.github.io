@@ -1,0 +1,70 @@
+name: Deploy README as GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Render README.md to index.html
+        run: |
+          python3 -m pip install markdown
+          mkdir -p _site
+
+          python3 - <<'PY'
+          import pathlib
+          import markdown
+
+          readme_text = pathlib.Path('README.md').read_text(encoding='utf-8')
+          body_html = markdown.markdown(readme_text)
+
+          index_html = f"""<!doctype html>
+          <html lang=\"en\">
+          <head>
+            <meta charset=\"UTF-8\" />
+            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+            <title>yet another raj</title>
+          </head>
+          <body>
+            {body_html}
+          </body>
+          </html>
+          """.strip()
+
+          pathlib.Path('_site/index.html').write_text(index_html, encoding='utf-8')
+          PY
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - id: deploy
+        name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
