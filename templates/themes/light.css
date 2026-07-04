@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light;
+  --tabloid-bg: #ffffff;
+  --tabloid-fg: #000000;
+  --tabloid-muted: #3f3f3f;
+  --tabloid-border: #000000;
+  --tabloid-rule: #000000;
+  --tabloid-panel: #ffffff;
+  --tabloid-soft: #f5f5f5;
+}
+
+html,
+body {
+  background: var(--tabloid-bg);
+  color: var(--tabloid-fg);
+}
+
+a {
+  color: var(--tabloid-fg);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+
+a:hover {
+  color: var(--tabloid-fg);
+  text-decoration-thickness: 2px;
+}
+
+.ssg-pane {
+  border-color: var(--tabloid-border);
+  border-radius: 0;
+  background: var(--tabloid-panel);
+}
+
+.ssg-pane__header {
+  background: var(--tabloid-bg);
+  border-bottom-color: var(--tabloid-border);
+}
+
+.ssg-pane__header h2 {
+  color: var(--tabloid-fg);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ssg-pane__body {
+  background: var(--tabloid-bg);
+  color: var(--tabloid-fg);
+}
+
+pre,
+code {
+  background: var(--tabloid-soft);
+  border: 1px solid var(--tabloid-border);
+  color: var(--tabloid-fg);
+}
+
+pre {
+  padding: 0.6rem;
+  border-radius: 0;
+}
+
+.ssg-image {
+  border-color: var(--tabloid-border);
+  background: var(--tabloid-bg);
+}
+
+.ssg-image figcaption {
+  border-top-color: var(--tabloid-border);
+  color: var(--tabloid-muted);
+}
+
+.agent-session {
+  border-color: var(--tabloid-border);
+  border-radius: 0;
+  background: var(--tabloid-bg);
+}
+
+footer {
+  border-top-color: var(--tabloid-border);
+  color: var(--tabloid-muted);
+}
+
+li .muted,
+.meta,
+.site-description {
+  color: var(--tabloid-muted);
+}
+
+blockquote {
+  border-left: 4px solid var(--tabloid-border);
+  margin: 0;
+  padding-left: 0.75rem;
+  color: var(--tabloid-fg);
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--tabloid-fg);
+}
+
+time {
+  color: var(--tabloid-muted);
+}
+
+.ssg-workbench,
+.mermaid {
+  color: inherit;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid var(--tabloid-rule);
+  margin: 1.25rem 0;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+}
+
+img {
+  max-width: 100%;
+  border: 1px solid var(--tabloid-border);
+  border-radius: 0;
+}
+
+.canvas-index__item,
+.canvas-annotation,
+.canvas-annotation__label {
+  color: var(--tabloid-fg);
+}
+
+.canvas-annotation {
+  border-left-color: var(--tabloid-border);
+}
+
+.canvas-annotation.is-active {
+  border-left-width: 4px;
+}

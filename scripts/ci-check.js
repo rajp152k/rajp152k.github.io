@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 const checks = [];
 
@@ -11,27 +12,61 @@ function ok(message) {
   checks.push(message);
 }
 
-const readme = fs.readFileSync('README.md', 'utf8');
-if (!readme.trim().startsWith('# yet another raj')) {
-  fail('README.md must start with `# yet another raj`');
+function assertFile(filePath) {
+  if (!fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
+    fail(`missing required file: ${filePath}`);
+  }
+  ok(`${filePath} exists`);
 }
-ok('README exists and has expected title');
 
-const workflow = fs.readFileSync('.github/workflows/deploy-readme.yml', 'utf8');
-if (!workflow.includes('actions/deploy-pages@v4')) {
-  fail('deploy workflow must use actions/deploy-pages@v4');
+function assertDir(dirPath) {
+  if (!fs.existsSync(dirPath) || !fs.statSync(dirPath).isDirectory()) {
+    fail(`missing required directory: ${dirPath}`);
+  }
+  ok(`${dirPath} exists`);
 }
-ok('Deploy workflow includes GitHub Pages deployment action');
 
-if (!workflow.includes('pages: write')) {
-  fail('deploy workflow should include pages write permission');
+assertFile('CNAME');
+if (fs.readFileSync('CNAME', 'utf8').trim() !== 'yetanotherraj.com') {
+  fail('CNAME must contain yetanotherraj.com');
 }
-ok('Deploy workflow has pages write permission');
+ok('CNAME points to yetanotherraj.com');
 
-const branch = 'master';
-if (!workflow.includes(`  branches:\n    - ${branch}`) && !workflow.includes(`- ${branch}`)) {
-  fail('deploy workflow should target master branch');
+assertFile('package.json');
+const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+for (const script of ['blog:build', 'blog:dev', 'blog:new', 'blog:check']) {
+  if (!pkg.scripts || typeof pkg.scripts[script] !== 'string') {
+    fail(`package.json must define ${script}`);
+  }
 }
-ok('Deploy workflow targets expected branch');
+ok('blogging scripts are present');
+
+assertFile('ssg.config.json');
+const config = JSON.parse(fs.readFileSync('ssg.config.json', 'utf8'));
+if (config.paths?.postsDir !== 'content/posts') {
+  fail('ssg.config.json must use content/posts as postsDir');
+}
+ok('SSG config points at content/posts');
+
+assertDir('content/posts');
+assertFile('templates/index.html');
+assertFile('templates/post.html');
+assertFile('templates/themes/light.css');
+assertFile('templates/fonts/terminess.css');
+assertFile('.ssg/state.json');
+
+const postDirs = fs.readdirSync('content/posts')
+  .map((name) => path.join('content/posts', name))
+  .filter((entry) => fs.statSync(entry).isDirectory());
+
+if (postDirs.length === 0) {
+  fail('content/posts must contain at least one canvas post directory');
+}
+
+for (const postDir of postDirs) {
+  assertFile(path.join(postDir, 'post.json'));
+  assertFile(path.join(postDir, 'canvas.md'));
+}
+ok('all posts are canvas-style directories');
 
 console.log('Blog CI checks passed:', checks.join(', '));

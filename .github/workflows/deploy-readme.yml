@@ -1,4 +1,4 @@
-name: Deploy README as GitHub Pages
+name: Deploy blog to GitHub Pages
 
 on:
   push:
@@ -18,33 +18,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Render README.md to index.html
-        run: |
-          python3 -m pip install markdown
-          mkdir -p _site
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
 
-          python3 - <<'PY'
-          import pathlib
-          import markdown
+      - name: Install dependencies
+        run: npm ci
 
-          readme_text = pathlib.Path('README.md').read_text(encoding='utf-8')
-          body_html = markdown.markdown(readme_text)
+      - name: Validate blog structure
+        run: node scripts/ci-check.js
 
-          index_html = f"""<!doctype html>
-          <html lang=\"en\">
-          <head>
-            <meta charset=\"UTF-8\" />
-            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
-            <title>yet another raj</title>
-          </head>
-          <body>
-            {body_html}
-          </body>
-          </html>
-          """.strip()
-
-          pathlib.Path('_site/index.html').write_text(index_html, encoding='utf-8')
-          PY
+      - name: Build blog
+        run: npm run blog:check
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -52,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: public
 
   deploy:
     needs: build

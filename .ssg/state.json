@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "posts": {
+    "welcome": {
+      "createdAt": "2026-07-04T18:29:20.328Z",
+      "updatedAt": "2026-07-04T18:29:20.328Z",
+      "contentHash": "48c6cd30db345dedf6f679b7e3fcd459f7db54da5d67a030c3e8fc51af701dd5"
+    }
+  }
+}

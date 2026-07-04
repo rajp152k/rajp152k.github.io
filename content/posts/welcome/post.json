@@ -1,0 +1,10 @@
+{
+  "title": "Welcome",
+  "panes": [
+    { "id": "index", "title": "Index", "generated": "index", "source": "canvas" },
+    { "id": "canvas", "title": "Canvas", "file": "canvas.md" },
+    { "id": "annotations", "title": "Annotations", "generated": "annotations", "source": "canvas" }
+  ],
+  "layout": { "preset": "canvas" },
+  "sync": { "enabled": false, "source": "canvas" }
+}
