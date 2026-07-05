@@ -9,7 +9,9 @@
     "blog:build:local": "tsx ../ssg/src/cli.ts build",
     "blog:dev:local": "tsx ../ssg/src/cli.ts dev",
     "blog:new:local": "tsx ../ssg/src/cli.ts new",
-    "blog:check:local": "npm run blog:build:local && cp CNAME public/CNAME"
+    "blog:check:local": "npm run blog:build:local && cp CNAME public/CNAME",
+    "blog:sync-templates": "node scripts/sync-templates.js",
+    "blog:sync-templates:local": "node scripts/sync-templates.js --local"
   },
   "devDependencies": {
     "ssg": "github:rajp152k/ssg#main",

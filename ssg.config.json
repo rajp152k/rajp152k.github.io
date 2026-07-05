@@ -1,15 +1,15 @@
 {
   "site": {
-    "title": "YET ANOTHER RAJ",
-    "author": "Raj",
-    "description": "Personal notes and experiments from building a modern TypeScript static site generator.",
+    "title": "",
+    "author": "raj",
+    "description": "",
     "language": "en",
     "baseUrl": "https://yetanotherraj.com",
-    "indexTitle": "Posts",
+    "indexTitle": "posts",
     "indexDescription": "",
-    "footer": "© 2026 That Raj. Licensed under CC BY-SA 4.0.",
+    "footer": "© cc by-sa 4.0 | Raj",
     "theme": "themes/light.css",
-    "font": "fonts/terminess.css",
+    "font": "fonts/TerminessNerdFontMono-Regular.ttf",
     "assistant": "his AI"
   },
   "paths": {
@@ -19,6 +19,6 @@
   },
   "dev": {
     "host": "127.0.0.1",
-    "port": 3000
+    "port": 3001
   }
 }

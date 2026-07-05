@@ -29,4 +29,16 @@ npm run blog:dev:local
 npm run blog:build:local
 ```
 
+Templates are copied into this repo so site-specific edits remain possible. To refresh them from the installed Git dependency:
+
+```bash
+npm run blog:sync-templates
+```
+
+When iterating against the sibling SSG checkout, sync from there instead:
+
+```bash
+npm run blog:sync-templates:local
+```
+
 `CNAME` is preserved for GitHub Pages deployment.
