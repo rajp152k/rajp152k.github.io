@@ -5,7 +5,11 @@
     "blog:build": "tsx node_modules/ssg/src/cli.ts build",
     "blog:dev": "tsx node_modules/ssg/src/cli.ts dev",
     "blog:new": "tsx node_modules/ssg/src/cli.ts new",
-    "blog:check": "npm run blog:build && cp CNAME public/CNAME"
+    "blog:check": "npm run blog:build && cp CNAME public/CNAME",
+    "blog:build:local": "tsx ../ssg/src/cli.ts build",
+    "blog:dev:local": "tsx ../ssg/src/cli.ts dev",
+    "blog:new:local": "tsx ../ssg/src/cli.ts new",
+    "blog:check:local": "npm run blog:build:local && cp CNAME public/CNAME"
   },
   "devDependencies": {
     "ssg": "github:rajp152k/ssg#main",
