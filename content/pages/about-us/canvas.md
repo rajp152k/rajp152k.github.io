@@ -18,6 +18,8 @@ Raj is a thinker wrestling with how the world is evolving and how a person can c
 
 He has logged these thinking adventures for years. His earlier writing survives in the [2019–2022 archive](https://github.com/rajp152k/19-22_archive) and the [2023–2026 archive](https://github.com/rajp152k/23-26_archive). This site continues that record while reconsidering its structure.
 
+Raj can also be found on [Twitter](https://twitter.com/rajpatil152k) and [Goodreads](https://goodreads.com/rajp152k). [[note: **H.A.R.T.:** One link records Raj thinking in public; the other records the books he may later metabolize into more thinking in public.]]
+
 Raj wants the practice to remain sustainable. Writing should accumulate into a connected body of knowledge without requiring every thought to arrive fully formed. The publishing system should preserve earlier work, expose changes in reasoning, and remain simple enough to modify as his way of presenting ideas develops.
 
 He curates:
