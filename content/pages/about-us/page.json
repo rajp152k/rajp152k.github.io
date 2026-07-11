@@ -1,5 +1,6 @@
 {
-  "title": "Writing a minimal SSG",
+  "title": "About us",
+  "slug": "about-us",
   "panes": [
     {
       "id": "index",

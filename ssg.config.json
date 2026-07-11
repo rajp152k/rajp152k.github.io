@@ -9,10 +9,14 @@
     "indexDescription": "",
     "footer": "© {{site_copyright_year}} Raj · CC BY-SA 4.0",
     "theme": "themes/light.css",
-    "font": "fonts/iosevka.css"
+    "font": "fonts/iosevka.css",
+    "navigation": [
+      { "label": "about us", "href": "/about-us/" }
+    ]
   },
   "paths": {
     "postsDir": "content/posts",
+    "pagesDir": "content/pages",
     "templatesDir": "templates",
     "outputDir": "public"
   },
