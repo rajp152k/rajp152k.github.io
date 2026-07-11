@@ -129,6 +129,19 @@ Project commands:
 /hart-improve [optional focus]
 ```
 
+## Repository and CI practice
+
+- Never mutate `master` directly. Create a focused local branch, commit there, push it, and merge only through a pull request after required CI checks pass.
+- A merge to `master` is the deployment boundary and must trigger the complete deployment pipeline.
+- Keep temporary feature state under `anvil/`. The directory is local, ignored by Git, and must not be used by blog posts or treated as durable state.
+- The blog and SSG are developed together but remain independently versioned repositories.
+- Blog CI must build with the lockfile-pinned SSG and check compatibility with the current SSG `main` branch.
+- SSG CI must retain focused fixtures for unit tests and dogfood the generator by building the blog's `master` branch with the exact SSG revision under test.
+- Cross-repository checks supplement local tests; they do not replace precise fixtures or regression tests.
+- Pin durable dependencies by lockfile or commit. Treat mutable branch checkouts as compatibility checks, not reproducible inputs.
+- CI caches may reduce work but must never be required for correctness. A clean checkout must be sufficient to run validation and builds.
+- Use `[skip ci]` only for changes that cannot affect validation, builds, generated artifacts, or deployment behavior.
+
 ## Post format
 
 Posts live under:
