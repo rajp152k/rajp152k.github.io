@@ -21,9 +21,5 @@
   ],
   "layout": {
     "preset": "canvas"
-  },
-  "sync": {
-    "enabled": false,
-    "source": "canvas"
   }
 }
