@@ -131,7 +131,9 @@ Project commands:
 
 ## Repository and CI practice
 
-- Never mutate `master` directly. Create a focused local branch, commit there, push it, and merge only through a pull request after required CI checks pass.
+- Never mutate `master` directly. Create a focused local branch, commit there, push it, and open a pull request.
+- Observe every required pull-request check through completion. Merge only after all checks succeed; investigate failures instead of bypassing or prematurely merging around them.
+- After merging, observe the complete `master` validation and deployment pipelines through completion and report any warnings or failures.
 - A merge to `master` is the deployment boundary and must trigger the complete deployment pipeline.
 - Keep temporary feature state under `anvil/`. The directory is local, ignored by Git, and must not be used by blog posts or treated as durable state.
 - The blog and SSG are developed together but remain independently versioned repositories.
