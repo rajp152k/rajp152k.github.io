@@ -2,15 +2,23 @@ name: CI
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
   pull_request:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  build:
+  pinned-ssg:
+    name: Build with pinned SSG
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Checkout
+      - name: Checkout blog
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -24,3 +32,41 @@ jobs:
 
       - name: Build blog
         run: npm run blog:check
+
+  current-ssg:
+    name: Build with current SSG main
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout blog
+        uses: actions/checkout@v4
+        with:
+          path: blog
+
+      - name: Checkout SSG
+        uses: actions/checkout@v4
+        with:
+          repository: rajp152k/ssg
+          ref: main
+          path: ssg
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            blog/package-lock.json
+            ssg/package-lock.json
+
+      - name: Install blog dependencies
+        working-directory: blog
+        run: npm ci
+
+      - name: Install SSG dependencies
+        working-directory: ssg
+        run: npm ci
+
+      - name: Test current SSG against blog
+        working-directory: blog
+        run: ../ssg/node_modules/.bin/tsx ../ssg/src/cli.ts build
