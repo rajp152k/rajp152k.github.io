@@ -1,44 +1,52 @@
 # YET ANOTHER RAJ
 
-Consumer site for the SSG in `../ssg`.
+A blog built with [`rajp152k/ssg`](https://github.com/rajp152k/ssg).
 
-## Blogging
+## Content
 
-Posts live under `content/posts/` as canvas-style directories:
+Posts are canvas directories:
 
 ```txt
-content/posts/my-post/
+content/posts/<slug>/
   post.json
   canvas.md
 ```
 
-Local commands using the Git dependency:
+`canvas.md` contains the post. `post.json` declares its canvas panes and layout.
+
+`.ssg/state.json` is versioned post metadata. It preserves each post's created and updated timestamps; do not edit it manually.
+
+## Commands
+
+Normal use runs the GitHub dependency pinned in `package-lock.json`:
 
 ```bash
 npm install
 npm run blog:new -- "Post title"
 npm run blog:dev
 npm run blog:build
+npm run blog:check
 ```
 
-When iterating on the sibling SSG checkout, use the local scripts instead:
+SSG contributors can use the sibling checkout instead:
 
 ```bash
 npm run blog:new:local -- "Post title"
 npm run blog:dev:local
 npm run blog:build:local
+npm run blog:check:local
 ```
 
-Templates are copied into this repo so site-specific edits remain possible. To refresh them from the installed Git dependency:
+## Templates
+
+[`ssg`](https://github.com/rajp152k/ssg) owns the canonical templates. Refresh this blog's copies after an SSG template update:
 
 ```bash
 npm run blog:sync-templates
-```
-
-When iterating against the sibling SSG checkout, sync from there instead:
-
-```bash
+# or, when working on the sibling checkout:
 npm run blog:sync-templates:local
 ```
 
-`CNAME` is preserved for GitHub Pages deployment.
+Site identity belongs in `ssg.config.json`. Template behavior belongs upstream in `ssg`.
+
+`CNAME` is copied into `public/` during `blog:check` for GitHub Pages.

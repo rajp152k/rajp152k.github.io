@@ -22,7 +22,7 @@
       }
 
       body {
-        font-family: 'Terminess', 'Terminess Nerd Font', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        font-family: var(--ssg-prose-font, ui-sans-serif, system-ui, sans-serif);
         width: 100%;
         margin: 0;
         padding: 0.35rem 0.4rem;
@@ -258,33 +258,40 @@
         margin-bottom: 0.2rem;
       }
 
+      .ssg-diagram {
+        border: 1px solid #000;
+        margin: 0.65rem 0;
+        padding: 0.35rem;
+      }
+
+      .ssg-diagram figcaption {
+        border-top: 1px solid #000;
+        color: #666;
+        font-size: 0.98rem;
+        margin-top: 0.35rem;
+        padding-top: 0.3rem;
+        text-align: center;
+      }
+
       pre.mermaid {
         background: #fff;
         border: 1px solid #000;
         color: #000;
-        font-family: 'Terminess', 'Terminess Nerd Font', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        font-family: 'Iosevka', ui-monospace, monospace;
         padding: 0.5rem;
         border-radius: 0;
         text-align: center;
+      }
+
+      .ssg-diagram pre.mermaid {
+        border: 0;
+        margin: 0;
       }
 
       .mermaid svg {
         display: block;
         margin-inline: auto;
         max-width: 100%;
-      }
-
-      .agent-session {
-        margin-bottom: 0.6rem;
-        border: 1px solid #e2e8f0;
-        border-radius: 0;
-        padding: 0.25rem 0.35rem;
-        background: #f8fafc;
-      }
-
-      .agent-session h4 {
-        margin: 0 0 0.5rem;
-        font-size: 1.08rem;
       }
 
       footer {

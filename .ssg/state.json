@@ -1,21 +1,6 @@
 {
   "version": 1,
   "posts": {
-    "welcome": {
-      "createdAt": "2026-07-04T18:29:20.328Z",
-      "updatedAt": "2026-07-04T18:29:20.328Z",
-      "contentHash": "48c6cd30db345dedf6f679b7e3fcd459f7db54da5d67a030c3e8fc51af701dd5"
-    },
-    "minimal-ssg": {
-      "createdAt": "2026-07-04T18:44:28.633Z",
-      "updatedAt": "2026-07-04T19:04:01.382Z",
-      "contentHash": "1a16846583314d6043fd9d1ebc44877798c0cba5629dc834903961904fc0a303"
-    },
-    "minimal-static-site-generation": {
-      "createdAt": "2026-07-04T18:45:50.130Z",
-      "updatedAt": "2026-07-04T18:47:17.730Z",
-      "contentHash": "60c995e6421ec8097835ce28f0a88e2f78da74e9a3ec9169ef34e6083d4a7d15"
-    },
     "writing-a-minimal-ssg": {
       "createdAt": "2026-07-04T19:04:06.382Z",
       "updatedAt": "2026-07-05T01:52:41.793Z",

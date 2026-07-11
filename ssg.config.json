@@ -7,10 +7,9 @@
     "baseUrl": "https://yetanotherraj.com",
     "indexTitle": "posts",
     "indexDescription": "",
-    "footer": "© cc by-sa 4.0 | Raj",
+    "footer": "© {{site_copyright_year}} Raj · CC BY-SA 4.0",
     "theme": "themes/light.css",
-     "font": "fonts/TerminessNerdFontMono-Regular.ttf",
-    "assistant": "his AI"
+    "font": "fonts/iosevka.css"
   },
   "paths": {
     "postsDir": "content/posts",
