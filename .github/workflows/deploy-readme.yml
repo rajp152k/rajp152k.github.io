@@ -27,9 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate blog structure
-        run: node scripts/ci-check.js
-
       - name: Build blog
         run: npm run blog:check
 

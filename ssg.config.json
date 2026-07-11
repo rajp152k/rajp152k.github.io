@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "",
-    "author": "raj",
+    "title": "yet another raj's journal",
+    "author": "some raj",
     "description": "",
     "language": "en",
     "baseUrl": "https://yetanotherraj.com",
@@ -9,7 +9,7 @@
     "indexDescription": "",
     "footer": "© cc by-sa 4.0 | Raj",
     "theme": "themes/light.css",
-    "font": "fonts/TerminessNerdFontMono-Regular.ttf",
+     "font": "fonts/TerminessNerdFontMono-Regular.ttf",
     "assistant": "his AI"
   },
   "paths": {
