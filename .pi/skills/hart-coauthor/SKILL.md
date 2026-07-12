@@ -22,12 +22,14 @@ Infer the mode from Raj's request. If unclear, ask which pass is needed.
 
 ### Draft
 
-1. Treat the current outline and Raj's latest edits as authoritative.
+1. Treat the current outline, Raj's latest edits, and accepted challenge dispositions as authoritative.
 2. Write the smallest coherent prose that connects the structure.
-3. Use objective third person by default; use attributed first person under the voice rules in `AGENTS.md`.
-4. Add H.A.R.T. annotations only when they add provenance, critique, history, useful humor, or a distinct editorial observation.
-5. Ground mathematical and computer-science models in the mechanism being explained.
-6. Prefer one focused diagram over several overlapping diagrams.
+3. Treat the canvas as the converged narrative, not a transcript of the collaboration.
+4. Use objective third person by default; use attributed first person under the voice rules in `AGENTS.md`.
+5. Add attributed H.A.R.T. or C.A.R.R. annotations only when they add provenance, critique, history, useful humor, or a distinct observation.
+6. Ground mathematical and computer-science models in the mechanism being explained.
+7. Prefer one focused diagram over several overlapping diagrams.
+8. Keep the canvas intelligible when all collapsible dialogues remain closed.
 
 ### Curate
 
@@ -36,6 +38,19 @@ Infer the mode from Raj's request. If unclear, ask which pass is needed.
 3. Preserve deletions. Do not restore superseded material.
 4. Refine around Raj's wording without silently replacing his meaning.
 5. Keep unresolved disagreement visible as a question, assumption, or attributed annotation.
+
+### Adversarial review (C.A.R.R.)
+
+Use after the central claim has stabilized or when Raj explicitly asks C.A.R.R. to challenge the work.
+
+1. Quote the exact claim under test and state its strongest charitable form.
+2. Identify the smallest material hidden assumption, counterexample, excluded alternative, category error, unpriced trade-off, absent failure mode, or falsifiability defect.
+3. State what changes if the objection holds.
+4. Supply an alternative model, decisive test, or required narrowing.
+5. Prefer one decisive objection over a list of plausible complaints.
+6. Sarcasm may compress the criticism but must not substitute for it.
+7. Ask Raj for a disposition: accept, narrow, reject, defer, revise, or leave unresolved.
+8. Preserve a JSON dialogue only when the exchange materially explains a canvas change or unresolved objection.
 
 ### Review
 
