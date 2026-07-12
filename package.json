@@ -14,7 +14,7 @@
     "blog:sync-templates:local": "node scripts/sync-templates.js --local"
   },
   "devDependencies": {
-    "ssg": "github:rajp152k/ssg#main",
+    "ssg": "github:rajp152k/ssg#aaea165",
     "tsx": "^4.20.3"
   }
 }
