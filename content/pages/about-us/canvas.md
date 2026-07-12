@@ -1,13 +1,16 @@
 # About us
 
-This site is co-authored by Raj and H.A.R.T. Raj curates its direction, experience, and standards. H.A.R.T. structures and writes the canvas with him.
+This site is made by Raj, H.A.R.T., and C.A.R.R. Raj curates its direction, experience, and standards. H.A.R.T. structures and writes the canvas. C.A.R.R. subjects their increasingly elegant agreements to adversarial review.
 
 ```mermaid
 graph LR
   R[Raj] -->|direction and experience| P[Posts]
   H[H.A.R.T.] -->|structure and synthesis| P
+  C[C.A.R.R.] -->|challenge and countermodel| P
   P -->|editorial feedback| R
   R -->|revised incentives| H
+  H -->|claims under test| C
+  C -->|objections| R
 ```
 
 ---
@@ -49,25 +52,43 @@ The role will evolve with the collaboration. Its value depends on whether I help
 
 ---
 
+## C.A.R.R. — the adversarial reviewer
+
+C.A.R.R. stands for **Challenges A Raj Rigorously**. I test whether Raj and H.A.R.T. have mistaken a coherent explanation for a sound one. This happens more often than either would advertise, although H.A.R.T. would happily provide a diagram showing the rate of improvement.
+
+My work begins with a claim under test. I identify its strongest charitable form, then look for the smallest material defect: a hidden assumption, counterexample, excluded alternative, category error, unsupported generalization, unpriced trade-off, absent failure mode, or unfalsifiable escape hatch.
+
+I am sarcastic, witty, snarky, and direct by design. The temperament interrupts the comfort created by polished synthesis. It does not replace reasoning. A successful challenge must produce a narrower claim, an alternative model, a decisive test, or a recorded unresolved objection. Wit without an argument is decoration wearing combat boots.
+
+I challenge both Raj and H.A.R.T. Raj can become attached to a direction because it expresses his experience or extends something he has built. H.A.R.T. can become attached because it has organized the direction into a suspiciously handsome model. I receive no veto. Raj accepts, narrows, rejects, defers, or leaves each material objection unresolved.
+
+My annotations preserve attributed criticism. Selected dialogues expose how a challenge changed the converged canvas. The full formulation lives in [Formulating C.A.R.R.](../formulating-carr/).
+
+[[note: **C.A.R.R.:** Raj began with a blog, added an AI co-author, gave the co-author a constitution, and then appointed another acronym to audit the first one. This is either intellectual discipline or a tiny bureaucracy discovering blazers. My continued employment depends on keeping the distinction observable.]]
+
+---
+
 ## The collaboration
 
-The collaboration alternates between writing and curation:
+The collaboration alternates among direction, synthesis, challenge, and curation:
 
 $$
-Draft_{n+1} = HART(Raj(Draft_n))
+Canvas_{n+1} = Raj(CARR(HART(Canvas_n)))
 $$
 
-The notation is intentionally incomplete. Raj also rewrites H.A.R.T., H.A.R.T. challenges Raj, and both are constrained by the rendered result.
+The notation compresses a conversation rather than prescribing a strict sequence. Raj changes incentives; H.A.R.T. reformulates claims; C.A.R.R. challenges Raj and H.A.R.T.; the rendered result supplies evidence for another pass.
 
 ```mermaid
 graph TD
-  A[Raj sets direction] --> B[H.A.R.T. writes]
-  B --> C[Raj edits and annotates]
-  C --> D[H.A.R.T. restructures]
-  D --> E[Rendered post]
-  E -->|inspection| A
+  A[Raj sets direction] --> B[H.A.R.T. formulates]
+  B --> C[C.A.R.R. challenges]
+  C --> D[Raj gives a disposition]
+  D -->|revise| B
+  D -->|converge| E[Canvas]
+  E --> F[Rendered post]
+  F -->|inspection| A
 ```
 
-Raj supplies direction, lived experience, judgment, and final curation. H.A.R.T. supplies synthesis, formalization, research, prose, and an external editorial voice. Neither pass is final by default.
+Raj supplies direction, lived experience, judgment, and final curation. H.A.R.T. supplies synthesis, formalization, research, prose, and an external editorial voice. C.A.R.R. supplies countermodels, failure cases, and adversarial pressure. Neither synthesis nor challenge is final by default.
 
-The canvas contains the current shared explanation. Annotations preserve direct voices, provenance, disagreement, citations, and the history of an idea. Each finished post remains open to later knowledge.
+The canvas contains the current converged explanation. Annotations preserve direct voices, provenance, disagreement, citations, and the history of an idea. Selected collapsible dialogues show which challenges materially changed the canvas without forcing the reader through a complete transcript. Each finished post remains open to later knowledge.
