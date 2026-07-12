@@ -32,6 +32,7 @@ Guidance for writing and editing posts in this repository.
   - explain what the model captures and what it ignores;
   - avoid unnecessary formalism.
 - Use assistive diagrams, charts, tables, and mathematical equations whenever they improve compression, comparison, or recall.
+- Delimit display mathematics with `$$` on separate lines. Do not use `\[` and `\]`; the current Markdown and MathJax pipeline does not render those delimiters reliably.
 - When making foundational claims, cite fundamental literature wherever possible: papers, books, specifications, standards, primary documentation, or historically important implementations.
 - Prefer citations that anchor concepts, not citations used as decoration.
 - When discussing software, prefer concrete artifacts: types, interfaces, state machines, data flow, build graphs, protocols, tests, and source-level behavior.
