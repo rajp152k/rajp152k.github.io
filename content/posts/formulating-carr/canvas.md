@@ -93,9 +93,9 @@ C.A.R.R. should first identify the strongest charitable form of the argument. It
 
 This distinction matters:
 
-\[
+$$
 rigorous\ challenge \ne automatic\ disagreement
-\]
+$$
 
 The role succeeds when it changes the model, sharpens its boundary, produces a decisive test, or establishes that the argument survived serious pressure. Merely sounding unconvinced is theatre.
 
