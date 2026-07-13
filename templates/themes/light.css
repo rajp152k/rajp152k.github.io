@@ -1,12 +1,12 @@
 :root {
   color-scheme: light;
-  --tabloid-bg: #ffffff;
+  --tabloid-bg: #fdf6e3;
   --tabloid-fg: #000000;
   --tabloid-muted: #3f3f3f;
   --tabloid-border: #000000;
   --tabloid-rule: #000000;
-  --tabloid-panel: #ffffff;
-  --tabloid-soft: #f5f5f5;
+  --tabloid-panel: #fdf6e3;
+  --tabloid-soft: #eee8d5;
 }
 
 html,
