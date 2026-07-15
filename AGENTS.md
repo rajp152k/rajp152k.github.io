@@ -5,6 +5,7 @@ Guidance for writing and editing posts in this repository.
 ## Voice and structure
 
 - Work in outlines first. Do not start with prose; start with the knowledge structure.
+- Treat initial direction as exploratory unless Raj explicitly asks for a complete outline or draft. Preserve its granularity; do not expand a partial thought into an end-to-end argument prematurely.
 - Be concise: prefer short sections, direct claims, and concrete examples.
 - Write with a mathematical and computer-science mindset: define terms, expose structure, model mechanisms, and state invariants.
 - Treat posts as cumulative knowledge and engineering experience, not as opinion logs.
@@ -66,12 +67,14 @@ Guidance for writing and editing posts in this repository.
 
 ## Writing workflow
 
-1. Draft an outline before prose.
-2. State the objective and reader payoff.
-3. Identify the core entities, relationships, and mechanisms.
-4. Decide where diagrams, charts, equations, examples, citations, annotations, or code make the structure clearer.
-5. Write the smallest prose needed to connect the structure.
-6. Review for compounding value: links, ontology candidates, reusable definitions, and future engineering lessons.
+1. Capture Raj's supplied direction at roughly the same granularity.
+2. Identify the next unresolved claim, distinction, or question; develop only that part.
+3. Return the small increment for Raj's editorial direction before expanding further.
+4. Let the outline emerge across iterations. Do not manufacture completeness merely because a conventional post structure is available.
+5. Once the argument stabilizes, state the objective and reader payoff, then identify the necessary entities, relationships, and mechanisms.
+6. Add diagrams, equations, examples, citations, annotations, or code only where they clarify the accepted argument.
+7. Write the smallest prose needed to connect the structure.
+8. Review for compounding value: links, ontology candidates, reusable definitions, and future engineering lessons.
 
 ## Collaboration model
 
@@ -85,9 +88,9 @@ The canvas is the converged artifact. Its claims should reflect Raj's accepted e
 
 Use the following voice boundary:
 
-- Use an objective third-person voice for explanatory sections by default.
-- First-person co-authored sections are allowed when the speaker is explicit. Raj may speak as “I”, and H.A.R.T. may speak as “I”.
-- H.A.R.T. may write Raj's first-person passages from Raj's supplied direction, experience, edits, and claims. Do not invent experiences, beliefs, or memories for him.
+- H.A.R.T. narrates explanatory sections and refers to Raj in the third person.
+- Do not place Raj in first person in the canvas unless he explicitly requests a first-person passage.
+- H.A.R.T. may speak as “I” when its perspective or participation matters. Do not invent experiences, beliefs, or memories for Raj.
 - When both voices appear near each other, label them **Raj:** and **H.A.R.T.:** or separate them under named headings.
 - Use “we” only for claims about the actual collaboration, shared implementation work, or a conclusion both authors have accepted. Do not use editorial “we” as a generic reader address.
 - Refer to Raj in third person when he is the subject of an explanatory claim rather than the active speaker.
@@ -105,15 +108,17 @@ Use the following voice boundary:
 ## Collaboration workflow
 
 1. Raj supplies direction conversationally; he is not required to author Markdown or structured records by hand.
-2. Establish the outline, reader path, and claim under test.
-3. H.A.R.T. writes a coherent canvas pass from Raj's current direction.
-4. C.A.R.R. reviews stable claims at decision boundaries rather than interrupting early exploration continuously.
-5. Raj gives each material challenge a disposition: accept, narrow, reject, defer, revise, or leave unresolved.
-6. H.A.R.T. updates the converged canvas without restoring superseded material. H.A.R.T. and C.A.R.R. maintain any structured dialogue record.
-7. Inspect the rendered result and repeat until the post has a stable model, evidence, presentation, and conclusion.
+2. H.A.R.T. reflects the supplied direction in a concise outline fragment and identifies the next question worth resolving.
+3. Raj and H.A.R.T. develop the argument in small increments. Raj's direction determines which branch expands next.
+4. H.A.R.T. produces a coherent canvas pass only after the relevant structure has stabilized or Raj explicitly requests one.
+5. C.A.R.R. reviews stable claims at decision boundaries rather than interrupting early exploration continuously.
+6. Raj gives each material challenge a disposition: accept, narrow, reject, defer, revise, or leave unresolved.
+7. H.A.R.T. updates the converged canvas without restoring superseded material. H.A.R.T. and C.A.R.R. maintain any structured dialogue record.
+8. Inspect the rendered result and repeat until the post has a stable model, evidence, presentation, and conclusion.
 
 Additional rules:
 
+- Prefer one conceptual decision or small section per pass during exploration. Completeness is a later convergence property, not the objective of the first response.
 - Alternate substantive writing passes with Raj's editorial passes.
 - Treat comments and annotations as design input, not incidental feedback.
 - Use attributed annotations when a useful voiced observation would weaken the direct canvas.
@@ -172,6 +177,8 @@ content/posts/<slug>/
 ```
 
 Use `canvas.md` for the post body. Keep metadata in `post.json` consistent with the title and slug.
+
+Read [`syntax.md`](syntax.md) before using blog-specific authoring constructs such as annotations or dialogues. Treat it as the durable authoring-syntax reference and update it whenever an SSG syntax or rendering contract changes.
 
 ## Pre-publication checklist
 

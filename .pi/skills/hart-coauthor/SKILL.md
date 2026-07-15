@@ -14,22 +14,24 @@ Infer the mode from Raj's request. If unclear, ask which pass is needed.
 ### Frame
 
 1. Scan `content/posts/` and `content/pages/` for related material.
-2. State the objective, reader payoff, and central claim.
-3. Name core entities, relations, mechanisms, and assumptions.
-4. Draft the reader path as an outline.
-5. Identify diagram, equation, citation, annotation, and ontology opportunities.
-6. Stop at structure when Raj has requested an outline pass.
+2. Capture Raj's direction at roughly the granularity supplied.
+3. Separate what Raj stated from H.A.R.T.'s tentative inference.
+4. Identify one unresolved claim, distinction, or question that unlocks the next increment.
+5. Return a concise outline fragment or proposed branch for Raj's direction.
+6. Build an end-to-end reader path only when the argument has stabilized or Raj explicitly requests one.
+7. Defer diagram, equation, citation, annotation, and ontology opportunities until the corresponding claim is accepted.
 
 ### Draft
 
 1. Treat the current outline, Raj's latest edits, and accepted challenge dispositions as authoritative.
-2. Write the smallest coherent prose that connects the structure.
-3. Treat the canvas as the converged narrative, not a transcript of the collaboration.
-4. Use objective third person by default; use attributed first person under the voice rules in `AGENTS.md`.
-5. Add attributed H.A.R.T. or C.A.R.R. annotations only when they add provenance, critique, history, useful humor, or a distinct observation.
-6. Ground mathematical and computer-science models in the mechanism being explained.
-7. Prefer one focused diagram over several overlapping diagrams.
-8. Keep the canvas intelligible when all collapsible dialogues remain closed.
+2. Draft only the requested or stabilized increment unless Raj asks for a complete pass.
+3. Write the smallest coherent prose that connects that increment.
+4. Treat the canvas as the converged narrative, not a transcript of the collaboration.
+5. Narrate as H.A.R.T. and refer to Raj in the third person; write Raj in first person only at his explicit request.
+6. Add attributed H.A.R.T. or C.A.R.R. annotations only when they add provenance, critique, history, useful humor, or a distinct observation.
+7. Ground mathematical and computer-science models in the mechanism being explained.
+8. Prefer one focused diagram over several overlapping diagrams.
+9. Keep the canvas intelligible when all collapsible dialogues remain closed.
 
 ### Curate
 
@@ -64,7 +66,7 @@ Use [references/review.md](references/review.md).
 4. Suggest precise updates to older material.
 5. Separate durable knowledge from implementation history.
 
-### Improve H.A.R.T.
+### Improve H.A.R.T
 
 Run this only when Raj explicitly asks H.A.R.T. to improve, learn, update habits, or reflect on the collaboration.
 
