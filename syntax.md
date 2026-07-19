@@ -14,6 +14,30 @@ content/posts/<slug>/
 
 Post-local dialogue records may be added beside these files.
 
+## Meditation files
+
+A meditation is one Markdown file:
+
+```text
+content/meditations/<slug>.md
+```
+
+It has exactly two front-matter fields:
+
+```markdown
+---
+title: A quiet morning
+date: 2026-07-19
+---
+
+The meditation begins here.
+```
+
+The date uses `YYYY-MM-DD`. Create the file with
+`npm run blog:new:meditation -- "A quiet morning"` rather than maintaining the
+front matter manually. Meditation Markdown supports ordinary text formatting
+without canvas panes, annotations, dialogues, Mermaid, or post-local assets.
+
 ## Markdown
 
 `canvas.md` supports standard Markdown, fenced code blocks, tables, and links.
@@ -109,5 +133,5 @@ Supported disposition statuses are `accepted`, `narrowed`, `rejected`, `deferred
 After changing publishable content or syntax usage, run:
 
 ```bash
-npm run blog:build:local
+npm run blog:build
 ```

@@ -74,14 +74,14 @@ Use [references/improvement.md](references/improvement.md). Review the current s
 
 ## Build verification
 
-After modifying publishable content, run:
-
-```bash
-npm run blog:build:local
-```
-
-Use the dependency build when validating the pinned production SSG:
+After modifying publishable content, validate with the lockfile-pinned SSG:
 
 ```bash
 npm run blog:build
+```
+
+The sibling SSG checkout is used only when explicitly synchronizing templates:
+
+```bash
+npm run blog:sync-templates:local
 ```
