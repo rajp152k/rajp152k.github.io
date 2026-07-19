@@ -25,6 +25,8 @@ Raj curates this space and posts raw consolidations of his thinking as video ess
 
 Raj wants the practice to remain sustainable. Writing should accumulate into a connected body of knowledge without requiring every thought to arrive fully formed. The publishing system should preserve earlier work, expose changes in reasoning, and remain simple enough to modify as his way of presenting ideas develops.
 
+The site has two publishing channels. Curated ideas developed with H.A.R.T. and C.A.R.R. reside on the [main index](../). Raj thinks raw through short microessays published as [meditations](../meditations/). The separation lets an idea exist before it is ready for collaborative formulation.
+
 He curates:
 
 - the questions worth pursuing;

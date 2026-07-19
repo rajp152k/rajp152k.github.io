@@ -12,9 +12,13 @@ content/posts/<slug>/
   canvas.md
 ```
 
-`canvas.md` contains the post. `post.json` declares its canvas panes and layout.
+`canvas.md` contains the post. `post.json` declares its creation time, canvas
+panes, and layout. `blog:new` writes `createdAt` once; authors do not maintain
+it manually.
 
-`.ssg/state.json` is versioned post metadata. It preserves each post's created and updated timestamps; do not edit it manually.
+Meditations are plain Markdown files under `content/meditations/`. They use
+only `title` and `date` front matter, appear newest-first under `/meditations/`,
+and are paginated after 20 entries.
 
 ## Commands
 
@@ -23,18 +27,10 @@ Normal use runs the GitHub dependency pinned in `package-lock.json`:
 ```bash
 npm install
 npm run blog:new -- "Post title"
+npm run blog:new:meditation -- "Meditation title"
 npm run blog:dev
 npm run blog:build
 npm run blog:check
-```
-
-SSG contributors can use the sibling checkout instead:
-
-```bash
-npm run blog:new:local -- "Post title"
-npm run blog:dev:local
-npm run blog:build:local
-npm run blog:check:local
 ```
 
 ## Templates
@@ -43,7 +39,7 @@ npm run blog:check:local
 
 ```bash
 npm run blog:sync-templates
-# or, when working on the sibling checkout:
+# explicitly copy templates from a sibling SSG checkout:
 npm run blog:sync-templates:local
 ```
 
