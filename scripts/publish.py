@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#/usr/bin/env python3
 """Build the Markdown meditation archive."""
 
 from __future__ import annotations
@@ -103,7 +103,7 @@ def build(items: list[tuple[date, str, str, str]]) -> None:
         f'<tr><td>{published.isoformat()}</td><td><a href="{slug}/">{escape(title)}</a></td></tr>'
         for published, title, slug, _ in items
     )
-    index = f"<h1>yet another raj</h1><table><thead><tr><th>Date</th><th>Meditation</th></tr></thead><tbody>{rows}</tbody></table>"
+    index = f"<h1>meditations of yet another raj</h1><table><thead><tr><th>Date</th><th>Meditation</th></tr></thead><tbody>{rows}</tbody></table>"
     (SITE / "index.html").write_text(page("yet another raj", index))
 
     for _, title, slug, body in items:
