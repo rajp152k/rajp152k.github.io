@@ -1,0 +1,32 @@
+name: Update meditation index
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "meditations/**/*.md"
+      - "scripts/generate_readme.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Generate meditation table
+        run: python3 scripts/generate_readme.py
+
+      - name: Commit updated index
+        run: |
+          if git diff --quiet -- README.md; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "update meditation index [skip ci]"
+          git push
