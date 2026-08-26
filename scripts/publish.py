@@ -22,10 +22,10 @@ FRONT_MATTER = re.compile(r"\A---\n(?P<front_matter>.*?)\n---\n", re.DOTALL)
 CSS = """
 @font-face { font-family: VT323; src: url("/VT323-Regular.ttf") format("truetype"); font-display: swap; }
 :root { color-scheme: dark; font-family: VT323, ui-monospace, monospace; background: #000; color: #00ff00; }
-body { max-width: 44rem; margin: 4rem auto; padding: 0 1rem; line-height: 1.35; font-size: 1.35rem; }
+body { max-width: 44rem; margin: clamp(2rem, 8vw, 4rem) auto; padding: 0 1rem; line-height: 1.35; font-size: clamp(1.2rem, 4vw, 1.35rem); overflow-wrap: break-word; }
 a { color: #39ff14; } a:hover { background: #00ff00; color: #000; text-decoration: none; }
 ::selection { background: #00b300; color: #000; } pre { overflow-x: auto; padding: 1rem; border: 1px solid #006600; } code { font: inherit; }
-table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid #006600; padding: .5rem 0; text-align: left; } th + th, td + td { border-left: 1px solid #006600; padding-left: .75rem; }
+table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid #006600; padding: .5rem 0; text-align: left; } th:first-child, td:first-child { width: 10ch; white-space: nowrap; } th + th, td + td { border-left: 1px solid #006600; padding-left: .75rem; } td + td { overflow-wrap: anywhere; }
 """.strip()
 
 
