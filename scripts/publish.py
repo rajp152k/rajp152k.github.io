@@ -19,10 +19,11 @@ END = "<!-- meditations:end -->"
 FRONT_MATTER = re.compile(r"\A---\n(?P<front_matter>.*?)\n---\n", re.DOTALL)
 
 CSS = """
-:root { color-scheme: light dark; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-body { max-width: 44rem; margin: 4rem auto; padding: 0 1rem; line-height: 1.6; }
-a { color: inherit; } pre { overflow-x: auto; padding: 1rem; } code { font: inherit; }
-table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid; padding: .5rem 0; text-align: left; }
+:root { color-scheme: dark; font-family: VT323, ui-monospace, monospace; background: #000; color: #00ff00; }
+body { max-width: 44rem; margin: 4rem auto; padding: 0 1rem; line-height: 1.35; font-size: 1.35rem; }
+a { color: #39ff14; } a:hover { background: #00ff00; color: #000; text-decoration: none; }
+::selection { background: #00b300; color: #000; } pre { overflow-x: auto; padding: 1rem; border: 1px solid #006600; } code { font: inherit; }
+table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid #006600; padding: .5rem 0; text-align: left; }
 """.strip()
 
 
