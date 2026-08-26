@@ -1,4 +1,4 @@
-#/usr/bin/env python3
+# /usr/bin/env python3
 """Build the Markdown meditation archive."""
 
 from __future__ import annotations
@@ -14,16 +14,18 @@ ROOT = Path(__file__).resolve().parent.parent
 MEDITATIONS = ROOT / "meditations"
 README = ROOT / "README.md"
 SITE = ROOT / "site"
+FONT = ROOT / "assets" / "VT323-Regular.ttf"
 START = "<!-- meditations:start -->"
 END = "<!-- meditations:end -->"
 FRONT_MATTER = re.compile(r"\A---\n(?P<front_matter>.*?)\n---\n", re.DOTALL)
 
 CSS = """
+@font-face { font-family: VT323; src: url("/VT323-Regular.ttf") format("truetype"); font-display: swap; }
 :root { color-scheme: dark; font-family: VT323, ui-monospace, monospace; background: #000; color: #00ff00; }
 body { max-width: 44rem; margin: 4rem auto; padding: 0 1rem; line-height: 1.35; font-size: 1.35rem; }
 a { color: #39ff14; } a:hover { background: #00ff00; color: #000; text-decoration: none; }
 ::selection { background: #00b300; color: #000; } pre { overflow-x: auto; padding: 1rem; border: 1px solid #006600; } code { font: inherit; }
-table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid #006600; padding: .5rem 0; text-align: left; }
+table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid #006600; padding: .5rem 0; text-align: left; } th + th, td + td { border-left: 1px solid #006600; padding-left: .75rem; }
 """.strip()
 
 
@@ -115,9 +117,10 @@ def build(items: list[tuple[date, str, str, str]]) -> None:
         (destination / "index.html").write_text(page(title, content))
 
     try:
+        shutil.copy(FONT, SITE / FONT.name)
         shutil.copy(ROOT / "CNAME", SITE / "CNAME")
     except OSError as error:
-        raise RuntimeError("could not copy CNAME") from error
+        raise RuntimeError("could not copy site assets") from error
 
 
 def main() -> None:
