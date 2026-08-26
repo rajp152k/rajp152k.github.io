@@ -25,7 +25,7 @@ CSS = """
 body { max-width: 44rem; margin: clamp(2rem, 8vw, 4rem) auto; padding: 0 1rem; line-height: 1.35; font-size: clamp(1.2rem, 4vw, 1.35rem); overflow-wrap: break-word; }
 a { color: #39ff14; } a:hover { background: #00ff00; color: #000; text-decoration: none; }
 ::selection { background: #00b300; color: #000; } pre { overflow-x: auto; padding: 1rem; border: 1px solid #006600; } code { font: inherit; }
-table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid #006600; padding: .5rem 0; text-align: left; } th:first-child, td:first-child { width: 10ch; white-space: nowrap; } th + th, td + td { border-left: 1px solid #006600; padding-left: .75rem; } td + td { overflow-wrap: anywhere; }
+table { border-collapse: collapse; width: 100%; } th, td { border-bottom: 1px solid #006600; padding: .5rem 0; text-align: left; } th:first-child, td:first-child { width: 10ch; padding-right: 1rem; white-space: nowrap; } th + th, td + td { border-left: 1px solid #006600; padding-left: 1rem; } td + td { overflow-wrap: anywhere; }
 """.strip()
 
 
