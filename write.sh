@@ -23,4 +23,4 @@ if [[ -e "$file" ]]; then
 fi
 
 printf -- '---\ntitle: %s\ndate: %s\n---\n\n' "$title" "$(date +%F)" >"$file"
-exec vi "$file"
+exec nvim "$file"
