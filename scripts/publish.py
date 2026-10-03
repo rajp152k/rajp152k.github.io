@@ -111,7 +111,7 @@ def render_map(items: list[Post], projection: Projection) -> str:
 </svg>"""
 
 
-def render_index(items: list[Post], projection: Projection, dimension: int) -> str:
+def render_index(items: list[Post], projection: Projection, dimension: int, model_id: str) -> str:
     rows = "\n".join(
         f'<tr><td class="archive-date"><time datetime="{published.isoformat()}">{published.isoformat()}</time></td>'
         f'<td class="post-cell"><a class="post-link" href="{quote(slug, safe="")}/" '
@@ -141,7 +141,7 @@ def render_index(items: list[Post], projection: Projection, dimension: int) -> s
   </section>
   <section class="panel map-panel" aria-labelledby="map-title">
     <header class="panel-head">
-      <h2 id="map-title">PCA</h2>
+      <h2 id="map-title">PCA <a class="model-card" href="https://huggingface.co/{quote(model_id, safe='/')}" aria-label="Embedding model card: {escape(model_id)}">{escape(model_id.rsplit('/', 1)[-1])}</a></h2>
       <span class="panel-meta" title="Input dimensions → displayed dimensions / embedding variance retained">{dimension} → 2 / {variance}</span>
     </header>
     <div class="map-stage">{render_map(items, projection)}</div>
@@ -209,7 +209,7 @@ def build_site(
             raise RuntimeError(f"could not clear {SITE}") from error
     SITE.mkdir()
     export_public(connection, SITE / "blog.sqlite", prepared, spec)
-    index = render_index(items, projection, spec["dimension"])
+    index = render_index(items, projection, spec["dimension"], spec["model"])
     (SITE / "index.html").write_text(page("yet another raj", index, index=True))
 
     for published, title, slug, body in items:

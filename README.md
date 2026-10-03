@@ -196,6 +196,8 @@ move as posts are added or revised. The retained-variance caption measures
 projection fidelity, not semantic accuracy; with three posts, two components can
 retain all centered variance. Empty, single-post, and identical-vector archives
 are handled without inventing separation.
+The PCA heading includes a small link to the configured embedding model's Hugging
+Face model card; its label and URL come from `embedding.json`.
 
 Hovering or focusing a post highlights its corresponding map point and shows its
 title/date in a fixed readout. Each point is a native post link, so navigation

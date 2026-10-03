@@ -45,6 +45,11 @@ h1, h2, p { margin-top: 0; }
 .panel-head { flex: none; display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 7px 10px; border-bottom: 1px solid var(--border); }
 .panel-head h2 { margin: 0; font-size: 14px; font-weight: 400; }
 .panel-meta { color: var(--muted); font-size: 11px; white-space: nowrap; }
+.map-panel .panel-head { flex-wrap: wrap; row-gap: 3px; }
+.map-panel .panel-head h2 { display: flex; align-items: baseline; gap: 8px; }
+.map-panel .panel-meta { margin-left: auto; }
+.model-card { color: var(--muted); font-size: 11px; }
+.model-card:hover, .model-card:focus-visible { color: var(--target); }
 .archive-scroll { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--muted) var(--background); }
 .archive-scroll:focus-visible { outline-offset: -2px; }
 .archive-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
