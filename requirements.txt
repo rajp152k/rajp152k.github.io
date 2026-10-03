@@ -1,1 +1,2 @@
 Markdown==3.8.2
+numpy==2.2.3

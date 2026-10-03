@@ -5,60 +5,32 @@ from __future__ import annotations
 
 import re
 import shutil
+import sqlite3
 import sys
-from datetime import date
 from html import escape
-from pathlib import Path
+from urllib.parse import quote
 
-ROOT = Path(__file__).resolve().parent.parent
-MEDITATIONS = ROOT / "meditations"
+from archive import ROOT, Post, meditations
+from embedding_state import (
+    DATABASE,
+    PreparedPost,
+    check_fresh,
+    export_public,
+    load_spec,
+    open_database,
+    prepare_posts,
+)
+from projection import Projection, project
+
 README = ROOT / "README.md"
 SITE = ROOT / "site"
 FONT = ROOT / "assets" / "FiraMono-Regular.ttf"
 START = "<!-- meditations:start -->"
 END = "<!-- meditations:end -->"
-FRONT_MATTER = re.compile(r"\A---\n(?P<front_matter>.*?)\n---\n", re.DOTALL)
-
-CSS = """
-@font-face { font-family: "Fira Mono"; src: url("/FiraMono-Regular.ttf") format("truetype"); font-display: swap; }
-:root { color-scheme: dark; font-family: "Fira Mono", ui-monospace, monospace; background: #000; color: #00ff00; }
-body { max-width: 44rem; margin: clamp(2rem, 8vw, 4rem) auto; padding: 0 1rem; line-height: 1.35; font-size: clamp(1.2rem, 4vw, 1.35rem); overflow-wrap: break-word; }
-a { color: #39ff14; } a:hover { background: #00ff00; color: #000; text-decoration: none; }
-::selection { background: #00b300; color: #000; } pre { overflow-x: auto; padding: 1rem; border: 1px solid #006600; } code { font: inherit; }
-h1 { text-align: center; }
-table { border: 1px solid #006600; border-collapse: collapse; width: fit-content; max-width: 100%; margin: 0 auto; } th, td { padding: .5rem 1rem; text-align: center; } thead { border-bottom: 1px solid #006600; } th:first-child, td:first-child { width: 10ch; white-space: nowrap; } th + th, td + td { border-left: 1px solid #006600; } td + td { overflow-wrap: anywhere; }
-""".strip()
 
 
-def parse(path: Path) -> tuple[date, str, str, str]:
-    source = path.read_text()
-    match = FRONT_MATTER.match(source)
-    if match is None:
-        raise ValueError(f"{path}: missing front matter")
 
-    fields = dict(
-        line.split(":", 1)
-        for line in match.group("front_matter").splitlines()
-        if ":" in line
-    )
-    title = fields.get("title", "").strip()
-    published = fields.get("date", "").strip()
-    if not title or not published:
-        raise ValueError(f"{path}: front matter requires title and date")
-
-    return (
-        date.fromisoformat(published),
-        title,
-        path.stem,
-        source[match.end() :].strip(),
-    )
-
-
-def meditations() -> list[tuple[date, str, str, str]]:
-    return sorted((parse(path) for path in MEDITATIONS.glob("*.md")), reverse=True)
-
-
-def update_readme(items: list[tuple[date, str, str, str]]) -> None:
+def update_readme(items: list[Post]) -> None:
     table = ["| Date | Meditation |", "| --- | --- |"]
     table.extend(
         f"| {published.isoformat()} | [{title.replace('|', '\\|')}](meditations/{slug}.md) |"
@@ -74,28 +46,161 @@ def update_readme(items: list[tuple[date, str, str, str]]) -> None:
     README.write_text(updated)
 
 
-def page(title: str, content: str) -> str:
+def site_header(*, index: bool = False) -> str:
+    title_tag = "h1" if index else "span"
+    return f"""<header class="site-header">
+  <{title_tag} class="site-title"><a class="site-name" href="/" aria-label="Meditations of yet another raj — index">meditations of yet another raj</a></{title_tag}>
+</header>"""
+
+
+def post_attributes(published, title: str, slug: str) -> str:
+    return (
+        f'data-post="{escape(slug, quote=True)}" '
+        f'data-title="{escape(title, quote=True)}" '
+        f'data-date="{published.isoformat()}"'
+    )
+
+
+def render_map(items: list[Post], projection: Projection) -> str:
+    points = list(projection.points.values())
+    if points:
+        xs, ys = zip(*points)
+        x_low, x_high, y_low, y_high = min(xs), max(xs), min(ys), max(ys)
+        x_span, y_span = x_high - x_low, y_high - y_low
+        scales = [
+            size / span
+            for size, span in ((512, x_span), (400, y_span))
+            if span > 0
+        ]
+        scale = min(scales) if scales else 1
+        x_center, y_center = (x_low + x_high) / 2, (y_low + y_high) / 2
+    else:
+        scale, x_center, y_center = 1, 0, 0
+    origin_x, origin_y = 320 - x_center * scale, 260 + y_center * scale
+    nodes = []
+    for published, title, slug, _ in items:
+        score_x, score_y = projection.points[slug]
+        x, y = 320 + (score_x - x_center) * scale, 260 - (score_y - y_center) * scale
+        right = x > 320
+        label_x, anchor = (x - 16, "end") if right else (x + 16, "start")
+        # Fira Mono at 12px advances approximately 7.2 SVG units per character.
+        label_width = label_x - 24 if right else 616 - label_x
+        capacity = max(1, int(label_width / 7.2))
+        label = title if len(title) <= capacity else title[:capacity - 1].rstrip() + "…"
+        nodes.append(f"""<a class="map-point" href="{quote(slug, safe='')}/" tabindex="0"
+    aria-label="{escape(title, quote=True)} — {published.isoformat()}" {post_attributes(published, title, slug)}>
+  <title>{escape(title)} · {published.isoformat()}</title>
+  <circle class="map-hit" cx="{x:.3f}" cy="{y:.3f}" r="24"/>
+  <circle class="map-halo" cx="{x:.3f}" cy="{y:.3f}" r="14"/>
+  <circle class="map-dot" cx="{x:.3f}" cy="{y:.3f}" r="6"/>
+  <text class="map-label" x="{label_x:.3f}" y="{y - 16:.3f}" text-anchor="{anchor}">{escape(label)}</text>
+</a>""")
+    if not nodes:
+        nodes.append('<text class="map-empty" x="320" y="260">Publish a meditation to begin the map.</text>')
+    density = " many-points" if len(items) > 12 else ""
+    return f"""<svg class="embedding-map{density}" viewBox="0 0 640 520"
+    role="group" aria-labelledby="map-title map-description">
+  <desc id="map-description">A two-dimensional PCA projection of post embeddings. Each point links to a meditation. Nearby points suggest similar text.</desc>
+  <g aria-hidden="true">
+    <path class="map-axes" d="M 32 {origin_y:.3f} H 608 M {origin_x:.3f} 32 V 488"/>
+    <text class="map-axis-label" x="604" y="{max(44, origin_y - 8):.3f}" text-anchor="end">PC1</text>
+    <text class="map-axis-label" x="{origin_x + 8:.3f}" y="42">PC2</text>
+    <text class="map-axis-label" x="{origin_x + 8:.3f}" y="{origin_y + 16:.3f}">0</text>
+  </g>
+  {''.join(nodes)}
+</svg>"""
+
+
+def render_index(items: list[Post], projection: Projection, dimension: int) -> str:
+    rows = "\n".join(
+        f'<tr><td class="archive-date"><time datetime="{published.isoformat()}">{published.isoformat()}</time></td>'
+        f'<td class="post-cell"><a class="post-link" href="{quote(slug, safe="")}/" '
+        f'{post_attributes(published, title, slug)}>{escape(title)}</a></td></tr>'
+        for published, title, slug, _ in items
+    )
+    if not rows:
+        rows = '<tr><td colspan="2" class="archive-empty">No meditations published yet.</td></tr>'
+    variance = (
+        f"{projection.variance:.0%} variance"
+        if projection.variance is not None else "zero variance"
+    )
+    return f"""{site_header(index=True)}
+<main class="workspace">
+  <section class="panel archive-panel" aria-labelledby="archive-title">
+    <header class="panel-head">
+      <h2 id="archive-title">Index</h2>
+      <span class="panel-meta">{len(items)} posts</span>
+    </header>
+    <div class="archive-scroll" tabindex="0" role="region" aria-label="Meditations">
+      <table class="archive-table">
+        <colgroup><col class="date-column"><col></colgroup>
+        <thead><tr><th scope="col">Published</th><th scope="col">Meditation</th></tr></thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+  </section>
+  <section class="panel map-panel" aria-labelledby="map-title">
+    <header class="panel-head">
+      <h2 id="map-title">PCA</h2>
+      <span class="panel-meta" title="Input dimensions → displayed dimensions / embedding variance retained">{dimension} → 2 / {variance}</span>
+    </header>
+    <div class="map-stage">{render_map(items, projection)}</div>
+    <footer class="map-footer">
+      <div class="map-readout">
+        <p class="map-readout-title">Hover or focus a post</p>
+        <p class="map-readout-date"></p>
+      </div>
+    </footer>
+  </section>
+</main>"""
+
+
+def page(title: str, content: str, *, index: bool = False) -> str:
+    prefix = "" if index else "../"
+    scripts = (
+        '<script defer src="map.js"></script>'
+        if index else """<script>
+    window.MathJax = {tex: {inlineMath: [['$', '$']], displayMath: [['$$', '$$']]}};
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-chtml-nofont.js"></script>"""
+    )
     return f"""<!doctype html>
 <html lang=\"en\">
 <head>
   <meta charset=\"utf-8\">
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
   <title>{escape(title)}</title>
-  <style>{CSS}</style>
-  <script>
-    window.MathJax = {{tex: {{inlineMath: [['$', '$']], displayMath: [['$$', '$$']]}}}};
-  </script>
-  <script async src=\"https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-chtml-nofont.js\"></script>
+  <link rel="stylesheet" href="{prefix}site.css">
+  {scripts}
 </head>
-<body>
+<body class="{'index-page' if index else 'post-page'}">
 {content}
 </body>
 </html>
 """
 
 
-def build(items: list[tuple[date, str, str, str]]) -> None:
-    import markdown  # pyright: ignore[reportMissingModuleSource]
+def build(items: list[Post]) -> None:
+    spec = load_spec()
+    prepared = prepare_posts(items, spec)
+    connection = open_database(DATABASE)
+    try:
+        connection.execute("BEGIN")
+        check_fresh(connection, prepared, spec)
+        projection = project(connection, spec["dimension"])
+        build_site(items, connection, prepared, spec, projection)
+    finally:
+        connection.close()
+
+
+def build_site(
+    items: list[Post],
+    connection: sqlite3.Connection,
+    prepared: list[PreparedPost],
+    spec: dict,
+    projection: Projection,
+) -> None:
+    import markdown
 
     if SITE.exists():
         try:
@@ -103,33 +208,43 @@ def build(items: list[tuple[date, str, str, str]]) -> None:
         except OSError as error:
             raise RuntimeError(f"could not clear {SITE}") from error
     SITE.mkdir()
-    rows = "\n".join(
-        f'<tr><td>{published.isoformat()}</td><td><a href="{slug}/">{escape(title)}</a></td></tr>'
-        for published, title, slug, _ in items
-    )
-    index = f"<h1>meditations of yet another raj</h1><table><thead><tr><th>Date</th><th>Meditation</th></tr></thead><tbody>{rows}</tbody></table>"
-    (SITE / "index.html").write_text(page("yet another raj", index))
+    export_public(connection, SITE / "blog.sqlite", prepared, spec)
+    index = render_index(items, projection, spec["dimension"])
+    (SITE / "index.html").write_text(page("yet another raj", index, index=True))
 
-    for _, title, slug, body in items:
+    for published, title, slug, body in items:
         destination = SITE / slug
         destination.mkdir()
         html = markdown.markdown(body, extensions=["fenced_code", "tables"])
-        content = f'<p><a href="/">← index</a></p><article><h1>{escape(title)}</h1>{html}</article>'
+        content = f"""{site_header()}
+<main class="reading-shell">
+  <nav class="post-navigation" aria-label="Archive"><a class="back-link" href="/">← index</a></nav>
+  <article class="article-content">
+    <p class="post-meta"><time datetime="{published.isoformat()}">{published.isoformat()}</time></p>
+    <h1>{escape(title)}</h1>{html}
+  </article>
+</main>"""
         (destination / "index.html").write_text(page(title, content))
 
     try:
         shutil.copy(FONT, SITE / FONT.name)
+        shutil.copy(ROOT / "assets" / "site.css", SITE / "site.css")
+        shutil.copy(ROOT / "assets" / "map.js", SITE / "map.js")
         shutil.copy(ROOT / "CNAME", SITE / "CNAME")
     except OSError as error:
         raise RuntimeError("could not copy site assets") from error
 
 
 def main() -> None:
-    items = meditations()
-    if "--readme" in sys.argv:
-        update_readme(items)
-        return
-    build(items)
+    try:
+        items = meditations()
+        if "--readme" in sys.argv:
+            update_readme(items)
+            return
+        build(items)
+    except (OSError, ValueError, sqlite3.Error) as error:
+        print(f"publish: {error}", file=sys.stderr)
+        raise SystemExit(1) from error
 
 
 if __name__ == "__main__":

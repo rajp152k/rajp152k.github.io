@@ -1,0 +1,14 @@
+{
+  "model": "Alibaba-NLP/gte-modernbert-base",
+  "revision": "e7f32e3c00f91d699e8c43b53106206bcc72bb22",
+  "dimension": 768,
+  "preprocessing": "markdown-text-v1",
+  "max_words": 512,
+  "max_tokens": 2048,
+  "prefix": "",
+  "pooling": "model",
+  "aggregation": "token-weighted-normalized-mean-v1",
+  "normalize": true,
+  "precision": "float32",
+  "backend": "torch"
+}
