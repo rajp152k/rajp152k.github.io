@@ -53,15 +53,15 @@ def site_header(*, index: bool = False) -> str:
 </header>"""
 
 
-def post_attributes(published, title: str, slug: str) -> str:
+def post_attributes(published, post_id: str, slug: str) -> str:
     return (
         f'data-post="{escape(slug, quote=True)}" '
-        f'data-title="{escape(title, quote=True)}" '
+        f'data-post-id="{post_id}" '
         f'data-date="{published.isoformat()}"'
     )
 
 
-def render_map(items: list[Post], projection: Projection) -> str:
+def render_map(items: list[Post], projection: Projection, post_ids: dict[str, str]) -> str:
     points = list(projection.points.values())
     if points:
         xs, ys = zip(*points)
@@ -79,21 +79,17 @@ def render_map(items: list[Post], projection: Projection) -> str:
     origin_x, origin_y = 320 - x_center * scale, 260 + y_center * scale
     nodes = []
     for published, title, slug, _ in items:
+        post_id = post_ids[slug]
         score_x, score_y = projection.points[slug]
         x, y = 320 + (score_x - x_center) * scale, 260 - (score_y - y_center) * scale
         right = x > 320
         label_x, anchor = (x - 16, "end") if right else (x + 16, "start")
-        # Fira Mono at 12px advances approximately 7.2 SVG units per character.
-        label_width = label_x - 24 if right else 616 - label_x
-        capacity = max(1, int(label_width / 7.2))
-        label = title if len(title) <= capacity else title[:capacity - 1].rstrip() + "…"
         nodes.append(f"""<a class="map-point" href="{quote(slug, safe='')}/" tabindex="0"
-    aria-label="{escape(title, quote=True)} — {published.isoformat()}" {post_attributes(published, title, slug)}>
-  <title>{escape(title)} · {published.isoformat()}</title>
+    aria-label="{post_id} — {escape(title, quote=True)} — {published.isoformat()}" {post_attributes(published, post_id, slug)}>
   <circle class="map-hit" cx="{x:.3f}" cy="{y:.3f}" r="24"/>
   <circle class="map-halo" cx="{x:.3f}" cy="{y:.3f}" r="14"/>
   <circle class="map-dot" cx="{x:.3f}" cy="{y:.3f}" r="6"/>
-  <text class="map-label" x="{label_x:.3f}" y="{y - 16:.3f}" text-anchor="{anchor}">{escape(label)}</text>
+  <text class="map-label" x="{label_x:.3f}" y="{y - 16:.3f}" text-anchor="{anchor}">{post_id}</text>
 </a>""")
     if not nodes:
         nodes.append('<text class="map-empty" x="320" y="260">Publish a meditation to begin the map.</text>')
@@ -112,10 +108,13 @@ def render_map(items: list[Post], projection: Projection) -> str:
 
 
 def render_index(items: list[Post], projection: Projection, dimension: int, model_id: str) -> str:
+    post_ids = {post[2]: f"x{index:x}" for index, post in enumerate(reversed(items))}
+    id_width = len(f"x{max(len(items) - 1, 0):x}")
     rows = "\n".join(
         f'<tr><td class="archive-date"><time datetime="{published.isoformat()}">{published.isoformat()}</time></td>'
         f'<td class="post-cell"><a class="post-link" href="{quote(slug, safe="")}/" '
-        f'{post_attributes(published, title, slug)}>{escape(title)}</a></td></tr>'
+        f'{post_attributes(published, post_ids[slug], slug)}><span class="post-id">{post_ids[slug]}</span> '
+        f'<span>{escape(title)}</span></a></td></tr>'
         for published, title, slug, _ in items
     )
     if not rows:
@@ -132,7 +131,7 @@ def render_index(items: list[Post], projection: Projection, dimension: int, mode
       <span class="panel-meta">{len(items)} posts</span>
     </header>
     <div class="archive-scroll" tabindex="0" role="region" aria-label="Meditations">
-      <table class="archive-table">
+      <table class="archive-table" style="--post-id-width: {id_width}ch">
         <colgroup><col class="date-column"><col></colgroup>
         <thead><tr><th scope="col">Published</th><th scope="col">Meditation</th></tr></thead>
         <tbody>{rows}</tbody>
@@ -144,10 +143,10 @@ def render_index(items: list[Post], projection: Projection, dimension: int, mode
       <h2 id="map-title">PCA <a class="model-card" href="https://huggingface.co/{quote(model_id, safe='/')}" aria-label="Embedding model card: {escape(model_id)}">{escape(model_id.rsplit('/', 1)[-1])}</a></h2>
       <span class="panel-meta" title="Input dimensions → displayed dimensions / embedding variance retained">{dimension} → 2 / {variance}</span>
     </header>
-    <div class="map-stage">{render_map(items, projection)}</div>
+    <div class="map-stage">{render_map(items, projection, post_ids)}</div>
     <footer class="map-footer">
       <div class="map-readout">
-        <p class="map-readout-title">Hover or focus a post</p>
+        <p class="map-readout-id">—</p>
         <p class="map-readout-date"></p>
       </div>
     </footer>

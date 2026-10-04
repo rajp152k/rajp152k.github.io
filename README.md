@@ -173,7 +173,7 @@ For isolated archives or experiments, the embed command also accepts
 The homepage uses a compact, fixed-viewport split layout: an independently
 scrolling chronological table on the left and an embeddings panel on the right.
 Table headings stay visible while the rows scroll. On narrow screens, the panels
-stack within the same fixed shell; short viewports use a reduced caption layout.
+stack within the same fixed shell; the compact ID/date readout stays on one line.
 Article pages share the Fira Mono, green-on-black treatment but retain normal
 reading scroll.
 
@@ -181,7 +181,7 @@ The palette follows the local tmux, Neovim, and Ghostty themes: pure black
 (`#000000`), primary green (`#00ff00`), secondary green (`#00b300`), subdued
 separators (`#006600`), and bright green/white for active targets. There are no
 logos, decorative taglines, shadows, or promotional footers. Space is reserved
-for the post list, coordinate diagram, projection statistics, and title/date
+for the post list, coordinate diagram, projection statistics, and ID/date
 readout.
 
 During publishing, `scripts/projection.py` reads the validated SQLite vectors and
@@ -199,8 +199,16 @@ are handled without inventing separation.
 The PCA heading includes a small link to the configured embedding model's Hugging
 Face model card; its label and URL come from `embedding.json`.
 
-Hovering or focusing a post highlights its corresponding map point and shows its
-title/date in a fixed readout. Each point is a native post link, so navigation
+Posts have zero-based, lowercase hexadecimal display IDs: `x0`, `x1`, …, `xe`,
+`xf`, `x10`, …, assigned from oldest to newest in the archive's chronological
+order. The newest post has the highest ID. The index pairs IDs with full titles;
+PCA labels and hover/focus readouts use only IDs and dates, with full titles
+retained in accessible link labels rather than native hover tooltips.
+
+IDs are derived presentation indexes, not stored identities or permalinks:
+backdated insertions, deletions, or changes to archive ordering can renumber them.
+Hovering or focusing either view still highlights the corresponding entry in
+both views. Each point is a native post link, so navigation
 still works without JavaScript. The homepage loads only local assets: it does
 not fetch the SQLite file, run an embedding model, or require a charting framework.
 

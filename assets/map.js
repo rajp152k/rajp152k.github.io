@@ -15,9 +15,9 @@
     links.push(link);
   }
 
-  const title = root.querySelector('.map-readout-title');
+  const identifier = root.querySelector('.map-readout-id');
   const date = root.querySelector('.map-readout-date');
-  const defaultTitle = 'Hover or focus a post';
+  const defaultId = '—';
   const defaultDate = '';
   let pointerLink = null;
   let focusedLink = null;
@@ -49,7 +49,7 @@
       }
       activeSlug = slug;
     }
-    if (title) title.textContent = link ? (link.dataset.title ?? defaultTitle) : defaultTitle;
+    if (identifier) identifier.textContent = link ? (link.dataset.postId ?? defaultId) : defaultId;
     if (date) date.textContent = link ? (link.dataset.date ?? defaultDate) : defaultDate;
   }
 
