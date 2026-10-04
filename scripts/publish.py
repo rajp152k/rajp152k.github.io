@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 import shutil
 import sqlite3
@@ -25,6 +26,7 @@ from projection import Projection, project
 README = ROOT / "README.md"
 SITE = ROOT / "site"
 FONT = ROOT / "assets" / "FiraMono-Regular.ttf"
+ACCOUNTS = ROOT / "accounts.json"
 START = "<!-- meditations:start -->"
 END = "<!-- meditations:end -->"
 
@@ -46,10 +48,24 @@ def update_readme(items: list[Post]) -> None:
     README.write_text(updated)
 
 
-def site_header(*, index: bool = False) -> str:
+def render_account_menu() -> str:
+    accounts = json.loads(ACCOUNTS.read_text(encoding="utf-8"))
+    links = []
+    for account in accounts:
+        label = escape(account["label"], quote=True)
+        icon = (ROOT / "assets" / "icons" / f"{account['icon']}.svg").read_text(encoding="utf-8")
+        links.append(
+            f'<a class="account-link" href="{escape(account["url"], quote=True)}" '
+            f'aria-label="{label}" title="{label}">{icon}</a>'
+        )
+    return f'<nav class="account-menu" aria-label="Accounts">{"".join(links)}</nav>'
+
+
+def site_header(account_menu: str, *, index: bool = False) -> str:
     title_tag = "h1" if index else "span"
     return f"""<header class="site-header">
   <{title_tag} class="site-title"><a class="site-name" href="/" aria-label="Meditations of yet another raj — index">meditations of yet another raj</a></{title_tag}>
+  {account_menu}
 </header>"""
 
 
@@ -107,7 +123,9 @@ def render_map(items: list[Post], projection: Projection, post_ids: dict[str, st
 </svg>"""
 
 
-def render_index(items: list[Post], projection: Projection, dimension: int, model_id: str) -> str:
+def render_index(
+    items: list[Post], projection: Projection, dimension: int, model_id: str, account_menu: str
+) -> str:
     post_ids = {post[2]: f"x{index:x}" for index, post in enumerate(reversed(items))}
     id_width = len(f"x{max(len(items) - 1, 0):x}")
     rows = "\n".join(
@@ -123,7 +141,7 @@ def render_index(items: list[Post], projection: Projection, dimension: int, mode
         f"{projection.variance:.0%} variance"
         if projection.variance is not None else "zero variance"
     )
-    return f"""{site_header(index=True)}
+    return f"""{site_header(account_menu, index=True)}
 <main class="workspace">
   <section class="panel archive-panel" aria-labelledby="archive-title">
     <header class="panel-head">
@@ -200,6 +218,7 @@ def build_site(
     projection: Projection,
 ) -> None:
     import markdown
+    account_menu = render_account_menu()
 
     if SITE.exists():
         try:
@@ -208,14 +227,14 @@ def build_site(
             raise RuntimeError(f"could not clear {SITE}") from error
     SITE.mkdir()
     export_public(connection, SITE / "blog.sqlite", prepared, spec)
-    index = render_index(items, projection, spec["dimension"], spec["model"])
+    index = render_index(items, projection, spec["dimension"], spec["model"], account_menu)
     (SITE / "index.html").write_text(page("yet another raj", index, index=True))
 
     for published, title, slug, body in items:
         destination = SITE / slug
         destination.mkdir()
         html = markdown.markdown(body, extensions=["fenced_code", "tables"])
-        content = f"""{site_header()}
+        content = f"""{site_header(account_menu)}
 <main class="reading-shell">
   <nav class="post-navigation" aria-label="Archive"><a class="back-link" href="/">← index</a></nav>
   <article class="article-content">

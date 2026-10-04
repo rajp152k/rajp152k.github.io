@@ -31,7 +31,7 @@ publishing. It synchronizes metadata and deletions as well as computing vectors:
 | New post, title change, or changed prepared body text | Yes | Only missing/changed posts |
 | Date-only correction, unchanged-content rename, or deleted post | Yes | None; synchronize metadata/reuse vectors |
 | Model/revision, chunking, preprocessing, or aggregation policy | Yes | Re-embed the archive |
-| CSS, map interaction, HTML layout, PCA presentation, or README | No | None |
+| CSS, account-menu data/icons, map interaction, HTML layout, PCA presentation, or README | No | None |
 | Nothing changed | Optional | None; unchanged state is a no-op |
 
 The updater hashes the prepared title/body and complete embedding specification.
@@ -95,7 +95,7 @@ uses Python 3.13 and only `requirements.txt` to:
 
 Pull requests targeting `master` run validation and build, **not deployment**.
 Pushes to `master` deploy when posts, scripts, assets, requirements, embedding
-configuration/database, tests, the workflow, or `CNAME` change. README-only edits
+configuration/database, `accounts.json`, tests, the workflow, or `CNAME` change. README-only edits
 do not trigger deployment. To republish unchanged content, use **Actions →
 Publish → Run workflow** with branch `master`, or:
 
@@ -167,6 +167,33 @@ can be regenerated from the Markdown and pinned configuration.
 
 For isolated archives or experiments, the embed command also accepts
 `--posts PATH`, `--database PATH`, and `--spec PATH`.
+
+## Account menu
+
+The top-right header menu appears on the index and every post. Its initial
+GitHub, Goodreads, and X destinations come from the profiles linked on the
+[nilenso author page](https://nilenso.com/people/raj-patil/).
+
+Edit `accounts.json`, an ordered array of entries:
+
+```json
+{
+  "label": "GitHub",
+  "url": "https://github.com/rajp152k",
+  "icon": "github"
+}
+```
+
+`label` supplies the accessible link name and hover hint, `url` the destination,
+and `icon` the basename of a local `assets/icons/<icon>.svg`. Array order controls
+menu order. The publisher reads the configuration once per build and embeds the
+SVGs directly into each page; visitors fetch neither the JSON nor remote icons.
+Links work without JavaScript. Icons are neon green, with brighter green on
+hover/focus; on narrow screens the title wraps while the menu stays at the right.
+
+SVG paths are vendored from Simple Icons 13.13.0 under
+[CC0](https://cdn.jsdelivr.net/npm/simple-icons@13.13.0/LICENSE.md).
+Account-data and icon changes trigger Pages CI without embedding inference.
 
 ## Homepage and PCA map
 

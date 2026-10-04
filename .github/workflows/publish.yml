@@ -8,6 +8,7 @@ on:
       - "scripts/**/*.py"
       - "requirements*.txt"
       - "embedding.json"
+      - "accounts.json"
       - "blog.sqlite"
       - "assets/**"
       - "tests/**"
