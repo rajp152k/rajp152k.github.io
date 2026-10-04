@@ -11,8 +11,9 @@
   --muted: #00b300;
   --border: #006600;
   --active: #39ff14;
+  --violet: #a878e8;
   --target: #ffffff;
-  --highlight: #002b00;
+  --highlight: #150d20;
   --mono: "Fira Mono", ui-monospace, monospace;
   background: var(--background);
   color: var(--text);
@@ -48,7 +49,7 @@ h1, h2, p { margin-top: 0; }
 .map-panel .panel-head { flex-wrap: wrap; row-gap: 3px; }
 .map-panel .panel-head h2 { display: flex; align-items: baseline; gap: 8px; }
 .map-panel .panel-meta { margin-left: auto; }
-.model-card { color: var(--muted); font-size: 11px; }
+.model-card { color: var(--violet); font-size: 11px; }
 .model-card:hover, .model-card:focus-visible { color: var(--target); }
 .archive-scroll { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--muted) var(--background); }
 .archive-scroll:focus-visible { outline-offset: -2px; }
@@ -59,7 +60,7 @@ h1, h2, p { margin-top: 0; }
 .archive-date { padding: 10px; color: var(--muted); font-size: 12px; line-height: 1.5; white-space: nowrap; }
 .post-cell { padding: 0; }
 .post-link { display: grid; grid-template-columns: var(--post-id-width) minmax(0, 1fr); gap: 8px; padding: 9px 10px 9px 7px; border-left: 2px solid transparent; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; text-decoration: none; }
-.post-link:hover, .post-link.is-active, .post-link:focus-visible { border-left-color: var(--active); color: var(--target); background: var(--highlight); }
+.post-link:hover, .post-link.is-active, .post-link:focus-visible { border-left-color: var(--violet); color: var(--target); background: var(--highlight); }
 .post-id { color: var(--muted); white-space: nowrap; }
 .post-link:hover .post-id, .post-link.is-active .post-id, .post-link:focus-visible .post-id { color: inherit; }
 .post-link:focus-visible { outline-offset: -2px; }
@@ -72,7 +73,7 @@ h1, h2, p { margin-top: 0; }
 .map-point, .map-point:focus-visible { outline: none; text-decoration: none; }
 .map-hit { fill: transparent; }
 .map-dot { fill: var(--text); stroke: var(--background); stroke-width: 1; vector-effect: non-scaling-stroke; }
-.map-halo { fill: none; stroke: var(--active); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: 0; }
+.map-halo { fill: none; stroke: var(--violet); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: 0; }
 .map-label { fill: var(--text); font: 12px var(--mono); }
 .map-point:hover .map-dot, .map-point.is-active .map-dot, .map-point:focus-visible .map-dot { fill: var(--target); }
 .map-point:hover .map-halo, .map-point.is-active .map-halo, .map-point:focus-visible .map-halo { opacity: 1; }

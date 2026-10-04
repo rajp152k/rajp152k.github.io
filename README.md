@@ -184,6 +184,11 @@ logos, decorative taglines, shadows, or promotional footers. Space is reserved
 for the post list, coordinate diagram, projection statistics, and ID/date
 readout.
 
+Violet (`#a878e8`) is limited to the model-card link, active point ring, and
+matching row marker. The active row uses a near-black violet tint (`#150d20`);
+its text and point stay white. Frames, axes, ordinary points, headings, body text,
+keyboard focus outlines, and text selection retain their green treatment.
+
 During publishing, `scripts/projection.py` reads the validated SQLite vectors and
 uses NumPy's exact centered SVD to project them into two principal components.
 There is no feature standardization or whitening. The SVG uses a single scale
