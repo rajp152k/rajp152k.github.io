@@ -5,8 +5,10 @@ on:
     branches: [master]
     paths:
       - "meditations/**/*.md"
-      - "scripts/**/*.py"
+      - "scripts/**"
       - "requirements*.txt"
+      - "package.json"
+      - "package-lock.json"
       - "embedding.json"
       - "accounts.json"
       - "blog.sqlite"
@@ -36,12 +38,20 @@ jobs:
         with:
           python-version: "3.13"
           cache: pip
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "24"
+          cache: npm
+      - name: Install search build dependencies
+        run: npm ci
       - name: Install publishing dependencies
         run: python3 -m pip install -r requirements.txt
       - name: Check committed embedding freshness
         run: python3 scripts/embed.py --check
       - name: Run state and PCA regressions
         run: python3 -m unittest discover -s tests -v
+      - name: Run lexical search regressions
+        run: npm test
       - name: Build site and public SQLite snapshot
         run: python3 scripts/publish.py
       # yamllint disable-line rule:line-length

@@ -48,8 +48,9 @@ class _VisibleText(HTMLParser):
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
-        self.blocks: list[str] = []
+        self.blocks: list[dict[str, str]] = []
         self.parts: list[str] = []
+        self.kind = "body"
         self.pre = False
         self.code_depth = 0
         self.hidden: str | None = None
@@ -58,7 +59,7 @@ class _VisibleText(HTMLParser):
         text = "".join(self.parts)
         text = text.strip("\n") if self.pre else text.strip()
         if text:
-            self.blocks.append(text)
+            self.blocks.append({"kind": self.kind, "text": text})
         self.parts.clear()
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
@@ -69,8 +70,11 @@ class _VisibleText(HTMLParser):
         elif tag == "pre":
             self.flush()
             self.pre = True
+            self.kind = "code"
         elif tag in self.BLOCKS:
             self.flush()
+            if tag in {"h1", "h2", "h3", "h4", "h5", "h6"}:
+                self.kind = "heading"
         elif tag == "br":
             self.parts.append("\n")
         elif tag == "code":
@@ -89,8 +93,10 @@ class _VisibleText(HTMLParser):
         if tag == "pre":
             self.flush()
             self.pre = False
+            self.kind = "body"
         elif tag in self.BLOCKS:
             self.flush()
+            self.kind = "body"
         elif tag == "code":
             self.code_depth = max(0, self.code_depth - 1)
 
@@ -101,7 +107,7 @@ class _VisibleText(HTMLParser):
             )
 
 
-def prepared_text(post: Post) -> str:
+def visible_blocks(post: Post) -> list[dict[str, str]]:
     import markdown
     from markdown.extensions import Extension
     from markdown.inlinepatterns import InlineProcessor
@@ -126,10 +132,14 @@ def prepared_text(post: Post) -> str:
                 185,
             )
 
-    _, title, _, body = post
+    _, _, _, body = post
     html = markdown.markdown(body, extensions=["fenced_code", "tables", PreserveMath()])
     parser = _VisibleText()
     parser.feed(html)
     parser.close()
     parser.flush()
-    return "\n\n".join((title, *parser.blocks))
+    return parser.blocks
+
+
+def prepared_text(post: Post) -> str:
+    return "\n\n".join((post[1], *(block["text"] for block in visible_blocks(post))))

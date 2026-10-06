@@ -31,7 +31,7 @@ publishing. It synchronizes metadata and deletions as well as computing vectors:
 | New post, title change, or changed prepared body text | Yes | Only missing/changed posts |
 | Date-only correction, unchanged-content rename, or deleted post | Yes | None; synchronize metadata/reuse vectors |
 | Model/revision, chunking, preprocessing, or aggregation policy | Yes | Re-embed the archive |
-| CSS, account-menu data/icons, map interaction, HTML layout, PCA presentation, or README | No | None |
+| CSS, account-menu data/icons, map interaction, search logic, HTML layout, PCA presentation, or README | No | None |
 | Nothing changed | Optional | None; unchanged state is a no-op |
 
 The updater hashes the prepared title/body and complete embedding specification.
@@ -41,6 +41,13 @@ CI **never** computes embeddings or downloads a model.
 
 ### Preview and publish
 
+Install Node.js 24+ and the pinned search/build dependencies once (or after changing
+`package-lock.json`):
+
+```sh
+npm ci
+```
+
 After writing, revising, renaming, or deleting posts:
 
 ```sh
@@ -48,8 +55,8 @@ After writing, revising, renaming, or deleting posts:
 .venv-embed/bin/python scripts/publish.py
 ```
 
-The second command builds `site/`, including the PCA map and public SQLite
-snapshot. For a local preview:
+The second command builds `site/`, including the PCA map, lexical index, hashed
+local assets, and public SQLite snapshot. For a local preview:
 
 ```sh
 .venv-embed/bin/python -m http.server 8765 --directory site
@@ -80,22 +87,23 @@ To check freshness without changing the database or loading the model:
 .venv-embed/bin/python scripts/embed.py --check
 ```
 
-A freshness check, the regression suite, and a site build need only
-`requirements.txt`; model inference additionally needs `requirements-embed.txt`.
+A freshness check and the Python regression suite need only `requirements.txt`.
+A site build also needs Node.js and `npm ci`; model inference additionally needs
+`requirements-embed.txt`. Do not commit `node_modules/`.
 
 ### GitHub CI and deployment
 
 The [Publish workflow](https://github.com/rajp152k/rajp152k.github.io/actions/workflows/publish.yml)
-uses Python 3.13 and only `requirements.txt` to:
+uses Python 3.13 with `requirements.txt`, Node.js 24, and `npm ci` to:
 
 1. Check that the committed `blog.sqlite` matches the current posts and policy.
-2. Run deterministic state/export and PCA geometry regressions.
-3. Generate the HTML, local assets, PCA map, and allowlisted public database.
+2. Run deterministic state/export, PCA geometry, and lexical-search regressions.
+3. Generate the HTML, bundled assets, lexical index, PCA map, and allowlisted public database.
 4. Upload `site/` and deploy GitHub Pages at <https://yetanotherraj.com/>.
 
 Pull requests targeting `master` run validation and build, **not deployment**.
 Pushes to `master` deploy when posts, scripts, assets, requirements, embedding
-configuration/database, `accounts.json`, tests, the workflow, or `CNAME` change. README-only edits
+configuration/database, npm manifests, `accounts.json`, tests, the workflow, or `CNAME` change. README-only edits
 do not trigger deployment. To republish unchanged content, use **Actions →
 Publish → Run workflow** with branch `master`, or:
 
@@ -170,7 +178,7 @@ For isolated archives or experiments, the embed command also accepts
 
 ## Account menu
 
-The top-right header menu appears on the index and every post. Its initial
+The top-right header menu appears on the index, search page, and every post. Its initial
 GitHub, Goodreads, and X destinations come from the profiles linked on the
 [nilenso author page](https://nilenso.com/people/raj-patil/).
 
@@ -200,7 +208,7 @@ Account-data and icon changes trigger Pages CI without embedding inference.
 The homepage uses a compact, fixed-viewport split layout: an independently
 scrolling chronological table on the left and an embeddings panel on the right.
 Table headings stay visible while the rows scroll. On narrow screens, the panels
-stack within the same fixed shell; the compact ID/date readout stays on one line.
+stack within the same fixed shell; the compact ID/title/date readout stays on one line.
 Article pages share the Fira Mono, green-on-black treatment but retain normal
 reading scroll.
 
@@ -208,7 +216,7 @@ The palette follows the local tmux, Neovim, and Ghostty themes: pure black
 (`#000000`), primary green (`#00ff00`), secondary green (`#00b300`), subdued
 separators (`#006600`), and bright green/white for active targets. There are no
 logos, decorative taglines, shadows, or promotional footers. Space is reserved
-for the post list, coordinate diagram, projection statistics, and ID/date
+for the post list, coordinate diagram, projection statistics, and ID/title/date
 readout.
 
 Violet (`#a878e8`) is limited to the model-card link, active point ring, and
@@ -234,8 +242,8 @@ Face model card; its label and URL come from `embedding.json`.
 Posts have zero-based, lowercase hexadecimal display IDs: `x0`, `x1`, …, `xe`,
 `xf`, `x10`, …, assigned from oldest to newest in the archive's chronological
 order. The newest post has the highest ID. The index pairs IDs with full titles;
-PCA labels and hover/focus readouts use only IDs and dates, with full titles
-retained in accessible link labels rather than native hover tooltips.
+PCA points have no visible labels. The footer shows ID, full title, and date on
+hover or focus; accessible point links retain the title without native hover tooltips.
 
 IDs are derived presentation indexes, not stored identities or permalinks:
 backdated insertions, deletions, or changes to archive ordering can renumber them.
@@ -244,10 +252,44 @@ both views. Each point is a native post link, so navigation
 still works without JavaScript. The homepage loads only local assets: it does
 not fetch the SQLite file, run an embedding model, or require a charting framework.
 
-`assets/site.css` controls the shared visual treatment; `assets/map.js` adds
-progressive cross-highlighting. Publishing now needs NumPy in addition to
-Markdown, both pinned in `requirements.txt`; inference dependencies remain
-separate. The public SQLite schema is unchanged.
+`assets/site.css` controls the shared visual treatment; `assets/map.js` supplies
+the linked-view interaction shared by `assets/index.js` and `assets/search.js`.
+Publishing uses pinned Markdown/NumPy from `requirements.txt` and MiniSearch/esbuild
+from `package-lock.json`; inference dependencies remain separate. The public SQLite
+schema is unchanged.
+
+## Lexical search
+
+Every page has a native GET form targeting `/search/?q=…`. At widths of at least
+900px it sits between the site name and account icons, separated by vertical rules;
+on narrow screens it moves below them. The post slug `search` is reserved.
+
+The static search page uses MiniSearch 7.2.0 with AND matching across title, headings,
+and body, weighted **5 / 2 / 1**. Headings and titles are not duplicated into body.
+Tokens use Unicode NFKC and lowercase, preserve internal apostrophes and `C++`/`C#`,
+and split punctuation, hyphens, and underscores. Terms of at least three Unicode
+codepoints also match word prefixes. There is no stemming, fuzzy matching, phrase
+syntax, or operator language. Score ties use newest date, then binary slug order.
+
+Results highlight complete matching tokens and show one block-bounded excerpt of
+up to 220 codepoints plus ellipses, preferring distinct term coverage, exact matches,
+then the earliest block/window. Title-only matches use the opening body block.
+Text extraction is shared with embedding preparation without changing embedding inputs.
+
+Only matching rows remain in the table. Nonmatching map points stay at their
+archive-wide coordinates and become faint, noninteractive context; IDs, axes,
+scale, and retained variance do not change with the query. Live edits are debounced
+and replace the current URL rather than creating a history entry for each edit.
+Native post links preserve modified clicks, and Back restores query, result scroll,
+and the activated post. IME composition is respected. With a usable viewport below
+480px the search page allows document scrolling as well as result scrolling.
+
+The publisher builds a content-addressed `search-index.<sha256>.json` and hashed
+JavaScript, CSS, and font assets before replacing the previous preview. The search
+page fetches the index only for searchable input and rejects incompatible payloads.
+Homepage and article pages do not fetch it or the SQLite artifact. Search requires
+JavaScript; without it, the search page links to the fully usable archive. Loading,
+empty, no-match, punctuation-only, and unavailable-index states are explicit.
 
 ## Public SQLite artifact
 
@@ -279,10 +321,11 @@ SQLite runtime is included.
 
 ## Verification
 
-Run deterministic state, integrity, text-preparation, export, and PCA geometry regressions:
+Run deterministic state, integrity, text-preparation, export, PCA geometry, and lexical-search regressions:
 
 ```sh
 .venv-embed/bin/python -m unittest discover -s tests -v
+npm test
 ```
 
 Real-model and tokenizer smoke scenarios were exercised separately: initial

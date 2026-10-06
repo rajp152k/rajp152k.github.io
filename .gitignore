@@ -3,6 +3,7 @@ site/
 __pycache__/
 .venv/
 .venv-embed/
+node_modules/
 blog.sqlite-journal
 blog.sqlite-wal
 blog.sqlite-shm

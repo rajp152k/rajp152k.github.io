@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from scripts.archive import prepared_text
+from scripts.archive import prepared_text, visible_blocks
 from scripts.embedding_state import (
     check_fresh,
     export_public,
@@ -109,6 +109,23 @@ class EmbeddingStateTests(unittest.TestCase):
 
 
 class PreparedTextTests(unittest.TestCase):
+    def test_visible_blocks_preserve_heading_body_code_and_visible_html_text(self):
+        post = (
+            date(2026, 10, 1), "Title", "visible",
+            "## A **heading**\n\n"
+            "Read [the outline](https://example.com/private) and ![diagram](private.png).\n\n"
+            "<!-- hidden comment -->\n\n"
+            "<script>hidden script</script>\n\n"
+            "```python\n  x = \"<value>\"\n  return x\n```\n\n"
+            "Math $x_1 + y^2$ and `inline_code`.",
+        )
+        self.assertEqual(visible_blocks(post), [
+            {"kind": "heading", "text": "A heading"},
+            {"kind": "body", "text": "Read the outline and diagram."},
+            {"kind": "code", "text": '  x = "<value>"\n  return x'},
+            {"kind": "body", "text": "Math $x_1 + y^2$ and inline_code."},
+        ])
+
     def test_code_math_and_link_text_survive_without_comments_or_urls(self):
         post = (
             date(2026, 10, 1),
