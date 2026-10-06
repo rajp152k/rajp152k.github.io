@@ -83,7 +83,6 @@ h1, h2, p { margin-top: 0; }
 .archive-empty { padding: 10px; color: var(--muted); }
 .post-excerpt { grid-column: 2; display: block; margin-top: 2px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .post-excerpt[hidden] { display: none; }
-.entry-summary { grid-column: 2; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .post-excerpt mark, .post-title mark { background: transparent; color: var(--text); text-decoration: underline; text-underline-offset: .15em; }
 .post-link.is-active mark, .post-link:hover mark, .post-link:focus-visible mark { color: inherit; }
 .search-message { margin: 0; padding: 10px; color: var(--muted); }
@@ -135,12 +134,9 @@ h1, h2, p { margin-top: 0; }
 .article-content th { font-weight: 400; }
 .article-content img { max-width: 100%; height: auto; }
 .article-content mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
-.log-provenance { margin: 0 0 24px; padding: 10px 0; border-block: 1px solid var(--border); font-size: 13px; }
-.log-provenance > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px; margin: 4px 0; }
-.log-provenance dt { color: var(--muted); }
-.log-provenance dd { margin: 0; overflow-wrap: anywhere; }
-.log-provenance ul { margin: 0; padding-left: 16px; }
-.entry-support { margin-top: 24px; border-top: 1px solid var(--border); }
+.mermaid-diagram { margin: 1em 0; max-width: 100%; overflow-x: auto; }
+.mermaid-diagram svg { display: block; max-width: 100%; height: auto; margin-inline: auto; }
+.diagram-error { color: var(--target); }
 
 @media (max-width: 900px) {
   .site-header { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; }

@@ -73,13 +73,6 @@ def post_attributes(entry: Entry, code: str) -> str:
     )
 
 
-def log_summary(entry: Entry) -> str:
-    agent = entry.metadata.get("agent", {})
-    fields = [entry.metadata["status"], agent.get("model") or "model unknown"]
-    fields.append(f"effort {agent.get('effort') or 'unknown'}")
-    return " · ".join(fields)
-
-
 def render_map(entries: list[Entry], projection: Projection, codes: dict[str, str], selected: set[str]) -> str:
     points = list(projection.points.values())
     if points:
@@ -131,14 +124,13 @@ def render_archive(
         hidden = " hidden" if search else ""
         excerpt_id = f"excerpt-{quote(entry.key, safe='')}"
         excerpt = f'<span class="post-excerpt" id="{excerpt_id}" hidden></span>' if search else ""
-        summary = f'<span class="entry-summary">{escape(log_summary(entry))}</span>' if entry.kind == "logs" else ""
         rows.append(
             f'<tr data-post="{escape(entry.key, quote=True)}" data-kind="{entry.kind}"{hidden}>'
             f'<td class="archive-date"><time datetime="{entry.published_iso}">{entry.date_label}</time></td>'
             f'<td class="post-cell"><a class="post-link" href="{escape(entry.url, quote=True)}" '
             f'aria-label="{entry.kind} {codes[entry.key]} {escape(entry.title, quote=True)}" '
             f'{post_attributes(entry, codes[entry.key])}><span class="post-id">{codes[entry.key]}</span> '
-            f'<span class="post-title">{escape(entry.title)}</span>{summary}{excerpt}</a></td></tr>'
+            f'<span class="post-title">{escape(entry.title)}</span>{excerpt}</a></td></tr>'
         )
     if not rows and not search:
         rows.append('<tr><td colspan="2" class="archive-empty">No entries published in this collection yet.</td></tr>')
@@ -172,48 +164,18 @@ def render_archive(
 </main>"""
 
 
-def log_provenance(entry: Entry) -> str:
-    agent = entry.metadata.get("agent", {})
-    details = [("Status", entry.metadata["status"]), ("Agent", agent.get("name") or "unknown"),
-               ("Agent model", agent.get("model") or "unknown"), ("Effort", agent.get("effort") or "unknown")]
-    if agent.get("provider"):
-        details.append(("Provider", agent["provider"]))
-    if entry.metadata.get("task"):
-        details.append(("Task", entry.metadata["task"]))
-    fields = "".join(f"<div><dt>{escape(label)}</dt><dd>{escape(value)}</dd></div>" for label, value in details)
-    contributors = entry.metadata.get("contributors", [])
-    if contributors:
-        people = []
-        for person in contributors:
-            pieces = [person.get("name") or "agent", person.get("role"), person.get("provider"),
-                      person.get("model") or "model unknown", f"effort {person.get('effort') or 'unknown'}"]
-            people.append(f"<li>{escape(' · '.join(piece for piece in pieces if piece))}</li>")
-        fields += f'<div><dt>Contributors</dt><dd><ul>{"".join(people)}</ul></dd></div>'
-    return f'<dl class="log-provenance" aria-label="Log provenance">{fields}</dl>'
-
-
-def entry_content(entry: Entry, entries: list[Entry], code: str, account_menu: str) -> str:
+def entry_content(entry: Entry, code: str, account_menu: str) -> str:
     import markdown
 
     body = markdown.markdown(entry.body, extensions=["fenced_code", "tables"])
     timestamp = entry.published_iso.replace("T", " ").replace("+00:00", " UTC").replace("Z", " UTC")
-    provenance = log_provenance(entry) if entry.kind == "logs" else ""
-    supporting = []
-    if entry.metadata.get("related"):
-        titles = {item.url: item.title for item in entries}
-        links = "".join(f'<li><a href="{escape(url, quote=True)}">{escape(titles.get(url) or url)}</a></li>' for url in entry.metadata["related"])
-        supporting.append(f'<section class="entry-support" aria-labelledby="related-title"><h2 id="related-title">Related entries</h2><ul>{links}</ul></section>')
-    if entry.artifacts:
-        links = "".join(f'<li><a href="{escape(artifact.url, quote=True)}">{escape(artifact.label)}</a></li>' for artifact in entry.artifacts)
-        supporting.append(f'<section class="entry-support" aria-labelledby="artifacts-title"><h2 id="artifacts-title">Artifacts</h2><ul>{links}</ul></section>')
-    label = "agent log" if entry.kind == "logs" else "meditation"
+    identity = f"{code} · meditation · " if entry.kind == "meditations" else ""
     return f"""{site_header(account_menu, scope=entry.kind)}
 <main class="reading-shell">
   <nav class="post-navigation" aria-label="Archive"><a class="back-link" href="{COLLECTIONS[entry.kind]}">← {entry.kind}</a> · <a class="back-link" href="/">all entries</a></nav>
   <article class="article-content">
-    <p class="post-meta">{code} · {label} · <time datetime="{entry.published_iso}">{timestamp}</time></p>
-    <h1>{escape(entry.title)}</h1>{provenance}{body}
-    {''.join(supporting)}
+    <p class="post-meta">{identity}<time datetime="{entry.published_iso}">{timestamp}</time></p>
+    <h1>{escape(entry.title)}</h1>{body}
   </article>
 </main>"""
 
@@ -227,6 +189,8 @@ def page(title: str, content: str, assets: dict[str, str], *, kind: str, scope: 
     window.MathJax = {tex: {inlineMath: [['$', '$']], displayMath: [['$$', '$$']]}};
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-chtml-nofont.js"></script>"""
+        if '<code class="language-mermaid">' in content:
+            scripts += f'\n  <script type="module" src="{assets["article"]}"></script>'
         classes = "post-page" + (" log-page" if scope == "logs" else "")
     data = f' data-search-index="{search_index}"' if kind == "search" else ""
     return f"""<!doctype html>
@@ -276,7 +240,7 @@ def build_site(entries: list[Entry], connection: sqlite3.Connection, prepared: l
                  for entry in entries]
     payload = node_output("build_search.mjs", source=json.dumps(documents, ensure_ascii=False)).encode("utf-8")
     index_name = f"search-index.{hashlib.sha256(payload).hexdigest()}.json"
-    # Stage the complete archive and allowlisted artifacts before replacing a preview.
+    # Stage the complete archive before replacing a preview.
     with TemporaryDirectory(prefix="blog-site-") as directory:
         staged = Path(directory)
         assets = json.loads(node_output("build_assets.mjs", directory))
@@ -295,13 +259,8 @@ def build_site(entries: list[Entry], connection: sqlite3.Connection, prepared: l
         for entry in entries:
             destination = staged / unquote(entry.url.lstrip("/"))
             destination.mkdir(parents=True)
-            content = entry_content(entry, entries, codes[entry.key], account_menu)
+            content = entry_content(entry, codes[entry.key], account_menu)
             (destination / "index.html").write_text(page(entry.title, content, assets, kind="post", scope=entry.kind), encoding="utf-8")
-            for artifact in entry.artifacts:
-                if artifact.source is not None:
-                    target = staged / unquote(artifact.url.lstrip("/"))
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copyfile(artifact.source, target)
         shutil.copy(ROOT / "CNAME", staged / "CNAME")
         if SITE.exists():
             shutil.rmtree(SITE)

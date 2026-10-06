@@ -1,60 +1,52 @@
 ---
 title: Two collections, one archive
 date: 2026-10-06T10:54:12Z
-status: complete
-agent:
-  name: omp coding assistant
-  model: null
-  effort: null
-task: Add agent progress logs alongside human meditations.
-contributors:
-  - name: Archive and embedding worker
-    role: Shared entry parsing, identity migration, and cached-vector reuse
-    model: null
-    effort: null
-  - name: Source-search worker
-    role: Namespaced search identities and collection filtering
-    model: null
-    effort: null
-related:
-  - /programming/
-  - /embeddings/
-artifacts:
-  - label: Verification checkpoints
-    path: artifacts/2026-10-06-two-collections-one-archive/verification.txt
 ---
 
-## Decision
+# Abstract
 
-Human writing belongs in `meditations/`; agent progress notes belong in `logs/`.
-They share an archive, but not authorship. The combined index should make both
-visible without turning the agent's working record into the author's writing.
+This log explains why raj keeps records of agent work separate from personal meditations. Both collections use one archive.
 
-Meditations use `mx` followed by a lowercase hexadecimal number. Logs use `lx`
-with an independent sequence. These are chronological display codes, not permanent
-identities: links use the entry's collection and permalink.
+# Context
 
-The PCA map uses filled meditation points and outlined log points. Collection and
-search filters preserve the combined archive's coordinates while excluded entries
-remain faint, noninteractive context. Codes and titles appear in the linked footer,
-not as labels scattered across the plot.
+raj wants a record of work that agents do at raj's request. The blog already holds raj's personal writing. The work records need to remain available without becoming part of that writing.
 
-## Implementation checkpoint
+# Different authors
 
-The shared publisher and native collection views have been implemented. The
-source-search checkpoint passed eleven behavioral regressions, including separate
-identities for meditation and log entries that have the same slug.
+raj writes meditations. Agents write logs when raj asks for a record. The separate collections make this difference clear.
 
-The embedding cutover is designed to reuse existing meditation vectors by their
-prepared-text and model-specification hashes. Log provenance and supporting
-artifacts stay outside the text used for lexical indexing and embeddings.
+A log explains the reason for a task, the action, and the result or expected change. A meditation can contain personal thoughts without following that format.
 
-## Evidence and provenance
+# One place to find entries
 
-Verification checkpoints are attached separately so that evidence can grow without
-rewriting this note or changing its embedding input. The note's status describes
-the work at its latest metadata update.
+Separate collections do not need separate search systems. The same index, search, and map include both collections. raj can find entries about a subject across both collections, then use a collection filter to limit the view.
 
-The runtime model identifier and configured effort level were not exposed to this
-session. They are recorded as unknown rather than inferred. Contributor names
-identify implementation roles, not model identities.
+```mermaid
+flowchart TB
+  accTitle: Separate authors, one archive
+  accDescr: raj writes meditations. Agents write logs at raj's request. Both collections enter the shared archive.
+  R[raj] --> M[Meditations]
+  R -->|Requests a record| A[Agents]
+  A --> L[Logs]
+  M --> S[Shared archive]
+  L --> S
+```
+
+# Clear source labels
+
+The index uses `mx` codes for meditations and `lx` codes for logs. Each collection has its own number sequence. The map uses filled points for meditations and outlined points for logs. These signs keep the source clear when both collections appear together.
+
+# Review before publication
+
+Each log has only a title and date before the text. Links can connect a log to earlier meditations and blogs.
+
+raj can review and revise a local draft before asking for a commit. A revision does not approve a commit. A commit does not approve publication.
+
+# Conclusion
+
+raj can keep a record of agent work without changing the purpose of meditations. Both remain easy to find in one archive.
+
+# Past relevant meditations and blogs
+
+- [programming](/programming/) — raj describes changes in programming and a plan to return to personal writing.
+- [Blog Update [0]](/embeddings/) — explains the blog's embedding map.

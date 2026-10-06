@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
-from scripts.archive import Artifact, Entry, prepared_text, visible_blocks
+from scripts.archive import Entry, prepared_text, visible_blocks
 from scripts.embedding_state import (
     check_fresh,
     export_public,
@@ -63,14 +63,11 @@ class EmbeddingStateTests(unittest.TestCase):
         pending = pending_entries(self.connection, prepare_entries(revised_date, changed_model), changed_model)
         self.assertEqual({entry.key for entry in pending}, {"meditations/studying", "meditations/programming"})
 
-    def test_log_metadata_and_artifacts_do_not_invalidate_vectors(self):
-        log = Entry("logs", "session", "Session", datetime(2026, 10, 1, tzinfo=timezone.utc), "Understanding concepts.",
-                    {"status": "in-progress", "agent": {"model": None, "effort": None}})
+    def test_log_date_changes_preserve_vectors(self):
+        log = Entry("logs", "session", "Session", datetime(2026, 10, 1, tzinfo=timezone.utc), "Understanding concepts.")
         prepared = prepare_entries([log], self.spec)
         synchronize(self.connection, prepared, self.spec, {log.key: self.vector})
-        revised = replace(log, published=datetime(2026, 10, 2, 12, tzinfo=timezone.utc),
-                          metadata={"status": "complete", "agent": {"model": "known-model", "effort": "high"}, "task": "Metadata only"},
-                          artifacts=(Artifact("Result", "https://example.com/result", None),))
+        revised = replace(log, published=datetime(2026, 10, 2, 12, tzinfo=timezone.utc))
         updated = prepare_entries([revised], self.spec)
         self.assertEqual(pending_entries(self.connection, updated, self.spec), [])
         synchronize(self.connection, updated, self.spec, {})
@@ -108,8 +105,7 @@ class EmbeddingStateTests(unittest.TestCase):
         with self.connection:
             self.connection.execute("CREATE TABLE private_notes (body TEXT)")
             self.connection.execute("INSERT INTO private_notes VALUES (?)", (secret,))
-        log = Entry("logs", "studying", "Study session", datetime(2026, 10, 2, 12, tzinfo=timezone.utc), "A different session.",
-                    {"status": "complete"})
+        log = Entry("logs", "studying", "Study session", datetime(2026, 10, 2, 12, tzinfo=timezone.utc), "A different session.")
         current = prepare_entries([self.entries[0], log], self.spec)
         log_vector = struct.pack("<" + "f" * self.spec["dimension"], 0.0, 1.0, *([0.0] * (self.spec["dimension"] - 2)))
         synchronize(self.connection, current, self.spec, {log.key: log_vector})

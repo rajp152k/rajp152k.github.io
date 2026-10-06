@@ -3,10 +3,14 @@
 
 ## Writing and publishing
 
-Human writing lives in `meditations/`; agent progress notes live in `logs/`. Both are
+Human writing lives in `meditations/`; agent operational logs live in `logs/`. Both are
 Markdown with YAML front matter. Create a meditation with `./write.sh "Title"`; the
 command quotes titles safely and opens the file in Neovim. Agents write logs, not
 meditation prose, unless explicitly asked to edit it. Markdown remains the source of truth.
+
+Create logs only when requested. Use **Abstract**, **Context**, only the necessary
+named sections, **Conclusion**, and **Past relevant meditations and blogs**. Explain
+the work and its purpose in ASD-STE100, not as a report of agent tool calls.
 
 ### Local embedding setup
 
@@ -34,7 +38,6 @@ publishing. It synchronizes metadata and deletions as well as computing vectors:
 | Date-only correction, unchanged-content rename, namespace migration, or deleted entry | Yes | None; synchronize metadata/reuse vectors |
 | Model/revision, chunking, preprocessing, or aggregation policy | Yes | Re-embed the archive |
 | CSS, account-menu data/icons, map interaction, search logic, HTML layout, PCA presentation, or README | No | None |
-| Agent model/effort/status/task/related/contributors or artifact-only changes | No | None; rebuild the site |
 | Nothing changed | Optional | None; unchanged state is a no-op |
 
 The updater hashes the prepared title/body and complete embedding specification.
@@ -132,7 +135,7 @@ vectors using the model's own pooling implementation.
 Prepared input is the title followed by visible Markdown text. It preserves
 headings, lists, code, mathematical notation, and paragraph boundaries while
 excluding comments, script/style content, and link destinations.
-Log metadata and supporting artifact contents are not prepared text. Entry keys are
+The publication date is not part of the prepared text. Entry keys are
 namespaced (`meditations/<slug>` or `logs/<slug>`); the namespace cutover reuses
 unchanged vectors by prepared-text/model hashes rather than recomputing them.
 
@@ -273,48 +276,71 @@ the linked-view interaction shared by `assets/index.js` and `assets/search.js`.
 Publishing uses pinned Markdown/NumPy/PyYAML from `requirements.txt` and MiniSearch/esbuild
 from `package-lock.json`; inference dependencies remain separate.
 
-## Agent logs and artifacts
+## Operational logs
 
-Write concise milestone notes, not raw tool transcripts. Separate intent, decisions,
-observed progress, verification evidence, and unresolved work. Model and effort are
-runtime provenance: leave them unknown if unavailable, and never infer them. Effort
-settings are provider-specific, not cross-model quality scores.
-
-For example, `logs/2026-10-06-two-collections-one-archive.md` has structured fields:
+Keep each log in one Markdown file directly in `logs/`. Use only title and date
+in front matter:
 
 ```yaml
 title: Two collections, one archive
 date: 2026-10-06T10:54:12Z
-status: in-progress
-agent:
-  name: omp coding assistant
-  model: null
-  effort: null
-task: Add agent progress logs alongside human meditations.
-related:
-  - /programming/
-artifacts:
-  - label: Verification checkpoints
-    path: artifacts/2026-10-06-two-collections-one-archive/verification.txt
 ```
 
-Logs require title, timezone-aware timestamp, and status (`in-progress`, `blocked`,
-or `complete`). Optional `agent` fields are name/provider/model/effort. Optional
-`contributors` is a list of those fields plus role; `task` is text and `related` is
-a list of entry permalinks or web URLs. Kind comes from the directory, not metadata.
-Duplicate YAML keys and malformed published metadata are rejected.
+The current publisher requires a timezone-aware log date. Log pages show the title,
+date, and body. Do not add agent metadata, status, contributors, or raw artifacts.
+Put relevant links to past meditations and blogs in the body, not in metadata.
+No per-entry directories are needed.
 
-Log pages live at `/logs/<slug>/`, with compact provenance beneath the title, related
-entries, and named artifact links. Log table rows show status/model/effort on one
-secondary line. Existing meditation URLs remain `/<slug>/`. Meditation slugs
-`search`, `logs`, and `meditations`, and log slug `artifacts`, are reserved.
+Use these top-level Markdown headings in order:
 
-An artifact specifies a label and either a local path or external HTTPS URL. Local
-paths are relative to `logs/` and must resolve to regular files inside
-`logs/artifacts/<entry-slug>/`; traversal and escaping symlinks are rejected. Only referenced
-files are copied to `/logs/artifacts/…`, never an entire session directory. Keep
-private prompts, secrets, and debug dumps out of public artifacts. The full site
-and artifact copies are staged before replacing the previous preview.
+- **Abstract:** a brief account of the log.
+- **Context:** the starting state and the reason for the work.
+- **Named sections:** a dynamic number of sections that connect the whole story. Keep material decisions, changes, and resulting behavior.
+- **Conclusion:** the result or expected new state. Distinguish plans from completed work.
+- **Past relevant meditations and blogs:** links to relevant existing posts.
+
+Refer to the author as **raj**, not “the user.” Keep the wording concise without
+removing useful detail about the work, interface, routes, or data flow.
+
+Draft iteration and commit are separate steps. During iteration, edit and preview
+locally; do not stage, commit, push, or publish. Commit an agreed version only when
+raj explicitly asks. Push or publish only with separate approval. Do not use
+`publish.sh` for a commit-only request: it stages all non-ignored files and pushes.
+
+Use [ASD-STE100 Simplified Technical English](https://www.asd-ste100.org/) for log
+prose. Use short sentences and consistent terms. The official standard has writing
+rules and a controlled dictionary; AI output alone does not prove compliance.
+[Request the official Issue 9 copy](https://www.asd-ste100.org/STE_downloads.html)
+for a complete dictionary review. Use Mermaid diagrams or math only when they
+make the information clearer. Prefer an inline SVG for an accurate UI wireframe.
+
+### Mermaid diagrams
+
+Write a diagram in a fenced `mermaid` block. Include an accessible title and, when
+needed, a description:
+
+````markdown
+```mermaid
+flowchart LR
+  accTitle: Draft review
+  accDescr: raj reviews a local draft before a separate commit request.
+  Draft --> Preview --> Review
+  Review -->|Revise| Draft
+  Review -->|Explicit request| Commit
+```
+````
+
+The build bundles pinned Mermaid locally into hashed ES modules. Only articles
+with Mermaid blocks load the diagram entry; diagram modules load as needed.
+Diagrams use the site colors and font. Strict security disables diagram links
+and HTML labels. An invalid diagram keeps its source and shows an error; later
+diagrams still render. With JavaScript disabled, the source remains readable.
+No artifact files or per-log directories are needed.
+
+Log URLs remain `/logs/<slug>/`; meditation URLs remain `/<slug>/`. Archive codes,
+source filters, and the combined PCA map are unchanged. Meditation slugs `search`,
+`logs`, and `meditations` are reserved. Duplicate YAML keys and malformed dates
+are rejected. The site is staged before it replaces the previous preview.
 
 ## Lexical search
 
@@ -336,8 +362,8 @@ Text extraction is shared with embedding preparation without changing embedding 
 The collection selector is separate from query syntax and persists as
 `kind=all|meditations|logs` in search URLs. Empty queries list that collection without
 fetching the index. The shared payload uses schema version 2 and namespaced keys,
-so equal slugs in different collections do not collide. Provenance and artifacts
-are not included in the title/heading/body lexical fields.
+so equal slugs in different collections do not collide. Only the title and visible
+Markdown headings and body text enter the lexical fields.
 
 Only matching rows remain in the table. Nonmatching map points stay at their
 archive-wide coordinates and become faint, noninteractive context; IDs, axes,
@@ -386,7 +412,7 @@ SQLite runtime is included.
 
 ## Verification
 
-Run deterministic state, integrity, front-matter/artifact boundaries, text-preparation, export, PCA geometry, and lexical-search regressions:
+Run deterministic state, integrity, front-matter boundaries, text-preparation, export, PCA geometry, and lexical-search regressions:
 
 ```sh
 .venv-embed/bin/python -m unittest discover -s tests -v

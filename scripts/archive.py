@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import date, datetime, time, timezone
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import quote, urlsplit
+from urllib.parse import quote
 from xml.etree.ElementTree import Element
 
 import yaml
@@ -17,26 +17,17 @@ FRONT_MATTER = re.compile(r"\A---\n(?P<front_matter>.*?)\n---\n", re.DOTALL)
 
 
 @dataclass(frozen=True)
-class Artifact:
-    label: str
-    url: str
-    source: Path | None
-
-
-@dataclass(frozen=True)
 class Entry:
     kind: str
     slug: str
     title: str
     published: date | datetime
     body: str
-    metadata: dict = field(default_factory=dict)
-    artifacts: tuple[Artifact, ...] = ()
 
     def __post_init__(self) -> None:
         if self.kind not in {"meditations", "logs"}:
             raise ValueError(f"Unknown archive source kind {self.kind!r}.")
-        reserved = {"meditations": {"search", "logs", "meditations"}, "logs": {"artifacts"}}
+        reserved = {"meditations": {"search", "logs", "meditations"}, "logs": set()}
         if not self.slug or "/" in self.slug or self.slug in reserved[self.kind]:
             raise ValueError(f"Reserved or invalid {self.kind} slug {self.slug!r}.")
         if self.kind == "meditations":
@@ -100,76 +91,6 @@ def _text(value: object, description: str) -> str:
     return value.strip()
 
 
-def _url(value: object, description: str, *, external: bool = False) -> str:
-    value = _text(value, description)
-    parsed = urlsplit(value)
-    if external:
-        valid = parsed.scheme == "https" and bool(parsed.netloc)
-    else:
-        valid = (parsed.scheme in {"https", "http"} and bool(parsed.netloc)) or (
-            value.startswith("/") and not value.startswith("//") and not parsed.scheme
-        )
-    if not valid or any(character.isspace() for character in value):
-        raise ValueError(f"{description} must be {'an explicit HTTPS' if external else 'a web or root-relative'} URL.")
-    return value
-
-
-def _record(value: object, description: str, *, contributor: bool = False) -> dict:
-    if not isinstance(value, dict):
-        raise ValueError(f"{description} must be a structured record.")
-    fields = ("name", "provider", "model", "effort", "role") if contributor else ("name", "provider", "model", "effort")
-    return {
-        key: None if key in {"model", "effort"} and value[key] is None else _text(value[key], f"{description}.{key}")
-        for key in fields if key in value
-    }
-
-
-def _metadata(fields: dict) -> dict:
-    status = fields.get("status")
-    if not isinstance(status, str) or status not in {"in-progress", "blocked", "complete"}:
-        raise ValueError("log status must be in-progress, blocked, or complete.")
-    result = {"status": status}
-    if "agent" in fields:
-        result["agent"] = _record(fields["agent"], "agent")
-    if "task" in fields:
-        result["task"] = _text(fields["task"], "task")
-    if "related" in fields:
-        if not isinstance(fields["related"], list):
-            raise ValueError("related must be a list of URLs.")
-        result["related"] = [_url(value, "related link") for value in fields["related"]]
-    if "contributors" in fields:
-        if not isinstance(fields["contributors"], list):
-            raise ValueError("contributors must be a list of structured records.")
-        result["contributors"] = [_record(value, "contributor", contributor=True) for value in fields["contributors"]]
-    return result
-
-
-def _artifacts(value: object, path: Path) -> tuple[Artifact, ...]:
-    if not isinstance(value, list):
-        raise ValueError("artifacts must be a list of label and path or URL records.")
-    result = []
-    logs_root = path.parent.resolve()
-    artifacts_root = (logs_root / "artifacts").resolve()
-    for record in value:
-        if not isinstance(record, dict) or ("path" in record) == ("url" in record):
-            raise ValueError("Each artifact requires a label and exactly one path or URL.")
-        label = _text(record.get("label"), "artifact label")
-        if "url" in record:
-            result.append(Artifact(label, _url(record["url"], "artifact URL", external=True), None))
-            continue
-        relative = _text(record["path"], "artifact path")
-        parts = relative.split("/")
-        if len(parts) < 3 or parts[:2] != ["artifacts", path.stem] or any(part in {"", ".", ".."} for part in parts):
-            raise ValueError(f"Artifact path {relative!r} must be relative to logs as artifacts/{path.stem}/... without traversal.")
-        source = (logs_root / relative).resolve()
-        if (not artifacts_root.is_relative_to(logs_root) or not source.is_relative_to(artifacts_root)
-                or not source.is_relative_to(logs_root) or not source.is_file()):
-            raise ValueError(f"Artifact path {relative!r} must be an existing regular file safely inside logs/artifacts.")
-        url = "/logs/artifacts/" + quote("/".join(parts[1:]), safe="/")
-        result.append(Artifact(label, url, source))
-    return tuple(result)
-
-
 def parse(path: Path, kind: str) -> Entry:
     path = Path(path)
     source = path.read_text(encoding="utf-8")
@@ -184,9 +105,9 @@ def parse(path: Path, kind: str) -> Entry:
         published = fields.get("date")
         if isinstance(published, str):
             published = datetime.fromisoformat(published) if kind == "logs" else date.fromisoformat(published)
-        metadata = _metadata(fields) if kind == "logs" else {}
-        artifacts = _artifacts(fields.get("artifacts", []), path) if kind == "logs" else ()
-        return Entry(kind, path.stem, title, published, source[match.end() :].strip(), metadata, artifacts)
+        if not isinstance(published, date):
+            raise ValueError("date must be a publication date or timestamp.")
+        return Entry(kind, path.stem, title, published, source[match.end() :].strip())
     except (ValueError, yaml.YAMLError) as error:
         raise ValueError(f"{path}: {error}") from error
 
