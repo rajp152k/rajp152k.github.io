@@ -44,7 +44,7 @@ export function createLinkedView(root) {
     }
     if (identifier) identifier.textContent = link ? link.dataset.postId : '—';
     if (title) title.textContent = link ? link.dataset.title : '';
-    if (date) date.textContent = link ? link.dataset.date : '';
+    if (date) date.textContent = link ? link.dataset.displayDate : '';
   }
 
   function setPointerLink(link) {

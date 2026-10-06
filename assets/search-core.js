@@ -12,7 +12,7 @@ export function queryTerms(raw) {
 }
 
 export const indexOptions = {
-  idField: 'slug',
+  idField: 'key',
   fields: ['title', 'headings', 'body'],
   tokenize,
   processTerm: (term) => term,
@@ -24,10 +24,15 @@ export const indexOptions = {
   },
 };
 
-export function runSearch(engine, raw, documents) {
+export function searchKind(value) {
+  return value === 'meditations' || value === 'logs' ? value : 'all';
+}
+
+export function runSearch(engine, raw, documents, kind = 'all') {
   const terms = queryTerms(raw);
   if (!terms.length) return [];
-  return engine.search(terms.join(' ')).sort((a, b) =>
+  const scope = searchKind(kind);
+  return engine.search(terms.join(' ')).filter(result => scope === 'all' || documents[result.id].kind === scope).sort((a, b) =>
     b.score - a.score ||
     binaryCompare(documents[b.id].date, documents[a.id].date) ||
     binaryCompare(a.id, b.id));

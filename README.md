@@ -3,8 +3,10 @@
 
 ## Writing and publishing
 
-Posts live in `meditations/` as Markdown with `title` and `date` front matter.
-Create one with `./write.sh "Title"`; Markdown remains the source of truth.
+Human writing lives in `meditations/`; agent progress notes live in `logs/`. Both are
+Markdown with YAML front matter. Create a meditation with `./write.sh "Title"`; the
+command quotes titles safely and opens the file in Neovim. Agents write logs, not
+meditation prose, unless explicitly asked to edit it. Markdown remains the source of truth.
 
 ### Local embedding setup
 
@@ -28,10 +30,11 @@ publishing. It synchronizes metadata and deletions as well as computing vectors:
 
 | Change | Run `scripts/embed.py`? | Inference |
 | --- | --- | --- |
-| New post, title change, or changed prepared body text | Yes | Only missing/changed posts |
-| Date-only correction, unchanged-content rename, or deleted post | Yes | None; synchronize metadata/reuse vectors |
+| New meditation/log, title change, or changed prepared body text | Yes | Only missing/changed entries |
+| Date-only correction, unchanged-content rename, namespace migration, or deleted entry | Yes | None; synchronize metadata/reuse vectors |
 | Model/revision, chunking, preprocessing, or aggregation policy | Yes | Re-embed the archive |
 | CSS, account-menu data/icons, map interaction, search logic, HTML layout, PCA presentation, or README | No | None |
+| Agent model/effort/status/task/related/contributors or artifact-only changes | No | None; rebuild the site |
 | Nothing changed | Optional | None; unchanged state is a no-op |
 
 The updater hashes the prepared title/body and complete embedding specification.
@@ -103,7 +106,7 @@ uses Python 3.13 with `requirements.txt`, Node.js 24, and `npm ci` to:
 
 Pull requests targeting `master` run validation and build, **not deployment**.
 Pushes to `master` deploy when posts, scripts, assets, requirements, embedding
-configuration/database, npm manifests, `accounts.json`, tests, the workflow, or `CNAME` change. README-only edits
+configuration/database, `logs/**`, authoring command, npm manifests, `accounts.json`, tests, the workflow, or `CNAME` change. README-only edits
 do not trigger deployment. To republish unchanged content, use **Actions →
 Publish → Run workflow** with branch `master`, or:
 
@@ -129,6 +132,9 @@ vectors using the model's own pooling implementation.
 Prepared input is the title followed by visible Markdown text. It preserves
 headings, lists, code, mathematical notation, and paragraph boundaries while
 excluding comments, script/style content, and link destinations.
+Log metadata and supporting artifact contents are not prepared text. Entry keys are
+namespaced (`meditations/<slug>` or `logs/<slug>`); the namespace cutover reuses
+unchanged vectors by prepared-text/model hashes rather than recomputing them.
 
 Chunks contain at most **512 whitespace-delimited words** and **2,048 model
 tokens**, including any input prefix and special tokens. Paragraph/sentence
@@ -163,7 +169,8 @@ in both the implementation and `embedding.json`.
 
 - `model_specs`: the model tag and complete specification.
 - `archive`: the active model tag, including for an empty archive.
-- `posts`: title/date metadata, text and embedding hashes, and the vector.
+- `posts`: namespaced entry keys in the physical `slug` column, title/date metadata,
+  text and embedding hashes, and the vector.
 
 Inference finishes before a write transaction begins. Synchronization is atomic,
 and publishing opens the database read-only and refuses missing, stale, or
@@ -174,7 +181,8 @@ on readable diffs, and avoid concurrent branch edits to it. It is derived data a
 can be regenerated from the Markdown and pinned configuration.
 
 For isolated archives or experiments, the embed command also accepts
-`--posts PATH`, `--database PATH`, and `--spec PATH`.
+`--posts PATH` (meditation directory), `--logs PATH`, `--database PATH`, and `--spec PATH`.
+The default updater reads both collections. A missing logs directory is an empty collection.
 
 ## Account menu
 
@@ -211,6 +219,12 @@ Table headings stay visible while the rows scroll. On narrow screens, the panels
 stack within the same fixed shell; the compact ID/title/date readout stays on one line.
 Article pages share the Fira Mono, green-on-black treatment but retain normal
 reading scroll.
+The homepage is the combined chronological index. Native links select all entries
+(`/`), meditations (`/meditations/`), or logs (`/logs/`), including without JavaScript.
+The table and map keep their cross-highlighting; excluded source points are faint,
+noninteractive context. Every view uses the same combined projection. Adding logs
+can move the PCA coordinates or make its principal components log-dominated; source
+filtering does not recompute the projection.
 
 The palette follows the local tmux, Neovim, and Ghostty themes: pure black
 (`#000000`), primary green (`#00ff00`), secondary green (`#00b300`), subdued
@@ -239,9 +253,11 @@ are handled without inventing separation.
 The PCA heading includes a small link to the configured embedding model's Hugging
 Face model card; its label and URL come from `embedding.json`.
 
-Posts have zero-based, lowercase hexadecimal display IDs: `x0`, `x1`, …, `xe`,
-`xf`, `x10`, …, assigned from oldest to newest in the archive's chronological
-order. The newest post has the highest ID. The index pairs IDs with full titles;
+Meditations have `mx0`, `mx1`, …, `mxf`, `mx10`, … display codes; logs have
+`lx0`, `lx1`, …, `lxf`, `lx10`, … . Each collection has its own zero-based lowercase
+hexadecimal sequence, assigned chronologically from oldest to newest. Adding a log
+does not renumber meditations. Filled circles are meditations, outlined circles are
+logs; a compact legend explains the shapes. The index pairs codes with full titles.
 PCA points have no visible labels. The footer shows ID, full title, and date on
 hover or focus; accessible point links retain the title without native hover tooltips.
 
@@ -254,27 +270,74 @@ not fetch the SQLite file, run an embedding model, or require a charting framewo
 
 `assets/site.css` controls the shared visual treatment; `assets/map.js` supplies
 the linked-view interaction shared by `assets/index.js` and `assets/search.js`.
-Publishing uses pinned Markdown/NumPy from `requirements.txt` and MiniSearch/esbuild
-from `package-lock.json`; inference dependencies remain separate. The public SQLite
-schema is unchanged.
+Publishing uses pinned Markdown/NumPy/PyYAML from `requirements.txt` and MiniSearch/esbuild
+from `package-lock.json`; inference dependencies remain separate.
+
+## Agent logs and artifacts
+
+Write concise milestone notes, not raw tool transcripts. Separate intent, decisions,
+observed progress, verification evidence, and unresolved work. Model and effort are
+runtime provenance: leave them unknown if unavailable, and never infer them. Effort
+settings are provider-specific, not cross-model quality scores.
+
+For example, `logs/2026-10-06-two-collections-one-archive.md` has structured fields:
+
+```yaml
+title: Two collections, one archive
+date: 2026-10-06T10:54:12Z
+status: in-progress
+agent:
+  name: omp coding assistant
+  model: null
+  effort: null
+task: Add agent progress logs alongside human meditations.
+related:
+  - /programming/
+artifacts:
+  - label: Verification checkpoints
+    path: artifacts/2026-10-06-two-collections-one-archive/verification.txt
+```
+
+Logs require title, timezone-aware timestamp, and status (`in-progress`, `blocked`,
+or `complete`). Optional `agent` fields are name/provider/model/effort. Optional
+`contributors` is a list of those fields plus role; `task` is text and `related` is
+a list of entry permalinks or web URLs. Kind comes from the directory, not metadata.
+Duplicate YAML keys and malformed published metadata are rejected.
+
+Log pages live at `/logs/<slug>/`, with compact provenance beneath the title, related
+entries, and named artifact links. Log table rows show status/model/effort on one
+secondary line. Existing meditation URLs remain `/<slug>/`. Meditation slugs
+`search`, `logs`, and `meditations`, and log slug `artifacts`, are reserved.
+
+An artifact specifies a label and either a local path or external HTTPS URL. Local
+paths are relative to `logs/` and must resolve to regular files inside
+`logs/artifacts/<entry-slug>/`; traversal and escaping symlinks are rejected. Only referenced
+files are copied to `/logs/artifacts/…`, never an entire session directory. Keep
+private prompts, secrets, and debug dumps out of public artifacts. The full site
+and artifact copies are staged before replacing the previous preview.
 
 ## Lexical search
 
 Every page has a native GET form targeting `/search/?q=…`. At widths of at least
 900px it sits between the site name and account icons, separated by vertical rules;
-on narrow screens it moves below them. The post slug `search` is reserved.
+on narrow screens it moves below them. Searches respect the selected collection.
 
 The static search page uses MiniSearch 7.2.0 with AND matching across title, headings,
 and body, weighted **5 / 2 / 1**. Headings and titles are not duplicated into body.
 Tokens use Unicode NFKC and lowercase, preserve internal apostrophes and `C++`/`C#`,
 and split punctuation, hyphens, and underscores. Terms of at least three Unicode
 codepoints also match word prefixes. There is no stemming, fuzzy matching, phrase
-syntax, or operator language. Score ties use newest date, then binary slug order.
+syntax, or operator language. Score ties use newest date, then binary namespaced key order.
 
 Results highlight complete matching tokens and show one block-bounded excerpt of
 up to 220 codepoints plus ellipses, preferring distinct term coverage, exact matches,
 then the earliest block/window. Title-only matches use the opening body block.
 Text extraction is shared with embedding preparation without changing embedding inputs.
+The collection selector is separate from query syntax and persists as
+`kind=all|meditations|logs` in search URLs. Empty queries list that collection without
+fetching the index. The shared payload uses schema version 2 and namespaced keys,
+so equal slugs in different collections do not collide. Provenance and artifacts
+are not included in the title/heading/body lexical fields.
 
 Only matching rows remain in the table. Nonmatching map points stay at their
 archive-wide coordinates and become faint, noninteractive context; IDs, axes,
@@ -298,20 +361,22 @@ Every site build creates a fresh, allowlisted `site/blog.sqlite`, available as
 internal hashes, complete specifications, bodies, unrelated local tables, and
 deleted records are excluded.
 
-The public schema has `PRAGMA user_version = 1`:
+The public schema has `PRAGMA user_version = 2`:
 
 | Table | Columns |
 | --- | --- |
 | `model` | `tag`, `model_id`, `revision`, `dimension`, `dtype` |
-| `posts` | `slug`, `title`, `published_date`, `url`, `model_tag`, `embedding` |
+| `posts` | `entry_key`, `kind`, `slug`, `title`, `published_date`, `url`, `model_tag`, `embedding` |
 
-`posts.model_tag` references `model.tag`. Dates use ISO `YYYY-MM-DD`; URLs are
+`entry_key` is the namespaced primary key; `kind` is `meditations` or `logs`, and
+`slug` is the leaf slug. `posts.model_tag` references `model.tag`. Meditation dates
+use ISO `YYYY-MM-DD`; log timestamps use canonical UTC ISO datetime. URLs are
 root-relative. `model.dtype` is `<f4`: each embedding BLOB contains
 `dimension` little-endian float32 values, normalized to unit L2 length.
 
 ```sh
 sqlite3 site/blog.sqlite \
-  'SELECT slug, title, length(embedding) AS vector_bytes FROM posts;'
+  'SELECT entry_key, kind, title, length(embedding) AS vector_bytes FROM posts;'
 ```
 
 This is a downloadable data artifact, not a search endpoint. No SQLite download
@@ -321,7 +386,7 @@ SQLite runtime is included.
 
 ## Verification
 
-Run deterministic state, integrity, text-preparation, export, PCA geometry, and lexical-search regressions:
+Run deterministic state, integrity, front-matter/artifact boundaries, text-preparation, export, PCA geometry, and lexical-search regressions:
 
 ```sh
 .venv-embed/bin/python -m unittest discover -s tests -v

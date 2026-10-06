@@ -11,16 +11,16 @@ from contextlib import closing
 from dataclasses import dataclass
 from pathlib import Path
 
-from archive import ROOT, meditations
+from archive import ROOT, read_entries
 from embedding_state import (
     DATABASE,
     SPEC_PATH,
-    PreparedPost,
+    PreparedEntry,
     check_fresh,
     load_spec,
     open_database,
-    pending_posts,
-    prepare_posts,
+    pending_entries,
+    prepare_entries,
     synchronize,
 )
 
@@ -193,7 +193,7 @@ def chunk_text(
     return chunks
 
 
-def infer_vectors(posts: list[PreparedPost], spec: dict, device: str) -> dict[str, bytes]:
+def infer_vectors(posts: list[PreparedEntry], spec: dict, device: str) -> dict[str, bytes]:
     # This function is reached only for genuinely missing/stale vectors. Checks,
     # metadata/deletion updates, and exact no-ops do not import these libraries.
     try:
@@ -250,8 +250,8 @@ def infer_vectors(posts: list[PreparedPost], spec: dict, device: str) -> dict[st
         raise ValueError("ModernBERT reference_compile must be disabled for local inference")
     model.max_seq_length = spec["max_tokens"]
     do_lower_case = transformer.do_lower_case
-    totals = {post.slug: np.zeros(spec["dimension"], dtype=np.float32) for post in posts}
-    weights = {post.slug: 0 for post in posts}
+    totals = {post.key: np.zeros(spec["dimension"], dtype=np.float32) for post in posts}
+    weights = {post.key: 0 for post in posts}
     batch: list[tuple[str, Chunk]] = []
     chunk_count = 0
 
@@ -301,10 +301,10 @@ def infer_vectors(posts: list[PreparedPost], spec: dict, device: str) -> dict[st
             do_lower_case=do_lower_case,
         )
         if not chunks:
-            raise ValueError(f"{post.slug}: prepared text contains no embeddable content")
+            raise ValueError(f"{post.key}: prepared text contains no embeddable content")
         chunk_count += len(chunks)
         for chunk in chunks:
-            batch.append((post.slug, chunk))
+            batch.append((post.key, chunk))
             if len(batch) == BATCH_SIZE:
                 encode_batch()
     if batch:
@@ -329,28 +329,27 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--database", type=Path, default=DATABASE)
     parser.add_argument("--spec", type=Path, default=SPEC_PATH)
     parser.add_argument("--posts", type=Path, default=ROOT / "meditations")
+    parser.add_argument("--logs", type=Path, default=ROOT / "logs")
     args = parser.parse_args(argv)
     try:
         spec = load_spec(args.spec)
-        if not args.posts.is_dir():
-            raise ValueError(f"Post directory {args.posts} does not exist or is not a directory")
-        prepared = prepare_posts(meditations(args.posts), spec)
+        prepared = prepare_entries(read_entries(args.posts, args.logs), spec)
         if not args.database.exists():
             if args.check:
                 parser.exit(
                     1,
                     f"Embedding database {args.database} is missing. "
                     "Run python3 scripts/embed.py to generate it "
-                    "(using the same --database/--spec/--posts options).\n",
+                    "(using the same --database/--spec/--posts/--logs options).\n",
                 )
             pending = prepared
         else:
             with closing(open_database(args.database)) as connection:
                 if args.check:
                     check_fresh(connection, prepared, spec)
-                    print(f"Embeddings are fresh for {len(prepared)} posts.")
+                    print(f"Embeddings are fresh for {len(prepared)} entries.")
                     return
-                pending = pending_posts(connection, prepared, spec)
+                pending = pending_entries(connection, prepared, spec)
                 if not pending:
                     try:
                         check_fresh(connection, prepared, spec)

@@ -22,5 +22,6 @@ if [[ -e "$file" ]]; then
   exit 1
 fi
 
-printf -- '---\ntitle: %s\ndate: %s\n---\n\n' "$title" "$(date +%F)" >"$file"
+quoted_title="$(python3 -c 'import json, sys; print(json.dumps(sys.argv[1], ensure_ascii=False))' "$title")"
+printf -- '---\ntitle: %s\ndate: %s\n---\n\n' "$quoted_title" "$(date +%F)" >"$file"
 exec nvim "$file"

@@ -6,8 +6,8 @@ import MiniSearch from 'minisearch';
 import { excerpt, highlightRanges, indexOptions, queryTerms, runSearch } from '../assets/search-core.js';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
-const doc = (slug, title, blocks, date = '2026-10-01') => ({
-  slug, title, date, url: `/meditations/${slug}/`, postId: slug, blocks,
+const doc = (slug, title, blocks, date = '2026-10-01', kind = 'meditations') => ({
+  key: `${kind}:${slug}`, slug, kind, title, date, url: kind === 'logs' ? `/logs/${slug}/` : `/${slug}/`, postId: slug, blocks,
 });
 const body = (text) => ({ kind: 'body', text });
 const heading = (text) => ({ kind: 'heading', text });
@@ -19,7 +19,7 @@ function build(documents) {
   const payload = JSON.parse(result.stdout);
   return { payload, bytes: result.stdout, engine: MiniSearch.loadJSON(JSON.stringify(payload.index), indexOptions) };
 }
-const ids = (fixture, query) => runSearch(fixture.engine, query, fixture.payload.documents).map((result) => result.id);
+const ids = (fixture, query) => runSearch(fixture.engine, query, fixture.payload.documents).map((result) => fixture.payload.documents[result.id].slug);
 
 test('normalization handles canonical and compatibility Unicode without erasing word boundaries', () => {
   assert.deepEqual(queryTerms('CAFÉ cafe\u0301 ＡＢＣ ﬃ 中文 १२३ C++ C# foo_bar foo-bar Don’t don\'t'),
@@ -79,10 +79,25 @@ test('serialized build is input-order-independent and restores actual search beh
   const first = build(documents);
   const second = build([...documents].reverse());
   assert.equal(first.bytes, second.bytes);
-  assert.deepEqual(first.payload.documents, Object.fromEntries([...documents].reverse().map((document) => [document.slug, document])));
+  assert.deepEqual(first.payload.documents, Object.fromEntries([...documents].reverse().map((document) => [document.key, document])));
   assert.deepEqual(ids(first, 'cache C++'), ['z']);
   assert.deepEqual(ids(first, 'compiler C#'), ['z']);
   assert.deepEqual(ids(first, 'cafe\u0301 vec'), ['a']);
+});
+
+test('same-slug sources remain distinct and filtering retains global ranking', () => {
+  const fixture = build([
+    doc('shared', 'Needle', [body('archive')], '2026-10-02', 'meditations'),
+    doc('shared', 'Needle', [body('archive')], '2026-10-01', 'logs'),
+  ]);
+  const search = kind => runSearch(fixture.engine, 'needle archive', fixture.payload.documents, kind);
+  assert.deepEqual(search('all').map(result => result.id), ['meditations:shared', 'logs:shared']);
+  for (const kind of ['meditations', 'logs']) {
+    const filtered = search(kind);
+    assert.deepEqual(filtered.map(result => result.id), [`${kind}:shared`]);
+    assert.equal(filtered[0].score, search('all').find(result => result.id === filtered[0].id).score);
+  }
+  assert.deepEqual(search('invalid'), search('all'));
 });
 
 test('raw highlights preserve UTF-16 spans and entire prefix tokens across Unicode normalization', () => {

@@ -1,5 +1,5 @@
 import MiniSearch from 'minisearch';
-import { indexOptions, queryTerms, runSearch, highlightRanges, excerpt } from './search-core.js';
+import { indexOptions, queryTerms, runSearch, searchKind, highlightRanges, excerpt } from './search-core.js';
 import { createLinkedView } from './map.js';
 
 const root = document.querySelector('body.search-page');
@@ -11,6 +11,27 @@ if (root && !root.dataset.searchInitialized) {
 function initialize(root) {
   const form = root.querySelector('.search-form');
   const input = form.querySelector('input[name=q]');
+  const kindInput = form.querySelector('input[name=kind]');
+  const sourceLinks = [...root.querySelectorAll('.collection-nav a[data-kind]')];
+  let kind = searchKind(new URL(location.href).searchParams.get('kind'));
+  function syncSource() {
+    root.dataset.kind = kind;
+    kindInput.value = kind;
+    for (const link of sourceLinks) {
+      const url = new URL('/search/', location.href);
+      const source = searchKind(link.dataset.kind);
+      if (source !== 'all') url.searchParams.set('kind', source);
+      if (input.value) url.searchParams.set('q', input.value);
+      link.href = url.href;
+      if (source === kind) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    }
+  }
+  function scopedURL(url) {
+    if (kind === 'all') url.searchParams.delete('kind');
+    else url.searchParams.set('kind', kind);
+    return url;
+  }
   const table = root.querySelector('tbody');
   const rows = new Map([...table.querySelectorAll('tr[data-post]')].map(row => [row.dataset.post, row]));
   const points = new Map([...root.querySelectorAll('a.map-point')].map(point => [point.dataset.post, point]));
@@ -48,13 +69,13 @@ function initialize(root) {
   }
 
   function state() {
-    return { query: input.value, scrollTop: scroll.scrollTop, activatedSlug };
+    return { query: input.value, kind, scrollTop: scroll.scrollTop, activatedSlug };
   }
 
   function saveURL() {
     clearTimeout(urlTimer);
     clearTimeout(scrollTimer);
-    const url = new URL(location.href);
+    const url = scopedURL(new URL(location.href));
     const query = input.value.trim();
     if (query) url.searchParams.set('q', query);
     else url.searchParams.delete('q');
@@ -67,10 +88,10 @@ function initialize(root) {
     if (error) {
       message.append(document.createTextNode(' '));
       const archive = document.createElement('a');
-      archive.href = '/';
+      archive.href = kind === 'all' ? '/' : `/${kind}/`;
       archive.textContent = 'Browse the archive';
       const reload = document.createElement('a');
-      const reloadURL = new URL(location.href);
+      const reloadURL = scopedURL(new URL(location.href));
       if (input.value.trim()) reloadURL.searchParams.set("q", input.value.trim());
       else reloadURL.searchParams.delete("q");
       reload.href = reloadURL.href;
@@ -85,7 +106,7 @@ function initialize(root) {
         const response = await fetch(root.dataset.searchIndex);
         if (!response.ok) throw new Error('Search index unavailable');
         const payload = await response.json();
-        if (payload.schemaVersion !== 1 || payload.tokenizerVersion !== 'word-prefix-1' || payload.engineVersion !== '7.2.0') {
+        if (payload.schemaVersion !== 2 || payload.tokenizerVersion !== 'word-prefix-1' || payload.engineVersion !== '7.2.0') {
           throw new Error('Search index version mismatch');
         }
         const documents = payload.documents;
@@ -96,7 +117,7 @@ function initialize(root) {
           const doc = documents[slug];
           const link = row.querySelector('a.post-link');
           const point = points.get(slug);
-          if (!doc || !point || doc.slug !== slug || !Array.isArray(doc.blocks)) throw new Error('Search document mismatch');
+          if (!doc || !point || doc.key !== slug || doc.kind !== row.dataset.kind || doc.kind !== point.dataset.kind || !Array.isArray(doc.blocks)) throw new Error('Search document mismatch');
           for (const element of [link, point]) {
             if (doc.title !== element.dataset.title || doc.date !== element.dataset.date || String(doc.postId) !== element.dataset.postId || doc.url !== (element.dataset.url || element.getAttribute('href'))) {
               throw new Error('Search metadata mismatch');
@@ -154,7 +175,7 @@ function initialize(root) {
       }
       (matches ? matchGroup : contextGroup).append(point);
     }
-    linked.setSelectable(input.value.trim() ? selectable : null);
+    linked.setSelectable(selectable);
     if (focused && !selectable.has(focused.dataset.post)) input.focus();
     else if (focused && document.activeElement !== focused) focused.focus({ preventScroll: true });
     linked.refresh();
@@ -171,12 +192,15 @@ function initialize(root) {
   async function flush() {
     clearTimeout(resultTimer);
     const raw = input.value;
+    const scope = kind;
+    const scopedOrder = originalOrder.filter(key => scope === 'all' || rows.get(key).dataset.kind === scope);
+    syncSource();
     const current = ++revision;
     try {
       const terms = queryTerms(raw);
       if (!raw.trim()) {
-        render(originalOrder, [], null, `${rows.size} ${rows.size === 1 ? 'post' : 'posts'}`);
-        notify(rows.size ? '' : 'The archive is empty.');
+        render(scopedOrder, [], null, `${scopedOrder.length} ${scopedOrder.length === 1 ? 'entry' : 'entries'}`);
+        notify(scopedOrder.length ? '' : 'This collection is empty.');
       } else if (!terms.length) {
         render([], [], null, 'No searchable terms');
         notify('Enter a word or number to search; punctuation alone has no searchable terms.');
@@ -186,14 +210,14 @@ function initialize(root) {
         if (!loaded) render([], [], null, 'Searching…', false);
         scroll.setAttribute('aria-busy', 'true');
         const { engine, documents } = loaded || await load();
-        if (current !== revision || input.value !== raw) return;
-        const results = runSearch(engine, raw, documents);
-        render(results.map(result => result.id), terms, documents, `${results.length} / ${rows.size} matches`);
-        notify(!rows.size ? 'The archive is empty.' : results.length ? '' : 'No posts match all of these search terms.');
+        if (current !== revision || input.value !== raw || kind !== scope) return;
+        const results = runSearch(engine, raw, documents, scope);
+        render(results.map(result => result.id), terms, documents, `${results.length} / ${scopedOrder.length} matches`);
+        notify(!scopedOrder.length ? 'This collection is empty.' : results.length ? '' : 'No entries match all of these search terms.');
       }
       renderedQuery = raw;
     } catch (error) {
-      if (current !== revision || input.value !== raw) return;
+      if (current !== revision || input.value !== raw || kind !== scope) return;
       render([], [], null, 'Search unavailable');
       notify('Search could not be completed.', true);
       renderedQuery = raw;
@@ -206,6 +230,7 @@ function initialize(root) {
     activatedSlug = null;
     clearTimeout(resultTimer);
     clearTimeout(urlTimer);
+    syncSource();
     if (composing) return;
     resultTimer = setTimeout(flush, 150);
     urlTimer = setTimeout(saveURL, 400);
@@ -264,6 +289,7 @@ function initialize(root) {
     clearTimeout(scrollTimer);
     restore = history.state?.search || null;
     input.value = restore?.query ?? new URL(location.href).searchParams.get('q') ?? '';
+    kind = searchKind(new URL(location.href).searchParams.get('kind'));
     renderedQuery = null;
     void flush();
   });
@@ -272,6 +298,7 @@ function initialize(root) {
     if (!event.persisted) return;
     restore = history.state?.search || null;
     input.value = restore?.query ?? input.value;
+    kind = searchKind(new URL(location.href).searchParams.get('kind'));
     void flush();
   });
   function viewport() {

@@ -5,6 +5,8 @@ on:
     branches: [master]
     paths:
       - "meditations/**/*.md"
+      - "logs/**"
+      - "write.sh"
       - "scripts/**"
       - "requirements*.txt"
       - "package.json"

@@ -11,11 +11,11 @@ import sqlite3
 import struct
 import tempfile
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
 
-from archive import ROOT, Post, prepared_text
+from archive import ROOT, Entry, prepared_text
 
 DATABASE = ROOT / "blog.sqlite"
 SPEC_PATH = ROOT / "embedding.json"
@@ -45,8 +45,11 @@ _REBUILD = "Run python3 scripts/embed.py to update the derived state."
 
 
 @dataclass(frozen=True)
-class PreparedPost:
+class PreparedEntry:
+    key: str
+    kind: str
     slug: str
+    url: str
     title: str
     published_date: str
     text: str
@@ -116,34 +119,45 @@ def _embedding_key(text: str, spec: dict) -> str:
     return _sha256(_canonical({"specification": spec, "text": text}))
 
 
-def prepare_posts(posts: list[Post], spec: dict) -> list[PreparedPost]:
+def prepare_entries(entries: list[Entry], spec: dict) -> list[PreparedEntry]:
     _validate_spec(spec)
     result = []
-    slugs = set()
-    for published, title, slug, body in posts:
-        if slug in slugs:
-            raise ValueError(f"Duplicate post slug {slug!r}; the archive must have unique slugs.")
-        slugs.add(slug)
-        text = prepared_text((published, title, slug, body))
-        result.append(PreparedPost(slug, title, published.isoformat(), text, _sha256(text), _embedding_key(text, spec)))
+    keys = set()
+    for entry in entries:
+        if entry.key in keys:
+            raise ValueError(f"Duplicate entry key {entry.key!r}; the archive must have unique source identities.")
+        keys.add(entry.key)
+        text = prepared_text(entry)
+        result.append(PreparedEntry(entry.key, entry.kind, entry.slug, entry.url, entry.title, entry.published_iso, text, _sha256(text), _embedding_key(text, spec)))
     return result
 
 
-def _validate_prepared(prepared: list[PreparedPost], spec: dict) -> None:
+def _validate_prepared(prepared: list[PreparedEntry], spec: dict) -> None:
     _validate_spec(spec)
-    slugs = set()
+    keys = set()
     for post in prepared:
-        if post.slug in slugs:
-            raise ValueError(f"Duplicate prepared post slug {post.slug!r}.")
-        slugs.add(post.slug)
+        if post.key in keys:
+            raise ValueError(f"Duplicate prepared entry key {post.key!r}.")
+        keys.add(post.key)
+        if post.kind not in {"meditations", "logs"} or not post.slug or "/" in post.slug or post.key != f"{post.kind}/{post.slug}":
+            raise ValueError(f"Invalid prepared source identity {post.key!r}.")
+        prefix = "/logs/" if post.kind == "logs" else "/"
+        if post.url != f"{prefix}{quote(post.slug, safe='')}/":
+            raise ValueError(f"Invalid prepared URL for {post.key!r}.")
         if post.text_hash != _sha256(post.text) or post.embedding_key != _embedding_key(post.text, spec):
-            raise ValueError(f"Prepared hashes for {post.slug!r} do not match its text and specification; use prepare_posts.")
+            raise ValueError(f"Prepared hashes for {post.key!r} do not match its text and specification; use prepare_entries.")
         try:
-            canonical_date = date.fromisoformat(post.published_date).isoformat()
+            if post.kind == "logs":
+                published = datetime.fromisoformat(post.published_date)
+                if published.utcoffset() is None:
+                    raise ValueError("Log timestamp is missing a timezone.")
+                canonical_date = published.astimezone(timezone.utc).isoformat()
+            else:
+                canonical_date = date.fromisoformat(post.published_date).isoformat()
         except (TypeError, ValueError) as error:
-            raise ValueError(f"Invalid prepared publication date for {post.slug!r}.") from error
+            raise ValueError(f"Invalid prepared publication date for {post.key!r}.") from error
         if canonical_date != post.published_date:
-            raise ValueError(f"Prepared publication date for {post.slug!r} must be ISO YYYY-MM-DD.")
+            raise ValueError(f"Prepared publication date for {post.key!r} must be a canonical ISO date or UTC datetime for its source.")
 
 
 def _validate_schema(connection: sqlite3.Connection) -> None:
@@ -206,30 +220,31 @@ def _validate_vector(vector: bytes, dimension: int, description: str) -> None:
         raise ValueError(f"{description}: vector must have unit L2 norm (found {norm:.8g}).")
 
 
-def _cached_vector(state: _State, post: PreparedPost, spec: dict, tag: str, canonical: str) -> bytes | None:
+def _cached_vector(state: _State, post: PreparedEntry, spec: dict, tag: str, canonical: str) -> bytes | None:
     if state.specs.get(tag) != canonical:
         return None
     expected = (post.text_hash, post.embedding_key, tag)
-    cached = state.posts.get(post.slug)
+    cached = state.posts.get(post.key)
     if cached is not None and cached[2:5] == expected:
         try:
-            _validate_vector(cached[5], spec["dimension"], f"Cached embedding for {post.slug!r}")
+            _validate_vector(cached[5], spec["dimension"], f"Cached embedding for {post.key!r}")
         except ValueError:
             return None
         return cached[5]
-    # Keys exclude slugs and dates, allowing metadata updates and renames to reuse vectors.
+    # Content keys exclude identity and metadata. This also migrates legacy bare
+    # slugs to namespaced entry keys without recomputing vector bytes.
     for cached in state.posts.values():
         if cached[2:5] != expected:
             continue
         try:
-            _validate_vector(cached[5], spec["dimension"], f"Cached embedding for {post.slug!r}")
+            _validate_vector(cached[5], spec["dimension"], f"Cached embedding for {post.key!r}")
         except ValueError:
             continue
         return cached[5]
     return None
 
 
-def pending_posts(connection: sqlite3.Connection, prepared: list[PreparedPost], spec: dict) -> list[PreparedPost]:
+def pending_entries(connection: sqlite3.Connection, prepared: list[PreparedEntry], spec: dict) -> list[PreparedEntry]:
     _validate_prepared(prepared, spec)
     tag, canonical = model_tag(spec), _canonical(spec)
     try:
@@ -239,32 +254,32 @@ def pending_posts(connection: sqlite3.Connection, prepared: list[PreparedPost], 
         raise ValueError(f"Could not inspect embedding database: {error}. Remove a corrupt derived database and rebuild it. {_REBUILD}") from error
 
 
-def _freshness_errors(state: _State, prepared: list[PreparedPost], spec: dict) -> list[str]:
+def _freshness_errors(state: _State, prepared: list[PreparedEntry], spec: dict) -> list[str]:
     tag, canonical = model_tag(spec), _canonical(spec)
     issues = []
     if state.specs != {tag: canonical}:
         issues.append("model specification metadata is missing, mismatched, or historical")
     if state.metadata != {1: tag}:
         issues.append("archive model tag is missing or mismatched")
-    expected_slugs = {post.slug for post in prepared}
+    expected_slugs = {post.key for post in prepared}
     if set(state.posts) - expected_slugs:
         issues.append("deleted posts remain in the database")
     for post in prepared:
         expected = (post.title, post.published_date, post.text_hash, post.embedding_key, tag)
-        cached = state.posts.get(post.slug)
+        cached = state.posts.get(post.key)
         if cached is None:
-            issues.append(f"missing post/embedding {post.slug!r}")
+            issues.append(f"missing post/embedding {post.key!r}")
             continue
         if cached[:5] != expected:
-            issues.append(f"stale metadata/text/specification for {post.slug!r}")
+            issues.append(f"stale metadata/text/specification for {post.key!r}")
         try:
-            _validate_vector(cached[5], spec["dimension"], f"Embedding for {post.slug!r}")
+            _validate_vector(cached[5], spec["dimension"], f"Embedding for {post.key!r}")
         except ValueError as error:
             issues.append(str(error))
     return issues
 
 
-def check_fresh(connection: sqlite3.Connection, prepared: list[PreparedPost], spec: dict) -> None:
+def check_fresh(connection: sqlite3.Connection, prepared: list[PreparedEntry], spec: dict) -> None:
     _validate_prepared(prepared, spec)
     try:
         state = _read_state(connection)
@@ -281,29 +296,29 @@ def check_fresh(connection: sqlite3.Connection, prepared: list[PreparedPost], sp
         raise ValueError(f"Embedding state is not fresh: {detail}. {_REBUILD}")
 
 
-def _desired_state(state: _State, prepared: list[PreparedPost], spec: dict, vectors: dict[str, bytes]) -> _State:
+def _desired_state(state: _State, prepared: list[PreparedEntry], spec: dict, vectors: dict[str, bytes]) -> _State:
     tag, canonical = model_tag(spec), _canonical(spec)
-    slugs = {post.slug for post in prepared}
-    if set(vectors) - slugs:
-        raise ValueError("New vectors include slugs not present in the current archive.")
-    for slug, vector in vectors.items():
-        _validate_vector(vector, spec["dimension"], f"New embedding for {slug!r}")
+    keys = {post.key for post in prepared}
+    if set(vectors) - keys:
+        raise ValueError("New vectors include entry keys not present in the current archive.")
+    for key, vector in vectors.items():
+        _validate_vector(vector, spec["dimension"], f"New embedding for {key!r}")
     by_key = {}
     posts = {}
     for post in prepared:
         vector = _cached_vector(state, post, spec, tag, canonical)
         if vector is None:
-            vector = vectors.get(post.slug)
+            vector = vectors.get(post.key)
         if vector is None:
             vector = by_key.get(post.embedding_key)
         if vector is None:
-            raise ValueError(f"Missing new embedding for {post.slug!r}; compute all pending vectors before synchronizing. {_REBUILD}")
+            raise ValueError(f"Missing new embedding for {post.key!r}; compute all pending vectors before synchronizing. {_REBUILD}")
         vector = by_key.setdefault(post.embedding_key, vector)
-        posts[post.slug] = (post.title, post.published_date, post.text_hash, post.embedding_key, tag, vector)
+        posts[post.key] = (post.title, post.published_date, post.text_hash, post.embedding_key, tag, vector)
     return _State({tag: canonical}, {1: tag}, posts)
 
 
-def synchronize(connection: sqlite3.Connection, prepared: list[PreparedPost], spec: dict, vectors: dict[str, bytes]) -> None:
+def synchronize(connection: sqlite3.Connection, prepared: list[PreparedEntry], spec: dict, vectors: dict[str, bytes]) -> None:
     _validate_prepared(prepared, spec)
     if connection.in_transaction:
         raise ValueError("Synchronization must own its transaction; finish the existing database transaction first.")
@@ -341,7 +356,7 @@ def synchronize(connection: sqlite3.Connection, prepared: list[PreparedPost], sp
         raise
 
 
-def export_public(connection: sqlite3.Connection, destination: Path, prepared: list[PreparedPost], spec: dict) -> None:
+def export_public(connection: sqlite3.Connection, destination: Path, prepared: list[PreparedEntry], spec: dict) -> None:
     destination = Path(destination).expanduser().resolve()
     temporary = None
     public = None
@@ -364,13 +379,13 @@ def export_public(connection: sqlite3.Connection, destination: Path, prepared: l
         public.execute("PRAGMA journal_mode = DELETE")
         public.execute("BEGIN")
         public.execute("CREATE TABLE model (tag TEXT PRIMARY KEY, model_id TEXT NOT NULL, revision TEXT NOT NULL, dimension INTEGER NOT NULL, dtype TEXT NOT NULL) WITHOUT ROWID")
-        public.execute("CREATE TABLE posts (slug TEXT PRIMARY KEY, title TEXT NOT NULL, published_date TEXT NOT NULL, url TEXT NOT NULL, model_tag TEXT NOT NULL REFERENCES model(tag), embedding BLOB NOT NULL) WITHOUT ROWID")
-        public.execute("PRAGMA user_version = 1")
+        public.execute("CREATE TABLE posts (entry_key TEXT PRIMARY KEY, kind TEXT NOT NULL, slug TEXT NOT NULL, title TEXT NOT NULL, published_date TEXT NOT NULL, url TEXT NOT NULL, model_tag TEXT NOT NULL REFERENCES model(tag), embedding BLOB NOT NULL) WITHOUT ROWID")
+        public.execute("PRAGMA user_version = 2")
         tag = model_tag(spec)
         public.execute("INSERT INTO model VALUES (?, ?, ?, ?, ?)", (tag, spec["model"], spec["revision"], spec["dimension"], "<f4"))
         public.executemany(
-            "INSERT INTO posts VALUES (?, ?, ?, ?, ?, ?)",
-            ((post.slug, post.title, post.published_date, f"/{quote(post.slug, safe='')}/", tag, state.posts[post.slug][5]) for post in prepared),
+            "INSERT INTO posts VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+            ((post.key, post.kind, post.slug, post.title, post.published_date, post.url, tag, state.posts[post.key][5]) for post in prepared),
         )
         public.commit()
         public.close()
