@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "terms": [
+    {
+      "id": "orch",
+      "name": "Orch",
+      "aliases": [],
+      "definition": "raj's coordinating Autolith agent. It handles priorities across projects and requests for raj's attention.",
+      "introduction": "logs/2026-11-06-orchestrating-autolith",
+      "sources": [
+        {
+          "entry": "logs/2026-11-06-orchestrating-autolith",
+          "quote": "Orch is the coordinating agent. It handles priorities across projects and requests for raj's attention."
+        }
+      ]
+    },
+    {
+      "id": "autolith",
+      "name": "Autolith",
+      "aliases": [],
+      "definition": "The conversational working environment raj uses for code, files, and processes. The October 2026 setup log describes it as running in a live Common Lisp image.",
+      "introduction": "logs/2026-10-07-using-autolith",
+      "sources": [
+        {
+          "entry": "logs/2026-10-07-using-autolith",
+          "quote": "Autolith runs in a live Common Lisp image. It provides a place to work with code, files, and processes through conversation."
+        },
+        {
+          "entry": "meditations/the-lisp-machine",
+          "quote": "Spent the past half day or so exploring autolith - https://github.com/lambda-symbolics/autolith"
+        }
+      ]
+    },
+    {
+      "id": "hmas",
+      "name": "HMAS",
+      "aliases": ["hierarchical multi-agent systems"],
+      "definition": "Hierarchical multi-agent systems: agents organized in layers. The November 2026 log introduces the term while discussing David J. Moore's taxonomy and its possible use in raj's personal work.",
+      "introduction": "logs/2026-11-06-orchestrating-autolith",
+      "sources": [
+        {
+          "entry": "logs/2026-11-06-orchestrating-autolith",
+          "quote": "Hierarchical multi-agent systems (HMAS) organize agents in layers. He is considering how to apply those ideas to personal work."
+        }
+      ]
+    },
+    {
+      "id": "machine-head",
+      "name": "machine head",
+      "aliases": ["machine heads"],
+      "definition": "An agent responsible for execution and resources on one machine in the proposed cross-machine organization. The November 2026 log describes this organization as work still to implement and test.",
+      "introduction": "logs/2026-11-06-orchestrating-autolith",
+      "sources": [
+        {
+          "entry": "logs/2026-11-06-orchestrating-autolith",
+          "quote": "A head is the agent responsible for execution and resources on one machine."
+        },
+        {
+          "entry": "logs/2026-11-06-orchestrating-autolith",
+          "quote": "The proposed organization of machine heads still needs implementation and tests."
+        }
+      ]
+    },
+    {
+      "id": "project-agent",
+      "name": "project agent",
+      "aliases": ["project agents"],
+      "definition": "An agent that keeps context for its own project. In the November 2026 design, persistence means that it can resume work, not that it must run inference continuously.",
+      "introduction": "logs/2026-11-06-orchestrating-autolith",
+      "sources": [
+        {
+          "entry": "logs/2026-11-06-orchestrating-autolith",
+          "quote": "Persistent project agents keep the context for their own projects. They can communicate directly instead of requiring raj to repeat each report. Persistence means that an agent can resume its work. It does not require continuous inference."
+        }
+      ]
+    }
+  ]
+}

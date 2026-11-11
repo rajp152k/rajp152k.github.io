@@ -7,3 +7,5 @@ node_modules/
 blog.sqlite-journal
 blog.sqlite-wal
 blog.sqlite-shm
+test-results/
+playwright-report/

@@ -78,7 +78,7 @@ class ArchiveTests(unittest.TestCase):
                          ("mx0", "mxf", "mx10", "lx2"))
 
     def test_reserved_native_routes_are_rejected_before_preparation(self):
-        for kind, slug in [("meditations", "search"), ("meditations", "logs"), ("meditations", "meditations")]:
+        for kind, slug in [("meditations", slug) for slug in ("search", "logs", "meditations", "terms")]:
             fields = "title: Reserved\ndate: 2026-10-01"
             with self.subTest(kind=kind, slug=slug), self.assertRaises(ValueError):
                 parse(self.source(fields, kind=kind, slug=slug), kind)

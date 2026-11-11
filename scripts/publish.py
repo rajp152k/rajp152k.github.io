@@ -62,6 +62,7 @@ def collection_nav(scope: str, *, search: bool = False) -> str:
             url = "/search/" + (f"?kind={kind}" if kind != "all" else "")
         current = ' aria-current="page"' if kind == scope else ""
         links.append(f'<a href="{url}" data-kind="{kind}"{current}>{kind}</a>')
+    links.append('<a class="terms-navigation" href="/terms/">terms</a>')
     return f'<nav class="collection-nav" aria-label="Collections">{"".join(links)}</nav>'
 
 
@@ -164,19 +165,22 @@ def render_archive(
 </main>"""
 
 
-def entry_content(entry: Entry, code: str, account_menu: str) -> str:
+def entry_content(entry: Entry, code: str, account_menu: str, *, body: str | None = None, panel: str = "") -> str:
     import markdown
 
-    body = markdown.markdown(entry.body, extensions=["fenced_code", "tables"])
+    if body is None:
+        body = markdown.markdown(entry.body, extensions=["fenced_code", "tables"])
     timestamp = entry.published_iso.replace("T", " ").replace("+00:00", " UTC").replace("Z", " UTC")
     identity = f"{code} · meditation · " if entry.kind == "meditations" else ""
+    toggle = '<button class="terms-toggle" type="button" data-terms-toggle aria-controls="terms-panel" aria-expanded="false" hidden>Terms and references</button>' if panel else ""
     return f"""{site_header(account_menu, scope=entry.kind)}
 <main class="reading-shell">
-  <nav class="post-navigation" aria-label="Archive"><a class="back-link" href="{COLLECTIONS[entry.kind]}">← {entry.kind}</a> · <a class="back-link" href="/">all entries</a></nav>
+  <nav class="post-navigation" aria-label="Archive"><a class="back-link" href="{COLLECTIONS[entry.kind]}">← {entry.kind}</a> · <a class="back-link" href="/">all entries</a><span class="terms-navigation"> · <a href="/terms/">terms</a></span>{toggle}</nav>
   <article class="article-content">
     <p class="post-meta">{identity}<time datetime="{entry.published_iso}">{timestamp}</time></p>
     <h1>{escape(entry.title)}</h1>{body}
   </article>
+  {panel}
 </main>"""
 
 
@@ -192,6 +196,8 @@ def page(title: str, content: str, assets: dict[str, str], *, kind: str, scope: 
         if '<code class="language-mermaid">' in content:
             scripts += f'\n  <script type="module" src="{assets["article"]}"></script>'
         classes = "post-page" + (" log-page" if scope == "logs" else "")
+    if 'id="terms-panel"' in content:
+        scripts += f'\n  <script type="module" src="{assets["terms"]}"></script>'
     data = f' data-search-index="{search_index}"' if kind == "search" else ""
     return f"""<!doctype html>
 <html lang="en">
@@ -235,6 +241,15 @@ def build(entries: list[Entry]) -> None:
 def build_site(entries: list[Entry], connection: sqlite3.Connection, prepared: list[PreparedEntry], spec: dict, projection: Projection) -> None:
     account_menu = render_account_menu()
     codes = display_ids(entries)
+    import markdown
+    from terms import collect_mentions, load_terms, terms_for_post, transform_html
+    from term_pages import article_panel, term_card, terms_index
+
+    registry = load_terms(entries)
+    by_key = {entry.key: entry for entry in entries}
+    rendered = {entry.key: markdown.markdown(entry.body, extensions=["fenced_code", "tables"]) for entry in entries}
+    mentions = collect_mentions(entries, registry, rendered)
+    transformed = {key: transform_html(body, registry).html for key, body in rendered.items()}
     documents = [{"key": entry.key, "slug": entry.slug, "kind": entry.kind, "title": entry.title,
                   "date": entry.published_iso, "url": entry.url, "postId": codes[entry.key], "blocks": visible_blocks(entry)}
                  for entry in entries]
@@ -259,8 +274,22 @@ def build_site(entries: list[Entry], connection: sqlite3.Connection, prepared: l
         for entry in entries:
             destination = staged / unquote(entry.url.lstrip("/"))
             destination.mkdir(parents=True)
-            content = entry_content(entry, codes[entry.key], account_menu)
+            panel = article_panel(terms_for_post(entry.key, mentions, registry), by_key, mentions, entry.key)
+            content = entry_content(entry, codes[entry.key], account_menu, body=transformed[entry.key], panel=panel)
             (destination / "index.html").write_text(page(entry.title, content, assets, kind="post", scope=entry.kind), encoding="utf-8")
+        # Term pages are navigation, not additional archive entries or embedding inputs.
+        destination = staged / "terms"
+        destination.mkdir()
+        def reference_page(title: str, body: str) -> str:
+            content = f'{site_header(account_menu)}<main class="reading-shell"><nav class="post-navigation"><a href="/">all entries</a> · <a href="/terms/">terms</a></nav><article class="article-content">{body}</article></main>'
+            return page(title, content, assets, kind="post")
+        (destination / "index.html").write_text(reference_page("Terms and references", terms_index(registry.terms)), encoding="utf-8")
+        for term in registry.terms:
+            term_destination = destination / term.id
+            term_destination.mkdir()
+            relevant = [mention for mention in mentions if mention.term_id == term.id]
+            body = term_card(term, by_key, relevant, heading="h1")
+            (term_destination / "index.html").write_text(reference_page(term.name, body), encoding="utf-8")
         shutil.copy(ROOT / "CNAME", staged / "CNAME")
         if SITE.exists():
             shutil.rmtree(SITE)

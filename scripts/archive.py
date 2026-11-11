@@ -27,7 +27,7 @@ class Entry:
     def __post_init__(self) -> None:
         if self.kind not in {"meditations", "logs"}:
             raise ValueError(f"Unknown archive source kind {self.kind!r}.")
-        reserved = {"meditations": {"search", "logs", "meditations"}, "logs": set()}
+        reserved = {"meditations": {"search", "logs", "meditations", "terms"}, "logs": set()}
         if not self.slug or "/" in self.slug or self.slug in reserved[self.kind]:
             raise ValueError(f"Reserved or invalid {self.kind} slug {self.slug!r}.")
         if self.kind == "meditations":

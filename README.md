@@ -380,6 +380,59 @@ Homepage and article pages do not fetch it or the SQLite artifact. Search requir
 JavaScript; without it, the search page links to the fully usable archive. Loading,
 empty, no-match, punctuation-only, and unavailable-index states are explicit.
 
+## Terms and references
+
+Maintain definitions and aliases in `terms.json`. The agent maintains these records
+when it prepares a post. Use stable term IDs, short definitions, a chosen
+introductory post, and exact source passages. Read the source before updating a
+definition. A mention alone does not support a definition. Keep meanings specific
+to their context, and review older posts before changing a shared definition.
+
+For each new or revised post:
+
+1. Read the post and compare its names and ideas with the current term records.
+2. Add supported terms and aliases. Use full phrases for ambiguous words.
+3. Select a useful introductory post, not merely the earliest mention.
+4. Check definitions, exact source passages, and the generated mention report.
+5. Build and check the reference panel and links before committing the post.
+
+```sh
+.venv-embed/bin/python scripts/terms.py --check
+.venv-embed/bin/python scripts/terms.py --json
+.venv-embed/bin/python scripts/publish.py
+```
+
+The build validates the records and finds the first eligible mention of each term
+in each post. It skips existing links, headings, code, and quotations. Matching
+uses whole words, ignores case, and prefers the longest alias. Generated spans
+preserve the Markdown source. Search and embedding inputs use the original post.
+Term pages at `/terms/` and `/terms/<id>/` are navigation pages, not archive entries.
+The meditation slug `terms` is reserved.
+
+At desktop widths above 900px, select a dotted reference to open its definition,
+sources, and other posts in a side panel. Use the keyboard to select a reference;
+press Escape in the panel to close it and return focus. At widths of at least
+1200px the panel starts open beside the article. On smaller desktop windows,
+open it with **Terms and references**. On phones the spans are plain text and
+the article uses the normal scrolling layout. Without JavaScript, use the desktop
+**terms** link to browse the generated term pages.
+
+Builds use saved records and make no model calls. Failed record validation stops
+the build before it replaces the local preview. Report unresolved editorial
+questions to raj outside the article. Include term record changes with the post
+that requires them. Term-only changes do not require an embedding update.
+
+Run the browser checks after a build:
+
+```sh
+npx playwright install chromium
+npm run test:browser
+```
+
+The checks cover desktop selection, keyboard focus, narrow desktop windows,
+phone resizing, and reading without JavaScript. GitHub CI also runs them.
+Screenshots and browser reports are local, ignored files under `test-results/`.
+
 ## Public SQLite artifact
 
 Every site build creates a fresh, allowlisted `site/blog.sqlite`, available as
