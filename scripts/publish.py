@@ -20,6 +20,7 @@ from embedding_state import (
     open_database, prepare_entries,
 )
 from projection import Projection, project
+from lab_notes import map_inspector, post_notes
 
 SITE = ROOT / "site"
 ACCOUNTS = ROOT / "accounts.json"
@@ -31,7 +32,11 @@ def render_account_menu() -> str:
     links = []
     for account in accounts:
         label = escape(account["label"], quote=True)
-        icon = (ROOT / "assets" / "icons" / f"{account['icon']}.svg").read_text(encoding="utf-8")
+        if "image" in account:
+            image = escape(account["image"], quote=True)
+            icon = f'<img class="channel-logo" src="/channels/{image}" width="24" height="24" alt="">'
+        else:
+            icon = (ROOT / "assets" / "icons" / f"{account['icon']}.svg").read_text(encoding="utf-8")
         links.append(
             f'<a class="account-link" href="{escape(account["url"], quote=True)}" '
             f'aria-label="{label}" title="{label}">{icon}</a>'
@@ -74,7 +79,7 @@ def post_attributes(entry: Entry, code: str) -> str:
     )
 
 
-def render_map(entries: list[Entry], projection: Projection, codes: dict[str, str], selected: set[str]) -> str:
+def render_map(entries: list[Entry], projection: Projection, codes: dict[str, str], selected: set[str], references=()) -> str:
     points = list(projection.points.values())
     if points:
         xs, ys = zip(*points)
@@ -100,14 +105,27 @@ def render_map(entries: list[Entry], projection: Projection, codes: dict[str, st
 </a>"""
         (match_nodes if matches else context_nodes).append(node)
     empty = '<text class="map-empty" x="320" y="260">Publish an entry to begin the map.</text>' if not entries else ""
+    coordinates = {key: (320 + (x - center_x) * scale, 260 - (y - center_y) * scale)
+                   for key, (x, y) in projection.points.items()}
+    edges = []
+    for reference in references:
+        source, target = reference["source"], reference["target"]
+        x1, y1 = coordinates[source]
+        x2, y2 = coordinates[target]
+        context = " is-context" if source not in selected and target not in selected else ""
+        edges.append(f'<line class="map-reference{context}" data-source="{escape(source, quote=True)}" '
+                     f'data-target="{escape(target, quote=True)}" x1="{x1:.3f}" y1="{y1:.3f}" '
+                     f'x2="{x2:.3f}" y2="{y2:.3f}"/>')
     return f"""<svg class="embedding-map" viewBox="0 0 640 520" role="group" aria-labelledby="map-title" aria-describedby="map-description">
-  <desc id="map-description">Archive-wide PCA of meditation and log text. Filled circles are meditations; outlined circles are logs. Nearby points suggest similar text. Faint points are noninteractive context. Hover or focus reveals identity below.</desc>
+  <desc id="map-description">Archive-wide PCA of post text. Filled circles are meditations; outlined circles are logs. Positions approximate embedding similarity in two dimensions. Dim violet lines are explicit post references, not similarity scores. Faint points are noninteractive context. Hover or focus reveals identity; choose Inspect for source passages and full-vector cosine similarity.</desc>
+  <defs><marker id="reference-arrow" viewBox="0 0 10 10" refX="19" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="currentColor"/></marker></defs>
   <g aria-hidden="true">
     <path class="map-axes" d="M 32 {origin_y:.3f} H 608 M {origin_x:.3f} 32 V 488"/>
     <text class="map-axis-label" x="604" y="{max(44, origin_y - 8):.3f}" text-anchor="end">PC1</text>
     <text class="map-axis-label" x="{origin_x + 8:.3f}" y="42">PC2</text>
     <text class="map-axis-label" x="{origin_x + 8:.3f}" y="{origin_y + 16:.3f}">0</text>
   </g>
+  <g class="map-references" aria-hidden="true">{''.join(edges)}</g>
   <g class="map-context">{''.join(context_nodes)}</g>
   <g class="map-matches">{''.join(match_nodes)}</g>
   {empty}
@@ -117,6 +135,7 @@ def render_map(entries: list[Entry], projection: Projection, codes: dict[str, st
 def render_archive(
     entries: list[Entry], projection: Projection, dimension: int, model_id: str,
     account_menu: str, codes: dict[str, str], *, scope: str = "all", search: bool = False,
+    references=(), nearest=None,
 ) -> str:
     visible = [entry for entry in entries if scope == "all" or entry.kind == scope]
     selected = set() if search else {entry.key for entry in visible}
@@ -158,9 +177,12 @@ def render_archive(
       <h2 id="map-title">PCA <a class="model-card" href="https://huggingface.co/{quote(model_id, safe='/')}" aria-label="Embedding model card: {escape(model_id)}">{escape(model_id.rsplit('/', 1)[-1])}</a></h2>
       <span class="panel-meta" title="Combined archive input dimensions → displayed dimensions / embedding variance retained">{dimension} → 2 / {variance}</span>
     </header>
-    <div class="map-legend"><span class="legend-meditation" aria-hidden="true"></span>meditations <span class="legend-log" aria-hidden="true"></span>logs</div>
-    <div class="map-stage">{render_map(entries, projection, codes, selected)}</div>
-    <footer class="map-footer"><div class="map-readout"><span class="map-readout-id">—</span><span class="map-readout-title"></span><span class="map-readout-date"></span></div></footer>
+    <div class="map-legend"><span class="legend-meditation" aria-hidden="true"></span>meditations <span class="legend-log" aria-hidden="true"></span>logs <span class="legend-reference" aria-hidden="true"></span>post references</div>
+    <div class="map-stage">{render_map(entries, projection, codes, selected, references)}</div>
+    <footer class="map-footer"><div class="map-readout"><span class="map-readout-id">—</span><span class="map-readout-title"></span><span class="map-readout-date"></span></div>
+      {map_inspector(entries, codes, references, nearest or {})}
+      <details class="map-method"><summary>How to read this map</summary><p>Positions show a two-dimensional PCA projection of post embeddings. Distance is an approximation; {variance} is retained. Violet lines show authored links between posts. Arrows point to the referenced post when you inspect or focus a post. Cosine scores use the full {dimension}-dimensional vectors, not plotted distance.</p></details>
+    </footer>
   </section>
 </main>"""
 
@@ -171,7 +193,7 @@ def entry_content(entry: Entry, code: str, account_menu: str, *, body: str | Non
     if body is None:
         body = markdown.markdown(entry.body, extensions=["fenced_code", "tables"])
     timestamp = entry.published_iso.replace("T", " ").replace("+00:00", " UTC").replace("Z", " UTC")
-    identity = f"{code} · meditation · " if entry.kind == "meditations" else ""
+    identity = f"{code} · {'meditation' if entry.kind == 'meditations' else 'log'} · "
     toggle = '<button class="terms-toggle" type="button" data-terms-toggle aria-controls="terms-panel" aria-expanded="false" hidden>Terms and references</button>' if panel else ""
     return f"""{site_header(account_menu, scope=entry.kind)}
 <main class="reading-shell">
@@ -244,12 +266,17 @@ def build_site(entries: list[Entry], connection: sqlite3.Connection, prepared: l
     import markdown
     from terms import collect_mentions, load_terms, terms_for_post, transform_html
     from term_pages import article_panel, term_card, terms_index
+    from relationships import annotate_references, collect_references, nearest_posts
 
     registry = load_terms(entries)
     by_key = {entry.key: entry for entry in entries}
-    rendered = {entry.key: markdown.markdown(entry.body, extensions=["fenced_code", "tables"]) for entry in entries}
+    rendered = {entry.key: markdown.markdown(entry.body, extensions=["fenced_code", "tables", "toc"],
+                extension_configs={"toc": {"permalink": "§"}}) for entry in entries}
+    references = collect_references(entries, rendered)
+    nearest = nearest_posts(connection, spec["dimension"])
     mentions = collect_mentions(entries, registry, rendered)
-    transformed = {key: transform_html(body, registry).html for key, body in rendered.items()}
+    annotated = annotate_references(rendered, references)
+    transformed = {key: transform_html(body, registry).html for key, body in annotated.items()}
     documents = [{"key": entry.key, "slug": entry.slug, "kind": entry.kind, "title": entry.title,
                   "date": entry.published_iso, "url": entry.url, "postId": codes[entry.key], "blocks": visible_blocks(entry)}
                  for entry in entries]
@@ -259,23 +286,25 @@ def build_site(entries: list[Entry], connection: sqlite3.Connection, prepared: l
     with TemporaryDirectory(prefix="blog-site-") as directory:
         staged = Path(directory)
         assets = json.loads(node_output("build_assets.mjs", directory))
+        shutil.copytree(ROOT / "assets" / "channels", staged / "channels")
         (staged / index_name).write_bytes(payload)
         export_public(connection, staged / "blog.sqlite", prepared, spec)
         for scope, url in COLLECTIONS.items():
             destination = staged / url.lstrip("/")
             destination.mkdir(parents=True, exist_ok=True)
-            content = render_archive(entries, projection, spec["dimension"], spec["model"], account_menu, codes, scope=scope)
+            content = render_archive(entries, projection, spec["dimension"], spec["model"], account_menu, codes, scope=scope, references=references, nearest=nearest)
             title = "yet another raj" if scope == "all" else f"{scope.title()} — yet another raj"
             (destination / "index.html").write_text(page(title, content, assets, kind="index", scope=scope), encoding="utf-8")
         destination = staged / "search"
         destination.mkdir()
-        content = render_archive(entries, projection, spec["dimension"], spec["model"], account_menu, codes, search=True)
+        content = render_archive(entries, projection, spec["dimension"], spec["model"], account_menu, codes, search=True, references=references, nearest=nearest)
         (destination / "index.html").write_text(page("Search — yet another raj", content, assets, kind="search", search_index=f"/{index_name}"), encoding="utf-8")
         for entry in entries:
             destination = staged / unquote(entry.url.lstrip("/"))
             destination.mkdir(parents=True)
             panel = article_panel(terms_for_post(entry.key, mentions, registry), by_key, mentions, entry.key)
-            content = entry_content(entry, codes[entry.key], account_menu, body=transformed[entry.key], panel=panel)
+            body = transformed[entry.key] + post_notes(entry, by_key, codes, references)
+            content = entry_content(entry, codes[entry.key], account_menu, body=body, panel=panel)
             (destination / "index.html").write_text(page(entry.title, content, assets, kind="post", scope=entry.kind), encoding="utf-8")
         # Term pages are navigation, not additional archive entries or embedding inputs.
         destination = staged / "terms"

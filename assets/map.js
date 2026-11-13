@@ -15,6 +15,25 @@ export function createLinkedView(root) {
   const identifier = root.querySelector('.map-readout-id');
   const title = root.querySelector('.map-readout-title');
   const date = root.querySelector('.map-readout-date');
+  const edges = [...root.querySelectorAll('.map-reference')];
+  const inspect = root.querySelector('#map-inspect');
+  const inspector = root.querySelector('.map-inspector');
+  if (inspector) inspector.hidden = false;
+  const details = root.querySelector('.map-details');
+  const templates = new Map([...root.querySelectorAll('template[data-map-note]')]
+    .map(template => [template.dataset.mapNote, template]));
+  let pinnedSlug = null;
+
+  function showDetails(slug) {
+    pinnedSlug = slug;
+    if (inspect) inspect.value = slug || '';
+    if (details) {
+      details.replaceChildren();
+      const template = templates.get(slug);
+      if (template) details.append(template.content.cloneNode(true));
+      details.hidden = !template;
+    }
+  }
   let selectable = null;
   let pointerLink = null;
   let focusedLink = null;
@@ -31,7 +50,8 @@ export function createLinkedView(root) {
   }
 
   function render() {
-    const link = (!pointerDismissed && postLink(pointerLink)) || postLink(focusedLink);
+    const pinned = pinnedSlug ? postLink(linksByPost.get(pinnedSlug)?.[0]) : null;
+    const link = pinned || (!pointerDismissed && postLink(pointerLink)) || postLink(focusedLink);
     const slug = link ? link.dataset.post : null;
     if (slug !== activeSlug) {
       if (activeSlug !== null) {
@@ -41,6 +61,10 @@ export function createLinkedView(root) {
         for (const current of linksByPost.get(slug)) current.classList.add('is-active');
       }
       activeSlug = slug;
+      for (const edge of edges) {
+        edge.classList.toggle('is-active', slug !== null
+          && (edge.dataset.source === slug || edge.dataset.target === slug));
+      }
     }
     if (identifier) identifier.textContent = link ? link.dataset.postId : '—';
     if (title) title.textContent = link ? link.dataset.title : '';
@@ -65,6 +89,15 @@ export function createLinkedView(root) {
     render();
   }
 
+  inspect?.addEventListener('change', () => {
+    showDetails(inspect.value || null);
+    render();
+  });
+  root.querySelector('[data-map-reset]')?.addEventListener('click', () => {
+    showDetails(null);
+    pointerDismissed = true;
+    render();
+  });
   root.addEventListener('pointerover', (event) => {
     if (event.pointerType === 'touch') return;
     rememberPointer(event);
@@ -93,6 +126,7 @@ export function createLinkedView(root) {
   root.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape' || event.target.closest('.search-form')) return;
     pointerDismissed = true;
+    showDetails(null);
     render();
   });
 
@@ -100,6 +134,16 @@ export function createLinkedView(root) {
   return {
     setSelectable(slugs) {
       selectable = slugs;
+      if (inspect) {
+        for (const option of inspect.options) {
+          option.disabled = !!option.value && slugs !== null && !slugs.has(option.value);
+        }
+      }
+      for (const edge of edges) {
+        edge.classList.toggle('is-context', slugs !== null
+          && !slugs.has(edge.dataset.source) && !slugs.has(edge.dataset.target));
+      }
+      if (pinnedSlug && slugs !== null && !slugs.has(pinnedSlug)) showDetails(null);
       refresh();
     },
     refresh,
@@ -107,6 +151,7 @@ export function createLinkedView(root) {
       pointerLink = null;
       focusedLink = null;
       pointerDismissed = true;
+      showDetails(null);
       render();
     },
   };

@@ -13,5 +13,15 @@
     "label": "X",
     "url": "https://x.com/rajpatil152k",
     "icon": "x"
+  },
+  {
+    "label": "Bit-Mage on YouTube",
+    "url": "https://www.youtube.com/@The-Bit-Mage",
+    "image": "bitmage.jpg"
+  },
+  {
+    "label": "CognWare on YouTube",
+    "url": "https://www.youtube.com/@CognWare",
+    "image": "cognware.jpg"
   }
 ]

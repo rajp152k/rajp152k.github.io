@@ -237,6 +237,57 @@ h1, h2, p { margin-top: 0; }
   .references-open > .terms-panel { grid-column: 2; grid-row: 2; position: sticky; right: auto; top: 6px; width: 100%; max-height: calc(100dvh - 12px); box-shadow: none; }
 }
 
+/* Lab notes: explicit links and measured similarity share the unchanged PCA. */
+.channel-logo { display: block; width: 24px; height: 24px; object-fit: contain; }
+.map-inspector[hidden] { display: none; }
+.map-reference { stroke: var(--accent); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: .16; pointer-events: none; }
+.map-reference.is-context { opacity: .04; }
+.map-reference.is-active { color: var(--violet); stroke: var(--violet); opacity: .65; marker-end: url(#reference-arrow); }
+.legend-reference { flex: none; width: 16px; border-top: 1px solid var(--accent); margin-left: 6px; }
+.map-legend { flex-wrap: wrap; }
+.map-point.is-active .map-halo { filter: drop-shadow(0 0 2px var(--accent)); }
+.map-inspector { display: flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 11px; }
+.map-inspector label { color: var(--violet); }
+.map-inspector select { flex: 1; min-width: 0; width: 0; }
+.map-inspector select, .map-inspector button { border: 1px solid var(--border); border-radius: 0; padding: 3px 5px; background: var(--background); color: var(--text); font: inherit; }
+.map-inspector :focus-visible { outline: 1px solid var(--active); outline-offset: 1px; }
+.map-details { max-height: 190px; overflow: auto; margin-top: 6px; border-top: 1px solid var(--border); }
+.map-details[hidden] { display: none; }
+.relationship-sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24ch), 1fr)); gap: 8px; font-size: 12px; }
+.relationship-sections > section { min-width: 0; }
+.relationship-sections h3 { margin: 6px 0; font-size: 12px; font-weight: 400; color: var(--violet); }
+.relationship-sections ol { padding-left: 24px; margin: 6px 0; }
+.relationship-sections li { padding: 0 0 6px 2px; overflow-wrap: anywhere; }
+.relationship-sections li::marker { color: var(--violet); }
+.relationship-sections a { color: var(--violet); }
+.relationship-sections a:hover { color: var(--target); }
+.note-id { color: var(--muted); white-space: nowrap; }
+.note-count { display: inline-block; padding: 0 4px; border: 1px solid var(--border); color: var(--text); }
+.similarity-score { color: var(--text); white-space: nowrap; }
+.reference-excerpt { margin: 4px 0 0; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.passage-link { display: block; font-size: 11px; margin-top: 3px; }
+.map-method { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.map-method summary { cursor: pointer; color: var(--violet); }
+.map-method p { max-height: 70px; overflow: auto; margin: 4px 0 0; }
+.post-relations { border-top: 1px solid var(--border); margin-top: 1.5em; padding-top: 4px; }
+.article-content .headerlink { margin-left: 6px; font-size: .8em; text-decoration: none; opacity: .55; }
+.article-content .headerlink:hover, .article-content .headerlink:focus-visible { opacity: 1; }
+[id] { scroll-margin-top: 8px; }
+.article-content a[id^="post-reference-"]:target { outline: 1px solid var(--accent); background: var(--highlight); }
+.term-sources { counter-reset: source; }
+.term-sources > li { counter-increment: source; }
+.term-sources > li::before { content: "[" counter(source) "] "; color: var(--violet); font-size: 11px; }
+@media (prefers-reduced-motion: no-preference) {
+  .map-reference { transition: opacity 120ms ease; }
+}
+
+@media (max-width: 700px), (max-height: 600px) {
+  .index-page:has(.map-details:not([hidden])) { height: auto; min-height: 100dvh; overflow: visible; }
+  .index-page:has(.map-details:not([hidden])) .workspace { flex: none; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; }
+  .index-page:has(.map-details:not([hidden])) .archive-panel { height: clamp(160px, 35vh, 280px); }
+  .index-page:has(.map-details:not([hidden])) .map-panel { height: 620px; }
+}
+
 @media print {
   .terms-panel, .terms-toggle, .terms-navigation { display: none !important; }
   .reading-shell.references-open { display: block; max-width: 80ch; }
