@@ -117,7 +117,7 @@ def render_map(entries: list[Entry], projection: Projection, codes: dict[str, st
                      f'data-target="{escape(target, quote=True)}" x1="{x1:.3f}" y1="{y1:.3f}" '
                      f'x2="{x2:.3f}" y2="{y2:.3f}"/>')
     return f"""<svg class="embedding-map" viewBox="0 0 640 520" role="group" aria-labelledby="map-title" aria-describedby="map-description">
-  <desc id="map-description">Archive-wide PCA of post text. Filled circles are meditations; outlined circles are logs. Positions approximate embedding similarity in two dimensions. Dim violet lines are explicit post references, not similarity scores. Faint points are noninteractive context. Hover or focus reveals identity; choose Inspect for source passages and full-vector cosine similarity.</desc>
+  <desc id="map-description">Archive-wide PCA of post text. Filled circles are meditations; outlined circles are logs. Positions approximate embedding similarity in two dimensions. Dim violet lines are explicit post references, not similarity scores. Faint points are noninteractive context. Click a circle to inspect the post below the map, then follow its title to read. With a keyboard, focus a circle and press Enter or Space.</desc>
   <defs><marker id="reference-arrow" viewBox="0 0 10 10" refX="19" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="currentColor"/></marker></defs>
   <g aria-hidden="true">
     <path class="map-axes" d="M 32 {origin_y:.3f} H 608 M {origin_x:.3f} 32 V 488"/>

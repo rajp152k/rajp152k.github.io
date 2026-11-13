@@ -1,6 +1,8 @@
 """Render measured map details and explicit post references for the lab journal."""
 from html import escape
 
+from archive import visible_blocks
+
 
 def post_link(entry, codes, url=None):
     return (f'<a href="{escape(url or entry.url, quote=True)}">'
@@ -40,23 +42,28 @@ def relationship_sections(entry, entries, codes, references, nearest=()):
 
 def map_inspector(entries, codes, references, nearest):
     by_key = {entry.key: entry for entry in entries}
-    options, templates = [], []
-    for index, entry in enumerate(entries):
+    templates = []
+    for entry in entries:
         key = escape(entry.key, quote=True)
-        label = escape(f'{codes[entry.key]} {entry.title}')
-        options.append(f'<div id="map-option-{index}" role="option" aria-selected="false" '
-                       f'data-value="{key}">{label}</div>')
-        content = relationship_sections(entry, by_key, codes, references, nearest.get(entry.key, ()))
+        opening = next((block["text"] for block in visible_blocks(entry)
+                        if block["kind"] == "body"), "")
+        excerpt = " ".join(opening.split())
+        if len(excerpt) > 220:
+            excerpt = excerpt[:220].rsplit(" ", 1)[0] + "…"
+        relationships = relationship_sections(entry, by_key, codes, references, nearest.get(entry.key, ()))
+        content = (f'<h3 id="map-detail-title"><a href="{escape(entry.url, quote=True)}">'
+                   f'{escape(entry.title)}</a></h3>'
+                   f'<p class="map-detail-meta">{escape(codes[entry.key])} · '
+                   f'<time datetime="{entry.published_iso}">{entry.date_label}</time></p>'
+                   f'<p class="map-detail-excerpt">{escape(excerpt)}</p>'
+                   '<details class="map-evidence"><summary>References and similarity</summary>'
+                   f'{relationships}</details>')
         templates.append(f'<template data-map-note="{key}">{content}</template>')
-    return ('<div class="map-inspector" hidden><span id="map-inspect-label">Inspect</span>'
-            '<div class="map-picker"><button type="button" id="map-inspect" role="combobox" '
-            'aria-labelledby="map-inspect-label map-inspect-value" aria-haspopup="listbox" '
-            'aria-expanded="false" aria-controls="map-inspect-options">'
-            '<span id="map-inspect-value">Choose a post</span><span aria-hidden="true">▾</span></button>'
-            '<div id="map-inspect-options" role="listbox" aria-labelledby="map-inspect-label" hidden>'
-            + "".join(options) + '</div></div>'
+    return ('<section class="map-inspector" hidden aria-labelledby="map-inspect-label">'
+            '<div class="map-inspector-head"><span id="map-inspect-label">Inspect</span>'
             '<button type="button" data-map-reset aria-label="Clear inspected post">clear</button></div>'
-            '<div class="map-details" hidden></div>' + "".join(templates))
+            '<div id="map-details" class="map-details" hidden></div></section>'
+            '<span class="map-inspection-status" role="status"></span>' + "".join(templates))
 
 
 def post_notes(entry, entries, codes, references):

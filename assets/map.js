@@ -1,5 +1,3 @@
-import { createPostPicker } from './post-picker.js';
-
 export function createLinkedView(root) {
   const selector = 'a.post-link, a.map-point';
   const linksByPost = new Map();
@@ -18,20 +16,32 @@ export function createLinkedView(root) {
   const title = root.querySelector('.map-readout-title');
   const date = root.querySelector('.map-readout-date');
   const edges = [...root.querySelectorAll('.map-reference')];
-  const inspect = createPostPicker(root, slug => {
-    showDetails(slug);
-    render();
-  });
+  const points = [...root.querySelectorAll('a.map-point')];
+  const map = root.querySelector('.embedding-map');
+  map?.classList.add('is-interactive');
+  for (const point of points) {
+    point.setAttribute('role', 'button');
+    point.setAttribute('aria-controls', 'map-details');
+    point.setAttribute('aria-expanded', 'false');
+  }
   const inspector = root.querySelector('.map-inspector');
-  if (inspector) inspector.hidden = false;
+  const status = root.querySelector('.map-inspection-status');
   const details = root.querySelector('.map-details');
   const templates = new Map([...root.querySelectorAll('template[data-map-note]')]
     .map(template => [template.dataset.mapNote, template]));
   let pinnedSlug = null;
 
   function showDetails(slug) {
+    if (slug === pinnedSlug) return;
     pinnedSlug = slug;
-    inspect?.setValue(slug);
+    if (inspector) inspector.hidden = !slug;
+    for (const point of points) {
+      const selected = point.dataset.post === slug;
+      point.classList.toggle('is-selected', selected);
+      point.setAttribute('aria-expanded', String(selected));
+    }
+    if (status) status.textContent = slug
+      ? `Inspecting ${linksByPost.get(slug)?.[0].dataset.title}` : 'Inspection cleared.';
     if (details) {
       details.replaceChildren();
       const template = templates.get(slug);
@@ -72,7 +82,7 @@ export function createLinkedView(root) {
       }
     }
     if (identifier) identifier.textContent = link ? link.dataset.postId : '—';
-    if (title) title.textContent = link ? link.dataset.title : '';
+    if (title) title.textContent = link ? link.dataset.title : 'Click a circle to inspect';
     if (date) date.textContent = link ? link.dataset.displayDate : '';
   }
 
@@ -87,22 +97,64 @@ export function createLinkedView(root) {
     pointerPosition = { x: event.clientX, y: event.clientY };
   }
 
+  // Resolve overlapping hit areas by distance, not SVG paint order.
+  function pointerPost(target, x, y) {
+    if (!map?.contains(target)) return postLink(target);
+    const matrix = map.getScreenCTM();
+    if (!matrix) return null;
+    const position = new DOMPoint(x, y).matrixTransform(matrix.inverse());
+    let nearest = null;
+    let distance = Infinity;
+    for (const point of points) {
+      const dot = point.querySelector('.map-dot');
+      const squared = (position.x - dot.cx.baseVal.value) ** 2
+        + (position.y - dot.cy.baseVal.value) ** 2;
+      const radius = parseFloat(getComputedStyle(point.querySelector('.map-hit')).r);
+      if (squared <= radius ** 2 && squared < distance) {
+        nearest = point;
+        distance = squared;
+      }
+    }
+    return postLink(nearest);
+  }
+
   function refresh() {
     focusedLink = postLink(document.activeElement);
     pointerLink = pointerPosition
-      ? postLink(document.elementFromPoint(pointerPosition.x, pointerPosition.y)) : null;
+      ? pointerPost(document.elementFromPoint(pointerPosition.x, pointerPosition.y), pointerPosition.x, pointerPosition.y) : null;
     render();
   }
 
-  root.querySelector('[data-map-reset]')?.addEventListener('click', () => {
+  function inspectPoint(point, keyboard = false) {
+    showDetails(point.dataset.post);
+    render();
+    if (keyboard) details?.querySelector('h3 a')?.focus();
+  }
+
+  function dismiss() {
+    const previous = points.find(point => point.dataset.post === pinnedSlug);
+    const returnFocus = inspector?.contains(document.activeElement);
     showDetails(null);
     pointerDismissed = true;
+    if (returnFocus) previous?.focus({ preventScroll: true });
     render();
+  }
+
+  root.addEventListener('click', event => {
+    const point = event.detail === 0 ? postLink(event.target)
+      : pointerPost(event.target, event.clientX, event.clientY);
+    if (!point?.matches('.map-point') || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    inspectPoint(point, event.detail === 0);
+  });
+
+  root.querySelector('[data-map-reset]')?.addEventListener('click', () => {
+    dismiss();
   });
   root.addEventListener('pointerover', (event) => {
     if (event.pointerType === 'touch') return;
     rememberPointer(event);
-    setPointerLink(postLink(event.target));
+    setPointerLink(pointerPost(event.target, event.clientX, event.clientY));
   });
   root.addEventListener('pointerout', (event) => {
     if (event.pointerType === 'touch') return;
@@ -113,7 +165,7 @@ export function createLinkedView(root) {
   root.addEventListener('pointermove', (event) => {
     if (event.pointerType === 'touch') return;
     rememberPointer(event);
-    setPointerLink(postLink(event.target));
+    setPointerLink(pointerPost(event.target, event.clientX, event.clientY));
   }, { passive: true });
   root.addEventListener('scroll', refresh, { capture: true, passive: true });
   root.addEventListener('focusin', (event) => {
@@ -125,17 +177,20 @@ export function createLinkedView(root) {
     render();
   });
   root.addEventListener('keydown', (event) => {
+    const point = postLink(event.target);
+    if (point?.matches('.map-point') && (event.key === ' ' || event.key === 'Enter')) {
+      event.preventDefault();
+      inspectPoint(point, true);
+      return;
+    }
     if (event.key !== 'Escape' || event.target.closest('.search-form')) return;
-    pointerDismissed = true;
-    showDetails(null);
-    render();
+    dismiss();
   });
 
   refresh();
   return {
     setSelectable(slugs) {
       selectable = slugs;
-      inspect?.setSelectable(slugs);
       for (const edge of edges) {
         edge.classList.toggle('is-context', slugs !== null
           && !slugs.has(edge.dataset.source) && !slugs.has(edge.dataset.target));

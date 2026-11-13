@@ -1,5 +1,7 @@
 """Lab-note rendering, evidence links, and directed map endpoints."""
 from datetime import date
+from html import unescape
+import re
 from pathlib import Path
 import sys
 import unittest
@@ -38,6 +40,18 @@ class LabNotesTests(unittest.TestCase):
         self.assertIn("B &amp; &quot;quoted&quot;", html)
         self.assertNotIn("<script>", html)
         self.assertIn('class="similarity-score">0.877</span>', html)
+
+    def test_inspection_card_links_to_post_and_uses_a_short_plain_text_excerpt(self):
+        entry = Entry("meditations", "sample", "Sample & title", date(2026, 1, 2),
+                      "# Heading\n\n" + "Opening **text** & <em>markup</em>. " * 30)
+        html = map_inspector([entry], {entry.key: "mx0"}, [], {})
+        self.assertIn('<a href="/sample/">Sample &amp; title</a>', html)
+        self.assertIn('<time datetime="2026-01-02">2026-01-02</time>', html)
+        excerpt = unescape(re.search(r'<p class="map-detail-excerpt">(.*?)</p>', html).group(1))
+        self.assertTrue(excerpt.startswith("Opening text & markup."))
+        self.assertTrue(excerpt.endswith("…"))
+        self.assertLessEqual(len(excerpt), 221)
+        self.assertNotIn("<em>", excerpt)
 
     def test_reference_lines_use_the_same_coordinates_as_their_endpoints(self):
         projection = Projection({"meditations/a": (-2., 1.), "meditations/b": (3., -4.)}, .8)
