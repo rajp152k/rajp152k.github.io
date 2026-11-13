@@ -41,14 +41,20 @@ def relationship_sections(entry, entries, codes, references, nearest=()):
 def map_inspector(entries, codes, references, nearest):
     by_key = {entry.key: entry for entry in entries}
     options, templates = [], []
-    for entry in entries:
+    for index, entry in enumerate(entries):
         key = escape(entry.key, quote=True)
         label = escape(f'{codes[entry.key]} {entry.title}')
-        options.append(f'<option value="{key}">{label}</option>')
+        options.append(f'<div id="map-option-{index}" role="option" aria-selected="false" '
+                       f'data-value="{key}">{label}</div>')
         content = relationship_sections(entry, by_key, codes, references, nearest.get(entry.key, ()))
         templates.append(f'<template data-map-note="{key}">{content}</template>')
-    return ('<div class="map-inspector" hidden><label for="map-inspect">Inspect</label>'
-            '<select id="map-inspect"><option value="">Choose a post</option>' + "".join(options) + '</select>'
+    return ('<div class="map-inspector" hidden><span id="map-inspect-label">Inspect</span>'
+            '<div class="map-picker"><button type="button" id="map-inspect" role="combobox" '
+            'aria-labelledby="map-inspect-label map-inspect-value" aria-haspopup="listbox" '
+            'aria-expanded="false" aria-controls="map-inspect-options">'
+            '<span id="map-inspect-value">Choose a post</span><span aria-hidden="true">▾</span></button>'
+            '<div id="map-inspect-options" role="listbox" aria-labelledby="map-inspect-label" hidden>'
+            + "".join(options) + '</div></div>'
             '<button type="button" data-map-reset aria-label="Clear inspected post">clear</button></div>'
             '<div class="map-details" hidden></div>' + "".join(templates))
 

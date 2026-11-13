@@ -1,11 +1,13 @@
 # Channel logos
 
-These JPEGs are 128px copies of Raj's public YouTube channel avatars, retrieved
-on 2026-11-13. Display the original images without a colour filter.
+These 128px PNGs use Raj's public YouTube channel avatars, retrieved on
+2026-11-13. The black backgrounds were removed with ImageMagick. The alpha
+channel follows the brightest RGB component, with a 4% cutoff for JPEG noise.
+RGB values were divided by alpha to remove the black from soft edges and glow.
 
-- `bitmage.jpg`: [(Bit-Mage)](https://www.youtube.com/@The-Bit-Mage), channel ID
+- `bitmage.png`: [(Bit-Mage)](https://www.youtube.com/@The-Bit-Mage), channel ID
   `UC_og-h2OBDBAj7xYIOL0kHA`.
-- `cognware.jpg`: [cognware industries](https://www.youtube.com/@CognWare),
+- `cognware.png`: [cognware industries](https://www.youtube.com/@CognWare),
   channel ID `UCS_o_un8dwf84GajITSRS3A`.
 
 The image URLs came from each channel's public `channelMetadataRenderer.avatar`

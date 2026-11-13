@@ -26,7 +26,10 @@ similarity results. Equal scores sort by post key.
 Post IDs, source counts, numbered source lists, and section permalinks provide
 stable navigation. Post reference sections are available without JavaScript.
 On small screens, inspection expands the page so the map and notes have room.
-Use Escape or **clear** to close inspection.
+Use the themed **Inspect** menu with a pointer, touch, or keyboard. Use Up/Down,
+Home/End, or type part of a title to browse. Press Enter or Space to select.
+Press Escape to close the menu, then Escape again to clear inspection. Use
+**clear** to clear inspection directly. Press Tab to leave the menu.
 
 ## Channel links
 

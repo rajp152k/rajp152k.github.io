@@ -1,3 +1,5 @@
+import { createPostPicker } from './post-picker.js';
+
 export function createLinkedView(root) {
   const selector = 'a.post-link, a.map-point';
   const linksByPost = new Map();
@@ -16,7 +18,10 @@ export function createLinkedView(root) {
   const title = root.querySelector('.map-readout-title');
   const date = root.querySelector('.map-readout-date');
   const edges = [...root.querySelectorAll('.map-reference')];
-  const inspect = root.querySelector('#map-inspect');
+  const inspect = createPostPicker(root, slug => {
+    showDetails(slug);
+    render();
+  });
   const inspector = root.querySelector('.map-inspector');
   if (inspector) inspector.hidden = false;
   const details = root.querySelector('.map-details');
@@ -26,7 +31,7 @@ export function createLinkedView(root) {
 
   function showDetails(slug) {
     pinnedSlug = slug;
-    if (inspect) inspect.value = slug || '';
+    inspect?.setValue(slug);
     if (details) {
       details.replaceChildren();
       const template = templates.get(slug);
@@ -89,10 +94,6 @@ export function createLinkedView(root) {
     render();
   }
 
-  inspect?.addEventListener('change', () => {
-    showDetails(inspect.value || null);
-    render();
-  });
   root.querySelector('[data-map-reset]')?.addEventListener('click', () => {
     showDetails(null);
     pointerDismissed = true;
@@ -134,11 +135,7 @@ export function createLinkedView(root) {
   return {
     setSelectable(slugs) {
       selectable = slugs;
-      if (inspect) {
-        for (const option of inspect.options) {
-          option.disabled = !!option.value && slugs !== null && !slugs.has(option.value);
-        }
-      }
+      inspect?.setSelectable(slugs);
       for (const edge of edges) {
         edge.classList.toggle('is-context', slugs !== null
           && !slugs.has(edge.dataset.source) && !slugs.has(edge.dataset.target));
