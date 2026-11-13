@@ -28,19 +28,28 @@ def reference_list(mentions: Iterable[Mention], *, current: str = "") -> str:
 def term_card(term: Term, entries: Mapping[str, Entry], mentions: Iterable[Mention], *, current: str = "", heading: str = "h3") -> str:
     introduction = entries[term.introduction]
     subheading = "h2" if heading == "h1" else "h4"
-    # Definitions are contextual editorial records. Sources remain visible so
-    # readers can distinguish a definition from an incidental mention.
-    sources = "".join(
-        f'<li>{entry_link(entries[source.entry])}<p class="term-excerpt">{escape(source.quote)}</p></li>'
-        for source in term.sources
+    # Keep every evidence quote, but link each post only once in the card.
+    grouped_sources: dict[str, list[str]] = {}
+    for source in term.sources:
+        grouped_sources.setdefault(source.entry, []).append(source.quote)
+    source_rows = []
+    for key, quotes in grouped_sources.items():
+        start_label = ' <span class="term-meta">(Start here)</span>' if key == term.introduction else ""
+        excerpts = "".join(f'<p class="term-excerpt">{escape(quote)}</p>' for quote in quotes)
+        source_rows.append(f'<li>{entry_link(entries[key])}{start_label}{excerpts}</li>')
+    sources = "".join(source_rows)
+    start = "" if term.introduction in grouped_sources else (
+        f'<p class="term-meta">Start here: {entry_link(introduction)}</p>'
     )
+    linked = set(grouped_sources) | {term.introduction}
+    other_mentions = [mention for mention in mentions if mention.entry_key not in linked]
     return (
         f'<{heading} tabindex="-1">{escape(term.name)}</{heading}>'
         f'<p>{escape(term.definition)}</p>'
-        f'<p class="term-meta">Start here: {entry_link(introduction)}</p>'
+        f'{start}'
         f'<{subheading}>Definition sources</{subheading}><ul class="term-sources">{sources}</ul>'
-        f'<{subheading}>{"Other posts" if current else "Posts that mention this term"}</{subheading}>'
-        f'{reference_list(mentions, current=current)}'
+        f'<{subheading}>Other posts</{subheading}>'
+        f'{reference_list(other_mentions, current=current)}'
     )
 
 
