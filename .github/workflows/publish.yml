@@ -7,6 +7,11 @@ on:
       - "meditations/**/*.md"
       - "logs/**"
       - "write.sh"
+      - "prepare.sh"
+      - "publish.sh"
+      - ".preparation.json"
+      - "docs/editorial-policy.md"
+      - "AGENTS.md"
       - "scripts/**"
       - "requirements*.txt"
       - "package.json"
@@ -50,18 +55,10 @@ jobs:
         run: npm ci
       - name: Install publishing dependencies
         run: python3 -m pip install -r requirements.txt
-      - name: Check committed embedding freshness
-        run: python3 scripts/embed.py --check
-      - name: Run state and PCA regressions
-        run: python3 -m unittest discover -s tests -v
-      - name: Run lexical search regressions
-        run: npm test
-      - name: Build site and public SQLite snapshot
-        run: python3 scripts/publish.py
       - name: Install browser test engine
         run: npx playwright install --with-deps chromium
-      - name: Check desktop references and phone reading
-        run: npm run test:browser
+      - name: Check preparation, tests, and site build
+        run: PYTHON=python3 sh scripts/verify_preparation.sh
       # yamllint disable-line rule:line-length
       - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
         with:

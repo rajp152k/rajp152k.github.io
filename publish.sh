@@ -1,18 +1,19 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-if [[ -n "${PYTHON:-}" ]]; then
-  python="$PYTHON"
-elif [[ -x "$root/.venv-embed/bin/python" ]]; then
-  python="$root/.venv-embed/bin/python"
-elif [[ -x "$root/.venv/bin/python" ]]; then
-  python="$root/.venv/bin/python"
-else
-  python=python3
+#!/bin/sh
+# Publish reviewed, committed work after explicit approval.
+set -eu
+root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+cd "$root"
+if [ "$(git branch --show-current)" != master ]; then
+    printf '%s\n' 'publish: use the approved master branch.' >&2
+    exit 1
 fi
-"$python" "$root/scripts/embed.py" --check
-
-git -C "$root" add .
-git -C "$root" commit -m "publish"
-git -C "$root" push
+if [ -n "$(git status --porcelain)" ]; then
+    printf '%s\n' 'publish: inspect and commit intended changes first.' >&2
+    exit 1
+fi
+sh scripts/verify_preparation.sh
+if [ -n "$(git status --porcelain)" ]; then
+    printf '%s\n' 'publish: checks changed files; inspect them before publishing.' >&2
+    exit 1
+fi
+git push

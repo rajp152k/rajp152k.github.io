@@ -1,0 +1,380 @@
+{
+  "posts": {
+    "logs/2026-10-06-two-collections-one-archive": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "No term needed: collection names, source codes, and archive behavior are explained inline.",
+          "Do not create broad aliases log, agent, archive, or meditation."
+        ],
+        "inputs": {
+          "draft": "9cf13a596f6645e4ccf9bfe2d788fb4e01a4c4a5e10d9373343c8d0fde2438b1",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Agent account for readers who need the authorship and navigation rules. Read the full prose and Mermaid diagram. It clearly separates personal meditations, requested logs, revision, commit, and publication.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "No term needed: collection names, source codes, and archive behavior are explained inline.",
+          "Do not create broad aliases log, agent, archive, or meditation."
+        ],
+        "inputs": {
+          "draft": "9cf13a596f6645e4ccf9bfe2d788fb4e01a4c4a5e10d9373343c8d0fde2438b1",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:logs/2026-10-07-using-autolith": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "related:meditations/embeddings": "51ff88a095a48356863b3c95e4b51ccac2187e9fb8741f8c72d61dddfbe87fa4",
+          "related:meditations/programming": "fc7c80aa11d118174cd97c6cd4ef9795bb707eefb3fa42aa120ef1d7e13b9661",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf"
+        },
+        "note": "The existing Programming link gives the personal-writing motivation and Blog Update explains the map. The later October setup log shows the authoring rules in use. Source labels are directly explained; the Mermaid block is explanatory content, not term-matching prose.",
+        "questions": [],
+        "related": [
+          "meditations/programming",
+          "meditations/embeddings",
+          "logs/2026-10-07-using-autolith"
+        ]
+      }
+    },
+    "logs/2026-10-07-using-autolith": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "Retain Autolith, add Lem and Simplified Technical English, with exact passages from this post.",
+          "Keep Simple Technical English as the documented local wording variant; do not add STE or claim formal standard compliance.",
+          "Exclude OMP and ops-log definitions without explanatory evidence; other development-tool names are contextual details."
+        ],
+        "inputs": {
+          "draft": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Setup account for readers who need concrete Autolith and editor background. Read every section and final links. Distinguish installed release, source checkout, and private image changes; cached-vector checks did not test new inference.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "Retain Autolith, add Lem and Simplified Technical English, with exact passages from this post.",
+          "Keep Simple Technical English as the documented local wording variant; do not add STE or claim formal standard compliance.",
+          "Exclude OMP and ops-log definitions without explanatory evidence; other development-tool names are contextual details."
+        ],
+        "inputs": {
+          "draft": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:logs/2026-10-06-two-collections-one-archive": "9cf13a596f6645e4ccf9bfe2d788fb4e01a4c4a5e10d9373343c8d0fde2438b1",
+          "related:meditations/embeddings": "51ff88a095a48356863b3c95e4b51ccac2187e9fb8741f8c72d61dddfbe87fa4",
+          "related:meditations/the-lisp-machine": "7e1c8e30767b91b7ff74035141c23fe9bbd9737b493fbf1982651fb1d6f6b0d3",
+          "source:logs/2026-10-07-using-autolith": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf",
+          "term:autolith": "22f48791bc4f63b397fb74e16f34b6cf74021f652f1c9265f81b6e20adebff1a",
+          "term:lem": "b7d7315f115418de56239038023d22ccd5f851409280c6d0d09a71282df3c00a",
+          "term:simplified-technical-english": "a185ca50e4ce6a2b11cb09d65a5dedb6570aad6cdce3c8c73855d7f4f41aad45"
+        },
+        "note": "This is the most useful introduction for Autolith, Lem, and the local writing rule. The Lisp-machine meditation supplies motivation, the collections log authorship boundaries, and Blog Update the detailed build mathematics. Do not use the later orchestration design as evidence of October capabilities.",
+        "questions": [],
+        "related": [
+          "meditations/the-lisp-machine",
+          "logs/2026-10-06-two-collections-one-archive",
+          "meditations/embeddings"
+        ]
+      }
+    },
+    "logs/2026-11-06-orchestrating-autolith": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "Retain Orch, Autolith, HMAS, machine head, and project agent with their scoped source-supported definitions.",
+          "Keep proposed status for machine heads and resumability rather than continuous inference for project agents.",
+          "Exclude Paperclip and Hermes as retired alternatives; do not broaden head or agent aliases. Exclude Project Outlines as weakly related to this coordination design."
+        ],
+        "inputs": {
+          "draft": "ae7c67f4e691e35099f52598fb821f6158bedaf3e75de1bf0f16c21334df6fd0",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Design and progress account for readers interested in personal research agents. Read the full text and cited link. Local communication, removal of old services, and matching profiles do not establish a remote cluster, tested reboot, or tested recovery.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "Retain Orch, Autolith, HMAS, machine head, and project agent with their scoped source-supported definitions.",
+          "Keep proposed status for machine heads and resumability rather than continuous inference for project agents.",
+          "Exclude Paperclip and Hermes as retired alternatives; do not broaden head or agent aliases. Exclude Project Outlines as weakly related to this coordination design."
+        ],
+        "inputs": {
+          "draft": "ae7c67f4e691e35099f52598fb821f6158bedaf3e75de1bf0f16c21334df6fd0",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:logs/2026-10-07-using-autolith": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "related:meditations/laboratory": "c8607c094b8254352eec2d1cb540ca56e8d2a38de61540e5730dc22882ad18e8",
+          "related:meditations/the-lisp-machine": "7e1c8e30767b91b7ff74035141c23fe9bbd9737b493fbf1982651fb1d6f6b0d3",
+          "source:logs/2026-10-07-using-autolith": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "source:logs/2026-11-06-orchestrating-autolith": "ae7c67f4e691e35099f52598fb821f6158bedaf3e75de1bf0f16c21334df6fd0",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf",
+          "term:autolith": "22f48791bc4f63b397fb74e16f34b6cf74021f652f1c9265f81b6e20adebff1a",
+          "term:hmas": "de396c0125b1000d36810aa1457632392b71f581f6c127f81a0bd2f87d385acc",
+          "term:machine-head": "92a60fadd89ee81beabbf56cc811dcb6ca212477bd14a084fc2f7b1ca652af36",
+          "term:orch": "fab3f1166f987244c9d04f800cc1d3ad71f99f929f3e4471bb7dd2b7cb4d1c12",
+          "term:project-agent": "0f628cf9c9116c9b6c1dde709a3fe4822944ee469b20b3a860e7a9a5988f87e2"
+        },
+        "note": "Retrieved the taxonomy landing page on 2026-11-13 and checked its title, author, and abstract against the citation. This does not verify all claims in the full paper. Laboratory explains the research purpose; the Lisp-machine meditation supplies motivation; the October setup log supplies concrete Autolith background. Registry evidence keeps proposed and implemented behavior distinct.",
+        "questions": [],
+        "related": [
+          "meditations/laboratory",
+          "meditations/the-lisp-machine",
+          "logs/2026-10-07-using-autolith"
+        ]
+      }
+    },
+    "meditations/embeddings": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "Add PCA scoped to the centered blog-map projection, not a general unsupported tutorial.",
+          "Do not define all embeddings as the site-specific weighted vector. Exclude SVD, whitening, and cosine-similarity definitions without adequate source explanation.",
+          "Preserve meditation prose; ask raj before revising the historical Usage Flow."
+        ],
+        "inputs": {
+          "draft": "51ff88a095a48356863b3c95e4b51ccac2187e9fb8741f8c72d61dddfbe87fa4",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Technical account for readers who can follow vector and matrix notation. Read the opening pipeline, equations, edge cases, and Usage Flow. Distinguish retained projection variance from semantic accuracy. The older command sequence is historical; current preparation instructions belong in README.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "Add PCA scoped to the centered blog-map projection, not a general unsupported tutorial.",
+          "Do not define all embeddings as the site-specific weighted vector. Exclude SVD, whitening, and cosine-similarity definitions without adequate source explanation.",
+          "Preserve meditation prose; ask raj before revising the historical Usage Flow."
+        ],
+        "inputs": {
+          "draft": "51ff88a095a48356863b3c95e4b51ccac2187e9fb8741f8c72d61dddfbe87fa4",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:logs/2026-10-06-two-collections-one-archive": "9cf13a596f6645e4ccf9bfe2d788fb4e01a4c4a5e10d9373343c8d0fde2438b1",
+          "related:logs/2026-10-07-using-autolith": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "source:meditations/embeddings": "51ff88a095a48356863b3c95e4b51ccac2187e9fb8741f8c72d61dddfbe87fa4",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf",
+          "term:pca": "58fcb3f217256a3c3fdb26337d0fcf88d2b9c23cfc4ce1cf2eecfd985bdff190"
+        },
+        "note": "PCA evidence supports at most two components and the projection-fidelity limit. Retrieved the named model card on 2026-11-13; it identifies the text-embedding model and 768 output dimensions. It is not stored definition evidence under the current schema. The collections log explains the shared archive; the October setup log describes the local workflow checks and their limits.",
+        "questions": [
+          "Would you like an authored general embedding and mathematical introduction for readers without ML background?"
+        ],
+        "related": [
+          "logs/2026-10-06-two-collections-one-archive",
+          "logs/2026-10-07-using-autolith"
+        ]
+      }
+    },
+    "meditations/laboratory": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "No new term: laboratory is the central framing already explained, and computational epistemology has no settled local meaning here.",
+          "Exclude incidental music and archetypes; do not infer evidence from the missing article."
+        ],
+        "inputs": {
+          "draft": "c8607c094b8254352eec2d1cb540ca56e8d2a38de61540e5730dc22882ad18e8",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Personal statement of a renewed research ambition and the purpose of this site. Read all prose. The lost personal-science article is not an identified source; computational epistemology is explicitly exploratory.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "No new term: laboratory is the central framing already explained, and computational epistemology has no settled local meaning here.",
+          "Exclude incidental music and archetypes; do not infer evidence from the missing article."
+        ],
+        "inputs": {
+          "draft": "c8607c094b8254352eec2d1cb540ca56e8d2a38de61540e5730dc22882ad18e8",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:logs/2026-11-06-orchestrating-autolith": "ae7c67f4e691e35099f52598fb821f6158bedaf3e75de1bf0f16c21334df6fd0",
+          "related:meditations/pkm-to-pem": "839631745438d82e0f8b64addad24652b32773f37d5b57ac8edc61ce700b9d70",
+          "related:meditations/studying": "3741a0e5b7d425062f4b36f3a592a910867804cd2e923ae3cdcec15a50359b81",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf"
+        },
+        "note": "PKM-to-PEM supplies the writing experiment, Project Outlines a concrete study practice, and the later orchestration log a specific laboratory application. The later log does not establish what was implemented when this meditation was written.",
+        "questions": [
+          "If computational epistemology becomes a recurring term, what scope do you intend and which passage should explain it?"
+        ],
+        "related": [
+          "meditations/pkm-to-pem",
+          "meditations/studying",
+          "logs/2026-11-06-orchestrating-autolith"
+        ]
+      }
+    },
+    "meditations/pkm-to-pem": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "Omit PKM/PEM and epistemology definitions until the intended meanings have source support.",
+          "Exclude incidental tool names and NeSy in journal/code blocks; preserve the exploratory voice and book attribution."
+        ],
+        "inputs": {
+          "draft": "839631745438d82e0f8b64addad24652b32773f37d5b57ac8edc61ce700b9d70",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Personal account for readers interested in writing and knowledge work. Read the prose and both journal dumps. The unsettled move from knowledge management to epistemological management is the subject, not a settled method to infer.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "Omit PKM/PEM and epistemology definitions until the intended meanings have source support.",
+          "Exclude incidental tool names and NeSy in journal/code blocks; preserve the exploratory voice and book attribution."
+        ],
+        "inputs": {
+          "draft": "839631745438d82e0f8b64addad24652b32773f37d5b57ac8edc61ce700b9d70",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:meditations/laboratory": "c8607c094b8254352eec2d1cb540ca56e8d2a38de61540e5730dc22882ad18e8",
+          "related:meditations/studying": "3741a0e5b7d425062f4b36f3a592a910867804cd2e923ae3cdcec15a50359b81",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf"
+        },
+        "note": "No supported new term. Project Outlines gives a later concrete study method; Laboratory develops the research setting. Both are follow-up reading, not evidence of the earlier intent. CognWare and the named book are further-reading references, not definition sources.",
+        "questions": [
+          "Should PKM/PEM become stable names for your methods, or remain exploratory title language?"
+        ],
+        "related": [
+          "meditations/studying",
+          "meditations/laboratory"
+        ]
+      }
+    },
+    "meditations/programming": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "No new term: Lisp and s-expressions lack explanatory archive evidence here.",
+          "Exclude deromanticizing as a shared technical concept; exclude incidental supplements and hobbies."
+        ],
+        "inputs": {
+          "draft": "fc7c80aa11d118174cd97c6cd4ef9795bb707eefb3fa42aa120ef1d7e13b9661",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Personal reflection on loss of enjoyment in programming and a wish to return to Lisp and writing. Read all prose. HCI is expanded inline; tool history supplies motivation rather than instructions for a novice.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "No new term: Lisp and s-expressions lack explanatory archive evidence here.",
+          "Exclude deromanticizing as a shared technical concept; exclude incidental supplements and hobbies."
+        ],
+        "inputs": {
+          "draft": "fc7c80aa11d118174cd97c6cd4ef9795bb707eefb3fa42aa120ef1d7e13b9661",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:meditations/laboratory": "c8607c094b8254352eec2d1cb540ca56e8d2a38de61540e5730dc22882ad18e8",
+          "related:meditations/pkm-to-pem": "839631745438d82e0f8b64addad24652b32773f37d5b57ac8edc61ce700b9d70",
+          "related:meditations/the-lisp-machine": "7e1c8e30767b91b7ff74035141c23fe9bbd9737b493fbf1982651fb1d6f6b0d3",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf"
+        },
+        "note": "No term record needed. The Lisp-machine meditation gives the later return to Lisp; Laboratory develops the renewed personal ambition; PKM-to-PEM explains the writing experiment. These links answer different reader needs.",
+        "questions": [],
+        "related": [
+          "meditations/the-lisp-machine",
+          "meditations/laboratory",
+          "meditations/pkm-to-pem"
+        ]
+      }
+    },
+    "meditations/studying": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "Add concept-tree with the exact bottom-up and context-aware passages as evidence.",
+          "Do not alias outline, tree, or project outline; exclude org mode and Markdown as incidental working formats."
+        ],
+        "inputs": {
+          "draft": "3741a0e5b7d425062f4b36f3a592a910867804cd2e923ae3cdcec15a50359b81",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Practical account for readers who study unfamiliar domains. Read the full method, including deadline compromises and the context-aware second pass. The tree is a personal study outline, not a general claim about all learning.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "Add concept-tree with the exact bottom-up and context-aware passages as evidence.",
+          "Do not alias outline, tree, or project outline; exclude org mode and Markdown as incidental working formats."
+        ],
+        "inputs": {
+          "draft": "3741a0e5b7d425062f4b36f3a592a910867804cd2e923ae3cdcec15a50359b81",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:meditations/laboratory": "c8607c094b8254352eec2d1cb540ca56e8d2a38de61540e5730dc22882ad18e8",
+          "related:meditations/pkm-to-pem": "839631745438d82e0f8b64addad24652b32773f37d5b57ac8edc61ce700b9d70",
+          "source:meditations/studying": "3741a0e5b7d425062f4b36f3a592a910867804cd2e923ae3cdcec15a50359b81",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf",
+          "term:concept-tree": "aac50b2c1497fdfc322cfbf9d2537476a2cf23945b712c870633a3849df1c452"
+        },
+        "note": "Concept tree uses this post as both source and introduction. PKM-to-PEM explains the knowledge-work context; Laboratory is a later research setting. The central method is explained in prose and must not be reduced to the card.",
+        "questions": [],
+        "related": [
+          "meditations/pkm-to-pem",
+          "meditations/laboratory"
+        ]
+      }
+    },
+    "meditations/the-lisp-machine": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [
+          "Reuse Autolith and Lem with the explanatory October setup log as their introduction.",
+          "Do not alias Lisp to Autolith or define Lisp machine from the title. Exclude hardware fields and command output from term selection."
+        ],
+        "inputs": {
+          "draft": "7e1c8e30767b91b7ff74035141c23fe9bbd9737b493fbf1982651fb1d6f6b0d3",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Personal account of returning to Lisp, followed by a VPS environment snapshot. Read the prose and every OS, CPU, and memory block. The title is personal framing, not a definition of historical Lisp machines.",
+        "questions": [],
+        "related": []
+      },
+      "references": {
+        "blocking_questions": [],
+        "decisions": [
+          "Reuse Autolith and Lem with the explanatory October setup log as their introduction.",
+          "Do not alias Lisp to Autolith or define Lisp machine from the title. Exclude hardware fields and command output from term selection."
+        ],
+        "inputs": {
+          "draft": "7e1c8e30767b91b7ff74035141c23fe9bbd9737b493fbf1982651fb1d6f6b0d3",
+          "policy": "85506252f8add50b0f09515c3c9c91de7a415dc0cb50fd8a0375e05419096aa5",
+          "related:logs/2026-10-07-using-autolith": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "related:logs/2026-11-06-orchestrating-autolith": "ae7c67f4e691e35099f52598fb821f6158bedaf3e75de1bf0f16c21334df6fd0",
+          "related:meditations/programming": "fc7c80aa11d118174cd97c6cd4ef9795bb707eefb3fa42aa120ef1d7e13b9661",
+          "source:logs/2026-10-07-using-autolith": "c45fa9ffff949072048211db17657a2c3a51e2908686163b9b51b2c3ffcfbced",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf",
+          "term:autolith": "22f48791bc4f63b397fb74e16f34b6cf74021f652f1c9265f81b6e20adebff1a",
+          "term:lem": "b7d7315f115418de56239038023d22ccd5f851409280c6d0d09a71282df3c00a"
+        },
+        "note": "The October setup log explains Autolith and Lem beyond the product mentions here. Programming gives the earlier motivation. The November orchestration log gives a later development, not proof of capabilities in this snapshot. Retrieved the Autolith repository and the four Fedora destinations on 2026-11-13. The Fedora 44 documentation URL now gives a relocation notice to general user documentation. Preserve the recorded os-release output.",
+        "questions": [],
+        "related": [
+          "logs/2026-10-07-using-autolith",
+          "meditations/programming",
+          "logs/2026-11-06-orchestrating-autolith"
+        ]
+      }
+    }
+  },
+  "version": 1
+}

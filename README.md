@@ -42,75 +42,55 @@ publishing. It synchronizes metadata and deletions as well as computing vectors:
 
 The updater hashes the prepared title/body and complete embedding specification.
 Formatting-only edits that leave prepared text unchanged reuse the vector.
-Nothing runs automatically while writing: run the updater once a post is ready.
+Preparation runs the updater before building a draft. It computes only changed entries.
 CI **never** computes embeddings or downloads a model.
 
-### Preview and publish
+### Prepare, preview, and publish
 
-Install Node.js 24+ and the pinned search/build dependencies once (or after changing
-`package-lock.json`):
+Ask the agent to prepare a post. It follows the reader review, terms and references,
+embedding, build, and revision stages in [the writing guide](docs/writing.md).
+The selection rules are in [the editorial policy](docs/editorial-policy.md).
 
-```sh
-npm ci
-```
-
-After writing, revising, renaming, or deleting posts:
+Install Node.js 24+ and run `npm ci`. To prepare and preview locally:
 
 ```sh
-.venv-embed/bin/python scripts/embed.py
-.venv-embed/bin/python scripts/publish.py
+./prepare.sh preview
 ```
 
-The second command builds `site/`, including the PCA map, lexical index, hashed
-local assets, and public SQLite snapshot. For a local preview:
+Open <http://127.0.0.1:8765/>. Stop with Ctrl-C. Run `./prepare.sh status` to see
+pending reviews, or `./prepare.sh build` to build without serving. Draft previews
+permit open editorial work. The agent records completed reviews in
+`.preparation.json`; builds do not perform or complete those reviews.
 
-```sh
-.venv-embed/bin/python -m http.server 8765 --directory site
-```
+Run the complete release checks with `sh scripts/verify_preparation.sh` after
+installing Chromium with `npx playwright install chromium`. CI uses the same checks.
+They require current editorial reviews and embeddings, then run Python, search,
+and browser tests and build the site. They do not run model inference.
 
-Open <http://localhost:8765/>. For styling-only changes, skip the embed command
-and just rebuild. Stop the preview server with Ctrl-C.
+Review the preview and diff. Commit intended changes, including `terms.json`,
+`.preparation.json`, and `blog.sqlite` when changed. After publication approval,
+run `./publish.sh` on a clean `master` checkout. It checks and pushes committed
+work; it does not stage files or create a commit.
 
-Review the changes, then commit and push:
-
-```sh
-./publish.sh
-```
-
-This checks freshness **before staging anything**, then stages all non-ignored
-changes, commits, and pushes. It uses `.venv-embed/bin/python` if present, then
-`.venv/bin/python`, then `python3`; override it with
-`PYTHON=/path/to/python ./publish.sh` if needed. It does not run inference: a
-stale-state error means run the updater locally, then publish again.
-
-Commit `blog.sqlite` together with the post/configuration changes that produced
-it. Do not commit `site/`, virtual environments, model weights, or SQLite journal,
-WAL, and SHM files.
-
-To check freshness without changing the database or loading the model:
-
-```sh
-.venv-embed/bin/python scripts/embed.py --check
-```
-
-A freshness check and the Python regression suite need only `requirements.txt`.
-A site build also needs Node.js and `npm ci`; model inference additionally needs
-`requirements-embed.txt`. Do not commit `node_modules/`.
+All commands use `.venv-embed/bin/python`, then `.venv/bin/python`, then `python3`.
+Set `PYTHON=/path/to/python` to choose another interpreter. Install
+`requirements.txt` for checks and builds; `requirements-embed.txt` is needed for
+embedding updates. Keep site/, environments, node_modules/, and model files local.
 
 ### GitHub CI and deployment
 
 The [Publish workflow](https://github.com/rajp152k/rajp152k.github.io/actions/workflows/publish.yml)
 uses Python 3.13 with `requirements.txt`, Node.js 24, and `npm ci` to:
 
-1. Check that the committed `blog.sqlite` matches the current posts and policy.
-2. Run deterministic state/export, PCA geometry, and lexical-search regressions.
-3. Generate the HTML, bundled assets, lexical index, PCA map, and allowlisted public database.
+1. Require current reader and references reviews and fresh committed embeddings.
+2. Run deterministic state/export, PCA, terms, preparation, search, and browser tests.
+3. Generate HTML, bundled assets, lexical index, PCA map, and the public database.
 4. Upload `site/` and deploy GitHub Pages at <https://yetanotherraj.com/>.
 
 Pull requests targeting `master` run validation and build, **not deployment**.
-Pushes to `master` deploy when posts, scripts, assets, requirements, embedding
-configuration/database, `logs/**`, authoring command, npm manifests, `accounts.json`, tests, the workflow, or `CNAME` change. README-only edits
-do not trigger deployment. To republish unchanged content, use **Actions →
+Pushes to `master` deploy when site inputs, authoring scripts, review state,
+editorial policy, tests, or the workflow change. README-only edits do not trigger
+deployment. To republish unchanged content, use **Actions →
 Publish → Run workflow** with branch `master`, or:
 
 ```sh
@@ -382,24 +362,15 @@ empty, no-match, punctuation-only, and unavailable-index states are explicit.
 
 ## Terms and references
 
-Maintain definitions and aliases in `terms.json`. The agent maintains these records
-when it prepares a post. Use stable term IDs, short definitions, a chosen
-introductory post, and exact source passages. Read the source before updating a
-definition. A mention alone does not support a definition. Keep meanings specific
-to their context, and review older posts before changing a shared definition.
+Maintain definitions and aliases in `terms.json`. The agent applies
+[the editorial policy](docs/editorial-policy.md) during preparation and records
+its review. See [the full archive review](docs/archive-review.md) for initial
+inclusion and exclusion decisions. Terms are selected for reader need, not date.
 
-For each new or revised post:
-
-1. Read the post and compare its names and ideas with the current term records.
-2. Add supported terms and aliases. Use full phrases for ambiguous words.
-3. Select a useful introductory post, not merely the earliest mention.
-4. Check definitions, exact source passages, and the generated mention report.
-5. Build and check the reference panel and links before committing the post.
+For a deterministic mention report, run:
 
 ```sh
-.venv-embed/bin/python scripts/terms.py --check
-.venv-embed/bin/python scripts/terms.py --json
-.venv-embed/bin/python scripts/publish.py
+sh scripts/python.sh scripts/terms.py --json
 ```
 
 The build validates the records and finds the first eligible mention of each term

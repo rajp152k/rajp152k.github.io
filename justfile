@@ -1,13 +1,21 @@
-embed:
-	.venv-embed/bin/python scripts/embed.py
+prepare:
+	./prepare.sh build
+
+preview:
+	./prepare.sh preview
+
+status:
+	./prepare.sh status
 
 check:
-	.venv-embed/bin/python scripts/embed.py --check
+	sh scripts/verify_preparation.sh
 
-build: 
-	.venv-embed/bin/python scripts/publish.py
+# Low-level commands for focused work.
+embed:
+	sh scripts/python.sh scripts/embed.py
 
-e2e:
-	just embed
-	just build
-	.venv-embed/bin/python -m http.server 8765 --directory site
+build:
+	sh scripts/python.sh scripts/publish.py
+
+# Compatibility alias for the former embed/build/serve sequence.
+e2e: preview
