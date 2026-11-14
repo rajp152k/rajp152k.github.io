@@ -8,6 +8,44 @@ Source for <https://yetanotherraj.com/>. Markdown is the source of truth:
 Every top-level Markdown post in both collections enters the build. Preview can
 include unfinished work; `draft` metadata and future dates do not exclude posts.
 
+## How to write and publish
+
+After the one-time setup below, use this flow for new posts and revisions.
+
+1. **Write.** Run `./write.sh "Title"` from the repository root to create a
+   meditation and open it in Neovim. Write and save your draft in
+   `meditations/<slug>.md`. For an existing post, edit its Markdown file.
+   For a log, ask the agent: “Write a log about [work], covering [scope].”
+   The agent drafts it in `logs/` with the repository's ops-log skill.
+2. **Ask for preparation.** Say “Prepare `meditations/<slug>.md` for review.”
+   The agent reads the whole draft, reviews the intended reader, checks terms,
+   sources, introductions, and related posts, and records the results. It asks
+   about unclear meaning outside the article and requests permission before
+   changing meditation prose. It then updates changed embeddings, builds the
+   site, and starts a local preview. You do not need to request each stage.
+3. **Read and revise.** Open the preview at <http://127.0.0.1:8765/>. Check the
+   post and discuss any questions. Edit your meditation or request log changes,
+   then ask the agent to prepare it again. The agent repeats affected reviews
+   and rebuilds the preview. Saving a file does not start these steps.
+4. **Approve a commit.** Say “Commit this version.” The agent runs the release
+   checks, reviews the diff, and commits the post with its term records, review
+   records, and embedding database changes. You can preview unfinished work;
+   release checks require current reviews across the archive.
+5. **Approve publication separately.** When ready, authorize publication and
+   any required merge or push. The agent uses a clean `master` checkout, runs
+   `./publish.sh`, and checks the deployment and live page. Every post on that
+   revision is included, so keep unrelated unfinished drafts off it.
+
+The agent maintains `terms.json`, `.preparation.json`, and `blog.sqlite` as part
+of preparation. In the build, it generates article pages, term pages, search,
+the archive map, and the public database under `site/`. Review and approval are
+human/agent work; running a build alone does not perform an editorial review.
+
+For a preview without an agent, run `./prepare.sh preview` and open the address
+above. After edits, run `./prepare.sh build` in another terminal, then refresh
+the browser. Preview builds once; it does not watch files. Stop it with Ctrl-C.
+See [Writing](docs/writing.md) for the complete review commands.
+
 ## Guides
 
 - [Cooperation](docs/cooperation.md): ownership, draft agreement, commit and publication approval.
