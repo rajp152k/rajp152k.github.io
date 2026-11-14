@@ -2,7 +2,7 @@
 
 ## Daily use
 
-Write a meditation with `./write.sh "Title"`, or ask the agent to write a log
+Write a meditation with `just write "Title"`, or ask the agent to write a log
 about specified work. Ask to prepare the post, review the preview, then approve
 a version for commit. Approve publication separately. See
 [Working together](cooperation.md) for responsibilities and approval boundaries.
@@ -15,21 +15,21 @@ For browser checks, install Chromium once with `npx playwright install chromium`
 
 | Command | Result |
 | --- | --- |
-| `./prepare.sh status` | Show current, pending, stale, and blocked reviews |
-| `./prepare.sh` or `./prepare.sh build` | Show review status, update embeddings, build a draft |
-| `./prepare.sh preview` | Build, then serve site/ at http://127.0.0.1:8765/ |
-| `./prepare.sh preview --port 8766` | Use another local port |
-| `./prepare.sh check` | Require current editorial reviews and valid term records |
-| `sh scripts/verify_preparation.sh` | Run the complete release checks |
+| `just status` | Show current, pending, stale, and blocked reviews |
+| `just prepare` | Show review status, update embeddings, build a draft |
+| `just preview` | Build, then serve site/ at http://127.0.0.1:8765/ |
+| `just preview --port 8766` | Use another local port |
+| `just review-check` | Require current editorial reviews and valid term records |
+| `just check` | Run the complete release checks |
 
 Stop the preview with Ctrl-C. Preview builds once, then serves `site/`; it does
-not watch files. After edits, run `./prepare.sh status`, repeat affected reviews,
-and run `./prepare.sh build` in another terminal. Refresh the browser.
+not watch files. After edits, run `just status`, repeat affected reviews,
+and run `just prepare` in another terminal. Refresh the browser.
 
 Builds and previews permit pending editorial work. A failed embedding update
 stops preparation before the site build. Invalid term records or reserved anchor
 collisions stop preparation before either command. For a styling-only preview,
-use `sh scripts/python.sh scripts/publish.py` without updating embeddings.
+use `just build` without updating embeddings.
 An unchanged embedding update is a no-op.
 
 ## Start a post
@@ -41,7 +41,7 @@ An unchanged embedding update is a no-op.
 
 Use `title` and `date` in YAML front matter. Keep each post directly in its
 collection directory. For a log, preserve its slug and publication timestamp on
-revision. For a meditation, `./write.sh` quotes the title, sets today's date, and
+revision. For a meditation, `just write` quotes the title, sets today's date, and
 opens Neovim. Use a different title if its slug is `search`, `logs`, `meditations`,
 or `terms`; those routes are reserved.
 
@@ -59,7 +59,7 @@ them, but release checks require current reviews for the whole archive.
    Reuse, add, revise, or exclude term candidates. Check the effect on older posts.
    Choose introductory posts for reader value. Record decisions, reading choices,
    and questions. Follow docs/editorial-policy.md.
-3. **Prepare.** Run `./prepare.sh build`. This updates changed embeddings and builds
+3. **Prepare.** Run `just prepare`. This updates changed embeddings and builds
    HTML, term pages, search, the map, and the public database. Check the preview,
    including terms, links, keyboard use, desktop layout, and phone reading.
 4. **Revise.** After edits, run status. Repeat the affected editorial stages and
@@ -68,7 +68,7 @@ them, but release checks require current reviews for the whole archive.
    commit, run the complete release checks. Inspect the diff and commit the
    intended source, registry, review state, and embedding database changes.
 6. **Publish with approval.** Obtain separate publication approval. After any
-   approved merge, use a clean `master` checkout. Run `./publish.sh` to run release
+   approved merge, use a clean `master` checkout. Run `just publish` to run release
    checks and push committed work. It does not stage files or create a commit.
    Verify the deployment and live page.
 
@@ -97,9 +97,9 @@ Only record a stage after performing it. Use a collection/slug entry key.
 The references stage requires a current, unblocked reader review.
 
 ```sh
-./prepare.sh review meditations/studying --stage reader \
+just review meditations/studying --stage reader \
   --note "Read the draft for readers planning self-study; the concept-tree example explains the central method."
-./prepare.sh review meditations/studying --stage references \
+just review meditations/studying --stage references \
   --note "Checked the concept-tree definition, evidence, and introductory post." \
   --decision "Keep outline out of aliases because it has a broader meaning." \
   --related meditations/pkm-to-pem
@@ -115,7 +115,7 @@ questions prevent a current stage. After resolving one, record a new review with
 its answer in the note or decisions. Each review replaces that stage's previous
 note, decisions, reading choices, and questions; include any questions still open.
 
-After an intentional deletion, run `./prepare.sh prune` to remove its receipts.
+After an intentional deletion, run `just prune` to remove its receipts.
 Fix any term sources, introductions, or reading choices that point to the deleted
 post. Renamed posts have new keys and require a review under those keys.
 

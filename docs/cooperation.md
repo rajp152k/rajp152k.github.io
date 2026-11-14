@@ -13,7 +13,7 @@
 
 ## The normal exchange
 
-1. Write a meditation with `./write.sh "Title"`, or ask for a log about specific work.
+1. Write a meditation with `just write "Title"`, or ask for a log about specific work.
 2. Ask to prepare it. The agent follows the [writing workflow](writing.md) without
    asking you to name each stage. It reads the whole post, checks terms and sources,
    records reviews, updates embeddings, and builds a local preview.

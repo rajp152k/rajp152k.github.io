@@ -13,7 +13,7 @@ agent tool output. Refer to raj by name, not as "the user".
 Work in this repository. Read [the cooperation agreement](../../../docs/cooperation.md),
 [the writing guide](../../../docs/writing.md), and
 [the editorial policy](../../../docs/editorial-policy.md). Inspect Git status and
-run `./prepare.sh status`. Preserve unrelated work. Read relevant earlier posts
+run `just status`. Preserve unrelated work. Read relevant earlier posts
 and the evidence for the work before drafting. Ask raj about missing intent or
 unsupported claims. Keep those questions outside the article.
 
@@ -61,9 +61,9 @@ accessible title and, when needed, a description. Check the rendered result.
 
 Read the whole draft as a reader. Check names, claims, source passages, and past
 links. Apply the editorial policy to terms, introductions, and related reading.
-Record each completed review with `./prepare.sh review`; retain open questions.
-Run `./prepare.sh build` to update changed embeddings and build the local site.
-Use `./prepare.sh preview` to serve it. Check the article, diagrams, links, terms,
+Record each completed review with `just review`; retain open questions.
+Run `just prepare` to update changed embeddings and build the local site.
+Use `just preview` to serve it. Check the article, diagrams, links, terms,
 and phone layout. Inspect screenshots when a visual check is needed.
 
 Keep iteration local until raj asks for a commit or approves a specific version
@@ -77,11 +77,11 @@ Check past links against the source posts and the rendered site.
 
 ## Commit and publication
 
-After commit approval, run `sh scripts/verify_preparation.sh`. Inspect the diff
+After commit approval, run `just check`. Inspect the diff
 and commit the approved log and its required state changes. Keep unrelated work
 out of the commit. Report the preview, open questions, and Git state.
 
-Obtain separate approval before merge, push, or publication. `./publish.sh`
+Obtain separate approval before merge, push, or publication. `just publish`
 requires a clean `master` checkout, runs release checks, and pushes committed
 work. It does not stage or commit files. After an approved publication, check
 the deployment and the live page.

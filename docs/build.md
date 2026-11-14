@@ -257,12 +257,12 @@ link or automatic download, and include no browser SQLite runtime.
 Run the full release check after setup:
 
 ```sh
-sh scripts/verify_preparation.sh
+just check
 ```
 
 It requires current editorial reviews and committed embedding state, runs Python
 and lexical-search tests, builds the site, and runs Chromium browser tests. It
-performs no inference. CI runs the same script.
+performs no inference. CI runs the underlying `scripts/verify_preparation.sh` script.
 
 For focused checks:
 

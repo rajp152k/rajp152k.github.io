@@ -40,7 +40,7 @@ local assets. See `assets/channels/README.md` for their sources.
 
 ## Checks
 
-Run `sh scripts/verify_preparation.sh` for the full check. The relationship
+Run `just check` for the full check. The relationship
 unit tests cover URL resolution, passage anchors, deduplication, and cosine
 scores. The lab browser tests cover inspection, search filtering, map endpoints,
 source navigation, reduced motion, mobile layouts, channel images, and article

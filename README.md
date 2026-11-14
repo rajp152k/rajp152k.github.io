@@ -12,7 +12,7 @@ include unfinished work; `draft` metadata and future dates do not exclude posts.
 
 After the one-time setup below, use this flow for new posts and revisions.
 
-1. **Write.** Run `./write.sh "Title"` from the repository root to create a
+1. **Write.** Run `just write "Title"` from the repository root to create a
    meditation and open it in Neovim. Write and save your draft in
    `meditations/<slug>.md`. For an existing post, edit its Markdown file.
    For a log, ask the agent: “Write a log about [work], covering [scope].”
@@ -33,7 +33,7 @@ After the one-time setup below, use this flow for new posts and revisions.
    release checks require current reviews across the archive.
 5. **Approve publication separately.** When ready, authorize publication and
    any required merge or push. The agent uses a clean `master` checkout, runs
-   `./publish.sh`, and checks the deployment and live page. Every post on that
+   `just publish`, and checks the deployment and live page. Every post on that
    revision is included, so keep unrelated unfinished drafts off it.
 
 The agent maintains `terms.json`, `.preparation.json`, and `blog.sqlite` as part
@@ -41,8 +41,8 @@ of preparation. In the build, it generates article pages, term pages, search,
 the archive map, and the public database under `site/`. Review and approval are
 human/agent work; running a build alone does not perform an editorial review.
 
-For a preview without an agent, run `./prepare.sh preview` and open the address
-above. After edits, run `./prepare.sh build` in another terminal, then refresh
+For a preview without an agent, run `just preview` and open the address
+above. After edits, run `just prepare` in another terminal, then refresh
 the browser. Preview builds once; it does not watch files. Stop it with Ctrl-C.
 See [Writing](docs/writing.md) for the complete review commands.
 
@@ -57,8 +57,9 @@ See [Writing](docs/writing.md) for the complete review commands.
 
 ## Local setup
 
-Install Node.js 24+ and [uv](https://docs.astral.sh/uv/). For local authoring,
-create a separate Python 3.12 environment and install the pinned dependencies:
+Install [just](https://just.systems/), Node.js 24+, and [uv](https://docs.astral.sh/uv/).
+On macOS, install just with `brew install just`. For local authoring, create a
+separate Python 3.12 environment and install the pinned dependencies:
 
 ```sh
 uv venv --python 3.12 .venv-embed
@@ -80,19 +81,25 @@ model files local.
 
 ## Daily commands
 
-Run these from the repository root. Follow the [writing guide](docs/writing.md)
-for review stages and the [cooperation guide](docs/cooperation.md) for approvals.
+Run `just` to list commands. Use these from the repository root or a subdirectory.
+Follow the [writing guide](docs/writing.md) for review stages and the
+[cooperation guide](docs/cooperation.md) for approvals.
 
 | Task | Command |
 | --- | --- |
-| Start a meditation | `./write.sh "Title"` |
-| Check review status | `./prepare.sh status` |
-| Prepare and preview | `./prepare.sh preview` |
-| Prepare without serving | `./prepare.sh build` |
-| Run release checks | `sh scripts/verify_preparation.sh` |
-| Publish approved commits | `./publish.sh` |
+| Start a meditation | `just write "Title"` |
+| Check review status | `just status` |
+| Prepare and preview | `just preview` |
+| Preview on another port | `just preview --port 8766` |
+| Prepare without serving | `just prepare` |
+| Record a completed review | `just review ENTRY --stage reader --note "Review notes"` |
+| Check editorial reviews | `just review-check` |
+| Remove records for deleted posts | `just prune` |
+| Run release checks | `just check` |
+| Publish approved commits | `just publish` |
 
 Open <http://127.0.0.1:8765/> for preview; stop with Ctrl-C. Preparation updates
 embeddings and builds the site. Builds do not perform editorial reviews.
-`publish.sh` requires clean `master`, runs release checks, then runs `git push`.
-It does not stage files or create commits.
+`just publish` requires clean `master`, runs release checks, then runs `git push`.
+It does not stage files or create commits. For focused work, use `just embed` to
+update embeddings only or `just build` to build without updating embeddings.
