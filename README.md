@@ -10,6 +10,7 @@ include unfinished work; `draft` metadata and future dates do not exclude posts.
 
 ## How to write and publish
 
+Start at the [writing desk](docs/README.md) for the state machine and current progress.
 After the one-time setup below, use this flow for new posts and revisions.
 
 1. **Write.** Run `just write "Title"` from the repository root to create a
@@ -18,15 +19,15 @@ After the one-time setup below, use this flow for new posts and revisions.
    For a log, ask the agent: “Write a log about [work], covering [scope].”
    The agent drafts it in `logs/` with the repository's ops-log skill.
 2. **Ask for preparation.** Say “Prepare `meditations/<slug>.md` for review.”
-   The agent reads the whole draft, reviews the intended reader, checks terms,
-   sources, introductions, and related posts, and records the results. It asks
-   about unclear meaning outside the article and requests permission before
-   changing meditation prose. It then updates changed embeddings, builds the
-   site, and starts a local preview. You do not need to request each stage.
-3. **Read and revise.** Open the preview at <http://127.0.0.1:8765/>. Check the
-   post and discuss any questions. Edit your meditation or request log changes,
-   then ask the agent to prepare it again. The agent repeats affected reviews
-   and rebuilds the preview. Saving a file does not start these steps.
+   The agent reads the draft and submits jargon and domain-specific term candidates
+   and post-link proposals in a Markdown review page. You approve, reject, defer,
+   or request revisions. The agent records your decisions and applies only approved
+   revisions. It then updates embeddings, builds, and starts a local preview.
+3. **Read and revise.** Open the preview at <http://127.0.0.1:8765/>. Edit your
+   meditation or request log changes, then ask for preparation again. Repeat
+   affected reviews and approvals. Track state and decisions in the review's YAML
+   front matter under `docs/reviews/`. The scripts do not enforce these states yet.
+   Saving a file does not start preparation.
 4. **Approve a commit.** Say “Commit this version.” The agent runs the release
    checks, reviews the diff, and commits the post with its term records, review
    records, and embedding database changes. You can preview unfinished work;
@@ -47,6 +48,10 @@ the browser. Preview builds once; it does not watch files. Stop it with Ctrl-C.
 See [Writing](docs/writing.md) for the complete review commands.
 
 ## Guides
+
+- [Writing desk](docs/README.md): phone-readable entry point and progress.
+- [Workflow](docs/workflow.md): states, transitions, and approval gates.
+- [Curation](docs/curation.md): term and link candidates and decisions.
 
 - [Cooperation](docs/cooperation.md): ownership, draft agreement, commit and publication approval.
 - [Writing](docs/writing.md): create, review, prepare, and preview a post.

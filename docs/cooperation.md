@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | Meditations | Write the prose; decide its meaning | Read, ask questions, suggest edits; change prose only with permission |
 | Logs | Request the subject; confirm intent and results | Draft and revise with the [ops-log skill](../.agents/skills/ops-log/SKILL.md) |
-| Terms and sources | Resolve unclear meaning | Check evidence; maintain definitions, source passages, and reading choices |
+| Terms and post links | Approve, reject, defer, or request revisions | Propose candidates and evidence; apply only approved revisions |
 | Preparation | Review the preview | Review the draft, update records and embeddings, build, and test |
 | Commit | Approve a specific post version for commit | Check and commit that version with its required state |
 | Publication | Approve merge, push, or publication separately | Run release checks and verify the deployment and live page |
@@ -14,29 +14,29 @@
 ## The normal exchange
 
 1. Write a meditation with `just write "Title"`, or ask for a log about specific work.
-2. Ask to prepare it. The agent follows the [writing workflow](writing.md) without
-   asking you to name each stage. It reads the whole post, checks terms and sources,
-   records reviews, updates embeddings, and builds a local preview.
-3. Discuss the preview and questions. The agent repeats only the affected work
-   after a revision. Drafts and previews stay local until commit approval.
-4. Approve a version for commit. The agent runs the complete checks, inspects the
-   diff, and commits the post and required records. Approval to commit is separate
-   from approval to publish.
-5. Approve publication when ready. The agent checks the deployment and the live post.
+2. Ask to prepare it. The agent reads the whole post and submits a small term and
+   link batch in a Markdown review page. Follow the [state machine](workflow.md).
+3. Approve, reject, defer, or request changes to candidate revisions. The agent
+   records your decisions, applies approved changes, and prepares the preview.
+4. Read the preview and revise. Repeat affected reviews and approvals after changes.
+5. Approve a specific version for commit. The agent checks and commits that version
+   with its required records. Approval to commit does not authorize publication.
+6. Approve publication separately. The agent verifies deployment and the live page.
 
 Use the same preparation steps for a new post and an edited post. Keep log slugs
 and publication timestamps stable when revising them.
 
 ## Decisions and handoff
 
-Keep intent questions and proposed prose changes outside the article. The agent
-handles clear supporting records without asking for each edit. Record unresolved
-questions and their effect on release in `.preparation.json`. Follow the
-[editorial policy](editorial-policy.md) to decide which questions block review.
+Keep intent questions and proposals outside articles. The agent maintains the
+Markdown review state and `.preparation.json` receipts. Raj owns approval of terms
+and curated post links; the agent cannot approve them as routine record maintenance.
+See [Curation](curation.md) for evidence and decision scope.
 
-Keep the handoff short: changed posts, preview address or build result, open
-questions, check results, and whether the work is local, committed, or published.
-Name the next decision needed from raj. A successful build is not prose approval.
+Read [Progress](progress.md) on the Markdown server for the current work and next
+decision. The agent updates it after batches, transitions, and blockers. Keep chat
+updates short: state, changes, decision needed, and the review link. Record raj's
+reasons to improve later proposals; keep the approval gate through that learning.
 
 The UX was approved at `8488dd5`: select a map circle, inspect the card below the
 map, then follow its title. Change that interaction only when requested or when

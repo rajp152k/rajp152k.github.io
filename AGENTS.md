@@ -1,24 +1,36 @@
 # Working on this blog
 
-Read [docs/cooperation.md](docs/cooperation.md) for ownership and approval boundaries.
-Follow [docs/writing.md](docs/writing.md) for commands and stages, and
-[docs/editorial-policy.md](docs/editorial-policy.md) for review decisions.
+Start with [docs/README.md](docs/README.md) and [docs/progress.md](docs/progress.md).
+Follow [docs/workflow.md](docs/workflow.md) for states and approval gates,
+[docs/curation.md](docs/curation.md) for proposals, and
+[docs/editorial-policy.md](docs/editorial-policy.md) for selection rules.
+Use [docs/writing.md](docs/writing.md) for commands.
 
-For a request to prepare a post, inspect Git status and run `just status`.
-Read each affected draft in full. Complete reader and references reviews,
-maintain `terms.json`, update only affected review records, and run
-`just prepare`. Report the preview and open questions. Handle these stages
-without asking raj to name each one.
+Raj approves terms and curated post links, including reuse and changes. Submit
+jargon and domain-specific terms, not ordinary phrases given local meaning.
+Keep proposals in a Markdown review record under `docs/reviews/`. Apply only raj's
+approved candidate revisions to `terms.json` or prose. Existing records and agent
+review receipts do not establish approval. Never waive this gate based on past
+preferences, a successful build, or general approval of a post.
+
+For preparation, inspect Git status and run `just status`. Read the whole draft,
+submit the curation batch, and wait for raj's decisions. Maintain the review's YAML
+state and decision history. After approval, apply the changes, record completed
+reviews, and run `just prepare`. Early draft previews are allowed. The scripts do
+not yet enforce the Markdown approval states.
 
 Meditations are raj's prose. Ask before editing them. Create or revise a log only
 when requested; load the repository skill `ops-log` from
 [.agents/skills/ops-log/SKILL.md](.agents/skills/ops-log/SKILL.md). If skill discovery
 is unavailable, read that file directly. Keep prose questions outside articles.
-Maintain clear supporting records yourself and record only reviews actually done.
+Maintain records of actual work and actual decisions. Update `docs/progress.md`
+after each review batch, transition, or blocker. Keep chat updates short for phone
+reading: state, changes, decision needed, and a review link.
 
-Use `.preparation.json` for current reviews, decisions, reading choices, and
-questions. It is committed internal state, excluded from the public site.
-`docs/archive-review.md` is the initial review, not the current status.
+Use `.preparation.json` for completed review receipts and unresolved questions.
+Use Markdown front matter for raj's scoped approvals and workflow history.
+`docs/archive-review.md` is historical evidence, not current approval. Policy edits
+make old receipts stale. Do not refresh them without doing the new reviews.
 
 Keep post iteration local until raj approves a version for commit. After approval,
 run `just check`, inspect the diff, and commit only intended

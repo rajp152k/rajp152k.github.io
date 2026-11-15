@@ -16,6 +16,9 @@ Work in this repository. Read [the cooperation agreement](../../../docs/cooperat
 run `just status`. Preserve unrelated work. Read relevant earlier posts
 and the evidence for the work before drafting. Ask raj about missing intent or
 unsupported claims. Keep those questions outside the article.
+Follow the [state machine](../../../docs/workflow.md). Keep this log's workflow
+state in a separate Markdown review record under `docs/reviews/` and update
+[Progress](../../../docs/progress.md) after each batch or state change.
 
 ## File format
 
@@ -59,17 +62,20 @@ accessible title and, when needed, a description. Check the rendered result.
 
 ## Prepare and revise
 
-Read the whole draft as a reader. Check names, claims, source passages, and past
-links. Apply the editorial policy to terms, introductions, and related reading.
-Record each completed review with `just review`; retain open questions.
+Read the whole draft as a reader. Submit jargon and domain-specific term candidates
+and post-link proposals under the [curation rules](../../../docs/curation.md).
+Raj approves terms and links, including the past-reading section. Keep unapproved
+link proposals in the review page; apply only approved revisions to the log and
+registry. Record raj's decisions in the review front matter. Record completed
+agent reviews with `just review`; this command is not approval.
 Run `just prepare` to update changed embeddings and build the local site.
 Use `just preview` to serve it. Check the article, diagrams, links, terms,
 and phone layout. Inspect screenshots when a visual check is needed.
 
 Keep iteration local until raj asks for a commit or approves a specific version
 for commit. Treat changed `blog.sqlite`, `terms.json`, and `.preparation.json` as
-part of the draft. After each prose edit, repeat the affected review stages and
-build. Keep meditation edits limited to what raj authorized.
+part of the draft. After edits, mark affected decisions stale, repeat the affected
+reviews and raj's approvals, and build. Keep meditation edits within permission.
 
 Preserve collection URLs (`/logs/<slug>/` and `/<slug>/`), independent `lx`/`mx`
 codes, the shared archive-wide map projection, and collection search behavior.
