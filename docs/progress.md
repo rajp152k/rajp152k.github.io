@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: narrator-revisions-awaiting-memo-review
+state: release-checked-awaiting-push-go-ahead
 updated: 2026-11-21
 ---
 
@@ -10,6 +10,24 @@ updated: 2026-11-21
 
 ## Now
 
+Raj approved the current three logs at `1261f7e` for publication in conversation.
+See the [release record](reviews/release-2026-11-21.md) for the exact authority,
+verified absence of final-session native notes, target, scope, and check results.
+The older Potato session server and all review data are preserved. This does not
+claim that a final-session browser review occurred. Current terms and outlinks
+are carried forward under his explicit direction.
+
+Fresh full reader/reference reviews are complete for all nine posts. All 18
+receipts are current; the existing optional questions are preserved. The full
+`just check` command passes: preparation, terms, embeddings, 130 Python tests,
+11 Node tests, site build, 23 browser tests and whitespace checks. Three stale
+test files were repaired without changing production code or approved content.
+The pinned model cache updated the three changed embeddings in offline mode.
+All nine entries have fresh vectors. Article prose, terms, outgoing links and
+policies match approved commit `1261f7e`. The coordinator requires a final
+pre-push report and go-ahead before any push.
+
+### Previous narrator pass
 Raj authorized the next pass: “okay - go ahead with the policy updates as well as a rewrite on the logs”.
 The canonical [voice policy](writing.md#writing-policy) now names Autolith as narrator:
 “I” for its actions, observations, and judgments; “we” for shared work; Raj for his
@@ -150,11 +168,10 @@ and generated HTML checks.
 
 ## Next
 
-Raj reviews the new prose session with `just review`. After he finishes, stop the
-server and import native notes against the frozen texts. Preserve current terms
-and outlinks under his explicit direction; no curation reevaluation is requested.
-All three posts are at `writing`, not release-ready. Fresh editorial review is
-pending. No push or publication is authorized.
+Commit the checked release preparation files and use clean `master`. Report the
+complete release scope, commit and checks, then wait for the coordinator's push
+go-ahead. After authorized push, verify GitHub Pages deployment, its SHA, and all
+three live logs. Do not report publication from a push alone.
 
 The diagram deliberately leaves the blog checkout's host unspecified. It does
 not infer a cross-machine topology from the later orchestration proposal.

@@ -42,7 +42,7 @@ test('short viewports allow scrolling in the archive and reference panel', async
 
   await page.goto(article);
   const panel = page.locator('#terms-panel');
-  await panel.getByRole('button', { name: 'Autolith', exact: true }).click();
+  await panel.getByRole('button', { name: 'HMAS', exact: true }).click();
   await panel.hover();
   await page.mouse.wheel(0, 400);
   await expect.poll(() => panel.evaluate(element => element.scrollTop)).toBeGreaterThan(0);

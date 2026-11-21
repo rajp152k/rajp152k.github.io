@@ -103,7 +103,24 @@ class RegistryTests(unittest.TestCase):
         registry = load_terms(entries)
         mentions = collect_mentions(entries, registry)
         self.assertEqual(mentions, collect_mentions(reversed(entries), registry))
-        self.assertTrue(all(mentions_for_term(item.id, mentions) for item in registry.terms))
+        self.assertTrue(mentions)
+        report = maintenance_report(entries, registry, mentions)
+        self.assertEqual(report, maintenance_report(reversed(entries), registry, mentions))
+        self.assertEqual({row["id"] for row in report["terms"]}, set(registry.by_id))
+        for row in report["terms"]:
+            self.assertEqual(row["mentions"], len(mentions_for_term(row["id"], mentions)))
+            self.assertGreater(row["sources"], 0)
+
+    def test_source_only_term_is_valid_without_an_eligible_mention(self):
+        self.entry = Entry("meditations", "example", "Example", date(2026, 1, 1), "> Orch coordinates.")
+        registry = self.load()
+        mentions = collect_mentions([self.entry], registry)
+        self.assertEqual(registry.by_id["orch"].sources[0].quote, "Orch coordinates.")
+        self.assertEqual(mentions_for_term("orch", mentions), ())
+        self.assertEqual(terms_for_post(self.entry.key, mentions, registry), ())
+        report = maintenance_report([self.entry], registry, mentions)
+        self.assertEqual(report["terms"], [{"id": "orch", "sources": 1, "mentions": 0}])
+        self.assertEqual(report["review_candidates"][0]["entry"], self.entry.key)
 
     def test_unmatched_posts_are_only_review_candidates(self):
         registry = self.load()

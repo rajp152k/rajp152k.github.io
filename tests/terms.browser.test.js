@@ -13,36 +13,36 @@ test('desktop references open without navigation and return keyboard focus', asy
   const panel = page.locator('#terms-panel');
   await expect(panel).toBeVisible();
   await expect(panel.getByRole('heading', { name: 'Terms and references' })).toBeVisible();
-  const orch = page.locator('.term-reference[data-term="orch"]');
-  await orch.focus();
-  await orch.press('Enter');
-  await expect(panel.getByRole('heading', { name: 'Orch', exact: true })).toBeFocused();
-  await expect(orch).toHaveAttribute('aria-expanded', 'true');
-  await expect(panel.getByText(/coordinating agent/i).first()).toBeVisible();
+  const reference = page.locator('.term-reference[data-term="hmas"]').first();
+  await reference.focus();
+  await reference.press('Enter');
+  await expect(panel.getByRole('heading', { name: 'HMAS', exact: true })).toBeFocused();
+  await expect(reference).toHaveAttribute('aria-expanded', 'true');
+  await expect(panel.getByText('Hierarchical multi-agent systems: systems that organize agents in layers.', { exact: true })).toBeVisible();
   expect(new URL(page.url()).pathname).toBe(article);
   await page.screenshot({ path: 'test-results/terms-desktop.png', fullPage: false });
-  await panel.getByRole('heading', { name: 'Orch', exact: true }).press('Escape');
+  await panel.getByRole('heading', { name: 'HMAS', exact: true }).press('Escape');
   await expect(panel).toBeHidden();
-  await expect(orch).toBeFocused();
-  await expect(orch).toHaveAttribute('aria-expanded', 'false');
+  await expect(reference).toBeFocused();
+  await expect(reference).toHaveAttribute('aria-expanded', 'false');
 });
 
 test('panel list and term pages provide an archive route', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(article);
   const panel = page.locator('#terms-panel');
-  await panel.getByRole('button', { name: 'Orch', exact: true }).click();
-  await panel.getByRole('heading', { name: 'Orch', exact: true }).press('Escape');
+  await panel.getByRole('button', { name: 'HMAS', exact: true }).click();
+  await panel.getByRole('heading', { name: 'HMAS', exact: true }).press('Escape');
   await expect(panel).toBeHidden();
   const toggle = page.getByRole('button', { name: 'Terms and references', exact: true });
   await expect(toggle).toBeFocused();
   await toggle.click();
   await panel.getByRole('button', { name: 'Terms in this post' }).click();
-  await expect(panel.getByRole('button', { name: 'Orch', exact: true })).toBeVisible();
-  await panel.getByRole('button', { name: 'Autolith', exact: true }).click();
+  await expect(panel.getByRole('button', { name: 'HMAS', exact: true })).toBeVisible();
+  await panel.getByRole('button', { name: 'HMAS', exact: true }).click();
   await panel.getByRole('link', { name: 'Full reference' }).click();
-  await expect(page).toHaveURL(/\/terms\/autolith\/$/);
-  await expect(page.getByRole('heading', { name: 'Autolith', exact: true })).toBeVisible();
+  await expect(page).toHaveURL(/\/terms\/hmas\/$/);
+  await expect(page.getByRole('heading', { name: 'HMAS', exact: true })).toBeVisible();
   await expect(page.locator('.term-sources a').first()).toBeVisible();
 });
 
@@ -60,14 +60,14 @@ test('small desktop uses a closed panel until requested', async ({ page }) => {
 test('phone references are inert and resizing removes desktop controls', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto(article);
-  await page.locator('.term-reference[data-term="orch"]').click();
+  await page.locator('.term-reference[data-term="hmas"]').first().click();
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator('#terms-panel')).toBeHidden();
   await expect(page.locator('[data-terms-toggle]')).toBeHidden();
   await expect(page.locator('.term-reference[role], .term-reference[tabindex]')).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.screenshot({ path: 'test-results/terms-phone.png', fullPage: false });
-  await page.locator('.term-reference[data-term="orch"]').click();
+  await page.locator('.term-reference[data-term="hmas"]').first().click();
   await expect(page.locator('#terms-panel')).toBeHidden();
 });
 
