@@ -88,6 +88,23 @@ target, and review snapshots are available in closed evidence sections.
 Use `approve` to confirm an exact link or no-outlinks-needed revision. A blank
 response is not approval. Import responses before recording or applying decisions.
 
+### Log prose feedback
+
+For a memo-only pass, queue a `kind: log-memo-review` record. Give it a positive
+integer `cycle` and a `posts` mapping from log entry keys to current SHA-256 hashes.
+Run `just queue-review RECORD`. This queues one whole-log item per entry, with a
+clear title and complete Markdown text. Read the full text without opening an
+evidence panel. Preserve section headings and quote the passage in each note.
+
+Run `just review` and open http://127.0.0.1:8768/. Open **Notes**, write feedback,
+and select **Add note**. Add more notes or replies as needed. Use the optional
+whole-log comment field for general feedback. This pass has no candidate decision
+form. Tell AL when done, then stop the server before import.
+
+AL runs `just import-reviews ID` and reads comments, native memos, and memo threads
+against the frozen text. Check changed-source flags. Refine writing policy from
+raj's actual feedback after review; do not infer preferences in advance.
+
 
 ## Start a post
 

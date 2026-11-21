@@ -183,6 +183,80 @@ class ReviewTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Invalid"):
             review.select_session(self.root)
 
+    def memo_batch(self):
+        posts = {}
+        for index in range(3):
+            name = f"logs/memo-{index}.md"
+            (self.root / name).write_text(
+                f"---\ntitle: 'Log {index} & context'\ndate: 2026-11-21T12:00:00Z\n---\n"
+                "# Context\n\nA complete passage.\n\n```text\nexact output\n```\n\n# Conclusion\n\nEnd.\n")
+            posts[name[:-3]] = review.digest((self.root / name).read_bytes())
+        batch = {"kind": "log-memo-review", "cycle": 1, "posts": posts}
+        (self.root / "memos.md").write_text("---\n" + yaml.safe_dump(batch) + "---\nProse feedback.\n")
+        return batch
+
+    def test_memo_batch_has_three_complete_logs_and_no_decision_form(self):
+        batch = self.memo_batch()
+        session = review.prepare(self.root, ["memos.md"])
+        self.assertEqual(session, review.prepare(self.root, ["memos.md"]))
+        manifest = json.loads((session / "manifest.json").read_text())
+        data = json.loads((session / "data.json").read_text())
+        self.assertEqual(len(manifest["items"]), 3)
+        self.assertEqual({item["entry"] for item in manifest["items"]}, set(batch["posts"]))
+        for item, row in zip(manifest["items"], data):
+            self.assertEqual(item["kind"], "log")
+            self.assertEqual(item["id"], f"{item['entry']}:memo-cycle-1:log")
+            self.assertEqual(item["text"], (self.root / item["post"]).read_text())
+            self.assertEqual(row["text"], item["text"])
+            self.assertEqual(manifest["sources"][item["post"]]["text"], item["text"])
+            self.assertIn("&amp; context</h2>", row["card_html"])
+        config = yaml.safe_load((session / "config.yaml").read_text())
+        self.assertTrue(config["annotation_ui"]["memos"])
+        self.assertEqual([s["name"] for s in config["annotation_schemes"]], ["comment"])
+        field = next(f for f in config["instance_display"]["fields"] if f["key"] == "text")
+        self.assertEqual(field["type"], "text")
+        self.assertFalse(field.get("display_options", {}).get("collapsible", False))
+
+    def test_memo_batch_refuses_stale_sources_meditations_and_terms_only(self):
+        batch = self.memo_batch()
+        with self.assertRaisesRegex(ValueError, "terms-only"):
+            review.prepare(self.root, ["memos.md"], terms_only=True)
+        (self.root / "logs/memo-0.md").write_text("Changed draft")
+        with self.assertRaisesRegex(ValueError, "stale"):
+            review.prepare(self.root, ["memos.md"])
+        batch["posts"] = {"meditations/probe": "hash"}
+        (self.root / "memos.md").write_text("---\n" + yaml.safe_dump(batch) + "---\n")
+        with self.assertRaisesRegex(ValueError, "only logs"):
+            review.prepare(self.root, ["memos.md"])
+
+    def test_memo_only_import_keeps_comments_anchors_replies_and_issue_state(self):
+        self.memo_batch()
+        session = review.prepare(self.root, ["memos.md"])
+        item_id = "logs/memo-0:memo-cycle-1:log"
+        user = session / "annotation_output/raj"
+        user.mkdir(parents=True)
+        review.dump(user / "user_state.json", {"instance_id_to_label_to_value": {
+            item_id: [[{"schema": "comment", "name": "text_box"}, "Whole-log feedback"]]}})
+        quote = "A complete passage"
+        start = (self.root / "logs/memo-0.md").read_text().index(quote)
+        anchor = json.dumps({"field": "text", "start": start, "end": start + len(quote), "quote": quote})
+        with sqlite3.connect(session / "project.sqlite") as db:
+            db.executescript("CREATE TABLE memos(id TEXT, instance_id TEXT, anchor TEXT, body TEXT);"
+                             "CREATE TABLE memo_threads(memo_id TEXT, parent_id TEXT, status TEXT);")
+            db.execute("INSERT INTO memos VALUES(?, ?, ?, ?)", ("m1", item_id, anchor, "Passage feedback"))
+            db.execute("INSERT INTO memos VALUES(?, ?, ?, ?)", ("m2", item_id, None, "Reply"))
+            db.execute("INSERT INTO memo_threads VALUES('m1', NULL, 'open')")
+            db.execute("INSERT INTO memo_threads VALUES('m2', 'm1', NULL)")
+        output = review.import_session(self.root, session)
+        report = json.loads(output.read_text())
+        self.assertEqual(report["changed_sources"], [])
+        self.assertEqual(report["responses"][0]["comment"], "Whole-log feedback")
+        self.assertIsNone(report["responses"][0]["decision"])
+        self.assertEqual(report["evidence"]["memos"][0]["anchor"], anchor)
+        self.assertEqual(report["evidence"]["memo_threads"][0]["status"], "open")
+        self.assertEqual(report["evidence"]["memo_threads"][1]["parent_id"], "m1")
+        self.assertEqual(output, review.import_session(self.root, session))
+
     def test_paths_cannot_escape(self):
         with self.assertRaisesRegex(ValueError, "escapes"):
             review.inside(self.root, "../outside")

@@ -70,6 +70,33 @@ def term_card(term: dict, item_id: str, evidence: list[tuple[str, str]]) -> str:
             "<p>Approve these exact details and use scope.</p>" + details + "</div>")
 
 
+def log_memo_items(meta: dict, name: str, sources: dict, freeze) -> list[dict]:
+    """Queue whole logs for prose feedback, independent of curation records."""
+    cycle, posts = meta.get("cycle"), meta.get("posts")
+    if type(cycle) is not int or cycle < 1 or not isinstance(posts, dict) or not posts:
+        raise ValueError("Log memo review needs a positive cycle and post hashes")
+    items = []
+    for entry, expected_hash in posts.items():
+        if not isinstance(entry, str) or Path(entry).parent != Path("logs"):
+            raise ValueError(f"Log memo review accepts only logs: {entry}")
+        post_name = f"{entry}.md"
+        post = freeze(post_name)
+        if sources[post_name]["sha256"] != expected_hash:
+            raise ValueError(f"Review post hash is stale: {name}: {entry}")
+        front = re.match(r"\A---\n(.*?)\n---\n", post, re.S)
+        metadata = yaml.safe_load(front[1]) if front else {}
+        title = metadata.get("title")
+        if not isinstance(title, str) or not title.strip():
+            raise ValueError(f"Log needs a title: {entry}")
+        header = (f"<h2>{html.escape(title)}</h2>"
+                  "<p>Read the complete log below. Add prose feedback in Notes. "
+                  "Quote a passage or name its section for context.</p>")
+        items.append({"id": f"{entry}:memo-cycle-{cycle}:log", "kind": "log",
+                      "entry": entry, "record": name, "post": post_name,
+                      "title": title, "header_html": header, "text": post})
+    return items
+
+
 def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | list[str] = (),
             *, terms_only: bool = False) -> Path:
     """Freeze complete records, posts, and named evidence. IDs include their scope."""
@@ -82,6 +109,12 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
         if not match:
             raise ValueError(f"Missing YAML front matter: {name}")
         meta = yaml.safe_load(match[1])
+        if meta.get("kind") == "log-memo-review":
+            if terms_only:
+                raise ValueError("Log memo reviews cannot use --terms-only")
+            items.extend(log_memo_items(meta, name, sources,
+                                       lambda path: snapshot(root, path, sources)))
+            continue
         if meta.get("kind") == "outlink-review":
             if terms_only:
                 raise ValueError("Outlink batches cannot use --terms-only")
@@ -121,8 +154,9 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
         raise ValueError("No proposed candidates or logs to review")
     if len({item["id"] for item in items}) != len(items):
         raise ValueError("Duplicate candidate or log IDs")
-    payload = {"schema": 2, "presentation": "term-card-v1", "potato_version": VERSION,
-               "sources": sources, "items": items, "terms_only": terms_only}
+    memo_only = all(item["kind"] == "log" for item in items)
+    payload = {"schema": 2, "presentation": "log-memo-v1" if memo_only else "term-card-v1",
+               "potato_version": VERSION, "sources": sources, "items": items, "terms_only": terms_only}
     session_id = digest(json.dumps(payload, sort_keys=True).encode())[:20]
     session = root / ".reviews" / session_id
     if session.exists():
@@ -133,7 +167,7 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
     session.mkdir(parents=True)
     dump(session / "manifest.json", payload)
     dump(session / "data.json", [{"id": i["id"],
-                                 "card_html": i["text"] if i["kind"] != "log" else "",
+                                  "card_html": i["text"] if i["kind"] != "log" else i.get("header_html", ""),
                                  "text": i["text"] if i["kind"] == "log" else ""} for i in items])
     config = {"annotation_task_name": f"Blog review {session_id}",
               "task_dir": str(session.resolve()), "data_files": ["data.json"],
@@ -147,6 +181,10 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
                     "description": "Decision for this candidate" if terms_only else "Candidate decision only. Leave blank for log comments.",
                    "labels": ["approve", "request changes", "reject", "defer"]},
                   {"annotation_type": "text", "name": "comment", "description": "Reasons and corrections"}]}
+    if memo_only:
+        config["annotation_task_name"] = f"Log prose feedback {session_id}"
+        config["annotation_schemes"] = [
+            {"annotation_type": "text", "name": "comment", "description": "Whole-log feedback (optional)"}]
     (session / "config.yaml").write_text(yaml.safe_dump(config, sort_keys=False))
     (root / ".reviews/current").write_text(session_id + "\n")
     return session
