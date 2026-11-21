@@ -128,6 +128,25 @@ class ReviewTests(unittest.TestCase):
         config = yaml.safe_load((session / "config.yaml").read_text())
         self.assertEqual(config["instance_display"]["fields"], [{"key": "card_html", "type": "html"}])
 
+    def test_only_proposed_terms_are_queued(self):
+        for index, state in enumerate(("applied", "approved", "rejected", "deferred",
+                                       "stale", "revision-requested"), start=2):
+            self.meta["terms"].append({"id": f"T{index}", "revision": 1, "state": state})
+        self.write_record()
+        session = review.prepare(self.root, ["record.md"], terms_only=True)
+        manifest = json.loads((session / "manifest.json").read_text())
+        self.assertEqual([item["id"] for item in manifest["items"]],
+                         ["logs/probe:cycle-1:T1:r2"])
+        self.assertEqual(review.native_evidence(session)["users"], {})
+
+    def test_empty_batch_is_frozen_without_a_fake_term_card(self):
+        empty = dict(self.meta, terms=[])
+        (self.root / "empty.md").write_text("---\n" + yaml.safe_dump(empty) + "---\nEmpty batch.\n")
+        session = review.prepare(self.root, ["empty.md", "record.md"], terms_only=True)
+        manifest = json.loads((session / "manifest.json").read_text())
+        self.assertIn("empty.md", manifest["sources"])
+        self.assertEqual(len(manifest["items"]), 1)
+
     def test_incomplete_card_refused(self):
         del self.meta["terms"][0]["card"]["definition"]
         self.write_record()

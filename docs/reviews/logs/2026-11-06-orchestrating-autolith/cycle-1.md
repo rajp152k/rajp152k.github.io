@@ -20,6 +20,20 @@ terms:
       passage: Hierarchical multi-agent systems (HMAS) organize agents in layers.
       introduction: Context section of this log; explain the acronym without implying an implemented system.
       use_scope: This log only. Link the expanded phrase and acronym in Context; keep the paper title citation without a nested term link.
+  - id: T2
+    revision: 1
+    state: proposed
+    action: add
+    record: t2-peer-discovery
+    decision: null
+    applied_at: null
+    card:
+      name: peer discovery
+      definition: Finding other running agents and their current communication destinations.
+      aliases: []
+      passage: Native Lisp peer discovery gives local agents structured session information. They can resolve a current peer without parsing a terminal status report.
+      introduction: Use the existing explanatory paragraph in Match the method to the work. No prose change is proposed.
+      use_scope: First eligible body use in Orchestrating Autolith only. Local discovery, not remote reachability or permission to act. No other archive matches.
 links: []
 decisions:
   - id: D1
@@ -44,8 +58,11 @@ release:
 ## Now
 
 Raj approved T1 revision 2 in Potato. Applied the exact candidate to `terms.json`.
-This is one candidate to test the approval flow, not a complete archive review.
-The post stays in curation. Memo testing and Blog Update [1] come later.
+That decision and its provenance are unchanged. Do not queue it again.
+The all-log batch adds **T2 revision 1, peer discovery**, for raj's decision.
+The [Using Autolith review](../2026-10-07-using-autolith/cycle-1.md) also proposes
+VPS and inference with explicit uses in this log. Those two cards appear once
+in the shared terms-only session. The post stays in curation.
 
 ## Reader review
 
@@ -132,3 +149,58 @@ Old agent receipts are historical and stale, not current approvals.
   need fresh review; this term decision does not replace them.
 - The post remains in `curation`; this batch does not establish a complete
   curation review, commit approval for the post, or publication approval.
+
+## T2: peer discovery
+
+- Proposed registry ID: `peer-discovery`; domain: distributed agent systems.
+- Reader need: distinguish finding a peer's destination from proving that a
+  remote service is reachable or that an action is allowed.
+- Exact definition: **Finding other running agents and their current communication destinations.**
+- Aliases: none. Do not match the generic words `peer` or `discovery` alone.
+- Exact archive evidence: “Native Lisp peer discovery gives local agents
+  structured session information. They can resolve a current peer without
+  parsing a terminal status report.” The next sentences limit this result to a
+  local destination and deny remote discovery or permission claims.
+- Introduction: the existing explanatory paragraph in Match the method to the
+  work. It already teaches the proposed meaning. No new prose is needed.
+- Complete archive scope: one eligible body occurrence in this log; none in the
+  other two logs or six meditations. Use default first-term annotation.
+- Requested approval covers this definition, aliases, evidence, introduction,
+  and this-log-only use. State is proposed, not approved or applied.
+
+## All-log review coverage, 2026-11-21
+
+Read this whole log again. It separates current local agent work from a proposed
+cross-machine system. The intended reader knows basic programming but may not
+know agent coordination and transport terms. HMAS already has a scoped decision.
+Its definition, source quote, aliases, introduction, post hash, and uses have not
+changed. No new HMAS use occurs in the other logs. Preserve D1 and T1:r2.
+
+The all-log review also proposes these uses from the Using Autolith record:
+
+- VPS: two `virtual private server` body occurrences in Context. Mark the first.
+- Inference: two body occurrences, in Separate contexts and one task owner and
+  Make work resumable across machines. Mark the first. This is model execution,
+  not a different logical-deduction meaning. The proposal covers these uses.
+
+No other new term card is needed for this log in this batch:
+
+- Autolith, Paperclip, Hermes, NixOS, ThinkPad, Mac, and Lisp name tools,
+  platforms, or a language. Do not restore them as terms merely because named.
+- Orch, machine head, project agent, and head are local roles. The post explains
+  them; they are not established domain terms simply because repeated here.
+- `persistence` is explained as resuming work. Do not create a broad alias for
+  that ordinary word. `task owner`, `context`, and `task identity` describe this
+  design without needing new glossary entries.
+- `rollback`, `transport`, and `cluster` are technical vocabulary, but the current
+  sentences only mention them. They do not explain enough to support useful
+  definitions. Leave them out of this batch rather than invent archive evidence.
+- `restart`, `duplicate delivery`, and `cancellation` are used directly in trial
+  requirements. The post distinguishes delivery from completion in plain prose.
+  No new term such as idempotency appears or is proposed.
+- Reproducible experiments and negative results are described as research
+  requirements, not treated as names for a local system.
+
+These are AL's screening choices, not rejection or deferral decisions by raj.
+This is a term review, not a completed post-link review. All new candidates wait
+for explicit decisions. No registry or article edits were made for this batch.
