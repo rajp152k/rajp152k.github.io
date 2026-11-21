@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: log-memos-ready
+state: log-memos-imported
 updated: 2026-11-21
 ---
 
@@ -10,22 +10,18 @@ updated: 2026-11-21
 
 ## Now
 
-The [log prose feedback pass](reviews/log-memos-2026-11-21.md) is ready in Potato.
-Session: `62bbaa5280c3a734eaf9`. It contains all three agent-written logs:
+Raj completed the log memo review. Session `62bbaa5280c3a734eaf9` is imported in
+[the evidence report](../review-imports/62bbaa5280c3a734eaf9-73a68ec0e64c8b75.json).
+It contains 11 memos by `raj`: six for **Two collections, one archive**, four for
+**Using Autolith so far**, and one for **Orchestrating Autolith for a personal
+laboratory**. There are no replies or whole-log responses; all memo anchors are
+null. No source changed before import.
 
-1. Two collections, one archive
-2. Using Autolith so far
-3. Orchestrating Autolith for a personal laboratory
-
-Run `just review` from the repository and open http://127.0.0.1:8768/.
-For this exact session, run `just review --session 62bbaa5280c3a734eaf9`.
-Read each full log. Open **Notes**, write feedback with a passage quote or section
-name, and select **Add note**. Use the optional whole-log comment field for general
-feedback. Tell AL when done, then stop the server before import.
-
-This is prose feedback, with no candidate decisions. The complete current log
-text is frozen and visible, including headings and code. No post text or writing
-policy was changed. No feedback or approval has been recorded for this pass.
+[Full feedback and the proposed edit/policy split](reviews/log-memo-feedback-2026-11-21.md)
+are recorded separately from the frozen batch. The native evidence includes
+IDs, authors, timestamps, visibility, and all available thread data. The live
+server was stopped with SIGINT before import. Session data and prior records are
+preserved. No prose or writing-policy changes have been applied.
 
 ### Completed outlink review
 
@@ -58,6 +54,11 @@ HMAS and prior term decisions are unchanged.
 
 ## Checks
 
+For memo import: checked all four frozen source hashes against current files,
+all three full log items, exact native evidence equality, SQLite integrity,
+idempotent reimport, and 11 complete quoted memo bodies. The 21 direct queue/import
+tests pass. No browser tests, builds, or full release suites were run.
+
 For the memo pass: 21 direct queue/import tests pass. Checked the three-item count,
 unique IDs, complete current snapshots, source hashes, native memo configuration,
 and comment-only form. All 96 prior post, session, import, and registry files match
@@ -77,9 +78,9 @@ and generated HTML checks.
 
 ## Next
 
-Raj reads the logs and adds memos. AL then imports this exact session, reads the
-feedback against the frozen text, and refines concise writing policies from it.
-Commit and publication approval are separate. No push or publication is authorized.
+Present the actual feedback and proposed split to raj. Wait for the next scoped
+instruction before editing log prose or writing policy. The third log needs
+another review after refinement. No push or publication is authorized.
 
 Separate curation work: the first log's
 [empty term batch](reviews/logs/2026-10-06-two-collections-one-archive/cycle-1.md)
