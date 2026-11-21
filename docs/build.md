@@ -215,10 +215,19 @@ sh scripts/python.sh scripts/terms.py --json
 ```
 
 The build validates records and marks the first eligible mention per term per
-post. Matching skips existing links, headings, code, and quotations; it uses
-whole words, ignores case, and prefers the longest alias. Generated spans do not
+post. A term can set optional `annotation` to `first-term` (the default) or
+`first-spelling`. Use `first-spelling` only when the approved scope needs the
+first occurrence of the name and each alias. Case and whitespace differences
+count as the same spelling. Each term has one anchor and one post reference,
+even when it has several marked spellings.
+
+Matching skips existing links, headings, code, and quotations; it uses whole
+words, ignores case, and prefers the longest alias. Generated spans do not
 change Markdown source. Search and embeddings use the original post. `/terms/`
 and `/terms/<id>/` are navigation pages, not archive entries.
+
+The registry has no per-post scope filter. Check the complete mention report
+against the approved scope before committing a term and after archive edits.
 
 Record validation failure stops the build before preview replacement. Builds use
 saved records without model calls. Term-only changes need no embedding update.

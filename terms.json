@@ -1,4 +1,19 @@
 {
   "version": 1,
-  "terms": []
+  "terms": [
+    {
+      "id": "hmas",
+      "name": "HMAS",
+      "aliases": ["hierarchical multi-agent systems"],
+      "annotation": "first-spelling",
+      "definition": "Hierarchical multi-agent systems: systems that organize agents in layers.",
+      "introduction": "logs/2026-11-06-orchestrating-autolith",
+      "sources": [
+        {
+          "entry": "logs/2026-11-06-orchestrating-autolith",
+          "quote": "Hierarchical multi-agent systems (HMAS) organize agents in layers."
+        }
+      ]
+    }
+  ]
 }

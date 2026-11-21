@@ -31,6 +31,7 @@ class Term:
     definition: str
     introduction: str
     sources: tuple[Source, ...]
+    annotation: str = "first-term"
 
     @property
     def url(self) -> str:
@@ -82,9 +83,9 @@ def _object(pairs):
     return result
 
 
-def _fields(value, required, label):
-    if not isinstance(value, dict) or set(value) != set(required):
-        raise ValueError(f"{label} must have exactly these fields: {', '.join(required)}.")
+def _fields(value, required, label, optional=()):
+    if not isinstance(value, dict) or not set(required) <= set(value) or set(value) - set(required) - set(optional):
+        raise ValueError(f"{label} requires {', '.join(required)}; optional fields: {', '.join(optional) or 'none'}.")
 
 
 def _text(value, label):
@@ -119,7 +120,10 @@ def load_terms(entries: Iterable[Entry], path: Path = ROOT / "terms.json") -> Re
         raise ValueError("terms must be a list.")
     terms, ids, aliases = [], set(), {}
     for row in data["terms"]:
-        _fields(row, ("id", "name", "aliases", "definition", "introduction", "sources"), "Term")
+        _fields(row, ("id", "name", "aliases", "definition", "introduction", "sources"), "Term", optional=("annotation",))
+        annotation = row.get("annotation", "first-term")
+        if annotation not in ("first-term", "first-spelling"):
+            raise ValueError("annotation must be first-term or first-spelling.")
         for key in ("id", "name", "definition", "introduction"):
             _text(row[key], key)
         ident = row["id"]
@@ -155,7 +159,7 @@ def load_terms(entries: Iterable[Entry], path: Path = ROOT / "terms.json") -> Re
                 raise ValueError(f"{ident}: duplicate source.")
             seen_sources.add((entry_key, quote))
             sources.append(Source(entry_key, quote))
-        terms.append(Term(ident, row["name"], tuple(row["aliases"]), row["definition"], row["introduction"], tuple(sources)))
+        terms.append(Term(ident, row["name"], tuple(row["aliases"]), row["definition"], row["introduction"], tuple(sources), annotation))
     return Registry(tuple(sorted(terms, key=lambda term: term.id)))
 
 
@@ -224,6 +228,9 @@ class _Annotator(HTMLParser):
             if anchor in existing.anchors and anchor not in existing.reference_anchors:
                 raise ValueError(f"Reserved term anchor {anchor!r} is already used by source HTML.")
         self.seen = existing.ids
+        self.existing = set(existing.ids)
+        self.spellings = set()
+        self.by_id = registry.by_id
         alternatives = [(alias, term.id) for term in registry.terms for alias in (term.name, *term.aliases)]
         alternatives.sort(key=lambda item: (-len(item[0]), item[0].casefold(), item[0]))
         self.owners = {}
@@ -249,17 +256,24 @@ class _Annotator(HTMLParser):
         text, offsets = _decoded_offsets(raw)
         for match in self.pattern.finditer(text):
             ident = self.owners[match.lastgroup]
-            if ident in self.seen:
+            spelling = (ident, _alias_key(match.group()))
+            if ident in self.existing or spelling in self.spellings:
+                continue
+            if ident in self.seen and self.by_id[ident].annotation == "first-term":
                 continue
             left, right = offsets[match.start()][0], offsets[match.end() - 1][1]
             # Do not split an entity that expands to several Unicode characters.
             if (match.start() and offsets[match.start() - 1] == offsets[match.start()]) or (match.end() < len(offsets) and offsets[match.end()] == offsets[match.end() - 1]):
                 continue
+            first = ident not in self.seen
             self.seen.add(ident)
-            replacement = f'<span class="term-reference" data-term="{ident}" id="term-{ident}">{raw[left:right]}</span>'
+            self.spellings.add(spelling)
+            anchor = f' id="term-{ident}"' if first else ""
+            replacement = f'<span class="term-reference" data-term="{ident}"{anchor}>{raw[left:right]}</span>'
             self.edits.append((start + left, start + right, replacement))
-            excerpt = re.sub(r"\s+", " ", text[max(0, match.start() - 90):match.end() + 150]).strip()
-            self.matches.append(Match(ident, match.group(), excerpt))
+            if first:
+                excerpt = re.sub(r"\s+", " ", text[max(0, match.start() - 90):match.end() + 150]).strip()
+                self.matches.append(Match(ident, match.group(), excerpt))
 
     def handle_starttag(self, tag, attrs):
         self.flush(self.source_offset())
@@ -299,7 +313,7 @@ class _Annotator(HTMLParser):
 
 
 def transform_html(html: str, registry: Registry) -> TransformResult:
-    """Mark the first eligible occurrence per term, in source order.
+    """Mark the first eligible occurrence per term, or per spelling when opted in.
 
     Match Unicode word boundaries, case-insensitively, longest alias first.
     Whitespace in aliases matches any prose whitespace. Matches may include

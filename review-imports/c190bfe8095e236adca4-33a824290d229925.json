@@ -1,0 +1,470 @@
+{
+  "schema": 1,
+  "session": "c190bfe8095e236adca4",
+  "manifest": {
+    "schema": 2,
+    "presentation": "term-card-v1",
+    "potato_version": "2.13.1",
+    "sources": {
+      "docs/reviews/logs/2026-11-06-orchestrating-autolith/cycle-1.md": {
+        "sha256": "02c84477be67762ccb9fdab980d1db50fa1cb8a9611a8e8140872ad0bff53199",
+        "text": "---\nschema: 1\nkind: post-review\nentry: logs/2026-11-06-orchestrating-autolith\ncycle: 1\nstate: curation\npost_sha256: c19d9f95a7011f3867aff76f14fa1105a5406a6093aa228347521a83d78884dc\nterms:\n  - id: T1\n    revision: 2\n    state: proposed\n    action: add\n    record: t1-hmas\n    decision: null\n    applied_at: null\n    card:\n      name: HMAS\n      definition: 'Hierarchical multi-agent systems: systems that organize agents in layers.'\n      aliases: [hierarchical multi-agent systems]\n      passage: Hierarchical multi-agent systems (HMAS) organize agents in layers.\n      introduction: Context section of this log; explain the acronym without implying an implemented system.\n      use_scope: This log only. Link the expanded phrase and acronym in Context; keep the paper title citation without a nested term link.\nlinks: []\ndecisions: []\ntransitions: []\nblockers: []\nrelease:\n  commit: null\n  deployed_commit: null\n  url: null\n  verified_at: null\n---\n\n# First term approval batch\n\n## Now\n\nApprove, request changes, reject, or defer T1 revision 2 in Potato.\nThis is one candidate to test the approval flow, not a complete archive review.\nThe terms-only session has no log comment item. Memo testing and Blog Update [1] come later.\n\n## Reader review\n\nRead the complete log. It describes a proposed personal multi-agent research\nsetup and separates local results from untested cross-machine requirements.\nThe intended reader knows basic programming but may not know agent-system terms.\n\n## T1: HMAS\n\n- Domain: multi-agent systems. The post cites a taxonomy whose title uses\n  “Hierarchical Multi-Agent Systems”; this is a domain term, not a name invented\n  for raj's setup.\n- Registry ID: `hmas` (new record after the reset).\n- Name: `HMAS`.\n- Exact definition: **Hierarchical multi-agent systems: systems that organize agents in layers.**\n- Aliases: `hierarchical multi-agent systems`.\n- Reader need: explain the acronym in the Context section without implying that\n  raj has already built or tested such a system.\n- Exact archive evidence: “Hierarchical multi-agent systems (HMAS) organize agents in layers.”\n- Evidence post and proposed introduction:\n  [Orchestrating Autolith for a personal laboratory](../../../../logs/2026-11-06-orchestrating-autolith.md).\n  Its Context section defines the term. Later sections explain the proposed roles\n  and distinguish current local work from remote requirements.\n- Use scope: this log only. Both the expanded phrase and acronym occur in its\n  Context paragraph. The cited paper title also contains the expanded phrase;\n  keep that existing citation as a link, without a nested term link.\n  No other archive post contains either spelling in the current source scan.\n- Requested approval covers this definition, alias, evidence, introduction, and\n  use scope together. Eligibility alone does not approve these details.\n\n## Other candidates\n\nDo not restore product names or local labels merely because they were in the old\nregistry. Other technical terms need separate proposals. Meditations have no terms.\n\n## Reset decision\n\nRaj requested removal of all old terms and curated post links before this review.\nThe reset clears nine registry records, 24 related-reading selections, and the\nthree log reading lists. External citations and meditation prose are preserved.\nOld agent receipts are historical and stale, not current approvals.\n\n## Decisions\n\nAwaiting raj's response. No candidate has been approved or applied.\n"
+      },
+      "logs/2026-11-06-orchestrating-autolith.md": {
+        "sha256": "c19d9f95a7011f3867aff76f14fa1105a5406a6093aa228347521a83d78884dc",
+        "text": "---\ntitle: Orchestrating Autolith for a personal laboratory\ndate: 2026-11-06T10:17:50+05:30\n---\n\n# Abstract\n\nraj is experimenting with personal swarms of agents. He wants persistent project contexts, direct communication between agents, and clear control over work across machines. He is moving toward Autolith after trying a mixed set of agent systems.\n\nLocal agents already communicate and keep separate contexts. The proposed cross-machine system still needs trials. Its purpose is to support a personal computer science laboratory, with reproducible experiments, useful records, blogs, and eventually papers.\n\n# Context\n\nraj read David J. Moore's [A Taxonomy of Hierarchical Multi-Agent Systems: Design Patterns, Coordination Mechanisms, and Industrial Applications](https://arxiv.org/abs/2508.12683). Hierarchical multi-agent systems (HMAS) organize agents in layers. He is considering how to apply those ideas to personal work.\n\nHe tried Paperclip on a NixOS virtual private server, Hermes on a ThinkPad, and Autolith on a Mac. He now prefers Autolith heads across machines instead of this mixed setup. A head is the agent responsible for execution and resources on one machine.\n\nOrch verified removal of the Paperclip and Hermes services from their active system configurations. The former services and endpoints are inactive. Data and rollback state were retained. The running and boot system profiles match on both machines, but reboot behavior was not tested.\n\nThe ThinkPad already had Autolith before this change. No replacement Autolith was installed on the virtual private server. The proposed organization of machine heads still needs implementation and tests. Removing the old services does not establish a working cluster.\n\n# Separate contexts and one task owner\n\nPersistent project agents keep the context for their own projects. They can communicate directly instead of requiring raj to repeat each report. Persistence means that an agent can resume its work. It does not require continuous inference.\n\nOrch is the coordinating agent. It handles priorities across projects and requests for raj's attention. Machine heads manage local execution and resource conflicts. Project agents retain domain knowledge. One agent must own each task, even when other agents contribute.\n\nraj is considering a shallow hierarchy. For example, Orch could also act as the Mac head at first. Adding machines should not require adding layers of coordination to every small task.\n\nThe current local workflow already includes separate project contexts and direct agent messages. Extending that workflow across machines needs separate transport, recovery, and permission checks. Local success does not prove remote readiness.\n\n# Match the method to the work\n\nUse direct tools for small, exact tasks. A command, file read, or calculation often needs no additional agent.\n\nFor independent work, use low-effort workers for clear, bounded tasks with explicit checks. Use medium-effort workers for implementation, debugging, unclear scope, or failed checks. Keep the main coordinator at medium effort unless raj chooses otherwise.\n\nThe reason is practical: delegation adds context transfer and review. Use it when independent work can improve the result or reduce elapsed time. More agents do not, by themselves, produce better research. More machines also do not multiply a shared provider quota.\n\nNative Lisp peer discovery gives local agents structured session information. They can resolve a current peer without parsing a terminal status report. This identifies a local destination. It does not establish remote discovery or grant permission to act.\n\nShared files also do not prove shared runtime state. Two agents can read the same configuration while running different loaded definitions. Changes need an appropriate reload and a check of the active state.\n\n# Make work resumable across machines\n\nThe proposed system needs a record for each task. That record should identify the objective, owner, machine, workspace, input revisions, permitted actions, budget, output location, and completion check.\n\nKeep task identity separate from a running process. After a restart, an agent should recover its commitments and next permitted step. It should inspect existing jobs before starting replacements. An inactive agent context should use no inference budget.\n\nDelivery, acceptance, execution, and verified completion are different states. A sent message is not proof that work finished. Keep results until the receiving agent acknowledges them.\n\nDisconnects make retries difficult. If a reply is missing, inspect the actual state before repeating an action with side effects. Identify duplicate requests and bound the number of retries. For cancellation, check that the underlying jobs and child agents stopped.\n\nThese are requirements for the cross-machine design. They are not claims that remote recovery and cancellation have passed tests.\n\n# Evaluate research, not agent activity\n\nThe long-term goal is a personal computer science laboratory. The cluster is one application within it. More messages or completed subtasks are weak evidence of research progress.\n\nFor an investigation, retain the question, code and input versions, environment, configuration, measurements, and uncertainty. Preserve negative results. Separate exploration from reproduction and review. A model's claim is not a measurement.\n\nA useful first remote trial would produce a read-only artifact that another agent can check independently. Later trials should cover disconnects, duplicate delivery, restart, and cancellation. An isolated write task needs its own permission. Complete a real investigation before expanding the system.\n\nResearch output should pass verification before it reaches the blog or a paper.\n\n# Conclusion\n\nraj has chosen a direction: persistent Autolith agents with separate project contexts, direct communication, and a shallow structure for coordination. The local workflow provides a starting point. The proposed cross-machine system still needs verified transport, bounded tasks, recovery tests, and a first reproducible investigation.\n"
+      }
+    },
+    "items": [
+      {
+        "id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+        "kind": "term",
+        "entry": "logs/2026-11-06-orchestrating-autolith",
+        "candidate": "T1",
+        "revision": 2,
+        "record": "docs/reviews/logs/2026-11-06-orchestrating-autolith/cycle-1.md",
+        "post": "logs/2026-11-06-orchestrating-autolith.md",
+        "text": "<div><small>logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2</small><h3>HMAS</h3><table><tr><th style='text-align:left;vertical-align:top;padding:4px 16px 4px 0'>Definition</th><td style='padding:4px 0'>Hierarchical multi-agent systems: systems that organize agents in layers.</td></tr><tr><th style='text-align:left;vertical-align:top;padding:4px 16px 4px 0'>Aliases</th><td style='padding:4px 0'>hierarchical multi-agent systems</td></tr><tr><th style='text-align:left;vertical-align:top;padding:4px 16px 4px 0'>Exact passage</th><td style='padding:4px 0'>Hierarchical multi-agent systems (HMAS) organize agents in layers.</td></tr><tr><th style='text-align:left;vertical-align:top;padding:4px 16px 4px 0'>Introduction</th><td style='padding:4px 0'>Context section of this log; explain the acronym without implying an implemented system.</td></tr><tr><th style='text-align:left;vertical-align:top;padding:4px 16px 4px 0'>Use scope</th><td style='padding:4px 0'>This log only. Link the expanded phrase and acronym in Context; keep the paper title citation without a nested term link.</td></tr></table><p>Approve these exact details and use scope.</p><details><summary>Full review record</summary><pre style='white-space:pre-wrap'>---\nschema: 1\nkind: post-review\nentry: logs/2026-11-06-orchestrating-autolith\ncycle: 1\nstate: curation\npost_sha256: c19d9f95a7011f3867aff76f14fa1105a5406a6093aa228347521a83d78884dc\nterms:\n  - id: T1\n    revision: 2\n    state: proposed\n    action: add\n    record: t1-hmas\n    decision: null\n    applied_at: null\n    card:\n      name: HMAS\n      definition: &#x27;Hierarchical multi-agent systems: systems that organize agents in layers.&#x27;\n      aliases: [hierarchical multi-agent systems]\n      passage: Hierarchical multi-agent systems (HMAS) organize agents in layers.\n      introduction: Context section of this log; explain the acronym without implying an implemented system.\n      use_scope: This log only. Link the expanded phrase and acronym in Context; keep the paper title citation without a nested term link.\nlinks: []\ndecisions: []\ntransitions: []\nblockers: []\nrelease:\n  commit: null\n  deployed_commit: null\n  url: null\n  verified_at: null\n---\n\n# First term approval batch\n\n## Now\n\nApprove, request changes, reject, or defer T1 revision 2 in Potato.\nThis is one candidate to test the approval flow, not a complete archive review.\nThe terms-only session has no log comment item. Memo testing and Blog Update [1] come later.\n\n## Reader review\n\nRead the complete log. It describes a proposed personal multi-agent research\nsetup and separates local results from untested cross-machine requirements.\nThe intended reader knows basic programming but may not know agent-system terms.\n\n## T1: HMAS\n\n- Domain: multi-agent systems. The post cites a taxonomy whose title uses\n  “Hierarchical Multi-Agent Systems”; this is a domain term, not a name invented\n  for raj&#x27;s setup.\n- Registry ID: `hmas` (new record after the reset).\n- Name: `HMAS`.\n- Exact definition: **Hierarchical multi-agent systems: systems that organize agents in layers.**\n- Aliases: `hierarchical multi-agent systems`.\n- Reader need: explain the acronym in the Context section without implying that\n  raj has already built or tested such a system.\n- Exact archive evidence: “Hierarchical multi-agent systems (HMAS) organize agents in layers.”\n- Evidence post and proposed introduction:\n  [Orchestrating Autolith for a personal laboratory](../../../../logs/2026-11-06-orchestrating-autolith.md).\n  Its Context section defines the term. Later sections explain the proposed roles\n  and distinguish current local work from remote requirements.\n- Use scope: this log only. Both the expanded phrase and acronym occur in its\n  Context paragraph. The cited paper title also contains the expanded phrase;\n  keep that existing citation as a link, without a nested term link.\n  No other archive post contains either spelling in the current source scan.\n- Requested approval covers this definition, alias, evidence, introduction, and\n  use scope together. Eligibility alone does not approve these details.\n\n## Other candidates\n\nDo not restore product names or local labels merely because they were in the old\nregistry. Other technical terms need separate proposals. Meditations have no terms.\n\n## Reset decision\n\nRaj requested removal of all old terms and curated post links before this review.\nThe reset clears nine registry records, 24 related-reading selections, and the\nthree log reading lists. External citations and meditation prose are preserved.\nOld agent receipts are historical and stale, not current approvals.\n\n## Decisions\n\nAwaiting raj&#x27;s response. No candidate has been approved or applied.\n</pre></details><details><summary>Full post snapshot</summary><pre style='white-space:pre-wrap'>---\ntitle: Orchestrating Autolith for a personal laboratory\ndate: 2026-11-06T10:17:50+05:30\n---\n\n# Abstract\n\nraj is experimenting with personal swarms of agents. He wants persistent project contexts, direct communication between agents, and clear control over work across machines. He is moving toward Autolith after trying a mixed set of agent systems.\n\nLocal agents already communicate and keep separate contexts. The proposed cross-machine system still needs trials. Its purpose is to support a personal computer science laboratory, with reproducible experiments, useful records, blogs, and eventually papers.\n\n# Context\n\nraj read David J. Moore&#x27;s [A Taxonomy of Hierarchical Multi-Agent Systems: Design Patterns, Coordination Mechanisms, and Industrial Applications](https://arxiv.org/abs/2508.12683). Hierarchical multi-agent systems (HMAS) organize agents in layers. He is considering how to apply those ideas to personal work.\n\nHe tried Paperclip on a NixOS virtual private server, Hermes on a ThinkPad, and Autolith on a Mac. He now prefers Autolith heads across machines instead of this mixed setup. A head is the agent responsible for execution and resources on one machine.\n\nOrch verified removal of the Paperclip and Hermes services from their active system configurations. The former services and endpoints are inactive. Data and rollback state were retained. The running and boot system profiles match on both machines, but reboot behavior was not tested.\n\nThe ThinkPad already had Autolith before this change. No replacement Autolith was installed on the virtual private server. The proposed organization of machine heads still needs implementation and tests. Removing the old services does not establish a working cluster.\n\n# Separate contexts and one task owner\n\nPersistent project agents keep the context for their own projects. They can communicate directly instead of requiring raj to repeat each report. Persistence means that an agent can resume its work. It does not require continuous inference.\n\nOrch is the coordinating agent. It handles priorities across projects and requests for raj&#x27;s attention. Machine heads manage local execution and resource conflicts. Project agents retain domain knowledge. One agent must own each task, even when other agents contribute.\n\nraj is considering a shallow hierarchy. For example, Orch could also act as the Mac head at first. Adding machines should not require adding layers of coordination to every small task.\n\nThe current local workflow already includes separate project contexts and direct agent messages. Extending that workflow across machines needs separate transport, recovery, and permission checks. Local success does not prove remote readiness.\n\n# Match the method to the work\n\nUse direct tools for small, exact tasks. A command, file read, or calculation often needs no additional agent.\n\nFor independent work, use low-effort workers for clear, bounded tasks with explicit checks. Use medium-effort workers for implementation, debugging, unclear scope, or failed checks. Keep the main coordinator at medium effort unless raj chooses otherwise.\n\nThe reason is practical: delegation adds context transfer and review. Use it when independent work can improve the result or reduce elapsed time. More agents do not, by themselves, produce better research. More machines also do not multiply a shared provider quota.\n\nNative Lisp peer discovery gives local agents structured session information. They can resolve a current peer without parsing a terminal status report. This identifies a local destination. It does not establish remote discovery or grant permission to act.\n\nShared files also do not prove shared runtime state. Two agents can read the same configuration while running different loaded definitions. Changes need an appropriate reload and a check of the active state.\n\n# Make work resumable across machines\n\nThe proposed system needs a record for each task. That record should identify the objective, owner, machine, workspace, input revisions, permitted actions, budget, output location, and completion check.\n\nKeep task identity separate from a running process. After a restart, an agent should recover its commitments and next permitted step. It should inspect existing jobs before starting replacements. An inactive agent context should use no inference budget.\n\nDelivery, acceptance, execution, and verified completion are different states. A sent message is not proof that work finished. Keep results until the receiving agent acknowledges them.\n\nDisconnects make retries difficult. If a reply is missing, inspect the actual state before repeating an action with side effects. Identify duplicate requests and bound the number of retries. For cancellation, check that the underlying jobs and child agents stopped.\n\nThese are requirements for the cross-machine design. They are not claims that remote recovery and cancellation have passed tests.\n\n# Evaluate research, not agent activity\n\nThe long-term goal is a personal computer science laboratory. The cluster is one application within it. More messages or completed subtasks are weak evidence of research progress.\n\nFor an investigation, retain the question, code and input versions, environment, configuration, measurements, and uncertainty. Preserve negative results. Separate exploration from reproduction and review. A model&#x27;s claim is not a measurement.\n\nA useful first remote trial would produce a read-only artifact that another agent can check independently. Later trials should cover disconnects, duplicate delivery, restart, and cancellation. An isolated write task needs its own permission. Complete a real investigation before expanding the system.\n\nResearch output should pass verification before it reaches the blog or a paper.\n\n# Conclusion\n\nraj has chosen a direction: persistent Autolith agents with separate project contexts, direct communication, and a shallow structure for coordination. The local workflow provides a starting point. The proposed cross-machine system still needs verified transport, bounded tasks, recovery tests, and a first reproducible investigation.\n</pre></details></div>"
+      }
+    ],
+    "terms_only": true
+  },
+  "changed_sources": [],
+  "responses": [
+    {
+      "user": "raj",
+      "item_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+      "kind": "term",
+      "decision": "approve",
+      "comment": null
+    }
+  ],
+  "evidence": {
+    "users": {
+      "raj": {
+        "user_id": "raj",
+        "instance_id_ordering": [
+          "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2"
+        ],
+        "current_instance_index": 0,
+        "current_phase_and_page": [
+          "done",
+          null
+        ],
+        "completed_phase_and_pages": [],
+        "max_assignments": 1,
+        "instance_id_to_behavioral_data": {
+          "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2": {
+            "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+            "session_start": 1795265766.4581718,
+            "session_end": 1795265869.178,
+            "total_time_ms": 107723,
+            "interactions": [
+              {
+                "event_type": "navigation",
+                "timestamp": 1795265761.454,
+                "target": "instance_load",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265761454,
+                "metadata": {
+                  "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                  "from_instance": null
+                }
+              },
+              {
+                "event_type": "click",
+                "timestamp": 1795265802.993,
+                "target": "schema:decision",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265802993,
+                "metadata": {
+                  "x": 281,
+                  "y": 502
+                }
+              },
+              {
+                "event_type": "focus_in",
+                "timestamp": 1795265803.51,
+                "target": "label:decision:request changes",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265803510,
+                "metadata": {}
+              },
+              {
+                "event_type": "click",
+                "timestamp": 1795265803.576,
+                "target": "label:decision:request changes",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265803576,
+                "metadata": {
+                  "x": 276,
+                  "y": 510
+                }
+              },
+              {
+                "event_type": "annotation_change",
+                "timestamp": 1795265803.577,
+                "target": "schema:decision",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265803577,
+                "metadata": {
+                  "label": "request changes",
+                  "action": "select",
+                  "old_label": null,
+                  "old_value": null,
+                  "new_value": "request changes",
+                  "source": "user"
+                }
+              },
+              {
+                "event_type": "save",
+                "timestamp": 1795265804.078,
+                "target": "instance:logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265804078,
+                "metadata": {}
+              },
+              {
+                "event_type": "focus_out",
+                "timestamp": 1795265804.492,
+                "target": "label:decision:request changes",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265804492,
+                "metadata": {
+                  "duration_ms": 982
+                }
+              },
+              {
+                "event_type": "focus_in",
+                "timestamp": 1795265804.493,
+                "target": "schema:comment",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265804493,
+                "metadata": {}
+              },
+              {
+                "event_type": "click",
+                "timestamp": 1795265804.577,
+                "target": "schema:comment",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265804577,
+                "metadata": {
+                  "x": 318,
+                  "y": 647
+                }
+              },
+              {
+                "event_type": "keypress",
+                "timestamp": 1795265810.626,
+                "target": "key:5",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265810626,
+                "metadata": {
+                  "ctrl": false,
+                  "alt": false,
+                  "shift": false
+                }
+              },
+              {
+                "event_type": "annotation_change",
+                "timestamp": 1795265813.851,
+                "target": "schema:comment",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265813851,
+                "metadata": {
+                  "label": "text_box",
+                  "action": "update",
+                  "old_label": null,
+                  "old_value": null,
+                  "new_value": "it's not only laye",
+                  "source": "user"
+                }
+              },
+              {
+                "event_type": "save",
+                "timestamp": 1795265814.353,
+                "target": "instance:logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265814353,
+                "metadata": {}
+              },
+              {
+                "event_type": "annotation_change",
+                "timestamp": 1795265814.353,
+                "target": "schema:comment",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265814353,
+                "metadata": {
+                  "label": "text_box",
+                  "action": "update",
+                  "old_label": null,
+                  "old_value": "it's not only laye",
+                  "new_value": "it's not only layeys - ",
+                  "source": "user"
+                }
+              },
+              {
+                "event_type": "annotation_change",
+                "timestamp": 1795265820.991,
+                "target": "schema:comment",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265820991,
+                "metadata": {
+                  "label": "text_box",
+                  "action": "update",
+                  "old_label": null,
+                  "old_value": "it's not only layeys - ",
+                  "new_value": "",
+                  "source": "user"
+                }
+              },
+              {
+                "event_type": "save",
+                "timestamp": 1795265821.493,
+                "target": "instance:logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265821493,
+                "metadata": {}
+              },
+              {
+                "event_type": "focus_out",
+                "timestamp": 1795265822.037,
+                "target": "schema:comment",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265822037,
+                "metadata": {
+                  "duration_ms": 17544
+                }
+              },
+              {
+                "event_type": "focus_in",
+                "timestamp": 1795265822.038,
+                "target": "label:decision:approve",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265822038,
+                "metadata": {}
+              },
+              {
+                "event_type": "click",
+                "timestamp": 1795265822.139,
+                "target": "label:decision:approve",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265822139,
+                "metadata": {
+                  "x": 272,
+                  "y": 478
+                }
+              },
+              {
+                "event_type": "annotation_change",
+                "timestamp": 1795265822.139,
+                "target": "schema:decision",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265822139,
+                "metadata": {
+                  "label": "approve",
+                  "action": "select",
+                  "old_label": "request changes",
+                  "old_value": "request changes",
+                  "new_value": "approve",
+                  "source": "user"
+                }
+              },
+              {
+                "event_type": "save",
+                "timestamp": 1795265822.64,
+                "target": "instance:logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265822640,
+                "metadata": {}
+              },
+              {
+                "event_type": "focus_out",
+                "timestamp": 1795265823.205,
+                "target": "label:decision:approve",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265823205,
+                "metadata": {
+                  "duration_ms": 1167
+                }
+              },
+              {
+                "event_type": "click",
+                "timestamp": 1795265823.288,
+                "target": "schema:decision",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265823288,
+                "metadata": {
+                  "x": 423,
+                  "y": 545
+                }
+              },
+              {
+                "event_type": "navigation",
+                "timestamp": 1795265869.178,
+                "target": "next",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265869178,
+                "metadata": {
+                  "from_instance": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                  "to_instance": null
+                }
+              },
+              {
+                "event_type": "save",
+                "timestamp": 1795265869.178,
+                "target": "instance:logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2",
+                "client_timestamp": 1795265869178,
+                "metadata": {}
+              }
+            ],
+            "pre_annotation_seeds": {},
+            "ai_usage": [],
+            "annotation_changes": [
+              {
+                "timestamp": 1795265803.579906,
+                "schema_name": "decision",
+                "label_name": "request changes",
+                "old_label": null,
+                "action": "select",
+                "old_value": null,
+                "new_value": "request changes",
+                "source": "user",
+                "phase": "annotation",
+                "page": null
+              },
+              {
+                "timestamp": 1795265813.853473,
+                "schema_name": "comment",
+                "label_name": "text_box",
+                "old_label": null,
+                "action": "update",
+                "old_value": null,
+                "new_value": "it's not only laye",
+                "source": "user",
+                "phase": "annotation",
+                "page": null
+              },
+              {
+                "timestamp": 1795265814.358092,
+                "schema_name": "comment",
+                "label_name": "text_box",
+                "old_label": null,
+                "action": "update",
+                "old_value": "it's not only laye",
+                "new_value": "it's not only layeys - ",
+                "source": "user",
+                "phase": "annotation",
+                "page": null
+              },
+              {
+                "timestamp": 1795265820.995338,
+                "schema_name": "comment",
+                "label_name": "text_box",
+                "old_label": null,
+                "action": "update",
+                "old_value": "it's not only layeys - ",
+                "new_value": "",
+                "source": "user",
+                "phase": "annotation",
+                "page": null
+              },
+              {
+                "timestamp": 1795265822.146306,
+                "schema_name": "decision",
+                "label_name": "approve",
+                "old_label": "request changes",
+                "action": "select",
+                "old_value": "request changes",
+                "new_value": "approve",
+                "source": "user",
+                "phase": "annotation",
+                "page": null
+              }
+            ],
+            "navigation_history": [],
+            "focus_time_by_element": {
+              "label:decision:request changes": 982,
+              "schema:comment": 17544,
+              "label:decision:approve": 1167
+            },
+            "scroll_depth_max": 99.19354838709677,
+            "keyword_highlights_shown": [],
+            "presentation_order": {
+              "decision": [
+                "approve",
+                "request changes",
+                "reject",
+                "defer"
+              ]
+            },
+            "trial": {},
+            "chat_history": [],
+            "typing_summaries": {},
+            "annotation_telemetry": {},
+            "authenticity": {},
+            "room_provenance": {},
+            "bulk": {}
+          }
+        },
+        "instance_id_to_label_to_value": {
+          "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2": [
+            [
+              {
+                "schema": "decision",
+                "name": "approve"
+              },
+              "approve"
+            ]
+          ]
+        },
+        "instance_id_to_span_to_value": {},
+        "phase_to_page_to_label_to_value": {},
+        "phase_to_page_to_span_to_value": {},
+        "training_state": {
+          "completed_questions": {},
+          "total_correct": 0,
+          "total_attempts": 0,
+          "total_mistakes": 0,
+          "passed": false,
+          "failed": false,
+          "current_question_index": 0,
+          "training_instances": [],
+          "show_feedback": false,
+          "feedback_type": "info",
+          "feedback_message": "",
+          "allow_retry": false,
+          "max_mistakes": -1,
+          "max_mistakes_per_question": -1,
+          "category_scores": {},
+          "rounds_started": 1
+        },
+        "icl_verification_tasks": {},
+        "qualified_categories": [],
+        "category_qualification_scores": {},
+        "instance_id_to_keyword_highlight_state": {},
+        "instance_id_to_presentation_order": {
+          "logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2": {
+            "decision": [
+              "approve",
+              "request changes",
+              "reject",
+              "defer"
+            ]
+          }
+        },
+        "instance_id_to_room_provenance": {},
+        "instance_id_to_link_to_value": {},
+        "instance_id_to_event_to_value": {},
+        "crowd_metadata": {},
+        "flow_record": {},
+        "instance_id_to_trial": {},
+        "prestudy_passed": null,
+        "origin": {}
+      }
+    },
+    "memos": [],
+    "memo_threads": []
+  }
+}

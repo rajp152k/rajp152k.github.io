@@ -51,6 +51,15 @@ class RegistryTests(unittest.TestCase):
             with self.subTest(field=field, bad=bad), self.assertRaises(ValueError):
                 self.load(data)
 
+    def test_annotation_mode_validation(self):
+        self.assertEqual(self.load().terms[0].annotation, "first-term")
+        self.row["annotation"] = "first-spelling"
+        self.assertEqual(self.load().terms[0].annotation, "first-spelling")
+        for value in [None, True, [], {}, "all", ""]:
+            self.row["annotation"] = value
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                self.load()
+
     def test_duplicate_json_key(self):
         self.path.write_text('{"version":1,"terms":[],"terms":[]}', encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "Duplicate JSON key"):
@@ -132,6 +141,29 @@ class TransformTests(unittest.TestCase):
         self.assertEqual(result.html, '<!-- Orch --><P data-note="Orch &amp; x"><span class="term-reference" data-term="orch" id="term-orch">Orch</span> &amp; Orch.</P>')
         self.assertEqual(result.mentions[0].excerpt, "Orch & Orch.")
         self.assertEqual(len(result.mentions), 1)
+
+    def test_opt_in_first_spelling_with_one_anchor_and_mention(self):
+        item = Term("hmas", "HMAS", ("hierarchical multi-agent systems",),
+                    "Agents in layers.", "logs/example", (), "first-spelling")
+        registry = Registry((item,))
+        citation = '<a href="https://example.org/paper">Hierarchical Multi-Agent Systems (HMAS)</a>'
+        source = (citation + '<p>Hierarchical multi-agent systems (HMAS) organize agents.</p>'
+                  '<p>hmas and hierarchical  multi-agent systems again.</p>')
+        result = transform_html(source, registry)
+        self.assertTrue(result.html.startswith(citation))
+        self.assertIn('id="term-hmas">Hierarchical multi-agent systems</span>', result.html)
+        self.assertIn('data-term="hmas">HMAS</span>', result.html)
+        self.assertIn('<p>hmas and hierarchical  multi-agent systems again.</p>', result.html)
+        self.assertEqual(result.html.count('data-term="hmas"'), 2)
+        self.assertEqual(result.html.count('id="term-hmas"'), 1)
+        self.assertEqual(len(result.mentions), 1)
+        self.assertEqual(transform_html(result.html, registry).html, result.html)
+
+    def test_default_mode_marks_only_first_alias(self):
+        registry = Registry((term(aliases=("coordinator",)),))
+        result = transform_html('<p>Coordinator and Orch.</p>', registry)
+        self.assertEqual(result.html.count('data-term="orch"'), 1)
+        self.assertIn('>Coordinator</span> and Orch.', result.html)
 
     def test_excluded_nodes_nested_nodes_and_hidden_content(self):
         tags = ["a", "code", "pre", "h1", "h6", "blockquote", "q", "script", "style", "textarea", "button", "template", "svg", "math", "noscript", "kbd"]

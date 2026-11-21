@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: ready-for-review-batch
+state: first-term-applied
 updated: 2026-11-21
 ---
 
@@ -10,10 +10,9 @@ updated: 2026-11-21
 
 ## Now
 
-Raj accepted the Potato integration. Version 2.13.1 is installed with uv in
-`.venv-review`. Term forms, log notes, snapshot import, and cleanup passed a
-synthetic end-to-end test through the running application. No installed package
-source was inspected.
+Raj approved HMAS, T1 revision 2, in Potato. Imported the response from session
+`c190bfe8095e236adca4` with no changed sources. Applied its exact definition,
+alias, source passage, and introduction to `terms.json`.
 
 ## Confirmed by raj
 
@@ -30,10 +29,10 @@ source was inspected.
 
 ## Current work
 
-The first [term proposal](reviews/logs/2026-11-06-orchestrating-autolith/cycle-1.md)
-is ready: T1 revision 1, HMAS. Run `just review` and decide that candidate.
-Skip the log comment item for now. Stop the server and tell AL when done.
-AL will import the response before applying any approved term.
+The first [term decision](reviews/logs/2026-11-06-orchestrating-autolith/cycle-1.md)
+is recorded with its [import evidence](../review-imports/c190bfe8095e236adca4-33a824290d229925.json).
+The scope is this log only. Both review sessions and their responses are retained.
+The article remains in curation. Full archive review and publication need separate work.
 
 ## Current limits
 
@@ -47,16 +46,19 @@ archive reviews and separate approval.
 
 ## Next work
 
-1. Complete the first term approval and import cycle with raj.
-2. Continue term review in small batches, keeping decisions and reasons.
-3. After the approval flow works, write Blog Update [1] as a requested log.
+1. Continue term review in small batches, keeping decisions and reasons.
+2. Update browser fixtures that still expect the removed terms and post links.
+3. Wait for the next request before writing Blog Update [1].
 4. Test log comments when reviewing that new article.
 
 ## Checks
 
-Integration tests: 109 Python tests passed. The synthetic browser test saved a
-term approval and comment, an anchored log issue, and a reply. Import preserved
-them; cleanup removed scratch and retained the report. Release checks require
-fresh archive reviews; all 18 archive review stages are policy-stale.
-The later term reset changes only the registry, curated reading links, and review
-records. No publication was performed.
+115 Python tests and 11 Node search tests pass. Registry validation reports one
+term, one source, and one post reference. `just prepare` passed and reused all
+nine embeddings. Both HMAS spellings open the approved definition on desktop;
+the phone references are plain text. The paper citation is unchanged.
+
+The full browser suite has 9 passes and 14 failures. Its fixtures expect removed
+terms and curated post references. `just check` stops at the existing stale
+archive reviews: all 18 stages need fresh review. The scoped term decision does
+not replace them. No publication was performed.

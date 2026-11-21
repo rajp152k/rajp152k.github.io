@@ -8,11 +8,11 @@ post_sha256: c19d9f95a7011f3867aff76f14fa1105a5406a6093aa228347521a83d78884dc
 terms:
   - id: T1
     revision: 2
-    state: proposed
+    state: applied
     action: add
     record: t1-hmas
-    decision: null
-    applied_at: null
+    decision: D1
+    applied_at: '2026-11-21T13:08:57Z'
     card:
       name: HMAS
       definition: 'Hierarchical multi-agent systems: systems that organize agents in layers.'
@@ -21,7 +21,15 @@ terms:
       introduction: Context section of this log; explain the acronym without implying an implemented system.
       use_scope: This log only. Link the expanded phrase and acronym in Context; keep the paper title citation without a nested term link.
 links: []
-decisions: []
+decisions:
+  - id: D1
+    actor: raj
+    action: approve
+    scope: 'T1:r2: definition, aliases, evidence, introduction, and this-log-only uses'
+    post_sha256: c19d9f95a7011f3867aff76f14fa1105a5406a6093aa228347521a83d78884dc
+    at: '2026-11-21T12:57:02Z'
+    evidence: 'review-imports/c190bfe8095e236adca4-33a824290d229925.json; user raj; item logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2'
+    reason: null
 transitions: []
 blockers: []
 release:
@@ -35,9 +43,9 @@ release:
 
 ## Now
 
-Approve, request changes, reject, or defer T1 revision 2 in Potato.
+Raj approved T1 revision 2 in Potato. Applied the exact candidate to `terms.json`.
 This is one candidate to test the approval flow, not a complete archive review.
-The terms-only session has no log comment item. Memo testing and Blog Update [1] come later.
+The post stays in curation. Memo testing and Blog Update [1] come later.
 
 ## Reader review
 
@@ -82,4 +90,45 @@ Old agent receipts are historical and stale, not current approvals.
 
 ## Decisions
 
-Awaiting raj's response. No candidate has been approved or applied.
+### D1: T1 revision 2 approved and applied
+
+- Imported [session c190bfe8095e236adca4](../../../../review-imports/c190bfe8095e236adca4-33a824290d229925.json).
+  The final response from `raj` is `approve`, with no comment. `changed_sources`
+  is empty. The reviewed record hash was
+  `02c84477be67762ccb9fdab980d1db50fa1cb8a9611a8e8140872ad0bff53199`;
+  the post hash matches the front matter above. Both matched before application.
+- The decision time comes from the final approval event in the imported history.
+  Earlier selection and comment edits are history, not the final decision.
+  Raj gave no final reason.
+- Applied only `hmas`: the exact definition, alias, source quote, and introduction
+  above. No article prose or curated post links changed.
+- Enabled the optional `annotation: first-spelling` setting only for HMAS.
+  This marks both approved spellings in Context, with one anchor per term.
+  Repeated spellings and the linked paper title are not annotated.
+  Other terms default to one annotation per term.
+- The registry has no per-post scope filter. Checked all nine archive entries:
+  only this log matches. Check this scope again after archive changes.
+- Kept both review sessions and their responses. No cleanup or publication.
+
+### Application checks
+
+- Registry validation: one term, one source, one post reference.
+- Python: 115 tests passed, including mode validation, both spellings, repeated
+  spelling suppression, one anchor and mention, and citation exclusion.
+  Search: 11 Node tests passed. Embeddings are fresh for all nine entries.
+  `just prepare` passed; it reused all nine embeddings and rebuilt the draft.
+- Targeted desktop browser checks passed: both Context references open the exact
+  definition; the anchor is unique; the paper citation has no nested annotation;
+  the definition page's source and introduction link resolves to this log.
+  The phone check passed: the two references are plain text.
+- The full browser suite has 9 passes and 14 failures. Its fixtures still expect
+  removed terms (`orch`, `autolith`, `simplified-technical-english`) and removed
+  curated post references. These same failures occurred before the annotation
+  opt-in. Do not restore removed content to satisfy those fixtures.
+- The retained old session has 7 files and SHA-256
+  `40dce8c22d0ad3fe1b84136a429f6ddb1136e640989fd6487f5edcbba5798618`
+  (sorted relative path bytes, then file bytes), equal to its pre-task digest.
+- `just check` stops at the existing stale archive reviews. All 18 review stages
+  need fresh review; this term decision does not replace them.
+- The post remains in `curation`; this batch does not establish a complete
+  curation review, commit approval for the post, or publication approval.
