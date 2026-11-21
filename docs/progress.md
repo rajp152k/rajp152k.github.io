@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: revised-logs-awaiting-memo-review
+state: second-log-feedback-imported
 updated: 2026-11-21
 ---
 
@@ -15,11 +15,12 @@ All three logs are revised under the canonical [writing policy](writing.md#writi
 commit `971cf2f`, and the 11 imported memos. The new titles are **Meditating on logs**,
 **On Autolith**, and **A laboratory across machines**. Routes and dates are unchanged.
 
-New Potato session: `df4e7bdfc52f266ba1d6`, with three full-text items, native Notes,
-and optional whole-log comments. No candidate approval form is present. Run
-`just review --session df4e7bdfc52f266ba1d6` at http://127.0.0.1:8768/.
-The [cycle-2 batch](reviews/log-memos-cycle-2-2026-11-21.md) records edits, frozen hashes,
-and stale approval scopes. It is selected as the current session; `just review` also works.
+Raj completed the second prose review: “okay - i'm done - not a lot this time - go ahead and read”.
+Session `df4e7bdfc52f266ba1d6` is [imported](../review-imports/df4e7bdfc52f266ba1d6-24f024c859e8372b.json).
+It contains one memo by `raj` on **Meditating on logs**, with no replies or
+whole-log responses. The [complete feedback](reviews/log-memo-feedback-cycle-2-2026-11-21.md)
+suggests naming Autolith and developing a first-person voice alongside “we” and Raj.
+No source changed before import. No prose or policy changes or approvals are inferred.
 
 The first log now opens with the authorship problem. The second groups setup and
 writing work, includes the requested `.files` link and a human-loop diagram, and
@@ -81,11 +82,17 @@ For this prose pass: all three posts parse and render through the project Markdo
 and article functions. Dates, stable routes, registry source quotes, and strictly
 earlier internal-link targets pass. Both Mermaid diagrams render in Chromium;
 AL inspected the combined image. Four focused queue/import/snapshot tests pass.
-The actual new session has three exact current snapshots, native memos and only
-an optional comment form, with no user responses yet. Import is pending Raj's review.
+The new session has three exact current snapshots, native memos and only
+an optional comment form. Its completed review is imported as described above.
 Diff and whitespace checks pass. Reader/references receipts are stale and were not
 refreshed. No embedding update, full site build, broad suite, push, or publication
 was run. Meditations, registry, old sessions/imports and policy are untouched.
+
+For the second memo import: all four frozen/current sources match. Exact native
+evidence equality, SQLite integrity, three full-text items, and byte-identical
+idempotent reimport pass. Three focused import/thread/cleanup tests pass. The exact
+session server was stopped with SIGINT before import. Prior sessions, imports,
+feedback, and the frozen batch are preserved. No browser checks or broad suites ran.
 
 For the policy update: checked local document links and policy anchors, inspected
 active policy references for obsolete STE and fixed-heading rules, and reviewed
@@ -123,8 +130,8 @@ and generated HTML checks.
 
 ## Next
 
-Raj reviews session `df4e7bdfc52f266ba1d6` with `just review`. After he finishes,
-stop the server, import native notes, and compare feedback with the frozen texts.
+Read the second review's memo with Raj before choosing edits. Its null anchor and
+open-ended wording do not specify exact replacements or a complete voice rule.
 Renew affected exact term-use and link-placement approvals before completing the
 references reviews. The first log's empty curation results also need confirmation.
 All three posts are at `writing`, not release-ready. No push or publication is authorized.

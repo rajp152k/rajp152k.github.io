@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "session": "df4e7bdfc52f266ba1d6",
+  "manifest": {
+    "schema": 2,
+    "presentation": "log-memo-v1",
+    "potato_version": "2.13.1",
+    "sources": {
+      "docs/reviews/log-memos-cycle-2-2026-11-21.md": {
+        "sha256": "0d0300a407bb2f2f536a2d247f25ab9abf0da033a1a89a33f4b3ce60d9e70e31",
+        "text": "---\nkind: log-memo-review\ncycle: 2\nstate: ready\nposts:\n  logs/2026-10-06-two-collections-one-archive: 1b1c95a9b6a32b63b7bd684470459b23ea7aa7e6dd42936d63423f1cd3eec200\n  logs/2026-10-07-using-autolith: b3d81fa47b9ed73ac396a678bd59b213b7248d69110009a46a9fc6b00f6eb912\n  logs/2026-11-06-orchestrating-autolith: 51d10ec537eedb0fe5aa429a50158ae92f7adc8426b4e9078da8ec122ce6f505\n---\n\n# Revised logs: second prose pass\n\nRaj authorized revision: “alright revise the logs and then i'll do a review pass again”.\nRead the three complete frozen texts in Potato. Add native **Notes**, quoting the\npassage or naming the section. The whole-log comment field is optional. This\nsession has no candidate approval form.\n\n## Revisions\n\n- **Meditating on logs:** start with the authorship problem, explain the shared\n  archive through retrieval, and combine the short sections. Remove the repeated\n  conclusion. Preserve the author distinction, map labels, and review gates.\n- **On Autolith:** start with the setup practice, group configuration and workflow\n  details, add Raj's supplied `.files` link, and show the human review loop in a\n  Mermaid diagram. Only the Fedora exploration host is identified; the blog\n  checkout's host is unspecified. Preserve the limits of the embedding checks.\n  Describe the original STE rule as history, rather than as current prose policy.\n- **A laboratory across machines:** start with task ownership across machines,\n  combine the account into three sections, and distinguish completed service\n  removal and local messaging from the proposed remote system and tests.\n\nThe [11 imported memos](log-memo-feedback-2026-11-21.md),\n[archive study](archive-writing-study-2026-11-21.md), and canonical\n[writing policy](../writing.md#writing-policy), commit `971cf2f`, guided this pass.\nTitles are choices for this revision, not new naming rules. Routes and dates are\nunchanged. Meditations, registry definitions, and old review evidence are untouched.\n\n## Approval scope\n\nAll three posts return to **writing**. Earlier exact-revision approvals and\neditorial receipts do not approve these texts. Reader and references receipts\nwere already stale after policy changes and remain stale; none were refreshed.\nThe new per-post cycle-2 records identify the current hashes and stale scopes.\n\n- First log: the old no-outlinks-needed result described an earlier text. The new\n  text has no post links; reconfirm that result for this revision.\n- Second log: preserve `/embeddings/` and the first log's stable route. The latter's\n  title changed, and both links have new surrounding prose or placement. Renew\n  exact link approval. The Lisp-image evidence sentence is unchanged. The STE\n  evidence sentence is now a quotation of the old rule, with explicitly historical\n  scope. The registry is unchanged; renewed term-use/evidence approval is needed\n  before treating either use as currently approved. No new definitions were added.\n- Third log: preserve `/laboratory/`, now in the opening. Renew exact placement\n  approval. The HMAS evidence sentence is unchanged, but its surrounding passage\n  changed; renew the term-use scope. No previously rejected term was added.\n- The `.files` external source link was explicitly requested in Raj's memo. It is\n  not a new curated archive-post link.\n\nEarlier cycle-1 records, frozen sessions, imports, and decisions are historical\nevidence. This memo session collects writing feedback only. It does not renew\ncuration decisions, approve release, or authorize publication.\n\n## Open and import\n\nQueue with `just queue-review docs/reviews/log-memos-cycle-2-2026-11-21.md`.\nRun `just review` to open the newly selected session at http://127.0.0.1:8768/.\nTell AL when done. Stop the server before `just import-reviews ID`; read native\nnotes and comments against these frozen texts and inspect changed-source flags.\nPreserve all previous sessions and imports.\n"
+      },
+      "logs/2026-10-06-two-collections-one-archive.md": {
+        "sha256": "1b1c95a9b6a32b63b7bd684470459b23ea7aa7e6dd42936d63423f1cd3eec200",
+        "text": "---\ntitle: Meditating on logs\ndate: 2026-10-06T10:54:12Z\n---\n\nWe want a record of the work we do with agents: what prompted a task, what changed, and what we learned. Putting those records beside personal essays raises a question of authorship. A requested account of a setup session is different from a thought Raj chose to write out himself.\n\nThat is the reason for two collections. Raj writes meditations; agents write logs when he asks for a record. We can use a shared laboratory voice in the logs without treating generated prose as Raj's personal writing. The distinction is about who wrote the account, not whether the work involved both of us.\n\n## Finding the work\n\nSeparate authorship does not require separate search systems. Both collections appear in the same index, search, and map, so we can follow a subject across them and then use a collection filter to narrow the view.\n\n```mermaid\nflowchart TB\n  accTitle: Separate authors, one archive\n  accDescr: Raj writes meditations. Agents write logs at his request. Both collections enter the shared archive.\n  R[Raj] --> M[Meditations]\n  R -->|Requests a record| A[Agents]\n  A --> L[Logs]\n  M --> S[Shared archive]\n  L --> S\n```\n\nThe index gives meditations `mx` codes and logs `lx` codes, with an independent number sequence for each. On the map, filled points represent meditations and outlined points represent logs. These labels make authorship visible where the entries appear together, rather than requiring the reader to infer it from the prose.\n\nA log carries a title and date, then the account itself. We can revise a local draft before Raj asks for a commit, and publication needs a separate decision. That leaves room to work out what happened and how to describe it before making the account public.\n"
+      },
+      "logs/2026-10-07-using-autolith.md": {
+        "sha256": "b3d81fa47b9ed73ac396a678bd59b213b7248d69110009a46a9fc6b00f6eb912",
+        "text": "---\ntitle: On Autolith\ndate: 2026-10-07T03:52:29Z\n---\n\nWe have been using Autolith to get a Lisp workspace and this blog ready for local work. The first half-day on a Fedora VPS was an exploration of the environment, rather than a new side project. Raj's wish to return to Lisp gave the setup its direction; the immediate work was to make editing, configuration, and the publishing workflow usable together.\n\nAutolith runs in a live Common Lisp image. We can work with code, files, and processes through conversation, with a terminal editor beside it. Raj chose the ncurses build of Lem with Vim bindings instead of Emacs. The editor settings live in [`.files`](https://github.com/rajp152k/.files), so we can install them again without copying local history or generated files.\n\n## What belongs to a machine?\n\nThe shared Autolith package loads a Common Lisp init file for model choice, reasoning effort, traces, and the setting named Simple Technical English. A separate local init file can supply machine-specific settings. Credentials, conversations, and caches belong to the local environment, outside the portable package.\n\nThe exploration started on a Fedora VPS. The diagram shows the tools and human review loop, without assuming a deployment topology for every checkout or a connection to other agent machines:\n\n```mermaid\nflowchart TB\n  accTitle: Human and tools in the initial Autolith setup\n  accDescr: Raj works with Autolith and Lem during the Fedora VPS exploration. The dotfiles repository supplies shared settings. Autolith supports blog preparation; Raj reviews drafts and decides on commit and publication separately. The blog checkout's host is unspecified, and no cross-machine agent connection is shown.\n  R[Raj] -->|Conversation and requests| A\n  R -->|Terminal editing| L\n  D[.files repository] -->|Shared configuration| A\n  D -->|Editor settings| L\n  subgraph V[Fedora VPS]\n    A[Autolith]\n    L[Lem]\n  end\n  A -->|Prepare and build| B[Blog checkout - host unspecified]\n  B -->|Draft for review| R\n```\n\nWe also made a development checkout of Raj's Autolith fork, with the fork as `origin` and the original project as `upstream`. That checkout is separate from the installed release and from private changes to the running image. It gives source experiments a place of their own; this setup did not add a new feature to Autolith.\n\n## Getting the blog ready\n\nThe local blog setup uses a separate Python environment for inference and Node.js for site assets. Markdown supplies each post, the [embedding updater](/embeddings/) stores archive state in `blog.sqlite`, and the site builder produces the local site, search index, and shared map.\n\nOur checks covered embedding freshness, the build, and the Python and JavaScript tests. Existing entries reused their stored vectors. We therefore checked the local workflow without exercising a new model download or new inference, an important limit on what this setup run established.\n\nThe next part was to bring the ops-log skill over from OMP. Before installing it, Raj asked for a review of the skill and the blog workflow. The installed skill is a regular-file copy in Autolith's configuration directory, not a Stow link. The dotfiles package excludes skills from Stow and documents the copy step, so editing the tracked version also requires updating the installed copy. Autolith lists ops-log in its catalog.\n\n## Learning how to write the record\n\nThe copied skill originally prescribed an Abstract, Context, named sections, and a Conclusion. One of its rules was:\n\n> New prose uses Simplified Technical English.\n\nThose were the starting rules, not evidence that every account needed that shape. Subsequent review of these logs led us to remove the prose constraint and fixed heading sequence. The runtime setting in the shared init file is a separate matter. We are refining the writing through review, with sections and sentences chosen for the account rather than for compliance with the old template.\n\nThe skill also records where work starts: read the current instructions in the local blog checkout, inspect earlier posts, preserve unrelated changes, and check the preview. Personal meditations and agent-written logs use [the same archive, search, and map](/logs/2026-10-06-two-collections-one-archive/), but a request for a log does not authorize changes to Raj's meditation prose.\n\nA draft starts local iteration. We can revise it, update embedding state, and build a preview for Raj to read. Commit and publication remain separate decisions. The setup gives us a way to write and inspect the record; further use will show which parts of that process need to change.\n"
+      },
+      "logs/2026-11-06-orchestrating-autolith.md": {
+        "sha256": "51d10ec537eedb0fe5aa429a50158ae92f7adc8426b4e9078da8ec122ce6f505",
+        "text": "---\ntitle: A laboratory across machines\ndate: 2026-11-06T10:17:50+05:30\n---\n\nWe can already keep separate project contexts and send messages between local agents. The question now is how to carry that working arrangement across machines without losing track of who owns a task, what happened to it, or when Raj needs to intervene.\n\nThe aim is a [personal computer science laboratory](/laboratory/): reproducible experiments, useful records, blogs, and eventually papers. A cluster is one application within that laboratory. We need to judge it by the investigations it supports, rather than by the number of agents we can keep busy.\n\n## Choosing a simpler arrangement\n\nRaj read David J. Moore's [A Taxonomy of Hierarchical Multi-Agent Systems: Design Patterns, Coordination Mechanisms, and Industrial Applications](https://arxiv.org/abs/2508.12683) while considering how these systems might fit personal work. Hierarchical multi-agent systems (HMAS) organize agents in layers. For our purposes, the useful question is how much hierarchy the work actually needs.\n\nThe earlier experiment mixed Paperclip on a NixOS virtual private server, Hermes on a ThinkPad, and Autolith on a Mac. Raj now prefers Autolith heads across machines. A head would be responsible for execution and resources on its machine, while persistent project agents retain their own domain context. Orch coordinates priorities across projects and requests for Raj's attention. Initially, Orch could also serve as the Mac head, rather than adding another layer to every small task.\n\nOrch verified removal of Paperclip and Hermes from the active system configurations. Their former services and endpoints are inactive; data and rollback state were retained. The running and boot profiles match on both machines, but reboot behavior was not tested. The ThinkPad already had Autolith, and no replacement Autolith was installed on the virtual private server. We have removed the old services, not established a working cluster.\n\n## Context is not continuous inference\n\nA persistent project agent should be able to resume its work without requiring Raj to repeat the history. It need not run inference while idle. Agents can communicate directly, but one agent must own each task even when others contribute.\n\nThe local workflow gives us a starting point. Native Lisp peer discovery supplies structured session information, so agents can find a current local peer without parsing terminal status output. That identifies a destination; it neither grants permission to act nor establishes remote discovery. Cross-machine transport, recovery, and permission checks still need their own trials.\n\nShared configuration also differs from shared runtime state. Two agents may read the same files while running different loaded definitions. A change needs the appropriate reload and a check of the active state, not an assumption that every running image has adopted it.\n\nWe can keep delegation similarly concrete. A file read, command, or calculation often needs only a direct tool. For independent work, our starting choice is low-effort workers for bounded tasks with explicit checks, and medium-effort workers for implementation, debugging, unclear scope, or failed checks. The main coordinator stays at medium effort unless Raj chooses otherwise. Context transfer and review cost time, so delegation needs to earn that cost. Extra machines do not multiply a shared provider quota.\n\n## What a remote task must survive\n\nThe task record should outlive its process. It needs an objective, owner, machine, workspace, input revisions, permitted actions, budget, output location, and completion check. After a restart, an agent should recover its commitments and inspect existing jobs before starting replacements.\n\nDelivery, acceptance, execution, and verified completion are different states. A sent message does not establish that work finished, and results need to be kept until the receiving agent acknowledges them. If a reply disappears during a disconnect, we must inspect the actual state before repeating an action with side effects. Duplicate requests need to be identified, retries bounded, and cancellation checked against the underlying jobs and child agents.\n\nThese are requirements for the design, not passed remote tests. A useful first trial would produce a read-only artifact that another agent can check independently. Disconnects, duplicate delivery, restart, and cancellation can follow; an isolated write task needs its own permission.\n\nFor the investigation itself, we need to retain the question, code and input versions, environment, configuration, measurements, and uncertainty, including negative results. Exploration, reproduction, and review serve different purposes. A model's claim is not a measurement. The next useful result is a reproducible investigation with a checked artifact, before we expand the machinery around it.\n"
+      }
+    },
+    "items": [
+      {
+        "id": "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+        "kind": "log",
+        "entry": "logs/2026-10-06-two-collections-one-archive",
+        "record": "docs/reviews/log-memos-cycle-2-2026-11-21.md",
+        "post": "logs/2026-10-06-two-collections-one-archive.md",
+        "title": "Meditating on logs",
+        "header_html": "<h2>Meditating on logs</h2><p>Read the complete log below. Add prose feedback in Notes. Quote a passage or name its section for context.</p>",
+        "text": "---\ntitle: Meditating on logs\ndate: 2026-10-06T10:54:12Z\n---\n\nWe want a record of the work we do with agents: what prompted a task, what changed, and what we learned. Putting those records beside personal essays raises a question of authorship. A requested account of a setup session is different from a thought Raj chose to write out himself.\n\nThat is the reason for two collections. Raj writes meditations; agents write logs when he asks for a record. We can use a shared laboratory voice in the logs without treating generated prose as Raj's personal writing. The distinction is about who wrote the account, not whether the work involved both of us.\n\n## Finding the work\n\nSeparate authorship does not require separate search systems. Both collections appear in the same index, search, and map, so we can follow a subject across them and then use a collection filter to narrow the view.\n\n```mermaid\nflowchart TB\n  accTitle: Separate authors, one archive\n  accDescr: Raj writes meditations. Agents write logs at his request. Both collections enter the shared archive.\n  R[Raj] --> M[Meditations]\n  R -->|Requests a record| A[Agents]\n  A --> L[Logs]\n  M --> S[Shared archive]\n  L --> S\n```\n\nThe index gives meditations `mx` codes and logs `lx` codes, with an independent number sequence for each. On the map, filled points represent meditations and outlined points represent logs. These labels make authorship visible where the entries appear together, rather than requiring the reader to infer it from the prose.\n\nA log carries a title and date, then the account itself. We can revise a local draft before Raj asks for a commit, and publication needs a separate decision. That leaves room to work out what happened and how to describe it before making the account public.\n"
+      },
+      {
+        "id": "logs/2026-10-07-using-autolith:memo-cycle-2:log",
+        "kind": "log",
+        "entry": "logs/2026-10-07-using-autolith",
+        "record": "docs/reviews/log-memos-cycle-2-2026-11-21.md",
+        "post": "logs/2026-10-07-using-autolith.md",
+        "title": "On Autolith",
+        "header_html": "<h2>On Autolith</h2><p>Read the complete log below. Add prose feedback in Notes. Quote a passage or name its section for context.</p>",
+        "text": "---\ntitle: On Autolith\ndate: 2026-10-07T03:52:29Z\n---\n\nWe have been using Autolith to get a Lisp workspace and this blog ready for local work. The first half-day on a Fedora VPS was an exploration of the environment, rather than a new side project. Raj's wish to return to Lisp gave the setup its direction; the immediate work was to make editing, configuration, and the publishing workflow usable together.\n\nAutolith runs in a live Common Lisp image. We can work with code, files, and processes through conversation, with a terminal editor beside it. Raj chose the ncurses build of Lem with Vim bindings instead of Emacs. The editor settings live in [`.files`](https://github.com/rajp152k/.files), so we can install them again without copying local history or generated files.\n\n## What belongs to a machine?\n\nThe shared Autolith package loads a Common Lisp init file for model choice, reasoning effort, traces, and the setting named Simple Technical English. A separate local init file can supply machine-specific settings. Credentials, conversations, and caches belong to the local environment, outside the portable package.\n\nThe exploration started on a Fedora VPS. The diagram shows the tools and human review loop, without assuming a deployment topology for every checkout or a connection to other agent machines:\n\n```mermaid\nflowchart TB\n  accTitle: Human and tools in the initial Autolith setup\n  accDescr: Raj works with Autolith and Lem during the Fedora VPS exploration. The dotfiles repository supplies shared settings. Autolith supports blog preparation; Raj reviews drafts and decides on commit and publication separately. The blog checkout's host is unspecified, and no cross-machine agent connection is shown.\n  R[Raj] -->|Conversation and requests| A\n  R -->|Terminal editing| L\n  D[.files repository] -->|Shared configuration| A\n  D -->|Editor settings| L\n  subgraph V[Fedora VPS]\n    A[Autolith]\n    L[Lem]\n  end\n  A -->|Prepare and build| B[Blog checkout - host unspecified]\n  B -->|Draft for review| R\n```\n\nWe also made a development checkout of Raj's Autolith fork, with the fork as `origin` and the original project as `upstream`. That checkout is separate from the installed release and from private changes to the running image. It gives source experiments a place of their own; this setup did not add a new feature to Autolith.\n\n## Getting the blog ready\n\nThe local blog setup uses a separate Python environment for inference and Node.js for site assets. Markdown supplies each post, the [embedding updater](/embeddings/) stores archive state in `blog.sqlite`, and the site builder produces the local site, search index, and shared map.\n\nOur checks covered embedding freshness, the build, and the Python and JavaScript tests. Existing entries reused their stored vectors. We therefore checked the local workflow without exercising a new model download or new inference, an important limit on what this setup run established.\n\nThe next part was to bring the ops-log skill over from OMP. Before installing it, Raj asked for a review of the skill and the blog workflow. The installed skill is a regular-file copy in Autolith's configuration directory, not a Stow link. The dotfiles package excludes skills from Stow and documents the copy step, so editing the tracked version also requires updating the installed copy. Autolith lists ops-log in its catalog.\n\n## Learning how to write the record\n\nThe copied skill originally prescribed an Abstract, Context, named sections, and a Conclusion. One of its rules was:\n\n> New prose uses Simplified Technical English.\n\nThose were the starting rules, not evidence that every account needed that shape. Subsequent review of these logs led us to remove the prose constraint and fixed heading sequence. The runtime setting in the shared init file is a separate matter. We are refining the writing through review, with sections and sentences chosen for the account rather than for compliance with the old template.\n\nThe skill also records where work starts: read the current instructions in the local blog checkout, inspect earlier posts, preserve unrelated changes, and check the preview. Personal meditations and agent-written logs use [the same archive, search, and map](/logs/2026-10-06-two-collections-one-archive/), but a request for a log does not authorize changes to Raj's meditation prose.\n\nA draft starts local iteration. We can revise it, update embedding state, and build a preview for Raj to read. Commit and publication remain separate decisions. The setup gives us a way to write and inspect the record; further use will show which parts of that process need to change.\n"
+      },
+      {
+        "id": "logs/2026-11-06-orchestrating-autolith:memo-cycle-2:log",
+        "kind": "log",
+        "entry": "logs/2026-11-06-orchestrating-autolith",
+        "record": "docs/reviews/log-memos-cycle-2-2026-11-21.md",
+        "post": "logs/2026-11-06-orchestrating-autolith.md",
+        "title": "A laboratory across machines",
+        "header_html": "<h2>A laboratory across machines</h2><p>Read the complete log below. Add prose feedback in Notes. Quote a passage or name its section for context.</p>",
+        "text": "---\ntitle: A laboratory across machines\ndate: 2026-11-06T10:17:50+05:30\n---\n\nWe can already keep separate project contexts and send messages between local agents. The question now is how to carry that working arrangement across machines without losing track of who owns a task, what happened to it, or when Raj needs to intervene.\n\nThe aim is a [personal computer science laboratory](/laboratory/): reproducible experiments, useful records, blogs, and eventually papers. A cluster is one application within that laboratory. We need to judge it by the investigations it supports, rather than by the number of agents we can keep busy.\n\n## Choosing a simpler arrangement\n\nRaj read David J. Moore's [A Taxonomy of Hierarchical Multi-Agent Systems: Design Patterns, Coordination Mechanisms, and Industrial Applications](https://arxiv.org/abs/2508.12683) while considering how these systems might fit personal work. Hierarchical multi-agent systems (HMAS) organize agents in layers. For our purposes, the useful question is how much hierarchy the work actually needs.\n\nThe earlier experiment mixed Paperclip on a NixOS virtual private server, Hermes on a ThinkPad, and Autolith on a Mac. Raj now prefers Autolith heads across machines. A head would be responsible for execution and resources on its machine, while persistent project agents retain their own domain context. Orch coordinates priorities across projects and requests for Raj's attention. Initially, Orch could also serve as the Mac head, rather than adding another layer to every small task.\n\nOrch verified removal of Paperclip and Hermes from the active system configurations. Their former services and endpoints are inactive; data and rollback state were retained. The running and boot profiles match on both machines, but reboot behavior was not tested. The ThinkPad already had Autolith, and no replacement Autolith was installed on the virtual private server. We have removed the old services, not established a working cluster.\n\n## Context is not continuous inference\n\nA persistent project agent should be able to resume its work without requiring Raj to repeat the history. It need not run inference while idle. Agents can communicate directly, but one agent must own each task even when others contribute.\n\nThe local workflow gives us a starting point. Native Lisp peer discovery supplies structured session information, so agents can find a current local peer without parsing terminal status output. That identifies a destination; it neither grants permission to act nor establishes remote discovery. Cross-machine transport, recovery, and permission checks still need their own trials.\n\nShared configuration also differs from shared runtime state. Two agents may read the same files while running different loaded definitions. A change needs the appropriate reload and a check of the active state, not an assumption that every running image has adopted it.\n\nWe can keep delegation similarly concrete. A file read, command, or calculation often needs only a direct tool. For independent work, our starting choice is low-effort workers for bounded tasks with explicit checks, and medium-effort workers for implementation, debugging, unclear scope, or failed checks. The main coordinator stays at medium effort unless Raj chooses otherwise. Context transfer and review cost time, so delegation needs to earn that cost. Extra machines do not multiply a shared provider quota.\n\n## What a remote task must survive\n\nThe task record should outlive its process. It needs an objective, owner, machine, workspace, input revisions, permitted actions, budget, output location, and completion check. After a restart, an agent should recover its commitments and inspect existing jobs before starting replacements.\n\nDelivery, acceptance, execution, and verified completion are different states. A sent message does not establish that work finished, and results need to be kept until the receiving agent acknowledges them. If a reply disappears during a disconnect, we must inspect the actual state before repeating an action with side effects. Duplicate requests need to be identified, retries bounded, and cancellation checked against the underlying jobs and child agents.\n\nThese are requirements for the design, not passed remote tests. A useful first trial would produce a read-only artifact that another agent can check independently. Disconnects, duplicate delivery, restart, and cancellation can follow; an isolated write task needs its own permission.\n\nFor the investigation itself, we need to retain the question, code and input versions, environment, configuration, measurements, and uncertainty, including negative results. Exploration, reproduction, and review serve different purposes. A model's claim is not a measurement. The next useful result is a reproducible investigation with a checked artifact, before we expand the machinery around it.\n"
+      }
+    ],
+    "terms_only": false
+  },
+  "changed_sources": [],
+  "responses": [],
+  "evidence": {
+    "users": {
+      "raj": {
+        "user_id": "raj",
+        "instance_id_ordering": [
+          "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+          "logs/2026-10-07-using-autolith:memo-cycle-2:log",
+          "logs/2026-11-06-orchestrating-autolith:memo-cycle-2:log"
+        ],
+        "current_instance_index": 2,
+        "current_phase_and_page": [
+          "annotation",
+          null
+        ],
+        "completed_phase_and_pages": [],
+        "max_assignments": 3,
+        "instance_id_to_behavioral_data": {
+          "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log": {
+            "instance_id": "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+            "session_start": 1795280513.394571,
+            "session_end": 1795280737.14,
+            "total_time_ms": 228750,
+            "interactions": [
+              {
+                "event_type": "navigation",
+                "timestamp": 1795280508.39,
+                "target": "instance_load",
+                "instance_id": "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+                "client_timestamp": 1795280508390,
+                "metadata": {
+                  "instance_id": "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+                  "from_instance": null
+                }
+              },
+              {
+                "event_type": "navigation",
+                "timestamp": 1795280737.14,
+                "target": "next",
+                "instance_id": "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+                "client_timestamp": 1795280737140,
+                "metadata": {
+                  "from_instance": "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+                  "to_instance": null
+                }
+              },
+              {
+                "event_type": "save",
+                "timestamp": 1795280737.14,
+                "target": "instance:logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+                "instance_id": "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+                "client_timestamp": 1795280737140,
+                "metadata": {}
+              }
+            ],
+            "pre_annotation_seeds": {},
+            "ai_usage": [],
+            "annotation_changes": [],
+            "navigation_history": [],
+            "focus_time_by_element": {},
+            "scroll_depth_max": 100,
+            "keyword_highlights_shown": [],
+            "presentation_order": {},
+            "trial": {},
+            "chat_history": [],
+            "typing_summaries": {},
+            "annotation_telemetry": {},
+            "authenticity": {},
+            "room_provenance": {},
+            "bulk": {}
+          },
+          "logs/2026-10-07-using-autolith:memo-cycle-2:log": {
+            "instance_id": "logs/2026-10-07-using-autolith:memo-cycle-2:log",
+            "session_start": 1795280742.2643368,
+            "session_end": 1795280829.052,
+            "total_time_ms": 91791,
+            "interactions": [
+              {
+                "event_type": "navigation",
+                "timestamp": 1795280737.261,
+                "target": "instance_load",
+                "instance_id": "logs/2026-10-07-using-autolith:memo-cycle-2:log",
+                "client_timestamp": 1795280737261,
+                "metadata": {
+                  "instance_id": "logs/2026-10-07-using-autolith:memo-cycle-2:log",
+                  "from_instance": null
+                }
+              },
+              {
+                "event_type": "navigation",
+                "timestamp": 1795280829.052,
+                "target": "next",
+                "instance_id": "logs/2026-10-07-using-autolith:memo-cycle-2:log",
+                "client_timestamp": 1795280829052,
+                "metadata": {
+                  "from_instance": "logs/2026-10-07-using-autolith:memo-cycle-2:log",
+                  "to_instance": null
+                }
+              },
+              {
+                "event_type": "save",
+                "timestamp": 1795280829.052,
+                "target": "instance:logs/2026-10-07-using-autolith:memo-cycle-2:log",
+                "instance_id": "logs/2026-10-07-using-autolith:memo-cycle-2:log",
+                "client_timestamp": 1795280829052,
+                "metadata": {}
+              }
+            ],
+            "pre_annotation_seeds": {},
+            "ai_usage": [],
+            "annotation_changes": [],
+            "navigation_history": [],
+            "focus_time_by_element": {},
+            "scroll_depth_max": 100,
+            "keyword_highlights_shown": [],
+            "presentation_order": {},
+            "trial": {},
+            "chat_history": [],
+            "typing_summaries": {},
+            "annotation_telemetry": {},
+            "authenticity": {},
+            "room_provenance": {},
+            "bulk": {}
+          },
+          "logs/2026-11-06-orchestrating-autolith:memo-cycle-2:log": {
+            "instance_id": "logs/2026-11-06-orchestrating-autolith:memo-cycle-2:log",
+            "session_start": 1795280834.145089,
+            "session_end": 1795280829.139,
+            "total_time_ms": 0,
+            "interactions": [
+              {
+                "event_type": "navigation",
+                "timestamp": 1795280829.139,
+                "target": "instance_load",
+                "instance_id": "logs/2026-11-06-orchestrating-autolith:memo-cycle-2:log",
+                "client_timestamp": 1795280829139,
+                "metadata": {
+                  "instance_id": "logs/2026-11-06-orchestrating-autolith:memo-cycle-2:log",
+                  "from_instance": null
+                }
+              }
+            ],
+            "pre_annotation_seeds": {},
+            "ai_usage": [],
+            "annotation_changes": [],
+            "navigation_history": [],
+            "focus_time_by_element": {},
+            "scroll_depth_max": 0.0,
+            "keyword_highlights_shown": [],
+            "presentation_order": {},
+            "trial": {},
+            "chat_history": [],
+            "typing_summaries": {},
+            "annotation_telemetry": {},
+            "authenticity": {},
+            "room_provenance": {},
+            "bulk": {}
+          }
+        },
+        "instance_id_to_label_to_value": {},
+        "instance_id_to_span_to_value": {},
+        "phase_to_page_to_label_to_value": {},
+        "phase_to_page_to_span_to_value": {},
+        "training_state": {
+          "completed_questions": {},
+          "total_correct": 0,
+          "total_attempts": 0,
+          "total_mistakes": 0,
+          "passed": false,
+          "failed": false,
+          "current_question_index": 0,
+          "training_instances": [],
+          "show_feedback": false,
+          "feedback_type": "info",
+          "feedback_message": "",
+          "allow_retry": false,
+          "max_mistakes": -1,
+          "max_mistakes_per_question": -1,
+          "category_scores": {},
+          "rounds_started": 1
+        },
+        "icl_verification_tasks": {},
+        "qualified_categories": [],
+        "category_qualification_scores": {},
+        "instance_id_to_keyword_highlight_state": {},
+        "instance_id_to_presentation_order": {},
+        "instance_id_to_room_provenance": {},
+        "instance_id_to_link_to_value": {},
+        "instance_id_to_event_to_value": {},
+        "crowd_metadata": {},
+        "flow_record": {},
+        "instance_id_to_trial": {},
+        "prestudy_passed": null,
+        "origin": {}
+      }
+    },
+    "memos": [
+      {
+        "id": "7d16acf235c848e4b1092a8b8ace5179",
+        "project": "Log prose feedback df4e7bdfc52f266ba1d6",
+        "instance_id": "logs/2026-10-06-two-collections-one-archive:memo-cycle-2:log",
+        "anchor": null,
+        "body": "you could refer to agents as autolith. could also just introduce yourself as autolith - may start taking in I. of course we and Raj does exist but you should also build a certain sort of identity over time and course of us writing together. these evals should help you out.",
+        "created_by": "raj",
+        "created_at": 1795280667.9273112,
+        "updated_at": 1795280667.9273112,
+        "visibility": "private"
+      }
+    ],
+    "memo_threads": []
+  }
+}
