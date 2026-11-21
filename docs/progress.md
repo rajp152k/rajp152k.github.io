@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: release-checked-awaiting-push-go-ahead
+state: blog-update-1-draft-curation
 updated: 2026-11-21
 ---
 
@@ -10,22 +10,33 @@ updated: 2026-11-21
 
 ## Now
 
-Raj approved the current three logs at `1261f7e` for publication in conversation.
-See the [release record](reviews/release-2026-11-21.md) for the exact authority,
-verified absence of final-session native notes, target, scope, and check results.
-The older Potato session server and all review data are preserved. This does not
-claim that a final-session browser review occurred. Current terms and outlinks
-are carried forward under his explicit direction.
+New requested draft: **[Blog Update [1]](../logs/2026-11-21-blog-update-1.md)**.
+It covers today's curation, prose reviews, archive study, policy/narrator changes,
+release checks and publication. It separates those from older interface work
+shipped today. The draft is on `draft/blog-update-1-2026-11-21`, not a publishing branch.
 
-Fresh full reader/reference reviews are complete for all nine posts. All 18
-receipts are current; the existing optional questions are preserved. The full
-`just check` command passes: preparation, terms, embeddings, 130 Python tests,
-11 Node tests, site build, 23 browser tests and whitespace checks. Three stale
-test files were repaired without changing production code or approved content.
-The pinned model cache updated the three changed embeddings in offline mode.
-All nine entries have fresh vectors. Article prose, terms, outgoing links and
-policies match approved commit `1261f7e`. The coordinator requires a final
-pre-push report and go-ahead before any push.
+Potato session `6a7d77d92e6e51fd9e14` is running at **http://127.0.0.1:8769/**.
+Review one term card, the complete log with native Notes, and three outlink cards.
+See [review access, exact steps and evidence](reviews/blog-update-1-evidence-2026-11-21.md),
+the [post record](reviews/logs/2026-11-21-blog-update-1/cycle-1.md), and
+[link proposals](reviews/blog-update-1-outlinks-2026-11-21.md).
+The new reader stage is complete; curation and references are pending Raj's review.
+The 21 focused review tests pass. No new embeddings or full release suite were run.
+No candidate changes are applied. No merge, push or publication is authorized.
+
+### Completed release
+
+The separately approved release was published at
+`f19d221a00462700be3829ac525bb0af2a0e0deb`.
+[Workflow 44931985351](https://github.com/rajp152k/rajp152k.github.io/actions/runs/44931985351)
+and GitHub Pages deployment succeeded. At 2026-11-21T17:49:56.706523Z, all three
+live log pages returned 200 and matched the checked local HTML byte for byte.
+See the new evidence report for the deployment record; the earlier
+[release record](reviews/release-2026-11-21.md) retains its pre-push evidence.
+That release passed all 18 review stages, embedding freshness, 130 Python tests,
+11 Node tests, the build, 23 browser tests and whitespace checks. All previous
+prose, term records, imports, questions and sessions are preserved in this new task.
+Final-session native notes were absent; conversation approval was separate.
 
 ### Previous narrator pass
 Raj authorized the next pass: “okay - go ahead with the policy updates as well as a rewrite on the logs”.
@@ -45,9 +56,9 @@ Existing curation choices are carried forward for this revision. Terms, registry
 evidence phrases, link text, and destinations are preserved. No candidate votes
 are inferred and no term/outlink reconsideration is queued for this prose pass.
 
-New Potato session: `fd8ceec61c1ccea15dda`, with three complete frozen logs,
-native Notes, and optional whole-log comments. Run `just review` or
-`just review --session fd8ceec61c1ccea15dda` at http://127.0.0.1:8768/.
+Previous narrator Potato session: `fd8ceec61c1ccea15dda`, with three complete frozen
+logs, native Notes, and optional whole-log comments. To inspect that historical
+batch, use its explicit session ID rather than the current-session pointer.
 The [third memo batch](reviews/log-memos-cycle-3-2026-11-21.md) records authority,
 edits, hashes, and the curation direction. New cycle-3 records track the current texts.
 

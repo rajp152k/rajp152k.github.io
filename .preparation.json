@@ -108,6 +108,20 @@
         ]
       }
     },
+    "logs/2026-11-21-blog-update-1": {
+      "reader": {
+        "blocking_questions": [],
+        "decisions": [],
+        "inputs": {
+          "draft": "ca2a42543e4834acdacf796db6d4c21ccde3d6e04c2f9a5f8589ed6c86a1d289",
+          "policy": "77f67ca789da33b8a42ce473122fab4296bdd60b2505d1057793192e0e8c2143",
+          "stage": "6268b6ac2ea932cf949c8ee398528e5c77e548a207fc786852a430a3846d0e39"
+        },
+        "note": "Read complete new log against current writing policy and tracked historical evidence; distinguish work performed today from older work shipped today, native notes from conversation approval, projection from similarity and authored references. Independent read-only evidence and release reviews checked claims; corrected expired-auth wording. T1:r1 and L1:r1-L3:r1 pending Raj; no final references approval or publication authority.",
+        "questions": [],
+        "related": []
+      }
+    },
     "meditations/embeddings": {
       "reader": {
         "blocking_questions": [],
