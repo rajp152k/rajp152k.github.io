@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: writing-policy-updated
+state: revised-logs-awaiting-memo-review
 updated: 2026-11-21
 ---
 
@@ -10,12 +10,21 @@ updated: 2026-11-21
 
 ## Now
 
-Raj approved writing-policy updates with “alright - go for policy updates”.
-The canonical [writing policy](writing.md#writing-policy) now follows the
-[archive study](reviews/archive-writing-study-2026-11-21.md), committed at `8a4f9b3`,
-and all 11 current memos. AGENTS, the ops-log skill, and workflow references point
-to that policy. The skill no longer requires ASD-STE100 prose or a fixed heading
-sequence. No article prose or runtime agent settings changed.
+Raj authorized the next prose pass: “alright revise the logs and then i'll do a review pass again”.
+All three logs are revised under the canonical [writing policy](writing.md#writing-policy),
+commit `971cf2f`, and the 11 imported memos. The new titles are **Meditating on logs**,
+**On Autolith**, and **A laboratory across machines**. Routes and dates are unchanged.
+
+New Potato session: `df4e7bdfc52f266ba1d6`, with three full-text items, native Notes,
+and optional whole-log comments. No candidate approval form is present. Run
+`just review --session df4e7bdfc52f266ba1d6` at http://127.0.0.1:8768/.
+The [cycle-2 batch](reviews/log-memos-cycle-2-2026-11-21.md) records edits, frozen hashes,
+and stale approval scopes. It is selected as the current session; `just review` also works.
+
+The first log now opens with the authorship problem. The second groups setup and
+writing work, includes the requested `.files` link and a human-loop diagram, and
+explains the old prose template as history. The third distinguishes local results
+from proposed remote work. All use shared laboratory voice with individual attribution.
 
 The study and [complete inventory](reviews/archive-writing-inventory-2026-11-21.md)
 cover all 101 Markdown content files in pinned archive commit
@@ -33,7 +42,7 @@ null. No source changed before import.
 are recorded separately from the frozen batch. The native evidence includes
 IDs, authors, timestamps, visibility, and all available thread data. The live
 server was stopped with SIGINT before import. Session data and prior records are
-preserved. No prose changes have been applied; the approved general policy is now updated.
+preserved. This feedback now informs the authorized prose revision and the new memo pass.
 
 ### Completed outlink review
 
@@ -50,8 +59,10 @@ posts were added. The term registry and prior sessions/imports are unchanged.
 
 ## Decisions and docs
 
-HMAS, Lisp image T2:r2, and Simplified Technical English T7:r2 are applied
-(commit `c60af1e`). Their approved scopes and definitions are unchanged.
+HMAS, Lisp image T2:r2, and Simplified Technical English T7:r2 were applied at
+`c60af1e`. Registry definitions, aliases, and exact evidence quotes are unchanged.
+The revised passages and STE's historical quotation need renewed exact-use approval;
+the earlier decisions do not approve the revised texts.
 
 The [approval import](../review-imports/1c0ce0132fd10a6f26a8-403c434257318011.json)
 has no changed sources, comments, or memos. The
@@ -62,9 +73,19 @@ revision requests are retained. Rejected terms are absent from the registry.
 Selection policy is short and general. Writing docs cover definition references
 and revised cards. Review cards and public term pages use the same safe link
 renderer. Optional registry `entries` restrict matching to approved posts.
-HMAS and prior term decisions are unchanged.
+Prior term decisions are preserved as history. Current scopes are listed in the new cycle-2 records.
 
 ## Checks
+
+For this prose pass: all three posts parse and render through the project Markdown
+and article functions. Dates, stable routes, registry source quotes, and strictly
+earlier internal-link targets pass. Both Mermaid diagrams render in Chromium;
+AL inspected the combined image. Four focused queue/import/snapshot tests pass.
+The actual new session has three exact current snapshots, native memos and only
+an optional comment form, with no user responses yet. Import is pending Raj's review.
+Diff and whitespace checks pass. Reader/references receipts are stale and were not
+refreshed. No embedding update, full site build, broad suite, push, or publication
+was run. Meditations, registry, old sessions/imports and policy are untouched.
 
 For the policy update: checked local document links and policy anchors, inspected
 active policy references for obsolete STE and fixed-heading rules, and reviewed
@@ -102,11 +123,11 @@ and generated HTML checks.
 
 ## Next
 
-Wait for scoped authority before revising log prose. Apply the writing policy in
-the next authorized draft pass, then repeat affected reviews and exact-revision
-approvals. The third log needs another review after refinement. No push or
-publication is authorized.
+Raj reviews session `df4e7bdfc52f266ba1d6` with `just review`. After he finishes,
+stop the server, import native notes, and compare feedback with the frozen texts.
+Renew affected exact term-use and link-placement approvals before completing the
+references reviews. The first log's empty curation results also need confirmation.
+All three posts are at `writing`, not release-ready. No push or publication is authorized.
 
-Separate curation work: the first log's
-[empty term batch](reviews/logs/2026-10-06-two-collections-one-archive/cycle-1.md)
-needs confirmation. It is outside this prose feedback pass.
+The diagram deliberately leaves the blog checkout's host unspecified. It does
+not infer a cross-machine topology from the later orchestration proposal.

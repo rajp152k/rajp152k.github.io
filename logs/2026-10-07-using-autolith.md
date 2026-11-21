@@ -1,68 +1,52 @@
 ---
-title: Using Autolith so far
+title: On Autolith
 date: 2026-10-07T03:52:29Z
 ---
 
-# Abstract
+We have been using Autolith to get a Lisp workspace and this blog ready for local work. The first half-day on a Fedora VPS was an exploration of the environment, rather than a new side project. Raj's wish to return to Lisp gave the setup its direction; the immediate work was to make editing, configuration, and the publishing workflow usable together.
 
-raj has started to use Autolith for local setup and blog work. This log records the Lisp environment, shared settings, development checkout, and writing workflow established so far.
+Autolith runs in a live Common Lisp image. We can work with code, files, and processes through conversation, with a terminal editor beside it. Raj chose the ncurses build of Lem with Vim bindings instead of Emacs. The editor settings live in [`.files`](https://github.com/rajp152k/.files), so we can install them again without copying local history or generated files.
 
-# Context
+## What belongs to a machine?
 
-raj spent about half a day exploring Autolith on a Fedora VPS. Autolith runs in a live Common Lisp image. It provides a place to work with code, files, and processes through conversation.
+The shared Autolith package loads a Common Lisp init file for model choice, reasoning effort, traces, and the setting named Simple Technical English. A separate local init file can supply machine-specific settings. Credentials, conversations, and caches belong to the local environment, outside the portable package.
 
-raj's meditation, "the lisp machine," records the personal reason for this work. raj wants to return to Lisp and develop side projects. This log records the concrete setup and its current limits.
+The exploration started on a Fedora VPS. The diagram shows the tools and human review loop, without assuming a deployment topology for every checkout or a connection to other agent machines:
 
-# A Lisp environment on the VPS
+```mermaid
+flowchart TB
+  accTitle: Human and tools in the initial Autolith setup
+  accDescr: Raj works with Autolith and Lem during the Fedora VPS exploration. The dotfiles repository supplies shared settings. Autolith supports blog preparation; Raj reviews drafts and decides on commit and publication separately. The blog checkout's host is unspecified, and no cross-machine agent connection is shown.
+  R[Raj] -->|Conversation and requests| A
+  R -->|Terminal editing| L
+  D[.files repository] -->|Shared configuration| A
+  D -->|Editor settings| L
+  subgraph V[Fedora VPS]
+    A[Autolith]
+    L[Lem]
+  end
+  A -->|Prepare and build| B[Blog checkout - host unspecified]
+  B -->|Draft for review| R
+```
 
-raj chose the ncurses build of Lem instead of Emacs for Lisp editing. The Lem setup includes Vim bindings. Shared settings live in the dotfiles repository and load from a Common Lisp init file.
+We also made a development checkout of Raj's Autolith fork, with the fork as `origin` and the original project as `upstream`. That checkout is separate from the installed release and from private changes to the running image. It gives source experiments a place of their own; this setup did not add a new feature to Autolith.
 
-This provides a terminal editor beside Autolith. The editor settings can be installed again without copying local history or generated files.
+## Getting the blog ready
 
-# Shared Autolith settings
+The local blog setup uses a separate Python environment for inference and Node.js for site assets. Markdown supplies each post, the [embedding updater](/embeddings/) stores archive state in `blog.sqlite`, and the site builder produces the local site, search index, and shared map.
 
-raj added an Autolith package to the dotfiles repository. Its init file sets the model, reasoning effort, reasoning traces, and Simple Technical English. A separate local init file can supply machine-specific settings.
+Our checks covered embedding freshness, the build, and the Python and JavaScript tests. Existing entries reused their stored vectors. We therefore checked the local workflow without exercising a new model download or new inference, an important limit on what this setup run established.
 
-The shared package records the intended setup. Credentials, conversations, caches, and other runtime state stay outside that package. This separates portable configuration from the state of one machine.
+The next part was to bring the ops-log skill over from OMP. Before installing it, Raj asked for a review of the skill and the blog workflow. The installed skill is a regular-file copy in Autolith's configuration directory, not a Stow link. The dotfiles package excludes skills from Stow and documents the copy step, so editing the tracked version also requires updating the installed copy. Autolith lists ops-log in its catalog.
 
-# A separate development checkout
+## Learning how to write the record
 
-raj created a fork of Autolith and a local development checkout. The checkout has raj's fork as its origin and the original project as its upstream.
+The copied skill originally prescribed an Abstract, Context, named sections, and a Conclusion. One of its rules was:
 
-The development checkout is separate from the installed Autolith release. It is also separate from private changes to the running image. This gives raj a place for future source changes without treating local setup as a change to the project. This log does not record a new Autolith source feature.
+> New prose uses Simplified Technical English.
 
-# Preparing the blog for local work
+Those were the starting rules, not evidence that every account needed that shape. Subsequent review of these logs led us to remove the prose constraint and fixed heading sequence. The runtime setting in the shared init file is a separate matter. We are refining the writing through review, with sections and sentences chosen for the account rather than for compliance with the old template.
 
-raj used Autolith to prepare the blog's local embedding and build environment. The setup uses a separate Python environment for inference and Node.js for the site assets. Local checks covered embedding freshness, the site build, and the Python and JavaScript tests.
+The skill also records where work starts: read the current instructions in the local blog checkout, inspect earlier posts, preserve unrelated changes, and check the preview. Personal meditations and agent-written logs use [the same archive, search, and map](/logs/2026-10-06-two-collections-one-archive/), but a request for a log does not authorize changes to Raj's meditation prose.
 
-Markdown is the source of each post. The [embedding updater](/embeddings/) stores archive state in blog.sqlite. The site builder produces the local site, search index, and shared map.
-
-During the setup checks, existing entries reused their stored vectors. Those checks verified the local workflow, but did not exercise a new model download or new inference.
-
-# Bringing the log rules into Autolith
-
-raj already used the ops-log skill in OMP to write operational logs. Before installing that skill in Autolith, raj asked for a review of the skill and the blog workflow.
-
-The Autolith version keeps the same writing rules. Logs explain raj's work and intent. They use title and date front matter, an Abstract, Context, named sections, a Conclusion, and links to relevant past posts. New prose uses Simplified Technical English. Short sentences must still contain the material decisions and results.
-
-The skill also tells Autolith where to start: the local blog checkout. Autolith must read the current README, check existing posts, preserve unrelated changes, and verify the local preview.
-
-# Installing the skill as a regular file
-
-The installed skill is a regular-file copy inside Autolith's configuration directory. The dotfiles package excludes skills from Stow and documents the copy step. Autolith lists ops-log in its skill catalog.
-
-After a change to the tracked skill, the installed copy needs an update.
-
-# Review before commit and publication
-
-raj keeps personal meditations separate from agent-written logs. Both collections use [the same archive, search, and map](/logs/2026-10-06-two-collections-one-archive/). A log does not authorize an edit to raj's meditation prose.
-
-A request for a draft starts local iteration. Autolith updates the embedding state and builds a preview for review. A revision does not approve a commit. A commit request does not approve a push or publication.
-
-The copied skill records these boundaries. This draft is the first local log written with that Autolith setup.
-
-# Conclusion
-
-raj now has a local Lisp editor, shared Autolith settings, a separate development checkout, and a working blog setup. Autolith can use the existing operational log rules when raj requests a record of work.
-
-This is an initial setup, not a report of completed side projects or new Autolith features. raj can refine the workflow through further use. The current log is a local draft for review.
+A draft starts local iteration. We can revise it, update embedding state, and build a preview for Raj to read. Commit and publication remain separate decisions. The setup gives us a way to write and inspect the record; further use will show which parts of that process need to change.
