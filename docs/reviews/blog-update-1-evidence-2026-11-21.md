@@ -1,5 +1,9 @@
 # Blog Update [1]: evidence and review handoff
 
+Historical first-draft evidence and handoff. That session is now imported.
+See [the six exact memos, applied decisions, current checks and review access](blog-update-1-feedback-cycle-1-2026-11-22.md)
+for the 22 November iteration of this 21 November account.
+
 ## Scope
 
 Requested new log: `logs/2026-11-21-blog-update-1.md`, titled exactly
@@ -30,7 +34,7 @@ The published prose of all nine earlier entries is unchanged by this task.
 Potato.nvim is separate and incomplete. It is not part of this article or task.
 No conversation fact remains missing for this draft's stated claims.
 
-## Review session
+## First review session (imported)
 
 Session: `6a7d77d92e6e51fd9e14`.
 Service: **http://127.0.0.1:8769/**, bound to loopback only.
@@ -40,12 +44,12 @@ The server was started with:
 just review --session 6a7d77d92e6e51fd9e14 --port 8769
 ```
 
-The dedicated background service is execution
-`L3h41nW`. Keep it running for review. No pre-existing listener was stopped. Existing
-session folders, imports, and native evidence were not removed or modified.
-An initial batch, `4598f1432af24f843c32`, is also preserved. Its server was stopped after confirming no native activity. A whitespace check found one extra blank line at the end of the outlink record; I removed it and froze this replacement batch. The post and candidate text are unchanged. The current-session pointer now selects this new session. Always use its explicit
-ID and port if restarting it. Plain `just review` uses the current session on its
-default port, 8768.
+The dedicated background execution `L3h41nW` was stopped with SIGINT after Raj
+finished. Import `6a7d77d92e6e51fd9e14-de90af940de0f7a7.json` preserves the real
+responses and six memos. Session folders and old evidence are preserved.
+The unused initial batch `4598f1432af24f843c32` is also preserved; its server
+was stopped after confirming no native activity and correcting an EOF blank.
+The current-session pointer now selects the second prose review, not this batch.
 
 The frozen batch has five items:
 

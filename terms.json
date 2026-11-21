@@ -48,6 +48,24 @@
           "quote": "New prose uses Simplified Technical English."
         }
       ]
+    },
+    {
+      "id": "principal-component-analysis",
+      "name": "Principal component analysis",
+      "aliases": ["PCA"],
+      "definition": "A linear projection of centered data onto orthogonal directions of greatest variance.",
+      "introduction": "meditations/embeddings",
+      "entries": ["logs/2026-11-21-blog-update-1"],
+      "sources": [
+        {
+          "entry": "meditations/embeddings",
+          "quote": "Use exact reduced SVD, with no per-dimension standardization or whitening."
+        },
+        {
+          "entry": "meditations/embeddings",
+          "quote": "Refit PCA on each build, so positions can change."
+        }
+      ]
     }
   ]
 }

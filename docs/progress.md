@@ -1,7 +1,7 @@
 ---
 kind: work-status
-state: blog-update-1-draft-curation
-updated: 2026-11-21
+state: blog-update-1-prose-review
+updated: 2026-11-22
 ---
 
 # Progress
@@ -10,19 +10,29 @@ updated: 2026-11-21
 
 ## Now
 
-New requested draft: **[Blog Update [1]](../logs/2026-11-21-blog-update-1.md)**.
-It covers today's curation, prose reviews, archive study, policy/narrator changes,
-release checks and publication. It separates those from older interface work
-shipped today. The draft is on `draft/blog-update-1-2026-11-21`, not a publishing branch.
+Draft **[Blog Update [1]](../logs/2026-11-21-blog-update-1.md)** covers work on
+21 November. The revision was made on 22 November on
+`draft/blog-update-1-2026-11-21`. Its subject date, title and route are unchanged.
 
-Potato session `6a7d77d92e6e51fd9e14` is running at **http://127.0.0.1:8769/**.
-Review one term card, the complete log with native Notes, and three outlink cards.
-See [review access, exact steps and evidence](reviews/blog-update-1-evidence-2026-11-21.md),
-the [post record](reviews/logs/2026-11-21-blog-update-1/cycle-1.md), and
-[link proposals](reviews/blog-update-1-outlinks-2026-11-21.md).
-The new reader stage is complete; curation and references are pending Raj's review.
-The 21 focused review tests pass. No new embeddings or full release suite were run.
-No candidate changes are applied. No merge, push or publication is authorized.
+Imported first session `6a7d77d92e6e51fd9e14`: Raj approved T1:r1 and L1:r1–L3:r1,
+requested prose changes, and left six native memos. The approved term and all three
+links are applied. All six notes informed the revision: clearer opening, an actual
+nine-post explanatory map snapshot, Potato/archive links, RLM analysis method,
+and a Mermaid review-flow diagram. See [exact feedback and checks](reviews/blog-update-1-feedback-cycle-1-2026-11-22.md).
+
+New full-post-only Potato session: `f2132a7027bce0dce50c`, at
+**http://127.0.0.1:8769/**. Add native Notes and optional general comments.
+[Rendered single-article preview](http://127.0.0.1:8771/) includes both diagrams.
+The unchanged approved cards are not submitted again.
+
+The new log's reader and reference stages are current. The existing embedding
+meditation reference receipt is stale because the new term uses it as evidence;
+its prose and receipt are untouched. Its open questions are preserved.
+50 focused tests pass, plus desktop/phone rendering, snapshot data and source
+checks. A small approved term-schema fix permits evidence outside annotation
+scope. The old three term records, old posts, database and old imports are unchanged.
+No embedding inference or broad release suite ran. The draft is at `writing`.
+No final prose approval, final workflow commit, merge, push or publication is implied.
 
 ### Completed release
 

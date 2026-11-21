@@ -103,7 +103,8 @@ def load_terms(entries: Iterable[Entry], path: Path = ROOT / "terms.json") -> Re
     """Load strict version-1 JSON; reject stale quotes and ambiguous aliases.
 
     Quotes are exact substrings of Entry.body (Markdown, excluding front matter).
-    Introduction is an entry key, not an inferred earliest mention. Definitions
+    Introduction is an entry key, not an inferred earliest mention. Evidence and
+    introduction entries need not be in the optional annotation scope. Definitions
     are edited records; validation checks evidence integrity, not entailment.
     """
     entries = list(entries)
@@ -166,8 +167,6 @@ def load_terms(entries: Iterable[Entry], path: Path = ROOT / "terms.json") -> Re
                     or any(not isinstance(key, str) or key not in by_key for key in scope)
                     or len(set(scope)) != len(scope)):
                 raise ValueError(f"{ident}: entries must list unique known entry keys.")
-            if row["introduction"] not in scope or any(source.entry not in scope for source in sources):
-                raise ValueError(f"{ident}: introduction and sources must be in entries.")
         terms.append(Term(ident, row["name"], tuple(row["aliases"]), row["definition"], row["introduction"], tuple(sources), annotation, tuple(scope) if scope is not None else None))
     return Registry(tuple(sorted(terms, key=lambda term: term.id)))
 

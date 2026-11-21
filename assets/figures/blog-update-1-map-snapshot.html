@@ -1,0 +1,52 @@
+<!-- Frozen from site/index.html on 2026-11-22 for the 2026-11-21 log.
+     Source site SHA-256: 86e1561621ba3f6079e31c4ddfa75142ba8566bfef1c9e76b61d9d2dcb4bce6f
+     Source blog.sqlite SHA-256: 86e1563145b1a1c8c3c83479036ece62f5b5bed93c5d99d3430fc6fecd0fb0b6
+     Layout from published revision f19d221a00462700be3829ac525bb0af2a0e0deb.
+     Preserve the nine point coordinates and five directed references when inlining. -->
+<figure id="blog-update-map-snapshot" style="margin: 1.5em 0;">
+<figcaption><strong>The published nine-post map.</strong> Snapshot prepared on 22 November 2026 for this account of 21 November. The layout uses the nine published posts and their existing embeddings. This draft, Blog Update [1], is excluded.</figcaption>
+<p id="blog-update-map-reading">Positions show a two-dimensional PCA projection of 768-dimensional post vectors, with 42% of variance retained. Nearby circles suggest similarity in this projection, not identical meaning. Violet arrows show five authored references, from the citing post to the cited post. They are not similarity lines. Filled circles are meditations; outlined circles are logs. Hover over a circle or arrow for an explanation. The same information is written below the figure.</p>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="group" aria-labelledby="blog-update-map-title" aria-describedby="blog-update-map-reading" style="display: block; width: 100%; height: auto; background: #101410; border: 1px solid #5f9363; color: #b3d5ad; font-family: monospace;">
+<title id="blog-update-map-title">Nine published posts: projected positions and authored references</title>
+<desc>Point positions and reference endpoints are copied from the published archive map. This explanatory snapshot has no navigation controls. Read the point key and reference list below for a text equivalent.</desc>
+<defs><marker id="blog-update-map-arrow" viewBox="0 0 10 10" refX="17" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#a89bd4" stroke-width="1.5"/></marker></defs>
+<g aria-hidden="true" fill="#a1b69d" font-size="12">
+<path d="M 32 314.021 H 608 M 331.067 32 V 488" fill="none" stroke="#435343" stroke-width="1"/>
+<text x="604" y="306.021" text-anchor="end">PC1</text><text x="339.067" y="42">PC2</text><text x="339.067" y="330.021">0</text>
+</g>
+<g fill="none" stroke="#a89bd4" stroke-width="1.5" marker-end="url(#blog-update-map-arrow)">
+<line data-source="logs/2026-11-06-orchestrating-autolith" data-target="meditations/laboratory" x1="243.181" y1="140.479" x2="384.120" y2="428.947"><title>lx2, A laboratory across machines, cites mx4, Laboratory. This arrow records an authored reference, not a similarity score.</title></line>
+<line data-source="logs/2026-10-07-using-autolith" data-target="meditations/embeddings" x1="277.909" y1="136.920" x2="187.647" y2="401.691"><title>lx1, On Autolith, cites mx3, Blog Update [0]. This arrow records an authored reference, not a similarity score.</title></line>
+<line data-source="logs/2026-10-07-using-autolith" data-target="logs/2026-10-06-two-collections-one-archive" x1="277.909" y1="136.920" x2="64.306" y2="294.023"><title>lx1, On Autolith, cites lx0, Meditating on logs. This arrow records an authored reference, not a similarity score.</title></line>
+<line data-source="meditations/the-lisp-machine" data-target="meditations/programming" x1="568.686" y1="60.000" x2="575.694" y2="454.414"><title>mx5, the lisp machine, cites mx1, programming. This arrow records an authored reference, not a similarity score.</title></line>
+<line data-source="meditations/laboratory" data-target="meditations/embeddings" x1="384.120" y1="428.947" x2="187.647" y2="401.691"><title>mx4, Laboratory, cites mx3, Blog Update [0]. This arrow records an authored reference, not a similarity score.</title></line>
+</g>
+<g fill="#b3d5ad" stroke="#b3d5ad" stroke-width="2">
+<g data-post="logs/2026-11-06-orchestrating-autolith"><title>lx2: A laboratory across machines. Log. Its position is a PCA approximation of the text vector. Its arrow to mx4 records a citation. The nearby lx1 is not a citation.</title><circle cx="243.181" cy="140.479" r="6" fill="#101410"/><text x="232" y="127" text-anchor="end" stroke="none" font-size="13">lx2</text></g>
+<g data-post="logs/2026-10-07-using-autolith"><title>lx1: On Autolith. Log. Its position is a PCA approximation of the text vector. Its arrows to mx3 and lx0 record citations. The nearby lx2 is not a citation.</title><circle cx="277.909" cy="136.920" r="6" fill="#101410"/><text x="290" y="123" stroke="none" font-size="13">lx1</text></g>
+<g data-post="meditations/the-lisp-machine"><title>mx5: the lisp machine. Meditation. Its position is a PCA approximation of the text vector. Its arrow to mx1 records a citation, despite their distance on this map.</title><circle cx="568.686" cy="60.000" r="6"/><text x="554" y="49" text-anchor="end" stroke="none" font-size="13">mx5</text></g>
+<g data-post="logs/2026-10-06-two-collections-one-archive"><title>lx0: Meditating on logs. Log. Its position is a PCA approximation of the text vector. It has no outgoing reference here; lx1 cites it.</title><circle cx="64.306" cy="294.023" r="6" fill="#101410"/><text x="51" y="280" stroke="none" font-size="13">lx0</text></g>
+<g data-post="meditations/laboratory"><title>mx4: Laboratory. Meditation. Its position is a PCA approximation of the text vector. Its arrow to mx3 records a citation; lx2 cites it.</title><circle cx="384.120" cy="428.947" r="6"/><text x="397" y="420" stroke="none" font-size="13">mx4</text></g>
+<g data-post="meditations/embeddings"><title>mx3: Blog Update [0]. Meditation. Its position is a PCA approximation of the text vector. It has no outgoing reference here; lx1 and mx4 cite it.</title><circle cx="187.647" cy="401.691" r="6"/><text x="174" y="390" text-anchor="end" stroke="none" font-size="13">mx3</text></g>
+<g data-post="meditations/studying"><title>mx2: Project Outlines. Meditation. Its position is a PCA approximation of the text vector. It has no authored reference line here; closeness alone does not create one.</title><circle cx="314.895" cy="449.712" r="6"/><text x="302" y="439" text-anchor="end" stroke="none" font-size="13">mx2</text></g>
+<g data-post="meditations/programming"><title>mx1: programming. Meditation. Its position is a PCA approximation of the text vector. It has no outgoing reference here; mx5 cites it.</title><circle cx="575.694" cy="454.414" r="6"/><text x="563" y="478" text-anchor="end" stroke="none" font-size="13">mx1</text></g>
+<g data-post="meditations/pkm-to-pem"><title>mx0: Personal (Knowledge -&gt; Epistemological) Management. Meditation. Its position is a PCA approximation of the text vector. It has no authored reference line here; closeness alone does not create one.</title><circle cx="363.169" cy="460.000" r="6"/><text x="376" y="484" stroke="none" font-size="13">mx0</text></g>
+</g>
+</svg>
+<p><strong>Positions are approximate; references are authored.</strong> For example, lx1 and lx2 are close on the map but have no reference line between them. The distant mx5 and mx1 do have one. Cosine similarities on the live index use the full vectors, not distance on this plot; this snapshot displays no cosine scores.</p>
+<details><summary>Point key and text equivalent</summary>
+<p>Each point's position approximates its post's text vector in two dimensions. The IDs below identify the circles without turning this snapshot into navigation.</p>
+<ul>
+<li><strong>lx2: A laboratory across machines</strong> (log). Cites mx4. Its nearby neighbour lx1 is not a citation.</li>
+<li><strong>lx1: On Autolith</strong> (log). Cites mx3 and lx0. Its nearby neighbour lx2 is not a citation.</li>
+<li><strong>mx5: the lisp machine</strong> (meditation). Cites mx1 despite their distance on this plot.</li>
+<li><strong>lx0: Meditating on logs</strong> (log). No outgoing reference here; lx1 cites it.</li>
+<li><strong>mx4: Laboratory</strong> (meditation). Cites mx3; lx2 cites it.</li>
+<li><strong>mx3: Blog Update [0]</strong> (meditation). No outgoing reference here; lx1 and mx4 cite it.</li>
+<li><strong>mx2: Project Outlines</strong> (meditation). No authored reference line here.</li>
+<li><strong>mx1: programming</strong> (meditation). No outgoing reference here; mx5 cites it.</li>
+<li><strong>mx0: Personal (Knowledge -&gt; Epistemological) Management</strong> (meditation). No authored reference line here.</li>
+</ul>
+<p>The five arrows are lx2 → mx4; lx1 → mx3; lx1 → lx0; mx5 → mx1; and mx4 → mx3. An absent line means no authored reference between those posts in this snapshot, not that their subjects cannot be related.</p>
+</details>
+</figure>

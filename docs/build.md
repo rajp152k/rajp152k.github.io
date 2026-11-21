@@ -227,9 +227,11 @@ change Markdown source. Search and embeddings use the original post. `/terms/`
 and `/terms/<id>/` are navigation pages, not archive entries.
 
 Set optional `entries` to a nonempty list of approved archive entry keys to
-restrict matching. Validation requires known, unique keys and includes the
-introduction and source entries in that list. Without `entries`, matching has
-no per-post restriction. Check the mention report against the approved scope.
+restrict automatic matching. Validation requires known, unique keys. Introduction
+and evidence sources may be outside this annotation scope; each must name a known
+entry, and each source quote must match its entry exactly. Without `entries`,
+matching has no per-post restriction. Check the mention report against the approved
+scope.
 Definition references use `[title](https://...)`; review cards and public pages
 render only HTTP(S) links and escape other HTML.
 

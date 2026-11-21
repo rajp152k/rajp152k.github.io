@@ -2,7 +2,7 @@
 kind: outlink-review
 cycle: 1
 revision: 1
-state: proposed
+state: applied
 posts:
   logs/2026-11-21-blog-update-1: e7200d5b526b2dba7c6930cfe79e8b1b0a959897381e982652c0127dd482623d
   meditations/embeddings: 696a62f51d93037f4810f7e69a8fe57972268879d8dc61116fcb23de8e109dc1
@@ -11,11 +11,11 @@ posts:
 links:
 - id: L1
   revision: 1
-  state: proposed
+  state: applied
   action: add
   record: l1
-  decision: null
-  applied_at: null
+  decision: raj-l1-r1
+  applied_at: '2026-11-21T18:35:22Z'
   entry: logs/2026-11-21-blog-update-1
   target: meditations/embeddings
   card:
@@ -32,11 +32,11 @@ links:
       than repeat the equations here.
 - id: L2
   revision: 1
-  state: proposed
+  state: applied
   action: add
   record: l2
-  decision: null
-  applied_at: null
+  decision: raj-l2-r1
+  applied_at: '2026-11-21T18:35:22Z'
   entry: logs/2026-11-21-blog-update-1
   target: logs/2026-10-06-two-collections-one-archive
   card:
@@ -51,11 +51,11 @@ links:
       this work.
 - id: L3
   revision: 1
-  state: proposed
+  state: applied
   action: add
   record: l3
-  decision: null
-  applied_at: null
+  decision: raj-l3-r1
+  applied_at: '2026-11-21T18:35:22Z'
   entry: logs/2026-11-21-blog-update-1
   target: logs/2026-11-06-orchestrating-autolith
   card:
@@ -70,13 +70,36 @@ links:
     reason: Read the concrete distinction between completed local changes and the
       proposed remote laboratory.
 no_links: []
+decisions:
+- id: raj-l1-r1
+  actor: raj
+  action: approve
+  scope: L1:r1
+  at: '2026-11-21T18:35:22Z'
+  evidence: review-imports/6a7d77d92e6e51fd9e14-de90af940de0f7a7.json
+- id: raj-l2-r1
+  actor: raj
+  action: approve
+  scope: L2:r1
+  at: '2026-11-21T18:35:22Z'
+  evidence: review-imports/6a7d77d92e6e51fd9e14-de90af940de0f7a7.json
+- id: raj-l3-r1
+  actor: raj
+  action: approve
+  scope: L3:r1
+  at: '2026-11-21T18:35:22Z'
+  evidence: review-imports/6a7d77d92e6e51fd9e14-de90af940de0f7a7.json
 ---
 
-# Blog Update [1]: proposed outgoing links
+# Blog Update [1]: approved outgoing links
 
-All three are unapproved r1 proposals. No authored post links are in the draft yet.
-All target posts were read; their dates precede the new log. Full snapshots and exact
-source/target evidence will be frozen by the queue. No reverse links.
+Raj approved all three exact r1 cards in the imported session. AL applied the
+three replacement sentences verbatim. The hashes above identify the reviewed
+snapshot, not the later prose revision. Times record AL's observation and
+application, not browser submission. Targets, text, purpose, and surrounding
+claims are unchanged in the revised draft, so these approvals carry forward.
+No reverse links or old-post edits. See the first feedback report for native
+comments and the separate prose iteration.
 
 ## L1
 

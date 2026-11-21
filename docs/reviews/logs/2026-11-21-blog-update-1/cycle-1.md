@@ -3,16 +3,16 @@ schema: 1
 kind: post-review
 entry: logs/2026-11-21-blog-update-1
 cycle: 1
-state: curation
+state: writing
 post_sha256: e7200d5b526b2dba7c6930cfe79e8b1b0a959897381e982652c0127dd482623d
 terms:
 - id: T1
   revision: 1
-  state: proposed
+  state: applied
   action: add
   record: t1-principal-component-analysis
-  decision: null
-  applied_at: null
+  decision: raj-t1-r1
+  applied_at: '2026-11-21T18:35:22Z'
   card:
     name: Principal component analysis
     definition: A linear projection of centered data onto orthogonal directions of
@@ -29,12 +29,26 @@ terms:
       logs/2026-11-21-blog-update-1 only. No meditation annotations, other post uses,
       or changes to the three existing registry records.
 links: []
-decisions: []
-transitions: []
+decisions:
+- id: raj-t1-r1
+  actor: raj
+  action: approve
+  scope: T1:r1 definition, alias, evidence, introduction and new-log-only use
+  post_sha256: e7200d5b526b2dba7c6930cfe79e8b1b0a959897381e982652c0127dd482623d
+  at: '2026-11-21T18:35:22Z'
+  evidence: review-imports/6a7d77d92e6e51fd9e14-de90af940de0f7a7.json
+  reason: Imported exact candidate approval; time records AL's observation, not browser submission.
+transitions:
+- from: curation
+  to: writing
+  actor: autolith
+  at: '2026-11-21T18:35:22Z'
+  event: Imported requested prose changes; applied approved curation independently.
+  evidence: review-imports/6a7d77d92e6e51fd9e14-de90af940de0f7a7.json
 blockers:
-- issue: Term and outlink candidate decisions and prose review are pending.
+- issue: Revised complete prose needs Raj's review.
   owner: raj
-  resolution: Review the exact frozen revisions in Potato; tell AL when done.
+  resolution: Read the new exact-source whole-log session and add native Notes.
 release:
   commit: null
   deployed_commit: null
@@ -46,17 +60,23 @@ release:
 
 ## Now
 
+The first batch is imported. Raj approved T1:r1 and L1:r1–L3:r1, requested prose
+changes, and left six native memos. Approved curation is applied. The log returns
+to `writing` for revision. See [exact feedback and dispositions](../../blog-update-1-feedback-cycle-1-2026-11-22.md).
+
+The original reviewed hash and exact card below identify the approval snapshot.
+The next memo batch records the revised hash; it does not reopen unaffected cards.
+
 Draft checkpoint only, on `draft/blog-update-1-2026-11-21`. No final commit,
 merge, push, or publication approval. The coordinator requested a scoped branch
 checkpoint to hand off this review. That does not advance the post's workflow
 state to `committed`. Published content remains at `f19d221`.
 
-Read the full post in the log item. Use Notes for specific passages or general
-comments. Each term and outlink card needs its own decision. No responses or
-memos have been invented. Existing sessions and all earlier review evidence are
-preserved. Review access and checks are in the evidence report.
+Read the revised full post in the next memo-only log item. Use Notes for passage
+comments or general feedback. The candidate votes are already imported and applied.
+Existing sessions and all earlier review evidence are preserved.
 
-## Reader review
+## Initial reader review (before Raj's feedback)
 
 Purpose: explain the blog work performed on 21 November and the older work shipped
 with it, including how user feedback changed the writing and how publication was
@@ -106,7 +126,11 @@ are strictly earlier than this new log. No reverse links or edits to old posts.
 
 ## Decisions
 
-None. Blank browser fields and agent review notes are not decisions.
+T1:r1 approved and applied with only the new log in annotation scope. L1:r1–L3:r1
+approved and applied in the separate outlink record. Whole-log native label:
+`request changes`; general comment: “check notes and refine”. The six exact memos
+and the reason for carrying the unchanged candidate scopes forward are in the
+feedback report. No final prose, commit, or publication approval is inferred.
 
 ## Preview and checks
 

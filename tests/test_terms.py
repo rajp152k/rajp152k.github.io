@@ -1,7 +1,7 @@
 """Evidence validation and lossless, deterministic term matching."""
 import copy
 import json
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 import sys
 import tempfile
@@ -142,11 +142,40 @@ class RegistryTests(unittest.TestCase):
             self.row["entries"] = value
             with self.subTest(value=value), self.assertRaises(ValueError):
                 self.load()
-        other = Entry("meditations", "other", "Other", date(2026, 1, 2), "Orch coordinates.")
-        self.row["entries"] = [other.key]
+
+    def test_evidence_outside_annotation_scope(self):
+        approved = Entry("logs", "2026-11-21-blog-update-1", "Blog Update [1]",
+                         datetime(2026, 11, 21, 18, tzinfo=timezone.utc), "Orch coordinates.")
+        other = Entry("logs", "other", "Other",
+                      datetime(2026, 1, 2, tzinfo=timezone.utc), "Orch coordinates.")
+        entries = [self.entry, approved, other]
+        self.row["entries"] = [approved.key]
         self.path.write_text(json.dumps(self.data), encoding="utf-8")
-        with self.assertRaisesRegex(ValueError, "introduction and sources"):
-            load_terms([self.entry, other], self.path)
+        registry = load_terms(entries, self.path)
+        self.assertEqual(registry.terms[0].introduction, self.entry.key)
+        self.assertEqual(registry.terms[0].sources[0].entry, self.entry.key)
+        self.assertEqual(registry.terms[0].entries, (approved.key,))
+        self.assertEqual([mention.entry_key for mention in collect_mentions(entries, registry)],
+                         [approved.key])
+
+    def test_out_of_scope_evidence_still_requires_known_entries_and_exact_quotes(self):
+        approved = Entry("logs", "new", "New",
+                         datetime(2026, 1, 2, tzinfo=timezone.utc), "Orch coordinates.")
+        self.row["entries"] = [approved.key]
+        cases = [("source", "unknown", "unknown source"),
+                 ("introduction", "unknown", "unknown introduction"),
+                 ("quote", "Orch disappeared.", "stale source")]
+        for field, value, error in cases:
+            data = copy.deepcopy(self.data)
+            if field == "source":
+                data["terms"][0]["sources"][0]["entry"] = value
+            elif field == "quote":
+                data["terms"][0]["sources"][0]["quote"] = value
+            else:
+                data["terms"][0]["introduction"] = value
+            self.path.write_text(json.dumps(data), encoding="utf-8")
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, error):
+                load_terms([self.entry, approved], self.path)
 
 
 class TransformTests(unittest.TestCase):
