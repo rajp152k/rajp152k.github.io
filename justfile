@@ -20,9 +20,30 @@ preview *args:
 status:
     ./prepare.sh status
 
-# Record a completed review: ENTRY --stage STAGE --note "...".
-review +args:
+# Install the pinned browser review tool in its own uv environment.
+setup-review:
+    uv venv --python 3.12 .venv-review
+    uv pip install --python .venv-review/bin/python -r requirements-review.txt
+
+# Freeze exact Markdown review records and post snapshots.
+queue-review +records:
+    sh scripts/python.sh scripts/review.py queue "$@"
+
+# Start/resume Potato; legacy ENTRY --stage arguments record a review receipt.
+review *args:
+    if [ "$#" -gt 0 ] && [ "${1#--}" = "$1" ]; then ./prepare.sh review "$@"; else sh scripts/python.sh scripts/review.py serve "$@"; fi
+
+# Record a completed editorial review receipt.
+record-review +args:
     ./prepare.sh review "$@"
+
+# Import native annotations and memos into a durable report.
+import-reviews session:
+    sh scripts/python.sh scripts/review.py import "$1"
+
+# Remove only a scratch session whose current responses were imported.
+clean-reviews session:
+    sh scripts/python.sh scripts/review.py clean "$1"
 
 # Check editorial review freshness and term records.
 review-check:

@@ -1,11 +1,15 @@
 # Writing and preparation
 
+Use Potato 2.13.1 for term decisions and log comments. Run `just setup-review`
+once to install it in `.venv-review` with uv and Python 3.12.
+
 ## Daily use
 
-Write a meditation with `just write "Title"`, or ask the agent to write a log.
-Ask for preparation, decide the term and link candidates, then read the preview.
-Approve commit and publication separately. Follow the [state machine](workflow.md)
-and open [Progress](progress.md) for the current review and next decision.
+Write a meditation with `just write "Title"`, or ask AL to write a log. Meditations
+have no terms. AL may edit log drafts during iteration. Use `just review` for term
+decisions and log comments in Potato, then tell AL when you are done. Decide post
+links and final approval in conversation. Approve commit and publication separately.
+Follow the [state machine](workflow.md) and [Progress](progress.md).
 
 Saving Markdown does not start a build or a review. Run the commands below, or
 ask the agent to complete the preparation workflow.
@@ -21,6 +25,12 @@ For browser checks, install Chromium once with `npx playwright install chromium`
 | `just preview --port 8766` | Use another local port |
 | `just review-check` | Require current editorial reviews and valid term records |
 | `just check` | Run the complete release checks |
+| `just queue-review RECORD...` | Freeze review records and source snapshots for a session |
+| `just review` | Start or resume the prepared Potato review |
+| `just review --session ID --port 8768` | Open a specific session on another port |
+| `just import-reviews ID` | Import browser responses for AL to read |
+| `just clean-reviews ID` | Remove imported review scratch data |
+| `just record-review ENTRY --stage STAGE --note "..."` | Record a completed agent review stage |
 
 Stop the preview with Ctrl-C. Preview builds once, then serves `site/`; it does
 not watch files. After edits, run `just status`, repeat affected reviews,
@@ -31,6 +41,28 @@ stops preparation before the site build. Invalid term records or reserved anchor
 collisions stop preparation before either command. For a styling-only preview,
 use `just build` without updating embeddings.
 An unchanged embedding update is a no-op.
+
+## Browser review
+
+AL prepares numbered review records in `docs/reviews/` and queues the selected
+records with `just queue-review RECORD...`. The command prints `.reviews/ID`;
+use the final `ID` component for import, cleanup, and `--session`.
+Each session includes the review records and post snapshots. Add
+`--source PATH` for each local evidence document that the term review needs.
+These extra documents are frozen and displayed with the proposals.
+
+Run `just review`. Review terms with the decision form. Add log passage comments
+in Notes. Tell AL when you finish, then stop the review server with Ctrl-C before
+import or cleanup.
+
+AL runs `just import-reviews ID` and reads `review-imports/*.json`. The report
+includes source snapshots, native responses, memo threads, and flags for changed
+sources. AL reconciles decisions against the reviewed version before applying
+approved edits. Import does not change prose, the term registry, or workflow state.
+
+After import, run `just clean-reviews ID` to remove the session scratch data.
+Keep the durable import report with the review records. Decide post links, commit,
+and publication in conversation.
 
 ## Start a post
 
@@ -77,8 +109,9 @@ them, but release checks require current reviews for the whole archive.
    checks and push committed work. It does not stage files or create a commit.
    Verify the deployment and live page.
 
-The agent maintains records. Raj approves terms, links, prose changes, commit, and
-publication. Submit a no-term or no-link result for confirmation too.
+AL maintains records. Raj approves terms, links, commit, and publication. AL may
+edit log drafts; ask before editing meditation prose. Submit a no-term or no-link
+result for confirmation when relevant.
 
 ## What preparation changes
 
@@ -105,18 +138,16 @@ These commands record agent work, not human approval. The example below assumes
 raj has already approved the named term and related-reading scope.
 
 ```sh
-just review meditations/studying --stage reader \
-  --note "Read the draft for readers planning self-study; the concept-tree example explains the central method."
-just review meditations/studying --stage references \
-  --note "Checked the concept-tree definition, evidence, and introductory post." \
-  --decision "Keep outline out of aliases because it has a broader meaning." \
-  --related meditations/pkm-to-pem
+just record-review logs/example --stage reader \
+  --note "Read the complete draft and checked its purpose, reader assumptions, and explanation."
+just record-review logs/example --stage references \
+  --note "Checked the approved term definitions, evidence, introductions, and post links."
 ```
 
 Repeat `--decision`, `--related`, `--question`, or `--blocking-question` as needed.
 Use the note and decisions to explain why selected related reading helps.
-Related-reading choices are internal editorial records; they do not insert links
-into article prose. Term cards separately show introductions and matched mentions.
+Related-reading choices are editorial records; they do not insert links into
+article prose. Term cards separately show introductions and matched mentions.
 
 The current scripts permit optional questions and block on blocking questions.
 That behavior is separate from approval: keep a proposed item out of applied

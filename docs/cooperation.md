@@ -14,14 +14,17 @@
 ## The normal exchange
 
 1. Write a meditation with `just write "Title"`, or ask for a log about specific work.
-2. Ask to prepare it. The agent reads the whole post and submits a small term and
-   link batch in a Markdown review page. Follow the [state machine](workflow.md).
-3. Approve, reject, defer, or request changes to candidate revisions. The agent
-   records your decisions, applies approved changes, and prepares the preview.
-4. Read the preview and revise. Repeat affected reviews and approvals after changes.
-5. Approve a specific version for commit. The agent checks and commits that version
-   with its required records. Approval to commit does not authorize publication.
-6. Approve publication separately. The agent verifies deployment and the live page.
+   Meditations have no terms. AL may edit log drafts during iteration.
+2. Ask to prepare it. AL reads the whole post and prepares the review material.
+   Follow the [state machine](workflow.md).
+3. Run `just review`. Decide term proposals and add comments to log passages in
+   Potato. Tell AL when you are done. AL imports responses, records scoped
+   decisions, and applies approved changes. Decide post links in conversation.
+4. Read the preview and revise. Use dedicated review sessions to examine ideas,
+   evidence, and writing. Repeat affected reviews and approvals after changes.
+5. Approve a specific version for commit in conversation. AL checks and commits
+   that version with its records. Approval to commit does not authorize publication.
+6. Approve publication separately. AL verifies deployment and the live page.
 
 Use the same preparation steps for a new post and an edited post. Keep log slugs
 and publication timestamps stable when revising them.

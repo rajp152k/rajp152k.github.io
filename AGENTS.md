@@ -19,13 +19,18 @@ state and decision history. After approval, apply the changes, record completed
 reviews, and run `just prepare`. Early draft previews are allowed. The scripts do
 not yet enforce the Markdown approval states.
 
-Meditations are raj's prose. Ask before editing them. Create or revise a log only
-when requested; load the repository skill `ops-log` from
-[.agents/skills/ops-log/SKILL.md](.agents/skills/ops-log/SKILL.md). If skill discovery
-is unavailable, read that file directly. Keep prose questions outside articles.
-Maintain records of actual work and actual decisions. Update `docs/progress.md`
-after each review batch, transition, or blocker. Keep chat updates short for phone
-reading: state, changes, decision needed, and a review link.
+Meditations are raj's prose and have no terms. Ask before editing them. Create a
+log only when requested; AL may edit log drafts during iteration. Load the
+repository skill `ops-log` from [.agents/skills/ops-log/SKILL.md](.agents/skills/ops-log/SKILL.md).
+If skill discovery is unavailable, read that file directly. Keep prose questions
+outside articles. All repository records are public-intended.
+
+Use Potato for term decisions and log comments. Raj runs `just review`, reviews in
+the browser, and tells AL when done. Import responses against the exact reviewed
+snapshots. Decide post links and final approval in conversation. Maintain records
+of actual work and decisions. Update `docs/progress.md` after each review batch,
+transition, or blocker. Keep chat updates concise and include detailed evidence
+in the review record.
 
 Use `.preparation.json` for completed review receipts and unresolved questions.
 Use Markdown front matter for raj's scoped approvals and workflow history.

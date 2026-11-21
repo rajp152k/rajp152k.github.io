@@ -18,6 +18,10 @@ setup” is not eligible merely because the post describes one. These are select
 examples, not approval of any current registry record. Existing terms, including
 `concept-tree`, require review under this rule; their presence is not approval.
 
+Meditations have no terms. Use this term process for logs. Eligibility is a
+selection judgment, not approval of a definition, aliases, evidence, introduction,
+or uses. Submit those details for raj's decision.
+
 ## Candidate states
 
 - `proposed`: the agent has submitted a complete candidate revision.
@@ -58,6 +62,11 @@ and the decision history. A decision must name its candidate revision.
 Approve a definition, its aliases, evidence, introduction, and use scope together.
 Approval of the word alone is not approval of a definition. Include existing matches
 for confirmation. Do not apply a new or revised shared record before approval.
+
+Review term proposals in Potato with their exact candidate revisions and source
+snapshots. Use the comment field for reasons and corrections. After raj says the
+session is done, AL imports the responses and records the scoped decisions here.
+Keep post-link decisions and final approval in conversation.
 
 ### Link proposal
 

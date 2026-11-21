@@ -9,19 +9,20 @@ Start with [Progress and next decisions](progress.md).
 - [Cooperation](cooperation.md): responsibilities and short handoffs.
 - [Editorial policy](editorial-policy.md): selection and approval rules.
 
-## Working from your phone
+## Review together
 
-Read the current review linked from Progress. Reply here with the post, candidate
-IDs, and your decision. Use normal language; the agent records the structured state.
-For example: “Approve T1 revision 2; reject T2; revise L1 to explain the connection.”
-The agent asks if the scope is unclear. A comment is not an approval.
+Use Potato for term decisions and comments on log drafts. Start the prepared
+review with `just review`, work in the browser, then tell AL when you are done.
+AL reads your responses and records the decisions against the reviewed revision.
+Decide post links and final commit or publication approval in conversation.
 
-The agent keeps each update short: current state, changes, decisions needed, and
-one link. Use small review batches while writing. Keep detailed evidence in the
-review page. Update Progress after each batch, state change, or blocker.
+Raj writes meditations with `just write "Title"`; meditations have no terms.
+AL drafts logs and may edit those drafts during iteration. Use dedicated review
+sessions to question the ideas, evidence, and writing. All repository records are
+public-intended.
 
-Open these files through your existing Markdown server. No new server or public
-publication is needed for this review.
+Keep updates concise and put detailed evidence in the review record. Update
+Progress after each batch, state change, or blocker.
 
 ## Reference
 

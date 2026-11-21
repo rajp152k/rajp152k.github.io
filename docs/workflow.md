@@ -17,8 +17,8 @@ now; revise the format with raj as we use it.
 `writing` → `curation` → `preview` → `commit-approved` → `committed` →
 `publish-approved` → `published`
 
-- **writing:** draft or revise the post. Raj writes meditations; the agent writes
-  logs only on request.
+- **writing:** draft or revise the post. Raj writes meditations with `just write`;
+  meditations have no terms. AL drafts logs on request and may edit those drafts.
 - **curation:** the agent has read the draft and submitted term and link proposals.
   Raj decides which to approve, reject, defer, or return for revision.
 - **preview:** curation is resolved and the rendered uses match raj's decisions.
@@ -58,6 +58,12 @@ The agent records factual transitions. Only raj supplies approval events. Keep
 commands and state changes separate: `just prepare` does not advance a gate.
 Early draft previews are allowed in `writing` and `curation`.
 
+Use Potato for term decisions and log comments. Raj starts the prepared review
+with `just review` and tells AL when done. AL imports responses against their
+source snapshots before recording or applying decisions. Resolve post-link
+questions and final approval in conversation. Browser activity alone does not
+advance a post state.
+
 ## Revision and return paths
 
 - A prose change returns an unpublished post to `writing`. Re-read the changed
@@ -75,8 +81,8 @@ Early draft previews are allowed in `writing` and `curation`.
 
 Keep review state in YAML front matter at
 `docs/reviews/<collection>/<slug>/cycle-<number>.md`. Start from the
-[review template](review-template.md). Keep article metadata separate. This avoids
-publishing internal decisions and keeps the post hash independent of state edits.
+[review template](review-template.md). Keep article metadata separate so the post
+hash is independent of state edits. All repository records are public-intended.
 
 Use these fields:
 

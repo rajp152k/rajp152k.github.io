@@ -1,7 +1,7 @@
 ---
 kind: work-status
-state: awaiting-review
-updated: 2026-11-15
+state: ready-for-review-batch
+updated: 2026-11-21
 ---
 
 # Progress
@@ -10,9 +10,10 @@ updated: 2026-11-15
 
 ## Now
 
-We are defining the writing process. No post has been selected for this session's
-first writing cycle. The workflow and record format are version 1, ready for raj's
-review. This page tracks the work; its state is not a post publication state.
+Raj accepted the Potato integration. Version 2.13.1 is installed with uv in
+`.venv-review`. Term forms, log notes, snapshot import, and cleanup passed a
+synthetic end-to-end test through the running application. No installed package
+source was inspected.
 
 ## Confirmed by raj
 
@@ -20,16 +21,19 @@ review. This page tracks the work; its state is not a post publication state.
 - Submit jargon and domain-specific terms, not ordinary phrases given local meaning.
 - Gate term curation and post linking with raj in the loop.
 - Use explicit states and transitions. Keep the working documents under `docs/`.
-- Use short chat updates and readable documents for phone review.
+- Raj writes meditations with `just write "Title"`; meditations have no terms.
+- AL drafts logs and may edit log drafts during iteration.
+- Use Potato for term decisions and passage comments on logs. Raj runs
+  `just review`, works in the browser, and tells AL when done.
+- Keep post-link decisions and final approval in conversation.
+- Keep repository records public-intended and use dedicated critical review sessions.
 
-## Ready to review
+## Current work
 
-- [Post states and transition guards](workflow.md).
-- [Candidate states and approval scope](curation.md).
-- [Markdown front-matter template](review-template.md).
-
-Next decisions: refine these state names or use them for the first post; name the
-post or writing topic. The agent will then link its review record here.
+Select the first real log and term review batch. AL queues numbered records with
+`just queue-review`; raj runs `just review`. Stop the server before importing with
+`just import-reviews ID` or removing imported scratch with `just clean-reviews ID`.
+See [Writing](writing.md#browser-review) for setup and evidence snapshots.
 
 ## Current limits
 
@@ -48,13 +52,11 @@ This does not prevent writing or draft previews.
 3. Review legacy terms and links with raj before a release.
 4. Refine the state format through use before implementing automatic enforcement.
 
-## Checks for this documentation pass
+## Checks
 
-- Parsed 15 Markdown documents and their YAML; checked 76 local links.
-- Passed 102 Python tests.
-- `just review-check` reports all 18 stages stale because the policy changed.
-- A separate design review found two guard gaps. The draft now blocks transition
-  on pending revisions and requires rendered uses to match raj's decisions.
-
-No article prose or term records were changed for this documentation pass. No
-publication was performed.
+Integration tests: 109 Python tests passed. The synthetic browser test saved a
+term approval and comment, an anchored log issue, and a reply. Import preserved
+them; cleanup removed scratch and retained the report. Release checks require
+fresh archive reviews; all 18 archive review stages are policy-stale.
+No article prose, term records, or editorial receipts have been changed for this
+integration. No publication was performed.
