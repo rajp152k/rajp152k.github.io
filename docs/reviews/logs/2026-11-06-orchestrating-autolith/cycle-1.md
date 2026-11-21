@@ -7,12 +7,19 @@ state: curation
 post_sha256: c19d9f95a7011f3867aff76f14fa1105a5406a6093aa228347521a83d78884dc
 terms:
   - id: T1
-    revision: 1
+    revision: 2
     state: proposed
     action: add
     record: t1-hmas
     decision: null
     applied_at: null
+    card:
+      name: HMAS
+      definition: 'Hierarchical multi-agent systems: systems that organize agents in layers.'
+      aliases: [hierarchical multi-agent systems]
+      passage: Hierarchical multi-agent systems (HMAS) organize agents in layers.
+      introduction: Context section of this log; explain the acronym without implying an implemented system.
+      use_scope: This log only. Link the expanded phrase and acronym in Context; keep the paper title citation without a nested term link.
 links: []
 decisions: []
 transitions: []
@@ -28,9 +35,9 @@ release:
 
 ## Now
 
-Approve, request changes, reject, or defer T1 revision 1 in Potato.
+Approve, request changes, reject, or defer T1 revision 2 in Potato.
 This is one candidate to test the approval flow, not a complete archive review.
-Skip the log comment item. Memo testing and Blog Update [1] come later.
+The terms-only session has no log comment item. Memo testing and Blog Update [1] come later.
 
 ## Reader review
 

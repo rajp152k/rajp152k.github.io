@@ -47,9 +47,13 @@ An unchanged embedding update is a no-op.
 AL prepares numbered review records in `docs/reviews/` and queues the selected
 records with `just queue-review RECORD...`. The command prints `.reviews/ID`;
 use the final `ID` component for import, cleanup, and `--session`.
-Each session includes the review records and post snapshots. Add
-`--source PATH` for each local evidence document that the term review needs.
-These extra documents are frozen and displayed with the proposals.
+Use `--terms-only` to review terms without log comment items. Run `just review`
+to open the last queued session, or use `--session ID` for an older session.
+Each term needs a `card` in its review record with `name`, `definition`, `aliases`,
+`passage`, `introduction`, and `use_scope`. Keep these fields short and complete.
+Review the card, then expand the evidence when needed. Each session includes full
+review records and post snapshots. Add `--source PATH` for each extra local
+evidence document; read these in the expandable evidence section.
 
 Run `just review`. Review terms with the decision form. Add log passage comments
 in Notes. Tell AL when you finish, then stop the review server with Ctrl-C before

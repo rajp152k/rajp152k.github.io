@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import html
 import json
 import re
 import shutil
@@ -38,7 +39,34 @@ def snapshot(root: Path, name: str, sources: dict) -> str:
     return data.decode("utf-8")
 
 
-def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | list[str] = ()) -> Path:
+def term_card(term: dict, item_id: str, evidence: list[tuple[str, str]]) -> str:
+    """Render escaped candidate details with full snapshots closed by default."""
+    card = term.get("card", {})
+    fields = (("definition", "Definition"), ("aliases", "Aliases"),
+              ("passage", "Exact passage"), ("introduction", "Introduction"),
+              ("use_scope", "Use scope"))
+    for key in ("name", *(key for key, _ in fields)):
+        if key not in card or not isinstance(card[key], (str, list)):
+            raise ValueError(f"Missing or invalid term card field {key}: {item_id}")
+    def escape(value: object) -> str:
+        return html.escape(str(value), quote=True)
+    rows = []
+    for key, label in fields:
+        value = card.get(key, "Not specified")
+        if isinstance(value, list):
+            value = ", ".join(value) or "None"
+        rows.append(f"<tr><th style='text-align:left;vertical-align:top;padding:4px 16px 4px 0'>{label}</th>"
+                    f"<td style='padding:4px 0'>{escape(value)}</td></tr>")
+    details = "".join(f"<details><summary>{escape(label)}</summary>"
+                      f"<pre style='white-space:pre-wrap'>{escape(text)}</pre></details>"
+                      for label, text in evidence)
+    return (f"<div><small>{escape(item_id)}</small><h3>{escape(card['name'])}</h3>"
+            f"<table>{''.join(rows)}</table>"
+            "<p>Approve these exact details and use scope.</p>" + details + "</div>")
+
+
+def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | list[str] = (),
+            *, terms_only: bool = False) -> Path:
     """Freeze complete records, posts, and named evidence. IDs include their scope."""
     sources, items = {}, []
     for name in extra_sources:
@@ -71,8 +99,10 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
             items.append({"id": item_id, "kind": "term", "entry": entry,
                           "candidate": term["id"], "revision": revision,
                           "record": name, "post": post_name,
-                          "text": f"TERM DECISION: {item_id}\n\nReview the exact candidate named above in this complete review record. Approval covers its exact details and use scope. Eligibility alone does not approve those details.\n\n{text}\n\nPOST SNAPSHOT\n\n{post}"})
-        if entry.startswith("logs/"):
+                          "text": term_card(term, item_id, [("Full review record", text),
+                              ("Full post snapshot", post)] + [(f"Evidence: {source}", sources[source]["text"])
+                                                             for source in extra_sources])})
+        if entry.startswith("logs/") and not terms_only:
             items.append({"id": f"{entry}:cycle-{cycle}:log", "kind": "log",
                           "entry": entry, "record": name, "post": post_name,
                           "text": post})
@@ -80,31 +110,34 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
         raise ValueError("No proposed terms or logs to review")
     if len({item["id"] for item in items}) != len(items):
         raise ValueError("Duplicate candidate or log IDs")
-    for item in items:
-        if item["kind"] == "term":
-            for name in extra_sources:
-                item["text"] += f"\n\nEVIDENCE SNAPSHOT: {name}\n\n{sources[name]['text']}"
-    payload = {"schema": 1, "potato_version": VERSION, "sources": sources, "items": items}
+    payload = {"schema": 2, "presentation": "term-card-v1", "potato_version": VERSION,
+               "sources": sources, "items": items, "terms_only": terms_only}
     session_id = digest(json.dumps(payload, sort_keys=True).encode())[:20]
     session = root / ".reviews" / session_id
     if session.exists():
         if json.loads((session / "manifest.json").read_text()) != payload:
             raise ValueError("Existing session manifest differs")
+        (root / ".reviews/current").write_text(session_id + "\n")
         return session
     session.mkdir(parents=True)
     dump(session / "manifest.json", payload)
-    dump(session / "data.json", [{"id": i["id"], "text": i["text"]} for i in items])
+    dump(session / "data.json", [{"id": i["id"],
+                                 "card_html": i["text"] if i["kind"] == "term" else "",
+                                 "text": i["text"] if i["kind"] == "log" else ""} for i in items])
     config = {"annotation_task_name": f"Blog review {session_id}",
               "task_dir": str(session.resolve()), "data_files": ["data.json"],
               "item_properties": {"id_key": "id", "text_key": "text"},
+              "instance_display": {"fields": [{"key": "card_html", "type": "html"}] +
+                                     ([] if terms_only else [{"key": "text", "type": "text"}])},
               "output_annotation_dir": "annotation_output", "export_annotation_format": "jsonl",
               "require_password": False, "annotation_ui": {"memos": True, "visibility": "shared"},
               "annotation_schemes": [
                   {"annotation_type": "radio", "name": "decision",
-                   "description": "Term decision only. Leave blank for log comments.",
+                   "description": "Decision for this candidate" if terms_only else "Term decision only. Leave blank for log comments.",
                    "labels": ["approve", "request changes", "reject", "defer"]},
                   {"annotation_type": "text", "name": "comment", "description": "Reasons and corrections"}]}
     (session / "config.yaml").write_text(yaml.safe_dump(config, sort_keys=False))
+    (root / ".reviews/current").write_text(session_id + "\n")
     return session
 
 
@@ -191,6 +224,28 @@ def clean(root: Path, session: Path) -> None:
     if evidence_hash != marker["evidence_sha256"]:
         raise ValueError("New responses exist; import again before cleaning")
     shutil.rmtree(session)
+    current = root / ".reviews/current"
+    if current.exists() and current.read_text().strip() == session.name:
+        current.unlink()
+
+
+def select_session(root: Path, session_id: str | None = None) -> Path:
+    """Prefer an explicit ID, then the last queued session, then a sole session."""
+    scratch = root / ".reviews"
+    current = scratch / "current"
+    if session_id is None and current.exists():
+        session_id = current.read_text().strip()
+    if session_id is None:
+        sessions = sorted(scratch.glob("*/manifest.json"))
+        if len(sessions) != 1:
+            raise ValueError("Queue a session with just queue-review, or pass --session ID")
+        session_id = sessions[0].parent.name
+    if not re.fullmatch(r"[0-9a-f]{20}", session_id):
+        raise ValueError("Invalid review session ID")
+    session = inside(scratch, session_id)
+    if not (session / "manifest.json").is_file():
+        raise ValueError("Review session is missing; queue it again or pass --session ID")
+    return session
 
 
 def main() -> None:
@@ -198,6 +253,7 @@ def main() -> None:
     sub = parser.add_subparsers(dest="command", required=True)
     queue = sub.add_parser("queue", help="Freeze numbered Markdown review records")
     queue.add_argument("--source", action="append", default=[], help="Also freeze a local evidence source")
+    queue.add_argument("--terms-only", action="store_true", help="Queue term decisions without log memo items")
     queue.add_argument("records", nargs="+")
     serve = sub.add_parser("serve", help="Start or resume one prepared session on localhost")
     serve.add_argument("--session")
@@ -207,15 +263,9 @@ def main() -> None:
     args = parser.parse_args()
     try:
         if args.command == "queue":
-            print(prepare(ROOT, args.records, args.source).relative_to(ROOT))
+            print(prepare(ROOT, args.records, args.source, terms_only=args.terms_only).relative_to(ROOT))
         elif args.command == "serve":
-            sessions = sorted((ROOT / ".reviews").glob("*/manifest.json"))
-            if args.session:
-                session = inside(ROOT / ".reviews", args.session)
-            elif len(sessions) == 1:
-                session = sessions[0].parent
-            else:
-                raise ValueError("Prepare one session with just queue-review, or pass --session ID")
+            session = select_session(ROOT, args.session)
             python = ROOT / ".venv-review/bin/python"
             version = subprocess.check_output([str(python), "-m", "potato", "--version"], text=True)
             if VERSION not in version:

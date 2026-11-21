@@ -17,14 +17,17 @@ class ReviewTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         (self.root / "logs").mkdir()
         self.post = self.root / "logs/probe.md"
         self.post.write_text("A full exact post.\n")
         self.record = self.root / "record.md"
         self.meta = {"kind": "post-review", "entry": "logs/probe", "cycle": 1,
                      "post_sha256": review.digest(self.post.read_bytes()),
-                     "terms": [{"id": "T1", "revision": 2, "state": "proposed"}]}
+                     "terms": [{"id": "T1", "revision": 2, "state": "proposed", "card": {
+                         "name": "Probe", "definition": "A test term.", "aliases": [],
+                         "passage": "A full exact post.", "introduction": "This log.",
+                         "use_scope": "This log only."}}]}
         self.write_record()
 
     def write_record(self):
@@ -110,6 +113,44 @@ class ReviewTests(unittest.TestCase):
         manifest = json.loads((session / "manifest.json").read_text())
         self.assertEqual(manifest["sources"]["evidence.md"]["text"], "Exact source passage")
         self.assertIn("Exact source passage", manifest["items"][0]["text"])
+
+    def test_card_escapes_candidate_and_evidence(self):
+        self.meta["terms"][0]["card"]["name"] = '<script>alert("x")</script>'
+        self.write_record()
+        session = review.prepare(self.root, ["record.md"], terms_only=True)
+        card = json.loads((session / "data.json").read_text())[0]["card_html"]
+        self.assertNotIn("<script>", card)
+        self.assertIn("&lt;script&gt;", card)
+        self.assertIn("<details><summary>Full post snapshot</summary>", card)
+        self.assertNotIn("<details open", card)
+        self.assertIn("A full exact post.", card)
+        self.assertEqual(len(json.loads((session / "manifest.json").read_text())["items"]), 1)
+        config = yaml.safe_load((session / "config.yaml").read_text())
+        self.assertEqual(config["instance_display"]["fields"], [{"key": "card_html", "type": "html"}])
+
+    def test_incomplete_card_refused(self):
+        del self.meta["terms"][0]["card"]["definition"]
+        self.write_record()
+        with self.assertRaisesRegex(ValueError, "term card field definition"):
+            self.prepare()
+
+    def test_current_selection_and_prior_evidence(self):
+        old = self.prepare()
+        self.save(old)
+        prior = {p.relative_to(old): p.read_bytes() for p in old.rglob("*") if p.is_file()}
+        new = review.prepare(self.root, ["record.md"], terms_only=True)
+        self.assertEqual(review.select_session(self.root), new)
+        self.assertEqual(review.select_session(self.root, old.name), old)
+        self.assertEqual(prior, {p.relative_to(old): p.read_bytes() for p in old.rglob("*") if p.is_file()})
+        self.assertEqual(review.native_evidence(new)["users"], {})
+        self.save(new)
+        review.import_session(self.root, new)
+        review.clean(self.root, new)
+        self.assertFalse((self.root / ".reviews/current").exists())
+        self.assertEqual(review.select_session(self.root), old)
+        (self.root / ".reviews/current").write_text("../outside")
+        with self.assertRaisesRegex(ValueError, "Invalid"):
+            review.select_session(self.root)
 
     def test_paths_cannot_escape(self):
         with self.assertRaisesRegex(ValueError, "escapes"):
