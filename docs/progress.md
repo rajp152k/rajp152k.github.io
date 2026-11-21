@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: second-log-feedback-imported
+state: narrator-revisions-awaiting-memo-review
 updated: 2026-11-21
 ---
 
@@ -10,22 +10,32 @@ updated: 2026-11-21
 
 ## Now
 
-Raj authorized the next prose pass: “alright revise the logs and then i'll do a review pass again”.
-All three logs are revised under the canonical [writing policy](writing.md#writing-policy),
-commit `971cf2f`, and the 11 imported memos. The new titles are **Meditating on logs**,
-**On Autolith**, and **A laboratory across machines**. Routes and dates are unchanged.
+Raj authorized the next pass: “okay - go ahead with the policy updates as well as a rewrite on the logs”.
+The canonical [voice policy](writing.md#writing-policy) now names Autolith as narrator:
+“I” for its actions, observations, and judgments; “we” for shared work; Raj for his
+distinct role. The voice will develop through review, with evidence-based attribution.
 
-Raj completed the second prose review: “okay - i'm done - not a lot this time - go ahead and read”.
-Session `df4e7bdfc52f266ba1d6` is [imported](../review-imports/df4e7bdfc52f266ba1d6-24f024c859e8372b.json).
-It contains one memo by `raj` on **Meditating on logs**, with no replies or
-whole-log responses. The [complete feedback](reviews/log-memo-feedback-cycle-2-2026-11-21.md)
-suggests naming Autolith and developing a first-person voice alongside “we” and Raj.
-No source changed before import. No prose or policy changes or approvals are inferred.
+All three logs introduce Autolith and use first-person narration where it helps.
+**Meditating on logs** distinguishes the author from shared work. **On Autolith**
+clarifies the conversational role, writing duties, and assessment of the setup
+checks. **A laboratory across machines** separates the narrator from runtime
+agents and gives the design judgments a first-person subject. Orch's work keeps
+its attribution. Titles, dates, routes, diagrams, and evidence limits are unchanged.
 
-The first log now opens with the authorship problem. The second groups setup and
-writing work, includes the requested `.files` link and a human-loop diagram, and
-explains the old prose template as history. The third distinguishes local results
-from proposed remote work. All use shared laboratory voice with individual attribution.
+Raj also directed: “do preserve terms and outlinks for now - i don't wish to re-evaluate those”.
+Existing curation choices are carried forward for this revision. Terms, registry,
+evidence phrases, link text, and destinations are preserved. No candidate votes
+are inferred and no term/outlink reconsideration is queued for this prose pass.
+
+New Potato session: `fd8ceec61c1ccea15dda`, with three complete frozen logs,
+native Notes, and optional whole-log comments. Run `just review` or
+`just review --session fd8ceec61c1ccea15dda` at http://127.0.0.1:8768/.
+The [third memo batch](reviews/log-memos-cycle-3-2026-11-21.md) records authority,
+edits, hashes, and the curation direction. New cycle-3 records track the current texts.
+
+The [second prose review](reviews/log-memo-feedback-cycle-2-2026-11-21.md) contains
+one memo on **Meditating on logs**. It informed this authorized pass. Its native
+import and all previous review evidence are preserved.
 
 The study and [complete inventory](reviews/archive-writing-inventory-2026-11-21.md)
 cover all 101 Markdown content files in pinned archive commit
@@ -62,8 +72,9 @@ posts were added. The term registry and prior sessions/imports are unchanged.
 
 HMAS, Lisp image T2:r2, and Simplified Technical English T7:r2 were applied at
 `c60af1e`. Registry definitions, aliases, and exact evidence quotes are unchanged.
-The revised passages and STE's historical quotation need renewed exact-use approval;
-the earlier decisions do not approve the revised texts.
+Cycle 2 recorded changed-use scopes as stale. Raj now explicitly directs us to
+preserve existing terms and outlinks for this revision without reevaluating them.
+Cycle-3 records capture that carry-forward direction; earlier evidence is unchanged.
 
 The [approval import](../review-imports/1c0ce0132fd10a6f26a8-403c434257318011.json)
 has no changed sources, comments, or memos. The
@@ -74,11 +85,20 @@ revision requests are retained. Rejected terms are absent from the registry.
 Selection policy is short and general. Writing docs cover definition references
 and revised cards. Review cards and public term pages use the same safe link
 renderer. Optional registry `entries` restrict matching to approved posts.
-Prior term decisions are preserved as history. Current scopes are listed in the new cycle-2 records.
+Prior term decisions are preserved as history. Current carry-forward scope is in the cycle-3 records.
 
 ## Checks
 
-For this prose pass: all three posts parse and render through the project Markdown
+For the narrator pass: all three posts parse and render through the project
+Markdown and article functions. Metadata, exact outgoing link markup, registry
+source phrases, and both diagram blocks match the previous revision. Four focused
+memo/snapshot/import tests pass. The new session has three full current texts,
+native Notes, and an optional comment form, with no responses yet. Import is
+pending Raj's review. Editorial receipts are stale; none were refreshed. No diagram
+browser checks were repeated because the diagrams did not change. No full build,
+broad suites, embedding update, push, or publication was run.
+
+For the previous prose pass: all three posts parse and render through the project Markdown
 and article functions. Dates, stable routes, registry source quotes, and strictly
 earlier internal-link targets pass. Both Mermaid diagrams render in Chromium;
 AL inspected the combined image. Four focused queue/import/snapshot tests pass.
@@ -130,11 +150,11 @@ and generated HTML checks.
 
 ## Next
 
-Read the second review's memo with Raj before choosing edits. Its null anchor and
-open-ended wording do not specify exact replacements or a complete voice rule.
-Renew affected exact term-use and link-placement approvals before completing the
-references reviews. The first log's empty curation results also need confirmation.
-All three posts are at `writing`, not release-ready. No push or publication is authorized.
+Raj reviews the new prose session with `just review`. After he finishes, stop the
+server and import native notes against the frozen texts. Preserve current terms
+and outlinks under his explicit direction; no curation reevaluation is requested.
+All three posts are at `writing`, not release-ready. Fresh editorial review is
+pending. No push or publication is authorized.
 
 The diagram deliberately leaves the blog checkout's host unspecified. It does
 not infer a cross-machine topology from the later orchestration proposal.

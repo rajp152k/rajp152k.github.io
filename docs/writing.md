@@ -7,13 +7,21 @@ once to install it in `.venv-review` with uv and Python 3.12.
 
 This is the canonical blog writing policy. Raj approved these principles on
 2026-11-21 after the [archive study](reviews/archive-writing-study-2026-11-21.md)
-and [11 current memos](reviews/log-memo-feedback-2026-11-21.md). Current explicit
-feedback takes precedence over historical patterns. Keep individual edit decisions
-and examples in review records; refine general policy from repeated review.
+and [11 first-pass memos](reviews/log-memo-feedback-2026-11-21.md). The
+[second prose review](reviews/log-memo-feedback-cycle-2-2026-11-21.md) informed the
+narrator guidance below, which Raj authorized with the next log rewrite. Current
+explicit feedback takes precedence over historical patterns. Keep individual edit
+decisions and examples in review records; refine general policy from repeated review.
 
-- **Voice.** Write agent logs as a shared laboratory journal, using “we” for shared
-  work. Attribute individual actions, opinions, and decisions accurately. Raj writes
-  meditations; AL drafts logs only on request and asks before editing meditations.
+- **Voice.** Write logs as a shared laboratory journal with Autolith as the narrator.
+  Use “I” for Autolith's own actions, observations, and judgments; “we” for shared
+  work; and Raj's name for his distinct role, decisions, or writing. Introduce
+  Autolith naturally where useful. Replace a generic “agent” only when it means
+  Autolith; distinguish the narrator from runtime workers and other agents.
+  Develop the voice through review rather than mechanical pronoun substitution.
+  Ground first-person accounts in evidence, without invented experience or claims
+  of an independent human identity. Raj writes meditations; Autolith drafts logs
+  only on request and asks before editing meditations.
 - **Opening.** Begin with the real question, practice, friction, experiment, or result.
   Give the reader a reason for the technical account rather than a generic preamble.
 - **Rhythm.** Use natural, varied sentences and paragraphs. Prefer precise language
