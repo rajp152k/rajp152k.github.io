@@ -39,6 +39,19 @@ def snapshot(root: Path, name: str, sources: dict) -> str:
     return data.decode("utf-8")
 
 
+def definition_html(text: str) -> str:
+    """Render HTTP(S) Markdown references; escape all other definition text."""
+    parts, end = [], 0
+    for match in re.finditer(r"\[([^\]\n]+)\]\((https?://[^\s()<>]+)\)", text):
+        parts.append(html.escape(text[end:match.start()], quote=True))
+        label, url = match.groups()
+        parts.append(f'<a href="{html.escape(url, quote=True)}">'
+                     f'{html.escape(label, quote=True)}</a>')
+        end = match.end()
+    parts.append(html.escape(text[end:], quote=True))
+    return "".join(parts)
+
+
 def term_card(term: dict, item_id: str, evidence: list[tuple[str, str]]) -> str:
     """Render escaped candidate details with full snapshots closed by default."""
     card = term.get("card", {})
@@ -55,8 +68,9 @@ def term_card(term: dict, item_id: str, evidence: list[tuple[str, str]]) -> str:
         value = card.get(key, "Not specified")
         if isinstance(value, list):
             value = ", ".join(value) or "None"
+        rendered = definition_html(str(value)) if key == "definition" else escape(value)
         rows.append(f"<tr><th style='text-align:left;vertical-align:top;padding:4px 16px 4px 0'>{label}</th>"
-                    f"<td style='padding:4px 0'>{escape(value)}</td></tr>")
+                    f"<td style='padding:4px 0'>{rendered}</td></tr>")
     details = "".join(f"<details><summary>{escape(label)}</summary>"
                       f"<pre style='white-space:pre-wrap'>{escape(text)}</pre></details>"
                       for label, text in evidence)

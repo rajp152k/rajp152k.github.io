@@ -4,19 +4,14 @@
 
 ## Candidate selection
 
-1. Read the complete post and state its intended reader.
-2. Look for jargon and domain-specific terms. Require a domain meaning beyond an
-   ordinary phrase's local use. Give the domain and evidence of that usage.
-3. Explain the reader's likely gap. Prefer a useful short definition over a list of
-   everything technical. Frequency alone does not qualify a term.
-4. Check existing records and the exact source contexts. Propose reuse only when
+1. Read the complete post. Assume a technical audience; omit routine vocabulary.
+2. Select a term only when it has a distinct domain meaning and a definition helps
+   the reader understand this post. Frequency alone does not qualify it.
+3. Prefer a few useful definitions. Make each definition sufficient on its own;
+   add a reference when it helps.
+4. Check existing records, exact contexts, and use scopes. Propose reuse only when
    meanings agree. Identify missing evidence and important exclusions.
 5. Submit a small batch. Raj decides; the agent records and applies the decision.
-
-For example, PCA is eligible for consideration as a technical name. “My working
-setup” is not eligible merely because the post describes one. These are selection
-examples, not approval of any current registry record. Existing terms, including
-`concept-tree`, require review under this rule; their presence is not approval.
 
 Meditations have no terms. Use this term process for logs. Eligibility is a
 selection judgment, not approval of a definition, aliases, evidence, introduction,
@@ -96,10 +91,9 @@ is allowed with those unresolved uses identified.
 
 ## Learn from decisions
 
-Keep raj's reasons with accepted and rejected examples. Separate his stated reason
-from the agent's interpretation. Propose a general rule only after there is enough
-evidence; ask raj to confirm it before changing policy. Better selection over time
-does not remove the approval gate.
+Keep individual decisions and reasons in review cards and their records, not in
+policy. Change policy only for new general selection principles confirmed by raj.
+Selection guidance does not remove the approval gate.
 
 Legacy registry entries and old review receipts are not proof of approval under
 this process. Review them with raj in batches; do not delete or approve them silently.

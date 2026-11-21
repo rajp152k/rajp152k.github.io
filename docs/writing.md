@@ -51,6 +51,8 @@ Use `--terms-only` to review terms without log comment items. Run `just review`
 to open the last queued session, or use `--session ID` for an older session.
 Each term needs a `card` in its review record with `name`, `definition`, `aliases`,
 `passage`, `introduction`, and `use_scope`. Keep these fields short and complete.
+Use `[title](https://...)` for a reference in a definition. The definition must
+explain the term without requiring the reader to follow the link.
 Review the card, then expand the evidence when needed. Each session includes full
 review records and post snapshots. Add `--source PATH` for each extra local
 evidence document; read these in the expandable evidence section.
@@ -63,6 +65,8 @@ AL runs `just import-reviews ID` and reads `review-imports/*.json`. The report
 includes source snapshots, native responses, memo threads, and flags for changed
 sources. AL reconciles decisions against the reviewed version before applying
 approved edits. Import does not change prose, the term registry, or workflow state.
+For `request changes`, revise the card, increase its revision, and queue it as
+`proposed`. That response is not approval to create the term.
 
 After import, run `just clean-reviews ID` to remove the session scratch data.
 Keep the durable import report with the review records. Decide post links, commit,

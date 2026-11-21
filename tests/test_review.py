@@ -128,6 +128,18 @@ class ReviewTests(unittest.TestCase):
         config = yaml.safe_load((session / "config.yaml").read_text())
         self.assertEqual(config["instance_display"]["fields"], [{"key": "card_html", "type": "html"}])
 
+    def test_definition_references_are_clickable_and_escaped(self):
+        definition = '<b>State</b>. See [A & B](https://example.org/doc?a=1&b=2).'
+        self.meta["terms"][0]["card"]["definition"] = definition
+        self.write_record()
+        session = review.prepare(self.root, ["record.md"], terms_only=True)
+        card = json.loads((session / "data.json").read_text())[0]["card_html"]
+        self.assertIn('<a href="https://example.org/doc?a=1&amp;b=2">A &amp; B</a>', card)
+        self.assertIn('&lt;b&gt;State&lt;/b&gt;', card)
+        self.assertNotIn('<b>State</b>', card)
+        self.assertNotIn('<a ', review.definition_html('[unsafe](javascript:alert(1))'))
+        self.assertNotIn('<a ', review.definition_html('[relative](/local)'))
+
     def test_only_proposed_terms_are_queued(self):
         for index, state in enumerate(("applied", "approved", "rejected", "deferred",
                                        "stale", "revision-requested"), start=2):

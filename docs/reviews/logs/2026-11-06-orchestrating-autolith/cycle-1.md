@@ -22,10 +22,10 @@ terms:
       use_scope: This log only. Link the expanded phrase and acronym in Context; keep the paper title citation without a nested term link.
   - id: T2
     revision: 1
-    state: proposed
+    state: rejected
     action: add
     record: t2-peer-discovery
-    decision: null
+    decision: D3
     applied_at: null
     card:
       name: peer discovery
@@ -44,6 +44,12 @@ decisions:
     at: '2026-11-21T12:57:02Z'
     evidence: 'review-imports/c190bfe8095e236adca4-33a824290d229925.json; user raj; item logs/2026-11-06-orchestrating-autolith:cycle-1:T1:r2'
     reason: null
+  - id: D3
+    actor: raj
+    action: reject
+    scope: 'T2:r1: exact reviewed candidate and uses'
+    evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-11-06-orchestrating-autolith:cycle-1:T2:r1
+    reason: generic - not a jargon
 transitions: []
 blockers: []
 release:
@@ -59,10 +65,9 @@ release:
 
 Raj approved T1 revision 2 in Potato. Applied the exact candidate to `terms.json`.
 That decision and its provenance are unchanged. Do not queue it again.
-The all-log batch adds **T2 revision 1, peer discovery**, for raj's decision.
-The [Using Autolith review](../2026-10-07-using-autolith/cycle-1.md) also proposes
-VPS and inference with explicit uses in this log. Those two cards appear once
-in the shared terms-only session. The post stays in curation.
+Raj rejected T2 revision 1, peer discovery, as generic rather than jargon.
+He also rejected the VPS and inference proposals from the Using Autolith record,
+including uses in this log. No new candidates are queued for this log.
 
 ## Reader review
 
@@ -176,7 +181,8 @@ know agent coordination and transport terms. HMAS already has a scoped decision.
 Its definition, source quote, aliases, introduction, post hash, and uses have not
 changed. No new HMAS use occurs in the other logs. Preserve D1 and T1:r2.
 
-The all-log review also proposes these uses from the Using Autolith record:
+The original all-log review proposed these uses from the Using Autolith record;
+raj rejected both candidates, including these uses:
 
 - VPS: two `virtual private server` body occurrences in Context. Mark the first.
 - Inference: two body occurrences, in Separate contexts and one task owner and
@@ -204,3 +210,12 @@ No other new term card is needed for this log in this batch:
 These are AL's screening choices, not rejection or deferral decisions by raj.
 This is a term review, not a completed post-link review. All new candidates wait
 for explicit decisions. No registry or article edits were made for this batch.
+
+## Imported all-log decisions
+
+Source: [cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json](../../../../review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json).
+`changed_sources` is empty. These are raj's final responses to revision 1.
+Revision requests do not approve revision 2. The frozen import retains each
+original card and its source snapshots.
+
+- D3, T2:r1: **reject**. Raj: "generic - not a jargon"

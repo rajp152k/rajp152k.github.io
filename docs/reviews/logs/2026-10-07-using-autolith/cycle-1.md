@@ -8,10 +8,10 @@ post_sha256: 0054f49ad70df541e9934ec66af9b8416b5cd88a116748ae41b7d6a3c82bd62c
 terms:
   - id: T1
     revision: 1
-    state: proposed
+    state: rejected
     action: add
     record: t1-vps
-    decision: null
+    decision: D1
     applied_at: null
     card:
       name: VPS
@@ -21,7 +21,7 @@ terms:
       introduction: 'After that sentence in Context, add: A virtual private server (VPS) is a virtual machine with reserved resources on a shared physical server.'
       use_scope: First eligible body use in Using Autolith and Orchestrating Autolith. Skip headings and all meditations. No other logs match.
   - id: T2
-    revision: 1
+    revision: 2
     state: proposed
     action: add
     record: t2-lisp-image
@@ -29,17 +29,17 @@ terms:
     applied_at: null
     card:
       name: Lisp image
-      definition: A Lisp environment with its loaded program code and runtime data.
+      definition: 'A Lisp environment with its loaded program code and runtime data. See [What is a Lisp image?](https://stackoverflow.com/questions/480083/what-is-a-lisp-image).'
       aliases: [Common Lisp image]
       passage: Autolith runs in a live Common Lisp image.
       introduction: 'After that sentence in Context, add: A Lisp image is an environment with its loaded program code and runtime data.'
       use_scope: First eligible body use in Using Autolith only. Do not match the bare word image or add uses to other posts.
   - id: T3
     revision: 1
-    state: proposed
+    state: rejected
     action: add
     record: t3-fork
-    decision: null
+    decision: D3
     applied_at: null
     card:
       name: fork
@@ -50,10 +50,10 @@ terms:
       use_scope: First eligible body use in Using Autolith only. Exclude the fork mention in Project Outlines and all other meditations.
   - id: T4
     revision: 1
-    state: proposed
+    state: rejected
     action: add
     record: t4-text-embedding
-    decision: null
+    decision: D4
     applied_at: null
     card:
       name: text embedding
@@ -64,10 +64,10 @@ terms:
       use_scope: First eligible body use in Using Autolith only. Blog Update [0] is evidence, not an annotation target. Exclude all meditations.
   - id: T5
     revision: 1
-    state: proposed
+    state: rejected
     action: add
     record: t5-inference
-    decision: null
+    decision: D5
     applied_at: null
     card:
       name: inference
@@ -78,10 +78,10 @@ terms:
       use_scope: First eligible body use in Using Autolith and Orchestrating Autolith. Covers embedding and agent model execution, not logical deduction. Exclude all meditations.
   - id: T6
     revision: 1
-    state: proposed
+    state: rejected
     action: add
     record: t6-front-matter
-    decision: null
+    decision: D6
     applied_at: null
     card:
       name: front matter
@@ -91,7 +91,7 @@ terms:
       introduction: 'After that sentence in Bringing the log rules into Autolith, add: Front matter is metadata at the start of a document, before its main text.'
       use_scope: First eligible body use in Using Autolith only. Metadata blocks are not term uses. No other archive body contains this phrase.
   - id: T7
-    revision: 1
+    revision: 2
     state: proposed
     action: add
     record: t7-simplified-technical-english
@@ -99,18 +99,57 @@ terms:
     applied_at: null
     card:
       name: Simplified Technical English
-      definition: A controlled form of English with writing rules and a dictionary for technical documentation.
+      definition: 'A controlled form of English with writing rules and a dictionary for technical documentation. See [ASD-STE100, Issue 9 (January 2025)](https://asd-ste100.org/STE_downloads.html), the original specification (free copy by request).'
       aliases: []
       passage: New prose uses Simplified Technical English.
       introduction: 'After that sentence in Bringing the log rules into Autolith, add: Simplified Technical English is a controlled form of English with writing rules and a dictionary for technical documentation.'
       use_scope: First eligible body use of this exact name in Using Autolith only. Do not alias Simple Technical English or claim formal compliance.
 links: []
-decisions: []
+decisions:
+  - id: D1
+    actor: raj
+    action: reject
+    scope: 'T1:r1: exact reviewed candidate and uses'
+    evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-10-07-using-autolith:cycle-1:T1:r1
+    reason: 'too simple - my audience knows this sort of stuff already - they''re techincal folks '
+  - id: D7
+    actor: raj
+    action: request changes
+    scope: 'T7:r1: exact reviewed candidate and uses'
+    evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-10-07-using-autolith:cycle-1:T7:r1
+    reason: 'should have a link to the original doc in the definition - asd-ste-100 one '
+  - id: D6
+    actor: raj
+    action: reject
+    scope: 'T6:r1: exact reviewed candidate and uses'
+    evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-10-07-using-autolith:cycle-1:T6:r1
+    reason: 'not jargon, too simple '
+  - id: D2
+    actor: raj
+    action: request changes
+    scope: 'T2:r1: exact reviewed candidate and uses'
+    evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-10-07-using-autolith:cycle-1:T2:r1
+    reason: 'have a link to this https://stackoverflow.com/questions/480083/what-is-a-lisp-image in the definition '
+  - id: D3
+    actor: raj
+    action: reject
+    scope: 'T3:r1: exact reviewed candidate and uses'
+    evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-10-07-using-autolith:cycle-1:T3:r1
+    reason: null
+  - id: D4
+    actor: raj
+    action: reject
+    scope: 'T4:r1: exact reviewed candidate and uses'
+    evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-10-07-using-autolith:cycle-1:T4:r1
+    reason: null
+  - id: D5
+    actor: raj
+    action: reject
+    scope: 'T5:r1: exact reviewed candidate and uses'
+    evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-10-07-using-autolith:cycle-1:T5:r1
+    reason: null
 transitions: []
-blockers:
-  - issue: The registry has no per-post annotation filter; some proposed spellings also occur in meditations.
-    owner: AL
-    resolution: Enforce the approved log-only scopes before applying any affected candidate.
+blockers: []
 release:
   commit: null
   deployed_commit: null
@@ -122,10 +161,10 @@ release:
 
 ## Now
 
-Decide **T1 through T7, revision 1**, in the shared terms-only Potato session.
-Each decision covers the exact definition, aliases, source evidence, proposed
-introduction sentence, and named log uses together. No terms or prose were
-changed. No decision has been supplied for this batch.
+Raj rejected T1, T3, T4, T5, and T6 revision 1. He requested reference links
+for T2 and T7. Only **T2:r2 and T7:r2** are proposed now. Their definitions add
+the requested links; introductions, aliases, passages, and uses are unchanged.
+No new registry or prose changes are approved or applied.
 
 ## Reader review
 
@@ -134,7 +173,8 @@ not completed side projects or a new Autolith feature. The intended reader knows
 basic programming but may not know Lisp runtime concepts, model execution, or
 the difference between a repository fork and an installed release.
 
-The seven cards address those gaps and the post format. This is not a glossary
+The original seven proposals addressed those gaps and the post format.
+Raj rejected five as recorded below; only two revised cards are pending. This is not a glossary
 of every implementation detail. Domain evidence and its limits are in the
 [frozen evidence notes](../../term-domain-evidence.md).
 
@@ -154,7 +194,7 @@ are proposed use scopes, not a change to current matching or approval policy.
 
 ## T1: VPS
 
-- Proposed registry ID: `vps`; domain: server virtualization.
+- Original proposal registry ID: `vps`; domain: server virtualization.
 - Reader need: expand the acronym and explain the machine used for the setup.
 - Current evidence: the Context sentence in the card. The AWS definition supplies
   the virtualization meaning that this sentence does not explain.
@@ -167,7 +207,13 @@ are proposed use scopes, not a change to current matching or approval policy.
 
 ## T2: Lisp image
 
-- Proposed registry ID: `lisp-image`; domain: Lisp runtime systems.
+Revision 2 adds the requested [Stack Overflow reference](https://stackoverflow.com/questions/480083/what-is-a-lisp-image)
+to the definition. Rainer Joswig explains saved functions, values, and symbols
+and restarting from a saved image. Retrieved through web search; direct retrieval
+returned HTTP 403. The short definition still describes the live environment.
+
+
+- Original proposal registry ID: `lisp-image`; domain: Lisp runtime systems.
 - Reader need: distinguish a running environment from a checkout or installation.
 - Current evidence: “Autolith runs in a live Common Lisp image.” The later
   paragraph distinguishes private changes to the running image from source work.
@@ -178,7 +224,7 @@ are proposed use scopes, not a change to current matching or approval policy.
 
 ## T3: fork
 
-- Proposed registry ID: `fork`; domain: source-code collaboration.
+- Original proposal registry ID: `fork`; domain: source-code collaboration.
 - Reader need: distinguish raj's independent repository from a local checkout,
   branch, and upstream project.
 - Current evidence: the card sentence and “The checkout has raj's fork as its
@@ -190,7 +236,7 @@ are proposed use scopes, not a change to current matching or approval policy.
 
 ## T4: text embedding
 
-- Proposed registry ID: `text-embedding`; domain: machine-learning text representation.
+- Original proposal registry ID: `text-embedding`; domain: machine-learning text representation.
 - Reader need: connect the embedding updater to its stored numerical vectors.
 - Current evidence: the card sentence and “During the setup checks, existing
   entries reused their stored vectors.”
@@ -206,7 +252,7 @@ are proposed use scopes, not a change to current matching or approval policy.
 
 ## T5: inference
 
-- Proposed registry ID: `inference`; domain: machine learning.
+- Original proposal registry ID: `inference`; domain: machine learning.
 - Reader need: distinguish model execution from reusing saved vectors, and from
   keeping an agent's state without running its model.
 - Current evidence: the card sentence and the setup-check paragraph about no new
@@ -220,7 +266,7 @@ are proposed use scopes, not a change to current matching or approval policy.
 
 ## T6: front matter
 
-- Proposed registry ID: `front-matter`; domain: document and static-site formats.
+- Original proposal registry ID: `front-matter`; domain: document and static-site formats.
 - Reader need: distinguish the title/date metadata block from the article body.
 - Current evidence: the card sentence, plus title/date blocks in all three logs.
   Jekyll documents the established term; this blog does not use Jekyll.
@@ -229,7 +275,12 @@ are proposed use scopes, not a change to current matching or approval policy.
 
 ## T7: Simplified Technical English
 
-- Proposed registry ID: `simplified-technical-english`; domain: technical writing.
+Revision 2 adds [ASD-STE100 Issue 9, January 2025](https://asd-ste100.org/STE_downloads.html)
+to the definition. The official page offers a free copy of the original
+specification by request. No direct specification PDF was retrieved.
+
+
+- Original proposal registry ID: `simplified-technical-english`; domain: technical writing.
 - Reader need: distinguish the named controlled language from a general request
   for short or simple prose.
 - Current evidence: the card sentence and “Short sentences must still contain
@@ -258,8 +309,21 @@ Meditation matches are listed above only to prevent accidental annotation.
 No new use of HMAS occurs. Its applied T1:r2 and approval provenance in the
 orchestration review are unchanged.
 
-The two cross-log candidates (VPS and inference) belong to this record once;
-their cards explicitly include the later log. Do not queue duplicate reuse
-cards for the same proposed definition and named uses. No post-link changes are
+Raj rejected VPS and inference, including their proposed uses in the later log. No post-link changes are
 proposed. Existing archive review receipts remain stale; this preparation is not
 a completed references review, post commit approval, or publication approval.
+
+## Imported all-log decisions
+
+Source: [cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json](../../../../review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json).
+`changed_sources` is empty. These are raj's final responses to revision 1.
+Revision requests do not approve revision 2. The frozen import retains each
+original card and its source snapshots.
+
+- D1, T1:r1: **reject**. Raj: "too simple - my audience knows this sort of stuff already - they're techincal folks "
+- D7, T7:r1: **request changes**. Raj: "should have a link to the original doc in the definition - asd-ste-100 one "
+- D6, T6:r1: **reject**. Raj: "not jargon, too simple "
+- D2, T2:r1: **request changes**. Raj: "have a link to this https://stackoverflow.com/questions/480083/what-is-a-lisp-image in the definition "
+- D3, T3:r1: **reject**. No reason supplied.
+- D4, T4:r1: **reject**. No reason supplied.
+- D5, T5:r1: **reject**. No reason supplied.
