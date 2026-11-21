@@ -118,6 +118,19 @@ class RegistryTests(unittest.TestCase):
         }])
         self.assertEqual(report["entries"], 2)
 
+    def test_entry_scope_validation(self):
+        self.row["entries"] = [self.entry.key]
+        self.assertEqual(self.load().terms[0].entries, (self.entry.key,))
+        for value in [None, [], "all", [True], [[]], ["logs/missing"], [self.entry.key, self.entry.key]]:
+            self.row["entries"] = value
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                self.load()
+        other = Entry("meditations", "other", "Other", date(2026, 1, 2), "Orch coordinates.")
+        self.row["entries"] = [other.key]
+        self.path.write_text(json.dumps(self.data), encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "introduction and sources"):
+            load_terms([self.entry, other], self.path)
+
 
 class TransformTests(unittest.TestCase):
     def setUp(self):

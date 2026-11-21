@@ -14,6 +14,40 @@
           "quote": "Hierarchical multi-agent systems (HMAS) organize agents in layers."
         }
       ]
+    },
+    {
+      "id": "lisp-image",
+      "name": "Lisp image",
+      "aliases": [
+        "Common Lisp image"
+      ],
+      "definition": "A Lisp environment with its loaded program code and runtime data. See [What is a Lisp image?](https://stackoverflow.com/questions/480083/what-is-a-lisp-image).",
+      "introduction": "logs/2026-10-07-using-autolith",
+      "entries": [
+        "logs/2026-10-07-using-autolith"
+      ],
+      "sources": [
+        {
+          "entry": "logs/2026-10-07-using-autolith",
+          "quote": "Autolith runs in a live Common Lisp image."
+        }
+      ]
+    },
+    {
+      "id": "simplified-technical-english",
+      "name": "Simplified Technical English",
+      "aliases": [],
+      "definition": "A controlled form of English with writing rules and a dictionary for technical documentation. See [ASD-STE100, Issue 9 (January 2025)](https://asd-ste100.org/STE_downloads.html), the original specification (free copy by request).",
+      "introduction": "logs/2026-10-07-using-autolith",
+      "entries": [
+        "logs/2026-10-07-using-autolith"
+      ],
+      "sources": [
+        {
+          "entry": "logs/2026-10-07-using-autolith",
+          "quote": "New prose uses Simplified Technical English."
+        }
+      ]
     }
   ]
 }

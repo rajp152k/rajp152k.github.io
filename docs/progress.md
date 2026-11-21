@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: revised-terms-awaiting-approval
+state: approved-terms-applied
 updated: 2026-11-21
 ---
 
@@ -10,46 +10,35 @@ updated: 2026-11-21
 
 ## Now
 
-Run `just review` for session `1c0ce0132fd10a6f26a8`: **two revised term cards**,
-Lisp image T2:r2 and Simplified Technical English T7:r2. Both are proposed,
-not approved or created. Each definition includes the reference raj requested.
-HMAS T1:r2 is the one applied term.
+Raj approved Lisp image T2:r2 and Simplified Technical English T7:r2 in session
+`1c0ce0132fd10a6f26a8`. Both are now in `terms.json`, with the exact approved
+definitions, reference links, aliases, and source passages. Each has one generated
+reference in Using Autolith only. HMAS is the third term, in Orchestrating Autolith.
 
-## Current work
+## Decisions and docs
 
-Imported [raj's eight responses](../review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json)
-with no changed sources. Recorded six rejections and two revision requests in
-[Using Autolith](reviews/logs/2026-10-07-using-autolith/cycle-1.md) and
-[Orchestrating Autolith](reviews/logs/2026-11-06-orchestrating-autolith/cycle-1.md).
-Rejected candidates are not queued again. The first log has no candidates;
-its [empty batch](reviews/logs/2026-10-06-two-collections-one-archive/cycle-1.md)
-awaits confirmation in conversation.
+The [approval import](../review-imports/1c0ce0132fd10a6f26a8-403c434257318011.json)
+has no changed sources, comments, or memos. The
+[Using Autolith record](reviews/logs/2026-10-07-using-autolith/cycle-1.md)
+contains both approvals and applied states. The earlier six rejections and two
+revision requests are retained. Rejected terms are absent from the registry.
 
-The two revised cards keep their previous meanings, introductions, aliases,
-and uses. They add the Stack Overflow reference and the official ASD-STE100
-Issue 9 reference. The official site offers the original specification by
-request. No meditation annotations or article edits are proposed by this revision.
-Prior sessions, responses, and HMAS approval provenance are retained.
+Selection policy is short and general. Writing docs cover definition references
+and revised cards. Review cards and public term pages use the same safe link
+renderer. Optional registry `entries` restrict matching to approved posts.
+Article prose, HMAS, prior sessions, and imports are preserved.
 
-Selection guidance now assumes a technical audience, omits routine vocabulary,
-and favors a few useful, sufficient definitions. Specific decisions are in the
-review records, not policy. Raj still approves exact revisions and use scopes.
+## Checks
+
+39 relevant tests pass: 26 term tests and 13 review tests. Registry validation and
+`just build` pass. Generated HTML has three approved post references. Both new
+definition links appear on term pages, the term index, and the article panel.
+No meditations or other posts have new annotations. No browser checks or full
+release suite were run.
 
 ## Next
 
-1. Review the two revised cards. A revision request is not approval.
-2. After approval, apply only the named changes and check their exact uses.
-   Public term pages need clickable definition references before application;
-   the review cards support them now. The registry has no per-post filter;
-   verify the two exact-name scopes before applying.
-3. Write Blog Update [1] only when requested. Commit and publish separately.
-
-## Checks and limits
-
-13 review tests pass, including safe clickable definition references. Data checks
-verify the two proposed r2 items, frozen source hashes, and no selected decisions.
-No browser checks or full release suite were run for this revision.
-
-Earlier work passed 117 Python tests and eight native Potato card checks.
-Known release blockers are unchanged: 18 stale archive review stages and
-14 browser failures with removed-term and removed-link fixtures. No publication.
+The first log's [empty batch](reviews/logs/2026-10-06-two-collections-one-archive/cycle-1.md)
+still needs confirmation in conversation. Post-link and full editorial reviews
+are separate. There are 18 stale review stages; earlier browser failures concern
+removed-term and removed-link fixtures. No new log or publication is part of this work.

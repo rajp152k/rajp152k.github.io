@@ -4,6 +4,7 @@ from __future__ import annotations
 from html import escape
 from typing import Iterable, Mapping
 
+from definition_links import definition_html
 from archive import Entry
 from terms import Mention, Term
 
@@ -45,7 +46,7 @@ def term_card(term: Term, entries: Mapping[str, Entry], mentions: Iterable[Menti
     other_mentions = [mention for mention in mentions if mention.entry_key not in linked]
     return (
         f'<{heading} tabindex="-1">{escape(term.name)}</{heading}>'
-        f'<p>{escape(term.definition)}</p>'
+        f'<p>{definition_html(term.definition)}</p>'
         f'{start}'
         f'<{subheading}>Definition sources</{subheading}><ul class="term-sources">{sources}</ul>'
         f'<{subheading}>Other posts</{subheading}>'
@@ -76,7 +77,7 @@ def article_panel(terms: Iterable[Term], entries: Mapping[str, Entry], mentions:
 
 def terms_index(terms: Iterable[Term]) -> str:
     rows = "".join(
-        f'<li><h2><a href="{term.url}">{escape(term.name)}</a></h2><p>{escape(term.definition)}</p></li>'
+        f'<li><h2><a href="{term.url}">{escape(term.name)}</a></h2><p>{definition_html(term.definition)}</p></li>'
         for term in sorted(terms, key=lambda term: (term.name.casefold(), term.id))
     )
     return f'<h1>Terms and references</h1><p>Names and ideas from the archive. Select a term for its sources and related posts.</p><ul class="term-page-list">{rows}</ul>'

@@ -226,8 +226,12 @@ words, ignores case, and prefers the longest alias. Generated spans do not
 change Markdown source. Search and embeddings use the original post. `/terms/`
 and `/terms/<id>/` are navigation pages, not archive entries.
 
-The registry has no per-post scope filter. Check the complete mention report
-against the approved scope before committing a term and after archive edits.
+Set optional `entries` to a nonempty list of approved archive entry keys to
+restrict matching. Validation requires known, unique keys and includes the
+introduction and source entries in that list. Without `entries`, matching has
+no per-post restriction. Check the mention report against the approved scope.
+Definition references use `[title](https://...)`; review cards and public pages
+render only HTTP(S) links and escape other HTML.
 
 Record validation failure stops the build before preview replacement. Builds use
 saved records without model calls. Term-only changes need no embedding update.

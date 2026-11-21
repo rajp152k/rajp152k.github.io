@@ -22,11 +22,11 @@ terms:
       use_scope: First eligible body use in Using Autolith and Orchestrating Autolith. Skip headings and all meditations. No other logs match.
   - id: T2
     revision: 2
-    state: proposed
+    state: applied
     action: add
     record: t2-lisp-image
-    decision: null
-    applied_at: null
+    decision: D8
+    applied_at: '2026-11-21T14:09:54Z'
     card:
       name: Lisp image
       definition: 'A Lisp environment with its loaded program code and runtime data. See [What is a Lisp image?](https://stackoverflow.com/questions/480083/what-is-a-lisp-image).'
@@ -92,11 +92,11 @@ terms:
       use_scope: First eligible body use in Using Autolith only. Metadata blocks are not term uses. No other archive body contains this phrase.
   - id: T7
     revision: 2
-    state: proposed
+    state: applied
     action: add
     record: t7-simplified-technical-english
-    decision: null
-    applied_at: null
+    decision: D9
+    applied_at: '2026-11-21T14:09:54Z'
     card:
       name: Simplified Technical English
       definition: 'A controlled form of English with writing rules and a dictionary for technical documentation. See [ASD-STE100, Issue 9 (January 2025)](https://asd-ste100.org/STE_downloads.html), the original specification (free copy by request).'
@@ -148,6 +148,22 @@ decisions:
     scope: 'T5:r1: exact reviewed candidate and uses'
     evidence: review-imports/cdb5159a86f2dc71b13c-56ec7e34f4daeb94.json; user raj; item logs/2026-10-07-using-autolith:cycle-1:T5:r1
     reason: null
+  - id: D8
+    actor: raj
+    action: approve
+    scope: 'T2:r2: exact reviewed candidate and uses'
+    at: '2026-11-21T14:09:54Z'
+    evidence: review-imports/1c0ce0132fd10a6f26a8-403c434257318011.json; user raj; item
+      logs/2026-10-07-using-autolith:cycle-1:T2:r2
+    reason: null
+  - id: D9
+    actor: raj
+    action: approve
+    scope: 'T7:r2: exact reviewed candidate and uses'
+    at: '2026-11-21T14:09:54Z'
+    evidence: review-imports/1c0ce0132fd10a6f26a8-403c434257318011.json; user raj; item
+      logs/2026-10-07-using-autolith:cycle-1:T7:r2
+    reason: null
 transitions: []
 blockers: []
 release:
@@ -162,9 +178,9 @@ release:
 ## Now
 
 Raj rejected T1, T3, T4, T5, and T6 revision 1. He requested reference links
-for T2 and T7. Only **T2:r2 and T7:r2** are proposed now. Their definitions add
-the requested links; introductions, aliases, passages, and uses are unchanged.
-No new registry or prose changes are approved or applied.
+for T2 and T7, then approved **T2:r2 and T7:r2** in the next session.
+Both are applied with their exact definitions, reference links, aliases, and
+source passages. Matching is limited to this log. Article prose was not edited.
 
 ## Reader review
 
@@ -174,7 +190,7 @@ basic programming but may not know Lisp runtime concepts, model execution, or
 the difference between a repository fork and an installed release.
 
 The original seven proposals addressed those gaps and the post format.
-Raj rejected five as recorded below; only two revised cards are pending. This is not a glossary
+Raj rejected five as recorded below and approved the two revised cards. This is not a glossary
 of every implementation detail. Domain evidence and its limits are in the
 [frozen evidence notes](../../term-domain-evidence.md).
 
@@ -182,9 +198,10 @@ of every implementation detail. Domain evidence and its limits are in the
 
 The card's Exact passage is an exact quote from the current post. It establishes
 where the reader meets the term. Some passages do not explain the full meaning.
-For each candidate, the Introduction field gives one exact proposed sentence.
-After approval, insert it at that location and use that exact new sentence as
-definition evidence in the registry. Do not quote it as existing archive prose.
+For each candidate, the Introduction field records the proposed placement and
+sentence. This application adds registry definitions and generated links only,
+as requested. It keeps the original passages as source quotes and does not
+insert the proposed sentences into article prose.
 The external references in the evidence notes support the proposed meanings.
 
 All new records would use the default `annotation: first-term`. Mark only the
@@ -327,3 +344,14 @@ original card and its source snapshots.
 - D3, T3:r1: **reject**. No reason supplied.
 - D4, T4:r1: **reject**. No reason supplied.
 - D5, T5:r1: **reject**. No reason supplied.
+
+## Applied revision 2
+
+Raj approved T2:r2 and T7:r2 in session `1c0ce0132fd10a6f26a8`.
+The [import](../../../../review-imports/1c0ce0132fd10a6f26a8-403c434257318011.json) reports no changed sources, comments, or memos. D8 and D9 retain the item IDs and approval provenance.
+
+Created `lisp-image` and `simplified-technical-english` with the exact approved
+definitions, reference links, aliases, and source passages. Both use this log
+as their introduction and restrict annotations to this log. The first eligible
+body occurrence is linked. No prose introductions were inserted. Article prose,
+HMAS, rejected candidates, and prior review evidence are unchanged.

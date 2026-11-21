@@ -276,7 +276,7 @@ def build_site(entries: list[Entry], connection: sqlite3.Connection, prepared: l
     nearest = nearest_posts(connection, spec["dimension"])
     mentions = collect_mentions(entries, registry, rendered)
     annotated = annotate_references(rendered, references)
-    transformed = {key: transform_html(body, registry).html for key, body in annotated.items()}
+    transformed = {key: transform_html(body, registry, entry_key=key).html for key, body in annotated.items()}
     documents = [{"key": entry.key, "slug": entry.slug, "kind": entry.kind, "title": entry.title,
                   "date": entry.published_iso, "url": entry.url, "postId": codes[entry.key], "blocks": visible_blocks(entry)}
                  for entry in entries]

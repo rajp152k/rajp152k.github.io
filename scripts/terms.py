@@ -32,6 +32,7 @@ class Term:
     introduction: str
     sources: tuple[Source, ...]
     annotation: str = "first-term"
+    entries: tuple[str, ...] | None = None
 
     @property
     def url(self) -> str:
@@ -120,7 +121,7 @@ def load_terms(entries: Iterable[Entry], path: Path = ROOT / "terms.json") -> Re
         raise ValueError("terms must be a list.")
     terms, ids, aliases = [], set(), {}
     for row in data["terms"]:
-        _fields(row, ("id", "name", "aliases", "definition", "introduction", "sources"), "Term", optional=("annotation",))
+        _fields(row, ("id", "name", "aliases", "definition", "introduction", "sources"), "Term", optional=("annotation", "entries"))
         annotation = row.get("annotation", "first-term")
         if annotation not in ("first-term", "first-spelling"):
             raise ValueError("annotation must be first-term or first-spelling.")
@@ -159,7 +160,15 @@ def load_terms(entries: Iterable[Entry], path: Path = ROOT / "terms.json") -> Re
                 raise ValueError(f"{ident}: duplicate source.")
             seen_sources.add((entry_key, quote))
             sources.append(Source(entry_key, quote))
-        terms.append(Term(ident, row["name"], tuple(row["aliases"]), row["definition"], row["introduction"], tuple(sources), annotation))
+        scope = row.get("entries")
+        if "entries" in row:
+            if (not isinstance(scope, list) or not scope
+                    or any(not isinstance(key, str) or key not in by_key for key in scope)
+                    or len(set(scope)) != len(scope)):
+                raise ValueError(f"{ident}: entries must list unique known entry keys.")
+            if row["introduction"] not in scope or any(source.entry not in scope for source in sources):
+                raise ValueError(f"{ident}: introduction and sources must be in entries.")
+        terms.append(Term(ident, row["name"], tuple(row["aliases"]), row["definition"], row["introduction"], tuple(sources), annotation, tuple(scope) if scope is not None else None))
     return Registry(tuple(sorted(terms, key=lambda term: term.id)))
 
 
@@ -312,13 +321,16 @@ class _Annotator(HTMLParser):
         self.flush(self.source_offset())
 
 
-def transform_html(html: str, registry: Registry) -> TransformResult:
+def transform_html(html: str, registry: Registry, *, entry_key: str | None = None) -> TransformResult:
     """Mark the first eligible occurrence per term, or per spelling when opted in.
 
     Match Unicode word boundaries, case-insensitively, longest alias first.
+    Scoped terms require a matching entry_key; an omitted key excludes them.
     Whitespace in aliases matches any prose whitespace. Matches may include
     entities but do not cross HTML tags. All other HTML bytes are preserved.
     """
+    registry = Registry(tuple(term for term in registry.terms
+                              if term.entries is None or entry_key in term.entries))
     parser = _Annotator(html, registry)
     parser.feed(html)
     parser.close()
@@ -339,7 +351,7 @@ def collect_mentions(entries: Iterable[Entry], registry: Registry, rendered_by_k
     mentions = []
     for entry in sorted(entries, key=lambda item: item.sort_key, reverse=True):
         html = rendered_by_key[entry.key] if rendered_by_key is not None else markdown.markdown(entry.body, extensions=["fenced_code", "tables"])
-        for match in transform_html(html, registry).mentions:
+        for match in transform_html(html, registry, entry_key=entry.key).mentions:
             mentions.append(Mention(match.term_id, entry.key, entry.title, entry.url, entry.date_label, match.excerpt))
     return tuple(mentions)
 

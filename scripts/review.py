@@ -14,6 +14,8 @@ from pathlib import Path
 
 import yaml
 
+from definition_links import definition_html
+
 ROOT = Path(__file__).resolve().parent.parent
 VERSION = "2.13.1"
 
@@ -38,18 +40,6 @@ def snapshot(root: Path, name: str, sources: dict) -> str:
     sources[name] = {"sha256": digest(data), "text": data.decode("utf-8")}
     return data.decode("utf-8")
 
-
-def definition_html(text: str) -> str:
-    """Render HTTP(S) Markdown references; escape all other definition text."""
-    parts, end = [], 0
-    for match in re.finditer(r"\[([^\]\n]+)\]\((https?://[^\s()<>]+)\)", text):
-        parts.append(html.escape(text[end:match.start()], quote=True))
-        label, url = match.groups()
-        parts.append(f'<a href="{html.escape(url, quote=True)}">'
-                     f'{html.escape(label, quote=True)}</a>')
-        end = match.end()
-    parts.append(html.escape(text[end:], quote=True))
-    return "".join(parts)
 
 
 def term_card(term: dict, item_id: str, evidence: list[tuple[str, str]]) -> str:
