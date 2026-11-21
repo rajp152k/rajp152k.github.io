@@ -3,8 +3,8 @@ schema: 1
 kind: post-review
 entry: logs/2026-11-21-blog-update-1
 cycle: 1
-state: writing
-post_sha256: e7200d5b526b2dba7c6930cfe79e8b1b0a959897381e982652c0127dd482623d
+state: publish-approved
+post_sha256: 89c322f93719ad13810067dcba8757dfeb6cd06d4d683cf29c1f947ed7a1ddd9
 terms:
 - id: T1
   revision: 1
@@ -38,6 +38,14 @@ decisions:
   at: '2026-11-21T18:35:22Z'
   evidence: review-imports/6a7d77d92e6e51fd9e14-de90af940de0f7a7.json
   reason: Imported exact candidate approval; time records AL's observation, not browser submission.
+- id: raj-final-commit-and-publication
+  actor: raj
+  action: approve
+  scope: Exact 46ed50a content, required release preparation commit, merge to master and publication
+  post_sha256: 89c322f93719ad13810067dcba8757dfeb6cd06d4d683cf29c1f947ed7a1ddd9
+  at: '2026-11-21T19:12:32Z'
+  evidence: 'Conversation d130d358-975d-492e-b059-68707bbab79b, coordinator @blog-progress-recap: "this is good to publish. go ahead and publish - then i sleep for the day"'
+  reason: Observation time, not an invented message timestamp. Conversation approval is separate from empty native responses.
 transitions:
 - from: curation
   to: writing
@@ -45,10 +53,31 @@ transitions:
   at: '2026-11-21T18:35:22Z'
   event: Imported requested prose changes; applied approved curation independently.
   evidence: review-imports/6a7d77d92e6e51fd9e14-de90af940de0f7a7.json
-blockers:
-- issue: Revised complete prose needs Raj's review.
-  owner: raj
-  resolution: Read the new exact-source whole-log session and add native Notes.
+- from: writing
+  to: preview
+  actor: autolith
+  at: '2026-11-21T19:12:32Z'
+  event: Applied curation retained, revised post and targets read, all twenty review stages current, fresh build and diagrams inspected.
+  evidence: docs/reviews/blog-update-1-release-2026-11-22.md
+- from: preview
+  to: commit-approved
+  actor: raj
+  at: '2026-11-21T19:12:32Z'
+  event: Coordinator relayed explicit approval of exact current content and required release commit.
+  evidence: raj-final-commit-and-publication
+- from: commit-approved
+  to: committed
+  actor: autolith
+  at: '2026-11-21T19:12:32Z'
+  event: Approved content is committed as 46ed50a; complete release checks now pass. Required preparation commit follows.
+  evidence: docs/reviews/blog-update-1-release-2026-11-22.md
+- from: committed
+  to: publish-approved
+  actor: raj
+  at: '2026-11-21T19:12:32Z'
+  event: Explicit publication authority includes clean master, full checks and push without another pre-push exchange.
+  evidence: raj-final-commit-and-publication
+blockers: []
 release:
   commit: null
   deployed_commit: null
@@ -60,21 +89,19 @@ release:
 
 ## Now
 
-The first batch is imported. Raj approved T1:r1 and L1:r1–L3:r1, requested prose
-changes, and left six native memos. Approved curation is applied. The log returns
-to `writing` for revision. See [exact feedback and dispositions](../../blog-update-1-feedback-cycle-1-2026-11-22.md).
+Raj approved the revised complete post and publication in conversation. Approved
+content is `46ed50a`; its exact hash is above. The final native import has no saved
+responses or notes and is not the approval. See the [release record](../../blog-update-1-release-2026-11-22.md)
+for the actual evidence, conversation quote, completed reviews and full checks.
 
-The original reviewed hash and exact card below identify the approval snapshot.
-The next memo batch records the revised hash; it does not reopen unaffected cards.
+T1:r1 and L1:r1–L3:r1 remain applied without changes to their wording, evidence,
+introduction, use scope or destinations. Their original reviewed hash identifies
+the approval snapshot. All six first-pass notes informed the unchanged approved
+revision. Old imports, sessions and decisions are preserved.
 
-Draft checkpoint only, on `draft/blog-update-1-2026-11-21`. No final commit,
-merge, push, or publication approval. The coordinator requested a scoped branch
-checkpoint to hand off this review. That does not advance the post's workflow
-state to `committed`. Published content remains at `f19d221`.
-
-Read the revised full post in the next memo-only log item. Use Notes for passage
-comments or general feedback. The candidate votes are already imported and applied.
-Existing sessions and all earlier review evidence are preserved.
+Publication is authorized, but deployment has not occurred at this record's commit.
+Release fields remain null until the exact pushed/deployed SHA and live checks are
+known. Report verification in conversation without an extra documentation push.
 
 ## Initial reader review (before Raj's feedback)
 

@@ -150,14 +150,16 @@
       "references": {
         "blocking_questions": [],
         "decisions": [
-          "Preserve approved no-outlinks result and no terms; no prose edits in release review."
+          "Carry forward approved N4 no-outlinks result and no meditation annotations; PCA evidence/introduction are approved T1:r1, not new annotation scope."
         ],
         "inputs": {
           "draft": "51ff88a095a48356863b3c95e4b51ccac2187e9fb8741f8c72d61dddfbe87fa4",
           "policy": "77f67ca789da33b8a42ce473122fab4296bdd60b2505d1057793192e0e8c2143",
-          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf"
+          "source:meditations/embeddings": "51ff88a095a48356863b3c95e4b51ccac2187e9fb8741f8c72d61dddfbe87fa4",
+          "stage": "d42d20483a6803f74dc0bbfcd30a6cda12eef445e3aace23ea7b3638df675cdf",
+          "term:principal-component-analysis": "f7f503fec2fdb13098023d51f25dae0e867bcaeadbb8ab6475a8c63949c34251"
         },
-        "note": "Fresh references review: no term annotation on this meditation; earlier posts do not explain its pipeline, so retain N4. Read embedding.json, relevant embed.py aggregation/token/transaction code, projection.py in full, and publish.py equal-axis scale. Math and implementation agree at inspected boundaries. Named model page reports 768 dimensions. Usage step 4 describes old staging/commit behavior and differs from current publish.sh; keep approved prose and record the issue outside article. No new inference, numerical replication or deployment verified by this review.",
+        "note": "Re-read the complete mathematical introduction and current PCA card. Centered X and exact reduced SVD, no whitening, greatest-variance components, refitting, common scale and lost-variance caveats support the approved PCA definition. Both saved quotes occur exactly in their explanatory context. Introduction is this meditation, while annotation scope is only the new log. This meditation has no annotations and retains approved N4 no-outlinks result. Read all three new-log post-link targets; no reverse links or prose changes. Historical Usage Flow step 4 differs from current publish.sh; preserved as an open question, not silently repaired.",
         "questions": [
           "Would you like an authored general embedding and mathematical introduction for readers without ML background?",
           "Historical Usage Flow step 4 says publish.sh stages and commits; current publish.sh requires a clean committed master and only checks then pushes. Should a later authorized meditation revision update this dated instruction?"

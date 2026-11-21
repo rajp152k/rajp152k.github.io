@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: blog-update-1-prose-review
+state: blog-update-1-publish-approved
 updated: 2026-11-22
 ---
 
@@ -10,29 +10,29 @@ updated: 2026-11-22
 
 ## Now
 
-Draft **[Blog Update [1]](../logs/2026-11-21-blog-update-1.md)** covers work on
-21 November. The revision was made on 22 November on
-`draft/blog-update-1-2026-11-21`. Its subject date, title and route are unchanged.
+Raj approved **[Blog Update [1]](../logs/2026-11-21-blog-update-1.md)** and publication
+in conversation: “this is good to publish. go ahead and publish - then i sleep for the day”.
+The coordinator authorized release preparation and `just publish` from clean `master`
+after all checks, without another pre-push exchange. Approved content is `46ed50a`.
+The title, 21 November subject date, timestamp, route, term and three links are unchanged.
 
-Imported first session `6a7d77d92e6e51fd9e14`: Raj approved T1:r1 and L1:r1–L3:r1,
-requested prose changes, and left six native memos. The approved term and all three
-links are applied. All six notes informed the revision: clearer opening, an actual
-nine-post explanatory map snapshot, Potato/archive links, RLM analysis method,
-and a Mermaid review-flow diagram. See [exact feedback and checks](reviews/blog-update-1-feedback-cycle-1-2026-11-22.md).
+Stopped only the confirmed final-session Potato server and imported
+`f2132a7027bce0dce50c-925014945ee96b2c.json`. Sources match. Native user/navigation
+state exists, but there are no saved responses or notes. This is not browser approval;
+the conversation approval is separate. All sessions and earlier evidence are preserved.
 
-New full-post-only Potato session: `f2132a7027bce0dce50c`, at
-**http://127.0.0.1:8769/**. Add native Notes and optional general comments.
-[Rendered single-article preview](http://127.0.0.1:8771/) includes both diagrams.
-The unchanged approved cards are not submitted again.
+Read the complete current post and its three post-link targets. Re-read the complete
+embedding introduction and approved PCA evidence, then recorded its actual stale
+references review. All twenty stages are current. All optional questions are preserved.
+Offline preparation reused nine vectors and computed only the new log's vector.
+The old database rows, model specification, prose and approved registry are unchanged.
 
-The new log's reader and reference stages are current. The existing embedding
-meditation reference receipt is stale because the new term uses it as evidence;
-its prose and receipt are untouched. Its open questions are preserved.
-50 focused tests pass, plus desktop/phone rendering, snapshot data and source
-checks. A small approved term-schema fix permits evidence outside annotation
-scope. The old three term records, old posts, database and old imports are unchanged.
-No embedding inference or broad release suite ran. The draft is at `writing`.
-No final prose approval, final workflow commit, merge, push or publication is implied.
+`just check` passed: 132 Python tests, 11 Node tests, 23 Chromium tests, preparation,
+terms, embedding freshness, build and whitespace checks. Fresh desktop/phone checks
+and image inspection cover both diagrams, exact approved links and the PCA match.
+See [release authority and evidence](reviews/blog-update-1-release-2026-11-22.md).
+Publication is authorized; deployment and live verification follow the release commit.
+No successful deployment is claimed by this pre-push record.
 
 ### Completed release
 
