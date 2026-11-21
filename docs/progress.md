@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: outlinks-awaiting-decision
+state: potato-outlinks-ready
 updated: 2026-11-21
 ---
 
@@ -12,7 +12,8 @@ updated: 2026-11-21
 
 The [archive outlink review](reviews/outlinks-2026-11-21.md) covers all nine posts:
 three logs and six meditations. Five links to strictly earlier posts are proposed
-as L1:r1–L5:r1. Five posts need no outlinks. Raj can decide these in conversation.
+as L1:r1–L5:r1. Five posts need no outlinks, recorded as N1:r1–N5:r1.
+Review all ten cards in Potato with `just review`. Session: `9ea549187a75fbae5e1e`.
 There are no existing authored internal post links. External citations are preserved.
 The two October 7 posts have unclear relative order; no link between them is proposed.
 
@@ -35,7 +36,10 @@ Article prose, HMAS, prior sessions, and imports are preserved.
 ## Checks
 
 For this outlink batch: checked dates, target paths, exact source phrases, all nine
-source hashes, and the documentation diff. No article, registry, or code changes.
+source hashes, and the documentation diff. The queue/import code now supports compact outlink and no-link cards.
+No article or registry changes.
+18 direct queue/import contract tests pass, including link and no-link decisions,
+blank responses, dates, hashes, target paths, and escaping.
 No browser tests, builds, or full suites were run for this batch.
 
 Earlier term application passed 39 focused tests, registry validation, `just build`,
@@ -43,8 +47,8 @@ and generated HTML checks.
 
 ## Next
 
-Raj decides the five link revisions and confirms the five no-outlinks-needed
-results. Apply only approved outgoing links afterward. The first log's
+Raj decides the five link revisions and five no-outlinks-needed results in Potato,
+then tells AL when the session is done. AL imports and records the scoped decisions. Apply only approved outgoing links afterward. The first log's
 [empty term batch](reviews/logs/2026-10-06-two-collections-one-archive/cycle-1.md)
 also needs confirmation. Full editorial and publication approvals are separate.
 No new log or publication is part of this work.

@@ -25,9 +25,9 @@ repository skill `ops-log` from [.agents/skills/ops-log/SKILL.md](.agents/skills
 If skill discovery is unavailable, read that file directly. Keep prose questions
 outside articles. All repository records are public-intended.
 
-Use Potato for term decisions and log comments. Raj runs `just review`, reviews in
+Use Potato for term decisions, outlink decisions, no-outlinks-needed results, and log comments. Raj runs `just review`, reviews in
 the browser, and tells AL when done. Import responses against the exact reviewed
-snapshots. Decide post links and final approval in conversation. Maintain records
+snapshots. Keep final commit and publication approval in conversation. Maintain records
 of actual work and decisions. Update `docs/progress.md` after each review batch,
 transition, or blocker. Keep chat updates concise and include detailed evidence
 in the review record.

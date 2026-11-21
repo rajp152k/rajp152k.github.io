@@ -1,14 +1,14 @@
 # Writing and preparation
 
-Use Potato 2.13.1 for term decisions and log comments. Run `just setup-review`
+Use Potato 2.13.1 for term and outlink decisions, no-outlinks-needed results, and log comments. Run `just setup-review`
 once to install it in `.venv-review` with uv and Python 3.12.
 
 ## Daily use
 
 Write a meditation with `just write "Title"`, or ask AL to write a log. Meditations
 have no terms. AL may edit log drafts during iteration. Use `just review` for term
-decisions and log comments in Potato, then tell AL when you are done. Decide post
-links and final approval in conversation. Approve commit and publication separately.
+and outlink decisions, no-outlinks-needed results, and log comments in Potato.
+Tell AL when you are done. Approve commit and publication separately in conversation.
 Follow the [state machine](workflow.md) and [Progress](progress.md).
 
 Saving Markdown does not start a build or a review. Run the commands below, or
@@ -57,7 +57,7 @@ Review the card, then expand the evidence when needed. Each session includes ful
 review records and post snapshots. Add `--source PATH` for each extra local
 evidence document; read these in the expandable evidence section.
 
-Run `just review`. Review terms with the decision form. Add log passage comments
+Run `just review`. Review terms, outlinks, and no-outlinks-needed results with the decision form. Add log passage comments
 in Notes. Tell AL when you finish, then stop the review server with Ctrl-C before
 import or cleanup.
 
@@ -66,11 +66,28 @@ includes source snapshots, native responses, memo threads, and flags for changed
 sources. AL reconciles decisions against the reviewed version before applying
 approved edits. Import does not change prose, the term registry, or workflow state.
 For `request changes`, revise the card, increase its revision, and queue it as
-`proposed`. That response is not approval to create the term.
+`proposed`. That response is not approval to create the term or apply the link.
 
 After import, run `just clean-reviews ID` to remove the session scratch data.
-Keep the durable import report with the review records. Decide post links, commit,
-and publication in conversation.
+Keep the durable import report with the review records. Keep final commit and
+publication approval in conversation.
+
+### Outlink batches
+
+Queue `kind: outlink-review` records with `just queue-review RECORD`. Each record
+has a numbered `cycle`, a `posts` mapping of archive entry keys to SHA-256 hashes,
+and `links` and `no_links` candidate lists. Each candidate has the normal ID,
+revision, state, action, record, decision, and applied timestamp fields, plus
+`entry` and a `card`. Links also name `target`.
+
+Cards contain `placement`, `passage`, `proposed`, `purpose`, and `reason`. Links
+also include an exact target `evidence` passage. The queue checks source hashes,
+passages, target paths, and strictly earlier publication dates. Each card shows
+both dates, or no target for an empty result, and the past-only rule. Full source,
+target, and review snapshots are available in closed evidence sections.
+Use `approve` to confirm an exact link or no-outlinks-needed revision. A blank
+response is not approval. Import responses before recording or applying decisions.
+
 
 ## Start a post
 

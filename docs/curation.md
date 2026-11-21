@@ -61,7 +61,8 @@ for confirmation. Do not apply a new or revised shared record before approval.
 Review term proposals in Potato with their exact candidate revisions and source
 snapshots. Use the comment field for reasons and corrections. After raj says the
 session is done, AL imports the responses and records the scoped decisions here.
-Keep post-link decisions and final approval in conversation.
+Use Potato for outlink decisions and explicit no-outlinks-needed results too.
+Keep final commit and publication approval in conversation.
 
 ## Outlink review
 
@@ -73,7 +74,7 @@ written with knowledge of later posts; do not add links that imply that knowledg
 2. Check publication dates for each source and target. If their order is unclear,
    resolve it before proposing the link.
 3. Record proposed outlinks, or record that no outlinks are needed. Submit each
-   proposal with its purpose and exact placement for raj's decision.
+   proposal with its purpose and exact placement for raj's decision in Potato.
 4. Apply approved outgoing links only. Do not calculate inlinks or add reverse
    links to older posts as part of this review.
 

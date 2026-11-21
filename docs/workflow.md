@@ -58,10 +58,10 @@ The agent records factual transitions. Only raj supplies approval events. Keep
 commands and state changes separate: `just prepare` does not advance a gate.
 Early draft previews are allowed in `writing` and `curation`.
 
-Use Potato for term decisions and log comments. Raj starts the prepared review
+Use Potato for term and outlink decisions, no-outlinks-needed results, and log comments. Raj starts the prepared review
 with `just review` and tells AL when done. AL imports responses against their
-source snapshots before recording or applying decisions. Resolve post-link
-questions and final approval in conversation. Browser activity alone does not
+source snapshots before recording or applying decisions. Keep final commit
+and publication approval in conversation. Browser activity alone does not
 advance a post state.
 
 ## Revision and return paths

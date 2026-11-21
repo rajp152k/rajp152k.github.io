@@ -15,6 +15,7 @@ from pathlib import Path
 import yaml
 
 from definition_links import definition_html
+from review_links import outlink_items
 
 ROOT = Path(__file__).resolve().parent.parent
 VERSION = "2.13.1"
@@ -81,6 +82,12 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
         if not match:
             raise ValueError(f"Missing YAML front matter: {name}")
         meta = yaml.safe_load(match[1])
+        if meta.get("kind") == "outlink-review":
+            if terms_only:
+                raise ValueError("Outlink batches cannot use --terms-only")
+            items.extend(outlink_items(meta, name, text, sources,
+                                      lambda path: snapshot(root, path, sources)))
+            continue
         entry, cycle = meta["entry"], meta["cycle"]
         if meta.get("kind") != "post-review" or not isinstance(cycle, int):
             raise ValueError(f"Not a numbered post-review: {name}")
@@ -111,7 +118,7 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
                           "entry": entry, "record": name, "post": post_name,
                           "text": post})
     if not items:
-        raise ValueError("No proposed terms or logs to review")
+        raise ValueError("No proposed candidates or logs to review")
     if len({item["id"] for item in items}) != len(items):
         raise ValueError("Duplicate candidate or log IDs")
     payload = {"schema": 2, "presentation": "term-card-v1", "potato_version": VERSION,
@@ -126,7 +133,7 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
     session.mkdir(parents=True)
     dump(session / "manifest.json", payload)
     dump(session / "data.json", [{"id": i["id"],
-                                 "card_html": i["text"] if i["kind"] == "term" else "",
+                                 "card_html": i["text"] if i["kind"] != "log" else "",
                                  "text": i["text"] if i["kind"] == "log" else ""} for i in items])
     config = {"annotation_task_name": f"Blog review {session_id}",
               "task_dir": str(session.resolve()), "data_files": ["data.json"],
@@ -137,7 +144,7 @@ def prepare(root: Path, records: list[str], extra_sources: tuple[str, ...] | lis
               "require_password": False, "annotation_ui": {"memos": True, "visibility": "shared"},
               "annotation_schemes": [
                   {"annotation_type": "radio", "name": "decision",
-                   "description": "Decision for this candidate" if terms_only else "Term decision only. Leave blank for log comments.",
+                    "description": "Decision for this candidate" if terms_only else "Candidate decision only. Leave blank for log comments.",
                    "labels": ["approve", "request changes", "reject", "defer"]},
                   {"annotation_type": "text", "name": "comment", "description": "Reasons and corrections"}]}
     (session / "config.yaml").write_text(yaml.safe_dump(config, sort_keys=False))
@@ -183,7 +190,7 @@ def responses(manifest: dict, evidence: dict) -> list[dict]:
                 elif label["schema"] == "comment":
                     comment = value
             result.append({"user": user, "item_id": item_id, "kind": items[item_id]["kind"],
-                           "decision": decision if items[item_id]["kind"] == "term" else None,
+                           "decision": decision if items[item_id]["kind"] in {"term", "link", "no-links"} else None,
                            "comment": comment})
     return result
 

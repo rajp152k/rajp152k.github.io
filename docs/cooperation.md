@@ -17,9 +17,9 @@
    Meditations have no terms. AL may edit log drafts during iteration.
 2. Ask to prepare it. AL reads the whole post and prepares the review material.
    Follow the [state machine](workflow.md).
-3. Run `just review`. Decide term proposals and add comments to log passages in
+3. Run `just review`. Decide term and outlink proposals, including no-outlinks-needed results, and add log comments in
    Potato. Tell AL when you are done. AL imports responses, records scoped
-   decisions, and applies approved changes. Decide post links in conversation.
+   decisions, and applies approved changes. Keep final approval in conversation.
 4. Read the preview and revise. Use dedicated review sessions to examine ideas,
    evidence, and writing. Repeat affected reviews and approvals after changes.
 5. Approve a specific version for commit in conversation. AL checks and commits

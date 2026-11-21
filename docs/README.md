@@ -11,10 +11,10 @@ Start with [Progress and next decisions](progress.md).
 
 ## Review together
 
-Use Potato for term decisions and comments on log drafts. Start the prepared
+Use Potato for term and outlink decisions, no-outlinks-needed results, and comments on log drafts. Start the prepared
 review with `just review`, work in the browser, then tell AL when you are done.
 AL reads your responses and records the decisions against the reviewed revision.
-Decide post links and final commit or publication approval in conversation.
+Keep final commit and publication approval in conversation.
 
 Raj writes meditations with `just write "Title"`; meditations have no terms.
 AL drafts logs and may edit those drafts during iteration. Use dedicated review
