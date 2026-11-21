@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: archive-writing-study-ready
+state: writing-policy-updated
 updated: 2026-11-21
 ---
 
@@ -10,14 +10,17 @@ updated: 2026-11-21
 
 ## Now
 
-The [archive writing study](reviews/archive-writing-study-2026-11-21.md) is ready
-for discussion, with a [complete source inventory](reviews/archive-writing-inventory-2026-11-21.md).
-It covers all 101 Markdown content files in pinned archive commit
-`94920842829925836cbc08effa16255ac293832a`: 90 posts and 11 pages, including
-all full post bodies, drafts, quoted material, and sparse entries. The study
-separates prose evidence from generated dialogue, uncertain video summaries,
-reference pages, and borrowed quotations. It compares the findings with all
-11 current memos and proposes general principles without applying them.
+Raj approved writing-policy updates with “alright - go for policy updates”.
+The canonical [writing policy](writing.md#writing-policy) now follows the
+[archive study](reviews/archive-writing-study-2026-11-21.md), committed at `8a4f9b3`,
+and all 11 current memos. AGENTS, the ops-log skill, and workflow references point
+to that policy. The skill no longer requires ASD-STE100 prose or a fixed heading
+sequence. No article prose or runtime agent settings changed.
+
+The study and [complete inventory](reviews/archive-writing-inventory-2026-11-21.md)
+cover all 101 Markdown content files in pinned archive commit
+`94920842829925836cbc08effa16255ac293832a`: 90 posts and 11 pages. Attribution
+boundaries, counterexamples, and individual suggestions are in the review records.
 
 Raj completed the log memo review. Session `62bbaa5280c3a734eaf9` is imported in
 [the evidence report](../review-imports/62bbaa5280c3a734eaf9-73a68ec0e64c8b75.json).
@@ -30,7 +33,7 @@ null. No source changed before import.
 are recorded separately from the frozen batch. The native evidence includes
 IDs, authors, timestamps, visibility, and all available thread data. The live
 server was stopped with SIGINT before import. Session data and prior records are
-preserved. No prose or writing-policy changes have been applied.
+preserved. No prose changes have been applied; the approved general policy is now updated.
 
 ### Completed outlink review
 
@@ -63,6 +66,12 @@ HMAS and prior term decisions are unchanged.
 
 ## Checks
 
+For the policy update: checked local document links and policy anchors, inspected
+active policy references for obsolete STE and fixed-heading rules, and reviewed
+the scoped diff and whitespace. Posts, registry, receipts, sessions, and imports
+are unchanged. No broad suites, browser checks, builds, or publication were run.
+Existing receipts need fresh reviews under the changed policy; none were refreshed.
+
 For the archive study: checked source bytes against pinned Git blobs, complete
 inventory and batch counts, cited paths, quotations, document links, and diff.
 One invalid-UTF-8 source used a documented analysis-only Latin-1 fallback.
@@ -93,9 +102,10 @@ and generated HTML checks.
 
 ## Next
 
-Discuss the archive study and proposed principles with raj. Wait for the next
-scoped instruction before editing log prose or applying writing-policy changes.
-The third log needs another review after refinement. No push or publication is authorized.
+Wait for scoped authority before revising log prose. Apply the writing policy in
+the next authorized draft pass, then repeat affected reviews and exact-revision
+approvals. The third log needs another review after refinement. No push or
+publication is authorized.
 
 Separate curation work: the first log's
 [empty term batch](reviews/logs/2026-10-06-two-collections-one-archive/cycle-1.md)

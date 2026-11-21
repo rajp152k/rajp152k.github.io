@@ -5,7 +5,7 @@ Start with [Progress and next decisions](progress.md).
 - [Workflow](workflow.md): post states, transitions, and who can approve them.
 - [Curation](curation.md): term candidates, post links, and decision records.
 - [Review template](review-template.md): one Markdown record per post revision cycle.
-- [Writing commands](writing.md): prepare, preview, review, and check.
+- [Writing policy and commands](writing.md): canonical prose principles, prepare, preview, review, and check.
 - [Cooperation](cooperation.md): responsibilities and short handoffs.
 - [Editorial policy](editorial-policy.md): selection and approval rules.
 
@@ -17,7 +17,7 @@ AL reads your responses and records the decisions against the reviewed revision.
 Keep final commit and publication approval in conversation.
 
 Raj writes meditations with `just write "Title"`; meditations have no terms.
-AL drafts logs and may edit those drafts during iteration. Use dedicated review
+AL drafts logs only on request and may edit those drafts during iteration. Use dedicated review
 sessions to question the ideas, evidence, and writing. All repository records are
 public-intended.
 

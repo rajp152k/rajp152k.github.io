@@ -3,6 +3,41 @@
 Use Potato 2.13.1 for term and outlink decisions, no-outlinks-needed results, and log comments. Run `just setup-review`
 once to install it in `.venv-review` with uv and Python 3.12.
 
+## Writing policy
+
+This is the canonical blog writing policy. Raj approved these principles on
+2026-11-21 after the [archive study](reviews/archive-writing-study-2026-11-21.md)
+and [11 current memos](reviews/log-memo-feedback-2026-11-21.md). Current explicit
+feedback takes precedence over historical patterns. Keep individual edit decisions
+and examples in review records; refine general policy from repeated review.
+
+- **Voice.** Write agent logs as a shared laboratory journal, using “we” for shared
+  work. Attribute individual actions, opinions, and decisions accurately. Raj writes
+  meditations; AL drafts logs only on request and asks before editing meditations.
+- **Opening.** Begin with the real question, practice, friction, experiment, or result.
+  Give the reader a reason for the technical account rather than a generic preamble.
+- **Rhythm.** Use natural, varied sentences and paragraphs. Prefer precise language
+  and coherent thoughts. ASD-STE100 is not a blog prose constraint; there is no
+  sentence-length quota or controlled-vocabulary requirement.
+- **Structure.** Organize by meaningful units. Use headings where they help, without
+  splitting each short thought into a section. Choose the structure for the piece;
+  abstract, context, conclusion, and related-reading sections are not mandatory.
+- **Titles.** Name the subject or angle naturally. Descriptive titles, references,
+  and humour can all fit; none is a required formula. Use humour where it belongs
+  in the account, without copying slang or errors from older writing.
+- **Context and evidence.** Assume a capable reader and supply the local context
+  needed to understand the work. Explain mechanisms and material trade-offs rather
+  than transcribing tool output. Distinguish observed results, interpretations,
+  uncertainty, and plans. Do not claim checks or outcomes beyond the evidence.
+- **Links and diagrams.** Link to specific useful sources and earlier posts. Explain
+  what a diagram needs to show before choosing its format; include it only when it
+  helps understanding. Follow the curation approval gates for post links and terms.
+- **Ending.** Finish at the result, implication, or genuine next step. Include a
+  conclusion when it adds value, not to repeat the account or force closure.
+
+This policy governs blog prose, not runtime agent settings. Existing term records
+and historical content are separate from the removal of the prose constraint.
+
 ## Daily use
 
 Write a meditation with `just write "Title"`, or ask AL to write a log. Meditations
@@ -210,9 +245,10 @@ HTML, search, embeddings, and the public database.
 - Relevant definitions, aliases, introductions, source contexts, and selected
   reading changes invalidate affected references reviews.
 - Newly matching terms also invalidate the affected references reviews.
-- Editorial policy changes invalidate both stages across the archive.
-- Dates, CSS, layout, unrelated registry terms, and this command guide do not
-  invalidate editorial reviews. Other build and embedding checks still apply.
+- Editorial or writing-policy changes require fresh reader and references reviews
+  across the archive. Do not refresh receipts without performing the reviews.
+- Dates, CSS, layout, unrelated registry terms, and command-only documentation
+  changes do not invalidate editorial reviews. Other build and embedding checks apply.
 
 Status reports which inputs changed. It does not perform a review or record one.
 The receipt hashes establish which inputs were reviewed, not editorial quality.

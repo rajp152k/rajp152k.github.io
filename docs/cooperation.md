@@ -11,6 +11,9 @@
 | Commit | Approve a specific post version for commit | Check and commit that version with its required state |
 | Publication | Approve merge, push, or publication separately | Run release checks and verify the deployment and live page |
 
+Follow the canonical [writing policy](writing.md#writing-policy) for blog prose.
+Keep individual feedback and edit decisions in review records.
+
 ## The normal exchange
 
 1. Write a meditation with `just write "Title"`, or ask for a log about specific work.

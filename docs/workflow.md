@@ -12,6 +12,10 @@ Raj owns term, link, commit, and publication approval. This page proposes the ex
 state names and record format for our first iteration. Follow the approval gates
 now; revise the format with raj as we use it.
 
+Follow the canonical [writing policy](writing.md#writing-policy) when drafting or
+reviewing prose. Policy approval does not approve post edits, curation candidates,
+commit, or publication.
+
 ## Post states
 
 `writing` → `curation` → `preview` → `commit-approved` → `committed` →

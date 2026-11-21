@@ -4,7 +4,8 @@ Start with [docs/README.md](docs/README.md) and [docs/progress.md](docs/progress
 Follow [docs/workflow.md](docs/workflow.md) for states and approval gates,
 [docs/curation.md](docs/curation.md) for proposals, and
 [docs/editorial-policy.md](docs/editorial-policy.md) for selection rules.
-Use [docs/writing.md](docs/writing.md) for commands.
+Follow the canonical [writing policy](docs/writing.md#writing-policy) for blog prose;
+use [docs/writing.md](docs/writing.md) for commands.
 
 Raj approves terms and curated post links, including reuse and changes. Submit
 jargon and domain-specific terms, not ordinary phrases given local meaning.

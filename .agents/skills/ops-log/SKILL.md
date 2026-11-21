@@ -1,12 +1,12 @@
 ---
 name: ops-log
-description: "Create or revise raj's operational logs when requested. Use concise ASD-STE100 prose, source-backed context, and the blog preparation workflow. Keep draft iteration, commit approval, and publication separate."
+description: "Create or revise raj's operational logs when requested. Follow the canonical blog writing policy and source-backed preparation workflow. Keep draft iteration, commit approval, and publication separate."
 ---
 
 # Operational logs
 
-Create or revise a log only when raj asks. Explain raj's work and intent, not
-agent tool output. Refer to raj by name, not as "the user".
+Create or revise a log only when raj asks. Follow the canonical
+[writing policy](../../../docs/writing.md#writing-policy) for voice and prose.
 
 ## Start
 
@@ -29,32 +29,17 @@ when revising it. Put links to earlier posts in the body.
 
 ## Body
 
-Use these top-level headings in order:
-
-1. **Abstract:** a brief account of the subject.
-2. **Context:** the starting state and the reason for the work.
-3. **Named sections:** as many as the subject needs. Explain each material change,
-   its reason, and its effect. Choose specific headings.
-4. **Conclusion:** the result or expected state. Distinguish completed work from plans.
-5. **Past relevant meditations and blogs:** links to existing posts that help the
-   reader. If none apply, say so briefly.
+Choose sections for the account under the [writing policy](../../../docs/writing.md#writing-policy).
+There is no required heading sequence. Place approved earlier-post links where
+useful; a separate related-reading section is optional.
 
 Keep review notes, citation questions, approval requests, and draft status outside
 the article. Include uncertainty about the work when the reader needs it.
 
 ## Language
 
-Use ASD-STE100 Simplified Technical English for new log prose. Use short, direct
-sentences, active voice, and one main idea per sentence. Use each term with one
-meaning. Define technical terms when needed. Avoid idioms, long noun groups, and
-unnecessary detail. Cover material decisions and behavior without a word target
-or section limit. Use the correct tense for results and plans.
-
-Use the official rules and controlled dictionary for a compliance review when
-available. Plain-language checks alone do not establish ASD-STE100 compliance.
-See [the standard](https://www.asd-ste100.org/),
-[its scope](https://www.asd-ste100.org/about_STE.html), and
-[the official copy request](https://www.asd-ste100.org/STE_downloads.html).
+Use the canonical [writing policy](../../../docs/writing.md#writing-policy).
+Keep prose rules there rather than maintaining a second style guide here.
 
 Use Mermaid diagrams, math, or inline SVG only when they make the explanation
 clearer or shorter. Keep them in the Markdown file. Give Mermaid diagrams an
@@ -64,10 +49,11 @@ accessible title and, when needed, a description. Check the rendered result.
 
 Read the whole draft as a reader. Submit jargon and domain-specific term candidates
 and post-link proposals under the [curation rules](../../../docs/curation.md).
-Raj approves terms and links, including the past-reading section. Keep unapproved
-link proposals in the review page; apply only approved revisions to the log and
-registry. Record raj's decisions in the review front matter. Record completed
-agent reviews with `just review`; this command is not approval.
+Raj approves exact term and post-link revisions, including reuse, removal, and
+no-outlinks-needed results. Use Potato for these decisions and log memos. Keep
+unapproved proposals in the review page; apply only approved revisions to the log
+and registry. Record decisions against the reviewed snapshots in review front
+matter. Record completed agent stages with `just record-review`; this is not approval.
 Run `just prepare` to update changed embeddings and build the local site.
 Use `just preview` to serve it. Check the article, diagrams, links, terms,
 and phone layout. Inspect screenshots when a visual check is needed.

@@ -12,7 +12,8 @@ Markdown state format is a first version for review; scripts do not enforce it y
 
 ## Reader review
 
-Read the complete draft. Identify its purpose, intended reader, and assumed
+Read the complete draft against the canonical [writing policy](writing.md#writing-policy).
+Identify its purpose, intended reader, and assumed
 knowledge. Check names, claims, sources, and possible reading links. Keep questions
 outside the article. Ask raj before changing meditation prose. Draft logs only
 when requested.
