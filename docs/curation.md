@@ -63,6 +63,24 @@ snapshots. Use the comment field for reasons and corrections. After raj says the
 session is done, AL imports the responses and records the scoped decisions here.
 Keep post-link decisions and final approval in conversation.
 
+## Outlink review
+
+Review outgoing post links for every post, including meditations and logs.
+Consider only targets published before the source post. An older post was not
+written with knowledge of later posts; do not add links that imply that knowledge.
+
+1. Read the source post and consider useful links to earlier posts.
+2. Check publication dates for each source and target. If their order is unclear,
+   resolve it before proposing the link.
+3. Record proposed outlinks, or record that no outlinks are needed. Submit each
+   proposal with its purpose and exact placement for raj's decision.
+4. Apply approved outgoing links only. Do not calculate inlinks or add reverse
+   links to older posts as part of this review.
+
+For the initial archive review, apply the date rule separately to every post.
+For later publication reviews, review only the outgoing links of the post being
+prepared. Keep decisions in its review record.
+
 ### Link proposal
 
 - Source post and exact placement or registry field.
@@ -70,7 +88,7 @@ Keep post-link decisions and final approval in conversation.
   the purpose.
 - Exact link text or field value and the proposed addition, revision, or removal.
 - Why this target helps this reader here, after reading the target itself.
-- Effect on prose, term cards, backlinks, or map reference lines.
+- Source and target publication dates, and the effect on the source post and map.
 
 A term proposal may include its evidence and introduction links in the same approval
 scope. Use separate `L` items for other links. Avoid making raj approve the same
