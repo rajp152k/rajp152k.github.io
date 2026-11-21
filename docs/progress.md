@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: log-memos-imported
+state: archive-writing-study-ready
 updated: 2026-11-21
 ---
 
@@ -9,6 +9,15 @@ updated: 2026-11-21
 [Writing desk](README.md) · [Workflow](workflow.md) · [Curation](curation.md)
 
 ## Now
+
+The [archive writing study](reviews/archive-writing-study-2026-11-21.md) is ready
+for discussion, with a [complete source inventory](reviews/archive-writing-inventory-2026-11-21.md).
+It covers all 101 Markdown content files in pinned archive commit
+`94920842829925836cbc08effa16255ac293832a`: 90 posts and 11 pages, including
+all full post bodies, drafts, quoted material, and sparse entries. The study
+separates prose evidence from generated dialogue, uncertain video summaries,
+reference pages, and borrowed quotations. It compares the findings with all
+11 current memos and proposes general principles without applying them.
 
 Raj completed the log memo review. Session `62bbaa5280c3a734eaf9` is imported in
 [the evidence report](../review-imports/62bbaa5280c3a734eaf9-73a68ec0e64c8b75.json).
@@ -54,6 +63,12 @@ HMAS and prior term decisions are unchanged.
 
 ## Checks
 
+For the archive study: checked source bytes against pinned Git blobs, complete
+inventory and batch counts, cited paths, quotations, document links, and diff.
+One invalid-UTF-8 source used a documented analysis-only Latin-1 fallback.
+A frame's incorrect count was reconciled against its 13 named sources. No archive
+code, broad suites, browser tests, builds, push, or publication were run.
+
 For memo import: checked all four frozen source hashes against current files,
 all three full log items, exact native evidence equality, SQLite integrity,
 idempotent reimport, and 11 complete quoted memo bodies. The 21 direct queue/import
@@ -78,9 +93,9 @@ and generated HTML checks.
 
 ## Next
 
-Present the actual feedback and proposed split to raj. Wait for the next scoped
-instruction before editing log prose or writing policy. The third log needs
-another review after refinement. No push or publication is authorized.
+Discuss the archive study and proposed principles with raj. Wait for the next
+scoped instruction before editing log prose or applying writing-policy changes.
+The third log needs another review after refinement. No push or publication is authorized.
 
 Separate curation work: the first log's
 [empty term batch](reviews/logs/2026-10-06-two-collections-one-archive/cycle-1.md)
