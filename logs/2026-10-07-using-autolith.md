@@ -35,7 +35,7 @@ The development checkout is separate from the installed Autolith release. It is 
 
 raj used Autolith to prepare the blog's local embedding and build environment. The setup uses a separate Python environment for inference and Node.js for the site assets. Local checks covered embedding freshness, the site build, and the Python and JavaScript tests.
 
-Markdown is the source of each post. The embedding updater stores archive state in blog.sqlite. The site builder produces the local site, search index, and shared map.
+Markdown is the source of each post. The [embedding updater](/embeddings/) stores archive state in blog.sqlite. The site builder produces the local site, search index, and shared map.
 
 During the setup checks, existing entries reused their stored vectors. Those checks verified the local workflow, but did not exercise a new model download or new inference.
 
@@ -55,7 +55,7 @@ After a change to the tracked skill, the installed copy needs an update.
 
 # Review before commit and publication
 
-raj keeps personal meditations separate from agent-written logs. Both collections use the same archive, search, and map. A log does not authorize an edit to raj's meditation prose.
+raj keeps personal meditations separate from agent-written logs. Both collections use [the same archive, search, and map](/logs/2026-10-06-two-collections-one-archive/). A log does not authorize an edit to raj's meditation prose.
 
 A request for a draft starts local iteration. Autolith updates the embedding state and builds a preview for review. A revision does not approve a commit. A commit request does not approve a push or publication.
 

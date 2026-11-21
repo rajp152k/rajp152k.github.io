@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: potato-outlinks-ready
+state: outlinks-applied
 updated: 2026-11-21
 ---
 
@@ -10,12 +10,16 @@ updated: 2026-11-21
 
 ## Now
 
-The [archive outlink review](reviews/outlinks-2026-11-21.md) covers all nine posts:
-three logs and six meditations. Five links to strictly earlier posts are proposed
-as L1:r1–L5:r1. Five posts need no outlinks, recorded as N1:r1–N5:r1.
-Review all ten cards in Potato with `just review`. Session: `9ea549187a75fbae5e1e`.
-There are no existing authored internal post links. External citations are preserved.
-The two October 7 posts have unclear relative order; no link between them is proposed.
+Raj approved all ten r1 cards in Potato session `9ea549187a75fbae5e1e`.
+The [archive outlink review](reviews/outlinks-2026-11-21.md) records five applied
+outgoing links and five confirmed no-outlinks-needed results across all nine posts.
+The [import report](../review-imports/9ea549187a75fbae5e1e-4441fb6b796e5891.json)
+has no changed sources, blank decisions, comments, or memos. All source hashes and
+exact candidate revisions matched before application.
+
+The five links change four posts. External citations and captured command output
+are preserved. No reverse links or links between the ambiguously ordered October 7
+posts were added. The term registry and prior sessions/imports are unchanged.
 
 ## Decisions and docs
 
@@ -31,24 +35,25 @@ revision requests are retained. Rejected terms are absent from the registry.
 Selection policy is short and general. Writing docs cover definition references
 and revised cards. Review cards and public term pages use the same safe link
 renderer. Optional registry `entries` restrict matching to approved posts.
-Article prose, HMAS, prior sessions, and imports are preserved.
+HMAS and prior term decisions are unchanged.
 
 ## Checks
 
-For this outlink batch: checked dates, target paths, exact source phrases, all nine
-source hashes, and the documentation diff. The queue/import code now supports compact outlink and no-link cards.
-No article or registry changes.
-18 direct queue/import contract tests pass, including link and no-link decisions,
-blank responses, dates, hashes, target paths, and escaping.
-No browser tests, builds, or full suites were run for this batch.
+For this outlink application: checked the import against all ten exact reviewed
+cards, all nine post hashes, and the review record hash. Checked the five applied
+replacements, earlier target dates, target routes, unchanged no-link posts, and
+preserved Markdown hard breaks. The final article text matches the reviewed
+snapshots plus only those five approved link additions.
+18 direct queue/import contract tests pass. Diff inspection and a whitespace check
+that allows the existing Markdown hard breaks pass.
+No browser tests, builds, or full release suites were run.
 
 Earlier term application passed 39 focused tests, registry validation, `just build`,
 and generated HTML checks.
 
 ## Next
 
-Raj decides the five link revisions and five no-outlinks-needed results in Potato,
-then tells AL when the session is done. AL imports and records the scoped decisions. Apply only approved outgoing links afterward. The first log's
+This outlink batch is complete. The first log's
 [empty term batch](reviews/logs/2026-10-06-two-collections-one-archive/cycle-1.md)
 also needs confirmation. Full editorial and publication approvals are separate.
 No new log or publication is part of this work.

@@ -13,7 +13,7 @@ The most different sort of happiest (I don't like using that word but here we ar
 
 This site as it stands right now serves as a collection of my laboratory notes. There's more I slowly plan on integrating over time but I'm going to be deliberate about it.  
 
-I've ditched thinking through the fixed pipeline of pushing markdown through static site generators and instead am experimenting what all i could do in decoupled build stages - thinking more natively in the form higher order abstractions like data and transformations, where do i house / run each of them..  
+I've ditched thinking through the fixed pipeline of pushing markdown through static site generators and instead am experimenting what all i could do in [decoupled build stages](/embeddings/) - thinking more natively in the form higher order abstractions like data and transformations, where do i house / run each of them..  
 
 This being my fourth or fifth personal cyber space over the span of 7+ years, have deliberately let go of all the rules. All previous moves were from the perspective of getting into a formulaic setup - this time, feels like slowly furnishing up a large empty warehouse - the initial days would be .., well .., a little empty, but I should pretty quickly converge on my own style.  
 

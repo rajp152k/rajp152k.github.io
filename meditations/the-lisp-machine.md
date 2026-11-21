@@ -11,7 +11,7 @@ Setup my vps for writing lisp - not going with emacs this time but the lem ncurs
 
 Anticipating some more fun than usual around the side projects I pick up   
 
-I keep wanting to keep coming back to it - i shall dream in s-expressions, again, soon  
+[I keep wanting to keep coming back to it](/programming/) - i shall dream in s-expressions, again, soon  
 
 Investing deeply into nurturing this - haven't felt so connected to the machine in a long time  
 

@@ -55,7 +55,7 @@ These are requirements for the cross-machine design. They are not claims that re
 
 # Evaluate research, not agent activity
 
-The long-term goal is a personal computer science laboratory. The cluster is one application within it. More messages or completed subtasks are weak evidence of research progress.
+The long-term goal is a [personal computer science laboratory](/laboratory/). The cluster is one application within it. More messages or completed subtasks are weak evidence of research progress.
 
 For an investigation, retain the question, code and input versions, environment, configuration, measurements, and uncertainty. Preserve negative results. Separate exploration from reproduction and review. A model's claim is not a measurement.
 
