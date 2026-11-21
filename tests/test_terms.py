@@ -92,7 +92,6 @@ class RegistryTests(unittest.TestCase):
     def test_archive_records_and_repeatable_report(self):
         entries = read_entries()
         registry = load_terms(entries)
-        self.assertTrue(registry.terms)
         mentions = collect_mentions(entries, registry)
         self.assertEqual(mentions, collect_mentions(reversed(entries), registry))
         self.assertTrue(all(mentions_for_term(item.id, mentions) for item in registry.terms))

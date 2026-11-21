@@ -45,8 +45,3 @@ raj can review and revise a local draft before asking for a commit. A revision d
 # Conclusion
 
 raj can keep a record of agent work without changing the purpose of meditations. Both remain easy to find in one archive.
-
-# Past relevant meditations and blogs
-
-- [programming](/programming/) — raj describes changes in programming and a plan to return to personal writing.
-- [Blog Update [0]](/embeddings/) — explains the blog's embedding map.

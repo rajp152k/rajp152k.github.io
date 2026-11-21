@@ -66,8 +66,3 @@ The copied skill records these boundaries. This draft is the first local log wri
 raj now has a local Lisp editor, shared Autolith settings, a separate development checkout, and a working blog setup. Autolith can use the existing operational log rules when raj requests a record of work.
 
 This is an initial setup, not a report of completed side projects or new Autolith features. raj can refine the workflow through further use. The current log is a local draft for review.
-
-# Past relevant meditations and blogs
-
-- [the lisp machine](/the-lisp-machine/): raj's account of exploring Autolith and preparing the VPS for Lisp work.
-- [Two collections, one archive](/logs/2026-10-06-two-collections-one-archive/): the separation between personal meditations and requested agent logs.

@@ -66,8 +66,3 @@ Research output should pass verification before it reaches the blog or a paper.
 # Conclusion
 
 raj has chosen a direction: persistent Autolith agents with separate project contexts, direct communication, and a shallow structure for coordination. The local workflow provides a starting point. The proposed cross-machine system still needs verified transport, bounded tasks, recovery tests, and a first reproducible investigation.
-
-# Past relevant meditations and blogs
-
-- [Laboratory](/laboratory/) describes raj's personal research space and the broader purpose of these experiments.
-- [the lisp machine](/the-lisp-machine/) records raj's early exploration of Autolith and his interest in a Lisp-based working environment.

@@ -32,11 +32,7 @@
         },
         "note": "The existing Programming link gives the personal-writing motivation and Blog Update explains the map. The later October setup log shows the authoring rules in use. Source labels are directly explained; the Mermaid block is explanatory content, not term-matching prose.",
         "questions": [],
-        "related": [
-          "meditations/programming",
-          "meditations/embeddings",
-          "logs/2026-10-07-using-autolith"
-        ]
+        "related": []
       }
     },
     "logs/2026-10-07-using-autolith": {
@@ -77,11 +73,7 @@
         },
         "note": "This is the most useful introduction for Autolith, Lem, and the local writing rule. The Lisp-machine meditation supplies motivation, the collections log authorship boundaries, and Blog Update the detailed build mathematics. Do not use the later orchestration design as evidence of October capabilities.",
         "questions": [],
-        "related": [
-          "meditations/the-lisp-machine",
-          "logs/2026-10-06-two-collections-one-archive",
-          "meditations/embeddings"
-        ]
+        "related": []
       }
     },
     "logs/2026-11-06-orchestrating-autolith": {
@@ -125,11 +117,7 @@
         },
         "note": "Retrieved the taxonomy landing page on 2026-11-13 and checked its title, author, and abstract against the citation. This does not verify all claims in the full paper. Laboratory explains the research purpose; the Lisp-machine meditation supplies motivation; the October setup log supplies concrete Autolith background. Registry evidence keeps proposed and implemented behavior distinct.",
         "questions": [],
-        "related": [
-          "meditations/laboratory",
-          "meditations/the-lisp-machine",
-          "logs/2026-10-07-using-autolith"
-        ]
+        "related": []
       }
     },
     "meditations/embeddings": {
@@ -169,10 +157,7 @@
         "questions": [
           "Would you like an authored general embedding and mathematical introduction for readers without ML background?"
         ],
-        "related": [
-          "logs/2026-10-06-two-collections-one-archive",
-          "logs/2026-10-07-using-autolith"
-        ]
+        "related": []
       }
     },
     "meditations/laboratory": {
@@ -209,11 +194,7 @@
         "questions": [
           "If computational epistemology becomes a recurring term, what scope do you intend and which passage should explain it?"
         ],
-        "related": [
-          "meditations/pkm-to-pem",
-          "meditations/studying",
-          "logs/2026-11-06-orchestrating-autolith"
-        ]
+        "related": []
       }
     },
     "meditations/pkm-to-pem": {
@@ -249,10 +230,7 @@
         "questions": [
           "Should PKM/PEM become stable names for your methods, or remain exploratory title language?"
         ],
-        "related": [
-          "meditations/studying",
-          "meditations/laboratory"
-        ]
+        "related": []
       }
     },
     "meditations/programming": {
@@ -287,11 +265,7 @@
         },
         "note": "No term record needed. The Lisp-machine meditation gives the later return to Lisp; Laboratory develops the renewed personal ambition; PKM-to-PEM explains the writing experiment. These links answer different reader needs.",
         "questions": [],
-        "related": [
-          "meditations/the-lisp-machine",
-          "meditations/laboratory",
-          "meditations/pkm-to-pem"
-        ]
+        "related": []
       }
     },
     "meditations/studying": {
@@ -327,10 +301,7 @@
         },
         "note": "Concept tree uses this post as both source and introduction. PKM-to-PEM explains the knowledge-work context; Laboratory is a later research setting. The central method is explained in prose and must not be reduced to the card.",
         "questions": [],
-        "related": [
-          "meditations/pkm-to-pem",
-          "meditations/laboratory"
-        ]
+        "related": []
       }
     },
     "meditations/the-lisp-machine": {
@@ -368,11 +339,7 @@
         },
         "note": "The October setup log explains Autolith and Lem beyond the product mentions here. Programming gives the earlier motivation. The November orchestration log gives a later development, not proof of capabilities in this snapshot. Retrieved the Autolith repository and the four Fedora destinations on 2026-11-13. The Fedora 44 documentation URL now gives a relocation notice to general user documentation. Preserve the recorded os-release output.",
         "questions": [],
-        "related": [
-          "logs/2026-10-07-using-autolith",
-          "meditations/programming",
-          "logs/2026-11-06-orchestrating-autolith"
-        ]
+        "related": []
       }
     }
   },

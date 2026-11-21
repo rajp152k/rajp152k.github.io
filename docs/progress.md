@@ -30,27 +30,27 @@ source was inspected.
 
 ## Current work
 
-Select the first real log and term review batch. AL queues numbered records with
-`just queue-review`; raj runs `just review`. Stop the server before importing with
-`just import-reviews ID` or removing imported scratch with `just clean-reviews ID`.
-See [Writing](writing.md#browser-review) for setup and evidence snapshots.
+The first [term proposal](reviews/logs/2026-11-06-orchestrating-autolith/cycle-1.md)
+is ready: T1 revision 1, HMAS. Run `just review` and decide that candidate.
+Skip the log comment item for now. Stop the server and tell AL when done.
+AL will import the response before applying any approved term.
 
 ## Current limits
 
 The scripts do not enforce the new Markdown approval states. We follow the gates
 manually. The existing release checks still apply.
 
-The editorial policy changed. Old archive review receipts are stale, and old term
-records are not approvals under the new rules. Keep them intact until review with
-raj. Release is blocked until the archive checks and approval review are complete.
-This does not prevent writing or draft previews.
+At raj's request, removed all nine old terms, 24 related-reading selections,
+and the three log reading lists. External citations and meditation prose are
+unchanged. Old receipts are stale historical records. Release requires fresh
+archive reviews and separate approval.
 
 ## Next work
 
-1. Write and curate the selected post in small batches.
-2. Keep accepted and rejected examples with raj's reasons in its review record.
-3. Review legacy terms and links with raj before a release.
-4. Refine the state format through use before implementing automatic enforcement.
+1. Complete the first term approval and import cycle with raj.
+2. Continue term review in small batches, keeping decisions and reasons.
+3. After the approval flow works, write Blog Update [1] as a requested log.
+4. Test log comments when reviewing that new article.
 
 ## Checks
 
@@ -58,5 +58,5 @@ Integration tests: 109 Python tests passed. The synthetic browser test saved a
 term approval and comment, an anchored log issue, and a reply. Import preserved
 them; cleanup removed scratch and retained the report. Release checks require
 fresh archive reviews; all 18 archive review stages are policy-stale.
-No article prose, term records, or editorial receipts have been changed for this
-integration. No publication was performed.
+The later term reset changes only the registry, curated reading links, and review
+records. No publication was performed.
