@@ -66,7 +66,10 @@ export function createLinkedView(root) {
 
   function render() {
     const pinned = pinnedSlug ? postLink(linksByPost.get(pinnedSlug)?.[0]) : null;
-    const link = pinned || (!pointerDismissed && postLink(pointerLink)) || postLink(focusedLink);
+    // Preview a hovered or keyboard-focused post without changing the Inspect card.
+    const focused = postLink(focusedLink);
+    const link = (focused?.matches(':focus-visible') && focused)
+      || (!pointerDismissed && postLink(pointerLink)) || pinned || focused;
     const slug = link ? link.dataset.post : null;
     if (slug !== activeSlug) {
       if (activeSlug !== null) {
@@ -82,6 +85,7 @@ export function createLinkedView(root) {
       }
     }
     if (identifier) identifier.textContent = link ? link.dataset.postId : '—';
+    root.querySelector('.map-readout')?.classList.toggle('is-active', slug !== null);
     if (title) title.textContent = link ? link.dataset.title : 'Click a circle to inspect';
     if (date) date.textContent = link ? link.dataset.displayDate : '';
   }

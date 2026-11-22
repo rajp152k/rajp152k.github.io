@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: blog-update-1-publish-approved
+state: ui-subtle-motion-preview
 updated: 2026-11-22
 ---
 
@@ -9,6 +9,35 @@ updated: 2026-11-22
 [Writing desk](README.md) · [Workflow](workflow.md) · [Curation](curation.md)
 
 ## Now
+
+### UI motion refinement
+
+Raj authorized a small interface change on `ui/subtle-motion`, based on published
+`master` at `3ee3462`. Keep this work local for review, with no merge or push.
+Controls and map highlights use 100 ms transitions. Inspect and term panels enter
+with a 180 ms fade and 3 px travel. Reduced motion gives immediate feedback.
+Hover and keyboard focus preview the map label and direct authored references;
+the selected Inspect card changes only on selection.
+
+`just check` passed: 132 Python tests, 11 Node tests, 30 Chromium tests, review
+freshness, terms, embeddings, build and whitespace checks. Seven new browser
+checks cover panel entry, phone touch, hover, keyboard preview, Escape and focus
+return, fixed map coordinates, direct references and reduced motion. Desktop,
+phone and reduced-motion screenshots were inspected. Preview:
+`http://127.0.0.1:8773/`.
+
+An early test click encountered overlapping SVG hit areas. The test now clicks
+the dot center, like the existing phone checks. It also exposed a preview
+fallback error after mouse focus; the selected post now takes precedence over
+mouse focus when hover ends. Real Tab navigation tests keyboard preview.
+Article prose, terms, links, review imports and embeddings are unchanged.
+
+### Blog Update [1] release preparation
+
+The following is the pre-push record for `3ee3462`. Publication later succeeded
+for that exact SHA in workflow `44939863525`. The live post and linked pages
+matched the checked build; desktop and phone checks passed. Deployment evidence
+was reported in conversation, without a separate status-only push.
 
 Raj approved **[Blog Update [1]](../logs/2026-11-21-blog-update-1.md)** and publication
 in conversation: “this is good to publish. go ahead and publish - then i sleep for the day”.

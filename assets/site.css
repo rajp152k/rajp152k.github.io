@@ -131,6 +131,8 @@ h1, h2, p { margin-top: 0; }
 .map-readout-id { margin: 0; min-height: 18px; font-size: 13px; line-height: 18px; font-weight: 400; }
 .map-readout-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; line-height: 18px; }
 .map-readout-date { margin: 0; min-height: 18px; color: var(--muted); font-size: 12px; line-height: 18px; white-space: nowrap; }
+.map-readout.is-active .map-readout-id { color: var(--violet); }
+.map-readout.is-active .map-readout-title { color: var(--target); }
 
 .post-page { min-height: 100vh; padding: 6px; border: 1px solid var(--text); overflow-wrap: break-word; }
 .reading-shell { max-width: 110ch; margin: 6px auto; }
@@ -288,8 +290,29 @@ h1, h2, p { margin-top: 0; }
 .term-sources { counter-reset: source; }
 .term-sources > li { counter-increment: source; }
 .term-sources > li::before { content: "[" counter(source) "] "; color: var(--violet); font-size: 11px; }
+/* Keep feedback local to controls and panels, never the page or map geometry. */
+.term-reference[role="button"]:hover, .term-reference[role="button"]:focus-visible { color: var(--target); }
+:is(a, button, .term-reference[role="button"]):active { color: var(--violet); }
+.map-inspector button:hover, .map-inspector button:focus-visible,
+button:active { border-color: var(--violet); background: var(--highlight); }
+
 @media (prefers-reduced-motion: no-preference) {
-  .map-reference { transition: opacity 120ms ease; }
+  a, button, .term-reference[role="button"], .post-id,
+  .map-readout-id, .map-readout-title {
+    transition: color 100ms ease-out, background-color 100ms ease-out,
+      border-color 100ms ease-out;
+  }
+  .map-dot { transition: fill 100ms ease-out, stroke 100ms ease-out; }
+  .map-halo { transition: opacity 100ms ease-out; }
+  .map-reference { transition: opacity 100ms ease-out, stroke 100ms ease-out; }
+  .map-inspector:not([hidden]), .terms-panel:not([hidden]) {
+    animation: panel-entry 180ms ease-out;
+  }
+}
+
+@keyframes panel-entry {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 700px), (max-height: 600px) {

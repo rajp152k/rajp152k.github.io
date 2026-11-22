@@ -33,6 +33,17 @@ and move focus to the card title. Press Enter again to read the post. Press
 Escape or use **clear** to close the card and return focus to the selected circle.
 Without JavaScript, follow the circle link directly to the post.
 
+## Motion and preview feedback
+
+Hover a point or focus it with the keyboard to highlight its label in the map
+footer and its direct authored references. This preview does not change the
+selected Inspect card. Move away to show the selected post again. Click, tap,
+Enter, and Space select a post as before.
+
+Links, buttons, and map highlights use 100 ms color and opacity transitions.
+Inspect and term panels enter with a 180 ms fade and 3 px upward travel.
+With reduced motion enabled, all feedback is immediate. Map points do not move.
+
 ## Channel links
 
 `accounts.json` lists the social and YouTube links. The two channel images are
