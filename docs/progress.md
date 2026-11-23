@@ -1,6 +1,6 @@
 ---
 kind: work-status
-state: ui-subtle-motion-publish-approved
+state: ui-subtle-motion-published
 updated: 2026-11-23
 ---
 
@@ -16,7 +16,16 @@ Raj authorized the interface change on `ui/subtle-motion`, based on published
 `master` at `3ee3462`. The checked implementation is `fec8a00`.
 On 23 November, Raj authorized production publication in conversation:
 “alright - take this to production”. This approves the fast-forward to `master`
-and push after release checks. Deployment and live checks follow publication.
+and push after release checks.
+
+Release `3eec2ec5f45fbf62b58b1d8ce0d0fb130cb6fa47` passed the full local
+release check and was published. [Workflow 45088476271](https://github.com/rajp152k/rajp152k.github.io/actions/runs/45088476271)
+completed its build and GitHub Pages deployment successfully. At
+`2026-11-23T00:25:52.895Z`, the live home page, hashed CSS and index JavaScript,
+and Blog Update [1] returned HTTP 200 and matched the checked build byte for byte.
+Live browser checks passed at 1440 px and 390 px, with normal and reduced motion,
+including Inspect, Escape and no horizontal overflow. Desktop and phone
+screenshots were inspected. Production: https://yetanotherraj.com/.
 Controls and map highlights use 100 ms transitions. Inspect and term panels enter
 with a 180 ms fade and 3 px travel. Reduced motion gives immediate feedback.
 Hover and keyboard focus preview the map label and direct authored references;
