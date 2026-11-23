@@ -1,7 +1,7 @@
 ---
 kind: work-status
-state: ui-subtle-motion-preview
-updated: 2026-11-22
+state: ui-subtle-motion-publish-approved
+updated: 2026-11-23
 ---
 
 # Progress
@@ -12,8 +12,11 @@ updated: 2026-11-22
 
 ### UI motion refinement
 
-Raj authorized a small interface change on `ui/subtle-motion`, based on published
-`master` at `3ee3462`. Keep this work local for review, with no merge or push.
+Raj authorized the interface change on `ui/subtle-motion`, based on published
+`master` at `3ee3462`. The checked implementation is `fec8a00`.
+On 23 November, Raj authorized production publication in conversation:
+“alright - take this to production”. This approves the fast-forward to `master`
+and push after release checks. Deployment and live checks follow publication.
 Controls and map highlights use 100 ms transitions. Inspect and term panels enter
 with a 180 ms fade and 3 px travel. Reduced motion gives immediate feedback.
 Hover and keyboard focus preview the map label and direct authored references;
@@ -23,8 +26,8 @@ the selected Inspect card changes only on selection.
 freshness, terms, embeddings, build and whitespace checks. Seven new browser
 checks cover panel entry, phone touch, hover, keyboard preview, Escape and focus
 return, fixed map coordinates, direct references and reduced motion. Desktop,
-phone and reduced-motion screenshots were inspected. Preview:
-`http://127.0.0.1:8773/`.
+phone and reduced-motion screenshots were inspected. The local preview on port
+8773 was stopped by Raj before publication.
 
 An early test click encountered overlapping SVG hit areas. The test now clicks
 the dot center, like the existing phone checks. It also exposed a preview
